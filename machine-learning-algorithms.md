@@ -28,6 +28,30 @@ WIP.
 
 ## Linear Regression
 
+Linear regression is a simple algorithm, and that makes it a great place to start thinking about algorithms in general. Here it is:
+
+```
+ŷ = a * x + b
+```
+
+Read aloud, we'd say "y-hat equals a times x plus b." 
+
+* y-hat is the output, or guess made by the algorithm, the dependent variable.
+* a is the coefficient. It's also the slope of the line that expresses the relationship between x and y-hat.
+* x is the input, the given or independent variable.
+* b is the intercept, where the line crosses the y axis.
+
+Linear regression expresses a linear relationship between the input x and the output y; that is, for every change in x, y-hat will change by the same amount no matter how far along the line you are. The x is transformed by the same a and b at every point. 
+
+Linear regression with only one input variable is called Simple Linear Regression. With more than one input variable, it is called Multiple Linear Regression. An example of Simple Linear Regression would be attempting to predict a house price based on the square footage of the house and nothing more. 
+
+```
+house price estimate = a * square footage + b
+```
+Multiple Linear Regression would take other variables into account, such as the distance between the house and a good public school, the age of the house, etc.  
+
+The reason why we're dealing with y-hat, an estimate about the real value of y, is because linear regression is a formula used to estimate real values, and some error is inevitable. Linear regression is often used to "fit" a scatter plot of given x-y pairs. That scatter plot of data points may look like a baguette -- long in one direction and short in another -- in which case a fit is possible. 
+
 ## Logistic Regression
 
 ## Decision Tree
