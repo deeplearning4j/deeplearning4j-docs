@@ -1,6 +1,7 @@
 ---
 title: DataVec - A Vectorization and ETL Library
 layout: default
+redirect: canova
 ---
 
 # DataVec: A Vectorization and ETL Library
