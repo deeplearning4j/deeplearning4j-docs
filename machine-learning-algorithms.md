@@ -11,7 +11,7 @@ While Deeplearning4j and its suite of open-source libraries - [ND4J](http://nd4j
 ## Algorithms Available on DL4J
 
 * Linear Regression
-* Logistic Regression
+* [Logistic Regression](./logistic-regression)
 * [K-means clustering](https://deeplearning4j.org/doc/org/deeplearning4j/clustering/kmeans/package-tree.html )
 * K nearest neighbor (k-NN)
 * Optimizations of k-NN with a [VP-tree](https://en.wikipedia.org/wiki/Vantage-point_tree), [t-SNE](https://lvdmaaten.github.io/tsne/) and quad-trees as a side effect
