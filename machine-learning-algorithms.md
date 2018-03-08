@@ -1,6 +1,7 @@
 ---
 title: Machine Learning With Deeplearning4j
 layout: default
+redirect: machinelearning
 ---
 
 # Machine Learning With Deeplearning4j
@@ -15,8 +16,33 @@ While Deeplearning4j and its suite of open-source libraries - [ND4J](http://nd4j
 * K nearest neighbor (k-NN)
 * Optimizations of k-NN with a [VP-tree](https://en.wikipedia.org/wiki/Vantage-point_tree), [t-SNE](https://lvdmaaten.github.io/tsne/) and quad-trees as a side effect
 
-## Algorithms Possible on ND4J
+## Algorithms Possible Using ND4J
 
 ND4J is a generic tensor library, so the sky's the limit on what can be implemented. 
 
 We are integrating with Haifeng Li's SMILE, or [Statistical Machine Intelligence and Learning Engine](http://haifengl.github.io/smile/), which implements more than one hundred different statistical and machine-learning algorithms, including random forests and GBMs. SMILE shows the best performance of any open-source JVM-based machine-learning library we've seen. 
+
+# Popular Machine Learning Algorithms
+
+WIP.
+
+## Linear Regression
+
+## Logistic Regression
+
+## Decision Tree
+
+## Random Forest
+
+## Support-Vector Machine (SVM)
+
+## Naive Bayes
+
+## k-Nearest Neighbors (KNN)
+
+## k-Means
+
+## Dimensionality Reduction
+
+## Gradient Boosting Algorithms
+
