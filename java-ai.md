@@ -71,6 +71,9 @@ Machine learning encompasses a wide range of algorithms that are able to adapt t
 
 [Weka](http://www.cs.waikato.ac.nz/ml/weka/) is a collection of machine learning algorithms that can be applied directly to a dataset, through the Weka GUI or API. The WEKA community is large, providing various tutorials for Weka and machine learning itself.
 
+### MOA (Massive On-line Analysis)
+[MOA (Massive On-line Analysis)](https://moa.cms.waikato.ac.nz/) is for mining data streams. 
+
 ### Encog Machine Learning Framework
 
 [Encog](http://www.heatonresearch.com/encog/) is a Java machine learning framework that supports many machine learning algorithms. It was developed by Jeff Heaton, of Heaton Research. The official website provides documentation and examples.
