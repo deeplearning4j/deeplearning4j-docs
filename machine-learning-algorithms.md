@@ -50,7 +50,9 @@ house price estimate = a * square footage + b
 ```
 Multiple Linear Regression would take other variables into account, such as the distance between the house and a good public school, the age of the house, etc.  
 
-The reason why we're dealing with y-hat, an estimate about the real value of y, is because linear regression is a formula used to estimate real values, and some error is inevitable. Linear regression is often used to "fit" a scatter plot of given x-y pairs. That scatter plot of data points may look like a baguette -- long in one direction and short in another -- in which case a fit is possible. 
+The reason why we're dealing with y-hat, an estimate about the real value of y, is because linear regression is a formula used to estimate real values, and error is inevitable. Linear regression is often used to "fit" a scatter plot of given x-y pairs. A good fit minimizes the error between y-hat and the actual y; that is, choosing the right a and b will minimize the sume of the differences between each y and its respective y-hat.  
+
+That scatter plot of data points may look like a baguette -- long in one direction and short in another -- in which case a fit is possible. 
 
 ## Logistic Regression
 
