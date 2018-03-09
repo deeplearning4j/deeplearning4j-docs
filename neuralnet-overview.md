@@ -311,12 +311,12 @@ To train complex neural networks on very large datasets, a deep learning cluster
 For people just getting started with deep learning, the following tutorials and videos provide an easy entrance to the fundamental ideas of deep neural networks:
 
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
-* [Deep Convolutional Networks](./convolutionalnets.html)
+* [Deep Convolutional Networks](./convolutionalnetwork.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
 * [Symbolic Reasoning & Deep Learning](./symbolicreasoning.html)
-* [Using Graph Data with Deep Learning](./graphdata.html)
+* [Using Graph Data with Deep Learning](./graphanalytics.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
 * [MNIST for Beginners](./mnist-for-beginners.html)
@@ -326,7 +326,7 @@ For people just getting started with deep learning, the following tutorials and 
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 
 ```
 Here, then, is Darwin's dangerous idea: the algorithmic level is the level that best accounts for the speed of the antelope, the wing of the eagle, the shape of the orchid, the diversity of species, and all the other occasions for wonder in the world of nature. - Daniel C. Dennett
