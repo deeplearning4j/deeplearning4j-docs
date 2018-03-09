@@ -269,7 +269,7 @@ if __name__ == '__main__':
 * [Symbolic AI and Deep Learning](./symbolicreasoning.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
-* [Using Graph Data with Deep Learning](./graphdata.html)
+* [Using Graph Data with Deep Learning](./graphanalytics.html)
 * [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
 * [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
 * [Regressions & Neural Networks](./logistic-regression.html)
@@ -278,7 +278,7 @@ if __name__ == '__main__':
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Open Datasets for Deep Learning](./opendata.html)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 
 ## GAN Use Cases
 
