@@ -214,23 +214,23 @@ Here are a few ideas to keep in mind when manually optimizing hyperparameters fo
 * [Long Short-Term Memory in Recurrent Neural Networks](http://www.felixgers.de/papers/phd.pdf); Felix Gers
 * [LSTM: A Search Space Oddyssey](http://arxiv.org/pdf/1503.04069.pdf); Klaus Greff et al
 
-### <a name="beginner">Other Deep Learning Tutorials</a>
+### <a name="beginner">More Machine Learning Tutorials</a>
 
-* [Introduction to Neural Networks](./neuralnet-overview)
-* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning)
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
 * [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
-* [Graph Data and Deep Learning](./graphdata)
-* [Word2Vec: Neural Embeddings for NLP](./word2vec)
-* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
-* [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
-* [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector)
-* [Neural Networks & Regression](./logistic-regression)
-* [Open Datasets for Machine Learning](./opendata)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Open Datasets for Machine Learning](./opendata.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
-* [Machine Learning Workflow in Production (Model Server)](./machine-learning-workflow.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 
 ### Footnotes
 
