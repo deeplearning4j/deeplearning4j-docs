@@ -1,7 +1,7 @@
 ---
 title: Machine Learning Server in Production 
 layout: default
-redirect_from: machine-learning-modelserver
+redirect_from: modelserver
 ---
 
 # Machine Learning Server in Production 
