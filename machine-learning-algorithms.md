@@ -54,6 +54,8 @@ The reason why we're dealing with y-hat, an estimate about the real value of y, 
 
 That scatter plot of data points may look like a baguette -- long in one direction and short in another -- in which case linear regression may achieve a fit. (If the data points look like a meandering river, a straight line is probably not the right function to use to make predictions.)
 
+![Alt text](./img/scatter-plot.png)
+
 ## Logistic Regression
 
 ## Decision Tree
