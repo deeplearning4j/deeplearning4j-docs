@@ -289,4 +289,4 @@ The deep-learning frameworks listed above are more specialized than general mach
 * [ETL Data Pipelines for Machine Learning](./datavec.html)
 * [A Glossary of Deep-Learning Terms](./glossary.html)
 * [Word2vec, Doc2vec & GloVe for Natural Language Processing](./word2vec.html)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
