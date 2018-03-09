@@ -4,7 +4,7 @@ layout: default
 redirect_from: modelserver
 ---
 
-# Machine Learning Server in Production 
+# Machine Learning Server for Inference in Production 
 
 Deeplearning4j serves machine-learning models for inference in production using the free community edition of SKIL, the [Skymind Intelligence Layer CE](https://skymind.ai/products). 
 
