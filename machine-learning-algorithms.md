@@ -4,11 +4,11 @@ layout: default
 redirect: machinelearning
 ---
 
-# Machine Learning With Deeplearning4j
-
-While Deeplearning4j and its suite of open-source libraries - [ND4J](http://nd4j.org/), DataVec, Arbiter, etc. - primarily implement scalable, deep artificial neural networks, developers can also work with more traditional machine-learning algorithms using our framework.
+# A Beginner's Guide to Machine Learning Algorithms
 
 ## Algorithms Available on DL4J
+
+While Deeplearning4j and its suite of open-source libraries - [ND4J](http://nd4j.org/), DataVec, Arbiter, etc. - primarily implement scalable, deep artificial neural networks, developers can also work with more traditional machine-learning algorithms using our framework.
 
 * Linear Regression
 * [Logistic Regression](./logistic-regression)
@@ -68,7 +68,7 @@ Logistic regression takes input data and *squishes* it, so that no matter what t
 
 ## Decision Tree
 
-A decision tree...
+A decision tree is a series of nodes, a directional graph that starts at the base with a single node and extends to the many leaf nodes that represent the categories that the tree can classify. 
 
 ![Alt text](./img/decision_tree.png)
 
