@@ -68,7 +68,7 @@ Logistic regression takes input data and *squishes* it, so that no matter what t
 
 ## Decision Tree
 
-A decision tree is a series of nodes, a directional graph that starts at the base with a single node and extends to the many leaf nodes that represent the categories that the tree can classify. 
+A decision tree is a series of nodes, a directional graph that starts at the base with a single node and extends to the many leaf nodes that represent the categories that the tree can classify. Another way to think of a decision tree is as a flow chart, where the flow starts at the root node and ends with a decision made at the leaves.
 
 ![Alt text](./img/decision_tree.png)
 
@@ -99,6 +99,8 @@ Decision trees are a popular algorithm for several reasons:
 * Heavy feature engineering: The flip side of a decision tree's explanatory power is that it requires heavy feature engineering. When dealing with unstructured data or data with latent factors, this makes decision trees sub-optimal. Neural networks are clearly superior in this regard. 
 
 ## Random Forest
+
+Random forests are made of many decision trees. They are ensembles of decision trees, each decision tree created by using a subset of the attributes used to classify a given population (they are sub-trees, see above). Those decision trees vote on how to classify a given instance of input data, and the random forest bootstraps those votes to choose the best prediction. This is done to prevent overfitting, a common flaw of decision trees. 
 
 ## Support-Vector Machine (SVM)
 
