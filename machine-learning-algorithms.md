@@ -22,7 +22,7 @@ ND4J is a generic tensor library, so the sky's the limit on what can be implemen
 
 We are integrating with Haifeng Li's SMILE, or [Statistical Machine Intelligence and Learning Engine](http://haifengl.github.io/smile/), which implements more than one hundred different statistical and machine-learning algorithms, including random forests and GBMs. SMILE shows the best performance of any open-source JVM-based machine-learning library we've seen. 
 
-# Popular Machine Learning Algorithms
+# Popular Machine-Learning Algorithms
 
 WIP.
 
@@ -68,7 +68,19 @@ Logistic regression takes input data and *squishes* it, so that no matter what t
 
 ## Decision Tree
 
+A decision tree...
+
 ![Alt text](./img/decision_tree.png)
+
+Here are some useful terms for describing a decision tree:
+
+* Root Node: A root node is at the beginning of a tree. It represents entire population being analyzed. From the root node, the population is divided according to various features, and those sub-groups are split in turn at each decision node under the root node. 
+* Splitting: It is a process of dividing a node into two or more sub-nodes.
+* Decision Node: When a sub-node splits into further sub-nodes, it's a decision node.
+* Leaf Node or Terminal Node: Nodes that do not split are called leaf or terminal nodes.
+* Pruning: Removing the sub-nodes of a parent node is called pruning. A tree is grown through splitting and shrunk through pruning.  
+* Branch or Sub-Tree: A sub-section of decision tree is called branch or a sub-tree, just as a portion of a graph is called a sub-graph.
+* Parent Node and Child Node: These are relative terms. Any node that falls under another node is a child node or sub-node, and any node which precedes those child nodes is called a parent node. 
 
 ![Alt text](./img/decision_tree_nodes.png)
 
