@@ -104,11 +104,9 @@ Random forests are made of many decision trees. They are ensembles of decision t
 
 A random forest is a supervised classification algorithm. It creates a forest (many decision trees) and orders their nodes and splits randomly. The more trees in the forest, the better the results it can produce.
 
+If you input a training dataset with targets and features into the decision tree, it will formulate some set of rules that can be used to perform predictions. 
 
-
-If you input a training dataset with targets and features into the decision tree, it will formulate some set of rules. These rules can be used to perform predictions. The author uses one example to illustrate this point: suppose you want to predict whether your daughter will like an animated movie, you should collect the past animated movies she likes, and take some features as the input. Then, through the decision tree algorithm, you can generate the rules. You can then input the features of this movie and see whether it will be liked by your daughter. The process of calculating these nodes and forming the rules is using information gain and Gini index calculations.
-
-The difference between Random Forest algorithm and the decision tree algorithm is that in Random Forest, the process es of finding the root node and splitting the feature nodes will run randomly.
+Example: You want to predict whether a Website customer will like a mystery novel. First, collect information about past books they've read and liked. Metadata about the novels will be the input. The decision tree algorithm contains rules that apply to those features. Inputting metadata about new novels will result in a prediction regarding whether or not the customer would like that novel. Arranging the nodes and defining the rules relies on information gain and Gini index calculations. With Random Forests, the process of finding the root node and splitting the feature nodes is random.
 
 ## Support-Vector Machine (SVM)
 
