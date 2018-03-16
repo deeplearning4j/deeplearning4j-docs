@@ -129,6 +129,39 @@ SparkDl4jMultiLayer sparkNetwork = new SparkDl4jMultiLayer(sc, networkConfig, tr
 //Fit the network using the training data:
 sparkNetwork.fit(trainingData);
 ```
+## <a name="output">Using the output from SparkDl4jMultiLayer/ComputationGraph</a>
+
+Due to the spark networks being a wrapper around the multi layer network 
+and computation graph apis, you have to obtain the underlying *final* network
+from the spark network after it is done training. The reason for this is due to 
+the fact the data parallel training is actually averaging several networks at once during the training.
+This means that there is no "one" network until you get to the final output which is an averaged set of parameters
+accumulated across several workers.
+
+Knowing this, we should obtain the underlying reference on both [SparkComputationGraph](https://deeplearning4j.org/doc/org/deeplearning4j/spark/impl/graph/SparkComputationGraph.html) and [SparkDl4jMultiLayer](https://deeplearning4j.org/doc/org/deeplearning4j/spark/impl/multilayer/SparkDl4jMultiLayer.html)
+respectively using the methods [getNetwork](https://deeplearning4j.org/doc/org/deeplearning4j/spark/impl/multilayer/SparkDl4jMultiLayer.html#getNetwork--) and [getNetwork](https://deeplearning4j.org/doc/org/deeplearning4j/spark/impl/graph/SparkComputationGraph.html#getNetwork--) respectively for each kind of wrapper.
+
+You'll note that the fit output returns the same underlying network as well directly. In that case youc an just use:
+
+```java
+JavaSparkContent sc = ...;
+JavaRDD<DataSet> trainingData = ...;
+MultiLayerConfiguration networkConfig = ...;
+
+//Create the TrainingMaster instance
+int examplesPerDataSetObject = 1;
+TrainingMaster trainingMaster = new ParameterAveragingTrainingMaster.Builder(examplesPerDataSetObject)
+        .(other configuration options)
+        .build();
+
+//Create the SparkDl4jMultiLayer instance
+SparkDl4jMultiLayer sparkNetwork = new SparkDl4jMultiLayer(sc, networkConfig, trainingMaster);
+
+//Fit the network using the training data:
+MultiLayerNetwork outputNetwork = sparkNetwork.fit(trainingData);
+```
+
+
 
 ## <a name="configuring">Configuring the TrainingMaster</a>
 
