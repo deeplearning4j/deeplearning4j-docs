@@ -219,6 +219,8 @@ This configuration accepts a number of hyperparameters. A few require some expla
 * *tokenizer* feeds it the words from the current batch. 
 * *vec.fit()* tells the configured net to begin training. 
 
+An example for [uptraining your previously trained word vectors is here](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecUptrainingExample.java).
+
 ### <a name="eval">Evaluating the Model, Using Word2vec</a> 
 
 The next step is to evaluate the quality of your feature vectors. 
@@ -254,21 +256,40 @@ With `vec.wordsNearest("word1", numWordsNearest)`, the words printed to the scre
 
 ### Visualizing the Model
 
-We rely on [TSNE](https://lvdmaaten.github.io/tsne/) to reduce the dimensionality of word feature vectors and project words into a two or three-dimensional space. 
+We rely on [TSNE](https://lvdmaaten.github.io/tsne/) to reduce the dimensionality of word feature vectors and project words into a two or three-dimensional space. The full [DL4J/ND4J example for TSNE is here](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/tsne/TSNEStandardExample.java).
 
 ``` java
-        log.info("Plot TSNE....");
+        Nd4j.setDataType(DataBuffer.Type.DOUBLE);
+        List<String> cacheList = new ArrayList<>(); //cacheList is a dynamic array of strings used to hold all words
+
+        //STEP 2: Turn text input into a list of words
+        log.info("Load & Vectorize data....");
+        File wordFile = new ClassPathResource("words.txt").getFile();   //Open the file
+        //Get the data of all unique word vectors
+        Pair<InMemoryLookupTable,VocabCache> vectors = WordVectorSerializer.loadTxt(wordFile);
+        VocabCache cache = vectors.getSecond();
+        INDArray weights = vectors.getFirst().getSyn0();    //seperate weights of unique words into their own list
+
+        for(int i = 0; i < cache.numWords(); i++)   //seperate strings of words into their own list
+            cacheList.add(cache.wordAtIndex(i));
+
+        //STEP 3: build a dual-tree tsne to use later
+        log.info("Build model....");
         BarnesHutTsne tsne = new BarnesHutTsne.Builder()
-                .setMaxIter(1000)
-                .stopLyingIteration(250)
+                .setMaxIter(iterations).theta(0.5)
+                .normalize(false)
                 .learningRate(500)
                 .useAdaGrad(false)
-                .theta(0.5)
-                .setMomentum(0.5)
-                .normalize(true)
-                .usePca(false)
+//                .usePca(false)
                 .build();
-        vec.lookupTable().plotVocab(tsne);
+
+        //STEP 4: establish the tsne values and save them to a file
+        log.info("Store TSNE Coordinates for Plotting....");
+        String outputFile = "target/archive-tmp/tsne-standard-coords.csv";
+        (new File(outputFile)).getParentFile().mkdirs();
+
+        tsne.fit(weights);
+        tsne.saveAsFile(cacheList, outputFile);
 ```
 
 ### Saving, Reloading & Using the Model
@@ -485,7 +506,7 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 
 ### <a name="doctorow">Word2Vec in Literature</a>
