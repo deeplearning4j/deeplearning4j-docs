@@ -106,7 +106,7 @@ A random forest is a supervised classification algorithm. It creates a forest (m
 
 If you input a training dataset with targets and features into the decision tree, it will formulate some set of rules that can be used to perform predictions. 
 
-Example: You want to predict whether a visitor to your Web site will like a mystery novel. First, collect information about past books they've read and liked. Metadata about the novels will be the input. The decision tree algorithm contains rules that apply to those features. Inputting metadata about new novels will result in a prediction regarding whether or not the customer would like that novel. Arranging the nodes and defining the rules relies on information gain and Gini index calculations. With Random Forests, the process of finding the root node and splitting the feature nodes is random.
+Example: You want to predict whether a visitor to your e-commerce Web site will enjoy a mystery novel. First, collect information about past books they've read and liked. Metadata about the novels will be the input; e.g. number of pages, author, publication date, which series it's part of if any. The decision tree contains rules that apply to those features; for example, some readers like very long books and some don't. Inputting metadata about new novels will result in a prediction regarding whether or not the Web site visitor in question would like that novel. Arranging the nodes and defining the rules relies on information gain and Gini-index calculations. With random forests, finding the root node and splitting the feature nodes is done randomly.
 
 ## Support-Vector Machine (SVM)
 
