@@ -180,7 +180,7 @@ Examples: [Saving and loading network](https://github.com/deeplearning4j/dl4j-ex
 
 Networks can be trained further after saving and loading: however, be sure to load the 'updater' (i.e., the historical state for updaters like momentum, ). If no futher training is required, the updater state can be ommitted to save disk space and memory.
 
-Most Normalizers (implementing the ND4J ```Normalizer``` interface) can also be added to a model using the ```addNoramlizerToModel``` method.
+Most Normalizers (implementing the ND4J ```Normalizer``` interface) can also be added to a model using the ```addNormalizerToModel``` method.
 
 Note that the format used for models in DL4J is .zip: it's possible to open/extract these files using programs supporting the zip format.
 
