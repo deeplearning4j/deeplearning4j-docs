@@ -113,7 +113,7 @@ This section shows the minimal set of components that you need in order to train
 Details on the various approaches to loading data are forthcoming.
 
 ```java
-JavaSparkContent sc = ...;
+JavaSparkContext sc = ...;
 JavaRDD<DataSet> trainingData = ...;
 MultiLayerConfiguration networkConfig = ...;
 
