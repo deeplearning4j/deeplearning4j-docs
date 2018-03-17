@@ -144,7 +144,7 @@ respectively using the methods [getNetwork](https://deeplearning4j.org/doc/org/d
 You'll note that the fit output returns the same underlying network as well directly. In that case youc an just use:
 
 ```java
-JavaSparkContent sc = ...;
+JavaSparkContext sc = ...;
 JavaRDD<DataSet> trainingData = ...;
 MultiLayerConfiguration networkConfig = ...;
 
