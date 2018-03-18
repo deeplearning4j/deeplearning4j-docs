@@ -26,7 +26,7 @@ Production-grade model servers have a few important features. They should be:
 
 ## Skymind Intelligence Layer (SKIL)
 
-SKIL meets all of those criteria. Visit [SKIL's Machine Learning Model Server Quickstart](https://skymind.readme.io/v1.0.1/docs/quickstart) to test it out. Briefly, SKIL is a:
+SKIL meets all of those criteria. Visit [SKIL's Machine Learning Model Server Quickstart](https://skymind.readme.io/v1.0.1/docs/quickstart) to test it out. Here is the Swagger documentation to the [machine learning server's API](https://docs.skymind.ai/v1.0.3/reference). Briefly, SKIL is a:
 
 ### Machine Learning Solution Platform
 
