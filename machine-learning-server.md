@@ -84,3 +84,7 @@ Azure ML is a drag-and-drop GUI engine that relies on the public cloud.. As such
 AWS Sagemaker includes a machine learning server that requires that you [write your own Python code to serve models](https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html) and spin up intances. 
 
 AWS Sagemaker relies on Flask. Python code is harder to scale due to how it handles processes. More processes require more compute, so you need larger servers to run it on and it's harder to scale. Languages such as Go and Java have real threads, decreasing the need for additional compute. AWS Sagemaker is based on Docker. It does not include built-in ETL; you roll your own each time you deploy. SKIL offers data pipelines as micro-services that can be monitored for latency, security, roles-access and performance; Sagemaker in contrast is a black box. 
+
+## Domino Datalab 
+
+Domino Datalab is a hosted, collaborative data science platform that bundles TensorFlow and other open-source libraries, allowing data science teams to spin up cloud instances for model training; schedule instances to spin up (and spin down when training is over); and give teams transparency into experiments through model versioning.
