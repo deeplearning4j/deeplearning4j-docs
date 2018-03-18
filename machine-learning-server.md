@@ -65,7 +65,7 @@ SKIL meets all of those criteria. Visit [SKIL's Machine Learning Model Server Qu
 
 SKIL is enterprise tested. Skymind’s clients include the US Department of Homeland Security, Softbank, France Telecom and Ericsson, among others. 
 
-# More Machine Learning Servers
+# More Machine Learning Servers & Platforms
 
 ## TensorFlow Serving
 
