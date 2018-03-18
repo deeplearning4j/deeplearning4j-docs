@@ -87,4 +87,4 @@ AWS Sagemaker relies on Flask. Python code is harder to scale due to how it hand
 
 ## Domino Datalab 
 
-Domino Datalab is a hosted, collaborative data science platform that bundles TensorFlow and other open-source libraries, allowing data science teams to spin up cloud instances for model training; schedule instances to spin up (and spin down when training is over); and give teams transparency into experiments through model versioning.
+[Domino Datalab](https://www.dominodatalab.com/) is a hosted, collaborative data science platform that bundles TensorFlow and other open-source libraries, allowing data science teams to spin up cloud instances for model training; schedule instances to spin up (and spin down when training is over); and give teams transparency into experiments through model versioning.
