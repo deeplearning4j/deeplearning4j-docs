@@ -77,7 +77,7 @@ Building from source won't work in a managed environment or on Windows. It decre
 
 ## Azure ML 
 
-Azure ML is a drag-and-drop GUI engine that relies on the public cloud.. As such, it lacks flexibility and platform mobility. SKIL runs in more environments, and offers developers more flexibility through a REST API. 
+[Azure ML](https://www.dominodatalab.com/) is a drag-and-drop GUI engine that relies on the public cloud.. As such, it lacks flexibility and platform mobility. SKIL runs in more environments, and offers developers more flexibility through a REST API. 
 
 ## AWS Sagemaker 
 
