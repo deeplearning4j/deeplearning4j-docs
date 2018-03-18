@@ -65,6 +65,22 @@ SKIL meets all of those criteria. Visit [SKIL's Machine Learning Model Server Qu
 
 SKIL is enterprise tested. Skymind’s clients include the US Department of Homeland Security, Softbank, France Telecom and Ericsson, among others. 
 
+# More Machine Learning Servers
+
 ## TensorFlow Serving
 
-[TensorFlow Serving](https://www.tensorflow.org/serving/) is one way to serve machine-learning models. It uses the gRPC protocol rather than REST. 
+[TensorFlow Serving](https://www.tensorflow.org/serving/) is one way to serve machine-learning models. It uses the gRPC protocol rather than REST, which most developers use because it's easy to integrate into a pipeline.
+
+Tensorflow Serving requires that you build from source, use a Docker container or use Google Cloud ML. Docker won't work in a lot of legacy environments. Many people using Docker assume the environment is Kubernetes. Not every company is working on new infrastructure, and must answer the question of how they deploy on their legacy infrastructure today. 
+
+Building from source won't work in a managed environment or on Windows. It decreases productivity and won't be manageable by IT, and it doesn't allow for repeatability in deployment. It's hard to extend TensorFlow serving because it's essentially a snowflake when you build from source. Most of the drawbacks here come down to limited mobility.
+
+## Azure ML 
+
+Azure ML is a drag-and-drop GUI engine that relies on the public cloud.. As such, it lacks flexibility and platform mobility. SKIL runs in more environments, and offers developers more flexibility through a REST API. 
+
+## AWS Sagemaker 
+
+AWS Sagemaker includes a machine learning server that requires that you [write your own Python code to serve models](https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html) and spin up intances. 
+
+AWS Sagemaker relies on Flask. Python code is harder to scale due to how it handles processes. More processes require more compute, so you need larger servers to run it on and it's harder to scale. Languages such as Go and Java have real threads, decreasing the need for additional compute. AWS Sagemaker is based on Docker. It does not include built-in ETL; you roll your own each time you deploy. SKIL offers data pipelines as micro-services that can be monitored for latency, security, roles-access and performance; Sagemaker in contrast is a black box. 
