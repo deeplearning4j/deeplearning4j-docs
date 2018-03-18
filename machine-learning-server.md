@@ -6,11 +6,13 @@ redirect_from: modelserver
 
 # Machine Learning Server for Inference in Production 
 
-Deeplearning4j serves machine-learning models for inference in production using the free community edition of SKIL, the [Skymind Intelligence Layer CE](https://skymind.ai/products). 
+Deeplearning4j serves machine-learning models for inference in production using the free community edition of SKIL, the [Skymind Intelligence Layer](https://skymind.ai/products). 
 
 A model server serves the parametric machine-learning models that makes decisions about data. It is used for the inference stage of a machine-learning workflow, after data pipelines and model training. A model server is the tool that allows data science research to be deployed in a real-world production environment.
 
-What a Web server is to the Internet, [a model server is to AI](https://docs.google.com/presentation/d/1psNOQ3ZpPFeak2zsjO5EgUS-ypoFeyw-3eiLNvyEZzg/edit?usp=sharing). Where a Web server receives an HTTP request and returns data about a Web site, a model server receives data, and returns a decision or prediction about that data: e.g. sent an image, a model server might return a label for that image, identifying faces or animals in photographs. SKIL is like Apache Web server, and a machine learning model in this analogy is like a PHP file. The model is just a matrix with a bunch of weights. You want to put the machine-learning model on a server and access it from other locations. Just like a PHP file, it has source code, and to put it on the Internet, you put in on a Web server.
+What a Web server is to the Internet, [a model server is to AI](https://docs.google.com/presentation/d/1psNOQ3ZpPFeak2zsjO5EgUS-ypoFeyw-3eiLNvyEZzg/edit?usp=sharing). Where a Web server receives an HTTP request and returns data about a Web site, a model server receives data, and returns a decision or prediction about that data: e.g. sent an image, a model server might return a label for that image, identifying faces or animals in photographs. 
+
+SKIL is like Apache Web server, and a machine learning model in this analogy is like a PHP file. The model is just a matrix with a bunch of weights. You want to put the machine-learning model on a server and access it from other locations. Just like a PHP file, it has source code, and to put it on the Internet, you put in on a server.
 
 ![Alt text](./img/AI_modelserver.png)
 
