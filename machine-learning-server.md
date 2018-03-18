@@ -22,6 +22,7 @@ Production-grade model servers have a few important features. They should be:
 * Scalable. That data traffic may surge, and predictions should be made with low latency.
 * Stable and debuggable. SKIL is based on the enterprise-hardened JVM.
 * Certified. Deeplearning4j works with CDH and HDP.
+* Implemented in a common protocol like REST.
 
 ## Skymind Intelligence Layer (SKIL)
 
@@ -60,5 +61,10 @@ SKIL meets all of those criteria. Visit [SKIL's Machine Learning Model Server Qu
 * High uptime (backed by an SLA)
 * Rollbacks
 * A/B Testing (2018)
+* REST API
 
 SKIL is enterprise tested. Skymind’s clients include the US Department of Homeland Security, Softbank, France Telecom and Ericsson, among others. 
+
+## TensorFlow Serving
+
+[TensorFlow Serving](https://www.tensorflow.org/serving/) is one way to serve machine-learning models. It uses the gRPC protocol rather than REST. 
