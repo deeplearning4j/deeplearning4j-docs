@@ -26,7 +26,7 @@ Deeplearning4J applications requires application specific dependencies in the bu
         compile 'org.nd4j:nd4j-native:0.9.1'
         compile 'org.nd4j:nd4j-native:0.9.1:android-x86'
         compile 'org.nd4j:nd4j-native:0.9.1:android-arm'
-        compile 'org.bytedeco.javacpp-presets:systems-platform:1.4'
+        compile 'org.bytedeco:javacpp:1.4'
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
         testCompile 'junit:junit:4.12'
@@ -45,23 +45,11 @@ packagingOptions {
 	exclude 'META-INF/notice.txt'
 	exclude 'META-INF/INDEX.LIST'
  
-	exclude 'org/bytedeco/javacpp/windows-x86/msvcp120.dll'
-	exclude 'org/bytedeco/javacpp/windows-x86_64/msvcp120.dll'
-	exclude 'org/bytedeco/javacpp/windows-x86/msvcr120.dll'
-	exclude 'org/bytedeco/javacpp/windows-x86_64/msvcr120.dll'
         }
 ```
 Compiling these dependencies involves a large number of files, thus it is necessary to set multiDexEnabled to true in defaultConfig.
 ```java
 multiDexEnabled true
-```
-Including multiDex can generate an 'Unable to merge dex' error which can be suppressed with these additional exclusions added to the dependencies block
-
-```java
-compile 'com.google.code.findbugs:annotations:3.0.1', {
-    exclude module: 'jsr305'
-    exclude module: 'jcip-annotations'
-}
 ```
 Finally, a conflict in the junit module versions will give the following error: > Conflict with dependency 'junit:junit' in project ':app'. Resolved versions for app (4.8.2) and test app (4.12) differ.
 This can be suppressed by forcing  all of the junit modules to use the same version.
