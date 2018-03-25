@@ -44,10 +44,6 @@ packagingOptions {
             exclude 'META-INF/notice.txt'
             exclude 'META-INF/INDEX.LIST'
 
-            exclude 'org/bytedeco/javacpp/windows-x86/msvcp120.dll'
-            exclude 'org/bytedeco/javacpp/windows-x86_64/msvcp120.dll'
-            exclude 'org/bytedeco/javacpp/windows-x86/msvcr120.dll'
-            exclude 'org/bytedeco/javacpp/windows-x86_64/msvcr120.dll'
         }
  ```       
 After adding the above dependencies and exclusions to the build.gradle file, try syncing Gradle with to see if any other exclusions are needed. The error message will identify the file path that should be added to the list of exclusions. An example error message with file path is: *> More than one file was found with OS independent path 'org/bytedeco/javacpp/ windows-x86_64/msvp120.dll'*
