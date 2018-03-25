@@ -121,6 +121,8 @@ In reinforcement learning, given an image that represents a state, a convolution
 
 ![Alt text](./img/conv_agent.png)
 
+The above image illustrates what a policy agent does, mapping a state to the best action. If you recall, this is distinct from Q, which maps state action pairs to rewards. To be more specific, Q maps state-action pairs to the highest combination of immediate reward with all future rewards that might be harvested by later actions in the trajectory.
+
 Having assigned values to the expected rewards, the Q function simply selects the state-action pair with the highest so-called Q value. 
 
 At the beginning of reinforcement learning, the neural network coefficients may be initialized stochastically, or randomly. Using feedback from the environment, the neural net can use the difference between its expected reward and the ground-truth reward to adjust its weights and improve its interpretation of state-action pairs. 
@@ -253,6 +255,7 @@ public class A3CALE {
 * Video: [Richard Sutton on Temporal Difference Learning](https://www.youtube.com/watch?v=EeMCEQa85tw)
 * [A Brief Survey of Deep Reinforcement Learning](https://arxiv.org/pdf/1708.05866.pdf)
 * [The Policy of Truth, by Ben Recht](http://www.argmin.net/2018/02/20/reinforce/)
+* [Machine Learning for Humans: Reinforcement Learning](https://medium.com/machine-learning-for-humans/reinforcement-learning-6eacf258b265)
 
 ## RL Theory
 
