@@ -45,11 +45,6 @@ packagingOptions {
 	exclude 'META-INF/notice.txt'
 	exclude 'META-INF/INDEX.LIST'
  
-	exclude 'org/bytedeco/javacpp/windows-x86/msvcp120.dll'
-	exclude 'org/bytedeco/javacpp/windows-x86_64/msvcp120.dll'
-	exclude 'org/bytedeco/javacpp/windows-x86/msvcr120.dll'
-	exclude 'org/bytedeco/javacpp/windows-x86_64/msvcr120.dll'
-        }
 ```
 Compiling these dependencies involves a large number of files, thus it is necessary to set multiDexEnabled to true in defaultConfig.
 ```java
