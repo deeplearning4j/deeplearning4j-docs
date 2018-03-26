@@ -13,7 +13,7 @@ setTimeout(ldinsp, 500); document.readyState != "complete" ? (window.attachEvent
 </script>
 <!-- End Inspectlet Embed Code -->
 
-# Quick Start Guide
+# Quickstart Guide
 
 This is everything you need to run DL4J examples and begin your own projects.
 
