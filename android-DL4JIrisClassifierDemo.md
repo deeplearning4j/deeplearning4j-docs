@@ -26,7 +26,7 @@ Deeplearning4J applications require several dependencies in the build.gradle fil
         compile 'org.nd4j:nd4j-native:0.9.1'
         compile 'org.nd4j:nd4j-native:0.9.1:android-x86'
         compile 'org.nd4j:nd4j-native:0.9.1:android-arm'
-        compile 'org.bytedeco.javacpp-presets:systems-platform:1.4'
+        compile 'org.bytedeco:javacpp:1.4'
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
         testCompile 'junit:junit:4.12'
