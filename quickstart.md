@@ -125,7 +125,7 @@ Right-click the file to run.
 
 ## Using DL4J In Your Own Projects: Configuring the POM.xml File
 
-To run DL4J in your own projects, we highly recommend using Maven for Java users, or a tool such as SBT for Scala. The basic set of dependencies and their versions are shown below. This includes:
+To run DL4J in your own projects, we highly recommend using Maven for Java users, or a tool such as SBT for [Scala](https://github.com/SkymindIO/SKIL_Examples/blob/master/skil_example_notebooks/scala/uci_quickstart_notebook.scala). The basic set of dependencies and their versions are shown below. This includes:
 
 - `deeplearning4j-core`, which contains the neural network implementations
 - `nd4j-native-platform`, the CPU version of the ND4J library that powers DL4J
@@ -161,6 +161,7 @@ Congratulations! You just trained your first neural network with Deeplearning4j.
 - [Deeplearning4j artifacts on Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cdeeplearning4j)
 - [ND4J artifacts on Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cnd4j)
 - [Datavec artifacts on Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cdatavec)
+- [Scala code for UCI notebook](https://github.com/SkymindIO/SKIL_Examples/blob/master/skil_example_notebooks/scala/uci_quickstart_notebook.scala)
 
 ### Troubleshooting
 
@@ -196,9 +197,7 @@ at org.nd4j.linalg.factory.Nd4j.initContext(Nd4j.java:5553)
 ... 3 more
 ```
 
-If that is the issue see, [this page](https://github.com/bytedeco/javacpp-presets/wiki/Debugging-UnsatisfiedLinkError-on-Windows#using-dependency-walker)
-In this case replace with "Nd4jCpu".
-
+If that is the issue, see [this page](https://github.com/bytedeco/javacpp-presets/wiki/Debugging-UnsatisfiedLinkError-on-Windows#using-dependency-walker). In this case replace with "Nd4jCpu".
 
 ### Eclipse setup without Maven
 
