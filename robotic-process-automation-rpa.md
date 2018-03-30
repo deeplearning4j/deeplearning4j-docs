@@ -1,9 +1,9 @@
 ---
-title: Robotic Process Automation (RPA) and Deep Learning
+title: Robotic Process Automation (RPA), AI and Deep Learning
 layout: default
 ---
 
-# Robotic Process Automation (RPA) and Deep Learning
+# Robotic Process Automation (RPA), AI and Deep Learning
 
 RPA automates business workflows, or clerical processes, by emulating human interaction within a graphical user interface (GUI). 
 
