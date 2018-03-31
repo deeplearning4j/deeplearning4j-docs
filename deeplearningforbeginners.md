@@ -25,7 +25,7 @@ Below you'll find a list of resources. The sections are roughly organized in the
 * [Andrej Karpathy's Convolutional Neural Networks Class at Stanford](http://cs231n.github.io) (For those interested in image recognition.)
 * [ML@B: Machine Learning Crash Course: Part 1](https://ml.berkeley.edu/blog/2016/11/06/tutorial-1/)
 * [ML@B: Machine Learning Crash Course: Part 2](https://ml.berkeley.edu/blog/2016/12/24/tutorial-2/)
-* [Gradient descent, how neural networks learn | Deep learning, part 2](https://www.youtube.com/watch?v=IHZwWFHWa-w&feature=youtu.be)
+* [Gradient descent, how neural networks learn, Deep learning, part 2](https://www.youtube.com/watch?v=IHZwWFHWa-w&feature=youtu.be)
 
 ## Math
 
