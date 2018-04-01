@@ -78,6 +78,8 @@ As data scientists shift their workloads to the cloud in response to IT departme
 
 Companies pursuing digital transformation by adding machine learning to their stack should be aware of these dynamics, since the decisions made by data science teams now will affect business expenses and outcomes for years to come.
 
+IT departments generally don't buy hardware and software for machine learning. They see new chips as a fad, and they regard most data science software as unstable, unsupported and undebuggable. They're not wrong. However, data scientists are the ones who decide which machine learning tools their company will adopt. They are still rare enough to have that clout. And they tend to choose technology that maximizes their personal productitivity (how can I produce a trained model quickly?) rather than technology that will work well across teams or be stable in a production deployment. 
+
 ### More Artificial Intelligence Resources
 
 * [The Coming Technological Singularity: How to Survive in the Post-Human Era](https://www-rohan.sdsu.edu/faculty/vinge/misc/singularity.html); [Vernor Vinge](https://en.wikipedia.org/wiki/Vernor_Vinge)
