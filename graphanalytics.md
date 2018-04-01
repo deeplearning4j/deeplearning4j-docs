@@ -83,11 +83,11 @@ One interesting aspect of graph is so-called side information, or the attributes
 
 Finally, you can compute derivative functions such as graph Lapalians from the tensors that represent the graphs, much like you might perform an eigen analysis on a tensor. These functions will tell you things about the graph that may help you classify or cluster it. (See below for more information.)  
 
-### <a name="beginner">Other Deep-learning Tutorials</a>
+### <a name="beginner">More Deep Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview)
 * [Deep Reinforcement Learning](./deepreinforcementlearning)
-* [Convolutional Networks (CNNs)](./convolutionalnets)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
 * [LSTMs and Recurrent Networks](./lstm)
 * [Word2Vec: Neural Embeddings for Java](./word2vec)
