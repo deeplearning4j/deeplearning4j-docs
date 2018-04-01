@@ -1,10 +1,10 @@
 ---
-title: Decision Trees in Java
+title: Decision Trees in Java and Scala
 layout: default
 redirect: machinelearning
 ---
 
-## Decision Trees
+## Decision Trees in Java and Scala
 
 A decision tree is a series of nodes, a directional graph that starts at the base with a single node and extends to the many leaf nodes that represent the categories that the tree can classify. Another way to think of a decision tree is as a flow chart, where the flow starts at the root node and ends with a decision made at the leaves. It is a decision-support tool. It uses a tree-like graph to show the predictions that result from a series of feature-based splits. 
 
