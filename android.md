@@ -46,7 +46,7 @@ layout: default
 <ul>
   <li>An Android device or emulator that runs API level 21 or higher, and has about 200 MB of internal storage space free. I strongly suggest you use an emulator first because you can quickly tweak it in case you run out of memory or storage space.</li>
   <li>Android Studio 2.2 or newer</li>
-  <li>A more in-depth look at using DL4J in Android Applications can be found <a href="https://deeplearning4j.org/android-Prereqs%20and%20Configuration" target="_blank" rel="nofollow">here.</a> This guide covers dependencies, memory management, saving device-trained models for better performance, and loading pre-trained models in the application.</li>
+  <li>A more in-depth look at using DL4J in Android Applications can be found <a href="https://deeplearning4j.org/android-Prereqs%20and%20Configuration" target="_blank" rel="nofollow">here.</a> This guide covers dependencies, memory management, saving device-trained models, and loading pre-trained models in the application.</li>
 </ul>
 
 <h3 id="configuring-your-android-studio-project">Configuring Your Android Studio Project</h3>
@@ -238,9 +238,9 @@ We should exclude them too. In my case:
 
 <p>In this tutorial, you saw how easy it is to create and train a neural network using the Deeplearning4J library in an Android Studio project. I’d like to warn you, however, that training a neural network on a low-powered, battery operated device might not always be a good idea.</p>
 
-<p>A second example DL4J Android Application can be found <a href="https://deeplearning4j.org/android-DL4JIrisClassifierDemo" target="_blank" rel="nofollow">here.</a> This example trains a neural network on the device using Anderson’s iris data set for iris flower type classification. The application includes user input for the measurements and returns the probability that these measurements belong to one of three iris types (Iris serosa, Iris versicolor, and Iris virginica).</p>
+<p>A second example DL4J Android Application which includes a user interface can be found <a href="https://deeplearning4j.org/android-DL4JIrisClassifierDemo" target="_blank" rel="nofollow">here.</a> This example trains a neural network on the device using Anderson’s iris data set for iris flower type classification. The application includes user input for the measurements and returns the probability that these measurements belong to one of three iris types (Iris serosa, Iris versicolor, and Iris virginica).</p>
 
-<p></p>
+<p>The limitations of processing power and battery life on mobile devices make training robust, multi-layer networks unfeasible. As an alternative to training a network on the device, the neural network being used by your application can be trained on the desktop, saved via ModelSerializer, and then loaded as a pre-trained model in the application. A third example DL4J Android Application can be found <a href="https://deeplearning4j.org/android-DL4JImageRecognitionDemo" target="_blank" rel="nofollow">here</a> which loads a pre-trained Mnist network and uses it to classify user drawn numbers. </p>
 
 <p>This was originally posted at <a href="http://progur.com/2017/01/how-to-use-deeplearning4j-on-android.html" target="_blank" rel="nofollow">Progur</a> by Ashraff Hathibelagal.
 
