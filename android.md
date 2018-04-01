@@ -53,10 +53,12 @@ layout: default
 
 <p>To be able to use Deeplearning4J in your project, add the following <code class="highlighter-rouge">compile</code> dependencies to your app module’s <strong>build.gradle</strong> file:</p>
 
-<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="n">compile</span> <span class="s1">'org.deeplearning4j:deeplearning4j-core:0.8.0'</span>
-<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.8.0'</span>
-<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.8.0:android-x86'</span>
-<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.8.0:android-arm'</span>
+<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy">
+<span class="n">compile</span> <span class="s1">'org.deeplearning4j:deeplearning4j-nn:0.9.1'</span>
+<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.9.1'</span>
+<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.9.1:android-x86'</span>
+<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.9.1:android-arm'</span>
+<span class="n">compile</span> <span class="s1">'org.bytedeco:javacpp:1.4'</span>
 <span class="n">compile</span> <span class="s1">'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'</span>
 <span class="n">compile</span> <span class="s1">'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'</span>
 
