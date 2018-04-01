@@ -71,11 +71,12 @@ So you could apply the same definition to deep learning that Arthur Samuel did t
 
 ### <a name="resources">More Machine Learning Tutorials</a>
 
+* [What is Artificial Intelligence (AI)?](./artificial-intelligence-ai.html)
 * [Introduction to Neural Networks](./neuralnet-overview)
 * [LSTMs & Recurrent Networks](./lstm)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
 * [Deep Reinforcement Learning](./deepreinforcementlearning)
-* [Symbolic Reasoning & Deep Learning](./symbolicreasoning)
+* [Symbolic AI & Deep Learning](./symbolicreasoning)
 * [Deep Convolutional Networks for Images (CNNs)](./convolutionalnetwork)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
 * [Word2Vec: Neural Word Embeddings for Machine Learning](./word2vec)
