@@ -25,7 +25,13 @@ This is the training stage of a machine learning algorithm, and machine learning
 
 So the key idea here is: You need the right data to train an algorithm. That is, if you want to identify people by their faces, you need to take photographs of peoples' faces. And then you need someone to label those photos. So there is a transfer of human knowledge to the dataset, and from the data set to the algorithm. If you don't gather the right data, and label it correctly, your algorithm won't learn how to make accurate predictions. 
 
-AI starts with the data. People and companies that want to use AI and machine learning, because they know they can benefit from more accurate predictions, need to lay a solid foundation by gathering the right data and labeling it properly. Not doing that will limit the accuracy the algorithms can produce. 
+AI starts with the data. People and companies that want to use AI and machine learning, because they know they can benefit from more accurate predictions, need to lay a solid foundation by gathering the right data and labeling it properly. Not doing that will limit the accuracy the algorithms can produce. The quality of the data -- whether your camera got a good shot of each person, whether you labeled those images properly -- is one of the fundamental limits on making AI work. If you get the data right, you're half way there. 
+
+The next step involves choosing and tuning the algorithms. There are a lot of algorithms to choose from, many of them described elsewhere on this website. And those algorithms can be tuned, just like a car or a piece of machinery. That is, there are knobs to turn. You can determine how much they train, and how quickly they adjust themselves during training. And just like turning the knobs on a machine, there are many ways to screw this up. 
+
+The people who know how to tune algorithms are typically called data scientists. Sometimes they might be called machine-learning or deep-learning specialists. Sometimes they might even hold a graduate degree, like a PhD in a machine learning as it applies to a certain use case. These are the people who know how to explore data to see if it's good, and how to experiment with different algorithms until they find one that learns well from a dataset. 
+
+There are not enough people who have these skills in the world. Data scientists are all too rare, and that goes double for machine-learning PhDs. In addition to good data, the scarcity of skilled data scientists is another constraint on the adoption and implementation of AI. 
 
 ## Artificial Intelligence Resources
 
