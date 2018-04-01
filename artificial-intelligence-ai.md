@@ -66,7 +66,15 @@ There are many efforts underway to make machine-learning tools that make it easi
 
 ## Public Clouds, IT Departments and Procurement
 
+The dysfunctional relationship between data scientists and their in-house IT departments, which are in charge of hardware and software procurement and approvals, is pushing those data scientists to the cloud in order to do their jobs. That's is bad for the hardware and software vendors attempting to sell on-premise for companies' proprietary data ceneters (long term, it is also bad for those IT departments, which generally fail to understand this new kind of workload). That movement concentrates more and more power in the major public cloud vendors. 
 
+The technical term is oligopsony, or a market of few buyers (otherwise known as a "bad market"), the sister term to oligopoly. 
+
+The "total cost of ownership" (TCO) comparing cloud to on-prem shows that cloud services get very expensive very quickly when you depend on them at a high and constant rate, as teams do they they consume 100,000s of GPUs hours to train machine-learning models. 
+
+As data scientists shift their workloads to the cloud in response to IT department intransigence, the data follows, new stacks are built, data gravity accumulates and the company's work is soon so path dependent that "declouding" becomes very expensive. One thing that makes it expensive are the data pulls. Cold data on AWS is cheap, pulling it is expensive. 
+
+Companies pursuing digital transformation by adding machine learning to their stack should be aware of these dynamics, since the decisions made by data science teams now will affect business expenses and outcomes for years to come.
 
 ### More Artificial Intelligence Resources
 
