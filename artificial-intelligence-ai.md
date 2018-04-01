@@ -64,7 +64,7 @@ There are many efforts underway to make machine-learning tools that make it easi
 * [Dataiku: Collaborative Data Science Platform](https://www.dataiku.com/)
 * [Kubeflow: Machine-Learning Toolkit for Kubernetes](https://github.com/kubeflow/kubeflow)
 
-## Public Clouds, IT Departments and Procurement
+## Public Clouds, IT Departments and AI Procurement
 
 The dysfunctional relationship between data scientists and their in-house IT departments, which are in charge of hardware and software procurement and approvals, is pushing those data scientists to the cloud in order to do their jobs. 
 
