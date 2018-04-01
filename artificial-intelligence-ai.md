@@ -7,7 +7,7 @@ layout: default
 
 AI is a bunch of algorithms that make decisions about data. Those algorithms are just math and code. The math usually includes linear algebra, calculus and probility -- stuff that a lot of people studied in college and then forgot. But the point is, it's undergraduate-level math for the most part, not rocket science. 
 
-For a high-level understanding of AI and its function, we don't even have to know which algorithms are involved. They just  make predictions about something you care about. 
+For a high-level understanding of AI and its function, we don't even have to know which algorithms are involved. They just  make predictions about something you care about. Below, we're going to look at a machine learning example. (Go here for an understanding of the [differences between the terms AI, machine learning and deep learning](https://deeplearning4j.org/ai-machinelearning-deeplearning).)
 
 ## A Machine-Learning Example
 
@@ -21,7 +21,7 @@ You want to predict the identity of the person at the door. The data that correl
 
 Algorithms, especially machine-learning algorithms, learn correlations. That is, if you give them the outputs (names) and the inputs (pixels in the image), they will find the rules that correlate the pixels representing a certain face with a certain name. That will be able to say: "Those pixels look like Bob."
 
-# Training an Algorithm
+## Training an Algorithm
 
 But first, you need to teach the algorithm to make those predictions. You need to give the algorithm a labeled data set. The dataset are the images of all the people who come to your house. The labels are their names. So all the pictures would have a name attached to them -- Bob, Rachel, Alice, Alfred, you name it -- and the algorithm would look at the data and learn to predict the name that goes with each face. 
 
@@ -47,9 +47,22 @@ There are not enough people who have these skills in the world. Data scientists 
 
 Software is only as good as its integrations. No software is an island. It always has to plug into something, because data has to be drawn from a source, and predictions have to be acted on or displayed. Machine-learning software has to integrate with data sources upstream, and with business logic and data visualization GUIs downstream. Without those integrations, it will not be useful. 
 
-Many machine-learning tools, the platforms that allow data scientists to choose, tune and train AI algorithms, were created to support research. That is, they are adapted for the science side of data science: how do I run an experiment quickly and arrive at the model that can produce accurate predictions. But there are other necessary steps before AI can be useful. Once a machine-learning model has been trained, it must be deployed in such a way that the company that paid for its development can consume the model's predictions. In other words, you need to be able to plug it in. 
+Many machine-learning tools, the platforms that allow data scientists to choose, tune and train AI algorithms, were created to support research. That is, they are adapted for the science side of data science: how do I run an experiment quickly and arrive at the model that can produce accurate predictions. But there are other necessary steps before AI can be useful. Once a machine-learning model has been trained, it must be deployed in such a way that the company that paid for its development can consume the model's predictions. In other words, you need to be able to plug it in. Otherwise it won't be able to do its work. 
 
-## Artificial Intelligence Resources
+There are many efforts underway to make machine-learning tools that make it easier to deploy trained models, track their performance, and update them as needed. These include paid machine-learning services offered by public cloud vendors, as well as open-source projects. Some of these tools are simply shipping blobs of Python and C code in a Docker container, while others are more full-fledged attempts to solve the infrastructure problems inherent in productionizing AI. 
+
+### Machine-Learning Tools and Platforms
+
+* [SKIL: The Skymind Intelligence Layer](https://docs.skymind.ai/docs)
+* [Google Cloud AI](https://cloud.google.com/products/machine-learning/)
+* [Amazon Sagemaker](https://aws.amazon.com/sagemaker/)
+* [Microsoft Azure Machine Learning Studio](https://studio.azureml.net/)
+* [Domino Datalab](https://www.dominodatalab.com/)
+* [Dataiku: Collaborative Data Science Platform](https://www.dataiku.com/)
+* [Pipeline.ai](https://pipeline.ai/)
+* [Kubeflow: Machine-Learning Toolkit for Kubernetes](https://github.com/kubeflow/kubeflow)
+
+### More Artificial Intelligence Resources
 
 * [The Coming Technological Singularity: How to Survive in the Post-Human Era](https://www-rohan.sdsu.edu/faculty/vinge/misc/singularity.html); [Vernor Vinge](https://en.wikipedia.org/wiki/Vernor_Vinge)
 * [Kurzweil: Accelerating Intelligence](http://www.kurzweilai.net/); [Ray Kurzweil](https://en.wikipedia.org/wiki/Ray_Kurzweil)
