@@ -238,6 +238,10 @@ We should exclude them too. In my case:
 
 <p>In this tutorial, you saw how easy it is to create and train a neural network using the Deeplearning4J library in an Android Studio project. I’d like to warn you, however, that training a neural network on a low-powered, battery operated device might not always be a good idea.</p>
 
+<p>A second example DL4J Android Application can be found <a href="https://deeplearning4j.org/android-DL4JIrisClassifierDemo" target="_blank" rel="nofollow">here.</a> This example trains a neural network on the device using Anderson’s iris data set for iris flower type classification. The application includes user input for the measurements and returns the probability that these measurements belong to one of three iris types (Iris serosa, Iris versicolor, and Iris virginica).</p>
+
+<p></p>
+
 <p>This was originally posted at <a href="http://progur.com/2017/01/how-to-use-deeplearning4j-on-android.html" target="_blank" rel="nofollow">Progur</a> by Ashraff Hathibelagal.
 
                 
