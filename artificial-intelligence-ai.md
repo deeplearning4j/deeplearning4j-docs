@@ -57,10 +57,16 @@ There are many efforts underway to make machine-learning tools that make it easi
 * [Google Cloud AI](https://cloud.google.com/products/machine-learning/)
 * [Amazon Sagemaker](https://aws.amazon.com/sagemaker/)
 * [Microsoft Azure Machine Learning Studio](https://studio.azureml.net/)
+* [IBM's Data Science Experience (DSX)](https://datascience.ibm.com/)
+* [Cloudera's Data Science Workbench](https://www.cloudera.com/products/data-science-and-engineering/data-science-workbench.html)
+* [Databricks' MLlib](https://docs.databricks.com/spark/latest/mllib/index.html)
 * [Domino Datalab](https://www.dominodatalab.com/)
 * [Dataiku: Collaborative Data Science Platform](https://www.dataiku.com/)
-* [Pipeline.ai](https://pipeline.ai/)
 * [Kubeflow: Machine-Learning Toolkit for Kubernetes](https://github.com/kubeflow/kubeflow)
+
+## Public Clouds, IT Departments and Procurement
+
+
 
 ### More Artificial Intelligence Resources
 
