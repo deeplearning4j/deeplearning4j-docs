@@ -66,7 +66,9 @@ There are many efforts underway to make machine-learning tools that make it easi
 
 ## Public Clouds, IT Departments and Procurement
 
-The dysfunctional relationship between data scientists and their in-house IT departments, which are in charge of hardware and software procurement and approvals, is pushing those data scientists to the cloud in order to do their jobs. That's is bad for the hardware and software vendors attempting to sell on-premise for companies' proprietary data ceneters (long term, it is also bad for those IT departments, which generally fail to understand this new kind of workload). That movement concentrates more and more power in the major public cloud vendors. 
+The dysfunctional relationship between data scientists and their in-house IT departments, which are in charge of hardware and software procurement and approvals, is pushing those data scientists to the cloud in order to do their jobs. 
+
+That's bad for the hardware and software vendors attempting to sell on-premise for companies' proprietary data ceneters (long term, it is also bad for those IT departments, which generally fail to understand this new kind of workload). That movement concentrates more and more power in the major public cloud vendors. 
 
 The technical term is oligopsony, or a market of few buyers (otherwise known as a "bad market"), the sister term to oligopoly. 
 
