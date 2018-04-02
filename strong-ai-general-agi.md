@@ -19,4 +19,24 @@ AI is getting stronger, in the sense that it is able to produce more and more ac
 
 The two organizations doing the most interesting work on general AI are probably Google and Open AI. Google's AI research mostly happens at DeepMind and Google Brain. 
 
+### <a name="resources">More Machine Learning Tutorials</a>
+
+* [What is Artificial Intelligence (AI)?](./artificial-intelligence-ai.html)
+* [Introduction to Neural Networks](./neuralnet-overview)
+* [LSTMs & Recurrent Networks](./lstm)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Deep Reinforcement Learning](./deepreinforcementlearning)
+* [Symbolic AI & Deep Learning](./symbolicreasoning)
+* [Deep Convolutional Networks for Images (CNNs)](./convolutionalnetwork)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Word2Vec: Neural Word Embeddings for Machine Learning](./word2vec)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
+* [Eigenvectors, Covariance, PCA and Entropy](./eigenvector)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Deep Learning & Graph Data](./graphdata)
+* [Neural Networks & Regression](./logistic-regression)
+* [Inference: Machine Learning Model Server](./modelserver)
+* [Open Data Sets for Machine Learning](./opendata)
+* [ETL Data Pipelines for Machine Learning](./datavec)
+* [A Glossary of Deep-Learning Terms](./glossary)
 
