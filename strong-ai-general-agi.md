@@ -9,6 +9,14 @@ First let's start with the synonyms: strong AI, general AI, artificial general i
 
 We call it strong because we imagine it will be strong than us. We call it general because it will apply to all problems. The opposite of strong AI is weak AI. The opposite of general AI is narrow AI. 
 
-As these words are being written in 2018, we live in an age of weak AI. Weak AI is an algorithm that has been trained to do one thing, and it does that one thing very well. For viewers familiar with [the movie Rainman](http://www.imdb.com/title/tt0095953/), Dustin Hoffman's character is a good analogy for weak AI: good at solving a few very specific problems (like counting match sticks on the floor), bad at life. The AI that data scientists are deploying to the world right now is a bunch of machine-learning models, each of which performing one task well. They are like a crowd of savants babbling their narrow responses to the world. 
+As these words are being written in 2018, we live in an age of weak AI. Weak AI is an algorithm that has been trained to do one thing, and it does that one thing very well. For viewers familiar with [the movie Rainman](http://www.imdb.com/title/tt0095953/), Dustin Hoffman's character is a good analogy for weak AI: good at solving a few very specific problems (like counting match sticks on the floor), bad at life. 
+
+The AI that data scientists are deploying to the world right now is a bunch of machine-learning models, each of which performing one task well. They are like a crowd of savants babbling their narrow responses to the world. 
+
+## So AI Isn't Strong, but Is It Getting Stronger?
+
+AI is getting stronger, in the sense that it is able to produce more and more accurate predictions about the data you feed it. 
+
+The two organizations doing the most interesting work on general AI are probably Google and Open AI. Google's AI research mostly happens at DeepMind and Google Brain. 
 
 
