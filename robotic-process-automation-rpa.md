@@ -46,7 +46,7 @@ Many AI tools, such as [SKIL](https://docs.skymind.ai/docs) and [Eclipse Deeplea
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
 * [Deep Learning & Graph Data](./graphdata)
 * [Neural Networks & Regression](./logistic-regression)
-* [Inference: Machine Learning Model Server](./modelserver)
+* [Inference: Machine Learning Model Server](./machine-learning-server)
 * [Open Data Sets for Machine Learning](./opendata)
 * [ETL Data Pipelines for Machine Learning](./datavec)
 * [A Glossary of Deep-Learning Terms](./glossary)
