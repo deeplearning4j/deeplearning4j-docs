@@ -19,7 +19,7 @@ AI is getting stronger, in the sense that it is able to produce more and more ac
 
 The two organizations doing the most interesting work on general AI are probably Google and Open AI. Google's AI research mostly happens at DeepMind and Google Brain. 
 
-In his review of Steven Pinker's book, "Enlightenment Now", [Scott Aaronson analyzes Pinker's AI optimism](https://www.scottaaronson.com/blog/?p=3654):
+In his review of Steven Pinker's book, "Enlightenment Now", [Scott Aaronson analyzes Pinker's AI optimism](https://www.scottaaronson.com/blog/?p=3654) in the following paragraphs:
 
 ```
 Then there’s the matter of takeover by superintelligent AI.  I’ve now spent years hanging around communities where it’s widely accepted that “AI value alignment” is the most pressing problem facing humanity.  I strongly disagree with this view—but on reflection, not because I don’t think AI could be a threat; only because I think other, more prosaic things are much more imminent threats!  I feel the urge to invent a new, 21st-century Yiddish-style proverb: “oy, that we should only survive so long to see the AI-bots become our worst problem!”
