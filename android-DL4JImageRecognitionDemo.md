@@ -30,6 +30,18 @@ Deeplearning4J applications requires application specific dependencies in the bu
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
         testCompile 'junit:junit:4.12'
+	
+	//Image loading dependency
+        compile ('org.datavec:datavec-data-image:0.9.1'){
+            //Platform specific binaries can be excluded here to reduce the compile size
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
+        }
+	
+	//This corrects for a junit version conflict.
+        configurations.all {
+            resolutionStrategy.force 'junit:junit:4.12'
+        }
 ```
 Depending on the combination of dependencies, duplication conflicts can arise that must be handled with exclusions. After adding the above dependencies and the exclusions listed below, sync the Gradle file add additional exclusions if needed. The error message will identify the file path that should be added to the list of exclusions. An example error message with file path: **> More than one file was found with OS independent path 'org/bytedeco/javacpp/ windows-x86_64/msvp120.dll'**
 ```java
