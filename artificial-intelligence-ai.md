@@ -1,9 +1,9 @@
 ---
-title: What is Artificial Intelligence (AI)?
+title: What is Artificial Intelligence (AI)? How Is It Built?
 layout: default
 ---
 
-# What is Artificial Intelligence (AI)?
+# What is Artificial Intelligence (AI)? How Is It Built?
 
 AI is a bunch of algorithms that make decisions about data. Those algorithms are just math and code. The math usually includes linear algebra, calculus and probility -- stuff that a lot of people studied in college and then forgot. But the point is, it's undergraduate-level math for the most part, not rocket science. 
 
