@@ -17,11 +17,13 @@ Machine learning models can be inserted into RPA workflows to perform machine pe
 
 RPA and AI are two horizontal technologies that are distinct in their goals and interfaces.
 
-RPA, or robotic process automation, is intended to automated repetitive, clerical tasks to save business and white-collar workers time. RPA is built by RPA engineers via a GUI, or a graphical interface, which they use to arrange the sequence of tasks RPA automates. For the most part, RPA is based on rules, or if-then statements that tell a program what to do under certain conditions.
+RPA is intended to save business and white-collar workers time. RPA is built by RPA engineers via a GUI, or a graphical interface, which they use to arrange the sequence of tasks RPA automates. For the most part, RPA is based on rules, or if-then statements that tell a program what to do under certain conditions.
 
 AI is an umbrella term that includes rules engines like the kind mentioned above. But that’s not the exciting side of AI, and it’s usually not what people mean when they refer to AI these days. Usually, they are referring to machine learning or deep learning; i.e. programs that are capable of rewriting themselves in response to their environment or the data they’re exposed to.
 
 AI is a horizontal technology that makes decisions about data. Sometimes it makes decisions, or predictions, based on rules that humans manually wrote (rules engines); sometimes it makes decisions based on a bunch of numeric parameters that it arrived at after much trial and error (machine learning).
+
+Advances in AI allow us to make more accurate decisions about the data we're looking at. In some cases, that accuracy can surpass human accuracy.
 
 RPA and AI overlap in that you can infuse RPA with AI. Most RPA vendors are not currently using advanced AI in the products they ship, but that is changing. Useful applications of advanced AI in RPA could include image recognition (in order to recognize images on a screen more reliably) or text analysis.
 
