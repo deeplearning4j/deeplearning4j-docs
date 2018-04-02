@@ -13,7 +13,7 @@ RPA can be optimized for some GUI actions by applying machine- and deep-learning
 
 Machine learning models can be inserted into RPA workflows to perform machine perception tasks, like image recognition: tasks that the human brain can perform in a second, whose output can be plugged into a larger flow of business logic. 
 
-## Differences Between RPA & AI
+## Differences Between RPA, AI and Machine Learning
 
 RPA and AI are two horizontal technologies that are distinct in their goals and interfaces.
 
