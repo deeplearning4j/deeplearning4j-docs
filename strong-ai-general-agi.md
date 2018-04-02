@@ -17,7 +17,7 @@ The AI that data scientists are deploying to the world right now is a bunch of m
 
 AI is getting stronger, in the sense that it is able to produce more and more accurate predictions about the data you feed it. 
 
-The two organizations doing the most interesting work on general AI are probably Google and Open AI. Google's AI research mostly happens at DeepMind and Google Brain. 
+The two organizations doing the most interesting work on general AI are probably Google and [Open AI](https://openai.com/), a think tank created by Elon Musk and Sam Altman, among others. Google's AI research mostly happens at [DeepMind](https://deepmind.com/blog/) and [Google Brain](https://research.googleblog.com/). 
 
 In his review of Steven Pinker's book, "Enlightenment Now", [Scott Aaronson analyzes Pinker's AI optimism](https://www.scottaaronson.com/blog/?p=3654) in the following paragraphs:
 
