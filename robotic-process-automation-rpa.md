@@ -27,7 +27,7 @@ Advances in AI allow us to make more accurate decisions about the data we're loo
 
 RPA and AI overlap in that you can infuse RPA with AI. Most RPA vendors are not currently using advanced AI in the products they ship, but that is changing. Useful applications of advanced AI in RPA could include image recognition (in order to recognize images on a screen more reliably) or text analysis.
 
-Many AI tools are accessed with an API, some with a GUI.
+Many AI tools, such as [SKIL](https://docs.skymind.ai/docs) and [Eclipse Deeplearning4j](https://projects.eclipse.org/projects/technology.deeplearning4j), are accessed with an API, some with a GUI.
 
 ### <a name="resources">More Machine Learning Tutorials</a>
 
