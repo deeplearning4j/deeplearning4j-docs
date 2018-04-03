@@ -508,6 +508,16 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+
 
 ### <a name="doctorow">Word2Vec in Literature</a>
 
