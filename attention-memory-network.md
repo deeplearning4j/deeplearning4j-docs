@@ -19,7 +19,10 @@ WIP
 * [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)
 * [Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation](https://arxiv.org/abs/1406.1078)
 * [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473)
+* [Effective Approaches to Attention-based Neural Machine Translation](https://arxiv.org/abs/1508.04025)
 * [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+* [Video Lecture 10: Neural Machine Translation and Models with Attention (Stanford)](https://www.youtube.com/watch?v=IxQtK2SjWWM)
+* [Video Lecture 8 - Generating Language with Attention](https://www.youtube.com/watch?v=ah7_mfl7LD0)
 
 
 ### <a name="beginner">Other Machine Learning Tutorials</a>
