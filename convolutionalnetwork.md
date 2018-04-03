@@ -1,10 +1,10 @@
 ---
-title: A Beginner's Guide to Deep Convolutional Networks
+title: A Beginner's Guide to Deep Convolutional Networks (CNNs)
 layout: default
 redirect_from: convolutionalnets
 ---
 
-# A Beginner's Guide to Deep Convolutional Networks
+# A Beginner's Guide to Deep Convolutional Networks (CNNs)
 
 Contents
 
@@ -18,11 +18,11 @@ Contents
 
 ## <a name="intro">Introduction to Deep Convolutional Networks</a>
 
-Convolutional networks are deep artificial neural networks that can be used to classify images (name what they see), cluster them by similarity (photo search), and perform object recognition within scenes. They are algorithms that can identify faces, individuals, street signs, eggplants, platypuses and many other aspects of visual data. 
+Convolutional networks are deep artificial neural networks that are used primarily to classify images (e.g. name what they see), cluster them by similarity (photo search), and perform object recognition within scenes. They are algorithms that can identify faces, individuals, street signs, tumors, platypuses and many other aspects of visual data. 
 
-Convolutional networks perform optical character recognition (OCR) to digitize text and make natural-language processing possible on analog and hand-written documents, where the images are symbols to be transcribed. CNNs can also be applied to sound when it is represented visually as a spectrogram. More recently, convolutional networks have been applied directly to [text analytics](http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/) as well as graph data with [graph convolutional networks](./graphdata). 
+Convolutional networks perform optical character recognition (OCR) to digitize text and make natural-language processing possible on analog and hand-written documents, where the images are symbols to be transcribed. CNNs can also be applied to sound when it is represented visually as a spectrogram. More recently, convolutional networks have been applied directly to [text analytics](http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/) as well as graph data with [graph convolutional networks](./graphanalytics). 
 
-The efficacy of convolutional nets (ConvNets or CNNs) in image recognition is one of the main reasons why the world has woken up to the efficacy of deep learning. They are powering major advances in machine vision, which has obvious applications for self-driving cars, robotics, drones, security, medical diagnoses, and treatments for the visually impaired. 
+The efficacy of convolutional nets (ConvNets or CNNs) in image recognition is one of the main reasons why the world has woken up to the efficacy of deep learning. They are powering major advances in computer vision (CV), which has obvious applications for self-driving cars, robotics, drones, security, medical diagnoses, and treatments for the visually impaired. 
 
 <p align="center">
 <a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH CONVOLUTIONAL NETWORKS</a>
@@ -49,13 +49,13 @@ In other words, tensors are formed by arrays nested within arrays, and that nest
 
 ![Alt text](./img/3d_matrix.png) 
 
-ND4J and Deeplearning4j use `NDArray` synonymously with tensor. A tensor’s dimensionality `(1,2,3…n)` is called its order; i.e. a fifth-order tensor would have five dimensions.
+ND4J and Deeplearning4j use `NDArray` synonymously with tensor, or multi-dimensional array. A tensor’s dimensionality `(1,2,3…n)` is called its order; i.e. a fifth-order tensor would have five dimensions.
 
 The width and height of an image are easily understood. The depth is necessary because of how colors are encoded. Red-Green-Blue (RGB) encoding, for example, produces an image three layers deep. Each layer is called a "channel", and through convolution it produces a stack of feature maps (explained below), which exist in the fourth dimension, just down the street from time itself. (Features are just details of images, like a line or curve, that convolutional networks create maps of.)
 
 So instead of thinking of images as two-dimensional areas, in convolutional nets they are treated as four-dimensional volumes. These ideas will be explored more thoroughly below. 
 
-## <a name="define">Definition</a>
+## <a name="define">Convolutional Definition</a>
 
 From the Latin *convolvere*, "to convolve" means to roll together. For mathematical purposes, a convolution is the integral measuring how much two functions overlap as one passes over the other. Think of a convolution as a way of mixing two functions by multiplying them. 
 
@@ -82,7 +82,7 @@ Convolutional nets perform more operations on input than just convolutions thems
 
 After a convolutional layer, input is passed through a nonlinear transform such as *tanh* or *rectified linear* unit, which will squash input values into a range between -1 and 1. 
 
-## <a name="work">How Convolutional Networks Work</a>
+## <a name="work">How Convolutional Neural Networks Work</a>
 
 The first thing to know about convolutional networks is that they don't perceive images like humans do. Therefore, you are going to have to think in a different way about what an image means as it is fed to and processed by a convolutional network. 
 
@@ -123,7 +123,7 @@ What we just described is a convolution. You can think of Convolution as a fancy
 
 One of the main problems with images is that they are high-dimensional, which means they cost a lot of time and computing power to process. Convolutional networks are designed to reduce the dimensionality of images in a variety of ways. Filter stride is one way to reduce dimensionality. Another way is through downsampling. 
 
-## <a name="max">Max Pooling/Downsampling</a>
+## <a name="max">Max Pooling/Downsampling with CNNs</a>
 
 The next layer in a convolutional network has three names: max pooling, downsampling and subsampling. The activation maps are fed into a downsampling layer, and like convolutions, this method is applied one patch at a time. In this case, max pooling simply takes the largest value from one patch of an image, places it in a new matrix next to the max values from other patches, and discards the rest of the information contained in the activation maps.
 
@@ -159,16 +159,15 @@ Here's one example of how you might configure a ConvNet with Deeplearning4j:
 
 All Deeplearning4j [examples of convolutional networks are available here](https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution).
 
-### <a name="beginner">Other Machine Learning Tutorials</a>
+### <a name="beginner">More Machine Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
-* [Convolutional Networks](./convolutionalnets.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
 * [Symbolic Reasoning & Deep Learning](./symbolicreasoning.html)
-* [Using Graph Data with Deep Learning](./graphdata.html)
+* [Graph Analytics & Deep Learning](./graphanalytics.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
@@ -177,7 +176,7 @@ All Deeplearning4j [examples of convolutional networks are available here](https
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 
 ## <a name="resource">Other Resources</a>
