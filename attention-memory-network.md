@@ -1,9 +1,21 @@
 ---
-title: A Beginner's Guide to Attention Networks
+title: A Beginner's Guide to Attention and Memory Networks
 layout: default
 ---
 
-# A Beginner's Guide to Attention Networks
+# A Beginner's Guide to Attention and Memory Networks
+
+WIP
+
+### <a name="beginner">Further Reading on Attention Networks</a>
+
+* [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
+* [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/)
+* [Attention in Neural Networks and How to Use It](http://akosiorek.github.io/ml/2017/10/14/visual-attention.html)
+* [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/abs/1502.03044)
+* [Recurrent Models of Visual Attention](https://arxiv.org/abs/1406.6247)
+* [End-To-End Memory Networks](https://arxiv.org/abs/1503.08895)
+
 
 ### <a name="beginner">Other Machine Learning Tutorials</a>
 
