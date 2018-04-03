@@ -1,9 +1,9 @@
 ---
-title: What's the Difference Between Artificial Intelligence, Machine Learning and Deep Learning?
+title: What's the Difference Between Artificial Intelligence (AI), Machine Learning and Deep Learning?
 layout: default
 ---
 
-# What's the Difference Between Artificial Intelligence, Machine Learning and Deep Learning?
+# What's the Difference Between Artificial Intelligence (AI), Machine Learning and Deep Learning?
 
 You can think of deep learning, machine learning and artificial intelligence as a set of Russian dolls nested within each other, beginning with the smallest and working out. Deep learning is a subset of machine learning, and machine learning is a subset of AI, which is an umbrella term for any computer program that does something smart. In other words, all machine learning is AI, but not all AI is machine learning, and so forth. 
 
@@ -71,7 +71,8 @@ So you could apply the same definition to deep learning that Arthur Samuel did t
 
 ### <a name="resources">More Machine Learning Tutorials</a>
 
-* [What is Artificial Intelligence (AI)?](./artificial-intelligence-ai.html)
+* [What is Artificial Intelligence (AI)? How Is AI Built?](./artificial-intelligence-ai.html)
+* [What is Strong AI? What Is General AI?](./strong-ai-general-agi.html)
 * [Introduction to Neural Networks](./neuralnet-overview)
 * [LSTMs & Recurrent Networks](./lstm)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
