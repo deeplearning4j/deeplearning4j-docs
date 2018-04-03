@@ -492,7 +492,7 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Bag of Words & Term Frequency-Inverse Document Frequency (TF-IDF)](./bagofwords-tf-idf.html)
 * [Advances in Pre-Training Distributed Word Representations - by Mikolov et al](https://arxiv.org/abs/1712.09405)
 
-### <a name="beginner">Other Deep Learning Tutorials</a>
+### <a name="beginner">Other Machine Learning Tutorials</a>
 
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
