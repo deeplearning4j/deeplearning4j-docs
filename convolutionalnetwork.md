@@ -10,8 +10,8 @@ Contents
 
 * <a href="#intro">Deep Convolutional Network Introduction</a>
 * <a href="#tensors">Images Are 4-D Tensors?</a>
-* <a href="#define">ConvNet Definition</a>
-* <a href="#work">How Deep Convolutional Nets Work</a>
+* <a href="#define">Convolutional Net Definition</a>
+* <a href="#work">How Deep Convolutional Networks Work</a>
 * <a href="#max">Maxpooling/Downsampling</a>
 * <a href="#code">DL4J Code Sample</a>
 * <a href="#resource">Other Resources</a>
