@@ -13,8 +13,8 @@ Contents
 * <a href="#define">Convolutional Net Definition</a>
 * <a href="#work">How Deep Convolutional Networks Work</a>
 * <a href="#max">Maxpooling/Downsampling</a>
-* <a href="#code">DL4J Code Sample</a>
-* <a href="#resource">Other Resources</a>
+* <a href="#code">Just Show Me the Code</a>
+* <a href="#resource">More CNN Resources</a>
 
 ## <a name="intro">Introduction to Deep Convolutional Networks</a>
 
