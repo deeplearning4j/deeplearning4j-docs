@@ -12,9 +12,14 @@ WIP
 * [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
 * [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/)
 * [Attention in Neural Networks and How to Use It](http://akosiorek.github.io/ml/2017/10/14/visual-attention.html)
+* [How Does Attention Work in Encoder-Decoder Recurrent Neural Networks](https://machinelearningmastery.com/how-does-attention-work-in-encoder-decoder-recurrent-neural-networks/)
 * [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://arxiv.org/abs/1502.03044)
 * [Recurrent Models of Visual Attention](https://arxiv.org/abs/1406.6247)
 * [End-To-End Memory Networks](https://arxiv.org/abs/1503.08895)
+* [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)
+* [Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation](https://arxiv.org/abs/1406.1078)
+* [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473)
+* [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 
 
 ### <a name="beginner">Other Machine Learning Tutorials</a>
