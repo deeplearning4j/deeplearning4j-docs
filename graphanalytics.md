@@ -65,7 +65,7 @@ Graphs have an **arbitrary structure**: they are collections of things without a
 
 You usually don't feed whole graphs into neural networks, for example. They would have to be the same shape and size, and you'd have to line up your graph nodes with your network's input nodes. But the whole point of graph-structured input is to not know or have that order. There's no first, there's no last. 
 
-![Alt text](./img/graph-data-structure.png)
+![Alt text](./img/graph1.jpg)
 
 The second question when dealing with graphs is: What kind of question are you trying to answer by applying machine learning to them? In social networks, you're usually trying to make a decision about what kind person you're looking at, represented by the node, or what kind of friends and interactions does that person have. So you're making predictions about the node itself or the edges. 
 
