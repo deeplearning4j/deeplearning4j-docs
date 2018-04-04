@@ -51,7 +51,7 @@ But companies need machine learning for more than lead scoring. Their use cases 
 
 Those companies have two choices: they can hire their own data scientists or rely on processional services from consulting firms. Every major public cloud vendor has introduced machine-learning solutions teams in an attempt to close the talent gap and make machine learning more available to potential users of their clouds. The major consultancies, from Accenture to Bain, have hired teams of data scientists to build solutions for their clients. Even automated machine-learning startups like Data Robot offer "Customer-facing Data Scientists". 
 
-So a lot of time, AI vendors that sell automated machine learning are really "automating" those tasks with humans. This is because the tasks and decisions involved in building AI solutions are many, varied and complex, and the technology does not yet exist to automate all of them. 
+So a lot of time, AI vendors that sell automated machine learning are really "automating" those tasks with humans; i.e. that is, they're allowing their clients to outsource the talent that their clients can't otherwise get access to. This is because the tasks and decisions involved in building AI solutions are many, varied and complex, and the technology does not yet exist to automate all of them. That's automation, it's services. We should call it what it is and recognize that buiding machine-learing often requires the refined judgment of experts, combined with automation for a few narrow tasks in a larger AI workflow.
 
 ### Transfer Learning and Pre-Trained Models
 
