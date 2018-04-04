@@ -25,4 +25,20 @@ I mentioned that data scientists *tune* algorithms. When you tune a complex mach
 
 A data scientist is frequently operating without a "recipe", and must tune knobs in combination with each other other to explore which combination works. In this case, "working" means tuning an algorithm until it is able to learn efficiently from the data it is given to train upon. 
 
-In data science, the knobs on an algorithm are called hyperparameters, and so the data scientists are performing "hyperparameter search". 
+### Hyperparameter Optimization
+
+In data science, the knobs on an algorithm are called hyperparameters, and so the data scientists are performing "hyperparameter search" as they test different combinations of those hyperparameters, different ratios between their ingredients. 
+
+Hyperparameter search can be automated. [Eclipse Arbiter](https://github.com/deeplearning4j/arbiter) is a hyperparameter optimization library designed to automate hyperparameter tuning for deep neural net training. It is the equivalent of Google Tensorflow's Vizier, or the open-source Python library Spearmint. Arbiter is part of the Deeplearning4j framework. Some startups, like [SigOpt](https://sigopt.com/), are focused solely on hyperparameter optimization.
+
+You can search for the best combination of hyperparameters with different kinds of search algorithm, like grid search, random search and Bayesian methods.
+
+### Algorithm Selection
+
+
+
+### Transfer Learning and Pre-Trained Models
+
+### Limited Use Cases
+
+### Professional Services
