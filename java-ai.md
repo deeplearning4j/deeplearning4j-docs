@@ -9,9 +9,11 @@ layout: default
 
 And more broadly, why JVM languagues like Java, [Scala](./scala-ai.html), Clojure or Kotlin?
 
-Java is the most widely used programming language in the world. Large organizations in the public and private sector have enormous Java code bases, and rely heavily on the JVM as a compute environment. In particular, much of the open-source big data stack is written for the JVM. 
+Java is the [most widely used programming language in the world](https://www.tiobe.com/tiobe-index/). Large organizations in the public and private sector have enormous Java code bases, and rely heavily on the JVM as a compute environment. In particular, much of the open-source big data stack is written for the JVM. 
 
-This includes Apache Hadoop for data storage and management, Apache Spark as a distributed run-time for fast ETL, Apache Kafka as a message queue, ElasticSearch and Cassandra to name just a few. Since access to data is a prequisite to building AI and machine-learning solutions, AI tools need to integrate well with those technologies. That's why AI and machine-learning tooling is crucial. It solves a lot of integration problems, and will enable the digital transformation of many of the world's businesses. We have listed the most important machine-learning tools written in Java below. 
+This includes Apache Hadoop for data storage and management, Apache Spark as a distributed run-time for fast ETL, Apache Kafka as a message queue, ElasticSearch and Cassandra to name just a few. Since access to data is a prequisite to building AI and machine-learning solutions, AI tools need to integrate well with those technologies. That's why the AI and machine-learning tooling you choose is crucial. The right tools solve a lot of integration problems (many data science projects fail when prototypes can't integrate with the production stack), and they will accelerate the digital transformation of many of the world's businesses. 
+
+"Accelerating digital transformation" sounds like a list of dumb buzzwords, so to paraphrase that, choosing the right tools allows you to produce more accurate predictions about data using your existing technology stack, and more accurate predictions will allow you to make better decisions. We have listed the most important machine-learning tools written in Java below. 
 
 ## Deep Learning & Neural Networks
 
