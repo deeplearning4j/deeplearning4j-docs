@@ -5,13 +5,13 @@ layout: default
 
 # Artificial Intelligence (AI) for Java
 
-## Why Java? 
+## Why Use Java for AI? 
 
 And more broadly, why should you use JVM languagues like Java, [Scala](./scala-ai.html), Clojure or Kotlin to build AI and machine-learning solutions?
 
 Java is the [most widely used programming language in the world](https://www.tiobe.com/tiobe-index/). Large organizations in the public and private sector have enormous Java code bases, and rely heavily on the JVM as a compute environment. In particular, much of the open-source big data stack is written for the JVM. This includes [Apache Hadoop](http://hadoop.apache.org/) for distributed data management; [Apache Spark](./spark) as a distributed run-time for fast ETL; [Apache Kafka](https://kafka.apache.org/) as a message queue; [ElasticSearch](https://www.elastic.co/), [Apache Lucene](https://lucene.apache.org/) and [Apache Solr](http://lucene.apache.org/solr/) for search; and [Apache Cassandra](http://cassandra.apache.org/) for data storage to name a few. 
 
-Since access to data is a prequisite to building AI and machine-learning solutions, AI tools need to integrate well with those technologies. That's why the AI and machine-learning tooling you choose is crucial. The right tools solve a lot of integration problems (many data science projects fail when prototypes can't integrate with the production stack), and they will accelerate the digital transformation of many of the world's businesses. 
+Since access to data is a prequisite to building AI and machine-learning solutions, AI tools need to integrate well with those technologies. AI starts with the data you gather. That's why the AI and machine-learning tooling you choose is crucial. The right tools solve a lot of integration problems (many data science projects fail when prototypes can't integrate with the production stack), and they will accelerate the digital transformation of many of the world's businesses. 
 
 "Accelerating digital transformation" sounds like a bunch of empty buzzwords, so let's paraphrase it. Choosing the right machine learning tools allows you to produce more accurate predictions about your data while using your existing technology stack, and those predictions will allow you to make better decisions for your business. Those predictions might be the basis of a cool new product (self-piloting drones) or lead to big cost savings. We have listed the most important machine-learning tools written in Java below. 
 
