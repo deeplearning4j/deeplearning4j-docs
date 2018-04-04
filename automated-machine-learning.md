@@ -47,6 +47,8 @@ For example, it's easy to automate machine learning for a simple use case like s
 
 But companies need machine learning for more than lead scoring. Their use cases differ, and so does their data. In those cases, it can be hard to offer a pre-baked solution. 
 
+### Professional Services
+
 Those companies have two choices: they can hire their own data scientists or rely on processional services from consulting firms. Every major public cloud vendor has introduced machine-learning solutions teams in an attempt to close the talent gap and make machine learning more available to potential users of their clouds. The major consultancies, from Accenture to Bain, have hired teams of data scientists to build solutions for their clients. Even automated machine-learning startups like Data Robot offer "Customer-facing Data Scientists". 
 
 So a lot of time, AI vendors that sell automated machine learning are really "automating" those tasks with humans. This is because the tasks and decisions involved in building AI solutions are many, varied and complex, and the technology does not yet exist to automate all of them. 
@@ -58,6 +60,3 @@ Machine learning models start out dumb and get smart by being exposed to data th
 Sometimes, you can train a machine-learning model on one set of data, and then use it for another, slightly different set of data later. This only works when the two datasets resemble each other. For example, most photographs have certain characteristics in common. If you train a machine-learning model on, say, celebrity faces, it will learn what humans look like, and with just a little extra learning, you could teach it to transfer what it knows to photographs of your family and friends, whom it has never seen before. 
 
 Pre-trained machine-learning models that gain some knowledge of the world are useful in computer vision, and widely available. Some well-known pre-trained computer vision models include AlexNet, LeNet, VGG16, YOLO and Inception. [Those pre-trained computer vision models are available here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model). Google's [Cloud AutoMl](https://cloud.google.com/automl/) relies on transfer learning, among other methods, to support its claim that it has "automated machine learning." 
-
-### Professional Services
-
