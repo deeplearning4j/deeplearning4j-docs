@@ -5,6 +5,14 @@ layout: default
 
 # Artificial Intelligence (AI) for Java
 
+## Why Java? 
+
+And more broadly, why JVM languagues like Java, [Scala](./scala-ai.html), Clojure or Kotlin?
+
+Java is the most widely used programming language in the world. Large organizations in the public and private sector have enormous Java code bases, and rely heavily on the JVM as a compute environment. In particular, much of the open-source big data stack is written for the JVM. 
+
+This includes Apache Hadoop for data storage and management, Apache Spark as a distributed run-time for fast ETL, Apache Kafka as a message queue, ElasticSearch and Cassandra to name just a few. Since access to data is a prequisite to building AI and machine-learning solutions, AI tools need to integrate well with those technologies. That's why AI and machine-learning tooling is crucial. It solves a lot of integration problems, and will enable the digital transformation of many of the world's businesses. We have listed the most important machine-learning tools written in Java below. 
+
 ## Deep Learning & Neural Networks
 
 Deep learning usually refers to deep artificial neural networks. [Neural networks](https://deeplearning4j.org/neuralnet-overview) are a type of machine learning algorithm loosely modeled on the neurons in the human brain. Deep neural nets involve stacking several neural nets on top of each other to enable a feature hierarchy for more accurate classification and prediction. Deep learning is the state of the art in most tasks or machine perception, involved classification, clustering and prediction applied to raw sensory data. 
@@ -101,12 +109,12 @@ All machine learning libraries depend on some form of scientific computing.
 For people just getting started with deep learning, the following tutorials and videos provide an easy entrance to the fundamental ideas of feedforward networks:
 
 * [Introduction to Deep Neural Networks](./neuralnet-overview.html)
-* [Convolutional Networks for Image Recognition](./convolutionalnets.html)
+* [Convolutional Networks for Image Recognition](./convolutionalnetwork.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Generative Adversarial Networks (GANs)](/generative-adversarial-network.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
 * [Symbolic Reasoning and Deep Learning](./symbolicreasoning.html)
-* [Graph Data and Deep Learning](./graphdata.html)
+* [Graph Data and Deep Learning](./graphanalytics.html)
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
@@ -114,5 +122,5 @@ For people just getting started with deep learning, the following tutorials and 
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Artificial Intelligence (AI) for Scala](./scala-ai.html)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
