@@ -1,9 +1,9 @@
 ---
-title: Artificial Intelligence (AI) for Java
+title: Artificial Intelligence (AI) and Machine Learning for Java
 layout: default
 ---
 
-# Artificial Intelligence (AI) for Java
+# Artificial Intelligence (AI) and Machine Learning for Java
 
 ## Why Use Java for AI? 
 
