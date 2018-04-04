@@ -1,9 +1,9 @@
 ---
-title: Open Datasets for Deep Learning
+title: Open Datasets for Deep Learning & Machine Learning
 layout: default
 ---
 
-# Open Data for Deep Learning
+# Open Data for Deep Learning & Machine Learning
 
 Here you'll find an organized list of interesting, high-quality datasets for machine learning research. We welcome your contributions for [curating this list](https://github.com/deeplearning4j/deeplearning4j/blob/gh-pages/opendata.md)! You can find other lists of such datasets [on Wikipedia](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research), for example.
 
@@ -19,9 +19,12 @@ Here you'll find an organized list of interesting, high-quality datasets for mac
 * [Open Data Monitor](https://opendatamonitor.eu/)
 * [Quandl Data Portal](https://www.quandl.com/)
 * [Mut1ny Face/Head segmentation dataset] (http://www.mut1ny.com/face-headsegmentation-dataset)
+
+
 <p align="center">
 <a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
 </p>
+
 
 ## Natural-Image Datasets
 
