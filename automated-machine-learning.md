@@ -45,7 +45,7 @@ In the world of automated machine learning, we pretend that data exploration and
 
 For example, it's easy to automate machine learning for a simple use case like scoring your leads to Salesforce to predict the likelihood that you will close a sale. That's because the schema of the data -- the things you know about your customers -- is constrained by Salesforce software and fairly standardized across sales teams. An automated machine learning solution focused on lead scoring can make strong assumptions about the type of data you will feed it. 
 
-But companies need machine learning for more than lead scoring. Their use cases differ, and so does their data. In those cases, it can be hard to offer a pre-baked solution. 
+But companies need machine learning for more than lead scoring. Their use cases differ, and so does their data. In those cases, it can be hard to offer a pre-baked solution. Data pipelines, also known as ETL, are often the stage of the AI workflow that require the most human attention. The real world is messy and data, which represents that world, is usually messy, too. Most datasets need to be explored, cleaned and otherwise pre-processed before that data can be fruitfully used to train a machine-learning algorithm. That cleaning and exploration often requires expert humans. 
 
 ### Professional Services
 
