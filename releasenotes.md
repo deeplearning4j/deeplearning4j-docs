@@ -5,6 +5,7 @@ layout: default
 
 **Contents**
 
+* <a href="#onezerozeroalpha">Version 1.0.0-alpha</a>
 * <a href="#zeronineone">Version 0.9.1</a>
 * <a href="#zeroninezero">Version 0.9.0</a>
 * <a href="#zeroeightzero">Version 0.8.0</a>
@@ -12,6 +13,124 @@ layout: default
 * <a href="#six">Version 0.6.0</a>
 * <a href="#five">Version 0.5.0</a>
 * <a href="#four">Version 0.4.0</a>
+
+
+# <a name="onezerozeroalpha">Release Notes for Version 1.0.0-alpha</a>
+
+## Highlights - 1.0.0-alpha Release
+
+* SameDiff
+* DL4J new layers
+* Keras 2.0 import support
+
+
+## Deeplearning4J: General
+
+### Deeplearning4J: New Features
+
+
+### Deeplearning4J: Bug Fixes
+
+
+### DL4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
+
+
+### DL4J Known Issues
+
+[i.e., API changes etc - and what to use now - go here]
+
+## Deeplearing4J: Keras Import
+
+- Keras 2 support, keeping backward compatibility for keras 1
+- Keras 2 and 1 import use exact same API and are inferred by DL4J
+- Keras unit test coverage increased by 10x, many more real-world integration tests
+- Unit tests for importing and checking layer weights
+- Leaky ReLU, ELU, SELU support for model import
+- All Keras layers can be imported with optional bias terms
+- Old deeplearning4j-keras module removed, old "Model" API removed
+- All Keras initializations (Lecun normal, Lecun uniform, ones, zeros, Orthogonal, VarianceScaling, Constant) supported
+- 1D convolution and pooling supported in DL4J and Keras model import
+- Atrous Convolution 1D and 2D layers supported in Keras model import
+- 1D Zero padding layers supported
+- Keras constraints module fully supported in DL4J and model import
+- Upsampling 1D and 2D layers in DL4J and Keras model import (including GAN examples in tests)
+- Most merge modes supported in Keras model import, Keras 2 Merge layer API supported
+- Separable Convolution 2D layer supported in DL4J and Keras model import
+- Deconvolution 2D layer supported in DL4J and Keras model import
+- Full support of Keras noise layers on import (Alpha dropout, Gaussian dropout and noise)
+- Support for SimpleRNN layer in Keras model import
+- Support for Bidirectional layer wrapper Keras model import
+- Addition of LastTimestepVertex in DL4J to support return_sequences=False for Keras RNN layers.
+- DL4J support for recurrent weight initializations and Keras import integration.
+- SpaceToBatch and BatchToSpace layers in DL4J for better YOLO support, plus end-to-end YOLO Keras import test.
+- Cropping2D support in DL4J and Keras model import
+
+### Deeplearning4J: Keras Import - API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
+
+[Not sure if required - but if so, cover API changes etc - and what to use now - go here]
+
+### Deeplearning4J: Keras Import - Known Issues
+
+- Embedding layer: In DL4J the output of an embedding layer is 2D by default, unless preprocessors are specified. In Keras the output is always 3D, but depending on specified parameters can be interpreted as 2D. This often leads to difficulties when importing Embedding layers. Many cases have been covered and issues fixed, but inconsistencies remain.
+- Batchnormalization layer: DL4J's batch normalization layer is much more restrictive (in a good way) than Keras' version of it. For instance, DL4J only allows to normalize spatial dimensions for 4D convolutional inputs, while in Keras any axis can be used for normalization. Depending on the dimension ordering (NCHW vs. NHWC) and the specific configuration used by a Keras user, this can lead to expected (!) and unexpected import errors.
+- Support for importing a Keras model for training purposes in DL4J (encorceTrainingConfig == true) is still very limited and will be tackled properly for the next release.
+- Keras Merge layers: seem to work fine with the Keras functional API, but have issues when used in a Sequential model.
+- Reshape layers: can be somewhat unreliable on import. DL4J rarely has a need to explicitly reshape input beyond (inferred) standard input preprocessors. In Keras, Reshape layers are used quite often. Mapping the two paradigms can be difficult in edge cases.
+
+
+
+## ND4J
+
+### ND4J: New Features
+
+
+### ND4J: Known Issues
+
+
+### ND4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha 
+
+
+## ND4J - SameDiff
+
+### Features
+
+### Known Issues and Limitations
+
+
+
+
+## DataVec
+
+### DataVec: New Features
+
+
+### DataVec: Known Issues
+
+
+### DataVec: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
+
+
+
+## Arbiter
+
+
+### Arbiter: New Features
+
+### Arbiter: Known Issues
+
+
+### ARbiter: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
+
+
+## RL4J
+
+
+
+## ScalNet
+
+
+## ND4S
+
 
 # <a name="zeronineone">Release Notes for Version 0.9.1</a>
 
