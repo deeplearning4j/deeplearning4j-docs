@@ -116,10 +116,34 @@ layout: default
 
 ### Arbiter: New Features
 
-### Arbiter: Known Issues
+- Workspace support added ([Link](https://github.com/deeplearning4j/Arbiter/issues/110), [Link](https://github.com/deeplearning4j/Arbiter/pull/113))
+- Added new layer spaces: LSTM, CenterLoss, Deconvolution2D, LossLayer, Bidirectional layer wrapper ([Link](https://github.com/deeplearning4j/Arbiter/pull/113), [Link](https://github.com/deeplearning4j/Arbiter/pull/132))
+- As per DL4J API changes: Updater configuration options (learning rate, momentum, epsilon, rho etc) have been moved to ParameterSpace<IUpdater> instead. Updater spaces (AdamSpace, AdaGradSpace etc) introduced ([Link](https://github.com/deeplearning4j/Arbiter/pull/103))
+- As per DL4J API changes: Dropout configuration is now via ```ParameterSpace<IDropout>```, DropoutSpace introduced ([Link](https://github.com/deeplearning4j/Arbiter/pull/103))
+- RBM layer spaces removed ([Link](https://github.com/deeplearning4j/Arbiter/pull/113))
+- ComputationGraphSpace: added layer/vertex methods with overloads for preprocessors ([Link](https://github.com/deeplearning4j/Arbiter/issues/109))
+- Added support to specify 'fixed' layers using DL4J layers directly (instead of using LayerSpaces, even for layers without hyperparameters) ([Link](https://github.com/deeplearning4j/Arbiter/pull/128))
+- Added LogUniformDistribution ([Link](https://github.com/deeplearning4j/Arbiter/blob/master/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/distribution/LogUniformDistribution.java))
+- Improvements to score functions; added ROC score function ([Link](https://github.com/deeplearning4j/Arbiter/pull/128))
+- Learning rate schedule support added ([Link](https://github.com/deeplearning4j/Arbiter/pull/131))
+- Add math ops for ```ParameterSpace<Double>``` and ```ParameterSpace<Integer>``` ([Link](https://github.com/deeplearning4j/Arbiter/pull/142))
+
+### Arbiter: Fixes
+
+- Fix parallel job execution (when using multiple execution threads) ([Link](https://github.com/deeplearning4j/Arbiter/issues/135), [Link](https://github.com/deeplearning4j/Arbiter/pull/137))
+- Improved logging for failed task execution ([Link](https://github.com/deeplearning4j/Arbiter/pull/121))
+- Fix for UI JSON serialization ([Link](https://github.com/deeplearning4j/Arbiter/pull/128))
+- Fix threading issues when running on CUDA and multiple execution threads ([Link](https://github.com/deeplearning4j/Arbiter/pull/138), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/4659), [Link](https://github.com/deeplearning4j/Arbiter/pull/140))
+- Rename saved model file to model.bin ([Link](https://github.com/deeplearning4j/Arbiter/pull/144))
+- Fix threading issues with non thread-safe candidates / parameter spaces ([Link](https://github.com/deeplearning4j/Arbiter/pull/147))
+- Lombok is no longer included as a transitive dependency ([Link](https://github.com/deeplearning4j/Arbiter/pull/148))
 
 
-### ARbiter: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
+### Arbiter: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
+
+- As per DL4J updater API changes: old updater configuration (learningRate, momentum, etc) methods have been removed. Use `````.updater(IUpdater)````` or `````.updater(ParameterSpace<IUpdater>)````` methods instead
+
+
 
 
 ## RL4J
