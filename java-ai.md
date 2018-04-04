@@ -63,7 +63,7 @@ Machine learning encompasses a wide range of algorithms that are able to adapt t
 
 ### SMILE
 
-[SMILE](https://github.com/haifengl/smile) stands for Statistical and Machine Intelligence Learning Engine. SMILE was create by Haifeng Lee, and provides fast, scalable machine learning for Java. 
+[SMILE](https://github.com/haifengl/smile) stands for Statistical and Machine Intelligence Learning Engine. SMILE was create by Haifeng Lee, and provides fast, scalable machine learning for Java. SMILE uses ND4J to perform scientific computing for large-scale tensor manipulations. It includes algorithms such as support vector machines (SVMs), [decision trees](./decision-tree), [random forests](./random-forest) and gradient boosting, among others.
 
 ### SINGA
 
@@ -79,7 +79,7 @@ Machine learning encompasses a wide range of algorithms that are able to adapt t
 
 ### Weka 
 
-[Weka](http://www.cs.waikato.ac.nz/ml/weka/) is a collection of machine learning algorithms that can be applied directly to a dataset, through the Weka GUI or API. The WEKA community is large, providing various tutorials for Weka and machine learning itself.
+[Weka](http://www.cs.waikato.ac.nz/ml/weka/) is a collection of machine learning algorithms that can be applied directly to a dataset, through the Weka GUI or API. The WEKA community is large, providing various tutorials for Weka and machine learning itself. WEKA uses Deeplearning4j for its neural network implementation. 
 
 ### MOA (Massive On-line Analysis)
 [MOA (Massive On-line Analysis)](https://moa.cms.waikato.ac.nz/) is for mining data streams. 
@@ -111,12 +111,12 @@ All machine learning libraries depend on some form of scientific computing.
 For people just getting started with deep learning, the following tutorials and videos provide an easy entrance to the fundamental ideas of feedforward networks:
 
 * [Introduction to Deep Neural Networks](./neuralnet-overview.html)
-* [Convolutional Networks for Image Recognition](./convolutionalnetwork.html)
+* [Convolutional Neural Networks (CNNs) for Image Recognition](./convolutionalnetwork.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Generative Adversarial Networks (GANs)](/generative-adversarial-network.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
 * [Symbolic Reasoning and Deep Learning](./symbolicreasoning.html)
-* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Graph Data Analytics and Deep Learning](./graphanalytics.html)
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
