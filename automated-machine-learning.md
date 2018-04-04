@@ -17,7 +17,12 @@ If the data scientists are lucky, they are given tools to perform those tasks ef
 
 Many machine learning vendors, ranging from Google to startups such as Datarobot and H2O.ai, claim that they can automate machine learning. That sounds great! Then you, the hiring manager, won't need to go chasing after data science talent whose skills you can't judge in a bidding war you can't win. You'll just automate all those skills away. 
 
-The problem is, the skills that data scientists possess are hard to automate, and people who seek to buy automated AI should be aware of what exactly can be automated, and what can't, with present technology. 
+The problem is, the skills that data scientists possess are hard to automate, and people who seek to buy automated AI should be aware of what exactly can be automated, and what can't, with present technology. Data scientists perform many tasks. While automating some of those tasks may lighten their workload, unless you can automate all of their tasks, they are still necessary, and that scarce talent will remain a chokepoint that hinders the implementation of machine learning in many organizations. 
 
+## What Can We Automate in Machine Learning?
 
+I mentioned that data scientists *tune* algorithms. When you tune a complex machine (and these algorithms are just mathematical and symbolic machines), you usually have several knobs to turn. It's kind of like cooking something with several ingredients. To produce the right taste, to tune your dish as it were, those ingredients should be added in proper proportion to one another, just like you might add twice as much [buttermilk as you do butter to a biscuit recipe](https://www.marthastewart.com/349650/biscuits). The idea is, the right proportions matter.  
 
+A data scientist is frequently operating without a "recipe", and must tune knobs in combination with each other other to explore which combination works. In this case, "working" means tuning an algorithm until it is able to learn efficiently from the data it is given to train upon. 
+
+In data science, the knobs on an algorithm are called hyperparameters, and so the data scientists are performing "hyperparameter search". 
