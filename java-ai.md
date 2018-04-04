@@ -13,7 +13,7 @@ Java is the [most widely used programming language in the world](https://www.tio
 
 Since access to data is a prequisite to building AI and machine-learning solutions, AI tools need to integrate well with those technologies. That's why the AI and machine-learning tooling you choose is crucial. The right tools solve a lot of integration problems (many data science projects fail when prototypes can't integrate with the production stack), and they will accelerate the digital transformation of many of the world's businesses. 
 
-"Accelerating digital transformation" sounds like a list of dumb buzzwords, so to paraphrase that, choosing the right tools allows you to produce more accurate predictions about data using your existing technology stack, and more accurate predictions will allow you to make better decisions. Those predictions might be the basis of a cool new product (self-piloting drones) or lead to big cost savings. We have listed the most important machine-learning tools written in Java below. 
+"Accelerating digital transformation" sounds like a bunch of empty buzzwords, so let's paraphrase it. Choosing the right machine learning tools allows you to produce more accurate predictions about your data while using your existing technology stack, and those predictions will allow you to make better decisions for your business. Those predictions might be the basis of a cool new product (self-piloting drones) or lead to big cost savings. We have listed the most important machine-learning tools written in Java below. 
 
 ## Deep Learning & Neural Networks
 
