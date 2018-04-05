@@ -47,9 +47,10 @@ Reinforcement learning can be understand using the concepts of agents, environme
 * Environment: The world through which the agent moves. The environment takes the agent's current state and action as input, and returns as output the agent's reward and next state. If you are the agent, the environment could be the laws of physics and the rules of society that process your actions and determine the consequences of them.
 * State (S): A **state** is a concrete and immediate situation in which the agent finds itself; i.e. a specific place and moment, an instantaneous configuration that puts the agent in relation to other significant things such as tools, obstacles, enemies or prizes. It can the current situation returned by the environment, or any future situation. Were you ever in the wrong place at the wrong time? That's a state. 
 * Reward (R): A **reward** is the feedback by which we measure the success or failure of an agent’s actions. For example, in a video game, when Mario touches a coin, he wins points. From any given state, an agent sends output in the form of actions to the environment, and the environment returns the agent’s new state (which resulted from acting on the previous state) as well as rewards, if there are any. Rewards can be immediate or delayed. They effectively evaluate the agent's action. 
-* Policy (π): The **policy** is the strategy that the agent employs to determine the next action based on the current state. It maps states to actions. 
+* Policy (π): The **policy** is the strategy that the agent employs to determine the next action based on the current state. It maps states to actions, the actions that promise the highest reward. 
 
 ![Alt text](./img/policy_state_action.png)
+
 *A policy maps a state to an action.*
 
 * Value (V): The expected long-term return with discount, as opposed to the short-term reward `R`. `Vπ(s)` is defined as the expected long-term return of the current state under policy `π`. We discount rewards, or lower their estimated value, the further into the future they occur. See discount factor.
