@@ -326,6 +326,7 @@ For people just getting started with deep learning, the following tutorials and 
 * [Eigenvectors, PCA, Covariance and Entropy](./eigenvector.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Word2vec and Natural-Language Processing](./word2vec.html)
+* [Deep Learning on Apache Spark](./spark.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
