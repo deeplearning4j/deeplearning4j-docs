@@ -48,11 +48,6 @@ Reinforcement learning can be understand using the concepts of agents, environme
 * State (S): A **state** is a concrete and immediate situation in which the agent finds itself; i.e. a specific place and moment, an instantaneous configuration that puts the agent in relation to other significant things such as tools, obstacles, enemies or prizes. It can the current situation returned by the environment, or any future situation. Were you ever in the wrong place at the wrong time? That's a state. 
 * Reward (R): A **reward** is the feedback by which we measure the success or failure of an agent’s actions. For example, in a video game, when Mario touches a coin, he wins points. From any given state, an agent sends output in the form of actions to the environment, and the environment returns the agent’s new state (which resulted from acting on the previous state) as well as rewards, if there are any. Rewards can be immediate or delayed. They effectively evaluate the agent's action. 
 * Policy (π): The **policy** is the strategy that the agent employs to determine the next action based on the current state. It maps states to actions, the actions that promise the highest reward. 
-
-![Alt text](./img/policy_state_action.png)
-
-*A policy maps a state to an action.*
-
 * Value (V): The expected long-term return with discount, as opposed to the short-term reward `R`. `Vπ(s)` is defined as the expected long-term return of the current state under policy `π`. We discount rewards, or lower their estimated value, the further into the future they occur. See discount factor.
 * Q-value or action-value (Q): **Q-value** is similar to Value, except that it takes an extra parameter, the current action `a`. `Qπ(s, a)` refers to the long-term return of the current state `s`, taking action a under policy `π`. Q maps state-action pairs to rewards. Note the difference between Q and policy.
 * Trajectory: A sequence of states and actions that influence those states. From the Latin "to throw across."
@@ -132,7 +127,13 @@ In reinforcement learning, given an image that represents a state, a convolution
 
 ![Alt text](./img/conv_agent.png)
 
-The above image illustrates what a policy agent does, mapping a state to the best action. If you recall, this is distinct from Q, which maps state action pairs to rewards. 
+The above image illustrates what a policy agent does, mapping a state to the best action. 
+
+![Alt text](./img/policy_state_action.png)
+
+*A policy maps a state to an action.*
+
+If you recall, this is distinct from Q, which maps state action pairs to rewards. 
 
 To be more specific, Q maps state-action pairs to the highest combination of immediate reward with all future rewards that might be harvested by later actions in the trajectory. Here is the equation for Q, from Wikipedia:
 
