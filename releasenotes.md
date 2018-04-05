@@ -9,8 +9,8 @@ layout: default
     - <a href="#onezerozeroalpha-dl4j">Deeplearning4j</a>
     - <a href="#onezerozeroalpha-dl4jkeras">Deeplearning4j Keras Import</a>
     - <a href="#onezerozeroalpha-nd4j">ND4J</a>
-    - <a href="#onezerozeroalpha-datavec>DataVec</a>
-    - <a href="#onezerozeroalpha-arbiter>Arbiter</a>
+    - <a href="#onezerozeroalpha-datavec">DataVec</a>
+    - <a href="#onezerozeroalpha-arbiter">Arbiter</a>
 * <a href="#zeronineone">Version 0.9.1</a>
 * <a href="#zeroninezero">Version 0.9.0</a>
 * <a href="#zeroeightzero">Version 0.8.0</a>
