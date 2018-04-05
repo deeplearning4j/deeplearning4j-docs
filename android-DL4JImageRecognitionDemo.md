@@ -31,12 +31,18 @@ Deeplearning4J applications requires application specific dependencies in the bu
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
         testCompile 'junit:junit:4.12'
 	
-	//Image loading dependency
-        compile ('org.datavec:datavec-data-image:0.9.1'){
+	//Image loading dependencies
+        compile('org.datavec:datavec-data-image:0.9.1') {
             //Platform specific binaries can be excluded here to reduce the compile size
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'opencv-platform'
             exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
             exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
         }
+
+        //include Android specific javacpp binaries
+        compile 'org.bytedeco.javacpp-presets:opencv:3.2.0-1.3'
+        compile 'org.bytedeco.javacpp-presets:opencv:3.2.0-1.3:android-x86'
+        compile 'org.bytedeco.javacpp-presets:opencv:3.2.0-1.3:android-arm'
 	
 	//This corrects for a junit version conflict.
         configurations.all {
