@@ -278,6 +278,7 @@ if __name__ == '__main__':
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Open Datasets for Deep Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 
 ## GAN Use Cases
