@@ -6,6 +6,11 @@ layout: default
 **Contents**
 
 * <a href="#onezerozeroalpha">Version 1.0.0-alpha</a>
+    - <a href="#onezerozeroalpha-dl4j">Deeplearning4j</a>
+    - <a href="#onezerozeroalpha-dl4jkeras">Deeplearning4j Keras Import</a>
+    - <a href="#onezerozeroalpha-nd4j">ND4J</a>
+    - <a href="#onezerozeroalpha-datavec>DataVec</a>
+    - <a href="#onezerozeroalpha-arbiter>Arbiter</a>
 * <a href="#zeronineone">Version 0.9.1</a>
 * <a href="#zeroninezero">Version 0.9.0</a>
 * <a href="#zeroeightzero">Version 0.8.0</a>
@@ -19,13 +24,14 @@ layout: default
 
 ## Highlights - 1.0.0-alpha Release
 
+[TO DO]
 * SameDiff
 * DL4J new layers
 * Keras 2.0 import support
 * CUDA 9.0 and 9.1 support (+CuDNN)
 
 
-## Deeplearning4J: General
+## <a name="onezerozeroalpha-dl4j">Deeplearning4J</a>
 
 ### Deeplearning4J: New Features
 
@@ -160,7 +166,8 @@ layout: default
 - Fixes for CuDNN with SAME mode padding ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4864), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/4871))
 - Fix for VariationalAutoencoder builder decoder layer size validation ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4874))
 
-### DL4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
+
+### Deeplearning4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
 
 - Default training workspace mode has been switched to SEPARATE from NONE for MultiLayerNetwork and ComputationGraph ([Link](https://deeplearning4j.org/workspaces))
 - Behaviour change: ```fit(DataSetIterator)``` and similar methods no longer perform layerwise pretraining followed by backprop - only backprop is performed in these methods. For pretraining, use ```pretrain(DataSetIterator)``` and ```pretrain(MultiDataSetIterator)``` methods ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4279))
@@ -183,17 +190,7 @@ layout: default
 - Removed deeplearning4j-ui-remote-iterationlisteners module and obsolete RemoteConvolutionalIterationListener ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4772)) 
 
 
-### DL4J Known Issues
-
-
-
-
-[LR schedules; deprecated GravesBidirectional, deconv, separable, samediff layers, ]
-
-
-[i.e., API changes etc - and what to use now - go here]
-
-## Deeplearing4J: Keras Import
+## <a name="onezerozeroalpha-dl4jkeras">Deeplearing4J: Keras Import</a>
 
 - Keras 2 support, keeping backward compatibility for keras 1
 - Keras 2 and 1 import use exact same API and are inferred by DL4J
@@ -233,7 +230,7 @@ layout: default
 
 
 
-## ND4J
+## <a name="onezerozeroalpha-nd4j">ND4J</a>
 
 ### ND4J: New Features
 
@@ -253,7 +250,7 @@ layout: default
 
 
 
-## DataVec
+## <a name="onezerozeroalpha-datavec">DataVec</a>
 
 ### DataVec: New Features
 
@@ -310,7 +307,7 @@ layout: default
 
 
 
-## Arbiter
+## <a name="onezerozeroalpha-arbiter">Arbiter</a>
 
 
 ### Arbiter: New Features
