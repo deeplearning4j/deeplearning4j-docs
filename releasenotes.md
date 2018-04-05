@@ -261,12 +261,24 @@ layout: default
 - Initial tech preview [link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
 - Control flow is supported with IF and WHILE primitives.
 
+Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff) auto-differentiation engine for ND4J.
+
 ### Features
 - Two execution modes available: Java-driven execution, and Native execution for serialized graphs.
 - SameDiff graphs can be serialized using FlatBuffers
 
 ### Known Issues and Limitations
 - Vast majority of new operations added in 1.0.0-alpha do NOT use GPU yet.
+- Building and running computation graphs build from SameDiff operations.
+- Graphs can run forward pass on input data and compute gradients for the backward pass.
+- Already supports many high-level layers, like dense layers, convolutions (1D-3D) deconvolutions, separable convolutions, pooling and upsampling, batch normalization, local response normalization, LSTMs and GRUs.
+- In total there are about 350 SameDiff operations available, including many basic operations used in building complex graphs.
+- Supports rudimentary import of [TensorFlow](https://github.com/deeplearning4j/nd4j/tree/d4a15e394ef81592237677aee932eb734d64f5a7/nd4j-backends/nd4j-tests/src/test/java/org/nd4j/imports) and ONNX graphs for inference.
+- [TFOpTests](https://github.com/deeplearning4j/TFOpTests) is a dedicated project for creating test resources for TensorFlow import.
+
+### Known Issues and Limitations
+- While many of the widely used base operations and high-level layers used in practice are supported, op coverage is still limited. Goal is to achieve feature parity with TensorFlow and fully support import for TF graphs.
+- Some of the existing ops do not have a backward pass implemented (called `doDiff` in SameDiff).
 
 
 
