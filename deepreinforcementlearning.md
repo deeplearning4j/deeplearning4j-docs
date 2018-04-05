@@ -48,6 +48,10 @@ Reinforcement learning can be understand using the concepts of agents, environme
 * State (S): A **state** is a concrete and immediate situation in which the agent finds itself; i.e. a specific place and moment, an instantaneous configuration that puts the agent in relation to other significant things such as tools, obstacles, enemies or prizes. It can the current situation returned by the environment, or any future situation. Were you ever in the wrong place at the wrong time? That's a state. 
 * Reward (R): A **reward** is the feedback by which we measure the success or failure of an agent’s actions. For example, in a video game, when Mario touches a coin, he wins points. From any given state, an agent sends output in the form of actions to the environment, and the environment returns the agent’s new state (which resulted from acting on the previous state) as well as rewards, if there are any. Rewards can be immediate or delayed. They effectively evaluate the agent's action. 
 * Policy (π): The **policy** is the strategy that the agent employs to determine the next action based on the current state. It maps states to actions. 
+
+![Alt text](./img/policy_state_action.png)
+*A policy maps a state to an action.*
+
 * Value (V): The expected long-term return with discount, as opposed to the short-term reward `R`. `Vπ(s)` is defined as the expected long-term return of the current state under policy `π`. We discount rewards, or lower their estimated value, the further into the future they occur. See discount factor.
 * Q-value or action-value (Q): **Q-value** is similar to Value, except that it takes an extra parameter, the current action `a`. `Qπ(s, a)` refers to the long-term return of the current state `s`, taking action a under policy `π`. Q maps state-action pairs to rewards. Note the difference between Q and policy.
 * Trajectory: A sequence of states and actions that influence those states. From the Latin "to throw across."
@@ -58,10 +62,16 @@ So environments are functions that transform an action taken in the current stat
 
 In the feedback loop above, the subscripts denote the time steps `t` and `t+1`, each of which refer to different states: the state at moment `t`, and the state at moment `t+1`. Unlike other forms of machine learning – such as supervised and unsupervised learning -- reinforcement learning can only be thought about sequentially in terms of state-action pairs that occur one after the other. 
 
-Reinforcement learning judges actions by the results they produce. It is goal oriented, and its aim is to learn sequences of actions that will lead an agent to achieve its goal. Here are some examples: 
+Reinforcement learning judges actions by the results they produce. It is goal oriented, and its aim is to learn sequences of actions that will lead an agent to achieve its goal, or maximize its objective function. Here are some examples: 
 
 * In video games, the goal is to finish the game with the most points, so each additional point obtained throughout the game will affect the agent’s subsequent behavior; i.e. the agent may learn that it should shoot battleships, touch coins or dodge meteors to maximize its score. 
 * In the real world, the goal might be for a robot to travel from point A to point B, and every inch the robot is able to move closer to point B could be counted like points. 
+
+Here's an example of an objective function for reinforcement learning; i.e. the way it defines its goal.
+
+![Alt text](./img/reinforcementlearning_objective.png)
+
+We are summing reward function *r* over *t*, which stands for time steps. So this objective function calculates all the reward we could obtain by running through, say, a game. Here, *x* is the state at a given time step, and *a* is the action taken in that state. *r* is the reward function for *x* and *a*. (We'll ignore *γ* for now.)
 
 Reinforcement learning differs from both supervised and unsupervised learning by how it interprets inputs. We can illustrate their difference by describing what they learn about a "thing." 
 
@@ -121,7 +131,11 @@ In reinforcement learning, given an image that represents a state, a convolution
 
 ![Alt text](./img/conv_agent.png)
 
-The above image illustrates what a policy agent does, mapping a state to the best action. If you recall, this is distinct from Q, which maps state action pairs to rewards. To be more specific, Q maps state-action pairs to the highest combination of immediate reward with all future rewards that might be harvested by later actions in the trajectory.
+The above image illustrates what a policy agent does, mapping a state to the best action. If you recall, this is distinct from Q, which maps state action pairs to rewards. 
+
+To be more specific, Q maps state-action pairs to the highest combination of immediate reward with all future rewards that might be harvested by later actions in the trajectory. Here is the equation for Q, from Wikipedia:
+
+![Alt text](./img/q_learning_equation.png)
 
 Having assigned values to the expected rewards, the Q function simply selects the state-action pair with the highest so-called Q value. 
 
