@@ -1,9 +1,9 @@
 ---
-title: Deeplearning4j on Spark
+title: Deep Learning on Apache Spark
 layout: default
 ---
 
-# Deeplearning4j on Spark
+# Deep Learning on Apache Spark
 
 Deep learning is computationally intensive, so on very large datasets, speed matters. You can tackle the problem with faster hardware (usually GPUs), optimized code and some form of parallelism.
 
