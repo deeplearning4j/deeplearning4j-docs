@@ -29,6 +29,8 @@ Below you'll find a list of resources. The sections are roughly organized in the
 
 ## Math
 
+The math involved with deep learning is basically linear algebra, calculus and probility, and if you have studied those at the undergraduate level, you will be able to understand most of the ideas and notation in deep-learning papers. If haven't studied those in college, never fear. There are many free resources available (and some on this website).
+
 * [Seeing Theory: A Visual Introduction to Probability and Statistics](http://students.brown.edu/seeing-theory/)
 * [Andrew Ng's 6-Part Review of Linear Algebra](https://www.youtube.com/playlist?list=PLnnr1O8OWc6boN4WHeuisJWmeQHH9D_Vg)
 * [Khan Academy's Linear Algebra Course](https://www.khanacademy.org/math/linear-algebra)
@@ -38,12 +40,14 @@ Below you'll find a list of resources. The sections are roughly organized in the
 * [Immersive Linear Algebra](http://immersivemath.com/ila/learnmore.html)
 * [Probability Cheatsheet](https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf)
 * [The best linear algebra books](https://begriffs.com/posts/2016-07-24-best-linear-algebra-books.html)
-* [Markov Chains, Explained](http://setosa.io/ev/markov-chains/)
+* [Markov Chains, Visually Explained](http://setosa.io/ev/markov-chains/)
 * [An Introduction to MCMC for Machine Learning](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.13.7133&rep=rep1&type=pdf)
+* [Eigenvectors, Eigenvalues, PCA, Covariance and Entropy](/eigenvector)
+* [Markov Chain Monte Carlo (MCMC) & Machine Learning](/markovchainmontecarlo)
 
 ## Programming
 
-If you do not know how to program yet, you can start with Java, but you might find other languages easier. Python and Ruby resources convey the basic ideas in a faster feedback loop. 
+If you do not know how to program yet, you can start with Java, but you might find other languages easier. Python and Ruby resources can convey the basic ideas in a faster feedback loop. "Learn Python the Hard Way" and "Learn to Program (Ruby)" are two great places to start. 
 
 * [Learn Java The Hard Way](https://learnjavathehardway.org/)
 * [Learn Python the Hard Way](http://learnpythonthehardway.org/)
@@ -60,7 +64,7 @@ If you want to jump into deep-learning from here without Java, we recommend [The
 
 ## Java
 
-Once you have programming basics down, tackle Java, the world's most widely used programming language, and the language of Hadoop. 
+Once you have programming basics down, tackle Java, the world's most widely used programming language. Most large organizations in the world operate on huge Java code bases. (There will always be Java jobs.) The big data stack -- Hadoop, Spark, Kafka, Lucene, Solr, Cassandra, Flink -- have largely been written for Java's compute environment, the JVM.
 
 * [Think Java: Interactive Web-based Dev Environment](https://books.trinket.io/thinkjava/)
 * [Learn Java The Hard Way](https://learnjavathehardway.org/)
@@ -76,9 +80,7 @@ With that under your belt, we recommend you approach Deeplearning4j through its 
 
 * [Quickstart](./quickstart.html)
 
-Once you get those up and running, and you've understood the API, you're ready for a full install.
-
-* [Getting Started](./gettingstarted)
+You can also download a [free version of the Skymind Intelligence Layer](https://docs.skymind.ai/), which supports Python, Java and Scala machine-learning and data science tools. SKIL is a machine-learning backend that works on prem and in the cloud, and can ship with your software to provide a machine learning model server. 
 
 ## Other Resources
 
@@ -94,15 +96,14 @@ While individual courses have limits on what they can teach, the Internet does n
 * [Word2vec: Neural Word Embeddings for Natural Language Processing](./word2vec)
 * [Restricted Boltzmann Machines: The Building Blocks of Deep-Belief Networks](./restrictedboltzmannmachine)
 * [Recurrent Networks and Long Short-Term Memory Units](./lstm)
-* [Convolutional Networks for Image Processing](./convolutionalnets)
+* [Convolutional Networks for Image Processing](./convolutionalnetwork)
 * [Artificial Intelligence vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning)
 * [Comparing Open-Source Deep Learning Frameworks](./compare-dl4j-torch7-pylearn)
-* [Eigenvectors, PCA, Covariance and Entropy](/eigenvector)
 * [The AI Hierarchy of Needs](https://hackernoon.com/the-ai-hierarchy-of-needs-18f111fcc007)
 * [Deep Reinforcement Learning](./deepreinforcementlearning)
 * [Symbolic Reasoning & Deep Learning](./symbolicreasoning)
-* [Graph Data & Deep Learning](./graphdata)
+* [Graph Data Analytics & Deep Learning](./graphanalytics)
 * [Open Data Sets for Machine Learning](./opendata)
 * [ETL Data Pipelines for Machine Learning](./datavec)
 * [A Glossary of Deep-Learning Terms](./glossary.html)
-* [Inference: Machine Learning Model Server](./modelserver)
+* [Inference: Machine Learning Model Server](./machine-learning-server)
