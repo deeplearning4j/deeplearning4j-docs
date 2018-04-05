@@ -14,7 +14,7 @@ Contents
 * <a href="#work">How Deep Convolutional Neural Networks Work</a>
 * <a href="#max">Maxpooling/Downsampling</a>
 * <a href="#code">Just Show Me the Code</a>
-* <a href="#resource">More CNN Resources</a>
+* <a href="#resource">More Convolutional Neural Network Resources</a>
 
 ## <a name="intro">Introduction to Deep Convolutional Neural Networks</a>
 
