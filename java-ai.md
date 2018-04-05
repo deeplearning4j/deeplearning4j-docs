@@ -1,17 +1,27 @@
 ---
-title: Artificial Intelligence (AI) for Java
+title: Artificial Intelligence (AI) and Machine Learning for Java
 layout: default
 ---
 
-# Artificial Intelligence (AI) for Java
+# Artificial Intelligence (AI) and Machine Learning for Java
+
+## Why Use Java for AI? 
+
+And more broadly, why should you use JVM languagues like Java, [Scala](./scala-ai.html), Clojure or Kotlin to build AI and machine-learning solutions?
+
+Java is the [most widely used programming language in the world](https://www.tiobe.com/tiobe-index/). Large organizations in the public and private sector have enormous Java code bases, and rely heavily on the JVM as a compute environment. In particular, much of the open-source big data stack is written for the JVM. This includes [Apache Hadoop](http://hadoop.apache.org/) for distributed data management; [Apache Spark](./spark) as a distributed run-time for fast ETL; [Apache Kafka](https://kafka.apache.org/) as a message queue; [ElasticSearch](https://www.elastic.co/), [Apache Lucene](https://lucene.apache.org/) and [Apache Solr](http://lucene.apache.org/solr/) for search; and [Apache Cassandra](http://cassandra.apache.org/) for data storage to name a few. 
+
+Since access to data is a prequisite to building AI and machine-learning solutions, AI tools need to integrate well with those technologies. AI starts with the data you gather. That's why the AI and machine-learning tooling you choose is crucial. The right tools solve a lot of integration problems (many data science projects fail when prototypes can't integrate with the production stack), and they will accelerate the digital transformation of many of the world's businesses. 
+
+"Accelerating digital transformation" sounds like a bunch of empty buzzwords, so let's paraphrase it. Choosing the right machine learning tools allows you to produce more accurate predictions about your data while using your existing technology stack, and those predictions will allow you to make better decisions for your business. Those predictions might be the basis of a cool new product (self-piloting drones) or lead to big cost savings. We have listed the most important machine-learning tools written in Java below. 
 
 ## Deep Learning & Neural Networks
 
 Deep learning usually refers to deep artificial neural networks. [Neural networks](https://deeplearning4j.org/neuralnet-overview) are a type of machine learning algorithm loosely modeled on the neurons in the human brain. Deep neural nets involve stacking several neural nets on top of each other to enable a feature hierarchy for more accurate classification and prediction. Deep learning is the state of the art in most tasks or machine perception, involved classification, clustering and prediction applied to raw sensory data. 
 
-### Deeplearning4j
+### Eclipse Deeplearning4j
 
-[Deeplearning4j](deeplearning4j.org) is the most widely used open source deep learning library for Java and the JVM. It also has a Scala API and uses Keras as its Python API for neural network configuration. The official website provides many tutorials and simple theoretical explanations for deep learning and neural networks.
+[Eclipse Deeplearning4j](https://deeplearning4j.org/) is the most widely used open source deep learning library for Java and the JVM. It includes [multilayer perceptrons](./multilayerperceptron), [convolutional neural networks (CNNs) for image and text classification](./convolutionalnetwork), [recurrent neural networks such as LSTMs for text and time series data](./lstm), and [various autoencoders like VAEs and GANs](./generative-adversarial-network). Its auto-differentiation library, SameDiff, allows developers to create any neural network. It has a Scala API and uses Keras as its optional Python API. The official website provides many tutorials and simple theoretical explanations for deep learning and neural networks. Deeplearning4j includes machine-learning algorithms such as logistic regression and k-neurest neighbors. 
 
 <p align="center">
 <a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
@@ -53,7 +63,7 @@ Machine learning encompasses a wide range of algorithms that are able to adapt t
 
 ### SMILE
 
-[SMILE](https://github.com/haifengl/smile) stands for Statistical and Machine Intelligence Learning Engine. SMILE was create by Haifeng Lee, and provides fast, scalable machine learning for Java. 
+[SMILE](https://github.com/haifengl/smile) stands for Statistical and Machine Intelligence Learning Engine. SMILE was create by Haifeng Lee, and provides fast, scalable machine learning for Java. SMILE uses ND4J to perform scientific computing for large-scale tensor manipulations. It includes algorithms such as support vector machines (SVMs), [decision trees](./decision-tree), [random forests](./random-forest) and gradient boosting, among others.
 
 ### SINGA
 
@@ -69,7 +79,7 @@ Machine learning encompasses a wide range of algorithms that are able to adapt t
 
 ### Weka 
 
-[Weka](http://www.cs.waikato.ac.nz/ml/weka/) is a collection of machine learning algorithms that can be applied directly to a dataset, through the Weka GUI or API. The WEKA community is large, providing various tutorials for Weka and machine learning itself.
+[Weka](http://www.cs.waikato.ac.nz/ml/weka/) is a collection of machine learning algorithms that can be applied directly to a dataset, through the Weka GUI or API. The WEKA community is large, providing various tutorials for Weka and machine learning itself. WEKA uses Deeplearning4j for its neural network implementation. 
 
 ### MOA (Massive On-line Analysis)
 [MOA (Massive On-line Analysis)](https://moa.cms.waikato.ac.nz/) is for mining data streams. 
@@ -101,12 +111,12 @@ All machine learning libraries depend on some form of scientific computing.
 For people just getting started with deep learning, the following tutorials and videos provide an easy entrance to the fundamental ideas of feedforward networks:
 
 * [Introduction to Deep Neural Networks](./neuralnet-overview.html)
-* [Convolutional Networks for Image Recognition](./convolutionalnets.html)
+* [Convolutional Neural Networks (CNNs) for Image Recognition](./convolutionalnetwork.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Generative Adversarial Networks (GANs)](/generative-adversarial-network.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
 * [Symbolic Reasoning and Deep Learning](./symbolicreasoning.html)
-* [Graph Data and Deep Learning](./graphdata.html)
+* [Graph Data Analytics and Deep Learning](./graphanalytics.html)
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
@@ -114,5 +124,5 @@ For people just getting started with deep learning, the following tutorials and 
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Artificial Intelligence (AI) for Scala](./scala-ai.html)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)

@@ -1,24 +1,24 @@
 ---
-title: A Beginner's Guide to Deep Convolutional Networks (CNNs)
+title: A Beginner's Guide to Deep Convolutional Neural Networks (CNNs)
 layout: default
 redirect_from: convolutionalnets
 ---
 
-# A Beginner's Guide to Deep Convolutional Networks (CNNs)
+# A Beginner's Guide to Deep Convolutional Neural Networks (CNNs)
 
 Contents
 
-* <a href="#intro">Deep Convolutional Network Introduction</a>
+* <a href="#intro">Deep Convolutional Neural Network Introduction</a>
 * <a href="#tensors">Images Are 4-D Tensors?</a>
-* <a href="#define">Convolutional Net Definition</a>
-* <a href="#work">How Deep Convolutional Networks Work</a>
+* <a href="#define">Convolutional Neural Network Definition</a>
+* <a href="#work">How Deep Convolutional Neural Networks Work</a>
 * <a href="#max">Maxpooling/Downsampling</a>
 * <a href="#code">Just Show Me the Code</a>
 * <a href="#resource">More CNN Resources</a>
 
-## <a name="intro">Introduction to Deep Convolutional Networks</a>
+## <a name="intro">Introduction to Deep Convolutional Neural Networks</a>
 
-Convolutional networks are deep artificial neural networks that are used primarily to classify images (e.g. name what they see), cluster them by similarity (photo search), and perform object recognition within scenes. They are algorithms that can identify faces, individuals, street signs, tumors, platypuses and many other aspects of visual data. 
+Convolutional neural networks are deep artificial neural networks that are used primarily to classify images (e.g. name what they see), cluster them by similarity (photo search), and perform object recognition within scenes. They are algorithms that can identify faces, individuals, street signs, tumors, platypuses and many other aspects of visual data. 
 
 Convolutional networks perform optical character recognition (OCR) to digitize text and make natural-language processing possible on analog and hand-written documents, where the images are symbols to be transcribed. CNNs can also be applied to sound when it is represented visually as a spectrogram. More recently, convolutional networks have been applied directly to [text analytics](http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/) as well as graph data with [graph convolutional networks](./graphanalytics). 
 
@@ -30,7 +30,7 @@ The efficacy of convolutional nets (ConvNets or CNNs) in image recognition is on
 
 ## <a name="tensors">Images Are 4-D Tensors?</a>
 
-Convolutional nets ingest and process images as tensors, and tensors are matrices of numbers with additional dimensions. 
+Convolutional neural networks ingest and process images as tensors, and tensors are matrices of numbers with additional dimensions. 
 
 They can be hard to visualize, so let’s approach them by analogy. A scalar is just a number, such as 7; a vector is a list of numbers (e.g., `[7,8,9]`); and a matrix is a rectangular grid of numbers occupying several rows and columns like a spreadsheet. Geometrically, if a scalar is a zero-dimensional point, then a vector is a one-dimensional line, a matrix is a two-dimensional plane, a stack of matrices is a three-dimensional cube, and when each element of those matrices has a stack of *feature maps* atttached to it, you enter the fourth dimension. For reference, here’s a 2 x 2 matrix:
 
@@ -181,7 +181,7 @@ All Deeplearning4j [examples of convolutional networks are available here](https
 
 ## <a name="resource">Other Resources</a>
 
-To see DL4J convolutional networks in action, please run our [examples](https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution/) after following the instructions on the [Quickstart page](./quickstart). 
+To see DL4J convolutional neural networks in action, please run our [examples](https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution/) after following the instructions on the [Quickstart page](./quickstart). 
 
 Skymind wraps NVIDIA's cuDNN and integrates with OpenCV. Our convolutional nets run on distributed GPUs using Spark, making them among the fastest in the world. You can learn how to build a [image recognition web app with VGG16 here](./build_vgg_webapp) and how to [deploy CNNs to Android here](./android).
 

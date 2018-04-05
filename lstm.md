@@ -231,6 +231,7 @@ Here are a few ideas to keep in mind when manually optimizing hyperparameters fo
 * [Introduction to Decision Trees](./decision-tree.html)
 * [Introduction to Random Forests](./random-forest.html)
 * [Open Datasets for Machine Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 
