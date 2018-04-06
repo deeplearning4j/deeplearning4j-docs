@@ -26,11 +26,12 @@ layout: default
 
 ## Highlights - 1.0.0-alpha Release
 
-[TO DO]
-* SameDiff
-* DL4J new layers
-* Keras 2.0 import support
-* CUDA 9.0 and 9.1 support (+CuDNN)
+* ND4J: Added SameDiff - Java automatic differentiation library (alpha release) with Tensorflow import and hundreds of new operations
+* ND4J: Added CUDA 9.0 and 9.1 support (with cuDNN), dropped support for CUDA 7.5, continued support for CUDA 8.0
+* ND4J: Native binaries (nd4j-native on Maven Central) now ship with AVX/AVX2/AVX-512 support (Windows/Linux)
+* DL4J: Large number of new layers and API improvements
+* DL4J: Keras 2.0 import support
+
 
 
 ## <a name="onezerozeroalpha-dl4j">Deeplearning4J</a>
@@ -191,6 +192,12 @@ layout: default
 - GravesBidirectionalLSTM has been deprecated; use ```new Bidirectional(Bidirectional.Mode.ADD, new GravesLSTM.Builder()....build()))``` instead
 - Previously deprecated WordVectorSerializer methods have now been removed ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/4359))
 - Removed deeplearning4j-ui-remote-iterationlisteners module and obsolete RemoteConvolutionalIterationListener ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4772))
+
+
+### Deeplearning4J: 1.0.0-alpha Known Issues
+
+- Performance on some networks types may be reduced on CUDA compared to 0.9.1 (with workspaces configured). This will be addressed in the next release
+- Some issues have been noted with FP16 support on CUDA ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/4897))
 
 
 ## <a name="onezerozeroalpha-dl4jkeras">Deeplearing4J: Keras Import</a>
@@ -385,6 +392,9 @@ Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/n
 
 ## <a name="onezerozeroalpha-nd4s">ND4S</a>
 - Scala 2.12 support
+
+
+
 
 # <a name="zeronineone">Release Notes for Version 0.9.1</a>
 
