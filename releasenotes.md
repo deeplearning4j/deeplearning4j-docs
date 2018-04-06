@@ -165,7 +165,8 @@ layout: default
 - Memory optimization for network weight initialization via in-place random ops ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4837)) 
 - Fixes for CuDNN with SAME mode padding ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4864), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/4871))
 - Fix for VariationalAutoencoder builder decoder layer size validation ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4874))
-
+- Improved Kmeans throughput[link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nearestneighbors-parent/nearestneighbor-core/src/main/java/org/deeplearning4j/clustering/algorithm/BaseClusteringAlgorithm.java)
+- Add RPForest to nearest neighbors [link](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nearestneighbors-parent/nearestneighbor-core/src/main/java/org/deeplearning4j/clustering/randomprojection)
 
 ### Deeplearning4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha
 
@@ -224,7 +225,7 @@ layout: default
 
 - Embedding layer: In DL4J the output of an embedding layer is 2D by default, unless preprocessors are specified. In Keras the output is always 3D, but depending on specified parameters can be interpreted as 2D. This often leads to difficulties when importing Embedding layers. Many cases have been covered and issues fixed, but inconsistencies remain.
 - Batchnormalization layer: DL4J's batch normalization layer is much more restrictive (in a good way) than Keras' version of it. For instance, DL4J only allows to normalize spatial dimensions for 4D convolutional inputs, while in Keras any axis can be used for normalization. Depending on the dimension ordering (NCHW vs. NHWC) and the specific configuration used by a Keras user, this can lead to expected (!) and unexpected import errors.
-- Support for importing a Keras model for training purposes in DL4J (encorceTrainingConfig == true) is still very limited and will be tackled properly for the next release.
+- Support for importing a Keras model for training purposes in DL4J (enforceTrainingConfig == true) is still very limited and will be tackled properly for the next release.
 - Keras Merge layers: seem to work fine with the Keras functional API, but have issues when used in a Sequential model.
 - Reshape layers: can be somewhat unreliable on import. DL4J rarely has a need to explicitly reshape input beyond (inferred) standard input preprocessors. In Keras, Reshape layers are used quite often. Mapping the two paradigms can be difficult in edge cases.
 
@@ -234,15 +235,22 @@ layout: default
 
 ### ND4J: New Features
 
+- Hundreds of new ops added
+- New Differential Function api
+with automatic differentiation (see samediff section)[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
+- Technology preview of tensorflow import added (supports 1.4.0 and up)
+- Apache Arrow serialization added supporting new tensor api[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-serde/nd4j-arrow)
+
 
 ### ND4J: Known Issues
-
+- Not all op gradients implemented for automatic
+differentiation
 
 ### ND4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha 
 
 
 ## ND4J - SameDiff
-
+- Initial tech preview [link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
 ### Features
 
 ### Known Issues and Limitations
@@ -347,7 +355,8 @@ layout: default
 
 
 ## ScalNet
-
+- Scalnet has been overhauled. 
+See latest master branch for changes
 
 ## ND4S
 
