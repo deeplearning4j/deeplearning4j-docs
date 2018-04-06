@@ -240,6 +240,7 @@ layout: default
 with automatic differentiation (see samediff section)[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
 - Technology preview of tensorflow import added (supports 1.4.0 and up)
 - Apache Arrow serialization added supporting new tensor api[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-serde/nd4j-arrow)
+- Add direct avx binaries (2 and 512) for windows and linux [link](http://repo1.maven.org/maven2/org/nd4j/nd4j-native/1.0.0-alpha/)
 
 
 ### ND4J: Known Issues
