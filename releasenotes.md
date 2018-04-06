@@ -11,6 +11,8 @@ layout: default
     - <a href="#onezerozeroalpha-nd4j">ND4J</a>
     - <a href="#onezerozeroalpha-datavec">DataVec</a>
     - <a href="#onezerozeroalpha-arbiter">Arbiter</a>
+    - <a href="#onezerozeroalpha-scalnet">ScalNet</a>
+    - <a href="#onezerozeroalpha-nd4s">ND4S</a>
 * <a href="#zeronineone">Version 0.9.1</a>
 * <a href="#zeroninezero">Version 0.9.0</a>
 * <a href="#zeroeightzero">Version 0.8.0</a>
@@ -266,9 +268,6 @@ Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/n
 ### Features
 - Two execution modes available: Java-driven execution, and Native execution for serialized graphs.
 - SameDiff graphs can be serialized using FlatBuffers
-
-### Known Issues and Limitations
-- Vast majority of new operations added in 1.0.0-alpha do NOT use GPU yet.
 - Building and running computation graphs build from SameDiff operations.
 - Graphs can run forward pass on input data and compute gradients for the backward pass.
 - Already supports many high-level layers, like dense layers, convolutions (1D-3D) deconvolutions, separable convolutions, pooling and upsampling, batch normalization, local response normalization, LSTMs and GRUs.
@@ -277,6 +276,7 @@ Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/n
 - [TFOpTests](https://github.com/deeplearning4j/TFOpTests) is a dedicated project for creating test resources for TensorFlow import.
 
 ### Known Issues and Limitations
+- Vast majority of new operations added in 1.0.0-alpha do NOT use GPU yet.
 - While many of the widely used base operations and high-level layers used in practice are supported, op coverage is still limited. Goal is to achieve feature parity with TensorFlow and fully support import for TF graphs.
 - Some of the existing ops do not have a backward pass implemented (called `doDiff` in SameDiff).
 
@@ -383,7 +383,7 @@ Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/n
 - Project structure is closely aligned to both DL4J model-import module and Keras.
 - Supports the following layers: Convolution2D, Dense, EmbeddingLayer, AvgPooling2D, MaxPooling2D, GravesLSTM, LSTM, Bidirectional layer wrapper, Flatten, Reshape. Additionally, DL4J OutputLayers are supported.
 
-## ND4S
+## <a name="onezerozeroalpha-nd4s">ND4S</a>
 - Scala 2.12 support
 
 # <a name="zeronineone">Release Notes for Version 0.9.1</a>
