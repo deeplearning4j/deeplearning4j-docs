@@ -26,7 +26,7 @@ layout: default
 
 ## Highlights - 1.0.0-alpha Release
 
-* ND4J: Added SameDiff - Java automatic differentiation library (alpha release) with Tensorflow import and hundreds of new operations
+* ND4J: Added SameDiff - Java automatic differentiation library (alpha release) with Tensorflow import (technology preview) and hundreds of new operations
 * ND4J: Added CUDA 9.0 and 9.1 support (with cuDNN), dropped support for CUDA 7.5, continued support for CUDA 8.0
 * ND4J: Native binaries (nd4j-native on Maven Central) now ship with AVX/AVX2/AVX-512 support (Windows/Linux)
 * DL4J: Large number of new layers and API improvements
