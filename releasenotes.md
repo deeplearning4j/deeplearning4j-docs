@@ -235,27 +235,37 @@ layout: default
 
 ### ND4J: New Features
 
-- Hundreds of new ops added
-- New Differential Function api
-with automatic differentiation (see samediff section)[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
+- Hundreds of new operations added
+- New DifferentialFunction api with automatic differentiation (see samediff section)[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
 - Technology preview of tensorflow import added (supports 1.4.0 and up)
 - Apache Arrow serialization added supporting new tensor api[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-serde/nd4j-arrow)
-- Add direct avx binaries (2 and 512) for windows and linux [link](http://repo1.maven.org/maven2/org/nd4j/nd4j-native/1.0.0-alpha/)
+- Add support for AVX/AVX2 and AVX-512 instruction sets for Windows/Linux for nd4j-native backend [link](http://repo1.maven.org/maven2/org/nd4j/nd4j-native/1.0.0-alpha/)
+- nVidia CUDA 8/9.0/9.1 now supported
+- Worskpaces improvements were introduced to ensure safety: SCOPE_PANIC profiling mode is enabled by default
+- FlatBuffers support for INDArray serde
+- Support for auto-broadcastable operations was added
+- libnd4j, underlying c++ library, got functionality boost and now offers: NDArray class, Graph class, and can be used as standalone library or executable.
+- Convolution-related ops now support NHWC in addition to NCHW data format.
+- Accumulation ops now have option to keep reduced dimensions.
 
 
 ### ND4J: Known Issues
-- Not all op gradients implemented for automatic
-differentiation
+- Not all op gradients implemented for automatic differentiation
+- Vast majority of new operations added in 1.0.0-alpha do NOT use GPU yet.
 
 ### ND4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-alpha 
 
 
 ## ND4J - SameDiff
 - Initial tech preview [link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
+- Control flow is supported with IF and WHILE primitives.
+
 ### Features
+- Two execution modes available: Java-driven execution, and Native execution for serialized graphs.
+- SameDiff graphs can be serialized using FlatBuffers
 
 ### Known Issues and Limitations
-
+- Vast majority of new operations added in 1.0.0-alpha do NOT use GPU yet.
 
 
 
