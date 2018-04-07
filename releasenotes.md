@@ -246,10 +246,10 @@ layout: default
 ### ND4J: New Features
 
 - Hundreds of new operations added
-- New DifferentialFunction api with automatic differentiation (see samediff section)[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
+- New DifferentialFunction api with automatic differentiation (see samediff section) [Link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
 - Technology preview of tensorflow import added (supports 1.4.0 and up)
-- Apache Arrow serialization added supporting new tensor api[link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-serde/nd4j-arrow)
-- Add support for AVX/AVX2 and AVX-512 instruction sets for Windows/Linux for nd4j-native backend [link](http://repo1.maven.org/maven2/org/nd4j/nd4j-native/1.0.0-alpha/)
+- Apache Arrow serialization added supporting new tensor API [Link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-serde/nd4j-arrow)
+- Add support for AVX/AVX2 and AVX-512 instruction sets for Windows/Linux for nd4j-native backend [Link](http://repo1.maven.org/maven2/org/nd4j/nd4j-native/1.0.0-alpha/)
 - nVidia CUDA 8/9.0/9.1 now supported
 - Worskpaces improvements were introduced to ensure safety: SCOPE_PANIC profiling mode is enabled by default
 - FlatBuffers support for INDArray serde
@@ -267,7 +267,7 @@ layout: default
 
 
 ## ND4J - SameDiff
-- Initial tech preview [link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
+- Initial tech preview [Link](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff)
 - Control flow is supported with IF and WHILE primitives.
 
 Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff) auto-differentiation engine for ND4J.
@@ -392,8 +392,6 @@ Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/n
 
 ## <a name="onezerozeroalpha-nd4s">ND4S</a>
 - Scala 2.12 support
-
-
 
 
 # <a name="zeronineone">Release Notes for Version 0.9.1</a>
