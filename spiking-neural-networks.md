@@ -7,7 +7,9 @@ layout: default
 
 WIP.
 
-Spiking is a way to encode digital communications over a long distance (the spike rate and timing of individual spikes relative to others), because analog values are destroyed when sent a long distance over an active medium. But analog works fine locally. So spikes are close similar to packets in mesh interconnect. Pure spiking works in all-purpose machines like CPUs and GPUs, but hardware's numeric capacity present is wasted, and it doesn't use scarce random access memory bandwidth optimally.
+Spiking is a way to encode digital communications over a long distance (the spike rate and timing of individual spikes relative to others are the variations by which a spiking signal is encoded), because analog values are destroyed when sent a long distance over an active medium. Think smoke signals in the American West, talking drums in West Africa, or Morse Code on the telegraphs of the 19th and early 20th centuries. 
+
+But analog works fine locally. So spikes are close similar to packets in mesh interconnect. Pure spiking works in all-purpose machines like CPUs and GPUs, but the hardware's numeric capacity present is wasted, and it doesn't use scarce random access memory bandwidth optimally.
 
 ## SNN Advantages
 
