@@ -11,6 +11,7 @@ layout: default
     - <a href="#onezerozeroalpha-nd4j">ND4J</a>
     - <a href="#onezerozeroalpha-datavec">DataVec</a>
     - <a href="#onezerozeroalpha-arbiter">Arbiter</a>
+    - <a href="#onezerozeroalpha-rl4j">RL4J</a>
     - <a href="#onezerozeroalpha-scalnet">ScalNet</a>
     - <a href="#onezerozeroalpha-nd4s">ND4S</a>
 * <a href="#zeronineone">Version 0.9.1</a>
@@ -379,7 +380,17 @@ Alpha release of [SameDiff](https://github.com/deeplearning4j/nd4j/tree/master/n
 - As per DL4J updater API changes: old updater configuration (learningRate, momentum, etc) methods have been removed. Use ```.updater(IUpdater)``` or ```.updater(ParameterSpace<IUpdater>)``` methods instead
 
 
-## RL4J
+## <a name="onezerozeroalpha-rl4j">RL4J</a>
+
+- Add support for LSTM layer to A3C
+- Fix A3C to make it actually work using new `ActorCriticLoss` and correct use of randomness
+- Fix cases when `QLearning` would fail (non-flat input, incomplete serialization, incorrect normalization)
+- Fix logic of `HistoryProcessor` with async algorithms and failures when preprocessing images
+- Tidy up and correct the output of statistics, also allowing the use of `IterationListener`
+- Fix issues preventing efficient execution with CUDA
+- Provide access to more of the internal structures with `NeuralNet.getNeuralNetworks()`, `Policy.getNeuralNet()`, and convenience constructors for `Policy`
+- Add MDPs for ALE (Arcade Learning Environment) and MALMO to support Atari games and Minecraft
+- Update MDP for Doom to allow using the latest version of VizDoom
 
 
 ## <a name="onezerozeroalpha-scalnet">ScalNet</a>
