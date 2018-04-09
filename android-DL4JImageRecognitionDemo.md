@@ -14,7 +14,7 @@ Contents
 * [Conclusion](#head_link6)
 
 ## DL4JImageRecognitionDemo
-This example application uses a neural network trained on the standard MNIST dataset of 28x28 greyscale 0..255 pixel value images of hand drawn numbers 0..9. The application user interace allows the user to draw a number on the device screen which is then tested against the trained network. The output displays the most probable numeric values and the probability score. This tutorial will cover the use of a trained neural network in an Android Application, the handling of user generated images, and the output of the results to the UI from a background thread. For a detailed guide demonstrating how to train and save the neural networks used in this application, please see this DL4J quickstart [tutorial](https://deeplearning4j.org/quickstart). More information on general prerequisites for building DL4J Android Applications can be found [here](https://github.com/jrmerwin/Skymind-Android-Documentation/blob/master/Prereqs%20and%20Configuration%20for%20Android.md). 
+This example application uses a neural network trained on the standard MNIST dataset of 28x28 greyscale 0..255 pixel value images of hand drawn numbers 0..9. The application user interace allows the user to draw a number on the device screen which is then tested against the trained network. The output displays the most probable numeric values and the probability score. This tutorial will cover the use of a trained neural network in an Android Application, the handling of user generated images, and the output of the results to the UI from a background thread. For a detailed guide demonstrating how to train and save the neural networks used in this application, please see this DL4J quickstart [tutorial](https://deeplearning4j.org/quickstart). More information on general prerequisites for building DL4J Android Applications can be found [here](https://deeplearning4j.org/android-Prereqs%20and%20Configuration). 
 
 ![](images/screen2.png)
 ## <a name="head_link1">Setting the Dependencies</a>
@@ -30,6 +30,24 @@ Deeplearning4J applications requires application specific dependencies in the bu
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'
         compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
         testCompile 'junit:junit:4.12'
+	
+	//Image loading dependencies
+        compile('org.datavec:datavec-data-image:0.9.1') {
+            //Platform specific binaries can be excluded here to reduce the compile size
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'opencv-platform'
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
+        }
+
+        //include Android specific javacpp binaries
+        compile 'org.bytedeco.javacpp-presets:opencv:3.2.0-1.3'
+        compile 'org.bytedeco.javacpp-presets:opencv:3.2.0-1.3:android-x86'
+        compile 'org.bytedeco.javacpp-presets:opencv:3.2.0-1.3:android-arm'
+	
+	//This corrects for a junit version conflict.
+        configurations.all {
+            resolutionStrategy.force 'junit:junit:4.12'
+        }
 ```
 Depending on the combination of dependencies, duplication conflicts can arise that must be handled with exclusions. After adding the above dependencies and the exclusions listed below, sync the Gradle file add additional exclusions if needed. The error message will identify the file path that should be added to the list of exclusions. An example error message with file path: **> More than one file was found with OS independent path 'org/bytedeco/javacpp/ windows-x86_64/msvp120.dll'**
 ```java

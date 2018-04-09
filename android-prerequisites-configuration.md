@@ -10,7 +10,7 @@ Contents
 * [Memory Management](#head_link4)
 * [Saving and Loading Networks on Android](#head_link5)
 
-While neural networks are typically run on powerful computers using multiple GPUs, the compatibility of Deeplearning4J with the Android platform makes using DL4J neural networks in android applications a possibility. This tutorial will cover the basics of setting up android studio for building DL4J applications. Several configurations for dependencies, memory management, and compilation exclusions needed to mitigate the limitations of low powered mobile device are outlined below. If you just want to get a DL4J app running on your device, you can jump ahead to a simple demo application which trains a neural network for Iris flower classification available [here](https://github.com/jrmerwin/DL4JIrisClassifierDemo).
+While neural networks are typically run on powerful computers using multiple GPUs, the compatibility of Deeplearning4J with the Android platform makes using DL4J neural networks in android applications a possibility. This tutorial will cover the basics of setting up android studio for building DL4J applications. Several configurations for dependencies, memory management, and compilation exclusions needed to mitigate the limitations of low powered mobile device are outlined below. If you just want to get a DL4J app running on your device, you can jump ahead to a simple demo application which trains a neural network for Iris flower classification available [here](https://deeplearning4j.org/android-DL4JIrisClassifierDemo).
 ## <a name="head_link1">Prerequisites</a>
 * Android Studio 2.2 or newer, which can be downloaded [here](https://developer.android.com/studio/index.html#Other). 
 * Android Studio version 2.2 and higher comes with the latest OpenJDK embedded; however, it is recommended to have the JDK installed on your own as you are then able to update it independent of Android Studio. Android Studio 3.0 and later supports all of Java 7 and a subset of Java 8 language features. Java JDKs can be downloaded from Oracle's website.
@@ -250,7 +250,7 @@ private class AsyncTaskRunner extends AsyncTask<String, Integer, INDArray> {
 ```
 
 ## <a name="head_link5">Saving and Loading Networks on Android</a>
-Practical considerations regarding performance limits are needed when building Android applications that run neural networks. Training a neural network on a device is possible, but should only be attempted with networks with limited numbers of layers, nodes, and iterations. The first Demo app [DL4JIrisClassifierDemo](https://github.com/jrmerwin/DL4JIrisClassifierDemo) is able to train on a standard device in about 15 seconds. 
+Practical considerations regarding performance limits are needed when building Android applications that run neural networks. Training a neural network on a device is possible, but should only be attempted with networks with limited numbers of layers, nodes, and iterations. The first Demo app [DL4JIrisClassifierDemo](https://deeplearning4j.org/android-DL4JIrisClassifierDemo) is able to train on a standard device in about 15 seconds. 
 
 When training on a device is a reasonable option, the application performance can be improved by saving the trained model on the phone's external storage once an initial training is complete. The trained model can then be used as an application resource. This approach is useful for training networks with data obtained from user input. The following code illustrates how to train a network and save it on the phone's external resources.
 
@@ -338,3 +338,4 @@ try {
         e.printStackTrace();
     }
 ```
+An example application which uses a pretrained model can be found [here](https://deeplearning4j.org/android-DL4JImageRecognitionDemo).
