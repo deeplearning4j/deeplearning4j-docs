@@ -3,7 +3,7 @@ title: Spiking Neural Networks
 layout: default
 ---
 
-# Spiking Neural Networks
+# A Beginner's Guide to Spiking Neural Networks
 
 Spiking is a way to encode digital communications over a long distance (the spike rate and timing of individual spikes relative to others are the variations by which a spiking signal is encoded), because analog values are destroyed when sent a long distance over an active medium. Think smoke signals in the American West, talking drums in West Africa, or Morse Code on the telegraphs of the 19th and early 20th centuries. 
 
@@ -33,11 +33,11 @@ For people just getting started with deep learning, the following tutorials and 
 
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
-* [Deep Convolutional Networks](./convolutionalnets.html)
+* [Deep Convolutional Networks](./convolutionalnetwork.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
 * [Symbolic Reasoning & Deep Learning](./symbolicreasoning.html)
-* [Using Graph Data with Deep Learning](./graphdata.html)
+* [Using Graph Data with Deep Learning](./graphanalytics.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
 * [MNIST for Beginners](./mnist-for-beginners.html)
@@ -47,4 +47,4 @@ For people just getting started with deep learning, the following tutorials and 
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
-* [Inference: Machine Learning Model Server](./modelserver.html)
+* [Inference: Machine Learning Model Server](./machine-learning-server.html)
