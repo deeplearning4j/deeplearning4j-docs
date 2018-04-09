@@ -9,7 +9,7 @@ Spiking is a way to encode digital communications over a long distance (the spik
 
 But analog works fine locally. So spikes are close similar to packets in mesh interconnect. Pure spiking works in all-purpose machines like CPUs and GPUs, but the hardware's numeric capacity present is wasted, and it doesn't use scarce random access memory bandwidth optimally.
 
-Like all software, you can bake SNNs onto silicon. When companies like IBM and Intel discuss their "neuromorphic" chips, such as IBM's TrueNorth, they're usually referring to a custom chip, or ASIC, that contains a spiking mechanism in the form of an signal accumulator that fires once a certain type of input surpasses a threshhold. 
+Like most algorithms, SNNs can be baked onto silicon. When companies like IBM and Intel discuss their "neuromorphic" chips, such as IBM's TrueNorth, they're usually referring to a custom chip, or ASIC, that contains a spiking mechanism in the form of an signal accumulator that fires once a certain type of input surpasses a threshhold. 
 
 ## SNN Advantages
 
