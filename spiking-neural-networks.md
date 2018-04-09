@@ -5,11 +5,11 @@ layout: default
 
 # Spiking Neural Networks
 
-WIP.
-
 Spiking is a way to encode digital communications over a long distance (the spike rate and timing of individual spikes relative to others are the variations by which a spiking signal is encoded), because analog values are destroyed when sent a long distance over an active medium. Think smoke signals in the American West, talking drums in West Africa, or Morse Code on the telegraphs of the 19th and early 20th centuries. 
 
 But analog works fine locally. So spikes are close similar to packets in mesh interconnect. Pure spiking works in all-purpose machines like CPUs and GPUs, but the hardware's numeric capacity present is wasted, and it doesn't use scarce random access memory bandwidth optimally.
+
+Like all software, you can bake SNNs onto silicon. When companies like IBM and Intel discuss their "neuromorphic" chips, such as IBM's TrueNorth, they're usually referring to a custom chip, or ASIC, that contains a spiking mechanism in the form of an signal accumulator that fires once a certain type of input surpasses a threshhold. 
 
 ## SNN Advantages
 
@@ -21,7 +21,11 @@ But analog works fine locally. So spikes are close similar to packets in mesh in
 
 * [Spiking Neuron Models. Single Neurons, Populations, Plasticity](http://icwww.epfl.ch/~gerstner/SPNM/SPNM.html)
 * [STDP-based spiking deep convolutional neural networks for object recognition](https://arxiv.org/abs/1611.01421)
-* [R/Machinelearning discussion on SNNs](https://www.reddit.com/r/MachineLearning/comments/8a74je/d_does_anyone_know_any_really_good_papers_on/)
+* [Convolutional Networks for Fast, Energy-Efficient Neuromorphic Computing](https://arxiv.org/abs/1603.08270)
+* [TrueHappiness: Neuromorphic Emotion Recognition on TrueNorth](https://arxiv.org/abs/1601.04183)
+* [The Brain as an Efficient and Robust Adaptive Learner](http://www.cell.com/neuron/abstract/S0896-6273(17)30417-8)
+* [Bayesian Spiking Neurons I: Inference](https://www.mitpressjournals.org/doi/abs/10.1162/neco.2008.20.1.91)
+* [Predictive Coding of Dynamical Variables in Balanced Spiking Networks](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003258)
 
 ## <a name="intro">More Machine Learning Tutorials</a>
 
