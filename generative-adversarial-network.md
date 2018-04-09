@@ -251,7 +251,7 @@ if __name__ == '__main__':
     gan.train(epochs=30000, batch_size=32, save_interval=200)
 ```
 
-**Note:** [SKIL enables developers to build GANs](https://docs.skymind.ai/docs/quickstart). Deeplearning4j's [latest 1.0.0-alpha release](https://deeplearning4j.org/releasenotes#onezerozeroalpha) on Maven includes deconvolution and upsampling layers, which enable GANs.
+**Note:** [SKIL enables developers to build GANs](https://docs.skymind.ai/docs/quickstart). Deeplearning4j's [latest 1.0.0-alpha release](https://deeplearning4j.org/releasenotes#onezerozeroalpha) on Maven includes [deconvolution](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Deconvolution2D.java) and [upsampling](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling2D.java) [layers](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling1D.java), which enable GANs.
 
 ![Alt text](./img/GANdancers.png)
 
