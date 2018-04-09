@@ -251,7 +251,7 @@ if __name__ == '__main__':
     gan.train(epochs=30000, batch_size=32, save_interval=200)
 ```
 
-**Note:** [SKIL enables developers to build GANs](https://docs.skymind.ai/docs/quickstart). While Deeplearning4j's latest release on Maven does not include GANs, it will soon be possible to build and use them via auto-differentiation and model import from Keras and Tensorflow, all of which are currently available in the master repository on Github. 
+**Note:** [SKIL enables developers to build GANs](https://docs.skymind.ai/docs/quickstart). Deeplearning4j's [latest 1.0.0-alpha release](https://deeplearning4j.org/releasenotes#onezerozeroalpha) on Maven includes deconvolution and upsampling layers, which enable GANs.
 
 ![Alt text](./img/GANdancers.png)
 
