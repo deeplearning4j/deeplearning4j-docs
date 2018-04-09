@@ -26,7 +26,7 @@ Contents
 
 Neural networks are a set of algorithms, modeled loosely after the human brain, that are designed to recognize patterns. They interpret sensory data through a kind of machine perception, labeling or clustering raw input. The patterns they recognize are numerical, contained in vectors, into which all real-world data, be it images, sound, text or time series, must be translated. 
 
-Neural networks help us cluster and classify. You can think of them as a clustering and classification layer on top of data you store and manage. They help to group unlabeled data according to similarities among the example inputs, and they classify data when they have a labeled dataset to train on. (To be more precise, neural networks extract features that are fed to other algorithms for clustering and classification; so you can think of deep neural networks as components of larger machine-learning applications involving algorithms for [reinforcement learning](./reinforcementlearning.html), classification and [regression](./logistic-regression.html).)
+Neural networks help us cluster and classify. You can think of them as a clustering and classification layer on top of the data you store and manage. They help to group unlabeled data according to similarities among the example inputs, and they classify data when they have a labeled dataset to train on. (Neural networks can also extract features that are fed to other algorithms for clustering and classification; so you can think of deep neural networks as components of larger machine-learning applications involving algorithms for [reinforcement learning](./deepreinforcementlearning.html), classification and [regression](./logistic-regression.html).)
 
 
 <p align="center">
@@ -34,11 +34,13 @@ Neural networks help us cluster and classify. You can think of them as a cluster
 </p>
 
 
-What kind of problems does deep learning solve, and more importantly, can it solve yours? To know the answer, you need to [ask yourself a few questions](/questions): What outcomes do I care about? Those outcomes are labels that could be applied to data: for example, `spam` or `not_spam` in an email filter, `good_guy` or `bad_guy` in fraud detection, `angry_customer` or `happy_customer` in customer relationship management. Then ask: Do I have the data to accompany those labels? That is, can I find labeled data, or can I create a labeled dataset (with a service like Mechanical Turk or Crowdflower) where spam has been labeled as spam, in order to teach an algorithm the correlation between labels and inputs? 
+What kind of problems does deep learning solve, and more importantly, can it solve yours? To know the answer, you need to [ask yourself a few questions](/questions): What outcomes do I care about? Those outcomes are labels that could be applied to data: for example, `spam` or `not_spam` in an email filter, `good_guy` or `bad_guy` in fraud detection, `angry_customer` or `happy_customer` in customer relationship management. 
+
+Then ask: Do I have the data to accompany those labels? That is, can I find labeled data, or can I create a labeled dataset (with a service like AWS Mechanical Turk or Figure Eight or Mighty.ai) where spam has been labeled as spam, in order to teach an algorithm the correlation between labels and inputs? 
 
 ## <a name="concrete">A Few Concrete Examples</a>
 
-Deep learning maps inputs to outputs. It finds correlations. It is known as a "universal approximator", because it can learn to approximate the function `f(x) = y` between any input `x` and any output `y`, assuming they are related through correlation or causation at all. In the process of learning, a neural network finds the right `f`, or the correct manner of transforming `x` into `y`, whether that be `f(x) = 3x + 12` or `f(x) = 9x - 0.1`. Here are a few examples of what deep learning can do. 
+Deep learning maps inputs to outputs. It finds correlations. It is known as a "universal approximator", because it can learn to approximate an unknown function `f(x) = y` between any input `x` and any output `y`, assuming they are related at all (by correlation or causation, for example). In the process of learning, a neural network finds the right `f`, or the correct manner of transforming `x` into `y`, whether that be `f(x) = 3x + 12` or `f(x) = 9x - 0.1`. Here are a few examples of what deep learning can do. 
 
 ### Classification
 
@@ -59,7 +61,7 @@ Clustering or grouping is the detection of similarities. Deep learning does not 
 * Search: Comparing documents, images or sounds to surface similar items.
 * Anomaly detection: The flipside of detecting similarities is detecting anomalies, or unusual behavior. In many cases, unusual behavior correlates highly with things you want to detect and prevent, such as fraud. 
 
-### Predictive Analytics
+### Predictive Analytics: Regressions
 
 With classification, deep learning is able to establish correlations between, say, pixels in an image and the name of a person. You might call this a static prediction. By the same token, exposed to enough of the right data, deep learning is able to establish correlations between present events and future events. It can run regression between the past and the future. The future event is like the label in a sense. Deep learning doesn't necessarily care about time, or the fact that something hasn't happened yet. Given a time series, deep learning may read a string of number and predict the number most likely to occur next. 
 
@@ -324,6 +326,7 @@ For people just getting started with deep learning, the following tutorials and 
 * [Eigenvectors, PCA, Covariance and Entropy](./eigenvector.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Word2vec and Natural-Language Processing](./word2vec.html)
+* [Deep Learning on Apache Spark](./spark.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)

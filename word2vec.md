@@ -492,7 +492,7 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Bag of Words & Term Frequency-Inverse Document Frequency (TF-IDF)](./bagofwords-tf-idf.html)
 * [Advances in Pre-Training Distributed Word Representations - by Mikolov et al](https://arxiv.org/abs/1712.09405)
 
-### <a name="beginner">Other Deep Learning Tutorials</a>
+### <a name="beginner">Other Machine Learning Tutorials</a>
 
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
@@ -508,6 +508,16 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Deep Learning on Apache Spark](./spark.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+
 
 ### <a name="doctorow">Word2Vec in Literature</a>
 

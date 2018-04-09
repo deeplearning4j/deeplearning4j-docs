@@ -120,7 +120,7 @@ Map<ZooType, ZooModel> models = ModelSelector.select(ZooType.CNN);
 for (Map.Entry<ZooType, ZooModel> entry : models.entrySet()) {
     ZooModel zooModel = entry.getValue();
 
-    if(model.pretrainedAvailable(PretrainedType.IMAGENET)) {
+    if(zooModel.pretrainedAvailable(PretrainedType.IMAGENET)) {
         Model net = zooModel.initPretrained(PretrainedType.IMAGENET);
 
         // do what you want with pretrained model

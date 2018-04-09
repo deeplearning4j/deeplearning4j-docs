@@ -35,9 +35,9 @@ Since recurrent networks possess a certain type of memory, and memory is also pa
 
 ## <a name="feedforward">Review of Feedforward Networks</a>
 
-To understand recurrent nets, first you have to understand the basics of [feedforward nets](./restrictedboltzmannmachine.html). Both of these networks are named after the way they channel information through a series of mathematical operations performed at the nodes of the network. One feeds information straight straight through (never touching a given node twice), while the other cycles it through a loop, and the latter are called recurrent.
+To understand recurrent nets, first you have to understand the basics of [feedforward nets](./restrictedboltzmannmachine.html). Both of these networks are named after the way they channel information through a series of mathematical operations performed at the nodes of the network. One feeds information straight through (never touching a given node twice), while the other cycles it through a loop, and the latter are called recurrent.
 
-In the case of feedforward networks, input examples are fed to the network and transformed into an output; with supervised learning, the output would be a label, a name applied to the input. That is, they map raw data to categories, recognizing patterns that signal, for example, that an input image should be labeled "cat" or "elephant." 
+In the case of feedforward networks, input examples are fed to the network and transformed into an output; with supervised learning, the output would be a label, a name applied to the input. That is, they map raw data to categories, recognizing patterns that may signal, for example, that an input image should be labeled "cat" or "elephant." 
 
 ![Alt text](./img/feedforward_rumelhart.png)
 
@@ -228,7 +228,10 @@ Here are a few ideas to keep in mind when manually optimizing hyperparameters fo
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
 * [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
 * [Open Datasets for Machine Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 

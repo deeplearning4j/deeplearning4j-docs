@@ -213,7 +213,7 @@ It so happens that explaining the shape of the data one principal component at a
 
 You can see how we do [eigenvectors](https://github.com/deeplearning4j/nd4j/blob/14410087388980c6c25111859a1272418e20ec54/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/eigen/Eigen.java) in [ND4J](http://nd4j.org), a numerical computing library for the JVM that handles n-dimensional arrays, broadly inspired by Numpy. ND4J has Java and [Scala](https://github.com/deeplearning4j/nd4s) APIs, runs on Hadoop and Spark, and is roughly [twice as fast as Numpy/Cython](http://nd4j.org/benchmarking) on very large matrix operations. 
 
-## <a name="resources">Other Resources</a>
+## <a name="resources">More Resources on Eigenvectors</a>
 
 * [A Tutorial on Principal Components Analysis](http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf)
 * [What is the importance of eigenvalues/eigenvectors?](http://math.stackexchange.com/a/23325)
@@ -225,17 +225,24 @@ You can see how we do [eigenvectors](https://github.com/deeplearning4j/nd4j/blob
 * [The $25 Billion Eigenvector: The Linear Algebra Behind Google](https://www.rose-hulman.edu/~bryan/googleFinalVersionFixed.pdf)
 
 
-## <a name="resources">Other Beginner's Guides</a>
+## <a name="resources">More Machine Learning Tutorials</a>
 
-* [Regression & Neural Networks](./logistic-regression)
-* [Word2vec: Extracting Relations From Raw Text](./word2vec)
-* [Convolutional Networks](./convolutionalnetwork)
-* [Deep Learning for Graph Data](./graphdata)
 * [Recurrent Networks and Long Short-Term Memory Units (LSTMs)](./lstm)
-* [Generative Adversarial Networks (GANs)](/generative-adversarial-network)
-* [Inference: Machine Learning Model Server](./modelserver)
-* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning)
-* [Restricted Boltzmann Machines: The Building Blocks of Deep-Belief Networks](./restrictedboltzmannmachine)
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 
 <a name="ref">1)</a> *In some cases, matrices may not have a full set of eigenvectors; they can have at most as many linearly independent eigenvectors as their respective order, or number of dimensions.*

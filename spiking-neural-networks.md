@@ -7,9 +7,21 @@ layout: default
 
 WIP.
 
+Spiking is a way to encode digital communications over a long distance (the spike rate and timing of individual spikes relative to others are the variations by which a spiking signal is encoded), because analog values are destroyed when sent a long distance over an active medium. Think smoke signals in the American West, talking drums in West Africa, or Morse Code on the telegraphs of the 19th and early 20th centuries. 
+
+But analog works fine locally. So spikes are close similar to packets in mesh interconnect. Pure spiking works in all-purpose machines like CPUs and GPUs, but the hardware's numeric capacity present is wasted, and it doesn't use scarce random access memory bandwidth optimally.
+
+## SNN Advantages
+
+* Low energy usage
+* Greater parallelizability due to local-only interactions
+* (Maybe) better able to learn non-differentiable functions
+
 ## Further Reading on Spiking Neural Networks
 
 * [Spiking Neuron Models. Single Neurons, Populations, Plasticity](http://icwww.epfl.ch/~gerstner/SPNM/SPNM.html)
+* [STDP-based spiking deep convolutional neural networks for object recognition](https://arxiv.org/abs/1611.01421)
+* [R/Machinelearning discussion on SNNs](https://www.reddit.com/r/MachineLearning/comments/8a74je/d_does_anyone_know_any_really_good_papers_on/)
 
 ## <a name="intro">More Machine Learning Tutorials</a>
 

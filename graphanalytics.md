@@ -65,7 +65,7 @@ Graphs have an **arbitrary structure**: they are collections of things without a
 
 You usually don't feed whole graphs into neural networks, for example. They would have to be the same shape and size, and you'd have to line up your graph nodes with your network's input nodes. But the whole point of graph-structured input is to not know or have that order. There's no first, there's no last. 
 
-![Alt text](./img/graph-data-structure.png)
+![Alt text](./img/graph1.jpg)
 
 The second question when dealing with graphs is: What kind of question are you trying to answer by applying machine learning to them? In social networks, you're usually trying to make a decision about what kind person you're looking at, represented by the node, or what kind of friends and interactions does that person have. So you're making predictions about the node itself or the edges. 
 
@@ -83,11 +83,11 @@ One interesting aspect of graph is so-called side information, or the attributes
 
 Finally, you can compute derivative functions such as graph Lapalians from the tensors that represent the graphs, much like you might perform an eigen analysis on a tensor. These functions will tell you things about the graph that may help you classify or cluster it. (See below for more information.)  
 
-### <a name="beginner">Other Deep-learning Tutorials</a>
+### <a name="beginner">More Deep Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview)
 * [Deep Reinforcement Learning](./deepreinforcementlearning)
-* [Convolutional Networks (CNNs)](./convolutionalnets)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
 * [LSTMs and Recurrent Networks](./lstm)
 * [Word2Vec: Neural Embeddings for Java](./word2vec)

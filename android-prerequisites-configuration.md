@@ -1,5 +1,5 @@
 ---
-title: Using Deeplearning4J in Android Applications 
+title: Prerequisites and Configurations for DL4J in Android
 layout: default
 ---
 # Prerequisites and Configurations for DL4J in Android

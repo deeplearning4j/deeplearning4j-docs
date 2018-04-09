@@ -5,11 +5,11 @@ layout: default
 
 # Tensorflow & Deeplearning4j
 
-Tensorflow and Deeplearning4j are complementary. Actually, they're complimentary as in snacks on an airplane, and complementary as in they work together. 
+Tensorflow and Deeplearning4j are complementary. Actually, they're complimentary as in snacks on an airplane, since they're free, and complementary as in they work together. 
 
 ## Migrate Tensorflow to Java
 
-Deeplearning4j has a model import function. While our model import is chiefly focused on Tensorflow models created with Keras, later in 2017 it will apply directly to Tensorflow models. So Tensorflow users who need to run their models on a JVM stack have an easy way to do it. Deeplearning4j also makes it easy to perform more complex inference-related tasks; e.g. vectorize a lexicon, store the word vectors in an index, and run K-nearest neighbors on it. 
+Deeplearning4j has a [model import function](https://deeplearning4j.org/releasenotes#onezerozeroalpha). Our model import is chiefly focuses on models created with Keras 1 and 2, as well as TensorFlow. So Tensorflow users who need to deploy their models on a JVM stack have an easy way to do it. Deeplearning4j also makes it easy to perform more complex inference-related tasks; e.g. vectorize a lexicon, store the word vectors in an index, and run K-nearest neighbors on it. 
 
 ### <a name="tensorflow">TensorFlow Overview</a>
 
@@ -48,4 +48,4 @@ For more information on using Java for deep learning, please see our [Quickstart
 
 Deeplearning4j is faster than TensorFlow on [multi-GPUs](https://github.com/deeplearning4j/dl4j-benchmark). You can read about how to run your own [optimized DL4J benchmarks here](https://deeplearning4j.org/benchmark).
 
-Deeplearning4j can import neural net models trained with Keras 1.0 on TensorFlow to run inference.
+Deeplearning4j can import neural net models trained with Keras 1.0 and 2.0 on TensorFlow to run inference.
