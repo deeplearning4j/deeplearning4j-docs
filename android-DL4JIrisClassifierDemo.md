@@ -4,7 +4,7 @@ layout: default
 ---
 # Using Deeplearning4J in Android Applications 
 ### DL4JIrisClassifierDemo
-The example application trains a small neural network on the device using Anderson’s Iris data set for iris flower type classification. For a more indepth look at optimizing android for DL4J, please see the Prerequisites and Configuration documentation [here](https://deeplearning4j.org/android-Prereqs%20and%20Configuration). This application has a simple UI to take measurements of petal length, petal width, sepal length, and sepal width from the user and returns the probability that the measurements belong to one of three types of Iris (*Iris serosa*, *Iris versicolor*, and *Iris virginica*). A data set includes 150 measurement values (50 for each iris type) and training the model takes anywhere from 5-20 seconds, depending on the device.
+The example application trains a small neural network on the device using Anderson’s Iris data set for iris flower type classification. For a more indepth look at optimizing android for DL4J, please see the Prerequisites and Configuration documentation [here](https://github.com/deeplearning4j/deeplearning4j-docs/blob/gh-pages/android-prerequisites-configuration.md). This application has a simple UI to take measurements of petal length, petal width, sepal length, and sepal width from the user and returns the probability that the measurements belong to one of three types of Iris (*Iris serosa*, *Iris versicolor*, and *Iris virginica*). A data set includes 150 measurement values (50 for each iris type) and training the model takes anywhere from 5-20 seconds, depending on the device.
 
 Contents
 
@@ -258,7 +258,7 @@ Once the training of the neural network and the classification of the user measu
 Hopefully this tutorial has illustrated how the compatibility of DL4J with Android makes it easy to build, train, and evaluate neural networks on mobile devices. We used a simple UI to take input values from the measurement and then passed them as the *Params* in an AsyncTask. The processor intensive steps of data preparation, network layer building, model training, and evaluation of the user data were all performed in the doInBackground() method of the background thread, maintaining a stable and responsive device. Once completed, we passed the output INDArray as the AsyncTask *Results* to onPostExecute() where the the UI was updated to demonstrate the classification results. 
 The limitations of processing power and battery life of mobile devices make training robust, multi-layer networks somewhat unfeasible. To address this limitation, we will next look at an example Android application that saves the trained model on the device for faster performance after an initial model training.
 
-The complete code for this example is available at https://github.com/jrmerwin/DL4JIrisClassifierDemo
+The complete code for this example is available [here.](https://github.com/deeplearning4j/dl4j-examples/tree/master/android/DL4JIrisClassifierDemo)
 
 
 
