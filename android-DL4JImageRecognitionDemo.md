@@ -14,7 +14,7 @@ Contents
 * [Conclusion](#head_link6)
 
 ## DL4JImageRecognitionDemo
-This example application uses a neural network trained on the standard MNIST dataset of 28x28 greyscale 0..255 pixel value images of hand drawn numbers 0..9. The application user interace allows the user to draw a number on the device screen which is then tested against the trained network. The output displays the most probable numeric values and the probability score. This tutorial will cover the use of a trained neural network in an Android Application, the handling of user generated images, and the output of the results to the UI from a background thread. For a detailed guide demonstrating how to train and save the neural networks used in this application, please see this DL4J quickstart [tutorial](https://deeplearning4j.org/quickstart). More information on general prerequisites for building DL4J Android Applications can be found [here](https://deeplearning4j.org/android-Prereqs%20and%20Configuration). 
+This example application uses a neural network trained on the standard MNIST dataset of 28x28 greyscale 0..255 pixel value images of hand drawn numbers 0..9. The application user interace allows the user to draw a number on the device screen which is then tested against the trained network. The output displays the most probable numeric values and the probability score. This tutorial will cover the use of a trained neural network in an Android Application, the handling of user generated images, and the output of the results to the UI from a background thread. For a detailed guide demonstrating how to train and save the neural networks used in this application, please see this DL4J quickstart [tutorial](https://deeplearning4j.org/quickstart). More information on general prerequisites for building DL4J Android Applications can be found [here](https://github.com/deeplearning4j/deeplearning4j-docs/blob/gh-pages/android-prerequisites-configuration.md). 
 
 ![](images/screen2.png)
 ## <a name="head_link1">Setting the Dependencies</a>
@@ -382,7 +382,7 @@ The onPostExecute method will receive an INDArray which contains the neural netw
 
 This tutorial provides a basic framework for image recognition in an Android Application using a DL4J neural network. It illustrates how to load a pre-trained DL4J model from the raw resources file and how to test user generate input images against the model. The AsyncTask then returns the output to the main thread and updates the UI.
 
-The complete code for this example is available at https://github.com/jrmerwin/DL4JImageRecognitionDemo
+The complete code for this example is available [here.](https://github.com/deeplearning4j/dl4j-examples/tree/master/android/DL4JImageRecognitionDemo)
 
 
 
