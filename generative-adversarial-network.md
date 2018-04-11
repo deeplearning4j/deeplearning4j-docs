@@ -276,6 +276,7 @@ if __name__ == '__main__':
 * [Deep Convolutional Networks (CNNs)](./convolutionalnetwork.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Distributed Deep Learning on Apache Spark](https://deeplearning4j.org/spark)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Open Datasets for Deep Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
