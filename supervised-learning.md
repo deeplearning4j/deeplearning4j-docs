@@ -5,9 +5,13 @@ layout: default
 
 # A Beginner's Guide to Supervised Learning
 
-You may have heard the terms "supervised learning". It is a way to conduct machine learning. It's not an algorithm exactly. In a supervised learning scenario, you have input data which has been labeled.
+You may have heard the term "supervised learning". It is a way to make an algorithm learn something, but it's not the algorithm, exactly. 
 
-Imagine your algorithm is taking a test. The labels are the correct answers to the test, and the input data is the set of questions. Your algorithm is going to take a guess each time it sees a data instance, and that guess will be checked against the correct answer, the label. The act of supervision, then, is this checking of guesses against correct answers. 
+In a supervised learning scenario, you have input data that has been labeled, like you might scribble a name on the back of a photograph so that future generations can identify your great aunt.
+
+Imagine your algorithm is taking a test. The labels are the correct answers to the test (the name of the person), and the input data (the photographs) is the set of questions. 
+
+Your algorithm is going to take a guess each time it sees a data instance (a photograph), and that guess will be checked against the correct answer, the label, or name. The act of supervision, then, is this checking of guesses against correct answers. When the algorithm makes an incorrect guess, that can be detected, and the algorithm itself can be adjusted to make it guess better. This is the *learning* part of *machine learning*.  
 
 We don't always have a labeled dataset, or know the answers to our questions, so not all learning is supervised. [Unsupervised learning](./unsupervised-learning.html) is a topic for another post. So the input data is what you want to make predictions about, and the labels are those precise predictions, attached to each relevant instance of the input. 
 
