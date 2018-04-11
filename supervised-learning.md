@@ -9,9 +9,16 @@ You may have heard the terms "supervised learning". It is a way to conduct machi
 
 Imagine your algorithm is taking a test. The labels are the correct answers to the test, and the input data is the set of questions. Your algorithm is going to take a guess each time it sees a data instance, and that guess will be checked against the correct answer, the label. The act of supervision, then, is this checking of guesses against correct answers. 
 
-We don't always have a labeled dataset, or know the answers to our questions, so not all learning is supervised. [Unsupervised learning](./unsupervised-learning.html) is a topic for another post. 
+We don't always have a labeled dataset, or know the answers to our questions, so not all learning is supervised. [Unsupervised learning](./unsupervised-learning.html) is a topic for another post. So the input data is what you want to make predictions about, and the labels are those precise predictions, attached to each relevant instance of the input. 
 
-So
+Here are some examples of input-label pairs and what we would call this use case:
+
+* Photo - Name of object in photo (e.g. face - name) - object recognition
+* Transaction - "fraud" or "not_fraud" - fraud detection
+* Text - "angry" or "content" - sentiment analysis
+* Sound file - name of person speaking - voice recognition
+
+
 
 ## <a name="resources">More Machine Learning Tutorials</a>
 
