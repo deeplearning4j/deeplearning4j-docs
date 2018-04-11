@@ -126,3 +126,4 @@ For people just getting started with deep learning, the following tutorials and 
 * [Artificial Intelligence (AI) for Scala](./scala-ai.html)
 * [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
+* [Distributed Deep Learning on Apache Spark](./spark.html)
