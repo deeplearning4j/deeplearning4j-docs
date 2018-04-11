@@ -246,6 +246,7 @@ public class A3CALE {
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
 * [Eigenvectors, Covariance, PCA and Entropy](./eigenvector)
 * [Deeplearning4j Quickstart Examples](./quickstart)
+* [Distributed Deep Learning on Apache Spark](https://deeplearning4j.org/spark)
 * [ND4J: A Tensor Library for the JVM Using C++](http://nd4j.org)
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
