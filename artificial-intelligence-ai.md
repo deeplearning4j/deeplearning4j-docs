@@ -89,3 +89,24 @@ While companies such as Apple have standardized much of their data science work 
 * [On Intelligence](https://papers.harvie.cz/unsorted/Jeff%20Hawkins%20-%20On%20Intelligence.pdf); [Jeff Hawkins](https://en.wikipedia.org/wiki/Jeff_Hawkins)
 * [An Introduction to AI's Near Future by Wait But Why](http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html)
 * [We Live in a Jungle of Artificial Intelligence that will Spawn Sentience](http://singularityhub.com/2010/08/10/we-live-in-a-jungle-of-artificial-intelligence-that-will-spawn-sentience/); Singularity Hub
+
+## <a name="resources">More Machine Learning Tutorials</a>
+
+* [Recurrent Networks and Long Short-Term Memory Units (LSTMs)](./lstm)
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Distributed Deep Learning on Apache Spark](./spark.html)
