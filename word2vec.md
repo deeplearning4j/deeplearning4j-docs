@@ -513,6 +513,7 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Deep Learning on Apache Spark](./spark.html)
 * [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Distributed Deep Learning on Apache Spark](https://deeplearning4j.org/spark)
 * [Neural Networks & Regression](./logistic-regression.html)
 * [Introduction to Decision Trees](./decision-tree.html)
 * [Introduction to Random Forests](./random-forest.html)
