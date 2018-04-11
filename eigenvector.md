@@ -244,5 +244,6 @@ You can see how we do [eigenvectors](https://github.com/deeplearning4j/nd4j/blob
 * [Open Datasets for Machine Learning](./opendata.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Distributed Deep Learning on Apache Spark](./spark.html)
 
 <a name="ref">1)</a> *In some cases, matrices may not have a full set of eigenvectors; they can have at most as many linearly independent eigenvectors as their respective order, or number of dimensions.*
