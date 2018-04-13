@@ -46,7 +46,7 @@ layout: default
 <ul>
   <li>An Android device or emulator that runs API level 21 or higher, and has about 200 MB of internal storage space free. I strongly suggest you use an emulator first because you can quickly tweak it in case you run out of memory or storage space.</li>
   <li>Android Studio 2.2 or newer</li>
-  <li>A more in-depth look at using DL4J in Android Applications can be found <a href="https://github.com/deeplearning4j/deeplearning4j-docs/blob/gh-pages/android-prerequisites-configuration.md" target="_blank" rel="nofollow">here.</a> This guide covers dependencies, memory management, saving device-trained models, and loading pre-trained models in the application.</li>
+  <li>A more in-depth look at using DL4J in Android Applications can be found <a href="https://deeplearning4j.org/android-prerequisites-configuration" target="_blank" rel="nofollow">here.</a> This guide covers dependencies, memory management, saving device-trained models, and loading pre-trained models in the application.</li>
 </ul>
 
 <h3 id="configuring-your-android-studio-project">Configuring Your Android Studio Project</h3>
