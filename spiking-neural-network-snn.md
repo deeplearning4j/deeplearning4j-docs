@@ -22,6 +22,7 @@ Spiking neural networks can learn using gradient descent.
 ## Further Reading on Spiking Neural Networks
 
 * [Gradient Descent for Spiking Neural Networks](https://arxiv.org/abs/1706.04698)
+* [(A Bit of) Biological Neural Networks – Part I, Spiking Neurons](https://www.fourmilab.ch/cellab/manual/webca.html)
 * [Spiking Neuron Models. Single Neurons, Populations, Plasticity](http://icwww.epfl.ch/~gerstner/SPNM/SPNM.html)
 * [STDP-based spiking deep convolutional neural networks for object recognition](https://arxiv.org/abs/1611.01421)
 * [Convolutional Networks for Fast, Energy-Efficient Neuromorphic Computing](https://arxiv.org/abs/1603.08270)
