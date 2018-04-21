@@ -225,12 +225,30 @@ If you are building Deeplearning4j through an IDE such as IntelliJ, you will nee
 
 If you want to work on ScalNet, the Scala API, or on certain modules such as the DL4J UI, you will need to ensure your IDE has Scala support installed and available to you.
 
-#### Testing Dependencies
+#### Testing
 
-Deeplearning4j uses a separate repository that contains all resources necessary for testing. This is to keep the central DL4J repository lightweight and avoid large blobs in the GIT history. If you wish to run tests in the DL4J stack:
+Deeplearning4j uses a separate repository that contains all resources necessary for testing. This is to keep the central DL4J repository lightweight and avoid large blobs in the GIT history. To run the tests you need to install the test-resources from https://github.com/deeplearning4j/dl4j-test-resources (~10gb). If you don't care about history, do a shallow clone only with
+```bash
+git clone --depth 1 --branch master https://github.com/deeplearning4j/dl4j-test-resources
+cd /dl4j-test-resources
+mvn install
+```
 
-1. Clone https://github.com/deeplearning4j/dl4j-test-resources on your local machine.
-2. `cd dl4j-test-resources; mvn install`
+Tests will run __only__ when `testresources` and a backend profile (such as `test-nd4j-native`) are selected
+
+```bash
+mvn clean test -P  testresources,test-nd4j-native
+```
+
+Some tests will fetch additional data. By default this data will clutter your home directory. To change this location you can override this default with
+
+```bash
+testDataDir=/some/where
+mkdir $testDataDir
+mvn -DargLine="-Duser.home=${testDataDir}" clean test -P  testresources,test-nd4j-native
+```
+
+Running the tests will take a while. To run tests of just a single maven module you can add a module constraint with `-pl deeplearning4j-core` (for details see [here](https://stackoverflow.com/questions/11869762/maven-run-only-single-test-in-multi-module-project))
 
 ## Installing the DL4J Stack
 
