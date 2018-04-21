@@ -230,7 +230,7 @@ If you want to work on ScalNet, the Scala API, or on certain modules such as the
 Deeplearning4j uses a separate repository that contains all resources necessary for testing. This is to keep the central DL4J repository lightweight and avoid large blobs in the GIT history. To run the tests you need to install the test-resources from https://github.com/deeplearning4j/dl4j-test-resources (~10gb). If you don't care about history, do a shallow clone only with
 ```bash
 git clone --depth 1 --branch master https://github.com/deeplearning4j/dl4j-test-resources
-cd /dl4j-test-resources
+cd dl4j-test-resources
 mvn install
 ```
 
