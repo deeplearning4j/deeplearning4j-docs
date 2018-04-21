@@ -22,7 +22,7 @@ All deep learning is based on vectors and tensors, and DL4J relies on a tensor l
 
 ## Preparing Data for Learning and Prediction
 
-Unlike other machine learning or deep learning frameworks, DL4J treats the tasks of loading data and training algorithms as separate processes. You don't just point the model at data saved somewhere on disk, you load the data using DataVec. This gives you a lot more flexiblity, and retains the convenience of simple data loading. 
+Unlike other machine learning or deep learning frameworks, DL4J treats the tasks of loading data and training algorithms as separate processes. You don't just point the model at data saved somewhere on disk, you load the data using DataVec. This gives you a lot more flexibility, and retains the convenience of simple data loading.
 
 Before the algorithm can start learning, you have to prepare the data, even if you already have a trained model. Preparing data means loading it and putting it in the right shape and value range (e.g. normalization, zero-mean and unit variance). Building these processes from scratch is error prone, so use DataVec wherever possible.
 
@@ -92,7 +92,7 @@ once. A single pass over the entire dataset is called an *epoch*. DL4J has sever
 The simplest way, is to reset your `DataSetIterator` and loop over the fit call as many times as you want. This way you can train your model for as many epochs as you think is a good fit.
 
 Another one of them is the `.iterations(N)` configuration parameter. It decides
-how ofter the network should iterate (i.e. train) over a a single mini-batch in
+how often the network should iterate (i.e. train) over a a single mini-batch in
 a row. So, if you had 3 mini-batches A, B and C, setting `.iterations(3)` would
 result in your network learning with the data as `AAABBBCCC`, in contrast using
 3 epochs with `.iterations(1)` would feed the data to the network as `ABCABCABC`.
