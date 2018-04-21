@@ -25,7 +25,11 @@ Convolutional networks perform optical character recognition (OCR) to digitize t
 The efficacy of convolutional nets (ConvNets or CNNs) in image recognition is one of the main reasons why the world has woken up to the efficacy of deep learning. They are powering major advances in computer vision (CV), which has obvious applications for self-driving cars, robotics, drones, security, medical diagnoses, and treatments for the visually impaired. 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH CONVOLUTIONAL NETWORKS</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="ConvolutionalNetworkPage">GET STARTED WITH CONVOLUTIONAL NETWORKS</a>
 </p>
 
 ## <a name="tensors">Images Are 4-D Tensors?</a>

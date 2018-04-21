@@ -22,7 +22,11 @@ Here you'll find an organized list of interesting, high-quality datasets for mac
 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="OpenDataPage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 

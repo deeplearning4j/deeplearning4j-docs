@@ -21,7 +21,11 @@ Just change the last line above to this:
 ND4J is the numerical computing engine that powers Deeplearning4j. It has what we call "backends", or different types of hardware that it works on. In the [Deeplearning4j Gitter channel](https://gitter.im/deeplearning4j/deeplearning4j), you'll hear people talk about backends, and they're just referring to the packages that point to one chip or another. The backends are where we've done the work of optimizing on the hardware.
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="GPUPage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 ## Troubleshooting
@@ -29,7 +33,11 @@ ND4J is the numerical computing engine that powers Deeplearning4j. It has what w
 If you have several GPUs, but your system is forcing you to use just one, there's a solution. Just add `CudaEnvironment.getInstance().getConfiguration().allowMultiGPU(true);` as first line of your `main()` method.
 
 <p align="center">
-<a href="./quickstart" class="btn btn-custom" onClick="ga('send', 'event', ‘quickstart', 'click');">Get Started With Deeplearning4j on GPUs</a>
+<a href="./quickstart" class="btn btn-custom"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/GetStarted"
+        data-ga-label="GPUPage">Get Started With Deeplearning4j on GPUs</a>
 </p>
 
 
