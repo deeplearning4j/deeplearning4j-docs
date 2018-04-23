@@ -17,9 +17,15 @@ The fundamental task of all neural networks is *credit assignment*. Credit assig
 
 But there are different ways to structure and channel the relationship of input features to outcomes. [Feed-forward networks](./neuralnet-overview) are a way of establishing a relationship between all input features (e.g. the pixels in a picture) and the predictions you want to make about the input (e.g. this photo represents a dog or a cat), and doing so all at the same time. 
 
-When we try to predict temporal sequences of things, like words in a sentence or measurements in a time series (e.g. temperatures or stock prices), we channel inputs in other ways. For example, a [recurrent neural network like an LSTM](./lstm) is often used, since it takes account of information in the present time step as well as the context of past time steps. 
+When we try to predict temporal sequences of things, like words in a sentence or measurements in a time series (e.g. temperatures or stock prices), we channel inputs in other ways. For example, a [recurrent neural network like an LSTM](./lstm) is often used, since it takes account of information in the present time step as well as the context of past time steps. Below is one way to think about how a recurrent network operates: at each time step, it combines input from the present moment, as well as input from the memory layer, to make a decision about the data. 
 
+![Alt text](./img/recurrent_network.png)
 
+An attention mechanism takes into account the input from several time steps, say, to make one prediction. And just as importantly, it accords different weights, or degrees of importance, to those inputs, reflected below in the lines of different thicknesses and color. 
+
+![Alt text](./img/attention_mechanism.png)
+
+## Navigating Complex Spaces
 
 If you tell your self-driving car to park itself "under the elm tree near the yellow house two blocks away where the curb is unmetered", how can the machine understanding the important parts of that complex and ambiguous instruction and map them to the physical world, which is submerged in noise? 
 
