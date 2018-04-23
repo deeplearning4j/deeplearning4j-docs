@@ -240,15 +240,6 @@ Tests will run __only__ when `testresources` and a backend profile (such as `tes
 mvn clean test -P  testresources,test-nd4j-native
 ```
 
-Some tests will fetch additional data. By default this data will clutter your home directory. To change this location you can override this default with
-
-```bash
-testDataDir=/some/where
-mkdir $testDataDir
-export MAVEN_OPTS="-Duser.home=${testDataDir}"
-mvn clean test -P testresources,test-nd4j-native
-```
-
 Running the tests will take a while. To run tests of just a single maven module you can add a module constraint with `-pl deeplearning4j-core` (for details see [here](https://stackoverflow.com/questions/11869762/maven-run-only-single-test-in-multi-module-project))
 
 ## Installing the DL4J Stack
