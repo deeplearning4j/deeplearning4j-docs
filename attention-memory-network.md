@@ -10,6 +10,8 @@ WIP
 ### <a name="beginner">Further Reading on Attention Networks</a>
 
 * [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
+* [Memory, attention, sequences](https://towardsdatascience.com/memory-attention-sequences-37456d271992)
+* [Attention Mechanism](https://blog.heuritech.com/2016/01/20/attention-mechanism/)
 * [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/)
 * [Attention in Neural Networks and How to Use It](http://akosiorek.github.io/ml/2017/10/14/visual-attention.html)
 * [How Does Attention Work in Encoder-Decoder Recurrent Neural Networks](https://machinelearningmastery.com/how-does-attention-work-in-encoder-decoder-recurrent-neural-networks/)
