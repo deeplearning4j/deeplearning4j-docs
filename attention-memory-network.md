@@ -7,6 +7,12 @@ layout: default
 
 WIP
 
+"Attention" can be defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> Attention describes the mind's ability to allocate consideration unevenly across a field of sensation and thought, to focus and bring some inputs to the fore, while ignoring or diminishing the importance of others. This is important, because the field of sensation is wide, the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. This is also true for artificial neural networks.
+
+
+
+
+
 ### <a name="beginner">Further Reading on Attention Networks</a>
 
 * [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
@@ -53,3 +59,5 @@ WIP
 * [Introduction to Decision Trees](./decision-tree.html)
 * [Introduction to Random Forests](./random-forest.html)
 * [Open Datasets for Machine Learning](./opendata.html)
+
+<a name="one">1)</a> *"Heed", in turn, is related to the German hüten, "to guard or watch carefully".*
