@@ -5,7 +5,9 @@ layout: default
 
 # A Beginner's Guide to Attention and Memory Networks
 
-At any given moment, our minds concentrate on a subset of the total information available to them. (Fwiw, this is also true for artificial neural networks using an attention mechanism.) For example, you are reading these words as a larger world flows around you: maybe you're in a room with traffic coursing outside, maybe you're in a plane and the pilot is making another annoying announcement about turbulent, but your focus is **here**. Attention is, in a sense, the mind's capital, the chief resource it can allocate and spend. Algorithms can also allocate attention, and learn how to do it better, by adjusting the weights they assign to various inputs. 
+At any given moment, our minds concentrate on a subset of the total information available to them. (Fwiw, this is also true for artificial neural networks using an attention mechanism.) For example, you are reading these words as a larger world flows around you: maybe you're in a room with traffic coursing outside, maybe you're in a plane and the pilot is making another annoying announcement about turbulent, but your focus is **here**. 
+
+Attention is, in a sense, the mind's capital, the chief resource it can allocate and spend. Algorithms can also allocate attention, and learn how to do it better, by adjusting the weights they assign to various inputs. It is used for speech recognition, machine translation, reasoning, image captioning, summarization, and visual identification of objects.
 
 "Attention" is defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> The word describes the mind's ability to allocate consideration unevenly across a field of sensation, thought and proprioception, to focus and bring certain inputs to the fore, while ignoring or diminishing the importance of others.  This is important, because the field of sensation is wide, and the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. 
 
