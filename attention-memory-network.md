@@ -11,6 +11,8 @@ At any given moment, our minds concentrate on a subset of the total information 
 
 "Attention" is defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> The word describes the mind's ability to allocate consideration unevenly across a field of sensation, thought and proprioception, to focus and bring certain inputs to the fore, while ignoring or diminishing the importance of others.  This is important, because the field of sensation is wide, and the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. 
 
+## Credit Assignment Among Available Features
+
 The fundamental task of all neural networks is *credit assignment*. Credit assignment is allocating importance to input features through the weights of the neural network's model. Learning is the process by which neural networks figure out which input features correlate highly with the outcomes the net tries to predict, and their learnings are embodied in the adjusted quantities of the weights that result in accurate decisions about the data they're exposed to. 
 
 But there are different ways to structure and channel the relationship of input features to outcomes. [Feed-forward networks](./neuralnet-overview) are a way of establishing a relationship between all input features (e.g. the pixels in a picture) and the predictions you want to make about the input (e.g. this photo represents a dog or a cat), and doing so all at the same time. 
