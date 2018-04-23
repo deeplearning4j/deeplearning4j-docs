@@ -9,7 +9,15 @@ WIP
 
 At any given moment, our minds concentrate on a subset of the total information available to them. (Fwiw, this is also true for artificial neural networks using an attention mechanism.) For example, you are reading these words as a larger world flows around you: maybe you're in a room with traffic coursing outside, maybe you're in a plane and the pilot is making another annoying announcement about turbulent, but your focus is **here**. Attention is, in a sense, the mind's capital, the chief resource it can allocate and spend. Algorithms can also allocate attention, and learn how to do it better, by adjusting the weights they assign to various inputs. 
 
-"Attention" can be defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> Attention describes the mind's ability to allocate consideration unevenly across a field of sensation, thought and proprioception, to focus and bring certain inputs to the fore, while ignoring or diminishing the importance of others.  This is important, because the field of sensation is wide, the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. 
+"Attention" is defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> The word describes the mind's ability to allocate consideration unevenly across a field of sensation, thought and proprioception, to focus and bring certain inputs to the fore, while ignoring or diminishing the importance of others.  This is important, because the field of sensation is wide, and the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. 
+
+The fundamental task of all neural networks is *credit assignment*. Credit assignment is allocating importance to input features through the weights of the neural network's model. Learning is the process by which neural networks figure out which input features correlate highly with the outcomes the net tries to predict, and their learnings are embodied in the adjusted quantities of the weights that result in accurate decisions about the data they're exposed to. 
+
+But there are different ways to structure and channel the relationship of input features to outcomes. [Feed-forward networks](./neuralnet-overview) are a way of establishing a relationship between all input features (e.g. the pixels in a picture) and the predictions you want to make about the input (e.g. this photo represents a dog or a cat), and doing so all at the same time. 
+
+When we try to predict temporal sequences of things, like words in a sentence or measurements in a time series (e.g. temperatures or stock prices), we channel inputs in other ways. For example, a [recurrent neural network like an LSTM](./lstm) is often used, since it takes account of information in the present time step as well as the context of past time steps. 
+
+
 
 If you tell your self-driving car to park itself "under the elm tree near the yellow house two blocks away where the curb is unmetered", how can the machine understanding the important parts of that complex and ambiguous instruction and map them to the physical world, which is submerged in noise? 
 
