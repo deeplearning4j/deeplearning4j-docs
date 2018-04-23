@@ -7,9 +7,11 @@ layout: default
 
 WIP
 
-"Attention" can be defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> Attention describes the mind's ability to allocate consideration unevenly across a field of sensation and thought, to focus and bring some inputs to the fore, while ignoring or diminishing the importance of others. This is important, because the field of sensation is wide, the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. This is also true for artificial neural networks.
+At any given moment, our minds concentrate on a subset of the total information available to them. (For example, you are reading these words as a larger world flows around you: maybe you're in a room with traffic coursing outside, maybe you're in a plane and the pilot is making another annoying announcement about turbulent, but your focus is **here**.) This is also true for artificial neural networks using an attention mechanism.
 
+"Attention" can be defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> Attention describes the mind's ability to allocate consideration unevenly across a field of sensation, thought and proprioception, to focus and bring certain inputs to the fore, while ignoring or diminishing the importance of others.  This is important, because the field of sensation is wide, the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. 
 
+If you tell your self-driving car to park itself "under the elm tree near the yellow house two blocks away where the curb is unmetered", how can the machine understanding the important parts of that complex and ambiguous instruction and map them to the physical world, which is submerged in noise? 
 
 
 
