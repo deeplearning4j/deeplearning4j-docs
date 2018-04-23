@@ -245,7 +245,8 @@ Some tests will fetch additional data. By default this data will clutter your ho
 ```bash
 testDataDir=/some/where
 mkdir $testDataDir
-mvn -DargLine="-Duser.home=${testDataDir}" clean test -P  testresources,test-nd4j-native
+export MAVEN_OPTS="-Duser.home=${testDataDir}"
+mvn clean test -P testresources,test-nd4j-native
 ```
 
 Running the tests will take a while. To run tests of just a single maven module you can add a module constraint with `-pl deeplearning4j-core` (for details see [here](https://stackoverflow.com/questions/11869762/maven-run-only-single-test-in-multi-module-project))
