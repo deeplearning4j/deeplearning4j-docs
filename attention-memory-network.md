@@ -33,13 +33,19 @@ Let's say you are trying to generate a caption from an image. Each input could b
 
 ![Alt text](./img/correct_object.png)
 
-Above, a model highlights which pixels it is focusing on as it predicts the underlined word in the respective captions. 
+Above, a model highlights which pixels it is focusing on as it predicts the underlined word in the respective captions. Below, a language model highlights the words from one language, French, that were relevant as it produced the English words in the translation. 
+
+![Alt text](./img/attention_translation.png)
 
 ## Navigating Complex Spaces
 
 If you tell your self-driving car to park itself "under the elm tree near the yellow house two blocks away where the curb is unmetered", how can the machine understanding the important parts of that complex and ambiguous instruction and map them to the physical world, which is submerged in noise? 
 
 WIP
+
+## Memory Networks
+
+You could say that attention networks are a kind of short-term memory that allocates attention over input features they have recently seen. Memory networks are a little different, but not too. They work with an external memory, and they are useful for, say, mapping questions as input to answers stored in that external memory. 
 
 ### <a name="beginner">Further Reading on Attention Networks</a>
 
