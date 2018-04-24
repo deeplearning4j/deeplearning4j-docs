@@ -25,6 +25,16 @@ An attention mechanism takes into account the input from several time steps, say
 
 ![Alt text](./img/attention_mechanism.png)
 
+Another way to think about it is like this:
+
+![Alt text](./img/attention_model.png)
+
+Let's say you are trying to generate a caption from an image. Each input could be part of an image fed into the attention model. The memory layer would feed in the words already generated, the context for future word predictions. The attention model would help the algorithm decide which parts of the image to focus on as it generated each new word (it would decide on the thickness of the lines), and those assignments of importance would be fed into a final decision layer that would generate a new word. 
+
+![Alt text](./img/correct_object.png)
+
+Above, a model highlights which pixels it is focusing on as it predicts the underlined word in the respective captions. 
+
 ## Navigating Complex Spaces
 
 If you tell your self-driving car to park itself "under the elm tree near the yellow house two blocks away where the curb is unmetered", how can the machine understanding the important parts of that complex and ambiguous instruction and map them to the physical world, which is submerged in noise? 
