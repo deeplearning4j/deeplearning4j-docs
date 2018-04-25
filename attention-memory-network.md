@@ -5,11 +5,11 @@ layout: default
 
 # A Beginner's Guide to Attention and Memory Networks
 
-At any given moment, our minds concentrate on a subset of the total information available to them. (Fwiw, this is also true for artificial neural networks using an attention mechanism.) For example, you are reading these words as a larger world flows around you: maybe you're in a room with traffic coursing outside, maybe you're in a plane and the pilot is making another annoying announcement about turbulent, but your focus is **here**. 
-
-Attention is, in a sense, the mind's capital, the chief resource it can allocate and spend. Algorithms can also allocate attention, and learn how to do it better, by adjusting the weights they assign to various inputs. It is used for speech recognition, machine translation, reasoning, image captioning, summarization, and visual identification of objects.
-
 "Attention" is defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> The word describes the mind's ability to allocate consideration unevenly across a field of sensation, thought and proprioception, to focus and bring certain inputs to the fore, while ignoring or diminishing the importance of others.  This is important, because the field of sensation is wide, and the mind's bandwidth to process information is narrow, and some inputs are indeed more important that others, with regard to any given goal. 
+
+At any given moment, our minds concentrate on a subset of the total information available to them. (As we will show, this is also true for artificial neural networks using an attention mechanism.) For example, you are reading these words as a larger world flows around you: maybe you're in a room with traffic coursing outside, maybe you're in a plane and the pilot is making another annoying announcement about turbulence, but your focus is **HERE**. 
+
+Attention is, in a sense, the mind's capital, the chief resource it can allocate and spend. Algorithms can also allocate attention, and they can learn how to do it better, by adjusting the weights they assign to various inputs. Attention is used for machine translation, speech recognition, reasoning, image captioning, summarization, and the visual identification of objects.
 
 ## Credit Assignment Among Available Features
 
@@ -21,11 +21,13 @@ When we try to predict temporal sequences of things, like words in a sentence or
 
 ![Alt text](./img/recurrent_network.png)
 
-An attention mechanism takes into account the input from several time steps, say, to make one prediction. And just as importantly, it accords different weights, or degrees of importance, to those inputs, reflected below in the lines of different thicknesses and color. 
+RNNs cram everything they know about a sequence of data elements into the final hidden state of the network. An attention mechanism takes into account the input from several time steps, say, to make one prediction. It distributes attention over several hidden states. And just as importantly, it accords different weights, or degrees of importance, to those inputs, reflected below in the lines of different thicknesses and color. 
 
 ![Alt text](./img/attention_mechanism.png)
 
-Another way to think about it is like this:
+The original work on a basic attention mechanism represented a leap forward for machine translation. That advance, like many increases in accuracy, came at the cost of increased computational demands. With attention, you didn't have to fit the meaning of an entire English phrase into a single hidden state that you would translate to French. 
+
+Another way to think about attention models is like this:
 
 ![Alt text](./img/attention_model.png)
 
@@ -33,19 +35,17 @@ Let's say you are trying to generate a caption from an image. Each input could b
 
 ![Alt text](./img/correct_object.png)
 
-Above, a model highlights which pixels it is focusing on as it predicts the underlined word in the respective captions. Below, a language model highlights the words from one language, French, that were relevant as it produced the English words in the translation. 
+Above, a model highlights which pixels it is focusing on as it predicts the underlined word in the respective captions. Below, a language model highlights the words from one language, French, that were relevant as it produced the English words in the translation. As you can see, attention provides us with a route to interpretability. We can render attention as a heat map over input data such as words and pixels, and thus communicate to human operators how a neural network made a decision. (This could be the basis of a feedback mechanism whereby those humans tell the network to pay attention to certain features and not others.) 
 
 ![Alt text](./img/attention_translation.png)
 
-## Navigating Complex Spaces
-
-If you tell your self-driving car to park itself "under the elm tree near the yellow house two blocks away where the curb is unmetered", how can the machine understanding the important parts of that complex and ambiguous instruction and map them to the physical world, which is submerged in noise? 
-
-WIP
-
 ## Memory Networks
 
-You could say that attention networks are a kind of short-term memory that allocates attention over input features they have recently seen. Memory networks are a little different, but not too. They work with an external memory, and they are useful for, say, mapping questions as input to answers stored in that external memory. 
+You could say that attention networks are a kind of short-term memory that allocates attention over input features they have recently seen. Attention mechanisms are components of memory networks. 
+
+Memory networks are a little different, but not too. They work with external data storage, and they are useful for, say, mapping questions as input to answers stored in that external memory. 
+
+That external data storage takes the place of the hidden state in an RNN. The memory acts as an embedding that the attention mechanism can alter, writing to the memory what it learns, and reading from it. While the hidden states of a recurrent neural network are a sequence of embeddings, memory is an accumulation of those embeddings (imagine performing max pooling on all your hidden states -- that would be like memory). 
 
 ### <a name="beginner">Further Reading on Attention Networks</a>
 
