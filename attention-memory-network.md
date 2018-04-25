@@ -1,5 +1,6 @@
 ---
 title: A Beginner's Guide to Attention and Memory Networks
+author: Chris V. Nicholson
 layout: default
 ---
 
