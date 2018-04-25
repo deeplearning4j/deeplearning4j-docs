@@ -1,5 +1,6 @@
 ---
 title: Introduction to Deep Neural Networks (Deep Learning)
+author: Chris V. Nicholson
 layout: default
 ---
 
