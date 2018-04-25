@@ -108,3 +108,7 @@ That external data storage takes the place of the hidden state in an RNN. The me
 * [Open Datasets for Machine Learning](./opendata.html)
 
 <a name="one">1)</a> *"Heed", in turn, is related to the German hüten, "to guard or watch carefully".*
+
+```
+There’s an old Zen story: a student said to Master Ichu, “Please write for me something of great wisdom.” Master Ichu picked up his brush and wrote one word: “Attention.” The student said, “Is that all?” The master wrote, “Attention. Attention.” The student became irritable. “That doesn’t seem profound or subtle to me.” In response, Master Ichu wrote simply, “Attention. Attention. Attention.” In frustration, the student demanded, “What does this word ‘attention’ mean?” Master Ichu replied, “Attention means attention.”
+```
