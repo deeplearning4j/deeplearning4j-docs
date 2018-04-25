@@ -288,6 +288,8 @@ if __name__ == '__main__':
 * [Deep Learning on Apache Spark](./spark.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 
+![Alt text](./img/stained_glass_cycleGAN.jpg)
+
 ## GAN Use Cases
 
 * [Text to Image Generation](https://arxiv.org/abs/1605.05396)
