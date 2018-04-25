@@ -109,19 +109,21 @@ model = Sequential([
 * [Multi-Layer Perceptrons (MLP)](http://users.ics.aalto.fi/ahonkela/dippa/node41.html) 
 * [Hebbian Theory](https://en.wikipedia.org/wiki/Hebbian_theory)
 
-### <a name="beginner">Other Machine Learning Tutorials</a>
+### <a name="beginner">More Machine Learning Tutorials</a>
+
 * [Introduction to Neural Networks](./neuralnet-overview)
 * [Deep Reinforcement Learning](./deepreinforcementlearning)
 * [Symbolic AI and Deep Learning](./symbolicreasoning)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network.html)
 * [Using Graph Data with Deep Learning](./graphdata)
 * [Recurrent Networks and LSTMs](./lstm)
 * [Word2Vec: Neural Embeddings for NLP](./word2vec)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
 * [Eigenvectors, Covariance, PCA and Entropy](./eigenvector)
 * [Neural Networks & Regression](./logistic-regression)
-* [Convolutional Networks (CNNs)](./convolutionalnets)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork)
 * [Open Datasets for Deep Learning](./opendata)
-* [Inference: Machine Learning Model Server](./modelserver)
+* [Inference: Machine Learning Model Server](./machine-learning-server)
 
 ### Classic Neural Network Papers (pre-2012)
 - An analysis of single-layer networks in unsupervised feature learning (2011), A. Coates et al. [[pdf]](http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf)
