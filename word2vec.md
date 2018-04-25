@@ -505,6 +505,7 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Deep Convolutional Networks](./convolutionalnetwork.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
 * [Quickstart Examples for Deeplearning4j](./quickstart.html)
 * [ND4J: A Tensor Library for the JVM](http://nd4j.org)
 * [MNIST for Beginners](./mnist-for-beginners.html)
