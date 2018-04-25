@@ -39,6 +39,8 @@ Above, a model highlights which pixels it is focusing on as it predicts the unde
 
 ![Alt text](./img/attention_translation.png)
 
+In autumn 2017, Google removed the attention mechanism from recurrent networks and showed that it could outperform RNNs alone, with an architecture called [Transformer](https://research.googleblog.com/2017/08/transformer-novel-neural-network.html).
+
 ## Memory Networks
 
 You could say that attention networks are a kind of short-term memory that allocates attention over input features they have recently seen. Attention mechanisms are components of memory networks. 
