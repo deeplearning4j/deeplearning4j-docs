@@ -229,6 +229,7 @@ Here are a few ideas to keep in mind when manually optimizing hyperparameters fo
 * [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
 * [Graph Data and Deep Learning](./graphanalytics.html)
 * [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
 * [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
