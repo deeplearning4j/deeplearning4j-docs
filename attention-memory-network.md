@@ -37,6 +37,8 @@ Let's say you are trying to generate a caption from an image. Each input could b
 
 Above, a model highlights which pixels it is focusing on as it predicts the underlined word in the respective captions. Below, a language model highlights the words from one language, French, that were relevant as it produced the English words in the translation. As you can see, attention provides us with a route to interpretability. We can render attention as a heat map over input data such as words and pixels, and thus communicate to human operators how a neural network made a decision. (This could be the basis of a feedback mechanism whereby those humans tell the network to pay attention to certain features and not others.) 
 
+![Alt text](./img/attention_translation.png)
+
 In autumn 2017, Google removed the attention mechanism from recurrent networks and showed that it could outperform RNNs alone, with an architecture called [Transformer](https://research.googleblog.com/2017/08/transformer-novel-neural-network.html).
 
 ## Memory Networks
