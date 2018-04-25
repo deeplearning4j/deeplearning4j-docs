@@ -273,6 +273,7 @@ if __name__ == '__main__':
 * [Symbolic AI and Deep Learning](./symbolicreasoning.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
 * [Using Graph Data with Deep Learning](./graphanalytics.html)
 * [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
 * [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
