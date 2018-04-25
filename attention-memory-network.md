@@ -49,6 +49,8 @@ Memory networks are a little different, but not too. They work with external dat
 
 That external data storage takes the place of the hidden state in an RNN. The memory acts as an embedding that the attention mechanism can alter, writing to the memory what it learns, and reading from it. While the hidden states of a recurrent neural network are a sequence of embeddings, memory is an accumulation of those embeddings (imagine performing max pooling on all your hidden states -- that would be like memory). 
 
+![Alt text](./img/memory-network.png)
+
 ### <a name="beginner">Further Reading on Attention Networks</a>
 
 * [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
