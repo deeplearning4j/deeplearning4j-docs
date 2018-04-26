@@ -54,4 +54,5 @@ For a Java or Scala implementation, see the [Javadoc for decision trees](http://
 * [Open Datasets for Machine Learning](./opendata)
 * [Inference: Machine Learning Model Server](./machine-learning-modelserver)
 * [Introduction to Decision Tree Learning](https://heartbeat.fritz.ai/introduction-to-decision-tree-learning-cd604f85e236)
+* [Distilling a Neural Network Into a Soft Decision Tree, by Nicholas Frosst & Geoff Hinton (2017)](https://arxiv.org/abs/1711.09784)
 
