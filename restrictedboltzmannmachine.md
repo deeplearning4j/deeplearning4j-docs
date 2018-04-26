@@ -186,9 +186,9 @@ Gaussian transformations do not work well on RBMs' hidden layers. The rectified-
 
 ### <a name="next">Conclusions & Next Steps</a>
 
-You can interpret RBMs' output numbers as percentages. Every time the number in the reconstruction is *not zero*, that's a good indication the RBM learned the input. To get another perspective on the mechanisms that make restricted Boltzmann machines tick, click [here](./understandingRBMs.html).
+You can interpret RBMs' output numbers as percentages. Every time the number in the reconstruction is *not zero*, that's a good indication the RBM learned the input. 
 
-It should be noted that RBMs do not produce the most stable, consistent results of all shallow, feedforward networks. In many situations, a dense-layer [autoencoder](http://deeplearning4j.org/glossary.html#autoencoder) works better. Indeed, the industry is moving toward tools such as variational autoencoders.
+It should be noted that RBMs do not produce the most stable, consistent results of all shallow, feedforward networks. In many situations, a dense-layer [autoencoder](http://deeplearning4j.org/glossary.html#autoencoder) works better. Indeed, the industry is moving toward tools such as [variational autoencoders and GANs](./generative-adversarial-network.html).
 
 Next, we'll show you how to implement a [deep-belief network](./deepbeliefnetwork.html), which is simply many restricted Boltzmann machines stacked on top of one another.
 
@@ -198,20 +198,30 @@ Next, we'll show you how to implement a [deep-belief network](./deepbeliefnetwor
 * [Deeplearning.net's Restricted Boltzmann Machine Tutorial](http://deeplearning.net/tutorial/rbm.html)
 * [A Practical Guide to Training Restricted Boltzmann Machines](https://www.cs.toronto.edu/~hinton/absps/guideTR.pdf); Geoff Hinton
 
-### Other Deep Learning Beginner's Guides
+### <a name="beginner">More Machine Learning Tutorials</a>
 
-* [Recurrent Networks and LSTMs](./lstm.html)
 * [Introduction to Neural Networks](./neuralnet-overview.html)
-* [Eigenvectors, PCA and Entropy](./eigenvector.html)
+* [Recurrent Networks and LSTMs](./lstm.html)
+* [Deep Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
 * [Neural Networks & Regression](./logistic-regression.html)
-* [Convolutional Neural Networks](./convolutionalnetwork.html)
-* [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 * [Deeplearning4j Quickstart Examples](./quickstart.html)
 * [ND4J: A Tensor Library for the JVM](http://nd4j.org)
 * [Deep Learning Tutorial: MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
-* [Word2vec and Natural-Language Processing](./word2vec.html)
-* [Deep Reinforcement Learning](./deepreinforcementlearning.html)
 * [DL4J Programming Guide](https://deeplearning4j.org/programmingguide/01_intro)
-* [Inference: Machine Learning Model Server](./machine-learning-server.html)
-* [Distributed Deep Learning on Apache Spark](./spark.html)
