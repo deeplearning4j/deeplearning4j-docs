@@ -18,11 +18,11 @@ Contents
 
 ## <a name="define">Definition & Structure</a>
 
-Invented by Geoff Hinton, a Restricted Boltzmann machine is an algorithm useful for dimensionality reduction, classification, [regression](./linear-regression.html), collaborative filtering, feature learning and topic modeling. (For more concrete examples of how [neural networks](./neuralnet-overview.html) like RBMs can be employed, please see our page on [use cases](./use_cases.html)).
+Invented by Geoff Hinton, a Restricted Boltzmann machine is an algorithm useful for dimensionality reduction, classification, [regression](./logistic-regression.html), collaborative filtering, feature learning and topic modeling. (For more concrete examples of how [neural networks](./neuralnet-overview.html) like RBMs can be employed, please see our page on [use cases](./use_cases.html)).
 
 Given their relative simplicity and historical importance, restricted Boltzmann machines are the first neural network we'll tackle. In the paragraphs below, we describe in diagrams and plain language how they work.
 
-RBMs are shallow, two-layer neural nets that constitute the building blocks of *deep-belief networks*. The first layer of the RBM is called the visible, or input, layer, and the second is the hidden layer.
+RBMs are shallow, two-layer neural nets that constitute the building blocks of *deep-belief networks*. The first layer of the RBM is called the visible, or input, layer, and the second is the hidden layer. (*Editor's note: While RBMs are occasionally used, most practitioners in the machine-learning community have deprecated them in favor of [generative adversarial networks or variational autoencoders](./generative-adversarial-network.html).*)
 
 ![Alt text](./img/two_layer_RBM.png)
 
@@ -204,11 +204,11 @@ Next, we'll show you how to implement a [deep-belief network](./deepbeliefnetwor
 * [Introduction to Neural Networks](./neuralnet-overview.html)
 * [Eigenvectors, PCA and Entropy](./eigenvector.html)
 * [Neural Networks & Regression](./logistic-regression.html)
-* [Convolutional Neural Networks](./convolutionalnets.html)
+* [Convolutional Neural Networks](./convolutionalnetwork.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
 * [Deeplearning4j Quickstart Examples](./quickstart.html)
 * [ND4J: A Tensor Library for the JVM](http://nd4j.org)
-* [MNIST for Beginners](./mnist-for-beginners.html)
+* [Deep Learning Tutorial: MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
