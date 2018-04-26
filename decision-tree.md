@@ -53,3 +53,5 @@ For a Java or Scala implementation, see the [Javadoc for decision trees](http://
 * [Neural Networks & Regression](./logistic-regression)
 * [Open Datasets for Machine Learning](./opendata)
 * [Inference: Machine Learning Model Server](./machine-learning-modelserver)
+* [Introduction to Decision Tree Learning](https://heartbeat.fritz.ai/introduction-to-decision-tree-learning-cd604f85e236)
+
