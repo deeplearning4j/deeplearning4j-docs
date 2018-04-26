@@ -32,9 +32,11 @@ Decision trees are a popular algorithm for several reasons:
 
 **Disadvantages**
 
-* Overfitting: Over fitting is a common flaw of decision trees. Setting constraints on model parameters and making the model simpler through pruning are two ways to regularize a decision tree.
+* Overfitting: Over fitting is a common flaw of decision trees. Setting constraints on model parameters (depth limitation) and making the model simpler through pruning are two ways to regularize a decision tree and improve its ability to generalize onto the test set.
 * Predicting continuous variables: While decision trees can ingest continuous numerical input, they are not a practical way to predict such values, since decision-tree predictions must be separated into discrete categories, which results in a loss of information when applying the model to continuous values.
 * Heavy feature engineering: The flip side of a decision tree's explanatory power is that it requires heavy feature engineering. When dealing with unstructured data or data with latent factors, this makes decision trees sub-optimal. Neural networks are clearly superior in this regard. 
+
+One weird thing about decision trees (or random forests) is how conceptually simple they are, while in terms of implementation they're non-trivial. How do you find the optimal split/feature based on entropy? Naively implemented, they require something on the order of O(kNlogN) for each split. Multiply that by the number of leaves (2^depth), and multiply that by the number of trees in your forest.
 
 For a Java or Scala implementation, see the [Javadoc for decision trees](http://haifengl.github.io/smile/api/java/smile/classification/DecisionTree.html) from the [SMILE project](http://haifengl.github.io/smile/). 
 
