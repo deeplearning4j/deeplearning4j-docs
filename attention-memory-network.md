@@ -4,7 +4,7 @@ author: Chris V. Nicholson
 layout: default
 ---
 
-# A Beginner's Guide to Attention and Memory Networks
+# A Beginner's Guide to Attention Mechanisms and Memory Networks
 
 "Attention" is defined as the "active direction of the mind to an object", or more literarily as "giving heed".<sup>[1](#one)</sup> The word describes the mind's ability to allocate consideration unevenly across a field of sensation, thought and proprioception, to focus and bring certain inputs to the fore, while ignoring or diminishing the importance of others. 
 
