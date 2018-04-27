@@ -18,7 +18,7 @@ layout: default
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "How to Use Deeplearning4J in Android Apps",
+    "headline": "How to Deploy Deep Learning and Neural Networks on Android",
     "datePublished": "2017-01-14T00:00:00+05:30",
     "description": "DeepLearning4J (DL4J) is a popular machine learning library that runs on the JVM. In this tutorial, I’ll show you how to use it to create and train neural networks in an Android app.",
     "url": "http://progur.com/2017/01/how-to-use-deeplearning4j-on-android.html"
@@ -32,7 +32,7 @@ layout: default
         <div class="col-md-12">
             <div>
                 <div>
-                    <h1 class="post-title">How to Use Deeplearning4J in Android Apps</h1>
+                    <h1 class="post-title">How to Deploy Deep Learning and Neural Networks on Android</h1>
                     <div class="post-meta">Written by Ashraff Hathibelagal &bull; 14 January 2017</div><br>
                     <div class="post-actual-content">
                         <p>Generally speaking, training a neural network is a task best suited for powerful computers with multiple GPUs. But what if you want to do it on your humble Android phone or tablet? Well, it’s definitely possible. Considering an average Android device’s specifications, however, it will most likely be quite slow. If that’s not a problem for you, keep reading.</p>
