@@ -18,7 +18,9 @@ Here you'll find an organized list of interesting, high-quality datasets for mac
 * [Data Portals](http://dataportals.org/)
 * [Open Data Monitor](https://opendatamonitor.eu/)
 * [Quandl Data Portal](https://www.quandl.com/)
-* [Mut1ny Face/Head segmentation dataset] (http://www.mut1ny.com/face-headsegmentation-dataset)
+* [Mut1ny Face/Head segmentation dataset](http://www.mut1ny.com/face-headsegmentation-dataset)
+* [Awesome Public Datasets on Github](https://www.kdnuggets.com/2015/04/awesome-public-datasets-github.html)
+* [Head CT scan dataset: CQ500 dataset of 491 scans](http://headctstudy.qure.ai/)
 
 
 <p align="center">
