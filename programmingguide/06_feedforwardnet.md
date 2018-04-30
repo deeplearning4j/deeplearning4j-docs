@@ -50,7 +50,6 @@ Now that the data is ready, we can set up the configuration of the neural networ
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .seed(seed)
-    .iterations(1)
     .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
     .learningRate(learningRate)
     .updater(Updater.NESTEROVS)

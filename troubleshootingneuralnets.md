@@ -47,9 +47,7 @@ You need to make sure your weights are neither too big nor too small. Xavier wei
 
 ## <a name="epochs">Number of Epochs and Number of Iterations</a>
 
-An epoch is defined as a full pass of the data set. An iteration in DL4J is defined as the number of parameter updates in a row, for each minibatch.
-
-Generally, you want to use multiple epochs and one iteration (.iterations(1) option) when training; multiple iterations are generally only used when doing full-batch training on very small data sets.
+An epoch is defined as a full pass of the data set.
 
 Too few epochs don't give your network enough time to learn good parameters; too many and you might overfit the training data. One way to choose the number of epochs is to use early stopping. [Early stopping](http://deeplearning4j.org/earlystopping) can also help to prevent the neural network from overfitting (i.e., can help the net generalize better to unseen data).
 

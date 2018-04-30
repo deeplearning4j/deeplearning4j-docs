@@ -16,7 +16,7 @@ How to start constructing the class in Java for a multilayer network:
 
 Append parameters onto this class by linking them up as follows:
 
-    new NeuralNetConfiguration.Builder().iterations(100).layer(new RBM())
+    new NeuralNetConfiguration.Builder().layer(new RBM())
         .nIn(784).nOut(10).list(4).hiddenLayerSizes(new int[]{500, 250, 200})
         .override(new ClassifierOverride(3))
         .build();

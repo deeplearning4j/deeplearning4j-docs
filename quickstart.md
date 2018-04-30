@@ -27,7 +27,6 @@ Hyperparameters are variables that determine how a neural network learns. They i
 
 ``` java
     MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-        .iterations(1)
         .weightInit(WeightInit.XAVIER)
         .activation("relu")
         .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)

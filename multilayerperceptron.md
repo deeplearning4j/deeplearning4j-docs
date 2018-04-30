@@ -63,7 +63,6 @@ Eclipse Deeplearning4j includes [several examples of multilayer perceptrons](htt
 ```
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
-                .iterations(1)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .learningRate(learningRate)
                 .updater(Updater.NESTEROVS)     //To configure: .updater(new Nesterovs(0.9))

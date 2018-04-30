@@ -22,7 +22,6 @@ By the same token, deep-belief networks are created as a `MultiLayerNetwork` tha
            .seed(seed)
            .gradientNormalization(GradientNormalization.ClipElementWiseAbsoluteValue)
            .gradientNormalizationThreshold(1.0)
-           .iterations(iterations)
            .momentum(0.5)
            .momentumAfter(Collections.singletonMap(3, 0.9))
            .optimizationAlgo(OptimizationAlgorithm.CONJUGATE_GRADIENT)

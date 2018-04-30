@@ -91,12 +91,6 @@ once. A single pass over the entire dataset is called an *epoch*. DL4J has sever
 
 The simplest way, is to reset your `DataSetIterator` and loop over the fit call as many times as you want. This way you can train your model for as many epochs as you think is a good fit.
 
-Another one of them is the `.iterations(N)` configuration parameter. It decides
-how often the network should iterate (i.e. train) over a a single mini-batch in
-a row. So, if you had 3 mini-batches A, B and C, setting `.iterations(3)` would
-result in your network learning with the data as `AAABBBCCC`, in contrast using
-3 epochs with `.iterations(1)` would feed the data to the network as `ABCABCABC`.
-
 Yet another way would be to use an [EarlyStoppingTrainer](http://deeplearning4j.org/doc/org/deeplearning4j/earlystopping/trainer/EarlyStoppingTrainer.html). 
 You can configure this trainer to run for as many epochs as you like and
 additionally for as long as you like. It will evaluate the performance of your

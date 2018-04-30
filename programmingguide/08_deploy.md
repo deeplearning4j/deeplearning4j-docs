@@ -129,7 +129,6 @@ Setting up neural network configuration for a regression is similar to before. W
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .seed(seed)
-    .iterations(iterations)
     .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
     .learningRate(learningRate)
     .weightInit(WeightInit.XAVIER)
