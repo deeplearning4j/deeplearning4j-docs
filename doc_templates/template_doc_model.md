@@ -41,7 +41,7 @@ double decayRate = 2;
 NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
 .learningRate(lr)
 .learningRateDecayPolicy(LearningRatePolicy.Exponential)
-.lrPolicyDecayRate(decayRate).iterations(iterations)
+.lrPolicyDecayRate(decayRate)
 .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
 .updater(org.deeplearning4j.nn.conf.Updater.SGD).build())
 .build();
@@ -56,7 +56,7 @@ double decayRate = 2;
 double power = 3;
 NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
 .learningRateDecayPolicy(LearningRatePolicy.Inverse)
-.lrPolicyDecayRate(decayRate).lrPolicyPower(power).iterations(iterations)
+.lrPolicyDecayRate(decayRate).lrPolicyPower(power)
 .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
 .updater(org.deeplearning4j.nn.conf.Updater.SGD).build())
 .build();
@@ -68,7 +68,6 @@ NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(
 ```
 NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
 .learningRateDecayPolicy(LearningRatePolicy.Poly).lrPolicyPower(power)
-.iterations(iterations)
 .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)    
 .updater(org.deeplearning4j.nn.conf.Updater.SGD).build())                                      
 .build();
@@ -80,7 +79,7 @@ NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(
 ```
 NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
 .learningRateDecayPolicy(LearningRatePolicy.Sigmoid)
-.lrPolicyDecayRate(decayRate).lrPolicySteps(steps).iterations(iterations)
+.lrPolicyDecayRate(decayRate).lrPolicySteps(steps)
 .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
 .updater(org.deeplearning4j.nn.conf.Updater.SGD).build())                                
 .build();
@@ -95,7 +94,7 @@ double decayRate = 2;
 double steps = 3;
 NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
 .learningRateDecayPolicy(LearningRatePolicy.Step).lrPolicyDecayRate(decayRate)
-.lrPolicySteps(steps).iterations(iterations)
+.lrPolicySteps(steps)
 .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
 .updater(org.deeplearning4j.nn.conf.Updater.SGD).build())
 .build();
@@ -105,7 +104,7 @@ NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(
 
 Allows you to specify a schedule [[explain]].
 ```
-MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder().optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT).iterations(1)
+MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder().optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
 .learningRateDecayPolicy(LearningRatePolicy.Schedule)                            
 .learningRateSchedule(learningRateSchedule)
 ```

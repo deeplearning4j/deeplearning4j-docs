@@ -189,7 +189,6 @@ The next step is to build the neural network using *nccBuilder*. The parameters 
         NeuralNetConfiguration.Builder nncBuilder = new NeuralNetConfiguration.Builder();
         long seed = 6;
         nncBuilder.seed(seed);
-        nncBuilder.iterations(1000);
         nncBuilder.learningRate(0.1);
         nncBuilder.activation(Activation.TANH);
         nncBuilder.weightInit(WeightInit.XAVIER);

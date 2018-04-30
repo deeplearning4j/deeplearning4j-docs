@@ -26,7 +26,7 @@ Here's a full working example of [classification with paragraph vectors](https:/
         TokenizerFactory t = new UimaTokenizerFactory();
 
         ParagraphVectors vec = new ParagraphVectors.Builder()
-                .minWordFrequency(1).iterations(5).labels(Arrays.asList("negative", "neutral","positive"))
+                .minWordFrequency(1).labels(Arrays.asList("negative", "neutral","positive"))
                 .layerSize(100)
                 .stopWords(new ArrayList<String>())
                 .windowSize(5).iterate(iter).tokenizerFactory(t).build();

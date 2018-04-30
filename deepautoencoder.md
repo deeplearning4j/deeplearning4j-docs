@@ -115,8 +115,7 @@ public class DeepAutoEncoderExample {
         int seed = 123;
         int numSamples = MnistDataFetcher.NUM_EXAMPLES;
         int batchSize = 1000;
-        int iterations = 1;
-        int listenerFreq = iterations/5;
+        int listenerFreq = 10;
 
         log.info("Load data....");
         DataSetIterator iter = new MnistDataSetIterator(batchSize,numSamples,true);
@@ -124,7 +123,6 @@ public class DeepAutoEncoderExample {
         log.info("Build model....");
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
-                .iterations(iterations)
                 .optimizationAlgo(OptimizationAlgorithm.LINE_GRADIENT_DESCENT)
                 .list()
                 .layer(0, new RBM.Builder().nIn(numRows * numColumns).nOut(1000).lossFunction(LossFunctions.LossFunction.KL_DIVERGENCE).build())

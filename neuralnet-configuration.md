@@ -14,7 +14,7 @@ How to start constructing the class in Java for single layer:
 
 Append parameters onto this class by linking them up as follows:
 
-	new NeuralNetConfiguration.Builder().iterations(100).layer(new RBM()).nIn(784).nOut(10)
+	new NeuralNetConfiguration.Builder().layer(new RBM()).nIn(784).nOut(10)
 
 Parameters:
 
@@ -74,7 +74,6 @@ Parameters:
 	- ex: .inputPreProcessor(0,new ConvolutionInputPreProcessor(numRows,numColumns))
 	- transform 2d to 4d tensor
 	- rows = batch & columns = number of data points passed in
-- **iterations**: *int*, num training iteractions
 - **k**: *int*, number steps of a Markov chain to compute a guess as part of the contrastive divergence in RBM layerwise pre-training
 	- default = 1
 - **kernel**: *int[]* size of kernel (used in convolutions)
