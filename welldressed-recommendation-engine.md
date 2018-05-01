@@ -88,7 +88,7 @@ Here's the current setup for store-oriented nets:
     MultiLayerConfiguration.Builder builder = new NeuralNetConfiguration.Builder()
                 .seed(seed)
                 .batchSize(batchSize)
-                .learningRate(1e-6)
+                .updater(new Sgd(1e-6))
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .l1(1e-6)
                 .regularization(true)

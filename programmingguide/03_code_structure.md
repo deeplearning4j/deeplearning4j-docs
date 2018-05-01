@@ -153,7 +153,7 @@ The `MultiLayerConfiguration` can be used to define the parameter and structure 
     MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
         .activation("relu")
         .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-        .learningRate(0.05)
+        .updater(new Sgd(0.05))
         // ... other hyperparameters
         .list()
         .backprop(true)
@@ -189,11 +189,11 @@ To create a `ComputationGraphConfiguration` use the following line:
 
         ComputationGraphConfiguration config = new NeuralNetConfiguration.Builder()
 
-Note that the code is slightly different for configuring a `ComputationGraph` rather than a `MultiLayerNetwork`. However, similar to before, `ComputationGraphConfiguration` can be used the define neural network parameters such as the learning rate, optimization algorithm, and network structure. For example, the following code chunk configures a `ComputationGraph` using stochastic gradient descent and a learning rate of 0.1. It also defines the network structure to include one hidden layer with 500 nodes and an output layer which outputs a probability. 
+Note that the code is slightly different for configuring a `ComputationGraph` rather than a `MultiLayerNetwork`. However, similar to before, `ComputationGraphConfiguration` can be used the define neural network parameters such as the learning rate, optimization algorithm, and network structure. For example, the following code chunk configures a `ComputationGraph` using stochastic gradient descent and a learning rate of 0.1 set via the updater which is chosen as SGD. It also defines the network structure to include one hidden layer with 500 nodes and an output layer which outputs a probability. 
 
     ComputationGraphConfiguration config = new NeuralNetConfiguration.Builder()
 	   .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-	   .learningRate(0.1)
+	   .updater(new Sgd(0.1))
 	   // other parameters
 	   .graphBuilder()
 	   .setInputTypes(InputType.feedForward(100))

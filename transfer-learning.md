@@ -40,9 +40,8 @@ ComputationGraph pretrainedNet = (ComputationGraph) zooModel.initPretrained(Pret
 #### II.  Set up a fine-tune configuration
 ```
 FineTuneConfiguration fineTuneConf = new FineTuneConfiguration.Builder()
-            .learningRate(5e-5)
             .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-            .updater(Updater.NESTEROVS)
+            .updater(new Nesterovs(5e-5))
             .seed(seed)
             .build();
 ```

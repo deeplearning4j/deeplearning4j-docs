@@ -171,10 +171,9 @@ With data processed and ready to go, you can now turn to building the actual mod
 
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(randomSeed)
-                .learningRate(.1)
+				.updater(new AdaGrad(0.1))
                 .weightInit(WeightInit.XAVIER)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.ADAGRAD)
                 .list()
                 .layer(0, new ConvolutionLayer.Builder(3, 3)
                         .nIn(featurePlanes).stride(1, 1).nOut(50).activation(Activation.RELU).build())
