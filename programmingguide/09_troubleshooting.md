@@ -47,7 +47,7 @@ Below is an example of a neural network configuration using the Xavier weight in
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-    .learningRate(learningRate)
+    .updater(new Sgd(learningRate))
     .list()
     .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes)
         .weightInit(WeightInit.XAVIER)
@@ -140,7 +140,7 @@ Next, we define a `MultiLayerSpace` instance, which is similar to a `MultiLayerN
  MultiLayerSpace hyperparameterSpace = new MultiLayerSpace.Builder()
    .weightInit(WeightInit.XAVIER)
     //Learning rate hyperparameter: search over different values, applied to all models
-    .learningRate(learningRateHyperparam)
+	.updater(new SgdSpace(learningRateHyperparam))
     .addLayer( new DenseLayerSpace.Builder()
         .nIn(784)  
         .activation(Activation.LEAKYRELU)

@@ -30,7 +30,7 @@ Hyperparameters are variables that determine how a neural network learns. They i
         .weightInit(WeightInit.XAVIER)
         .activation("relu")
         .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-        .learningRate(0.05)
+        .updater(new Sgd(0.05))
         // ... other hyperparameters
         .list()
         .backprop(true)

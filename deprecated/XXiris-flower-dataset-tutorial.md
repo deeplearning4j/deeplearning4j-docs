@@ -125,7 +125,7 @@ public class DBNIrisExample {
      log.info("Build model....");		
      MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()		
              .seed(seed) // Locks in weight initialization for tuning		
-             .learningRate(1e-6f) // Optimization step size		
+             .updater(new Sgd(1e-6f)) // Optimization step size		
              .optimizationAlgo(OptimizationAlgorithm.CONJUGATE_GRADIENT) // Backprop to calculate gradients		
              .l1(1e-1).regularization(true).l2(2e-4)		
              .useDropConnect(true)		
@@ -216,10 +216,10 @@ A *NeuralNetConfiguration* object is the fundamental object used to construct La
 ^ This line uses a specific, randomly generated weight initialization. If you run an example many times, and generate new, random weights each time, then your net's F1 score may vary a great deal, because different initial weights can lead algorithms to different local minima of the errorscape. Keeping the weights the same allows you see the effect of adjusting other hyperparameters more clearly. `seed` is a variable specified before we congifure the model. 
 
 ``` java
-.learningRate(1e-6f)
+.updater(new Sgd(1e-6f))
 ```
 
-^ This line sets the learning rate, which is the size of the adjustments made to the weights with each iteration. A high learning rate makes a net traverse the errorscape quickly, but makes it prone to overshoot the minima. A low learning rate is more likely to find the minimum, but it will do so very slowly.
+^ This line sets the learning rate and specifies an updater to use. The learning rate is the size of the adjustments made to the weights with each iteration. A high learning rate makes a net traverse the errorscape quickly, but makes it prone to overshoot the minima. A low learning rate is more likely to find the minimum, but it will do so very slowly.
 
 ``` java
 .optimizationAlgo(OptimizationAlgorithm.LBFGS) 
@@ -228,7 +228,7 @@ A *NeuralNetConfiguration* object is the fundamental object used to construct La
 ^ This line specifies your optimization algorithm as Limited-memory BFGS, a backpropagation method that helps calculate gradients. 
 
 ``` java
-.l2(2e-4).regularization(true).momentum(0.9).constrainGradientToUnitNorm(true)
+.l2(2e-4).regularization(true).updater(new Nesterovs(0.001,0.9)).constrainGradientToUnitNorm(true)
 ```
 
 ^ This line sets several parameters: 

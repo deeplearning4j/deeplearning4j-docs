@@ -68,8 +68,7 @@ DL4J gives data scientists and developers tools to build a deep neural networks 
 MultiLayerConfiguration conf = 
 	new NeuralNetConfiguration.Builder()
 		.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-		.updater(Updater.NESTEROVS).momentum(0.9)
-		.learningRate(learningRate)
+		.updater(new Nesterovs(learningRate, 0.9))
 		.list(
 			new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes).activation("relu").build(),
 			new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD).activation("softmax").nIn(numHiddenNodes).nOut(numOutputs).build()

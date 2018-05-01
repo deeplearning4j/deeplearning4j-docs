@@ -119,13 +119,13 @@ With DL4J, creating a neural network of any kind involves several steps.
 First, we need to create a configuration object:
 
     NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
-    .hiddenUnit(RBM.HiddenUnit.RECTIFIED).momentum(5e-1f)
+    .hiddenUnit(RBM.HiddenUnit.RECTIFIED)
         .visibleUnit(RBM.VisibleUnit.GAUSSIAN).regularization(true)
         .regularizationCoefficient(2e-4f).dist(Distributions.uniform(gen))
         .activationFunction(Activations.tanh())
         .weightInit(WeightInit.DISTRIBUTION)
     .lossFunction(LossFunctions.LossFunction.RECONSTRUCTION_CROSSENTROPY).rng(gen)
-        .learningRate(1e-3f).nIn(4).nOut(3).build();
+        .updater(new Nesterovs(1e-3f,0.5)).nIn(4).nOut(3).build();
 
 This has everything that our DBN classifier will need. As you can see, there are a lot of parameters, or ‘knobs’, that you will learn to adjust over time to improve your nets’ performance. These are the pedals, clutch and steering wheel attached to DL4J's deep-learning engine. 
 
