@@ -2,6 +2,7 @@
 title: A Beginner's Guide to Attention and Memory Networks
 author: Chris V. Nicholson
 layout: default
+redirect: /attention-memory-network.html
 ---
 
 # A Beginner's Guide to Attention Mechanisms and Memory Networks
