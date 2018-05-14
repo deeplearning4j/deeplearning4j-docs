@@ -65,7 +65,7 @@ If you don't have Java 1.7 or later, download the current [Java Development Kit 
 java -version
 ```
 
-Please make sure you have a 64-Bit version of java installed, as you will see an error telling you `no jnind4j in java.library.path` if you decide to try to use a 32-Bit version instead.
+Please make sure you have a 64-Bit version of java installed, as you will see an error telling you `no jnind4j in java.library.path` if you decide to try to use a 32-Bit version instead. Make sure the JAVA_HOME environment variable is set.
 
 #### <a name="Maven">Apache Maven</a>
 
