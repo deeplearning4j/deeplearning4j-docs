@@ -53,14 +53,64 @@ layout: default
 
 <p>To be able to use Deeplearning4J in your project, add the following <code class="highlighter-rouge">compile</code> dependencies to your app module’s <strong>build.gradle</strong> file:</p>
 
-<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy">
-<span class="n">compile</span> <span class="s1">'org.deeplearning4j:deeplearning4j-nn:0.9.1'</span>
-<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.9.1'</span>
-<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.9.1:android-x86'</span>
-<span class="n">compile</span> <span class="s1">'org.nd4j:nd4j-native:0.9.1:android-arm'</span>
-<span class="n">compile</span> <span class="s1">'org.bytedeco:javacpp:1.4'</span>
-<span class="n">compile</span> <span class="s1">'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'</span>
-<span class="n">compile</span> <span class="s1">'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'</span>
+``` groovy
+
+compile (group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: '1.0.0-SNAPSHOT') {
+    exclude group: 'org.bytedeco.javacpp-presets', module: 'opencv-platform'
+    exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
+    exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
+}
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT'
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-arm"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-arm64"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-x86"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-x86_64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-x86"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-x86_64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-arm"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-arm64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86_64"
+
+```
+In order to use version 1.0.0-SNAPSHOT with gradle, you will need to create the following pom.xml file in the root directory and run mvn compile on it from the terminal. Be sure to include repositories { mavenLocal() } in the build.gradle file.
+
+``` xml
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.deeplearning4j</groupId>
+    <artifactId>snapshots</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <dependencies>
+       <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>nd4j-native-platform</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+</project>
+
+```
 
 </code></pre></figure>
 
