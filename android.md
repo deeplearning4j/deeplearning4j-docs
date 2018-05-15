@@ -252,7 +252,7 @@ trainingOutputs.putScalar(new int[]{3, 0}, 0);
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DataSet</span> <span class="n">myData</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataSet</span><span class="o">(</span><span class="n">trainingInputs</span><span class="o">,</span> <span class="n">trainingOutputs</span><span class="o">);</span></code></pre></figure>
 
-At this point, we can start the training by calling the fit() method of the neural network and passing the data set to it. The for loop controls the iterations of the data set through the network. It is set to 1000 iterations in this example.
+At this point, we can start the training by calling the ``` fit() ``` method of the neural network and passing the data set to it. The ``` for ``` loop controls the iterations of the data set through the network. It is set to 1000 iterations in this example.
 
 ``` java
 for(int l=0; l<=1000; l++) {
