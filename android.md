@@ -272,6 +272,7 @@ for(int l=0; l<=1000; l++) {
 
 <p>This was originally posted at <a href="http://progur.com/2017/01/how-to-use-deeplearning4j-on-android.html" target="_blank" rel="nofollow">Progur</a> by Ashraff Hathibelagal.
 
+Updated by Jason Merwin May 14 2018
                 
 
 <footer class="footer">
