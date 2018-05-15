@@ -75,7 +75,7 @@ compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1
 compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86_64"
 
 ```
-In order to use version 1.0.0-SNAPSHOT with gradle, you will need to create the following pom.xml file in the root directory and run mvn compile on it from the terminal. Be sure to include repositories { mavenLocal() } in the build.gradle file.
+In order to use version 1.0.0-SNAPSHOT with gradle, you will need to create the following pom.xml file in the root directory and run mvn compile on it from the terminal. You will also need to include ``` mavenLocal() ``` in the ```  repository {} ``` block of the build.gradle file.
 
 ``` xml
 <project>
@@ -118,20 +118,6 @@ In order to use version 1.0.0-SNAPSHOT with gradle, you will need to create the 
 If you are using it, add following code to gradle dependencies:
 
 <figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"<span class="n">annotationProcessor</span> <span class="s1">'org.projectlombok:lombok:1.16.16'</span></code></pre></figure>
-
-<p>If you have errors like
-<code class="language-groovy"><span class="n">Error:Error converting bytecode to dex:
-Cause: com.android.dex.DexException: Multiple dex files define Ledu/umd/cs/findbugs/annotations/Nullable;</span></code>
-
-Add the following dependency:
-<figure class="highlight"><pre><code class="language-groovy"><span class="n">compile</span> <span class="s1">'com.google.code.findbugs:annotations:3.0.1', { </span>
-  <span class="n">exclude module:</span> <span class="s1">'jsr305'</span>
-  <span class="n">exclude module:</span> <span class="s1">'jcip-annotations'</span>
-}
-</span></code></pre></figure>
-
-<p>If you want to include snapshot version of DL4J/ND4J you should write dependencies like below:
-<figure class="highlight"><pre><code class="language-groovy"><span class="n">compile group: 'org.nd4j', name: 'nd4j-native', version: '0.8.1-SNAPSHOT-android-arm'</span></code></pre></figure> as classifier doesn't work</p>
   
 <p>As you can see, DL4J depends on ND4J, short for N-Dimensions for Java, which is a library that offers fast n-dimensional arrays. ND4J internally depends on a library called OpenBLAS, which contains platform-specific native code. Therefore, you must load a version of OpenBLAS and ND4J that matches the architecture of your Android device. Because I own an x86 device, I’m using <code class="highlighter-rouge">android-x86</code> as the platform.</p>
 
@@ -149,17 +135,7 @@ Add the following dependency:
     <span class="n">exclude</span> <span class="s1">'META-INF/INDEX.LIST'</span>
 <span class="o">}</span></code></pre></figure>
 
-<p>It is highly possible that you will have errors like:
-<code>Error:Execution failed for task ':app:transformResourcesWithMergeJavaResForDebug'.
-> More than one file was found with OS independent path 'org/bytedeco/javacpp/windows-x86/msvcp120.dll'</code>
-We should exclude them too. In my case:
-<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="n">exclude</span> <span class="s1">'org/bytedeco/javacpp/windows-x86/msvcp120.dll'</span>
-<span class="n">exclude</span> <span class="s1">'org/bytedeco/javacpp/windows-x86_64/msvcp120.dll'</span>
-<span class="n">exclude</span> <span class="s1">'org/bytedeco/javacpp/windows-x86/msvcr120.dll'</span>
-<span class="n">exclude</span> <span class="s1">'org/bytedeco/javacpp/windows-x86_64/msvcr120.dll'</span>
-</code></pre></figure>
-
-<p>Furthermore, your compiled code will have well over 65,536 methods. To be able to handle this condition, add the following option in the <code class="highlighter-rouge">defaultConfig</code>:</p>
+<p>Your compiled code will have well over 65,536 methods. To be able to handle this condition, add the following option in the <code class="highlighter-rouge">defaultConfig</code>:</p>
 
 <figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="n">multiDexEnabled</span> <span class="kc">true</span></code></pre></figure>
 
@@ -186,31 +162,30 @@ We should exclude them too. In my case:
 
 <p>DL4J has a very intuitive API. Let us now use it to create a simple multi-layer perceptron with hidden layers. It will take two input values, and spit out one output value. To create the layers, we’ll use the <code class="highlighter-rouge">DenseLayer</code> and <code class="highlighter-rouge">OutputLayer</code> classes. Accordingly, add the following code to the <code class="highlighter-rouge">createAndUseNetwork()</code> method you created in the previous step:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DenseLayer</span> <span class="n">inputLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DenseLayer</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
-        <span class="o">.</span><span class="na">nIn</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">nOut</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"Input"</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-
-<span class="n">DenseLayer</span> <span class="n">hiddenLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DenseLayer</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
-        <span class="o">.</span><span class="na">nIn</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">nOut</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"Hidden"</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-
-<span class="n">OutputLayer</span> <span class="n">outputLayer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OutputLayer</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
-        <span class="o">.</span><span class="na">nIn</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">nOut</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">"Output"</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">build</span><span class="o">();</span></code></pre></figure>
+``` java
+DenseLayer inputLayer = new DenseLayer.Builder()
+        .nIn(2)
+        .nOut(3)
+        .name("Input")
+        .build();
+DenseLayer hiddenLayer = new DenseLayer.Builder()
+        .nIn(3)
+        .nOut(2)
+        .name("Hidden")
+        .build();
+OutputLayer outputLayer = new OutputLayer.Builder()
+        .nIn(2)
+        .nOut(1)
+        .name("Output")
+        .build();
+```
 
 <p>Now that our layers are ready, let’s create a <code class="highlighter-rouge">NeuralNetConfiguration.Builder</code> object to configure our neural network.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">NeuralNetConfiguration</span><span class="o">.</span><span class="na">Builder</span> <span class="n">nncBuilder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">NeuralNetConfiguration</span><span class="o">.</span><span class="na">Builder</span><span class="o">();</span>
-<span class="n">nncBuilder</span><span class="o">.</span><span class="na">iterations</span><span class="o">(</span><span class="mi">10000</span><span class="o">);</span>
-<span class="n">nncBuilder</span><span class="o">.</span><span class="na">learningRate</span><span class="o">(</span><span class="mf">0.01</span><span class="o">);</span></code></pre></figure>
-
-<p>In the above code, I’ve set the values of two important parameters: learning rate and number of iterations. Feel free to change those values.</p>
+``` java
+NeuralNetConfiguration.Builder nncBuilder = new NeuralNetConfiguration.Builder();
+nncBuilder.updater(Updater.ADAM);
+```
 
 <p>We must now create a <code class="highlighter-rouge">NeuralNetConfiguration.ListBuilder</code> object to actually connect our layers and specify their order.</p>
 
@@ -254,33 +229,36 @@ We should exclude them too. In my case:
 
 <p>Filling those arrays with the training data is easy. Just use the <code class="highlighter-rouge">putScalar()</code> method:</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// If 0,0 show 0</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">0</span><span class="o">);</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">0</span><span class="o">,</span><span class="mi">1</span><span class="o">},</span> <span class="mi">0</span><span class="o">);</span>
-<span class="n">trainingOutputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">0</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">0</span><span class="o">);</span>
-
-<span class="c1">// If 0,1 show 1</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">1</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">0</span><span class="o">);</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">1</span><span class="o">,</span><span class="mi">1</span><span class="o">},</span> <span class="mi">1</span><span class="o">);</span>
-<span class="n">trainingOutputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">1</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">1</span><span class="o">);</span>
-
-<span class="c1">// If 1,0 show 1</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">2</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">1</span><span class="o">);</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">2</span><span class="o">,</span><span class="mi">1</span><span class="o">},</span> <span class="mi">0</span><span class="o">);</span>
-<span class="n">trainingOutputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">2</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">1</span><span class="o">);</span>
-
-<span class="c1">// If 1,1 show 0</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">3</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">1</span><span class="o">);</span>
-<span class="n">trainingInputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">3</span><span class="o">,</span><span class="mi">1</span><span class="o">},</span> <span class="mi">1</span><span class="o">);</span>
-<span class="n">trainingOutputs</span><span class="o">.</span><span class="na">putScalar</span><span class="o">(</span><span class="k">new</span> <span class="kt">int</span><span class="o">[]{</span><span class="mi">3</span><span class="o">,</span><span class="mi">0</span><span class="o">},</span> <span class="mi">0</span><span class="o">);</span></code></pre></figure>
+``` java
+// If 0,0 show 0
+trainingInputs.putScalar(new int[]{0, 0}, 0);
+trainingInputs.putScalar(new int[]{0, 1}, 0);
+trainingOutputs.putScalar(new int[]{0, 0}, 0);
+// If 0,1 show 1
+trainingInputs.putScalar(new int[]{1, 0}, 0);
+trainingInputs.putScalar(new int[]{1, 1}, 1);
+trainingOutputs.putScalar(new int[]{1, 0}, 1);
+// If 1,0 show 1
+trainingInputs.putScalar(new int[]{2, 0}, 1);
+trainingInputs.putScalar(new int[]{2, 1}, 0);
+trainingOutputs.putScalar(new int[]{2, 0}, 1);
+// If 1,1 show 0
+trainingInputs.putScalar(new int[]{3, 0}, 1);
+trainingInputs.putScalar(new int[]{3, 1}, 1);
+trainingOutputs.putScalar(new int[]{3, 0}, 0);
+```
 
 <p>We won’t be using the <code class="highlighter-rouge">INDArray</code> objects directly. Instead, we’ll convert them into a <code class="highlighter-rouge">DataSet</code>.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">DataSet</span> <span class="n">myData</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataSet</span><span class="o">(</span><span class="n">trainingInputs</span><span class="o">,</span> <span class="n">trainingOutputs</span><span class="o">);</span></code></pre></figure>
 
-<p>At this point, we can start the training by calling the <code class="highlighter-rouge">fit()</code> method of the neural network and passing the data set to it.</p>
+At this point, we can start the training by calling the fit() method of the neural network and passing the data set to it. The for loop controls the iterations of the data set through the network. It is set to 1000 iterations in this example.
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">myNetwork</span><span class="o">.</span><span class="na">fit</span><span class="o">(</span><span class="n">myData</span><span class="o">);</span></code></pre></figure>
+``` java
+for(int l=0; l<=1000; l++) {
+    myNetwork.fit(myData);
+}
+```
 
 <p>And that’s all there is to it. Your neural network is ready to be used.</p>
 
