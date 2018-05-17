@@ -5,6 +5,15 @@ layout: default
 
 **Contents**
 
+* <a href="#onezerozerobeta">Version 1.0.0-beta</a>
+    - <a href="#onezerozerobeta-dl4j">Deeplearning4j</a>
+    - <a href="#onezerozerobeta-dl4jkeras">Deeplearning4j Keras Import</a>
+    - <a href="#onezerozerobeta-nd4j">ND4J</a>
+    - <a href="#onezerozerobeta-datavec">DataVec</a>
+    - <a href="#onezerozerobeta-arbiter">Arbiter</a>
+    - <a href="#onezerozerobeta-rl4j">RL4J</a>
+    - <a href="#onezerozerobeta-scalnet">ScalNet</a>
+    - <a href="#onezerozerobeta-nd4s">ND4S</a>
 * <a href="#onezerozeroalpha">Version 1.0.0-alpha</a>
     - <a href="#onezerozeroalpha-dl4j">Deeplearning4j</a>
     - <a href="#onezerozeroalpha-dl4jkeras">Deeplearning4j Keras Import</a>
@@ -21,6 +30,154 @@ layout: default
 * <a href="#six">Version 0.6.0</a>
 * <a href="#five">Version 0.5.0</a>
 * <a href="#four">Version 0.4.0</a>
+
+
+
+# <a name="onezerozerobeta">Release Notes for Version 1.0.0-beta</a>
+
+## Highlights - 1.0.0-beta Release
+
+* Performance and memory optimizations for DL4J
+
+
+## <a name="onezerozerobeta-dl4j">Deeplearning4J</a>
+
+### Deeplearning4J: New Features
+
+* New or enhanced layers:
+    * Added Cropping1D layer [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping1D.java)
+    * Added Convolution3D, Cropping3D, UpSampling3D, ZeroPadding3D, Subsampling3D layers (all with Keras import support): [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution3D.java) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5026)
+    * Added EmbeddingSequenceLayer (EmbeddingLayer for time series) [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/EmbeddingSequenceLayer.java)
+    * Added OCNNOutputLayer (one-class neural network) - implementation of [this paper](https://arxiv.org/pdf/1802.06360.pdf) - [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/ocnn/OCNNOutputLayer.java)
+    * Added FrozenLayerWithBackprop layer [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/misc/FrozenLayerWithBackprop.java)
+    * Added DepthwiseConvolution2D layer [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/DepthwiseConvolution2D.java)
+* Added ComputationGraph.output(DataSetIterator) method [Link](https://github.com/deeplearning4j/deeplearning4j/issues/4965)
+* Added MultiLayerNetwork/ComputationGraph.layerInputSize methods [Link](https://github.com/deeplearning4j/deeplearning4j/issues/4670) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5018)
+* Added SparkComputationGraph.feedForwardWithKey overload with feature mask support [Link](https://github.com/deeplearning4j/deeplearning4j/issues/4984)
+* Added MultiLayerNetwork.calculateGradients method (for easily getting parameter and input gradients, for example for some model interpretabilithy approaches) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5018) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/2866)
+* Added support to get input/activation types for each layer from configuration: ```ComputationGraphConfiguration.getLayerActivationTypes(InputType...)```, ```ComputationGraphConfiguration.GraphBuilder.getLayerActivationTypes()```, ```NeuralNetConfiguration.ListBuilder.getLayerActivationTypes()```, ```MultiLayerConfiguration.getLayerActivationTypes(InputType)``` methods [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5031)
+* Evaluation.stats() now prints confusion matrix in easier to read matrix format, rather than list format [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5096)
+* Added ModelSerializer.addObjectToFile, .getObjectFromFile and .listObjectsInFile for storing arbitrary Java objects in same file as saved network [Link](https://github.com/deeplearning4j/deeplearning4j/issues/4957)
+* Added SpatialDropout support (with Keras import support) [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/dropout/SpatialDropout.java)
+* Added ```MultiLayerNetwork/ComputationGraph.fit((Multi)DataSetIterator, int numEpochs)``` overloads [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5118)
+* Added performance (hardware) listeners: ```SystemInfoPrintListener``` and ```SystemInfoFilePrintListener``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5151)
+
+### Deeplearning4J: Bug Fixes and Optimizations
+
+* Performance and memory optimizations via optimizations of internal use of workspaces [Link](https://github.com/deeplearning4j/deeplearning4j/pull/4900)
+* Reflections library has entirely been removed from DL4J and is no longer required for custom layer serialization/deserialization [Link](https://github.com/deeplearning4j/deeplearning4j/pull/4950), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/4956)
+    * Fixes issues with custom and some Keras import layers on Android
+* RecordReaderMultiDataSetIterator will no longer try to convert unused columns to numerical values [Link](https://github.com/deeplearning4j/deeplearning4j/pull/4945)
+* Added new model zoo models:
+    * (to do)
+* Fixes for Android compilation (removed duplicate classes, aligned versions, removed some dependencies) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/4955) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5074) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5087)
+* Fix for RecordReaderMulitDataSetIterator where output could be incorrect for some constructors [Link](https://github.com/deeplearning4j/deeplearning4j/issues/4969)
+* Non-frozen layers before a frozen layer will no longer be skipped during backprop (useful for GANs and similar architectures) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5009) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/4964)
+* Fixed issue where ComputationGraph topological sort may not be consistent on all platforms; could sometimes break ComputationGraphs (with multiple valid topological orderings) trained on PC and deployed on Android [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5050)
+* Fixed issue with CuDNN batch norm using ```1-decay``` instead of ```decay``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5076)
+* deeplearning4j-cuda no longer throws exceptions if present on classpath with nd4j-native backend set to higher priority [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5000)
+* Added RNG control for CifarDataSetIterator [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5067)
+* WordVectorSerializer now deletes temp files immediately once done [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5166)
+
+### Deeplearning4J: API Changes (Transition Guide): 1.0.0-alpha to 1.0.0-beta
+
+* WorkspaceMode.SINGLE and SEPARATE have been deprecated; use WorkspaceMode.ENABLED instead
+* Internal layer API changes: custom layers will need to be updated to the new Layer API - see built-in layers or custom layer example
+* Custom layers etc in pre-1.0.0-beta JSON (ModelSerializer) format need to be registered before they can be deserialized due to JSON format change. Built-in layers and models saved in 1.0.0-beta or later do not require this. Use ```NeuralNetConfiguration.registerLegacyCustomClassesForJSON(Class)``` for this purpose
+* IterationListener has been deprecated in favor of TrainingListener. For existing custom listeners, switch from ```implements TrainingListener``` to ```extends BaseTrainingListener``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5014)
+* ExistingDataSetIterator has been deprecated; use ```fit(DataSetIterator, int numEpochs)``` method instead
+
+
+### Deeplearning4J: 1.0.0-beta Known Issues
+
+
+
+## <a name="onezerozerobeta-dl4jkeras">Deeplearing4J: Keras Import</a>
+
+
+
+### Deeplearning4J: Keras Import - API Changes (Transition Guide): 0.9.1 to 1.0.0-beta
+
+
+### Deeplearning4J: Keras Import - Known Issues
+
+
+
+## <a name="onezerozerobeta-nd4j">ND4J</a>
+
+### ND4J: New Features
+
+
+### ND4J: Known Issues
+- Not all op gradients implemented for automatic differentiation
+- Vast majority of new operations added in 1.0.0-beta do NOT use GPU yet.
+
+### ND4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-beta
+
+
+## ND4J - SameDiff
+
+
+### Features
+
+
+### Known Issues and Limitations
+- Vast majority of new operations added in 1.0.0-beta do NOT use GPU yet.
+- While many of the widely used base operations and high-level layers used in practice are supported, op coverage is still limited. Goal is to achieve feature parity with TensorFlow and fully support import for TF graphs.
+- Some of the existing ops do not have a backward pass implemented (called `doDiff` in SameDiff).
+
+
+
+## <a name="onezerozerobeta-datavec">DataVec</a>
+
+### DataVec: New Features
+
+* ImageRecordReader now logs number of inferred label classes (to reduce risk of users missing a problem if something is misconfigured) [Link](https://github.com/deeplearning4j/DataVec/issues/569)
+* Added AnalyzeSpark.getUnique overload for multiple columns [Link](https://github.com/deeplearning4j/DataVec/issues/71)
+* Added performance/timing module [Link](https://github.com/deeplearning4j/DataVec/pull/580)
+
+
+### DataVec: Optimizations and Bug Fixes
+
+* Reduced ImageRecordReader garbage generation via buffer reuse [Link](https://github.com/deeplearning4j/DataVec/pull/573)
+* Fixes for Android compilation (aligned versions, removed some dependencies) [Link](https://github.com/deeplearning4j/DataVec/pull/567) [Link](https://github.com/deeplearning4j/DataVec/pull/575)
+* Removed Reflections library use in DataVec [Link](https://github.com/deeplearning4j/DataVec/pull/570)
+* Fix for TransformProcessRecordReader batch support [Link](https://github.com/deeplearning4j/DataVec/issues/561)
+* Fix for TransformProcessRecordReader with filter operations [Link](https://github.com/deeplearning4j/DataVec/issues/552)
+* Fixed issue with ImageRecordReader/ParentPathLabelGenerator incorrectly filtering directories containing ```.``` character(s) [Link](https://github.com/deeplearning4j/DataVec/issues/273)
+* ShowImageTransform now initializes frame lazily to avoid blank windows [Link](https://github.com/deeplearning4j/DataVec/pull/579)
+
+### DataVec: API Changes (Transition Guide): 1.0.0-alpha to 1.0.0-beta
+
+* DataVec ClassPathResource has been deprecated; use nd4j-common version instead [Link](https://github.com/deeplearning4j/DataVec/issues/521)
+
+
+
+## <a name="onezerozerobeta-arbiter">Arbiter</a>
+
+
+### Arbiter: New Features
+
+
+### Arbiter: Fixes
+
+
+
+### Arbiter: API Changes (Transition Guide): 0.9.1 to 1.0.0-beta
+
+
+## <a name="onezerozerobeta-rl4j">RL4J</a>
+
+
+
+## <a name="onezerozerobeta-scalnet">ScalNet</a>
+
+
+## <a name="onezerozerobeta-nd4s">ND4S</a>
+
+
+
+
 
 
 # <a name="onezerozeroalpha">Release Notes for Version 1.0.0-alpha</a>
