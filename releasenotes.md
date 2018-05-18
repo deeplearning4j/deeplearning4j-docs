@@ -35,6 +35,8 @@ layout: default
 
 # <a name="onezerozerobeta">Release Notes for Version 1.0.0-beta</a>
 
+***NOTE: RELEASE NOTES FOR VERSION 1.0.0-beta ARE STILL BEING COMPILED AND ARE NON-FINAL AS OF 18/05/2018***
+
 ## Highlights - 1.0.0-beta Release
 
 * Performance and memory optimizations for DL4J
@@ -88,18 +90,13 @@ layout: default
 * ExistingDataSetIterator has been deprecated; use ```fit(DataSetIterator, int numEpochs)``` method instead
 
 
-### Deeplearning4J: 1.0.0-beta Known Issues
-
-
 
 ## <a name="onezerozerobeta-dl4jkeras">Deeplearing4J: Keras Import</a>
 
 
 
-### Deeplearning4J: Keras Import - API Changes (Transition Guide): 0.9.1 to 1.0.0-beta
+### Deeplearning4J: Keras Import - API Changes (Transition Guide): 1.0.0-alpha to 1.0.0-beta
 
-
-### Deeplearning4J: Keras Import - Known Issues
 
 
 
@@ -112,20 +109,7 @@ layout: default
 - Not all op gradients implemented for automatic differentiation
 - Vast majority of new operations added in 1.0.0-beta do NOT use GPU yet.
 
-### ND4J: API Changes (Transition Guide): 0.9.1 to 1.0.0-beta
-
-
-## ND4J - SameDiff
-
-
-### Features
-
-
-### Known Issues and Limitations
-- Vast majority of new operations added in 1.0.0-beta do NOT use GPU yet.
-- While many of the widely used base operations and high-level layers used in practice are supported, op coverage is still limited. Goal is to achieve feature parity with TensorFlow and fully support import for TF graphs.
-- Some of the existing ops do not have a backward pass implemented (called `doDiff` in SameDiff).
-
+### ND4J: API Changes (Transition Guide): 1.0.0-alpha to 1.0.0-beta
 
 
 ## <a name="onezerozerobeta-datavec">DataVec</a>
@@ -155,19 +139,20 @@ layout: default
 
 ## <a name="onezerozerobeta-arbiter">Arbiter</a>
 
-
 ### Arbiter: New Features
 
+* Added LayerSpace for OCNN (one-class neural network)
 
 ### Arbiter: Fixes
 
-
-
-### Arbiter: API Changes (Transition Guide): 0.9.1 to 1.0.0-beta
+* Fixed timestamp issue that could cause incorrect rendering of first model's results in UI [Link](https://github.com/deeplearning4j/Arbiter/pull/163)
+* Execution now waits for last model(s) to complete before returning when a termination condition is hit [Link](https://github.com/deeplearning4j/Arbiter/pull/162)
+* As per DL4J etc: use of Reflections library has been removed entirely from Arbiter [Link](https://github.com/deeplearning4j/Arbiter/pull/154)
+* Remove use of Eclipse Collections library due to issues with Android compilation [Link](https://github.com/deeplearning4j/Arbiter/pull/156)
+* Improved cleanup of completed models to reduce maximum memory requirements for training [Link](https://github.com/deeplearning4j/Arbiter/pull/160)
 
 
 ## <a name="onezerozerobeta-rl4j">RL4J</a>
-
 
 
 ## <a name="onezerozerobeta-scalnet">ScalNet</a>
