@@ -75,7 +75,7 @@ compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1
 compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86_64"
 
 ```
-If you chose to use a SNAPSHOT version of the dependencies with gradle, you will need to create the a pom.xml file in the root directory and run mvn compile on it from the terminal. You will also need to include ``` mavenLocal() ``` in the ```  repository {} ``` block of the build.gradle file. An example pom.xml file is provided below.
+If you choose to use a SNAPSHOT version of the dependencies with gradle, you will need to create the a pom.xml file in the root directory and run mvn compile on it from the terminal. You will also need to include ``` mavenLocal() ``` in the ```  repository {} ``` block of the build.gradle file. An example pom.xml file is provided below.
 
 ``` xml
 <project>
