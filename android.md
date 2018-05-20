@@ -55,16 +55,16 @@ layout: default
 
 ``` groovy
 
-compile (group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: '1.0.0-SNAPSHOT') {
+compile (group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: '1.0.0-beta') {
     exclude group: 'org.bytedeco.javacpp-presets', module: 'opencv-platform'
     exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
     exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
 }
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT'
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-arm"
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-arm64"
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-x86"
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-SNAPSHOT', classifier: "android-x86_64"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta'
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-arm"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-arm64"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-x86"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-x86_64"
 compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm"
 compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm64"
 compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-x86"
