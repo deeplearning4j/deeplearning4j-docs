@@ -113,3 +113,23 @@ For more details, see the ND4J User Guide: nd4j.org/userguide#workspaces-panic
 ```
 
 For more details on these exceptions, see <a href="https://nd4j.org/userguide#workspaces-panic">ND4J User Guide - Workspaces</a>
+
+
+## DL4J's LayerWorkspaceMgr
+
+As of 1.0.0-beta, DL4J's Layer API includes the concept of a "layer workspace manager".
+
+The idea with this class is that it allows us to easily and precisely control the location of a given array, given different possible configurations for the workspaces.
+For example, the activations out of a layer may be placed in one workspace during inference, and another during training; this is for performance reasons.
+However, with the LayerWorkspaceMgr design, implementers of layers don't need to wory about about this.
+
+What does this mean in practice? Usually it's quite simple...
+* When returning activations (```activate(boolean training, LayerWorkspaceMgr workspaceMgr)``` method), make sure the returned array is defined in ```ArrayType.ACTIVATIONS``` (i.e., use LayerWorkspaceMgr.create(ArrayType.ACTIVATIONS, ...) or similar)
+* When returning activation gradients (```backpropGradient(INDArray epsilon, LayerWorkspaceMgr workspaceMgr)```), similarly return an array defined in ```ArrayType.ACTIVATION_GRAD```
+
+You can also leverage an array defined in any workspace to the appropriate workspace using, for example, ```LayerWorkspaceMgr.leverageTo(ArrayType.ACTIVATIONS, myArray)```
+
+
+Note that if you are *not* implementing a custom layer (and instead just want to perform forward pass for a layer outside of a MultiLayerNetwork/ComputationGraph) you can use ```LayerWorkspaceMgr.noWorkspaces()```.
+
+
