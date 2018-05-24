@@ -20,3 +20,8 @@ What kinds of decisions can you make? There are four types of decisions that peo
 * Regression
 * Goal-oriented moves
 
+Let's look at a couple examples of each:
+
+* Classification: Classification is identifying something: categorizing or tagging or sorting it. Putting a name to a face is a classification problem. Filtering emails into a spam folder uses an algorithmic filter to classify them as spam or not. Detecting objects in images can be a classification problem. So can recognizing voices. More broadly, this is an example of machine perception, of an algorithm that maps raw sensory data to symbols that have meaning for humans. In this way, AI can interpret or give meaning to data, much as the human brain does in a flash of cognition. To train a classifier, you need a labeled dataset; i.e. you need to tag data with the names that apply to it, like pairing a JPEG with the name of the person in the photo. The way people tend to do this is by sorting data into folders with the label that applies. The algorithm then learns the correlations between the data (e.g. pixels in the shape of my face) and the label (e.g. my name). So the first question to ask, after you have decided on the outcomes or labels you want to predict, is "Do we have data labeled with those outcomes? And if not, how do we get it?" (At that point, you start looking at data strategies: how to gather and process the data to train your algorithms on.)
+
+* 
