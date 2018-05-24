@@ -15,7 +15,7 @@ Contents
 
 Generally speaking, training a neural network is a task best suited for powerful computers with multiple GPUs. But what if you want to do it on your humble Android phone or tablet? Well, it’s definitely possible. Considering an average Android device’s specifications, however, it will most likely be quite slow. If that’s not a problem for you, keep reading.
 
-In this tutorial, I’ll show you how to use [Deeplearning4J](https://deeplearning4j.org/android-DL4JIrisClassifierDemo), a popular Java-based deep learning library, to create and train a neural network on an Android device.
+In this tutorial, I’ll show you how to use [Deeplearning4J](https://deeplearning4j.org/quickstart), a popular Java-based deep learning library, to create and train a neural network on an Android device.
 
 ## <a name="head_link1">Prerequisites</a>
 For best results, you’ll need the following:
@@ -176,14 +176,14 @@ myNetwork.init();
 
 ## <a name="head_link5">Creating Training Data</a>
 To create our training data, we’ll be using the INDArray class, which is provided by ND4J. Here’s what our training data will look like:
-
+```
 INPUTS      EXPECTED OUTPUTS
 ------      ----------------
 0,0         0
 0,1         1
 1,0         1
 1,1         0
-
+```
 As you might have guessed, our neural network will behave like an XOR gate. The training data has four samples, and you must mention it in your code.
 
 ``` java
@@ -239,4 +239,5 @@ A second example DL4J Android Application which includes a user interface can be
 The limitations of processing power and battery life on mobile devices make training robust, multi-layer networks unfeasible. As an alternative to training a network on the device, the neural network being used by your application can be trained on the desktop, saved via ModelSerializer, and then loaded as a pre-trained model in the application. A third example DL4J Android Application can be found [here](https://deeplearning4j.org/android-DL4JImageRecognitionDemo) which loads a pre-trained Mnist network and uses it to classify user drawn numbers.
 
 Written by Ashraff Hathibelagal • January 2017
+
 Updated by Jason Merwin • April 2018
