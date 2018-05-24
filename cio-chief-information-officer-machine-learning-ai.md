@@ -34,3 +34,4 @@ If you can't formulate the problem you want to solve as one of these four types 
 
 ## What Does AI Need to Work?
 
+Once you have defined the problem you want to solve, the next question you have to ask is: Do I have the data that's pertinent to this problem. That data is the food your algorithms need. Without it, they will not be able to make accurate predictions. AI begins with gathering the right data for the problem that's important to you. If you don't have that data, you need to take a step back, and devise a data strategy. 
