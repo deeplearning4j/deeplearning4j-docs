@@ -1,10 +1,10 @@
 ---
-title: MNIST for Beginners
+title: Deep Learning Tutorial: MNIST for Beginners
 layout: default
 ---
 
 <header>
-  <h1>MNIST for Beginners</h1>
+  <h1>Deep Learning Tutorial: MNIST for Beginners</h1>
   <p>In this tutorial, we’ll classify the MNIST dataset, the “Hello World” of machine learning.</p>
   <ol class="toc">
     <li><a href="#introduction">Introduction</a></li>
@@ -68,9 +68,7 @@ layout: default
     MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
             .seed(rngSeed)
             .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-            .iterations(1)
-            .learningRate(0.006)
-            .updater(Updater.NESTEROVS).momentum(0.9)
+            .updater(new Nesterovs(0.006,0.9))
             .regularization(true).l2(1e-4)
             .list()
   </code></pre>
@@ -78,12 +76,8 @@ layout: default
   <p>This parameter uses a specific, randomly generated weight initialization. If you run an example many times, and generate new, random weights each time you begin, then your net’s results -- accuracy and F1 score -- may vary a great deal, because different initial weights can lead algorithms to different local minima in the errorscape. Keeping the same random weights allows you isolate the effect of adjusting other hyperparameters more clearly, while other conditions remain equal.</p>
   <h5>.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)</h5>
   <p>Stochastic gradient descent (SGD) is a common method to optimize the cost function. To learn more about SGD and other optimization algorithms that help minimize error, we recommend <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Andrew Ng’s Machine Learning course</a> and the SGD definition in our <a href="http://deeplearning4j.org/glossary#stochasticgradientdescent" target="_blank">glossary</a>.</p>
-  <h5>.iterations(1)</h5>
-  <p>Each iteration, for a neural network, is a learning step; i.e. an update of the model's weights. The network is exposed to data, makes guesses about the data, and then corrects its own parameters based on how wrong its guesses were. So more iterations allow neural networks to take more steps and to learn more, minimizing error.</p>
-  <h5>.learningRate(0.006)</h5>
-  <p>This line sets the learning rate, which is the size of the adjustments made to the weights with each iteration, the step size. A high learning rate makes a net traverse the errorscape quickly, but also makes it prone to overshoot the point of minimum error. A low learning rate is more likely to find the minimum, but it will do so very slowly, because it is taking small steps in adjusting the weights.</p>
-  <h5>.updater(Updater.NESTEROVS).momentum(0.9)</h5>
-  <p>Momentum is an additional factor in determining how fast an optimization algorithm converges on the optimum point. Momentum affects the direction that weights are adjusted in, so in the code we consider it a weight <code>updater</code>.</p>
+  <h5>.updater(new Nesterovs(0.006,0.9))</h5>
+  <p>This line sets the updater as nesterovs and the learning rate and the momentun. The learning rate, which is the size of the adjustments made to the weights with each iteration, the step size. A high learning rate makes a net traverse the errorscape quickly, but also makes it prone to overshoot the point of minimum error. A low learning rate is more likely to find the minimum, but it will do so very slowly, because it is taking small steps in adjusting the weights. Momentum is an additional factor in determining how fast an optimization algorithm converges on the optimum point. Momentum affects the direction that weights are adjusted in, so in the code we consider it a weight <code>updater</code>.</p>
   <h5>.regularization(true).l2(1e-4)</h5>
   <p>Regularization is a technique to prevent what’s called <b>overfitting</b>. Overfitting is when the model fits the training data really well, but performs poorly in real life as soon as it's exposed to data it hasn’t seen before.</p>
   <p>We use L2 regularization, which prevents individual weights from having too much influence on the overall results.</p>

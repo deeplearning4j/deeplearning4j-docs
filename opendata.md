@@ -18,11 +18,17 @@ Here you'll find an organized list of interesting, high-quality datasets for mac
 * [Data Portals](http://dataportals.org/)
 * [Open Data Monitor](https://opendatamonitor.eu/)
 * [Quandl Data Portal](https://www.quandl.com/)
-* [Mut1ny Face/Head segmentation dataset] (http://www.mut1ny.com/face-headsegmentation-dataset)
+* [Mut1ny Face/Head segmentation dataset](http://www.mut1ny.com/face-headsegmentation-dataset)
+* [Awesome Public Datasets on Github](https://www.kdnuggets.com/2015/04/awesome-public-datasets-github.html)
+* [Head CT scan dataset: CQ500 dataset of 491 scans](http://headctstudy.qure.ai/)
 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="OpenDataPage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 
@@ -188,22 +194,23 @@ Here you'll find an organized list of interesting, high-quality datasets for mac
 
 For people just getting started with deep learning, the following tutorials and videos provide an easy entrance to the fundamental ideas of deep neural networks:
 
-* [Beginner's Guide to Deep Neural Networks](./neuralnet-overview)
-* [Deep Reinforcement Learning](./deepreinforcementlearning)
-* [Deep Convolutional Networks (CNNs) for Images](./convolutionalnets)
-* [Recurrent Networks and LSTMs](./lstm)
-* [Generative Adversarial Networks (GAN)](./generative-adversarial-network)
-* [Multilayer Perceptron (MLP) for Classification](./multilayerperceptron)
+* [Beginner's Guide to Deep Neural Networks](./neuralnet-overview.html)
+* [Deep Reinforcement Learning](./deepreinforcementlearning.html)
+* [Deep Convolutional Networks (CNNs) for Images](./convolutionalnetwork.html)
+* [Recurrent Networks and LSTMs](./lstm.html)
+* [Generative Adversarial Networks (GAN)](./generative-adversarial-network.html)
+* [Multilayer Perceptron (MLP) for Classification](./multilayerperceptron.html)
 * [Restricted Boltzmann Machines (RBM)](./restrictedboltzmannmachine.html)
 * [Eigenvectors, Eigenvalues, PCA, Covariance and Entropy](./eigenvector.html)
-* [Markov Chain Monte Carlo and Reinforcement Learning](./markovchainmontecarlo)
-* [Graph Data and Deep Learning](./graphdata)
-* [Symbolic Reasoning and Deep Learning](./symbolicreasoning)
+* [Markov Chain Monte Carlo and Reinforcement Learning](./markovchainmontecarlo.html)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Symbolic Reasoning (Symbolic AI) and Deep Learning](./symbolicreasoning.html)
 * [MNIST for Beginners](./mnist-for-beginners.html)
-* [Glossary of Deep-Learning and Neural-Net Terms](./glossary)
-* [Word2vec and Natural-Language Processing](./word2vec)
-* [Deeplearning4j Examples via Quickstart](./quickstart)
+* [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
+* [Word2vec and Natural-Language Processing](./word2vec.html)
+* [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
-* [Inference: Machine Learning Model Server](./modelserver)
+* [Inference: Machine Learning Model Server](./machine-learning-server.html)
+* [Distributed Deep Learning on Apache Spark](./spark.html)
 
 *Thanks to deeplearning.net and [Luke de Oliveira](https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2) for many of these links and dataset descriptions. Any suggestions of open data sets we should include for the Deeplearning4j community are welcome!*

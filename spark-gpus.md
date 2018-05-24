@@ -115,17 +115,14 @@ Then we configure the neural network:
         //Set up network configuration (as per standard DL4J networks)
         int nChannels = 1;
         int outputNum = 10;
-        int iterations = 1;
         int seed = 123;
 
         log.info("Build model....");
         MultiLayerConfiguration.Builder builder = new NeuralNetConfiguration.Builder()
                 .seed(seed)
-                .iterations(iterations)
                 .regularization(true).l2(0.0005)
-                .learningRate(0.1)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(Updater.ADAGRAD)
+                .updater(new AdaGrad(0.1))
                 .list()
                 .layer(0, new ConvolutionLayer.Builder(5, 5)
                         .nIn(nChannels)

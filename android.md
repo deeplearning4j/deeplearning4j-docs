@@ -2,6 +2,7 @@
 title: Deploying Deeplearning4j to Android
 layout: default
 ---
+
 # Using Deeplearning4J in Android Applications
 
 Contents
@@ -183,6 +184,7 @@ INPUTS      EXPECTED OUTPUTS
 0,1         1
 1,0         1
 1,1         0
+
 ```
 As you might have guessed, our neural network will behave like an XOR gate. The training data has four samples, and you must mention it in your code.
 
@@ -198,6 +200,7 @@ INDArray trainingOutputs = Nd4j.zeros(NUM_SAMPLES, outputLayer.getNOut());
 Note that the number of columns in the inputs array is equal to the number of neurons in the input layer. Similarly, the number of columns in the outputs array is equal to the number of neurons in the output layer.
 
 Filling those arrays with the training data is easy. Just use the putScalar() method:
+
 
 ``` java
 // If 0,0 show 0
@@ -217,6 +220,7 @@ trainingInputs.putScalar(new int[]{3, 0}, 1);
 trainingInputs.putScalar(new int[]{3, 1}, 1);
 trainingOutputs.putScalar(new int[]{3, 0}, 0);
 ```
+
 We won’t be using the INDArray objects directly. Instead, we’ll convert them into a DataSet.
 ``` java
 DataSet myData = new DataSet(trainingInputs, trainingOutputs);
@@ -229,14 +233,17 @@ for(int l=0; l<=1000; l++) {
     myNetwork.fit(myData);
 }
 ```
+
 And that’s all there is to it. Your neural network is ready to be used.
 ## <a name="head_link6">Conclusion</a>
+
 
 In this tutorial, you saw how easy it is to create and train a neural network using the Deeplearning4J library in an Android Studio project. I’d like to warn you, however, that training a neural network on a low-powered, battery operated device might not always be a good idea.
 
 A second example DL4J Android Application which includes a user interface can be found [here](https://deeplearning4j.org/android-DL4JIrisClassifierDemo). This example trains a neural network on the device using Anderson’s iris data set for iris flower type classification. The application includes user input for the measurements and returns the probability that these measurements belong to one of three iris types (*Iris serosa, Iris versicolor,* and *Iris virginica*).
 
 The limitations of processing power and battery life on mobile devices make training robust, multi-layer networks unfeasible. As an alternative to training a network on the device, the neural network being used by your application can be trained on the desktop, saved via ModelSerializer, and then loaded as a pre-trained model in the application. A third example DL4J Android Application can be found [here](https://deeplearning4j.org/android-DL4JImageRecognitionDemo) which loads a pre-trained Mnist network and uses it to classify user drawn numbers.
+
 
 Written by Ashraff Hathibelagal • January 2017
 

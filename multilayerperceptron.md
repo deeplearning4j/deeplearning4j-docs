@@ -14,7 +14,7 @@ redirect: perceptron
 
 ## <a name="perceptron">A Brief History of Perceptrons</a>
 
-The perceptron, that neural network whose name evokes how the future looked in the 1950s, is a simple algorithm intended to perform binary classification; i.e. it predicts whether input belongs to a certain category of interest or not: `fraud` or `not_fraud`, `cat` or `not_cat`. 
+The perceptron, that neural network whose name evokes how the future looked from the perspective of the 1950s, is a simple algorithm intended to perform binary classification; i.e. it predicts whether input belongs to a certain category of interest or not: `fraud` or `not_fraud`, `cat` or `not_cat`. 
 
 The perceptron holds a special place in the history of neural networks and artificial intelligence, because the initial hype about its performance led to a [rebuttal by Minsky and Papert](https://drive.google.com/file/d/1UsoYSWypNjRth-Xs81FsoyqWDSdnhjIB/view?usp=sharing), and wider spread backlash that cast a pall on neural network research for decades, a neural net winter that wholly thawed only with Geoff Hinton's research in the 2000s, the results of which have since swept the machine-learning community. 
 
@@ -30,7 +30,7 @@ A perceptron is a linear classifier; that is, it is an algorithm that classifies
 
 A perceptron produces a single output based on several real-valued inputs by forming a linear combination using its input weights (and sometimes passing the output through a nonlinear activation function). Here's how you can write that in math:
 
-![Alt text](./img/perceptron_formula.jpg)
+![Alt text](./img/perceptron_formula.png)
 
 where **w** denotes the vector of weights, **x** is the vector of inputs, **b** is the bias and phi is the non-linear activation function.
 
@@ -63,10 +63,8 @@ Eclipse Deeplearning4j includes [several examples of multilayer perceptrons](htt
 ```
         MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
                 .seed(seed)
-                .iterations(1)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .learningRate(learningRate)
-                .updater(Updater.NESTEROVS)     //To configure: .updater(new Nesterovs(0.9))
+                .updater(new Nesterovs(learningRate,0.9))
                 .list()
                 .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes)
                         .weightInit(WeightInit.XAVIER)
@@ -109,19 +107,21 @@ model = Sequential([
 * [Multi-Layer Perceptrons (MLP)](http://users.ics.aalto.fi/ahonkela/dippa/node41.html) 
 * [Hebbian Theory](https://en.wikipedia.org/wiki/Hebbian_theory)
 
-### <a name="beginner">Other Machine Learning Tutorials</a>
+### <a name="beginner">More Machine Learning Tutorials</a>
+
 * [Introduction to Neural Networks](./neuralnet-overview)
 * [Deep Reinforcement Learning](./deepreinforcementlearning)
 * [Symbolic AI and Deep Learning](./symbolicreasoning)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network.html)
 * [Using Graph Data with Deep Learning](./graphdata)
 * [Recurrent Networks and LSTMs](./lstm)
 * [Word2Vec: Neural Embeddings for NLP](./word2vec)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
 * [Eigenvectors, Covariance, PCA and Entropy](./eigenvector)
 * [Neural Networks & Regression](./logistic-regression)
-* [Convolutional Networks (CNNs)](./convolutionalnets)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork)
 * [Open Datasets for Deep Learning](./opendata)
-* [Inference: Machine Learning Model Server](./modelserver)
+* [Inference: Machine Learning Model Server](./machine-learning-server)
 
 ### Classic Neural Network Papers (pre-2012)
 - An analysis of single-layer networks in unsupervised feature learning (2011), A. Coates et al. [[pdf]](http://machinelearning.wustl.edu/mlpapers/paper_files/AISTATS2011_CoatesNL11.pdf)

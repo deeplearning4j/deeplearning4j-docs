@@ -1,9 +1,11 @@
 ---
-title: "Machine Learning: Use Cases"
+title: A Beginner's Guide to Unsupervised Learning
 layout: default
 ---
 
-# Machine Learning: Use Cases
+# A Beginner's Guide to Unsupervised Learning
+
+Unlike [supervised learning](./supervised-learning.html), with unsupervised learning, we are working without a labeled dataset. What we generally learn, in the absence of a label, is how to reconstruct the input data using a representation, or embedding. 
 
 Contents
 
@@ -65,9 +67,24 @@ And finally, if you want to make art with kd-trees, you could do a lot worse tha
 
 The underlying implementation for K Nearest Neighbors is the [VP Tree](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/clustering/vptree/VPTree.java#L59-59), which we've implemented here. You can think of it as a search engine for coordinate spaces.
 
-### Other Resources
+## <a name="resources">More Machine Learning Tutorials</a>
 
-* [Introduction to Deep Neural Networks](./neuralnet-overview.html)
-* [MNIST for Beginners](./mnist-for-beginners.html)
-* [Deeplearning4j Quickstart Examples](./quickstart.html)
-* [ND4J: Numpy for the JVM](http://nd4j.org)
+* [Recurrent Networks and Long Short-Term Memory Units (LSTMs)](./lstm.html)
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Distributed Deep Learning on Apache Spark](./spark.html)
+

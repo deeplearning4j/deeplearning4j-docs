@@ -39,12 +39,9 @@ LearningRatePolicy provides decay alternatives during training. [[Explain what d
 double lr = 1e-2;
 double decayRate = 2;
 NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
-.learningRate(lr)
-.learningRateDecayPolicy(LearningRatePolicy.Exponential)
-.lrPolicyDecayRate(decayRate).iterations(iterations)
-.layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
-.updater(org.deeplearning4j.nn.conf.Updater.SGD).build())
-.build();
+    .updater(new Sgd(new ExponentialSchedule(ScheduleType.ITERATION, lr, decayRate)))
+    .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut).build())
+    .build();
 ```
 
 <b>Inverse</b>
@@ -54,36 +51,30 @@ NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
 double lr = 1e-2;
 double decayRate = 2;
 double power = 3;
-NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
-.learningRateDecayPolicy(LearningRatePolicy.Inverse)
-.lrPolicyDecayRate(decayRate).lrPolicyPower(power).iterations(iterations)
-.layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
-.updater(org.deeplearning4j.nn.conf.Updater.SGD).build())
-.build();
+NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
+    .updater(new Sgd(new InverseSchedule(ScheduleType.ITERATION,lr,decayRate,power)))
+    .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut).build())
+    .build();
 ```
 
 <b>Poly</b>
 
 [[Brief description]]
 ```
-NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
-.learningRateDecayPolicy(LearningRatePolicy.Poly).lrPolicyPower(power)
-.iterations(iterations)
-.layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)    
-.updater(org.deeplearning4j.nn.conf.Updater.SGD).build())                                      
-.build();
+NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
+    .updater(new Sgd(new PolySchedule(ScheduleType.ITERATION,lr,power,maxIter))
+    .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut).build())
+    .build();
 ```
 
 <b>Sigmoid</b>
 
 [[Brief description]]
 ```
-NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
-.learningRateDecayPolicy(LearningRatePolicy.Sigmoid)
-.lrPolicyDecayRate(decayRate).lrPolicySteps(steps).iterations(iterations)
-.layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
-.updater(org.deeplearning4j.nn.conf.Updater.SGD).build())                                
-.build();
+NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
+    .updater(new Sgd(new SigmoidSchedule(ScheduleType.ITERATION,lr,decayRate,steps)))
+    .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut).build())
+    .build();
 ```
 
 <b>Step</b>
@@ -93,32 +84,21 @@ NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(
 double lr = 1e-2;
 double decayRate = 2;
 double steps = 3;
-NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder().learningRate(lr)
-.learningRateDecayPolicy(LearningRatePolicy.Step).lrPolicyDecayRate(decayRate)
-.lrPolicySteps(steps).iterations(iterations)
-.layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut)
-.updater(org.deeplearning4j.nn.conf.Updater.SGD).build())
-.build();
+NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
+    .updater(new Sgd(new StepSchedule(ScheduleType.ITERATION,lr,decayRate,steps)))
+    .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut).build())
+    .build();
 ```
 
 <b>Schedule</b>
 
 Allows you to specify a schedule [[explain]].
 ```
-MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder().optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT).iterations(1)
-.learningRateDecayPolicy(LearningRatePolicy.Schedule)                            
-.learningRateSchedule(learningRateSchedule)
+NeuralNetConfiguration conf = new NeuralNetConfiguration.Builder()
+    .updater(new Sgd(new MapSchedule(ScheduleType.ITERATION,learningRateMapSchedule))
+    .layer(new DenseLayer.Builder().nIn(nIn).nOut(nOut).build())
+    .build();
 ```
-
-<b>Score</b>
-
-[[Brief description]]
-```
-MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-.learningRate(lr)
-.learningRateDecayPolicy(LearningRatePolicy.Score).lrPolicyDecayRate(lrScoreDecay).list()
-```
-
 
 ## <a name="setup">How It Works</a>
 

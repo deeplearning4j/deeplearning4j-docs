@@ -27,11 +27,10 @@ Hyperparameters are variables that determine how a neural network learns. They i
 
 ``` java
     MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
-        .iterations(1)
         .weightInit(WeightInit.XAVIER)
         .activation("relu")
         .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-        .learningRate(0.05)
+        .updater(new Sgd(0.05))
         // ... other hyperparameters
         .list()
         .backprop(true)
@@ -66,7 +65,7 @@ If you don't have Java 1.7 or later, download the current [Java Development Kit 
 java -version
 ```
 
-Please make sure you have a 64-Bit version of java installed, as you will see an error telling you `no jnind4j in java.library.path` if you decide to try to use a 32-Bit version instead.
+Please make sure you have a 64-Bit version of java installed, as you will see an error telling you `no jnind4j in java.library.path` if you decide to try to use a 32-Bit version instead. Make sure the JAVA_HOME environment variable is set.
 
 #### <a name="Maven">Apache Maven</a>
 
@@ -230,7 +229,7 @@ Deeplearning4j has two other notable components:
 * [Arbiter: hyperparameter optimization and model evaluation](https://github.com/deeplearning4j/Arbiter)
 * [DataVec: built-in ETL for machine-learning data pipelines](https://github.com/deeplearning4j/DataVec)
 
-Overall, Deeplearning4j is meant to be an end-to-end platform for building real applications. Not just a tensor library with automatic differentiation. If you want that, that's in ND4J and it's called [samediff](https://github.com/deeplearning4j/nd4j/tree/master/samediff). Samediff is still in alpha, but if you want to take a crack at contributing, please come in to our [live chat on Gitter](https://gitter.im/deeplearning4j/deeplearning4j).
+Overall, Deeplearning4j is meant to be an end-to-end platform for building real applications. Not just a tensor library with automatic differentiation. If you want that, that's in ND4J and it's called [samediff](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff). Samediff is still in alpha, but if you want to take a crack at contributing, please come in to our [live chat on Gitter](https://gitter.im/deeplearning4j/deeplearning4j).
 
 Lastly, if you are benchmarking Deeplearnin4j, please consider coming in to our live chat and asking for tips. Deeplearning4j has [all the knobs](http://deeplearning4j.org/native) but some may not work as the Python frameworks to do. You have to build Deeplearning4j from source for some applications.
 

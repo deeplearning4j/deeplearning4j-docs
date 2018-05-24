@@ -30,7 +30,11 @@ They are arguably the most powerful and useful type of neural network, applicabl
 Since recurrent networks possess a certain type of memory, and memory is also part of the human condition, we'll make repeated analogies to memory in the brain.<sup>[1](#one)</sup>
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH LSTMs</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="LSTMPage">GET STARTED WITH LSTMs</a>
 </p>
 
 ## <a name="feedforward">Review of Feedforward Networks</a>
@@ -180,7 +184,11 @@ Here's what the LSTM configuration looks like:
 <script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java?slice=61:82"></script>
 
 <p align="center">
-<a href="https://skymind.ai/quickstart" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://skymind.ai/quickstart" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/GetStarted"
+        data-ga-label="LSTMPage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 ## <a name="tuning">LSTM Hyperparameter Tuning</a>
@@ -221,6 +229,7 @@ Here are a few ideas to keep in mind when manually optimizing hyperparameters fo
 * [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
 * [Graph Data and Deep Learning](./graphanalytics.html)
 * [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
 * [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)

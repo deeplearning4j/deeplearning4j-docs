@@ -45,8 +45,18 @@ For pretraining -- i.e. learning the features via reconstruction at each layer -
 
 Finally, the [logistic regression](http://en.wikipedia.org/wiki/Multinomial_logistic_regression) output layer is trained, and then back propagation happens for each layer.
 
-Below are the different kinds of multilayer networks:
+### <a name="beginner">Other Machine Learning Tutorials</a>
 
-* [Stacked Denoising AutoEncoders](./stackeddenoisingautoencoder.html)
-* [Deep Belief Networks](./deepbeliefnetwork.html)
+* [Introduction to Neural Networks](./neuralnet-overview)
+* [Deep Reinforcement Learning](./deepreinforcementlearning)
+* [Symbolic AI and Deep Learning](./symbolicreasoning)
+* [Using Graph Data with Deep Learning](./graphdata)
+* [Recurrent Networks and LSTMs](./lstm)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
+* [Eigenvectors, Covariance, PCA and Entropy](./eigenvector)
+* [Neural Networks & Regression](./logistic-regression)
+* [Convolutional Networks (CNNs)](./convolutionalnets)
+* [Open Datasets for Deep Learning](./opendata)
+* [Inference: Machine Learning Model Server](./modelserver)
 

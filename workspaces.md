@@ -5,7 +5,8 @@ layout: default
 
 # Workspaces Guide
 
-As of release 0.9.0, [ND4J](http://nd4j.org/) offers an additional memory-management model: workspaces. That allows you to reuse memory for cyclic workloads without the JVM Garbage Collector for off-heap memory tracking. In other words, at the end of the workspace loop, all `INDArray`s' memory content is invalidated.
+[ND4J](http://nd4j.org/) offers an additional memory-management model: workspaces. That allows you to reuse memory for cyclic workloads without the JVM Garbage Collector for off-heap memory tracking. In other words, at the end of the workspace loop, all `INDArray`s' memory content is invalidated.
+Workspaces are integrated into DL4J for training and inference.
 
 Here are some [examples](https://github.com/deeplearning4j/dl4j-examples/blob/58cc1b56515458003fdd7b606f6451aee851b8c3/nd4j-examples/src/main/java/org/nd4j/examples/Nd4jEx15_Workspaces.java) of how to use it with ND4J.
 
@@ -13,7 +14,10 @@ The basic idea is simple: You can do what you need within a workspace (or spaces
 
 ## Neural Networks
 
-For DL4J users, workspaces provide better performance out of the box. All you need to do is choose affordable modes for the training & inference of a given model. For example:
+For DL4J users, workspaces provide better performance out of the box, and are enabled by default from 1.0.0-alpha onwards.
+Thus for most users, no explicit worspaces configuration is required.
+
+To benefit from worspaces, they need to be enabled. You can configure the workspace mode using:
 
  `.trainingWorkspaceMode(WorkspaceMode.SEPARATE)` and/or `.inferenceWorkspaceMode(WorkspaceMode.SINGLE)` in your neural network configuration. 
 
@@ -27,7 +31,7 @@ That said, it’s fine to use different modes for training & inference (i.e. use
 With workspaces enabled, all memory used during training will be reusable and tracked without the JVM GC interference.
 The only exclusion is the `output()` method that uses workspaces (if enabled) internally for the feed-forward loop. Subsequently, it detaches the resulting `INDArray` from the workspaces, thus providing you with independent `INDArray` which will be handled by the JVM GC.
 
-***Please note***: By default (as of 0.9.1), the training workspace mode is set to **NONE** for now.
+***Please note***: After the 1.0.0-alpha release, workspaces in DL4J were refactored - SEPARATE/SINGLE modes have been deprecated, and users should use ENABLED instead.
 
 ## Garbage Collector
 
@@ -109,3 +113,23 @@ For more details, see the ND4J User Guide: nd4j.org/userguide#workspaces-panic
 ```
 
 For more details on these exceptions, see <a href="https://nd4j.org/userguide#workspaces-panic">ND4J User Guide - Workspaces</a>
+
+
+## DL4J's LayerWorkspaceMgr
+
+As of 1.0.0-beta, DL4J's Layer API includes the concept of a "layer workspace manager".
+
+The idea with this class is that it allows us to easily and precisely control the location of a given array, given different possible configurations for the workspaces.
+For example, the activations out of a layer may be placed in one workspace during inference, and another during training; this is for performance reasons.
+However, with the LayerWorkspaceMgr design, implementers of layers don't need to wory about about this.
+
+What does this mean in practice? Usually it's quite simple...
+* When returning activations (```activate(boolean training, LayerWorkspaceMgr workspaceMgr)``` method), make sure the returned array is defined in ```ArrayType.ACTIVATIONS``` (i.e., use LayerWorkspaceMgr.create(ArrayType.ACTIVATIONS, ...) or similar)
+* When returning activation gradients (```backpropGradient(INDArray epsilon, LayerWorkspaceMgr workspaceMgr)```), similarly return an array defined in ```ArrayType.ACTIVATION_GRAD```
+
+You can also leverage an array defined in any workspace to the appropriate workspace using, for example, ```LayerWorkspaceMgr.leverageTo(ArrayType.ACTIVATIONS, myArray)```
+
+
+Note that if you are *not* implementing a custom layer (and instead just want to perform forward pass for a layer outside of a MultiLayerNetwork/ComputationGraph) you can use ```LayerWorkspaceMgr.noWorkspaces()```.
+
+

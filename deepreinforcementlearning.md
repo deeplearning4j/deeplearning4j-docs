@@ -237,15 +237,17 @@ public class A3CALE {
 
 ### <a name="beginner">Other Deep Learning Tutorials</a>
 
-* [LSTMs and Recurrent Networks](./lstm)
+* [LSTMs and Recurrent Networks](./lstm.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
 * [Introduction to Deep Neural Networks](./neuralnet-overview)
 * [Multilayer Perceptrons (MLP) for Classification](./multilayerperceptron.html)
-* [Deep Convolutional Networks](./convolutionalnetwork)
+* [Deep Convolutional Networks](./convolutionalnetwork.html)
+* [Attention Mechanisms & Memory Networks](./attention-memory-network.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
-* [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
-* [Eigenvectors, Covariance, PCA and Entropy](./eigenvector)
-* [Deeplearning4j Quickstart Examples](./quickstart)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Eigenvectors, Covariance, PCA and Entropy](./eigenvector.html)
+* [Deeplearning4j Quickstart Examples](./quickstart.html)
+* [Distributed Deep Learning on Apache Spark](https://deeplearning4j.org/spark.html)
 * [ND4J: A Tensor Library for the JVM Using C++](http://nd4j.org)
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)

@@ -96,7 +96,7 @@ For the sake of this example, lets assume our input data is of size 5. Our confi
 
 ```java
 ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
-        .learningRate(0.01)
+		.updater(new Sgd(0.01))
         .graphBuilder()
         .addInputs("input") //can use any label for this
         .addLayer("L1", new GravesLSTM.Builder().nIn(5).nOut(5).build(), "input")
@@ -123,7 +123,7 @@ To build the above network, we use the following configuration:
 
 ```java
 ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
-        .learningRate(0.01)
+		.updater(new Sgd(0.01))
         .graphBuilder()
         .addInputs("input1", "input2")
         .addLayer("L1", new DenseLayer.Builder().nIn(3).nOut(4).build(), "input1")
@@ -145,7 +145,7 @@ In this case, the network configuration is:
 
 ```java
 ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
-        .learningRate(0.01)
+		.updater(new Sgd(0.01))
         .graphBuilder()
         .addInputs("input")
         .addLayer("L1", new DenseLayer.Builder().nIn(3).nOut(4).build(), "input")

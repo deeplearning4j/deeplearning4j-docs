@@ -69,3 +69,9 @@ Eclipse Deeplearning4j Development Team. Deeplearning4j: Open-source distributed
 YourKit, LLC is the creator of <a href="https://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
 and <a href="https://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>,
 innovative and intelligent tools for profiling Java and .NET applications.
+
+## Mascot 
+
+The Skymind and DL4J team's mascot is a mathematical object, the oloid, which is composed of two linked congruent circles in perpendicular planes. To us, it stands for non-dualism and interdependence. 
+
+![Alt text](./img/oloid_math.png)

@@ -28,10 +28,9 @@ Here is a configuration of a simple feedForward Networn also from our examples.
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
 	.seed(seed)
-    .iterations(iterations)
 	 .activation("tanh")
 	 .weightInit(WeightInit.XAVIER)
-	 .learningRate(0.1)
+	 .updater(new Sgd(0.1))
 	 .regularization(true).l2(1e-4)
 	 .list()
 	 .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(3)
@@ -62,9 +61,8 @@ Here is a configuration of a recurrent neural network taken, from our examples.
 ```
 ComputationGraphConfiguration configuration = new NeuralNetConfiguration.Builder()
    	.weightInit(WeightInit.XAVIER)
-	.learningRate(0.5)
-	.updater(Updater.RMSPROP)
-	.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT).iterations(nIterations)
+	.updater(new RmsProp(0.5))
+	.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
 	.seed(seed)
 	.graphBuilder()
 	.addInputs("additionIn", "sumOut")
@@ -85,14 +83,6 @@ ComputationGraphConfiguration configuration = new NeuralNetConfiguration.Builder
 ### Random Seeds and Repeatability
 
 With both network configuration methods, it is typical to set a random seed to initialize the network's weights. Hard coding the random seed allows for repeatable results, because they start learning from the same random initialization.
-
-### Iterations
-
-An iteration is simply one update of the neural net model’s parameters, or weights. 
-
-That is not to be confused with an "epoch", which is one complete training pass through the dataset. 
-
-Many iterations may occur before an epoch is completed. Epoch and iteration are only synonymous if you update your parameters once after each pass through the whole dataset; if you update using mini-batches, or subsets of your total training set, then iteration and epoch will mean different things. Say your data has two minibatches: A and B. `.numIterations(3)` performs training like AAABBB, while three epochs looks like ABABAB.
 
 ### Activation Functions
 

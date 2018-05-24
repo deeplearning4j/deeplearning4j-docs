@@ -60,3 +60,24 @@ Machine learning models start out dumb and get smart by being exposed to data th
 Sometimes, you can train a machine-learning model on one set of data, and then use it for another, slightly different set of data later. This only works when the two datasets resemble each other. For example, most photographs have certain characteristics in common. If you train a machine-learning model on, say, celebrity faces, it will learn what humans look like, and with just a little extra learning, you could teach it to transfer what it knows to photographs of your family and friends, whom it has never seen before. Using a pre-trained model could save you the cost of training your own over thousands of hours on distributed GPUs, an expensive proposition. 
 
 Pre-trained machine-learning models that gain some knowledge of the world are useful in computer vision, and widely available. Some well-known pre-trained computer vision models include AlexNet, LeNet, VGG16, YOLO and Inception. [Those pre-trained computer vision models are available here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model). Google's [Cloud AutoML](https://cloud.google.com/automl/) relies on transfer learning, among other methods, to support its claim that it has "automated machine learning." 
+
+## <a name="resources">More Machine Learning Tutorials</a>
+
+* [Recurrent Networks and Long Short-Term Memory Units (LSTMs)](./lstm)
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Distributed Deep Learning on Apache Spark](./spark.html)

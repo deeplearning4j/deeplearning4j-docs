@@ -5,7 +5,7 @@ layout: default
 
 # Single-layer neural network
 
-A single-layer neural network in deep learning is a net composed of an input layer, which is  visible layer, and a hidden output layer. 
+A single-layer neural network in deep learning is a net composed of an input layer, which is the visible layer, and a hidden output layer. 
 
 The single-layer network's goal, or [objective function](./glossary.html#objectivefunction), is to learn features by minimizing [reconstruction entropy](./glossary.html#reconstructionentropy).
 
@@ -33,8 +33,16 @@ Momentum is an extra factor in determining how fast an optimization algorithm co
 
 L2 is the lambda discussed in the equation [here](http://ufldl.stanford.edu/wiki/index.php/Backpropagation_Algorithm).
 
-Here are the different kinds of single-layer networks:
-
-* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
-* [Continuous Restricted Boltzmann Machine](./continuousrestrictedboltzmannmachine.html)
-* [Denoising AutoEncoder](./denoisingautoencoder.html)
+### <a name="beginner">Other Machine Learning Tutorials</a>
+* [Introduction to Neural Networks](./neuralnet-overview)
+* [Deep Reinforcement Learning](./deepreinforcementlearning)
+* [Symbolic AI and Deep Learning](./symbolicreasoning)
+* [Using Graph Data with Deep Learning](./graphdata)
+* [Recurrent Networks and LSTMs](./lstm)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
+* [Eigenvectors, Covariance, PCA and Entropy](./eigenvector)
+* [Neural Networks & Regression](./logistic-regression)
+* [Convolutional Networks (CNNs)](./convolutionalnets)
+* [Open Datasets for Deep Learning](./opendata)
+* [Inference: Machine Learning Model Server](./modelserver)

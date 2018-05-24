@@ -30,7 +30,11 @@ Why? Because words are simply discrete states like the other data mentioned abov
 The purpose and usefulness of Word2vec is to group the vectors of similar words together in vectorspace. That is, it detects similarities mathematically. Word2vec creates vectors that are distributed numerical representations of word features, features such as the context of individual words. It does so without human intervention. 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH WORD2VEC</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="Word2VecPage">GET STARTED WITH WORD2VEC</a>
 </p>
 
 Given enough data, usage and contexts, Word2vec can make highly accurate guesses about a word’s meaning based on past appearances. Those guesses can be used to establish a word's association with other words (e.g. "man" is to "boy" what "woman" is to "girl"), or cluster documents and classify them by topic. Those clusters can form the basis of search, [sentiment analysis](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/word2vecsentiment/Word2VecSentimentRNN.java) and recommendations in such diverse fields as scientific research, legal discovery, e-commerce and customer relationship management. 
@@ -194,7 +198,6 @@ Now that the data is ready, you can configure the Word2vec neural net and feed i
         log.info("Building model....");
         Word2Vec vec = new Word2Vec.Builder()
                 .minWordFrequency(5)
-                .iterations(1)
                 .layerSize(100)
                 .seed(42)
                 .windowSize(5)
@@ -212,7 +215,6 @@ This configuration accepts a number of hyperparameters. A few require some expla
 * *minWordFrequency* is the minimum number of times a word must appear in the corpus. Here, if it appears less than 5 times, it is not learned. Words must appear in multiple contexts to learn useful features about them. In very large corpora, it's reasonable to raise the minimum.
 * *useAdaGrad* - Adagrad creates a different gradient for each feature. Here we are not concerned with that. 
 * *layerSize* specifies the number of features in the word vector. This is equal to the number of dimensions in the featurespace. Words represented by 500 features become points in a 500-dimensional space.
-* *iterations* this is the number of times you allow the net to update its coefficients for one batch of the data. Too few iterations mean it may not have time to learn all it can; too many will make the net's training longer.
 * *learningRate* is the step size for each update of the coefficients, as words are repositioned in the feature space. 
 * *minLearningRate* is the floor on the learning rate. Learning rate decays as the number of words you train on decreases. If learning rate shrinks too much, the net's learning is no longer efficient. This keeps the coefficients moving. 
 * *iterate* tells the net what batch of the dataset it's training on. 
@@ -501,6 +503,7 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Deep Convolutional Networks](./convolutionalnetwork.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
 * [Quickstart Examples for Deeplearning4j](./quickstart.html)
 * [ND4J: A Tensor Library for the JVM](http://nd4j.org)
 * [MNIST for Beginners](./mnist-for-beginners.html)
@@ -513,6 +516,7 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Deep Learning on Apache Spark](./spark.html)
 * [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Distributed Deep Learning on Apache Spark](https://deeplearning4j.org/spark)
 * [Neural Networks & Regression](./logistic-regression.html)
 * [Introduction to Decision Trees](./decision-tree.html)
 * [Introduction to Random Forests](./random-forest.html)

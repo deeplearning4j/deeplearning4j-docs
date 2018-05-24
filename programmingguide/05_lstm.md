@@ -64,7 +64,7 @@ public static final int NB_INPUTS = 86;
 
 ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
     .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-    .learningRate(LEARNING_RATE)
+    .updater(new Sgd(LEARNING_RATE))
     .graphBuilder()
     .addInputs("trainFeatures")
     .setOutputs("predictMortality")

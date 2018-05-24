@@ -18,11 +18,11 @@ Contents
 
 ## <a name="define">Definition & Structure</a>
 
-Invented by Geoff Hinton, a Restricted Boltzmann machine is an algorithm useful for dimensionality reduction, classification, [regression](./linear-regression.html), collaborative filtering, feature learning and topic modeling. (For more concrete examples of how [neural networks](./neuralnet-overview.html) like RBMs can be employed, please see our page on [use cases](./use_cases.html)).
+Invented by Geoff Hinton, a Restricted Boltzmann machine is an algorithm useful for dimensionality reduction, classification, [regression](./logistic-regression.html), collaborative filtering, feature learning and topic modeling. (For more concrete examples of how [neural networks](./neuralnet-overview.html) like RBMs can be employed, please see our page on [use cases](./use_cases.html)).
 
 Given their relative simplicity and historical importance, restricted Boltzmann machines are the first neural network we'll tackle. In the paragraphs below, we describe in diagrams and plain language how they work.
 
-RBMs are shallow, two-layer neural nets that constitute the building blocks of *deep-belief networks*. The first layer of the RBM is called the visible, or input, layer, and the second is the hidden layer.
+RBMs are shallow, two-layer neural nets that constitute the building blocks of *deep-belief networks*. The first layer of the RBM is called the visible, or input, layer, and the second is the hidden layer. (*Editor's note: While RBMs are occasionally used, most practitioners in the machine-learning community have deprecated them in favor of [generative adversarial networks or variational autoencoders](./generative-adversarial-network.html).*)
 
 ![Alt text](./img/two_layer_RBM.png)
 
@@ -31,7 +31,11 @@ Each circle in the graph above represents a neuron-like unit called a *node*, an
 That is, there is no intra-layer communication – this is the *restriction* in a restricted Boltzmann machine. Each node is a locus of computation that processes input, and begins by making [stochastic](./glossary.html#stochasticgradientdescent) decisions about whether to transmit that input or not. (*Stochastic* means “randomly determined”, and in this case, the coefficients that modify inputs are randomly initialized.)
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="RestrictedBoltzmannMachinePage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 Each visible node takes a low-level feature from an item in the dataset to be learned. For example, from a dataset of grayscale images, each visible node would receive one pixel-value for each pixel in one image. (MNIST images have 784 pixels, so neural nets processing them must have 784 input nodes on the visible layer.)
@@ -182,9 +186,9 @@ Gaussian transformations do not work well on RBMs' hidden layers. The rectified-
 
 ### <a name="next">Conclusions & Next Steps</a>
 
-You can interpret RBMs' output numbers as percentages. Every time the number in the reconstruction is *not zero*, that's a good indication the RBM learned the input. To get another perspective on the mechanisms that make restricted Boltzmann machines tick, click [here](./understandingRBMs.html).
+You can interpret RBMs' output numbers as percentages. Every time the number in the reconstruction is *not zero*, that's a good indication the RBM learned the input. 
 
-It should be noted that RBMs do not produce the most stable, consistent results of all shallow, feedforward networks. In many situations, a dense-layer [autoencoder](http://deeplearning4j.org/glossary.html#autoencoder) works better. Indeed, the industry is moving toward tools such as variational autoencoders.
+It should be noted that RBMs do not produce the most stable, consistent results of all shallow, feedforward networks. In many situations, a dense-layer [autoencoder](http://deeplearning4j.org/glossary.html#autoencoder) works better. Indeed, the industry is moving toward tools such as [variational autoencoders and GANs](./generative-adversarial-network.html).
 
 Next, we'll show you how to implement a [deep-belief network](./deepbeliefnetwork.html), which is simply many restricted Boltzmann machines stacked on top of one another.
 
@@ -194,19 +198,30 @@ Next, we'll show you how to implement a [deep-belief network](./deepbeliefnetwor
 * [Deeplearning.net's Restricted Boltzmann Machine Tutorial](http://deeplearning.net/tutorial/rbm.html)
 * [A Practical Guide to Training Restricted Boltzmann Machines](https://www.cs.toronto.edu/~hinton/absps/guideTR.pdf); Geoff Hinton
 
-### Other Deep Learning Beginner's Guides
+### <a name="beginner">More Machine Learning Tutorials</a>
 
+* [Introduction to Neural Networks](./neuralnet-overview.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
-* [Neural Networks](./neuralnet-overview.html)
-* [Eigenvectors, PCA and Entropy](./eigenvector.html)
+* [Deep Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
 * [Neural Networks & Regression](./logistic-regression.html)
-* [Convolutional Networks](./convolutionalnets.html)
-* [Generative Adversarial Networks (GANs)](https://deeplearning4j.org/generative-adversarial-network)
-* [Deeplearning4j Quickstart Examples](./quickstart)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Deeplearning4j Quickstart Examples](./quickstart.html)
 * [ND4J: A Tensor Library for the JVM](http://nd4j.org)
-* [MNIST for Beginners](./mnist-for-beginners.html)
+* [Deep Learning Tutorial: MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
-* [Word2vec and Natural-Language Processing](./word2vec.html)
-* [Reinforcement Learning](./reinforcementlearning)
 * [DL4J Programming Guide](https://deeplearning4j.org/programmingguide/01_intro)
-* [Inference: Machine Learning Model Server](./modelserver)

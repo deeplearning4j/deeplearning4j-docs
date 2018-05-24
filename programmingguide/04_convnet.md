@@ -107,10 +107,9 @@ Now that the data is ready, we can finally build the neural network. In this exa
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .seed(seed)
-    .iterations(iterations)
     .regularization(false).l2(0.005) 
     .activation(Activation.RELU)
-    .learningRate(0.0001)
+    .updater(new Sgd(0.0001))
     .weightInit(WeightInit.XAVIER)
     .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
     .updater(new Nesterovs(0.9))

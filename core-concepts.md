@@ -22,7 +22,7 @@ All deep learning is based on vectors and tensors, and DL4J relies on a tensor l
 
 ## Preparing Data for Learning and Prediction
 
-Unlike other machine learning or deep learning frameworks, DL4J treats the tasks of loading data and training algorithms as separate processes. You don't just point the model at data saved somewhere on disk, you load the data using DataVec. This gives you a lot more flexiblity, and retains the convenience of simple data loading. 
+Unlike other machine learning or deep learning frameworks, DL4J treats the tasks of loading data and training algorithms as separate processes. You don't just point the model at data saved somewhere on disk, you load the data using DataVec. This gives you a lot more flexibility, and retains the convenience of simple data loading.
 
 Before the algorithm can start learning, you have to prepare the data, even if you already have a trained model. Preparing data means loading it and putting it in the right shape and value range (e.g. normalization, zero-mean and unit variance). Building these processes from scratch is error prone, so use DataVec wherever possible.
 
@@ -48,7 +48,7 @@ If you use `NormalizerStandardize`, note that this is a normalizer that depends 
 
 As the name suggests, a DataSetIterator returns [DataSet](http://nd4j.org/doc/org/nd4j/linalg/dataset/DataSet.html) objects. DataSet objects are containers for the features and labels of your data. But they aren't constrained to holding just a single example at once. A DataSet can contain as many examples as needed.
 
-It does that by keeping the values in several instances of [INDArray] (http://nd4j.org/doc/org/nd4j/linalg/api/ndarray/INDArray.html): one for the features of your examples, one for the labels and two addional ones for masking, if you are using timeseries data (see [Using RNNs / Masking](http://deeplearning4j.org/usingrnns#masking) for more information). 
+It does that by keeping the values in several instances of [INDArray](http://nd4j.org/doc/org/nd4j/linalg/api/ndarray/INDArray.html): one for the features of your examples, one for the labels and two additional ones for masking, if you are using timeseries data (see [Using RNNs / Masking](http://deeplearning4j.org/usingrnns#masking) for more information).
 
 An INDArray is one of the n-dimensional arrays, or tensors, used in ND4J. In the case of the features, it is a matrix of the size `Number of Examples x Number of Features`. Even with only a single example, it will have this shape.
 
@@ -68,8 +68,7 @@ DL4J gives data scientists and developers tools to build a deep neural networks 
 MultiLayerConfiguration conf = 
 	new NeuralNetConfiguration.Builder()
 		.optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-		.updater(Updater.NESTEROVS).momentum(0.9)
-		.learningRate(learningRate)
+		.updater(new Nesterovs(learningRate, 0.9))
 		.list(
 			new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes).activation("relu").build(),
 			new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD).activation("softmax").nIn(numHiddenNodes).nOut(numOutputs).build()
@@ -90,12 +89,6 @@ After configuring your neural, you will have to train the model. The simplest ca
 once. A single pass over the entire dataset is called an *epoch*. DL4J has several different methods for passing through the data more than just once.
 
 The simplest way, is to reset your `DataSetIterator` and loop over the fit call as many times as you want. This way you can train your model for as many epochs as you think is a good fit.
-
-Another one of them is the `.iterations(N)` configuration parameter. It decides
-how ofter the network should iterate (i.e. train) over a a single mini-batch in
-a row. So, if you had 3 mini-batches A, B and C, setting `.iterations(3)` would
-result in your network learning with the data as `AAABBBCCC`, in contrast using
-3 epochs with `.iterations(1)` would feed the data to the network as `ABCABCABC`.
 
 Yet another way would be to use an [EarlyStoppingTrainer](http://deeplearning4j.org/doc/org/deeplearning4j/earlystopping/trainer/EarlyStoppingTrainer.html). 
 You can configure this trainer to run for as many epochs as you like and

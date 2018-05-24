@@ -41,7 +41,7 @@ Basically to use snapshots in your project, you should just add snapshot reposit
 </repositories>
 ```
 
-And specify snapshot version. We follow simple rule. If latest stable release version is `A.B.C`, snapshot version will be `A.B.(C+1)-SNAPSHOT`. i.e. as of writing this, latest stable version is `0.9.1`, and snapshot version is `0.9.2-SNAPSHOT`
+And specify snapshot version. We follow simple rule. If latest stable release version is `A.B.C`, snapshot version will be `A.B.(C+1)-SNAPSHOT`. The current snapshot version is `1.0.0-SNAPSHOT`.
 
 ## <a name="Limitations">Limitations</a>
 
@@ -75,12 +75,11 @@ repositories {
 }
  
 dependencies {
-    compile group: 'org.deeplearning4j', name: 'deeplearning4j-core', version: '0.9.2-SNAPSHOT'
-    compile group: 'org.deeplearning4j', name: 'deeplearning4j-modelimport', version: '0.9.2-SNAPSHOT'
-//  also tried:
-//  compile group: 'org.nd4j', name: 'nd4j-native', version: '0.9.2-SNAPSHOT'
-    compile "org.nd4j:nd4j-native:0.9.2-SNAPSHOT"
-    compile "org.nd4j:nd4j-native:0.9.2-SNAPSHOT:macosx-x86_64"
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-core', version: '1.0.0-SNAPSHOT'
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-modelimport', version: '1.0.0-SNAPSHOT'
+    compile "org.nd4j:nd4j-native:1.0.0-SNAPSHOT"
+    // Use windows-x86_64 or linux-x86_64 if you are not on macos
+    compile "org.nd4j:nd4j-native:1.0.0-SNAPSHOT:macosx-x86_64"
     testCompile group: 'junit', name: 'junit', version: '4.12'
  
 }

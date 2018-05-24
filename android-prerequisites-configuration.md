@@ -322,6 +322,7 @@ For larger or more complex neural networks like Convolutional or Recurrent Neura
 * Create a raw resource folder in the res directory of the application.
 * Copy yourModel.zip file into the raw folder.
 * Access it from your resources using an inputStream within a try / catch block.
+
 ``` java
 try {
 // Load name of model file (yourModel.zip).
@@ -338,4 +339,29 @@ try {
         e.printStackTrace();
     }
 ```
-An example application which uses a pretrained model can be found [here](https://deeplearning4j.org/android-DL4JImageRecognitionDemo).
+
+## Next Step: Pretrained DL4J Models on Android
+
+An example application which uses a pretrained model can be found [here](./android-DL4JImageRecognitionDemo.html).
+
+
+### <a name="beginner">More Machine Learning Tutorials</a>
+
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)

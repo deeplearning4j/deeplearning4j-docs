@@ -1,5 +1,6 @@
 ---
 title: Introduction to Deep Neural Networks (Deep Learning)
+author: Chris V. Nicholson
 layout: default
 ---
 
@@ -30,7 +31,11 @@ Neural networks help us cluster and classify. You can think of them as a cluster
 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="NeuralNetOverviewPage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 
@@ -317,6 +322,7 @@ For people just getting started with deep learning, the following tutorials and 
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network.html)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
 * [Symbolic Reasoning & Deep Learning](./symbolicreasoning.html)
 * [Using Graph Data with Deep Learning](./graphanalytics.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
@@ -328,6 +334,7 @@ For people just getting started with deep learning, the following tutorials and 
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [Deep Learning on Apache Spark](./spark.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
+* [Deep Learning on Apache Spark](https://deeplearning4j.org/spark)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 

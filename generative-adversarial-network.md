@@ -1,6 +1,7 @@
 ---
 title: GAN: A Beginner's Guide to Generative Adversarial Networks
 layout: default
+author: Chris V. Nicholson
 redirect_from: gan
 ---
 
@@ -13,7 +14,11 @@ Generative adversarial networks (GANs) are deep neural net architectures compris
 GANs' potential is huge, because they can learn to mimic any distribution of data. That is, GANs can be taught to create worlds eerily similar to our own in any domain: images, music, speech, prose. They are robot artists in a sense, and their [output is impressive](https://www.nytimes.com/2017/08/14/arts/design/google-how-ai-creates-new-music-and-new-artists-project-magenta.html) -- poignant even. 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH GANs</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="GANPage">GET STARTED WITH GANs</a>
 </p>
 
 ![Alt text](./img/aipainter.jpg)
@@ -269,6 +274,7 @@ if __name__ == '__main__':
 * [Symbolic AI and Deep Learning](./symbolicreasoning.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
 * [Using Graph Data with Deep Learning](./graphanalytics.html)
 * [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
 * [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
@@ -276,10 +282,13 @@ if __name__ == '__main__':
 * [Deep Convolutional Networks (CNNs)](./convolutionalnetwork.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Distributed Deep Learning on Apache Spark](https://deeplearning4j.org/spark)
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Open Datasets for Deep Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+
+![Alt text](./img/stained_glass_cycleGAN.jpg)
 
 ## GAN Use Cases
 

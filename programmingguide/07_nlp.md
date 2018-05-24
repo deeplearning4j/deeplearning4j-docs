@@ -111,7 +111,6 @@ Now we can configure the Word2Vec model.
 ```
 Word2Vec vec = new Word2Vec.Builder()
   .minWordFrequency(5)
-  .iterations(1)
   .layerSize(100)
   .windowSize(5)
   .iterate(iter)
@@ -123,7 +122,6 @@ There are a lot of parameters to Word2Vec, and we will explain them here:
 
 `minWordFrequency` is the minimum number of times a word must appear in the corpus. Thus, if a word occurs fewer than 5 times, the feature vector representation of the word will not be learned by Word2Vec. Learning an appropriate feature vector representation requires that words appear in multiple contexts so that useful features can be learned. 
 
-The `iterations` parameter controls the number of times the network will update its coefficients for a batch of the data. If the number of iterations is too few for the data, then the algorithm might not learn the features effectively, but if there are too many iterations, the training time might be too long. 
 
 `layerSize` specifies the number of dimensions of the feature vector of a word. Thus, a `layerSize` of 100 means that a word will be represented by a 100-dimensional vector. 
 

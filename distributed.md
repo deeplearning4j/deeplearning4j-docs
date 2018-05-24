@@ -87,7 +87,6 @@ JavaSparkContext sc = new JavaSparkContext(sparkConf);
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
             .seed(12345)
             .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-            .iterations(1)
             ...
             .build();
 

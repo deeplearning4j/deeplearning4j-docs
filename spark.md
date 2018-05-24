@@ -5,7 +5,7 @@ layout: default
 
 # Deep Learning on Apache Spark
 
-Deep learning is computationally intensive, so on very large datasets, speed matters. You can tackle the problem with faster hardware (usually GPUs), optimized code and some form of parallelism.
+Deep learning is computationally intensive, so on very large datasets, speed matters. You can tackle the problem with faster hardware (usually GPUs), optimized code and some form of parallelism. Most people use Spark wrong when they're training deep neural networks, because Spark alone is not an efficient computation layer. It should be used for fast ETL, and the matrix manipulations should be moved down to faster, lower-level code, as Deeplearning4j does with [ND4J](https://nd4j.org/) and [its underlying C++ library libnd4j](https://github.com/deeplearning4j/libnd4j).
 
 Data parallelism shards large datasets and hands those pieces to separate neural networks, say, each on its own core. Deeplearning4j relies on Spark for this, training models in parallel and [iteratively averages](./iterativereduce.html) the parameters they produce in a central model. (Model parallelism, [discussed here by Jeff Dean et al](https://static.googleusercontent.com/media/research.google.com/en//archive/large_deep_networks_nips2012.pdf), allows models to specialize on separate patches of a large dataset without averaging.)
 
@@ -43,7 +43,11 @@ Spark jobs, this page will not teach you. Please consider studying Spark basics 
 If you want to run multiple models on the same server, consider using [parallelwrapper instead](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-cuda-specific-examples/src/main/java/org/deeplearning4j/examples/multigpu/MultiGpuLenetMnistExample.java).
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="SparkPage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 `Parallelwrapper` implements the same concepts (parameter averaging and gradient sharing) optimized for a single server.

@@ -129,11 +129,9 @@ Setting up neural network configuration for a regression is similar to before. W
 ```
 MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
     .seed(seed)
-    .iterations(iterations)
     .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-    .learningRate(learningRate)
     .weightInit(WeightInit.XAVIER)
-    .updater(new Nesterovs(0.9))
+    .updater(new Nesterovs(learningRate,0.9))
     .list()
     .layer(0, new DenseLayer.Builder().nIn(numInputs).nOut(numHiddenNodes)
         .activation(Activation.TANH).build())
@@ -173,7 +171,7 @@ The code for the first example is shown below. We can see that both layers take 
 
 ```
 ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
-    .learningRate(0.01)
+    .updater(new Sgd(0.01))
     .graphBuilder()
     .addInputs("input") //can use any label for this
     .addLayer("L1", new GravesLSTM.Builder().nIn(5).nOut(5).build(), "input")
@@ -189,7 +187,7 @@ The second example concatenates the two input arrays using a MergeVertex and the
 
 ```
 ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
-    .learningRate(0.01)
+    .updater(new Sgd(0.01))
     .graphBuilder()
     .addInputs("input1", "input2")
     .addLayer("L1", new DenseLayer.Builder().nIn(3).nOut(4).build(), "input1")
@@ -206,7 +204,7 @@ The third example is of a multi-task learning where multiple independent predict
 
 ```
 ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
-    .learningRate(0.01)
+    .updater(new Sgd(0.01))
     .graphBuilder()
     .addInputs("input")
     .addLayer("L1", new DenseLayer.Builder().nIn(3).nOut(4).build(), "input")

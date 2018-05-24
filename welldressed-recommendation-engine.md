@@ -81,16 +81,14 @@ Here's the current setup for store-oriented nets:
         int outputNum = sergeData.labelSize;
         int numSamples = sergeData.labelSize * 10 * 100;
         int batchSize = sergeData.labelSize * 5;
-        int iterations = 500;
         int splitTrainNum = (int) (batchSize * .8);
         int seed = 123;
         int listenerFreq = 500;
 
     MultiLayerConfiguration.Builder builder = new NeuralNetConfiguration.Builder()
                 .seed(seed)
-                .iterations(iterations)
                 .batchSize(batchSize)
-                .learningRate(1e-6)
+                .updater(new Sgd(1e-6))
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
                 .l1(1e-6)
                 .regularization(true)

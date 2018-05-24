@@ -13,7 +13,11 @@ Skymind bundles Deeplearning4j and Python deep learning libraries such as Tensor
 DL4J is portable and platform neutral, rather than being optimized on a specific cloud service such as AWS, Azure or Google Cloud. In speed, its [performance is equal to Caffe](https://github.com/deeplearning4j/dl4j-benchmark) on non-trivial image-processing tasks on multiple GPUs, and faster than Tensorflow or Torch. For more information on benchmarking Deeplearning4j, please see this [benchmarks page](https://deeplearning4j.org/benchmark) to optimize its performance by adjusting the JVM's heap space, garbage collection algorithm, memory management and DL4J's ETL pipeline. Deeplearning4j has Java, [Scala](https://github.com/deeplearning4j/scalnet) and [Python APIs, the latter using Keras](./keras). 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH DEEP LEARNING</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="CompareDL4JPage">GET STARTED WITH DEEP LEARNING</a>
 </p>
 
 ### Content
@@ -204,7 +208,11 @@ Named after a subatomic particle, Gluon is an API over Amazon's MxNet that was [
 * (+) Likely to become standard Python API for NNs
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success" onClick="ga('send', 'event', ‘quickstart', 'click');">GET STARTED WITH KERAS</a>
+<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="CompareDL4JPage">GET STARTED WITH KERAS</a>
 </p>
 
 ### <a name="mxnet">MxNet</a>
@@ -280,8 +288,9 @@ The deep-learning frameworks listed above are more specialized than general mach
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Generative Adversarial Networks (GAN)](./generative-adversarial-network.html)
 * [Deep Reinforcement Learning (RL)](./deepreinforcementlearning.html)
-* [Symbolic Reasoning & Deep Learning](./symbolicreasoning.html)
-* [Graph Data & Deep Learning](./graphdata.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network.html)
+* [Graph Analytics & Machine Learning](./graphanalytics.html)
 * [Open Data Sets for Machine Learning](./opendata.html)
 * [Restricted Boltzmann Machines (RBM)](./restrictedboltzmannmachine.html)
 * [Eigenvectors, Eigenvalues, PCA and Entropy](./eigenvector.html)
