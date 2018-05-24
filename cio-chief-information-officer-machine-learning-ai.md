@@ -30,7 +30,7 @@ Let's look at a couple examples of each:
 
 * **Goal-oriented**: Goal-oriented learning is best described in terms of a video game. In a video game, certain actions win you more points, while others will cost you. That is, there's a correlation between what you do and the amount of points you gain or lose. Algorithms can learn the relationship between your actions and the rewards a game returns to you. Some of these algorithms are called "[reinforcement learning](./deepreinforcementlearning)". Google created an algorithm called AlphaGo that learns those correlations for the board game of Go, and it learned them so well that the algorithm beat the world champion of Go. If you can define problems to be solved as games to be won, and strictly define how points are awarded, then you can apply goal-oriented learning to real-life situations as well. For example, you might reward a robot for successfully pushing a button, or you might reward a drone for every second it remains aloft. In finance, you might teach an algorithm to correlate the buying and selling of securities with the profit or loss it incurs. 
 
+If you can't formulate the problem you want to solve as one of these four types of predictions, then you need to start over. Until you achieve strategic clarity over the outcomes you want to predict, it's not much use fiddling with AI. 
+
 ## What Does AI Need to Work?
-
-
 
