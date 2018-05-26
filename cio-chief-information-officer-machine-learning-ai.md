@@ -45,7 +45,43 @@ We'll explore each in turn. There are technological solutions, and vendors to se
 
 * Data
 
-Once you have defined the problem you want to solve, the next question you have to ask is: Do I have the data that's pertinent to this problem. That data is the food your algorithms need. Without it, they will not be able to make accurate predictions. AI begins with gathering the right data for the problem that's important to you. If you don't have that data, you need to take a step back, and devise a data strategy. 
+Once you've defined the problem you want to solve, the next question to ask is: "Do I have the data that's pertinent to this problem?" That data is the fuel your algorithms need. Without it, they cannot be trained, and will not be able to make accurate predictions. 
+
+**AI begins with gathering the right data** for the problem that's important to you. If you don't have that data, you need to take a step back and devise a data strategy. That strategy might detail the steps necessary to identify the proper data, gather it, move it to a data lake and store it there.  
+
+In the previous section, we listed the types of problems that AI can solve. Below, we'll list many of the major data types that AI can work with:
+
+* Text
+* Time Series
+* Tabular data
+* Images
+* Video
+* Sound
+* Voice
+
+Many of these data types require no explanation. Every one knows what an image is. 
+
+### What's a Time Series?
+
+Others are slightly less common: not every one is familiar with the term "time series". A time series is data that is recorded over time, where the sequence of the data is important. For example, temperature readings thrown off by a thermometer come in a series over time. You could take a reading each second, or each minute, and that series of temperatures would contain patterns. 
+
+A thermometer measuring the outdoor temperature would peak in the early afternoon and reach its low point sometime after midnight in a daily cycle. That's a regular pattern, and on the basis of that pattern, an algorithm can both make predictions about future temperatures, as well as recognize anomalous behavior when the temperature doesn't behave as expected. 
+
+Attaching a thermometer as a sensor to a piece of heavy equipment can reveal patterns about the machine's internal state: extremely high temperatures at the wrong time might signal that something is going wrong. That's the basis of a preventative maintenance that uses AI. 
+
+Other forms of time series data include server logs that monitor the behavior of machines in your data center; web logs that track the behavior of customers on your website; data packets flowing in and out of your servers (that has clear cybersecurity applications); monthly consumption figures used for market forecasting and inventory planning; and many other sensors the monitor the health of patients (think vital statistics measured in a hospital) and machines.
+
+### Tabular Data
+
+Tabular data, also referred to as columnar data, is the kind of data you find in a relational data base. If you've ever worked with a spread sheet, where each row is a different *thing* and each column records a different aspect of the thing, then you know what columnar data is. For example, each row might be a person with a unique ID, and each column would record a piece of metadata about that person, like height, weight, gender, address, etc. 
+
+While recent advances in AI have highlighted its superhuman accuracy in image recognition and voice detection, most business problems involve either text, time series or tabular data. And deep learning applies equally well to those. Which is to say, deep learning opens the possibility that on old business problems, like fraud detection or market forecasting, companies can cut their error rate in half. Those leaps in accuracy have a monetary value, which only the business itself can know. And those leaps in accuracy are the reason why enterprise is adopting AI technology. 
+
+### What's a Tensor?
+
+Algorithms such as deep artificial neural networks can work with any type of data, as long as it's a tensor. ;) That is, to feed data into a neural net, you need to transform it with a data pipeline focused on machine learning. That data pipeline takes in data in any form, and it outputs a tensor. 
+
+What's a tensor? It helps to start with something simpler and build up. A single number like `5` is called a scalar. When you stack those scalars one on top of another, like cells in column in a spread sheet, that's a vector. When you take several columns and place them next to each other, as we do with spread sheets, you have an array. And if you place those two-dimensional arrays on top of each other like pages in a book, that's a tensor. A tensor is an array with three or more dimensions. You can actually keep adding dimensions beyond three, but it's more difficult to visualize. In any case, tensors are the basic data structure that deep learning algorithms work with. 
 
 * Team
 
