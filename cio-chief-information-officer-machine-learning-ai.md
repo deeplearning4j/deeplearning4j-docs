@@ -100,6 +100,18 @@ Which brings us to the team you need. Broadly speaking, there are six groups of 
 
 There are only two problems with data science. The data, and the scientists. The problem with the data is it's messy. The problem with the scientists is they're scarce. There are not enough data scientists in the world, which is a real constraint on the adoption and implementation of AI. 
 
+What does a data scientist do? 
+
+A wag would say that a data scientist is someone who knows statistics better than a programmer, and programming better than a statistician. Alternatively, "data scientist" is how we say "statistician" in Silicon Valley. Both jokes have some truth in them. 
+
+Data science is inherently statistical, and statistics is about counting how often things happen, in order to make predictions about them. But data scientists also have to master the computational tools to manipulate the vast amounts of data they are called upon to work with. It often falls to the data scientist to locate the proper data, explore it, and conduct a series of experiments to see if the data will be useful for making certain kinds of predictions. To conduct those experiments, the data scientist will choose a variety of algorithms, and then tune and train those algorithms on the data to gauge their performance and accuracy. That's the core of a data scientist's activity.
+
+Data scientists typically work with machine-learning and statistical tools, and most of them work in programming languages such as Python and R. 
+
+#### Data Engineers
+
+Data engineers are more involved with gathering, moving and storing the data. If there are data pipelines to be built in order to transform the data in one way or another, especially on a high-throughput production stack, then data engineers will likely be the people do do it, rather than data scientists. Data engineers 
+
 ### Tooling
 
 ### Infrastructure
