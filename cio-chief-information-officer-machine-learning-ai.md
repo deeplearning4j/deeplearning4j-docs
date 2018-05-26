@@ -114,6 +114,18 @@ Data engineers are more involved with gathering, moving and storing the data. If
 
 Data engineers typically work with the "big data" stack, using languages such as Java, Scala, C# and C/C++.
 
+#### DevOps
+
+If the role of the data scientist is to train an algorithmic model to make accurate predictions about data, the role of the DevOps team is to take that AI model and deploy it to the production stack, integrating it with the technologies your company already uses as part of your product. The chief task of DevOps is to maintain the stability and reliability of software products and IT stacks, and that includes any AI models to be incorporated into those products. This is the realm of machine-learning ops, or the operational considerations of deploying and maintaining a machine learning model. Without this stage, AI is just an experiment whose results might be discussed in meetings. It is only in deploying AI models and integrating them into your products that your company will get real value from AI. 
+
+#### Software Engineers
+
+AI is just a component in a larger product. Aside from DevOps, there are questions to be asked about how AI fits into the rest of your software development process. On the most successful teams, data scientists frequently embed with larger software engineering teams in order to answer those questions more quickly. 
+
+#### Domain Experts
+
+Sometimes data scientists are also domain experts with special knowledge about the problem they need to solve, and sometimes they're not. 
+
 ### Tooling
 
 
