@@ -110,9 +110,13 @@ Data scientists typically work with machine-learning and statistical tools, and 
 
 #### Data Engineers
 
-Data engineers are more involved with gathering, moving and storing the data. If there are data pipelines to be built in order to transform the data in one way or another, especially on a high-throughput production stack, then data engineers will likely be the people do do it, rather than data scientists. Data engineers 
+Data engineers are more involved with gathering, moving and storing the data. If there are data pipelines to be built in order to transform the data somehow, especially on a high-throughput production stack, then data engineers will likely be the people to build it, rather than data scientists. Often the data scientists prototype a series of data transforms that later has to be rewritten in a more performant manner. 
+
+Data engineers typically work with the "big data" stack, using languages such as Java, Scala, C# and C/C++.
 
 ### Tooling
+
+
 
 ### Infrastructure
 
