@@ -43,7 +43,7 @@ To build an AI solution, you need four things:
 
 We'll explore each in turn. There are technological solutions, and vendors to sell them, which solve for tooling and infrastructure. Getting the right data and team is harder. 
 
-* Data
+### Data
 
 Once you've defined the problem you want to solve, the next question to ask is: "Do I have the data that's pertinent to this problem?" That data is the fuel your algorithms need. Without it, they cannot be trained, and will not be able to make accurate predictions. 
 
@@ -61,7 +61,7 @@ In the previous section, we listed the types of problems that AI can solve. Belo
 
 Many of these data types require no explanation. Every one knows what an image is. 
 
-### What's a Time Series?
+#### What's a Time Series?
 
 Others are slightly less common: not every one is familiar with the term "time series". A time series is data that is recorded over time, where the sequence of the data is important. For example, temperature readings thrown off by a thermometer come in a series over time. You could take a reading each second, or each minute, and that series of temperatures would contain patterns. 
 
@@ -71,22 +71,35 @@ Attaching a thermometer as a sensor to a piece of heavy equipment can reveal pat
 
 Other forms of time series data include server logs that monitor the behavior of machines in your data center; web logs that track the behavior of customers on your website; data packets flowing in and out of your servers (that has clear cybersecurity applications); monthly consumption figures used for market forecasting and inventory planning; and many other sensors the monitor the health of patients (think vital statistics measured in a hospital) and machines.
 
-### Tabular Data
+#### Tabular Data
 
 Tabular data, also referred to as columnar data, is the kind of data you find in a relational data base. If you've ever worked with a spread sheet, where each row is a different *thing* and each column records a different aspect of the thing, then you know what columnar data is. For example, each row might be a person with a unique ID, and each column would record a piece of metadata about that person, like height, weight, gender, address, etc. 
 
 While recent advances in AI have highlighted its superhuman accuracy in image recognition and voice detection, most business problems involve either text, time series or tabular data. And deep learning applies equally well to those. Which is to say, deep learning opens the possibility that on old business problems, like fraud detection or market forecasting, companies can cut their error rate in half. Those leaps in accuracy have a monetary value, which only the business itself can know. And those leaps in accuracy are the reason why enterprise is adopting AI technology. 
 
-### What's a Tensor?
+#### What's the Hell's a Tensor?
 
-Algorithms such as deep artificial neural networks can work with any type of data, as long as it's a tensor. ;) That is, to feed data into a neural net, you need to transform it with a data pipeline focused on machine learning. That data pipeline takes in data in any form, and it outputs a tensor. 
+Algorithms such as deep artificial neural networks can work with any type of data, as long as it's a tensor. ;) That is, to feed data into a neural net, you need to transform it with a data pipeline focused on machine learning. That data pipeline takes in data in any form, and it outputs a tensor. That's why Google calls their AI tool Tensorflow.
 
 What's a tensor? It helps to start with something simpler and build up. A single number like `5` is called a scalar. When you stack those scalars one on top of another, like cells in column in a spread sheet, that's a vector. When you take several columns and place them next to each other, as we do with spread sheets, you have an array. And if you place those two-dimensional arrays on top of each other like pages in a book, that's a tensor. A tensor is an array with three or more dimensions. You can actually keep adding dimensions beyond three, but it's more difficult to visualize. In any case, tensors are the basic data structure that deep learning algorithms work with. 
 
-* Team
+Just to be clear, when you starting building AI solutions, your team will spend 80% of its time on data pipelines, the workflows that pre-process and clean and standardize and normalize the data so that algorithms can learn something from it. 
 
-* Tooling
+### Team
 
-* Infrastructure
+Which brings us to the team you need. Broadly speaking, there are six groups of people you should think about when you're building AI solutions:
+
+* Data Scientists
+* Data Engineers
+* DevOps/Sysadmins
+* Software Engineers
+* Domain Experts
+* Users
+
+
+
+### Tooling
+
+### Infrastructure
 
 
