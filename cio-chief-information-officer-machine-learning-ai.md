@@ -59,7 +59,7 @@ In the previous section, we listed the types of problems that AI can solve. Belo
 * Sound
 * Voice
 
-Many of these data types require no explanation. Every one knows what an image is. 
+Many of these data types require no explanation. Everyone knows what an image is. Everyone knows what voice is. 
 
 #### What's a Time Series?
 
@@ -96,7 +96,9 @@ Which brings us to the team you need. Broadly speaking, there are six groups of 
 * Domain Experts
 * Users
 
+#### Data Scientists
 
+There are only two problems with data science. The data, and the scientists. The problem with the data is it's messy. The problem with the scientists is they're scarce. There are not enough data scientists in the world, which is a real constraint on the adoption and implementation of AI. 
 
 ### Tooling
 
