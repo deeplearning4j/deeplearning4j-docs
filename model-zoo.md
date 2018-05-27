@@ -81,7 +81,7 @@ Note that for convolutional models, input shape information follows the NCHW con
 
 The model zoo comes with well-known image recognition configurations in the deep learning community. The zoo also includes an LSTM for text generation, and a simple CNN for general image recognition.
 
-You can find a complete list of models using this [deeplearning4j-zoo Github link](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model).
+You can find a complete list of models using this [deeplearning4j-zoo Github link](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model).
 
 This includes ImageNet models such as VGG-16, ResNet-50, AlexNet, Inception-ResNet-v1, GoogLeNet, LeNet, and more. 
 
