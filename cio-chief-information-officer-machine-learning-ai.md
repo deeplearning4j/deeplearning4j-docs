@@ -132,7 +132,7 @@ Any company seeking to answer highly complex questgions will need a few highly p
 
 ### Machine-Learning Tooling
 
-The landscape of machine-learning tools is highly fragmented. Every public cloud company has produced its own machine-learning toolkit in an attempt to commoditize the complements of its true money-maker, renting chips by the hour: Google created TensorFlow, the most popular machine-learning framework written for the Python programming language, as well as Keras; AWS has adopted Apache MxNet, created by CMU; and Microsoft built CNTK. 
+The landscape of machine-learning tools is highly fragmented. Every public cloud company has produced its own [machine-learning toolkit](./compare-dl4j-tensorflow-pytorch.html) in an attempt to commoditize the complements of its true money-maker, renting chips by the hour: Google created TensorFlow, the most popular machine-learning framework written for the Python programming language, as well as Keras; AWS has adopted Apache MxNet, created by CMU; and Microsoft built CNTK. 
 
 Meanwhile, Berkeley produced Caffe, the popular machine-vision framework that is slowly dying for lack of support, and Caffe's creator moved to Facebook, which has introduced PyTorch and Caffe 2. As of 2018, PyTorch is the darling of machine-learning researchers due to its flexibility, while TensorFlow is dominant among data scientists. 
 
