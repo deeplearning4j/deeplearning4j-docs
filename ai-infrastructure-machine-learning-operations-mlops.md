@@ -5,7 +5,7 @@ layout: default
 
 # AI Infrastructure & Machine Learning Operations (MlOps)
 
-
+AI infrastructure and machine learning operations, or MlOps, are basically synonymous. Both terms denote the technology stack necessary to get machine learning algorithms into production in a stable, scalable and reliable way. 
 
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
