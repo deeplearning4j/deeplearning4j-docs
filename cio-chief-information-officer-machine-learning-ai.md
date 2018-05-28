@@ -124,12 +124,26 @@ AI is just a component in a larger product. Aside from DevOps, there are questio
 
 #### Domain Experts
 
-Sometimes data scientists are also domain experts with special knowledge about the problem they need to solve, and sometimes they're not. 
+Sometimes data scientists happen to be domain experts with special knowledge about the problem they need to solve, and sometimes they do not have that expertise. 
 
-### Tooling
+Domain experts, or people with expert knowledge of the area in which you want to make predictions, are rare, and their expertise can both steer the questions you ask and influence the speed at which your team can explore the problem. Making predictions about an automobile composed of 10,000 parts is a process that can benefit from some knowledge about those parts and how they are assembled. 
 
+Any company seeking to answer highly complex questgions will need a few highly paid domain experts to advise on their predictive problems, or risk frequent and long delays in finding the answers.
 
+### Machine-Learning Tooling
 
-### Infrastructure
+The landscape of machine-learning tools is highly fragmented. Every public cloud company has produced its own machine-learning toolkit in an attempt to commoditize the complements of its true money-maker, renting chips by the hour: Google created TensorFlow, the most popular machine-learning framework written for the Python programming language, as well as Keras; AWS has adopted Apache MxNet, created by CMU; and Microsoft built CNTK. 
 
+Meanwhile, Berkeley produced Caffe, the popular machine-vision framework that is slowly dying for lack of support, and Caffe's creator moved to Facebook, which has introduced PyTorch and Caffe 2. As of 2018, PyTorch is the darling of machine-learning researchers due to its flexibility, while TensorFlow is dominant among data scientists. 
 
+The question for executives, product managers and leaders of business units is which one of these open-source frameworks do you include in a mission-critical application, and what do you do when it breaks? At other layers of the open-source stack, there are clear answers to that question. Red Hat supports Linux via RHEL; Cloudera and Hortonworks support Hadoop and Spark via CDH and HDP, respectively. 
+
+The public cloud vendors, whose strategy can be summed up as "Accenture for hardware", are introducing machine-learning toolkits much like Microsoft created Internet Explorer, as a way to shore up their core business. But they rarely if ever sign SLAs for on-prem deployments, precisely because that does not serve their cloud strategy.  
+
+### AI Infrastructure
+
+Tooling is just the top layer of an array of technologies that you might call AI infrastructure. Why is AI infrastructure different than any other type of IT infrastructure that requires data storage and networking and processing? Well, the most advanced kinds of AI, such as deep artificial neural networks, are data-hungry. The algorithms need to train on a lot of data in order to make accurate predictions. We're talking gigabytes, terabytes and sometimes petabytes of data. Processing that data is computationally intensive. 
+
+That's why AI creates a giant sucking sound. It's sucking in data. That data needs to be gathered, moved, stored, transformed and processed in order to produce predictions with AI. Doing that efficiently, in order for data scientists to perform experiments in a reasonable amount of time, requires special hardware, fast storage and real-time streaming, for example. 
+
+The hardware required is usually a GPU, and there are only two viable GPU makers: Nvidia and AMD (which has the backing of Intel). You can decide not to buy the more expensive chips, of course, but then you're paying your scarce and expensive data scientists to twiddle their thumbs while the algorithms train for hours and days on slower chips. 
