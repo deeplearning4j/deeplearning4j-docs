@@ -7,6 +7,8 @@ layout: default
 
 AI infrastructure and machine learning operations, or MlOps, are basically synonymous. Both terms denote the technology stack necessary to get machine learning algorithms into production in a stable, scalable and reliable way. 
 
+That stack extends from the data science tools used to select and train machine learning algorithms down to the hardware those algorithms run on and the data bases and message queues from which they draw the datasets that are their fuel. 
+
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview.html)
