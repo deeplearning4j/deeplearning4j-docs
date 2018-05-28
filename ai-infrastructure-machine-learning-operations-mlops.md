@@ -9,6 +9,10 @@ AI infrastructure and machine learning operations, or MlOps, are basically synon
 
 That stack extends from the data science tools used to select and train machine learning algorithms down to the hardware those algorithms run on and the data bases and message queues from which they draw the datasets that are their fuel. 
 
+AI infrastructure encompasses almost every stage of the [machine-learning workflow](./machine-learning-workflow.html). It enables data scientist, data engineers, software engineers and DevOps teams to access and manage the computing resources to test, train and deploy AI algorithms. 
+
+Early in the workflow, that includes exploratory data analysis, running large-scale queries on data you've stored. In the middle, AI infrastructure involves training algorithms, probably on a cluster of distributed GPUs. And late in the workflow, it entails deploying those machine-learning models for inference in a reliabile and scalable way, much as you would deploy a web site on a web server. 
+
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview.html)
