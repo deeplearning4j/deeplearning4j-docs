@@ -12,4 +12,4 @@ WIP.
 ## Further Reading
 
 * [Empiricism and the limits of gradient descent](http://togelius.blogspot.gr/2018/05/empiricism-and-limits-of-gradient.html)
-
+* [How Learning Can Guide Evolution, by Hinton and Nowlan (1987)](http://www.cogsci.ucsd.edu/~rik/courses/cogs184_w10/readings/HintonNowlan97.pdf)
