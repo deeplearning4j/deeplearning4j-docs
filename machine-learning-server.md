@@ -6,13 +6,13 @@ redirect_from: modelserver
 
 # Machine Learning Server for Inference in Production 
 
-Deeplearning4j serves machine-learning models for inference in production using the free community edition of SKIL, the [Skymind Intelligence Layer](https://skymind.ai/products). 
+Deeplearning4j serves machine-learning models for inference in production using the free community edition of SKIL, the [Skymind Intelligence Layer](https://skymind.ai/products). This embeddable AI model server acts as an embeddable machine-learning backend for other software solutions, ranging from [RPA](./robotic-process-automation-rpa.html) to ticket processing. 
 
 You can visit [SKIL's Machine Learning Model Server Quickstart](https://docs.skymind.ai/docs) to test it out. Here is the Swagger documentation to the [machine learning server's API](https://docs.skymind.ai/v1.0.3/reference).
 
 ![Alt text](./img/SKIL_API_classify.png) 
 
-A model server serves the parametric machine-learning models that makes decisions about data. It is used for the inference stage of a machine-learning workflow, after data pipelines and model training. A model server is the tool that allows data science research to be deployed in a real-world production environment.
+A model server serves the parametric machine-learning models that makes decisions about data. It is used for the inference stage of a [machine-learning workflow](./machine-learning-workflow), after data pipelines and model training. A model server is the tool that allows data science research to be deployed in a real-world production environment.
 
 What a Web server is to the Internet, [a model server is to AI](https://docs.google.com/presentation/d/1psNOQ3ZpPFeak2zsjO5EgUS-ypoFeyw-3eiLNvyEZzg/edit?usp=sharing). Where a Web server receives an HTTP request and returns data about a Web site, a model server receives data, and returns a decision or prediction about that data: e.g. sent an image, a model server might return a label for that image, identifying faces or animals in photographs. 
 
