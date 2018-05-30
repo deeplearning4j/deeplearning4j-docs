@@ -8,7 +8,7 @@ redirect_from: modelserver
 
 Deeplearning4j serves machine-learning models for inference in production using the free community edition of SKIL, the [Skymind Intelligence Layer](https://skymind.ai/products). 
 
-You can visit [SKIL's Machine Learning Model Server Quickstart](https://skymind.readme.io/v1.0.1/docs/quickstart) to test it out. Here is the Swagger documentation to the [machine learning server's API](https://docs.skymind.ai/v1.0.3/reference).
+You can visit [SKIL's Machine Learning Model Server Quickstart](https://docs.skymind.ai/docs) to test it out. Here is the Swagger documentation to the [machine learning server's API](https://docs.skymind.ai/v1.0.3/reference).
 
 ![Alt text](./img/SKIL_API_classify.png) 
 
