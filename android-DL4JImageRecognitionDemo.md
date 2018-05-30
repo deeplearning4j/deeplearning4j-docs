@@ -47,28 +47,7 @@ Deeplearning4J applications requires application specific dependencies in the bu
             resolutionStrategy.force 'junit:junit:4.12'
         }
 ```
-Depending on the combination of dependencies, duplication conflicts can arise that must be handled with exclusions. After adding the above dependencies and the exclusions listed below, sync the Gradle file add additional exclusions if needed. The error message will identify the file path that should be added to the list of exclusions. An example error message with file path: **> More than one file was found with OS independent path 'org/bytedeco/javacpp/ windows-x86_64/msvp120.dll'**
-```java
-packagingOptions {
-            exclude 'META-INF/DEPENDENCIES'
-            exclude 'META-INF/DEPENDENCIES.txt'
-            exclude 'META-INF/LICENSE'
-            exclude 'META-INF/LICENSE.txt'
-            exclude 'META-INF/license.txt'
-            exclude 'META-INF/NOTICE'
-            exclude 'META-INF/NOTICE.txt'
-            exclude 'META-INF/notice.txt'
-            exclude 'META-INF/INDEX.LIST'
 
-            exclude 'org/bytedeco/javacpp/windows-x86/msvcp120.dll'
-            exclude 'org/bytedeco/javacpp/windows-x86_64/msvcp120.dll'
-            exclude 'org/bytedeco/javacpp/windows-x86/msvcr120.dll'
-            exclude 'org/bytedeco/javacpp/windows-x86_64/msvcr120.dll'
-
-            exclude'LICENSE-EPL-1.0.txt'
-            exclude'LICENSE-EDL-1.0.txt'
-        }
-```
 Compiling these dependencies involves a large number of files, thus it is necessary to set multiDexEnabled to true in defaultConfig.
 ```java
 multiDexEnabled true
