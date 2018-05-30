@@ -39,21 +39,6 @@ Deeplearning4J applications require several dependencies in the build.gradle fil
         compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86"
         compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86_64"
 ```
-The DL4J and ND4J libraries contain several identically named files which requires exclusion statements in the packagingOptions. After added the above dependencies to the build.gradle file, try syncing Gradle with the below exclusions and add additional exclusions if needed. The error message will identify the file path that should be added to the list of exclusions. An example error message with file path: **> More than one file was found with OS independent path 'org/bytedeco/javacpp/ windows-x86_64/msvp120.dll'**
-```java
-packagingOptions {
- 
-	exclude 'META-INF/DEPENDENCIES'
-	exclude 'META-INF/DEPENDENCIES.txt'
-	exclude 'META-INF/LICENSE'
-	exclude 'META-INF/LICENSE.txt'
-	exclude 'META-INF/license.txt'
-	exclude 'META-INF/NOTICE'
-	exclude 'META-INF/NOTICE.txt'
-	exclude 'META-INF/notice.txt'
-	exclude 'META-INF/INDEX.LIST'
- 
-```
 Compiling these dependencies involves a large number of files, thus it is necessary to set multiDexEnabled to true in defaultConfig.
 ```java
 multiDexEnabled true
