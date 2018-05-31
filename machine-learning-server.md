@@ -71,6 +71,20 @@ SKIL meets all of those criteria. Briefly, SKIL is a:
 
 SKIL is enterprise tested. Skymind’s clients include the US Department of Homeland Security, Softbank, France Telecom and Ericsson, among others. 
 
+### An Embeddable Machine-Learning Model Server
+
+SKIL is embeddable in your software. You can deploy it within your software. That means SKIL does not require its own server or cluster -- it can be deployed on the server or cluster you are already using. 
+
+And once deployed, it is stand-alone -- it doesn't need to call on external software to function. That means that SKIL ships with the managed Python dependencies it needs, and you don't have to install others from the Internet. 
+
+SKIL does not require or assume that you load all data into SKIL to be processed. You can just plug it in to whichever database you're using. In fact, SKIL resembles the embeddable databases you already rely upon. 
+
+SKIL does not require that you use its GUI. It gives you the flexibility to connect to the data sources you already use. It can be deployed as a Docker image on Kubernetes or as an .exe file on Windows or as an RPM. It's not a Web-hosted solution waiting for you to move your data to the public cloud. SKIL doesn't ask that you build your data stack around it. SKIL will work wherever you have data and hardware.  
+
+SKIL has a "flexible topology". That is, you can set up a SKIL cluster however you want. If you want "distributed", you can use MySQL and Zookeeper. 
+
+Architecturally, SKIL has two parts: the machine-learning model server and the Process Launcher Daemon. The Process Launcher Daemon is what controls what a SKIL cluster is. It allows you to launch model servers or other programs from SKIL. The machine-learning model server is also configurable and standalone.  That's what allows you to stand up a machine learning model and use it via the REST API and other interfaces. 
+
 # More Machine Learning Servers & Platforms
 
 ## TensorFlow Serving
