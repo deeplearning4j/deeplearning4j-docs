@@ -4,7 +4,7 @@ layout: default
 redirect_from: modelserver
 ---
 
-# Machine Learning Server for Inference in Production 
+# Machine Learning Server for Inference in Production (Linux, Windows, Hadoop)
 
 Deeplearning4j serves machine-learning models for inference in production using the free community edition of SKIL, the [Skymind Intelligence Layer](https://skymind.ai/products). This embeddable AI model server acts as an embeddable machine-learning backend for other software solutions, ranging from [RPA](./robotic-process-automation-rpa.html) to ticket processing. 
 
@@ -85,9 +85,9 @@ SKIL is embeddable in your software. You can deploy it within your software. Tha
 
 And once deployed, it is stand-alone -- it doesn't need to call on external software to function. That means that SKIL ships with the managed Python dependencies it needs, and you don't have to install others from the Internet. 
 
-SKIL does not require or assume that you load all data into SKIL to be processed. You can just plug it in to whichever database you're using. In fact, SKIL resembles the embeddable databases you already rely upon. 
+SKIL does not require or assume that you load all data into SKIL to be processed. You can just plug it in to whichever database you're using, be it blob stores like Hadoop or S3, or relational databases like MySQL. In fact, SKIL resembles the embeddable databases you already rely upon. 
 
-SKIL does not require that you use its GUI. It gives you the flexibility to connect to the data sources you already use. It can be deployed as a Docker image on Kubernetes or as an .exe file on Windows or as an RPM. It's not a Web-hosted solution waiting for you to move your data to the public cloud. SKIL doesn't ask that you build your data stack around it. SKIL will work wherever you have data and hardware.  
+SKIL does not require that you use its GUI. It gives you the flexibility to connect to the data sources you already use. It can be deployed as a Docker image on Kubernetes or as an .exe file on Windows or as an RPM for Linux. It's not a Web-hosted solution waiting for you to move your data to the public cloud. SKIL doesn't ask that you build your data stack around it. SKIL will work wherever you have data and hardware.  
 
 SKIL has a "flexible topology". That is, you can set up a SKIL cluster however you want. If you want "distributed", you can use MySQL and Zookeeper. 
 
