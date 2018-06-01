@@ -5,7 +5,7 @@ layout: default
 
 # Deep Learning on Hadoop
 
-Deeplearning4j is the deep-learning framework with the tightest and most reliable Hadoop integration. It runs as a Hadoop job. 
+Eclipse Deeplearning4j is the deep-learning framework with the tightest and most reliable Hadoop integration. Deeplearning4j has been certified on CDH and HDP. It runs as a Hadoop job. You can add deep learning to your Hadoop cluster for free, because it can be downloaded and run on your Hadoop cluster without needing the approval of a central IT department. 
 
 ## Further Reading
 
