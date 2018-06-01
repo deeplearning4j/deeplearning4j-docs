@@ -5,7 +5,9 @@ layout: default
 
 # Deep Learning on Hadoop
 
-Eclipse Deeplearning4j is the deep-learning framework with the tightest and most reliable Hadoop integration. Deeplearning4j has been certified on CDH and HDP. It runs as a Hadoop job. You can add deep learning to your Hadoop cluster for free, because it can be downloaded and run on your Hadoop cluster without needing the approval of a central IT department. 
+Eclipse Deeplearning4j is the deep-learning framework with the tightest and most reliable Hadoop integration. Deeplearning4j has been certified on CDH and HDP. It runs as a Hadoop job. You can add deep learning to your Hadoop cluster for free, because Deeplearning4j can be downloaded and run on your Hadoop cluster without needing the approval of a central IT department. 
+
+Scooping data out of HDFS, Deeplearning4j can use [Apache Spark](./spark) for fast ETL, loading batches of data onto GPU RAM, even as the GPU processes the previous data batch. 
 
 ## Further Reading
 
