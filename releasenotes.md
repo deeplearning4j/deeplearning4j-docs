@@ -89,7 +89,10 @@ layout: default
 * IterationListener has been deprecated in favor of TrainingListener. For existing custom listeners, switch from ```implements TrainingListener``` to ```extends BaseTrainingListener``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5014)
 * ExistingDataSetIterator has been deprecated; use ```fit(DataSetIterator, int numEpochs)``` method instead
 
+### Deelpearning4J: 1.0.0-beta Known Issues
 
+* ComputationGraph TrainingListener onEpochStart and onEpochEnd methods are not being called correctly
+* DL4J Zoo Model FaceNetNN4Small2 model configuration is incorrect, causing issues during forward pass
 
 ## <a name="onezerozerobeta-dl4jkeras">Deeplearing4J: Keras Import</a>
 
