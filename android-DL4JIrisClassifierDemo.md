@@ -20,31 +20,24 @@ Contents
 ## <a name="head_link1">Setting the Dependencies</a>
 Deeplearning4J applications require several dependencies in the build.gradle file. The Deeplearning library in turn depends on the libraries of ND4J and OpenBLAS, thus these must also be added to the dependencies declaration. Starting with Android Studio 3.0, annotationProcessors need to be defined as well, requiring dependencies for -x86 or -arm processors. 
 ```java
-	compile 'com.android.support:appcompat-v7:27.0.2'
-        compile 'com.android.support:design:27.0.2'
-        compile 'org.deeplearning4j:deeplearning4j-nn:0.9.1'
-        compile 'org.nd4j:nd4j-native:0.9.1'
-        compile 'org.nd4j:nd4j-native:0.9.1:android-x86'
-        compile 'org.nd4j:nd4j-native:0.9.1:android-arm'
-        compile 'org.bytedeco:javacpp:1.4'
-        compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'
-        compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
-        testCompile 'junit:junit:4.12'
-```
-The DL4J and ND4J libraries contain several identically named files which requires exclusion statements in the packagingOptions. After added the above dependencies to the build.gradle file, try syncing Gradle with the below exclusions and add additional exclusions if needed. The error message will identify the file path that should be added to the list of exclusions. An example error message with file path: **> More than one file was found with OS independent path 'org/bytedeco/javacpp/ windows-x86_64/msvp120.dll'**
-```java
-packagingOptions {
- 
-	exclude 'META-INF/DEPENDENCIES'
-	exclude 'META-INF/DEPENDENCIES.txt'
-	exclude 'META-INF/LICENSE'
-	exclude 'META-INF/LICENSE.txt'
-	exclude 'META-INF/license.txt'
-	exclude 'META-INF/NOTICE'
-	exclude 'META-INF/NOTICE.txt'
-	exclude 'META-INF/notice.txt'
-	exclude 'META-INF/INDEX.LIST'
- 
+	compile (group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: '1.0.0-beta') {
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'opencv-platform'
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
+            exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
+        }
+        compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta'
+        compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-arm"
+        compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-arm64"
+        compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-x86"
+        compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-x86_64"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm64"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-x86"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-x86_64"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-arm"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-arm64"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86"
+        compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86_64"
 ```
 Compiling these dependencies involves a large number of files, thus it is necessary to set multiDexEnabled to true in defaultConfig.
 ```java
@@ -189,11 +182,9 @@ The next step is to build the neural network using *nccBuilder*. The parameters 
         NeuralNetConfiguration.Builder nncBuilder = new NeuralNetConfiguration.Builder();
         long seed = 6;
         nncBuilder.seed(seed);
-        nncBuilder.updater(new Sgd(0.1))
         nncBuilder.activation(Activation.TANH);
         nncBuilder.weightInit(WeightInit.XAVIER);
-        nncBuilder.regularization(true).l2(1e-4);
- 
+         
         NeuralNetConfiguration.ListBuilder listBuilder = nncBuilder.list();
         listBuilder.layer(0, inputLayer);
         listBuilder.layer(1, hiddenLayer);
@@ -206,7 +197,9 @@ The next step is to build the neural network using *nccBuilder*. The parameters 
  
 	  //Create a data set from the INDArrays and train the network
         DataSet myData = new DataSet(trainingIn, trainingOut);
-        myNetwork.fit(myData);
+        for(int l=0; l<=1000; l++) {
+	myNetwork.fit(myData);
+	}
  
 	  //Evaluate the input data against the model
         INDArray actualOutput = myNetwork.output(actualInput);
