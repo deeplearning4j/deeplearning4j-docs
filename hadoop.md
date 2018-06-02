@@ -11,6 +11,10 @@ Scooping data out of HDFS, Deeplearning4j can use [Apache Spark](./spark) for fa
 
 Deeplearning4j is packaged in an enterprise distribution called the [Skymind Intelligence Layer (SKIL)](https://docs.skymind.ai/docs). Think CDH but for machine learning. SKIL is an embeddable [machine-learning server](./machine-learning-server) and process launcher for machine-learning tasks, like model training. SKIL allows for a flexible topology; developers can congifure the cluster they need. With regard to Hadoop, SKIL can be installed on a gateway node in order to coordinate machine learning jobs on other Hadoop nodes. 
 
+## TensorFlow on Hadoop
+
+SKIL bundles Tensorflow and other Python machine-learning tools like scikit-learn into an enterprise distribution backed with commercial support. SKIL cover the ETL, training and inference stages of the [machine-learning workflow](machine-learning-workflow), and it integrates with Hadoop.
+
 ## Further Reading
 
 * [Deep learning on Apache Spark and Apache Hadoop with Deeplearning4j](https://blog.cloudera.com/blog/2017/06/deep-learning-on-apache-spark-and-hadoop-with-deeplearning4j/)
