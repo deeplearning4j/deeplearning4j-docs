@@ -26,8 +26,9 @@ AI and its discontents dominate the news about technology. On the one hand you h
 
 ### Footnotes
 
-<a name="one">1)</a> In this post, we use the terms "decisions about data" and "prediction" interchangeably. 
-<a name="two">1)</a> 
+* <a name="one">1)</a> *In this post, we use the terms "decisions about data" and "prediction" interchangeably.* 
+
+<a name="two">2)</a> 
 
 ### Further Reading (and Viewing)
 
