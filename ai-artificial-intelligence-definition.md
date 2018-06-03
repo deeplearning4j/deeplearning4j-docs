@@ -35,6 +35,3 @@ It's easy to get lost in long laments about how AI doesn't learn like children d
 ### Further Reading (and Viewing)
 
 * [VIDEO: Prediction Machines: The Simple Economics of Artificial Intelligence, by Ajay Agarwal](https://www.youtube.com/watch?reload=9&v=Q4o56nufXTw)
-* []()
-
-
