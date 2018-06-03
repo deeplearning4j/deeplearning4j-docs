@@ -147,3 +147,25 @@ Tooling is just the top layer of an array of technologies that you might call AI
 That's why AI creates a giant sucking sound. It's sucking in data. That data needs to be gathered, moved, stored, transformed and processed in order to produce predictions with AI. Doing that efficiently, in order for data scientists to perform experiments in a reasonable amount of time, requires special hardware, fast storage and real-time streaming, for example. 
 
 The hardware required is usually a GPU, and there are only two viable GPU makers: Nvidia and AMD (which has the backing of Intel). You can decide not to buy the more expensive chips, of course, but then you're paying your scarce and expensive data scientists to twiddle their thumbs while the algorithms train for hours and days on slower chips. 
+
+### <a name="beginner">More Machine Learning Tutorials</a>
+
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
