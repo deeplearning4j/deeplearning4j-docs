@@ -32,6 +32,26 @@ It's easy to get lost in long laments about how AI doesn't learn like children d
 
 <a name="two">2)</a> *Positive AI hype is probably best exemplified in IBM's Watson ads. Watson can do anything including designing your dress and choosing your future spouse. Most large tech companies and all AI startups are at least a little guilty of that sort of hype. Negative AI hype is best illustrated by Elon Musk, Eliezer Yudkowsky, Nik Bostrom, Max Tegmark, and the flock of doomsday prophets who foresee an AI apocalypse. The third group, the skeptics of AI's current abilities, include psychology professor Gary Marcus. Slicing more thinly, you will find many AI experts who have forged emotional relationships with a particular algorithm, usually one they wrote their dissertation about, who will throw shade on those lucky algorithms receiving more attention in the media. Sometimes this is combined with a commercial interest in promoting a company based on their special sauce, or an attempt to justify their poor technical decisions. Finally, you have a group of AI practicioners who roughly know what AI in its current state is capable of, and also what it can't do. Yann LeCun is a good example of this group. These people are skeptical of the hype, horrified by the doomsday prophets, puzzled by the broad-brush statements of the skeptics, and in most cases privately astonished by the accelerating advances in AI that are either too incremental or academic to be covered by the media. That is, AI is at the same time both overhyped and under-rated*
 
-### Further Reading (and Viewing)
+
+### <a name="beginner">More Machine Learning Tutorials</a>
 
 * [VIDEO: Prediction Machines: The Simple Economics of Artificial Intelligence, by Ajay Agarwal](https://www.youtube.com/watch?reload=9&v=Q4o56nufXTw)
+* [Introduction to Neural Networks](./neuralnet-overview.html)
+* [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
+* [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
+* [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron)
+* [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
+* [Attention Mechanisms and Memory Networks](./attention-memory-network)
+* [Graph Data and Deep Learning](./graphanalytics.html)
+* [Word2Vec: Neural Embeddings for NLP](./word2vec.html)
+* [Symbolic Reasoning (Symbolic AI) & Deep Learning](./symbolicreasoning.html)
+* [Markov Chain Monte Carlo & Machine Learning](/markovchainmontecarlo.html)
+* [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
+* [Eigenvectors, Eigenvalues, Covariance, PCA and Entropy](./eigenvector.html)
+* [Neural Networks & Regression](./logistic-regression.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Open Datasets for Machine Learning](./opendata.html)
+* [Deep Learning on Apache Spark](./spark.html)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
