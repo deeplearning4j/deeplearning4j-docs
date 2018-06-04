@@ -1,10 +1,10 @@
 ---
-title: Deploying Deeplearning4j to Android
+title: Deploying Deep learning to Android
 layout: default
 redirect: android
 ---
 
-# Using Deeplearning4J in Android Applications
+# Using Deep Learning in Android Applications
 
 Contents
 
