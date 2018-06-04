@@ -1,6 +1,7 @@
 ---
 title: Deploying Deeplearning4j to Android
 layout: default
+redirect: android
 ---
 
 # Using Deeplearning4J in Android Applications
