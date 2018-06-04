@@ -1,5 +1,5 @@
 ---
-title: Java Autonomous Driving: Car Detection With Deep Learning
+title: Autonomous Driving: Car Detection With Deep Learning in Java
 layout: default
 ---
 
