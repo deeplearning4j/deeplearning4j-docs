@@ -5,6 +5,8 @@ layout: default
 
 # Car Detection For Autonomous Vehicles With Deep Learning
 
+*This is a cross-post from [the original, written by Klevis Ramo](http://ramok.tech/2018/01/18/java-autonomous-driving-car-detection/).*
+
 In this post, we are going to build a real-time video object detection application in Java for car detection, a key component in autonomous driving systems. In a previous post, we were able to build an image classifier (cats vs. dogs); now, now we are going to detect the object (i.e. cars, pedestrians) and additionally mark them with bounding boxes (rectangles). Feel free to download code or run the application with your own videos (short live example).
 
 ![Alt text](./img/carcar.jpg)
