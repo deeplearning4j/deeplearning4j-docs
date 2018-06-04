@@ -1,9 +1,9 @@
 ---
-title: Deep Learning and Robotics
+title: Deep Learning, AI Robots and Robotics
 layout: default
 ---
 
-# Deep Learning and Robotics
+# Deep Learning, AI Robots and Robotics
 
 This page is WIP.
 
