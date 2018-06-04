@@ -114,6 +114,7 @@ All machine learning libraries depend on some form of scientific computing.
 
 For people just getting started with deep learning, the following tutorials and videos provide an easy entrance to the fundamental ideas of feedforward networks:
 
+* [Inference in Production: Machine Learning Server](./machine-learning-server.html)
 * [Introduction to Deep Neural Networks](./neuralnet-overview.html)
 * [Convolutional Neural Networks (CNNs) for Image Recognition](./convolutionalnetwork.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
@@ -128,6 +129,5 @@ For people just getting started with deep learning, the following tutorials and 
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Artificial Intelligence (AI) for Scala](./scala-ai.html)
-* [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [Multilayer Perceptron (MLPs) for Classification](./multilayerperceptron.html)
 * [Distributed Deep Learning on Apache Spark](./spark.html)
