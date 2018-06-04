@@ -5,7 +5,7 @@ layout: default
 
 # AI Startups and Machine Learning Vendors
 
-## General-Purpose AI Startups
+## General-Purpose AI Startups and Data Science Tooling Companies
 
 ### Skymind
 
