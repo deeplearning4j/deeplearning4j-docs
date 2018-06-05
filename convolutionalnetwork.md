@@ -166,6 +166,7 @@ All Deeplearning4j [examples of convolutional networks are available here](https
 
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
+* [Car Detection For Autonomous Vehicles With Deep Learning](./autonomous-vehicle-java.html)
 * [Introduction to Neural Networks](./neuralnet-overview.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
 * [Recurrent Networks and LSTMs](./lstm.html)
