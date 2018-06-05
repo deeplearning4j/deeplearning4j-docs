@@ -341,7 +341,7 @@ For people just getting started with deep learning, the following tutorials and 
 * [Introduction to Random Forests](./random-forest.html)
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
-* [Machine Learning Operations (MlOps)](./machine-learning-operations-mlops.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
 
 ```
 Here, then, is Darwin's dangerous idea: the algorithmic level is the level that best accounts for the speed of the antelope, the wing of the eagle, the shape of the orchid, the diversity of species, and all the other occasions for wonder in the world of nature. - Daniel C. Dennett
