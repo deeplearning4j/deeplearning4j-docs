@@ -108,3 +108,6 @@ While individual courses have limits on what they can teach, the Internet does n
 * [A Glossary of Deep-Learning Terms](./glossary.html)
 * [Inference: Machine Learning Model Server](./machine-learning-server.html)
 * [Distributed Deep Learning on Apache Spark](./spark.html)
+* [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
+* [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
