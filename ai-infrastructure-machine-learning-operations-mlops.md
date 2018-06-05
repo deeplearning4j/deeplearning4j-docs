@@ -13,6 +13,39 @@ AI infrastructure encompasses almost every stage of the [machine-learning workfl
 
 Early in the workflow, that includes exploratory data analysis, running large-scale queries on data you've stored. In the middle, AI infrastructure involves training algorithms, probably on a cluster of distributed GPUs. And late in the workflow, it entails deploying those machine-learning models for inference in a reliabile and scalable way, much as you would deploy a web site on a web server. 
 
+Machine learning operations is the machine-learning equivalent of DevOps: it solves the problems of implementing machine-learning in production, notably around the technology infrastructure and tooling necessary to deploy machine-learning algorithms and data pipelines reliably and scalably, so as not to destabilize other parts of the stack. 
+
+## Machine Learning Operations (MlOps) vs. Data Science
+
+What does MLOps do? It smooths your AI go-to-market strategy. It saves developer time around standing up a cluster, among other tasks. 
+
+Machine learning operations address a different set of problem than data science and MlOps software solve other problems than data science tooling. Machine learning operations concerns itself with:
+
+* How to handle different file formats
+* How to integrate with various data sources and message queues 
+* Persistent and reusable data pipelines
+    * Example: Is your data pipeline consistent with what your data science team built? Can you take your ETL and make it a JSON?
+* Installing low-level math libraries such as CUDA and MKL correctly
+* Serving, monitoring model performance and updating machine-learning models
+    * Example: Standing up models in real time in a data stream, connecting it to Kafka
+* The interaction between machine learning and distributed systems (Spark cluster, running distributed jobs)
+    * Example: You want to run batch inference; You have 1 petabyte of data in an S3 bucket.
+
+In most situations, data engineers do many of those tasks themselves. 
+
+Machine-learning operations concerns itself with the environment where machine learning will run, and managing the complexity the that, which is in fact a great deal of complexity. In that environment, you will probably have multiple databases over multiple teams, maybe multiple Hadoop clusters. You will need consistent dependencies across the cluster, matching your version of TensorFlow to CUDA, for example. While Anaconda manages Python dependencies, it does not handle ETL or tracking (by this we mean observability: do you have a history of what you're doing?) or machine learning model performance (do you have a history of what the model is doing?). 
+
+## Machine Learning Server
+
+Machine learning faces challenges to scaling at the four main stages of its workflow:
+
+* ETL (Data pipelines)
+* Algorithm training
+* Inference
+* Monitoring, Management and Updates
+
+The Skymind Intelligence Layer (SKIL) is a [machine learning server](./machine-learning-server.html) that solves the problem of serving machine-learning models at scale during the inference phase. 
+
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview.html)
@@ -33,4 +66,4 @@ Early in the workflow, that includes exploratory data analysis, running large-sc
 * [Open Datasets for Machine Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
-* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Machine Learning Model Server for Inference in Production](./machine-learning-server.html)
