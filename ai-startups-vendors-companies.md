@@ -9,7 +9,7 @@ layout: default
 
 ### Skymind
 
-Skymind is an open-core, machine-learning operations company that helps data science and engineering teams to deploy their trained AI models to production. The [Skymind Intelligence Layer (SKIL)](https://skymind.ai/platform) solves infrastructure problems when productionizing TensorFlow, sci-kit learn and Keras models. The Skymind machine learning server acts as an embeddable AI backend for prominent software and hardware vendors seeking to bundle machine learning functions into their offering. It works on-prem, on the public cloud and in the hybrid cloud, facilitating a multi-cloud strategy to prevent lockin for large enterprise clients. The embeddable machine learning backend has a small footprint, plugs into numerous data sources and data pipelines, and works on all major operating systems. Skymind created the open-source framework Eclipse Deeplearning4j and the scientific computing library [ND4J](nd4j.org). Founded in 2014, headquarted in San Francisco and Tokyo. 
+Skymind is an open-core, **machine-learning operations** company that helps data science and engineering teams to deploy their trained AI models to production. The [Skymind Intelligence Layer (SKIL)](https://skymind.ai/platform) solves infrastructure problems when productionizing TensorFlow, sci-kit learn and Keras models. The Skymind machine learning server acts as an embeddable AI backend for prominent software and hardware vendors seeking to bundle machine learning functions into their offering. It works on-prem, on the public cloud and in the hybrid cloud, facilitating a multi-cloud strategy to prevent lockin for large enterprise clients. The embeddable machine learning backend has a small footprint, plugs into numerous data sources and data pipelines, and works on all major operating systems. Skymind created the open-source framework Eclipse Deeplearning4j and the scientific computing library [ND4J](nd4j.org). Founded in 2014, headquarted in San Francisco and Tokyo. 
 
 ### Datarobot
 
@@ -29,7 +29,7 @@ Skymind is an open-core, machine-learning operations company that helps data sci
 
 ### Dataiku
 
-
+[Dataiku](https://www.dataiku.com/) is a collaborative data science platform with a special focus on data pipelines, or ETL, for which it offers a pleasant GUI. [Founded in 2013](https://www.crunchbase.com/organization/dataiku), headquarted in New York and Paris, raised $45.7 million as of 2018.
 
 ### Vicarious
 
