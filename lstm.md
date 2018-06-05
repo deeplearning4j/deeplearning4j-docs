@@ -247,7 +247,7 @@ Here are a few ideas to keep in mind when manually optimizing hyperparameters fo
 * [Introduction to Random Forests](./random-forest.html)
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
-* [Machine Learning Operations (MlOps)](./machine-learning-operations-mlops.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
 
 ### Footnotes
 
