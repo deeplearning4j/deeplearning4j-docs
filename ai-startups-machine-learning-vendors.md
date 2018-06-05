@@ -3,7 +3,7 @@ title: AI Startups and Machine Learning Vendors
 layout: default
 ---
 
-# AI Startups and Machine Learning Vendors
+# AI Startups & Machine Learning Vendors
 
 ## AI Startups, Data Science Tooling Companies, AI Infrastructure & Platforms
 
@@ -41,7 +41,9 @@ Skymind is an open-core, **machine-learning operations** company that helps data
 
 ### Bonsai
 
+
 ### Floydhub
+
 
 ### Numericcal
 
@@ -65,6 +67,9 @@ Skymind is an open-core, **machine-learning operations** company that helps data
 
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
+* [Definition of Artificial Intelligence (AI)](/ai-artificial-intelligence-definition)
+* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
+* [Machine Learning Server for Inference in Production](./machine-learning-server.html)
 * [Introduction to Neural Networks](./neuralnet-overview.html)
 * [Beginner's Guide to Reinforcement Learning](./deepreinforcementlearning.html)
 * [Convolutional Networks (CNNs)](./convolutionalnetwork.html)
@@ -82,5 +87,4 @@ Skymind is an open-core, **machine-learning operations** company that helps data
 * [Introduction to Random Forests](./random-forest.html)
 * [Open Datasets for Machine Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
-* [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
-* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Deep Learning on Apache Hadoop, CDH and HDP)](./hadoop.html)
