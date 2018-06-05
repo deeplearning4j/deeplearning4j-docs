@@ -17,7 +17,7 @@ Skymind is an open-core, machine-learning operations company that helps data sci
 
 ### Domino Datalab
 
-[Domino Datalab]()
+[Domino Datalab](https://www.dominodatalab.com/) is a data science platform supporting a collaborative environment for data science teams, usually on a managed cloud. Their tool provides transparency into the work of individual contributors and accelerates teamwork. [Founded in 2013](https://www.crunchbase.com/organization/domino-data-lab), based in San Francisco, raised $41 million as of 2018. 
 
 ### Sentient
 
@@ -25,8 +25,7 @@ Skymind is an open-core, machine-learning operations company that helps data sci
 
 ### BigML
 
-[BigML](https://bigml.com/) is a machine-learning startup 
-https://www.crunchbase.com/organization/bigml
+[BigML](https://bigml.com/) is a machine-learning startup operating on a SaaS business model but also offering private deployments. [Founded in 2011](https://www.crunchbase.com/organization/bigml), based in Corvallis, Oregon, and Barcelona, Spain, raised $1.6 million. 
 
 ### Dataiku
 
