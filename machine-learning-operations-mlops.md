@@ -16,13 +16,13 @@ Machine learning operations address a different set of problem than data science
 * How to handle different file formats
 * How to integrate with various data sources and message queues 
 * Persistent and reusable data pipelines
--- Is your data pipeline consistent with what your data science team built? Can you take your ETL and make it a JSON?
+  -- Is your data pipeline consistent with what your data science team built? Can you take your ETL and make it a JSON?
 * Installing low-level math libraries such as CUDA and MKL correctly
 * Serving, monitoring model performance and updating machine-learning models
--- Standing up models in real time in a data stream, connecting it to Kafka
--- requires vectorization
+  -- Standing up models in real time in a data stream, connecting it to Kafka
+  -- requires vectorization
 * The interaction between machine learning and distributed systems (Spark cluster, running distributed jobs)
--- Example: You want to run batch inference; You have 1 petabyte of data in an S3 bucket.
+  -- Example: You want to run batch inference; You have 1 petabyte of data in an S3 bucket.
 
 In most situations, data engineers do many of those tasks themselves. 
 
