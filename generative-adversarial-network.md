@@ -290,7 +290,7 @@ if __name__ == '__main__':
 * [Machine Learning Server for Inference in Production](./machine-learning-server.html)
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
-* [Machine Learning Operations (MlOps)](./machine-learning-operations-mlops.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
 
 ![Alt text](./img/stained_glass_cycleGAN.jpg)
 
