@@ -242,13 +242,12 @@ Here are a few ideas to keep in mind when manually optimizing hyperparameters fo
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Open Datasets for Deep Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
+* [Machine Learning Server for Inference in Production](./machine-learning-server.html)
 * [Introduction to Decision Trees](./decision-tree.html)
 * [Introduction to Random Forests](./random-forest.html)
-* [Machine Learning Server for Inference in Production](./machine-learning-server.html)
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
 * [Machine Learning Operations (MlOps)](./machine-learning-operations-mlops.html)
-
 
 ### Footnotes
 
