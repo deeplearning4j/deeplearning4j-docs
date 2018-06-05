@@ -33,7 +33,11 @@ Skymind is an open-core, **machine-learning operations** company that helps data
 
 ### Vicarious
 
+[Vicarious](https://www.vicarious.com/) is developing AI for robots. It seeks to create algorithms that will generalize from a small amount of data, or a few training examples, in order to enable robots to apply knowledge thus gained to diverse situations. [Founded in 2010](https://www.crunchbase.com/organization/vicarious-systems-inc#section-overview), based in San Francisco, raised $122 million as of 2018. 
+
 ### Petuum
+
+
 
 ### Bonsai
 
