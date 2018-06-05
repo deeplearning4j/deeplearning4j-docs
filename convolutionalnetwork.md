@@ -189,7 +189,7 @@ All Deeplearning4j [examples of convolutional networks are available here](https
 * [Introduction to Random Forests](./random-forest.html)
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
-* [Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
 
 ## <a name="resource">Other Resources</a>
 
