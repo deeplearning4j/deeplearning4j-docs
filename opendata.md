@@ -210,7 +210,10 @@ For people just getting started with deep learning, the following tutorials and 
 * [Word2vec and Natural-Language Processing](./word2vec.html)
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
-* [Inference: Machine Learning Model Server](./machine-learning-server.html)
+* [Machine Learning Server for Inference in Production](./machine-learning-server.html)
 * [Distributed Deep Learning on Apache Spark](./spark.html)
+* [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
+* [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
 
 *Thanks to deeplearning.net and [Luke de Oliveira](https://medium.com/startup-grind/fueling-the-ai-gold-rush-7ae438505bc2) for many of these links and dataset descriptions. Any suggestions of open data sets we should include for the Deeplearning4j community are welcome!*
