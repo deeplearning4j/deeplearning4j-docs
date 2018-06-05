@@ -29,7 +29,7 @@ MCMC methods help gauge the distribution of an outcome or statistic you're tryin
 
 As with all statistical techniques, we sample from a distribution when we don't know the function to succinctly describe the relation to two variables (actions and rewards). MCMC helps us approximate a black-box probability distribution. 
 
-With a little more jargon, you might say it's a simulation using a pseudo-random number generator to produce samples covering many possible outcomes of a given system. The method goes by the name "Monte Carlo" because the capital of Monaco, a coastal enclave bordering southern France, is known for its casinos and games of chance, where winning and losing are a matter of probabilities. It's "James Bond math." 
+With a little more jargon, you might say it's a simulation using a pseudo-random number generator to produce samples covering many possible outcomes of a given system. It relies on the repeated generation of random events to study a system. In that sense, it's like an evolutionary or genetic algorithm. The method goes by the name "Monte Carlo" because the capital of Monaco, a coastal enclave bordering southern France, is known for its casinos and games of chance, where winning and losing are a matter of probabilities. It's "James Bond math." 
 
 ## Concrete Examples of Monte Carlo Sampling
 
