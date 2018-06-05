@@ -25,7 +25,7 @@ Machine learning operations address a different set of problem than data science
 
 In most situations, data engineers do many of those tasks themselves. 
 
-Machine-learning operations concerns itself with the environment where machine learning will run, and managing the complexity the that, which is in fact a great deal of complexity. In that environment, you will probably have multiple databases over multiple teams, maybe multiple Hadoop clusters. You will need consistent dependencies across the cluster, matching your version of TensorFlow to CUDA, for example. While Anaconda manages Python dependencies, it does not handle ETL or tracking (by this we mean observability: do i have a history of what i'm doing?) or machine learning model performance (do you have a history of what the model is doing?). 
+Machine-learning operations concerns itself with the environment where machine learning will run, and managing the complexity the that, which is in fact a great deal of complexity. In that environment, you will probably have multiple databases over multiple teams, maybe multiple Hadoop clusters. You will need consistent dependencies across the cluster, matching your version of TensorFlow to CUDA, for example. While Anaconda manages Python dependencies, it does not handle ETL or tracking (by this we mean observability: do you have a history of what you're doing?) or machine learning model performance (do you have a history of what the model is doing?). 
 
 ## Machine Learning Server
 
