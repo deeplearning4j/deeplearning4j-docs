@@ -336,7 +336,12 @@ For people just getting started with deep learning, the following tutorials and 
 * [Deeplearning4j Examples via Quickstart](./quickstart.html)
 * [Deep Learning on Apache Spark](https://deeplearning4j.org/spark)
 * [Neural Networks Demystified](https://www.youtube.com/watch?v=bxe2T-V8XRs) (A seven-video series)
-* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Machine Learning Server for Inference in Production](./machine-learning-server.html)
+* [Introduction to Decision Trees](./decision-tree.html)
+* [Introduction to Random Forests](./random-forest.html)
+* [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
+* [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
+* [Machine Learning Operations (MlOps)](./machine-learning-operations-mlops.html)
 
 ```
 Here, then, is Darwin's dangerous idea: the algorithmic level is the level that best accounts for the speed of the antelope, the wing of the eagle, the shape of the orchid, the diversity of species, and all the other occasions for wonder in the world of nature. - Daniel C. Dennett
