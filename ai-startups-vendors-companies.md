@@ -9,15 +9,28 @@ layout: default
 
 ### Skymind
 
+Skymind is an open-core, machine-learning operations company that helps data science and engineering teams to deploy their trained AI models to production. The Skymind Intelligence Layer (SKIL) solves infrastructure problems when productionizing TensorFlow, sci-kit learn and Keras models. The Skymind machine learning server acts as an AI backend for prominent software and hardware vendors seeking to bundle machine learning functions into their offering. Skymind created the open-source framework Eclipse Deeplearning4j and the scientific computing library [ND4J](nd4j.org). Founded in 2014, headquarted in San Francisco and Tokyo. 
+
 ### Datarobot
 
+
+
 ### Domino Datalab
+
+[Domino Datalab]()
 
 ### Sentient
 
 [Sentient Technologies](https://www.sentient.ai/) is an AI vendor focused on evolutionary algorithms (and neural networks) that sells tools for maximizing digital marketing conversions, customer engagement in e-commerce and trading strategies for asset management. 
 
 ### BigML
+
+[BigML](https://bigml.com/) is a machine-learning startup 
+https://www.crunchbase.com/organization/bigml
+
+### Dataiku
+
+
 
 ### Vicarious
 
