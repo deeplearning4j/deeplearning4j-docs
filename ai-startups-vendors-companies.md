@@ -50,7 +50,7 @@ https://www.crunchbase.com/organization/bigml
 
 ###
 
-## Tech Companies Involved in AI Infrastructure, Tooling and Apps
+## Incumbent Tech Companies Involved in AI Infrastructure, Tooling and Apps
 
 ### Google
 
