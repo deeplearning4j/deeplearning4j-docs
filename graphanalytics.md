@@ -106,6 +106,16 @@ Finally, you can compute derivative functions such as graph Lapalians from the t
 
 Below are a few papers discussing how neural nets can be applied to data in graphs. 
 
+[Relational inductive biases, deep learning, and graph networks](https://arxiv.org/abs/1806.01261)
+
+By Peter W. Battaglia, Jessica B. Hamrick, Victor Bapst, Alvaro Sanchez-Gonzalez, Vinicius Zambaldi, Mateusz Malinowski, Andrea Tacchetti, David Raposo, Adam Santoro, Ryan Faulkner, Caglar Gulcehre, Francis Song, Andrew Ballard, Justin Gilmer, George Dahl, Ashish Vaswani, Kelsey Allen, Charles Nash, Victoria Langston, Chris Dyer, Nicolas Heess, Daan Wierstra, Pushmeet Kohli, Matt Botvinick, Oriol Vinyals, Yujia Li, Razvan Pascanu (DeepMind, Google Brain, MIT, U. of Edinburgh)
+
+*Artificial intelligence (AI) has undergone a renaissance recently, making major progress in key domains such as vision, language, control, and decision-making. This has been due, in part, to cheap data and cheap compute resources, which have fit the natural strengths of deep learning. However, many defining characteristics of human intelligence, which developed under much different pressures, remain out of reach for current approaches. In particular, generalizing beyond one’s experiences—a hallmark of human intelligence from infancy—remains a formidable challenge for modern AI.*
+
+*The following is part position paper, part review, and part unification. We argue that combinatorial generalization must be a top priority for AI to achieve human-like abilities, and that structured representations and computations are key to realizing this objective. Just as biology uses nature and nurture cooperatively, we reject the false choice between “hand-engineering” and “end-to-end” learning, and instead advocate for an approach which benefits from their complementary strengths. We explore how using relational inductive biases within deep learning architectures can facilitate learning about entities, relations, and rules for composing them. We present a new building block for the AI toolkit with a strong relational inductive bias—the graph network—which generalizes and extends various approaches for neural networks that operate on graphs, and provides a straightforward interface for manipulating structured knowledge and producing structured behaviors. We discuss how graph networks can support relational reasoning and combinatorial generalization, laying the foundation for more sophisticated, interpretable, and flexible patterns of reasoning.*
+
+*A key signature of human intelligence is the ability to make “infinite use of finite means” (Humboldt, 1836; Chomsky, 1965), in which a small set of elements (such as words) can be productively composed in limitless ways (such as into new sentences). This reflects the principle of combinatorial generalization, that is, constructing new inferences, predictions, and behaviors from known building blocks. Here we explore how to improve modern AI’s capacity for combinatorial generalization by biasing learning towards structured representations and computations, and in particular, systems that operate on graphs.*
+
 [Representation Learning on Graphs: Methods and Applications](https://cs.stanford.edu/people/jure/pubs/graphrepresentation-ieee17.pdf) (2017)
 
 by William Hamilton, Rex Ying and Jure Leskovec
