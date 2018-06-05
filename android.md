@@ -1,10 +1,9 @@
 ---
-title: Deploying Deep learning to Android
+title: Using Deep Learning and Neural Networks in Android Applications
 layout: default
-redirect: android
 ---
 
-# Using Deep Learning in Android Applications
+# Using Deep Learning and Neural Networks in Android Applications
 
 Contents
 
