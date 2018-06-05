@@ -269,6 +269,7 @@ if __name__ == '__main__':
 * [The Math Behind Generative Adversarial Networks](https://lilianweng.github.io/lil-log/2017/08/20/from-GAN-to-WGAN.html)
 
 ### <a name="beginner">More Machine Learning Tutorials</a>
+
 * [Introduction to Neural Networks](./neuralnet-overview.html)
 * [Deep Reinforcement Learning](./deepreinforcementlearning.html)
 * [Symbolic AI and Deep Learning](./symbolicreasoning.html)
@@ -286,7 +287,10 @@ if __name__ == '__main__':
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Open Datasets for Deep Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
-* [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [Machine Learning Server for Inference in Production](./machine-learning-server.html)
+* [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
+* [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
+* [Machine Learning Operations (MlOps)](./machine-learning-operations-mlops.html)
 
 ![Alt text](./img/stained_glass_cycleGAN.jpg)
 
