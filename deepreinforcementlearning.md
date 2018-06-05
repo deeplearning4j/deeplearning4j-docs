@@ -255,6 +255,9 @@ public class A3CALE {
 * [Using Graph Data with Deep Learning](./graphdata.html)
 * [Open Datasets for Deep Learning](./opendata.html)
 * [Word2vec and Natural-Language Processing](./word2vec.html)
+* [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
+* [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
 
 ## <a name="footnote">Footnotes</a>
 
