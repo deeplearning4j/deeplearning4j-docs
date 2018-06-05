@@ -225,3 +225,6 @@ Next, we'll show you how to implement a [deep-belief network](./deepbeliefnetwor
 * [Deep Learning Tutorial: MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [DL4J Programming Guide](https://deeplearning4j.org/programmingguide/01_intro)
+* [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
+* [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
