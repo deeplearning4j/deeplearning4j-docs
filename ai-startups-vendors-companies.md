@@ -5,7 +5,7 @@ layout: default
 
 # AI Startups and Machine Learning Vendors
 
-## General-Purpose AI Startups and Data Science Tooling Companies
+## General-Purpose AI Startups, Data Science Tooling Companies, AI Infrastructure Vendors
 
 ### Skymind
 
@@ -15,9 +15,19 @@ layout: default
 
 ### Sentient
 
+[Sentient Technologies](https://www.sentient.ai/) is an AI vendor focused on evolutionary algorithms (and neural networks) that sells tools for maximizing digital marketing conversions, customer engagement in e-commerce and trading strategies for asset management. 
+
 ### BigML
 
+### Vicarious
 
+### Petuum
+
+### Bonsai
+
+### Floydhub
+
+### Numericcal
 
 ## Vertical Specific AI Startups
 
