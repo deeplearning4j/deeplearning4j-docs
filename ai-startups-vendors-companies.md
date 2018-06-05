@@ -5,7 +5,7 @@ layout: default
 
 # AI Startups and Machine Learning Vendors
 
-## General-Purpose AI Startups, Data Science Tooling Companies, AI Infrastructure Vendors
+## AI Startups, Data Science Tooling Companies, AI Infrastructure & Platforms
 
 ### Skymind
 
@@ -13,7 +13,7 @@ Skymind is an open-core, machine-learning operations company that helps data sci
 
 ### Datarobot
 
-
+[Datarobot](https://www.datarobot.com/) claims to [automate machine learning](./automated-machine-learning-ai.html), offering a GUI for business analysts (clickers, not coders) to run their data through multiple machine learning models in order to identify the most suitable algorithm for the problem. In a sense, it is like a subset of [RPA](./robotic-process-automation-rpa.html) focused on predictive machine-learning tasks. [Founded in 2012](https://www.crunchbase.com/organization/datarobot), based in Boston, raised $111 million as of 2018.
 
 ### Domino Datalab
 
