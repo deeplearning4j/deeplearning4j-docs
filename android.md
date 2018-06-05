@@ -3,7 +3,7 @@ title: Using Deep Learning and Neural Networks in Android Applications
 layout: default
 ---
 
-# Using Deep Learning and Neural Networks in Android Applications
+# Using Deep Learning & Neural Networks in Android Applications
 
 Contents
 
