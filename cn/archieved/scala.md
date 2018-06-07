@@ -28,7 +28,7 @@ Scala与JVM兼容，可以利用Java生态系统中的丰富资源，同时也�
 * [面向Java程序员的Scala教程](http://www.scala-lang.org/docu/files/ScalaTutorial.pdf)（PDF）
 * [Scala示例解析（Scala By Example），Martin Odersky著](http://www.scala-lang.org/docu/files/ScalaByExample.pdf)（PDF） 
 * [ND4J的Scala介绍](http://nd4j.org/cn/scala.html)
-* [我们的早期Scala API](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-scala-api/src/main/scala/org/nd4j/api/linalg)：（[Github上的一个示例](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-scala-api/src/test/scala/org/nd4j/api/linalg/TestNDArray.scala#L18)）
+* [我们的早期Scala API](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-scala-api/src/main/scala/org/nd4j/api/linalg)：（[Github上的一个示例](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-scala-api/src/test/scala/org/nd4j/api/linalg/TestNDArray.scala#L18)）
 * SF Spark讲座：[基于Spark的Deeplearning4j和基于JVM的数据科学（借助ND4J实现）](https://www.youtube.com/watch?v=LCsc1hFuNac&feature=youtu.be)
 * [Adam Gibson的Spark访谈，由Alexy Khrabrov主持](https://www.youtube.com/watch?v=LJPL8sL0Daw&feature=youtu.be)
 * [我们的Spark集成](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark)

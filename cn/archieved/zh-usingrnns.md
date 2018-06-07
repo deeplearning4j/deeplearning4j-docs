@@ -289,7 +289,7 @@ RNN的数据导入比较复杂，因为可能使用的数据类型较多：一�
 ![Sequence Alignment](./img/rnn_seq_alignment_2.png)
 
 #### 替代方法：运用自定义DataSetIterator
-有些时候，我们可能需要进行不符合常规情景的数据导入。方法之一是运用自定义的[DataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java)。DataSetIterator只是用于迭代DataSet对象的接口，这些对象封装了输入和目标INDArrays，以及输入和标签掩模数组（可选）。
+有些时候，我们可能需要进行不符合常规情景的数据导入。方法之一是运用自定义的[DataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java)。DataSetIterator只是用于迭代DataSet对象的接口，这些对象封装了输入和目标INDArrays，以及输入和标签掩模数组（可选）。
 
 需要注意的是，这一方法的级别较低：运用DataSetIterator时，必须手动创建所需的输入和标签INDArrays，以及输入和标签掩模数组（如需要）。但这一方法可以让数据加载方式变得十分灵活。
 

@@ -168,8 +168,8 @@ ND4J是DeepLearning4J的数值处理库和张量库，在JVM中实现NumPy的功
 
 ND4J的Github代码库请见[此处](http://github.com/deeplearning4j/nd4j)。ND4J是用于处理n维数组（NDArrays）的DSL。
 
-* [nd4j-parameter-server-parent](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-parameter-server-parent)：用于分布式神经网络定型的强大的参数服务器，基于Aeron。
-* [nd4j-backends](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends)：针对不同硬件的后端，为使用多个GPU和CPU运行而优化。
+* [nd4j-parameter-server-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-parameter-server-parent)：用于分布式神经网络定型的强大的参数服务器，基于Aeron。
+* [nd4j-backends](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends)：针对不同硬件的后端，为使用多个GPU和CPU运行而优化。
 
 ### JavaDoc 
 

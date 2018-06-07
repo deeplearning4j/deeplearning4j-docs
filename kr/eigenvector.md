@@ -205,7 +205,7 @@ vs.
 
 ## <a name="code">예제 코드</a>
 
-여러분께서는 자바기반 선형대수 연산 라이브러리인 [ND4J](http://kr-nd4j.org)에서 어떻게 [고유 벡터](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-api/src/main/java/org/nd4j/linalg/eigen/Eigen.java)를 구하는지 볼 수 있습니다. ND4J는 Java 및 [Scala](https://github.com/deeplearning4j/nd4s) APIs를 제공하고 Hadoop 및 Spark 상에서 실행 가능하며 크기가 큰 행렬 연산의 경우 [Numpy/Cython보다 대략 2배의 속도](http://nd4j.org/benchmarking)를 자랑합니다.
+여러분께서는 자바기반 선형대수 연산 라이브러리인 [ND4J](http://kr-nd4j.org)에서 어떻게 [고유 벡터](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-api/src/main/java/org/nd4j/linalg/eigen/Eigen.java)를 구하는지 볼 수 있습니다. ND4J는 Java 및 [Scala](https://github.com/deeplearning4j/nd4s) APIs를 제공하고 Hadoop 및 Spark 상에서 실행 가능하며 크기가 큰 행렬 연산의 경우 [Numpy/Cython보다 대략 2배의 속도](http://nd4j.org/benchmarking)를 자랑합니다.
 
 ## <a name="resources">학습 자료</a>
 

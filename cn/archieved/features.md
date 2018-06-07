@@ -90,7 +90,7 @@ DL4J支持下列优化算法：
 
 ### 激活函数 
 
-ND4J中定义的激活函数参见[此处](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl/transforms)
+ND4J中定义的激活函数参见[此处](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl/transforms)
 
 * ReLU（修正线性激活函数）
 * 带泄露的ReLU

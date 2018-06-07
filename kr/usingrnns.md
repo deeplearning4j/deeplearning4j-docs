@@ -284,7 +284,7 @@ DL4J에서 RNNs 출력은 다른 인공 신경망과 마찬가지로 `MultiLayer
 ![Sequence Alignment](../img/rnn_seq_alignment_2.png)
 
 #### 다른 방법: 사용자 정의 DataSetIterator 구현하기
-지금까지는 미리 구현된 클래스를 이용하는 방법을 알아봤습니다. 더 복잡한 기능이 필요한 경우엔 직접 [DataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java)를 구현하는 방법이 있습니다. 간단히 말하면 `DataSetIterator`는 `DataSet` 객체를 반복 처리하는 인터페이스일 뿐 입니다.
+지금까지는 미리 구현된 클래스를 이용하는 방법을 알아봤습니다. 더 복잡한 기능이 필요한 경우엔 직접 [DataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java)를 구현하는 방법이 있습니다. 간단히 말하면 `DataSetIterator`는 `DataSet` 객체를 반복 처리하는 인터페이스일 뿐 입니다.
 
 하지만 이 방법은 상당히 로우레벨의 작업입니다. `DataSetIterator`를 구현하려면 직접 입력/레이블의 마스크 어레이를 구현하고 적합한 `INDArrays`를 생성해야합니다. 물론, 그 대신에 데이터를 정확히 어떻게 불러오고 사용하는지를 이해할 수 있고 더 다양한 학습 상황을 구현할 수 있습니다.
 

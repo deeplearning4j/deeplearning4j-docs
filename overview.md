@@ -168,8 +168,8 @@ ND4J is the numerical computing library that underpins Deeplearning4j. It is a t
 
 Here is the [ND4J Github repo](http://github.com/deeplearning4j/nd4j). ND4J is a DSL for handling n-dimensional arrays (NDArrays), also known as tensors.
 
-* [nd4j-parameter-server-parent](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-parameter-server-parent) : a robust parameter server for distributed neural net training using Aeron.
-* [nd4j-backends](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends) : hardware specific backends the optimize on GPUs and CPUs.
+* [nd4j-parameter-server-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-parameter-server-parent) : a robust parameter server for distributed neural net training using Aeron.
+* [nd4j-backends](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends) : hardware specific backends the optimize on GPUs and CPUs.
 
 ### JavaDoc 
 

@@ -39,7 +39,7 @@ Deeplearning4j depends on Apache Spark for fast ETL. While many machine-learning
 * [A Scala Tutorial for Java programmers](http://www.scala-lang.org/docu/files/ScalaTutorial.pdf) (PDF)
 * [Scala By Example, by Martin Odersky](http://www.scala-lang.org/docu/files/ScalaByExample.pdf) (PDF) 
 * [An Intro to Scala on ND4J](http://nd4j.org/scala.html)
-* [Our early-stage Scala API](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-scala-api/src/main/scala/org/nd4j/api/linalg): ([One example on Github](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-scala-api/src/test/scala/org/nd4j/api/linalg/TestNDArray.scala#L18))
+* [Our early-stage Scala API](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-scala-api/src/main/scala/org/nd4j/api/linalg): ([One example on Github](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-scala-api/src/test/scala/org/nd4j/api/linalg/TestNDArray.scala#L18))
 * SF Spark Talk: [Deeplearning4j on Spark, and Data Science on the JVM, with ND4J](https://www.youtube.com/watch?v=LCsc1hFuNac&feature=youtu.be)
 * [Q&A with Adam Gibson about Spark with Alexy Khrabrov](https://www.youtube.com/watch?v=LJPL8sL0Daw&feature=youtu.be)
 * [Our Spark integration](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark)

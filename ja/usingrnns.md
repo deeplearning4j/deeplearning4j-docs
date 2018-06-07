@@ -283,7 +283,7 @@ AlignmentMode機能を例3に使用して多数の入力から1つを出力す�
 ![Sequence Alignment](../img/rnn_seq_alignment_2.png)
 
 #### その他の方法：カスタマイズされたDataSetIteratorを実装する
-一般的なデータインポートのシナリオには適合しないようにしなければならないこともあります。このようなシナリオには、カスタマイズされた[DataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java).を実装することができます。DataSetIteratorは、入力をカプセル化し、INDArrays、（随意に）入力とラベルのマスク配列を対象とするDataSetオブジェクトをイテレートするインターフェイスです。
+一般的なデータインポートのシナリオには適合しないようにしなければならないこともあります。このようなシナリオには、カスタマイズされた[DataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java).を実装することができます。DataSetIteratorは、入力をカプセル化し、INDArrays、（随意に）入力とラベルのマスク配列を対象とするDataSetオブジェクトをイテレートするインターフェイスです。
 
 このアプローチはかなり低いレベルであることに注意してください。DataSetIteratorを実装する場合、入力とラベルに必要なINDArraysや（必要な場合は）入力とラベルのマスク配列を手作業で作成する必要があります。しかし、このアプローチだと、データの読み込み方法にかなりの柔軟性があります。
 

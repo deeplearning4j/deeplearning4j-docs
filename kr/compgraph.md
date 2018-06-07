@@ -184,7 +184,7 @@ MultiDataSet은 여러 개의 입력 및 출력을 지원하는 DataSet입니다
 
 MultiDataSetIterator 사용 방법은 두 가지 입니다.
 
-- [MultiDataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/MultiDataSetIterator.java)를 직접 이용하는 방법이 있고,
+- [MultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/MultiDataSetIterator.java)를 직접 이용하는 방법이 있고,
 - [RecordReaderMultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.java)와 DataVec record reader를 같이 사용하는 방법이 있습니다.
 
 

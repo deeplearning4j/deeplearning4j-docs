@@ -184,7 +184,7 @@ MultiDataSet是DataSet的多项输入和/或多项输出版本。在循环神经
 
 目前有两种使用MultiDataSetIterator的方法：
 
-- 直接实现[MultiDataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/MultiDataSetIterator.java)接口
+- 直接实现[MultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/MultiDataSetIterator.java)接口
 - 将[RecordReaderMultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.java)与DataVec记录读取器（RecordReader）结合使用
 
 

@@ -207,7 +207,7 @@ PCA就是尝试画出贯穿这些数据点的解释性直线，与线性回归�
 
 ## <a name="code">直接看代码</a>
 
-你可以在[ND4J](http://nd4j.org/cn/index)中查看我们如何使用[本征向量](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-api/src/main/java/org/nd4j/linalg/eigen/Eigen.java)。ND4J是用于Java虚拟机的数值运算库，可处理n维数组，很大程度上受到Numpy的启发。ND4J有Java和[Scala](https://github.com/deeplearning4j/nd4s)的API，可在Hadoop或Spark上运行，超大矩阵操作的速度大约是[Numpy/Cython的两倍](http://nd4j.org/benchmarking)。
+你可以在[ND4J](http://nd4j.org/cn/index)中查看我们如何使用[本征向量](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-api/src/main/java/org/nd4j/linalg/eigen/Eigen.java)。ND4J是用于Java虚拟机的数值运算库，可处理n维数组，很大程度上受到Numpy的启发。ND4J有Java和[Scala](https://github.com/deeplearning4j/nd4s)的API，可在Hadoop或Spark上运行，超大矩阵操作的速度大约是[Numpy/Cython的两倍](http://nd4j.org/benchmarking)。
 
 ## <a name="resources">其他资源</a>
 
