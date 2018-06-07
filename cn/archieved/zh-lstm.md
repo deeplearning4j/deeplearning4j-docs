@@ -182,7 +182,7 @@ LSTM将信息存放在递归网络正常信息流之外的门控单元中。这�
 * 数据基本上总是越多越好，因为有助于防止过拟合。
 * 定型应当包括多个epoch（使用整个数据集定型一次）。
 * 每个epoch之后，评估测试集表现，判断何时停止（提前停止）。
-* 学习速率是最为重要的超参数。可用[deeplearning4j-ui](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-ui)调试；参见[此图](http://cs231n.github.io/neural-networks-3/#baby)
+* 学习速率是最为重要的超参数。可用[deeplearning4j-ui](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-ui)调试；参见[此图](http://cs231n.github.io/neural-networks-3/#baby)
 * 总体而言，堆叠层是有好处的。
 * 对于LSTM，可使用softsign（而非softmax）激活函数替代tanh（更快且更不容易出现饱和（约0梯度））。
 * 更新器：RMSProp、AdaGrad或momentum（Nesterovs）通常都是较好的选择。AdaGrad还能衰减学习速率，有时会有帮助。

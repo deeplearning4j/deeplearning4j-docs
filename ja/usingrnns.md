@@ -114,7 +114,7 @@ DL4Jは、パディングやマスキングを使い、再帰型ネットワー�
 
 再帰型ニューラルネットワークは、他のタイプの層と組み合わせることが可能です。例えば、同じネットワークでDenseLayerとGravesLSTMの層を組み合わせたり、ビデオのデータに畳み込み（CNN）ニューラルネットワークの層とGravesLSTMの層を組み合わせることができます。
 
-もちろん、DenseLayerと畳み込み層は、時系列データを扱いません。これとは異なるタイプの入力を求めています。これに対応するためには、我々は層のプリプロセッサ機能を使用する必要があります。例えば、CnnToRnnPreProcessorとFeedForwardToRnnPreprocessorのクラスなどがあります。すべてのプリプロセッサについては、[こちら](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)をご覧ください。好都合なことに、ほとんどの場合、DL4Jの設定システムはこれらのプリプロセッサを必要に応じて自動追加します。また、プリプロセッサを手作業で追加することも可能です（これにより各層のプリプロセッサの自動追加が無効になります）。
+もちろん、DenseLayerと畳み込み層は、時系列データを扱いません。これとは異なるタイプの入力を求めています。これに対応するためには、我々は層のプリプロセッサ機能を使用する必要があります。例えば、CnnToRnnPreProcessorとFeedForwardToRnnPreprocessorのクラスなどがあります。すべてのプリプロセッサについては、[こちら](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)をご覧ください。好都合なことに、ほとんどの場合、DL4Jの設定システムはこれらのプリプロセッサを必要に応じて自動追加します。また、プリプロセッサを手作業で追加することも可能です（これにより各層のプリプロセッサの自動追加が無効になります）。
 
 例えば、プリプロセッサを手作業で層の1と2の間に追加するには、コマンドの`.inputPreProcessor(2, new RnnToFeedForwardPreProcessor())`をネットワーク設定に追加してください。
 
@@ -184,13 +184,13 @@ rnnTimeStepのメソッドとMultiLayerNetwork.output()やMultiLayerNetwork.feed
 
 すべてのケースにおいて、データファイルの各行は1タイムステップを表していることに注意してください。
 
-（以下の例に加えて、[これらのユニットテスト](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/canova/RecordReaderDataSetiteratorTest.java)が役に立つかもしれません。）
+（以下の例に加えて、[これらのユニットテスト](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/canova/RecordReaderDataSetiteratorTest.java)が役に立つかもしれません。）
 
 #### 例1：時系列の長さが同じで、入力とラベルが別々のファイルにある場合
 
 トレーニングデータに20ファイルに表示された10の時系列があるとします。10ファイルは、各時系列の入力、残りの10ファイルは出力/ラベルとします。これらの20ファイルは、すべて同数のタイムステップがあるとします（同じ行数）。
 
-[SequenceRecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/canova/SequenceRecordReaderDataSetIterator.java)アプローチと[CSVSequenceRecordReader](https://github.com/deeplearning4j/Canova/blob/master/canova-api/src/main/java/org/canova/api/records/reader/impl/CSVSequenceRecordReader.java)のアプローチを使用するには、最初に1つは入力用、もう1つはラベル用である、2つのCSVSequenceRecordReaderオブジェクトを作成します。
+[SequenceRecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/canova/SequenceRecordReaderDataSetIterator.java)アプローチと[CSVSequenceRecordReader](https://github.com/deeplearning4j/Canova/blob/master/canova-api/src/main/java/org/canova/api/records/reader/impl/CSVSequenceRecordReader.java)のアプローチを使用するには、最初に1つは入力用、もう1つはラベル用である、2つのCSVSequenceRecordReaderオブジェクトを作成します。
 
     SequenceRecordReader featureReader = new CSVSequenceRecordReader(1, ",");
     SequenceRecordReader labelReader = new CSVSequenceRecordReader(1, ",");
@@ -283,7 +283,7 @@ AlignmentMode機能を例3に使用して多数の入力から1つを出力す�
 ![Sequence Alignment](../img/rnn_seq_alignment_2.png)
 
 #### その他の方法：カスタマイズされたDataSetIteratorを実装する
-一般的なデータインポートのシナリオには適合しないようにしなければならないこともあります。このようなシナリオには、カスタマイズされた[DataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java).を実装することができます。DataSetIteratorは、入力をカプセル化し、INDArrays、（随意に）入力とラベルのマスク配列を対象とするDataSetオブジェクトをイテレートするインターフェイスです。
+一般的なデータインポートのシナリオには適合しないようにしなければならないこともあります。このようなシナリオには、カスタマイズされた[DataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java).を実装することができます。DataSetIteratorは、入力をカプセル化し、INDArrays、（随意に）入力とラベルのマスク配列を対象とするDataSetオブジェクトをイテレートするインターフェイスです。
 
 このアプローチはかなり低いレベルであることに注意してください。DataSetIteratorを実装する場合、入力とラベルに必要なINDArraysや（必要な場合は）入力とラベルのマスク配列を手作業で作成する必要があります。しかし、このアプローチだと、データの読み込み方法にかなりの柔軟性があります。
 

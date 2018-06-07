@@ -118,7 +118,7 @@ Deeplearning4j和Caffe都可以用卷积网络进行图像分类，这是最先�
 
 Deeplearning4j依靠ND4J进行基础的线性代数运算，事实表明其处理大矩阵乘法的[速度至少是NumPy的两倍](http://nd4j.org/benchmarking)。这正是DL4J被NASA的喷气推进实验室所采用的原因之一。此外，Deeplearning4j为多芯片运行而优化，支持采用CUDA C的x86和GPU。
 
-虽然Torch7和DL4J都采用并行运行，DL4J的**并行运行是自动化的**。我们实现了从节点（worker nodes）和连接的自动化设置，让用户在[Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/spark)、[Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/hadoop-yarn)或[Akka和AWS](http://deeplearning4j.org/scaleout.html)环境中建立大型并行网络时可以绕过学习库。Deeplearning4j最适合快速解决具体问题。
+虽然Torch7和DL4J都采用并行运行，DL4J的**并行运行是自动化的**。我们实现了从节点（worker nodes）和连接的自动化设置，让用户在[Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark)、[Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/hadoop-yarn)或[Akka和AWS](http://deeplearning4j.org/scaleout.html)环境中建立大型并行网络时可以绕过学习库。Deeplearning4j最适合快速解决具体问题。
 
 Deeplearning4j的所有功能参见[功能介绍](../features)。
 

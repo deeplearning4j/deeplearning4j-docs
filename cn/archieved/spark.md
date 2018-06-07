@@ -56,7 +56,7 @@ DL4J定义了两个与MultiLayerNetwork和ComputationGraph相似的类，用于�
 **注**：对于单机定型，Spark本地*可以*和DL4J一同使用，不过我们不推荐这种方式（因为Spark的同步和序列化开销）。您可以考虑以下的方法：
 
 * 单CPU/GPU系统可用标准的MultiLayerNetwork或ComputationGraph来定型
-* 多CPU/GPU系统可采用[ParallelWrapper](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java)。上述方法在功能上与运行Spark的本地模式相同，但开销更低（因而可以产生更好的定型表现）。
+* 多CPU/GPU系统可采用[ParallelWrapper](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java)。上述方法在功能上与运行Spark的本地模式相同，但开销更低（因而可以产生更好的定型表现）。
 
 ## <a name="how">基于Spark的DL4J如何进行分布式的网络定型</a>
 

@@ -77,7 +77,7 @@ MultiLayerNetwork bestModel = result.getBestModel();
 
 イテレーション終了条件の例
 
-* ある特定の時間が経った後にトレーニングを終了するには（エポックが完了していなくても）、[MaxTimeIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxTimeIterationTerminationCondition.java)を使用
+* ある特定の時間が経った後にトレーニングを終了するには（エポックが完了していなくても）、[MaxTimeIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxTimeIterationTerminationCondition.java)を使用
 * スコアがある値を超えると、どの時点であってもトレーニングを終了するには、[MaxScoreIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxScoreIterationTerminationCondition.java)を使用。例えば、ネットワークが適切に調整されていない、トレーニングが不安定になる（重みやスコアの爆発など）などの状態にあるときに直ちに終了させたい時に役立ちます。
 
 ビルトイン終了クラスのソースコードは[こちらのディレクトリ](https://github.com/deeplearning4j/deeplearning4j/tree/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination)をご覧ください。
@@ -90,12 +90,12 @@ MultiLayerNetwork bestModel = result.getBestModel();
 
 ただし、`EarlyStoppingParallelTrainer`は単一デバイスでの機能性すべてに対応しているわけではないことに注意してください。というのも、ユーザーインターフェイスとの互換性がないし、複雑なイテレーションリスナーに対応しない可能性があるからです。これは、モデルの分散やバックグラウンドでのコピーに使用されている方法が原因です。
 
-異なるシナリオでの並列早期終了設定に役立つサンプルは、[TestParallelEarlyStopping.java](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/test/java/org/deeplearning4j/parallelism/TestParallelEarlyStopping.java)をご覧ください。
+異なるシナリオでの並列早期終了設定に役立つサンプルは、[TestParallelEarlyStopping.java](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/test/java/org/deeplearning4j/parallelism/TestParallelEarlyStopping.java)をご覧ください。
 
 
 ## 最後に
 
 * 非常にシンプルな早期終了のサンプルは[こちら](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/misc/earlystopping/EarlyStoppingMNIST.java)をご覧ください。
-* 役に立つユニットテストは[こちら](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/earlystopping/TestEarlyStopping.java)をご覧ください。
-* Sparkでも早期終了のトレーニングができます。ネットワーク設定は同じですが、EarlyStoppingTrainerではなく、[SparkEarlyStoppingTrainer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/earlystopping/SparkEarlyStoppingTrainer.java)を使用してください。
-  * Sparkでの早期終了には、[こちらのユニットテスト](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/spark/dl4j-spark/src/test/java/org/deeplearning4j/spark/TestEarlyStoppingSpark.java)も役に立ちます。
+* 役に立つユニットテストは[こちら](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/earlystopping/TestEarlyStopping.java)をご覧ください。
+* Sparkでも早期終了のトレーニングができます。ネットワーク設定は同じですが、EarlyStoppingTrainerではなく、[SparkEarlyStoppingTrainer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/earlystopping/SparkEarlyStoppingTrainer.java)を使用してください。
+  * Sparkでの早期終了には、[こちらのユニットテスト](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/test/java/org/deeplearning4j/spark/TestEarlyStoppingSpark.java)も役に立ちます。

@@ -83,7 +83,7 @@ Model net = zooModel.initPretrained(PretrainedType.VGGFACE);
 
 模型库中提供深度学习社区所熟知的一系列网络配置，VGG-16、ResNet-50、AlexNet、Inception-ResNet-v1、GoogLeNet、LeNet等ImageNet模型均包括在内。此外，模型库中还包括一个用于文本生成的LSTM网络，以及一个进行通用图像识别的简单卷积神经网络。
 
-您可以通过[deeplearning4j-zoo Github链接](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model)查看完整的模型列表。
+您可以通过[deeplearning4j-zoo Github链接](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model)查看完整的模型列表。
 
 
 

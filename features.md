@@ -30,8 +30,8 @@ Here's a non-exhaustive list of Deeplearning4j's features. We'll be updating it 
 
 * [Restricted Boltzmann machines](./restrictedboltzmannmachine.html)
 * [Convolutional nets](./convolutionalnets.html)
-* [Recursive autoencoders](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/models/featuredetectors/autoencoder/recursive/RecursiveAutoEncoderTest.java)
-* [Recurrent nets: Long Short-Term Memory (LSTM)](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/models/classifiers/lstm/LSTMTest.java) (including bi-directional LSTMs)
+* [Recursive autoencoders](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/featuredetectors/autoencoder/recursive/RecursiveAutoEncoderTest.java)
+* [Recurrent nets: Long Short-Term Memory (LSTM)](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/classifiers/lstm/LSTMTest.java) (including bi-directional LSTMs)
 * [Deep-belief networks](./deepbeliefnetwork.html)
 * [Denoising and Stacked Denoising autoencoders](./denoisingautoencoder.html)
 * [Deep autoencoders](./deepautoencoder.html)
@@ -90,7 +90,7 @@ Each of these optimization algorithms may be paired with training features (know
 
 ### Activation functions 
 
-Activations functions are defined in ND4J [here](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl/transforms)
+Activations functions are defined in ND4J [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl/transforms)
 
 * ReLU
 * Leaky ReLU

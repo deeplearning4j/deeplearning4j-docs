@@ -25,7 +25,7 @@ Deeplearning4j는 최신 기술을 간편하게 사용하는 데 초점을 두�
 
 * 다목적 N차원 배열 클래스([n-dimensional array class](http://nd4j.org/kr-index))
 * [GPU](http://nd4j.org/gpu_native_backends.html) 통합
-* [하둡](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/hadoop-yarn) 및 [스파크](spark)로 쉽게 확장 가능
+* [하둡](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/hadoop-yarn) 및 [스파크](spark)로 쉽게 확장 가능
 * [카노바(Canova)](canova): 기계 학습을 위한 벡터 처리 기술
 * [ND4J: Numpy의 두 배 속도를 자랑하는 선형 대수 라이브러리](http://nd4j.org/benchmarking)
 
@@ -38,7 +38,7 @@ Deeplearning4j는 분산 처리와 단일 스레드 처리를 모두 지원합�
 * [인공 신경망](kr/neuralnet-overview)
 * [자연어처리: Word2vec](kr/word2vec)
 * [컨볼루션 네트워크(CNNs, Convolutional Networks)](kr/convolutionnets)
-* 재귀 오토인코더([Recursive autoencoders](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/feedforward/autoencoder/recursive/RecursiveAutoEncoder.java))
+* 재귀 오토인코더([Recursive autoencoders](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/feedforward/autoencoder/recursive/RecursiveAutoEncoder.java))
 * [Deep-belief networks](deepbeliefnetwork)
 * 딥 오토인코더([Deep autoencoders](http://deeplearning4j.org/deepautoencoder.html)) (자동 질의응답, 데이터 압축에 적용)
 * 재귀 텐서 신경망(Recursive Neural Tensor Networks) (영상, 자연어 분석에 적용)

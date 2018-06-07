@@ -68,7 +68,7 @@ DataSetIteratorはリスト内の要素を巡回するDeeplearning4Jのクラス
         // パラメータは、DataVecのrecordReader、バッチサイズ、ラベルのインデックスのオフセット、ラベルクラス
         //の総数
 
-DataSetIteratorは各イテレーションにつき、新しいサンプルを1つ（バッチサイズ）以上取り入れ、入力データベースをイテレートします。そしてそれらのサンプルをニューラルネットワークが使用できるDataSet(INDArray)オブジェクトに読み込みます。また、上記のラインは[RecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java)に画像を28 x 28のグリッド（行列など）でなく要素の直線（ベクトルなど）に変換するよう指示しています。ラベルの設定も明記しています。
+DataSetIteratorは各イテレーションにつき、新しいサンプルを1つ（バッチサイズ）以上取り入れ、入力データベースをイテレートします。そしてそれらのサンプルをニューラルネットワークが使用できるDataSet(INDArray)オブジェクトに読み込みます。また、上記のラインは[RecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java)に画像を28 x 28のグリッド（行列など）でなく要素の直線（ベクトルなど）に変換するよう指示しています。ラベルの設定も明記しています。
 
 `RecordReaderDataSetIterator`はパラメータに、自分の望む特定のrecordReader（画像やサウンド用）やバッチサイズを使用することができます。 教師付き学習には、ラベルインデックスと入力に適用可能なラベル数も使用できます（LFWの場合、ラベル数は5,749）。 
 

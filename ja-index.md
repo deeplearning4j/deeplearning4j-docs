@@ -25,7 +25,7 @@ DL4Jは最先端のプラグ＆プレイテクノロジーを駆使し、設定�
 
 * JavaとScalaにとって汎用的な[n次元配列](http://nd4j.org/ja-getstarted)クラス
 * [GPU](http://nd4j.org/gpu_native_backends)と連携
-* [Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/hadoop-yarn)や[Spark](spark)で動作するスケーラビリティ
+* [Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/hadoop-yarn)や[Spark](spark)で動作するスケーラビリティ
 * [Canova](canova): 機械学習に使用する一般的なベクトル化ツール
 * [ND4J: Numpyの2倍ほども迅速な線形代数ライブラリ](http://nd4j.org/benchmarking)
 
@@ -36,7 +36,7 @@ Deeplearning4jは、分散型で、マルチスレッドであるディープラ
 * [制限付きボルツマン・マシン](ja/restrictedboltzmannmachine)
 * [畳込みネットワーク](ja/convolutionalnets) （画像）
 * [回帰ネットワーク](ja/ja-usingrnns)/[LSTMs](ja/lstm) （時系列、センサーデータ）
-* [再帰的オートエンコーダー](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/feedforward/autoencoder/recursive/RecursiveAutoEncoder.java)
+* [再帰的オートエンコーダー](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/feedforward/autoencoder/recursive/RecursiveAutoEncoder.java)
 * [ディープ・ビリーフ・ネットワーク](deepbeliefnetwork)
 * [Deepオートエンコーダー](http://deeplearning4j.org/deepautoencoder.html) （質問-回答/データ圧縮）
 * 再帰的ニューラルテンソルネットワーク （シーン、構文解析）

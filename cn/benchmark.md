@@ -83,7 +83,7 @@ Deeplearning4j的`DatasetIterator`类掩盖了在硬盘上加载数据的复杂�
 
 您可以利用在后台异步运行的加载器来进行优化。Java可以实现真正意义上的多线程。它可以在后台加载数据，同时让其他线程负责计算。所以您可以在运行计算指令的同时向GPU中加载数据。从内存中抓取新数据时，神经网络仍在继续训练。
 
-相关代码参见[此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java#L136)，尤其注意第三行：
+相关代码参见[此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java#L136)，尤其注意第三行：
 
         MultiDataSetIterator iterator;
         if (prefetchSize > 0 && source.asyncSupported()) {

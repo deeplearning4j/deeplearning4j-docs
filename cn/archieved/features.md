@@ -30,8 +30,8 @@ layout: cn-default
 
 * [受限玻尔兹曼机](./restrictedboltzmannmachine.html)
 * [卷积网络](./convolutionalnets.html)
-* [递归自动编码器](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/models/featuredetectors/autoencoder/recursive/RecursiveAutoEncoderTest.java)
-* [循环网络：长短期记忆（LSTM）](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/models/classifiers/lstm/LSTMTest.java)（包括双向LSTM）
+* [递归自动编码器](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/featuredetectors/autoencoder/recursive/RecursiveAutoEncoderTest.java)
+* [循环网络：长短期记忆（LSTM）](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/classifiers/lstm/LSTMTest.java)（包括双向LSTM）
 * [深度置信网络](./deepbeliefnetwork.html)
 * [降噪及堆叠式降噪自动编码器](./denoisingautoencoder.html)
 * [深度自动编码器](./deepautoencoder.html)
@@ -90,7 +90,7 @@ DL4J支持下列优化算法：
 
 ### 激活函数 
 
-ND4J中定义的激活函数参见[此处](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl/transforms)
+ND4J中定义的激活函数参见[此处](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/api/ops/impl/transforms)
 
 * ReLU（修正线性激活函数）
 * 带泄露的ReLU

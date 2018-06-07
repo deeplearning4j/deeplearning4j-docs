@@ -213,7 +213,7 @@ The layer update histogram is displayed for the most recent iteration only.
 - Keep an eye out for very large values: this can indicate exploding gradients in your network
     - Exploding gradients are problematic as they can 'mess up' the parameters of your network
     - In this case, it may indicate a weight initialization, learning rate or input/labels data normalization issue
-    - In the case of recurrent neural networks, adding some [gradient normalization or gradient clipping](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java) may help
+    - In the case of recurrent neural networks, adding some [gradient normalization or gradient clipping](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java) may help
 
 **Model Page: Parameter Learning Rates Chart**
 

@@ -47,7 +47,7 @@ Affine is a fancy word for a fully connected layer in a neural network. "Fully c
 ### <a name="alex">AlexNet</a>
 AlexNet is a deep convolutional network named after Alex Krizhevsky, a former student of Geoff Hinton's at the University of Toronto, now at Google. AlexNet was used to win ILSVRC 2012, and foretold a wave of deep convolutional networks that would set new records in image recognition. AlexNet is now a standard architecture: it contains five convolutional layers, three of which are followed by max-pooling (downsampling) layers, two fully connected (affine) layers -- all of which ends in a softmax layer. Here is [Deeplearning4j's implementation of AlexNet](https://github.com/deeplearning4j/ImageNet-Example/blob/master/src/main/java/imagenet/Models/AlexNet.java).
 
-* [AlexNet Example in Deeplearning4j](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/AlexNet.java)
+* [AlexNet Example in Deeplearning4j](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/AlexNet.java)
 * [ImageNet Classification with Deep Convolutional Neural Networks](http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
 
 ### <a name="attention">Attention Models</a> 
@@ -90,7 +90,7 @@ Bayes’ Theorem is *a mathematical framework for integrating new evidence with 
 * [Bayes Rules: A Theoretical Guide](https://arbital.com/p/bayes_rule/?l=1zq)
 
 ### <a name="bidirectional">Bidirectional Recurrent Neural Networks</a> 
-A Bidirectional RNN is composed of two RNNs that process data in opposite directions. One reads a given sequence from start to finish; the other reads it from finish to start. Bidirectional RNNs are employed in NLP for translation problems, among other use cases. Deeplearning4j's implementation of [bidirectional Graves LSTMs is here](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/recurrent/GravesBidirectionalLSTM.java).
+A Bidirectional RNN is composed of two RNNs that process data in opposite directions. One reads a given sequence from start to finish; the other reads it from finish to start. Bidirectional RNNs are employed in NLP for translation problems, among other use cases. Deeplearning4j's implementation of [bidirectional Graves LSTMs is here](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/recurrent/GravesBidirectionalLSTM.java).
 
 * [Bidirectional Recurrent Neural Networks](http://www.di.ufpe.br/~fnj/RNA/bibliografia/BRNN.pdf)
 
@@ -526,7 +526,7 @@ Two vectors can relate to one another mathematically, and similarities between t
 As you can see, these vectors differ from one another in both their length, or magnitude, and in their angle, or direction. The angle is what concerns us here. 
 
 ### <a name="vgg">VGG</a>
-VGG is a deep convolutional architecture that won the benchmark ImageNet competition in 2014. A VGG architecture is composed of 16–19 weight layers and uses small convolutional filters. [Deeplearning4j's implementations of two VGG architectures are here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model).
+VGG is a deep convolutional architecture that won the benchmark ImageNet competition in 2014. A VGG architecture is composed of 16–19 weight layers and uses small convolutional filters. [Deeplearning4j's implementations of two VGG architectures are here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model).
 
 * [Very Deep Convolutional Networks for Large-Scale Image Recognition](http://arxiv.org/abs/1409.1556)
 

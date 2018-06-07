@@ -84,7 +84,7 @@ Deeplearning4j的weightInit参数支持几种不同的权重初始化方式，�
 
 ## 梯度标准化
 
-梯度标准化有时可以帮助避免梯度在神经网络定型过程中变得过大（即所谓的梯度膨胀问题，在循环神经网络中较常见）或过小。应用梯度标准化的方法是.gradientNormalization(GradientNormalization)和.gradientNormalizationThreshould(double)。梯度标准化的示例参见[GradientNormalization.java](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)。该示例的测试代码见[此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/nn/updater/TestGradientNormalization.java)。
+梯度标准化有时可以帮助避免梯度在神经网络定型过程中变得过大（即所谓的梯度膨胀问题，在循环神经网络中较常见）或过小。应用梯度标准化的方法是.gradientNormalization(GradientNormalization)和.gradientNormalizationThreshould(double)。梯度标准化的示例参见[GradientNormalization.java](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)。该示例的测试代码见[此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/nn/updater/TestGradientNormalization.java)。
 
 ## 循环神经网络：截断式沿时间反向传播
 

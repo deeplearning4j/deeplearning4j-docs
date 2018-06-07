@@ -210,7 +210,7 @@ UI를 실행하는 JVM에서:
 - 큰 값에 주의하십시오. 네트워크에서 폭발적인 경사도를 나타낼 수 있습니다.
     - 폭발하는 경사도는 네트워크 파라미터를 엉망으로 만들 수 있습니다.
     - 웨이트 초기화, 학습율 입력/레이블 데이터 정규화 문제를 발생시킬 수 있습니다.
-    - 회귀 신경망의 경우, [경사도 정상화 혹은 경사도 클리핑](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)을 추가하면 도움이 될 수 있습니다.
+    - 회귀 신경망의 경우, [경사도 정상화 혹은 경사도 클리핑](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)을 추가하면 도움이 될 수 있습니다.
 
 
 **모델 페이지: 파라미터 학습율 차트**

@@ -106,15 +106,15 @@ Deeplearning4j is where you design your neural networks. It is a domain specific
 
 The Deeplearning4j Github repo is [here](http://github.com/deeplearning4j/deeplearning4j). Here's how the repo is organized.
 
-* [deeplearning4j-core](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core) : datasetiterators and everything you need to run dl4j on the desktop. 
-* [deeplearning4j-cuda](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-cuda) : cudnn and anything cuda specific.
-* [deeplearning4j-graph](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-graph) : graph processing for deepwalk.
-* [deeplearning4j-modelimport](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-modelimport): this imports neural net models from Keras, which in turn can import models from major frameworks like Theano, Tensorflow, Caffe and CNTK
-* [deeplearning4j-nlp-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nlp-parent): text analytics for English, Japanese and Korean as well as external tokenizers and plugins to toolsets like like UIMA, which itself performs dependency parsing, semantic role labeling, relation extraction and QA systems. We integrate with toolsets like UIKMA to pass stuff to word2vec.
-* [nlp](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nlp-parent/deeplearning4j-nlp): Word2vec, doc2vec and other tools.
-* [deeplearning4j-nn](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn) : a pared-down neural net DSL with fewer dependencies. Configures multilayer nets with a builder pattern for setting hyperparameters.
-* [deeplearning4j-scaleout](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout) : AWS provisioning, parallelwrapper desktop parameter averaging (single box 96 cores) so you don't have to run spark if you don't want to; one for parameter server and the other not; streaming is kafka and spark streaming; spark is spark training and nlp on spark: dist. word2vec
-* [deeplearning4j-ui-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-ui-parent) : neural net training heuristics and visualization
+* [deeplearning4j-core](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core) : datasetiterators and everything you need to run dl4j on the desktop. 
+* [deeplearning4j-cuda](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-cuda) : cudnn and anything cuda specific.
+* [deeplearning4j-graph](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-graph) : graph processing for deepwalk.
+* [deeplearning4j-modelimport](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport): this imports neural net models from Keras, which in turn can import models from major frameworks like Theano, Tensorflow, Caffe and CNTK
+* [deeplearning4j-nlp-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nlp-parent): text analytics for English, Japanese and Korean as well as external tokenizers and plugins to toolsets like like UIMA, which itself performs dependency parsing, semantic role labeling, relation extraction and QA systems. We integrate with toolsets like UIKMA to pass stuff to word2vec.
+* [nlp](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nlp-parent/deeplearning4j-nlp): Word2vec, doc2vec and other tools.
+* [deeplearning4j-nn](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn) : a pared-down neural net DSL with fewer dependencies. Configures multilayer nets with a builder pattern for setting hyperparameters.
+* [deeplearning4j-scaleout](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout) : AWS provisioning, parallelwrapper desktop parameter averaging (single box 96 cores) so you don't have to run spark if you don't want to; one for parameter server and the other not; streaming is kafka and spark streaming; spark is spark training and nlp on spark: dist. word2vec
+* [deeplearning4j-ui-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-ui-parent) : neural net training heuristics and visualization
 
 ### JavaDoc 
 
@@ -142,7 +142,7 @@ If you have worked with the Python Library Keras and would like to import a trai
 
 ### Github Repo
 
-The Model Import is actually part of DeepLearning4J, but it is worth its own section. Github folder is [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-modelimport).
+The Model Import is actually part of DeepLearning4J, but it is worth its own section. Github folder is [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport).
 
 ### Model Import Examples
 
@@ -168,8 +168,8 @@ ND4J is the numerical computing library that underpins Deeplearning4j. It is a t
 
 Here is the [ND4J Github repo](http://github.com/deeplearning4j/nd4j). ND4J is a DSL for handling n-dimensional arrays (NDArrays), also known as tensors.
 
-* [nd4j-parameter-server-parent](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-parameter-server-parent) : a robust parameter server for distributed neural net training using Aeron.
-* [nd4j-backends](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-backends) : hardware specific backends the optimize on GPUs and CPUs.
+* [nd4j-parameter-server-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-parameter-server-parent) : a robust parameter server for distributed neural net training using Aeron.
+* [nd4j-backends](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends) : hardware specific backends the optimize on GPUs and CPUs.
 
 ### JavaDoc 
 
@@ -204,8 +204,8 @@ RL4J is a library and environment for reinforcement learning on the JVM. It incl
 ### Github Repo
 
 * [RL4J](https://github.com/deeplearning4j/rl4j)
-* [Gym integration](https://github.com/deeplearning4j/rl4j/tree/master/rl4j-gym)
-* [Doom with RL4J](https://github.com/deeplearning4j/rl4j/tree/master/rl4j-doom)
+* [Gym integration](https://github.com/deeplearning4j/deeplearning4j/tree/master/rl4j/rl4j-gym)
+* [Doom with RL4J](https://github.com/deeplearning4j/deeplearning4j/tree/master/rl4j/rl4j-doom)
 
 ## <a name="arbiter">Arbiter</a>
 

@@ -30,7 +30,7 @@ Once you have imported your model into DL4J, our full production stack is at you
 - This module is targeted at users mainly familiar with writing their models in python with keras.
 - It allows users to import their models into the DL4J ecosphere for either further training or evaluation purposes.
 - You should use this module when the experimentation phase of your project is completed and you need to ship your models to production.
-- Source code for the `modelimport` module can be found [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras).
+- Source code for the `modelimport` module can be found [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras).
 - There is often a gap between the production system of a company and the experimental setup of its data scientists. The `modelimport` module allows data scientists to write their models in python, but still seamlessly integrate with the production stack.
 
 ## <a name="getting-started">Getting started: Keras Model Import Video</a>

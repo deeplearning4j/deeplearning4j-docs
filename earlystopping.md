@@ -77,7 +77,7 @@ Examples of epoch termination conditions:
 
 Examples of iteration terminations conditions:
 
-* To terminate training after a specified amount of time (without waiting for an epoch to complete),  use [MaxTimeIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxTimeIterationTerminationCondition.java)
+* To terminate training after a specified amount of time (without waiting for an epoch to complete),  use [MaxTimeIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxTimeIterationTerminationCondition.java)
 * To terminate training if the score exceeds a certain value at any point, use [MaxScoreIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxScoreIterationTerminationCondition.java). This can be useful for example to terminate the training immediately if the network is poorly tuned or training becomes unstable (such as exploding weights/scores).
 
 The source code for the built in termination classes are in this [directory](https://github.com/deeplearning4j/deeplearning4j/tree/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination)
@@ -90,12 +90,12 @@ The early stopping implementation described above will only work with a single d
 
 Note that `EarlyStoppingParallelTrainer` doesn't support all of the functionality as its single device counterpart. It is not UI-compatible and may not work with complex iteration listeners. This is due to how the model is distributed and copied in the background.
 
-[TestParallelEarlyStopping.java](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/test/java/org/deeplearning4j/parallelism/TestParallelEarlyStopping.java) gives a good example of setting up parallel early stopping in different scenarios.
+[TestParallelEarlyStopping.java](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/test/java/org/deeplearning4j/parallelism/TestParallelEarlyStopping.java) gives a good example of setting up parallel early stopping in different scenarios.
 
 
 ## Final notes
 
 * Here's a [very simple example using early stopping](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/misc/earlystopping/EarlyStoppingMNIST.java)
-* [These unit tests](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/earlystopping/TestEarlyStopping.java) may also be useful.
-* Conducting early stopping training on Spark is also possible. The network configuration is the same; however, instead of using the EarlyStoppingTrainer as above, use the [SparkEarlyStoppingTrainer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/earlystopping/SparkEarlyStoppingTrainer.java)
-  *  [These unit tests](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/spark/dl4j-spark/src/test/java/org/deeplearning4j/spark/TestEarlyStoppingSpark.java) may also be useful for using early stopping on Spark.
+* [These unit tests](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/earlystopping/TestEarlyStopping.java) may also be useful.
+* Conducting early stopping training on Spark is also possible. The network configuration is the same; however, instead of using the EarlyStoppingTrainer as above, use the [SparkEarlyStoppingTrainer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/earlystopping/SparkEarlyStoppingTrainer.java)
+  *  [These unit tests](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/test/java/org/deeplearning4j/spark/TestEarlyStoppingSpark.java) may also be useful for using early stopping on Spark.
