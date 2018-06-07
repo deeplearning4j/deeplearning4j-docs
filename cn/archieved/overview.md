@@ -204,8 +204,8 @@ RL4J是在Java中实现深度Q学习、A3C及其他强化学习算法的库和�
 ### Github代码库
 
 * [RL4J](https://github.com/deeplearning4j/rl4j)
-* [Gym集成](https://github.com/deeplearning4j/rl4j/tree/master/rl4j-gym)
-* [RL4J玩《Doom》](https://github.com/deeplearning4j/rl4j/tree/master/rl4j-doom)
+* [Gym集成](https://github.com/deeplearning4j/deeplearning4j/tree/master/rl4j/rl4j-gym)
+* [RL4J玩《Doom》](https://github.com/deeplearning4j/deeplearning4j/tree/master/rl4j/rl4j-doom)
 
 ## Arbiter
 

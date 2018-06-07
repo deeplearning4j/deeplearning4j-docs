@@ -204,8 +204,8 @@ RL4J is a library and environment for reinforcement learning on the JVM. It incl
 ### Github Repo
 
 * [RL4J](https://github.com/deeplearning4j/rl4j)
-* [Gym integration](https://github.com/deeplearning4j/rl4j/tree/master/rl4j-gym)
-* [Doom with RL4J](https://github.com/deeplearning4j/rl4j/tree/master/rl4j-doom)
+* [Gym integration](https://github.com/deeplearning4j/deeplearning4j/tree/master/rl4j/rl4j-gym)
+* [Doom with RL4J](https://github.com/deeplearning4j/deeplearning4j/tree/master/rl4j/rl4j-doom)
 
 ## <a name="arbiter">Arbiter</a>
 
