@@ -197,7 +197,7 @@ RNN的数据导入比较复杂，因为可能使用的数据类型较多：一�
 
 假设定型数据中有10个时间序列，以20个文件表示：10个文件为每个时间序列的输入，10个文件为输出／标签。现在暂时假设这20个文件都包含同样数量的时间步（即行数相同）。
 
-为了使用[SequenceRecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.java)和[CSVSequenceRecordReader](https://github.com/deeplearning4j/datavec/blob/master/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVSequenceRecordReader.java)方法，首先要创建两个CSVSequenceRecordReader对象，一个用于输入，一个用于标签：
+为了使用[SequenceRecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.java)和[CSVSequenceRecordReader](https://github.com/deeplearning4j/deeplearning4j/blob/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVSequenceRecordReader.java)方法，首先要创建两个CSVSequenceRecordReader对象，一个用于输入，一个用于标签：
 
     SequenceRecordReader featureReader = new CSVSequenceRecordReader(1, ",");
     SequenceRecordReader labelReader = new CSVSequenceRecordReader(1, ",");
@@ -205,7 +205,7 @@ RNN的数据导入比较复杂，因为可能使用的数据类型较多：一�
 这一构造方法指定需要跳过的行数（此处跳过1行）和分隔符（此处使用逗号）。
 
 其次，我们需要将这两个读取器初始化，指示它们从何处获取数据。这一步可以用InputSplit对象完成。
-假设我们的时间序列带有编号，文件名如“myInput_0.csv”、“myInput_1.csv”、……“myLabels_0.csv”等。方法之一是使用[NumberedFileInputSplit](https://github.com/deeplearning4j/datavec/blob/master/datavec-api/src/main/java/org/datavec/api/split/NumberedFileInputSplit.java)：
+假设我们的时间序列带有编号，文件名如“myInput_0.csv”、“myInput_1.csv”、……“myLabels_0.csv”等。方法之一是使用[NumberedFileInputSplit](https://github.com/deeplearning4j/deeplearning4j/blob/master/datavec/datavec-api/src/main/java/org/datavec/api/split/NumberedFileInputSplit.java)：
 
     featureReader.initialize(new NumberedFileInputSplit("/path/to/data/myInput_%d.csv", 0, 9));
     labelReader.initialize(new NumberedFileInputSplit(/path/to/data/myLabels_%d.csv", 0, 9));
