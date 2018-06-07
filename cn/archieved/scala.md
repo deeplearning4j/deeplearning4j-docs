@@ -31,7 +31,7 @@ Scala与JVM兼容，可以利用Java生态系统中的丰富资源，同时也�
 * [我们的早期Scala API](https://github.com/deeplearning4j/nd4j/tree/master/nd4j-scala-api/src/main/scala/org/nd4j/api/linalg)：（[Github上的一个示例](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-scala-api/src/test/scala/org/nd4j/api/linalg/TestNDArray.scala#L18)）
 * SF Spark讲座：[基于Spark的Deeplearning4j和基于JVM的数据科学（借助ND4J实现）](https://www.youtube.com/watch?v=LCsc1hFuNac&feature=youtu.be)
 * [Adam Gibson的Spark访谈，由Alexy Khrabrov主持](https://www.youtube.com/watch?v=LJPL8sL0Daw&feature=youtu.be)
-* [我们的Spark集成](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/spark)
+* [我们的Spark集成](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark)
 * [ND4J：面向JVM的科学计算](http://nd4j.org/cn)
 * [面向Python开发人员的Scala基础教程](https://bugra.github.io/work/notes/2014-10-18/scala-basics-for-python-developers/)
 * [Coursera为何中意Scala](https://tech.coursera.org/blog/2014/02/18/why-we-love-scala-at-coursera/)

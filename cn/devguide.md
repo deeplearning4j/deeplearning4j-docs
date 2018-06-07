@@ -83,7 +83,7 @@ Deeplearning4j和ND4J采用Apache 2.0许可协议发行。
   * JavaDoc可包含大量细节，可使用各类格式选项（代码、粗体/斜体文本、链接等）：更多详情参见 [此页](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javadoc.html)
 * 请在您的代码中加入说明性批注，这可以方便所有代码的长期维护。
 * 任何新功能都应当包括单元测试（采用[JUnit](http://junit.org/)），来测试您的代码。测试应考虑到极端情况。
-* 若要添加一种新的层，您必须添加数值梯度检验，方法参见[这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/gradientcheck/GradientCheckTests.java)。这是确保计算所得梯度的正确性的必要检查。
+* 若要添加一种新的层，您必须添加数值梯度检验，方法参见[这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/gradientcheck/GradientCheckTests.java)。这是确保计算所得梯度的正确性的必要检查。
 * 若要添加一种重要的新功能，请考虑更新网站中的相关内容并提供一个示例。毕竟，没人知道（或者没人知道怎么使用）的功能是没有意义的。我们鼓励您在情况合适时添加文档，但严格来讲文档不是必需的。
 * 如果您有任何疑惑，请随时提问！
 
@@ -111,7 +111,7 @@ DL4J是一个很大很复杂的软件。完整地概述DL4J的工作模式是很
 
 * deeplearning4j-core：包含所有的层、配置和优化代码。
 * deeplearning4j-scaleout：分布式学习（Spark）外加Word2Vec等其他模型
-* deeplearning4j-ui：用户界面功能，例如[HistogramIterationListener](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-ui/src/main/java/org/deeplearning4j/ui/weights/HistogramIterationListener.java) （柱状图迭代侦听器，[另见此页](http://deeplearning4j.org/visualization.html)）等。DL4J的用户界面功能基于[Dropwizard](http://www.dropwizard.io/)、[FreeMarker](http://freemarker.incubator.apache.org/)和[D3](http://d3js.org/)。简言之，这些组件让UI Javascript代码可以在网络训练过程中使用DL4J的输出结果。
+* deeplearning4j-ui：用户界面功能，例如[HistogramIterationListener](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-ui/src/main/java/org/deeplearning4j/ui/weights/HistogramIterationListener.java) （柱状图迭代侦听器，[另见此页](http://deeplearning4j.org/visualization.html)）等。DL4J的用户界面功能基于[Dropwizard](http://www.dropwizard.io/)、[FreeMarker](http://freemarker.incubator.apache.org/)和[D3](http://d3js.org/)。简言之，这些组件让UI Javascript代码可以在网络训练过程中使用DL4J的输出结果。
 
 
 
@@ -122,24 +122,24 @@ DL4J是一个很大很复杂的软件。完整地概述DL4J的工作模式是很
 
 首先，网络配置和网络实现（即数学运算）是相互分离的。虽然有些容易混淆，但两者都称为层：
 
-* [org.deeplearning4j.nn.api.Layer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/api/Layer.java)用于网络实现
-* [org.deeplearning4j.nn.conf.layers.Layer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/layers/Layer.java)用于网络配置
+* [org.deeplearning4j.nn.api.Layer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/api/Layer.java)用于网络实现
+* [org.deeplearning4j.nn.conf.layers.Layer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/layers/Layer.java)用于网络配置
 
 如果要实现一种新的层，您需要实现以下所有项目：
 
-* 一个层的配置类和一个构建器（Builder）类。您可以参考[这些类](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/layers)的设计
-* 一个层的实现类。同样，您可以参考[这些类](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers)的设计
-* 一个针对您的层的[ParameterInitializer](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/params)（参数初始化器，负责按网络配置设定初始参数）
-* 一个[LayerFactory](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/factory)（层工厂），对DefaultLayerFactory进行扩展并将您的层添加至DefaultLayerFactory.getInstance()
+* 一个层的配置类和一个构建器（Builder）类。您可以参考[这些类](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/layers)的设计
+* 一个层的实现类。同样，您可以参考[这些类](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers)的设计
+* 一个针对您的层的[ParameterInitializer](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/params)（参数初始化器，负责按网络配置设定初始参数）
+* 一个[LayerFactory](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/factory)（层工厂），对DefaultLayerFactory进行扩展并将您的层添加至DefaultLayerFactory.getInstance()
 
 DL4J目前尚无符号自动微分。这意味着正向传递（预测）和反向传递（反向传播）的代码必须手动实现。
 
 其他一些注意事项：
 
-* DL4J有一项[数值梯度检查工具](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/gradientcheck/GradientCheckUtil.java)，使用[这些单元测试](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core/src/test/java/org/deeplearning4j/gradientcheck)。
-  * 数值梯度检验的目的是确保所有分析梯度（您的层中计算所得）与数值梯度相近。更多信息请参见[这一JavaDoc](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/gradientcheck/GradientCheckUtil.java)
+* DL4J有一项[数值梯度检查工具](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/gradientcheck/GradientCheckUtil.java)，使用[这些单元测试](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/gradientcheck)。
+  * 数值梯度检验的目的是确保所有分析梯度（您的层中计算所得）与数值梯度相近。更多信息请参见[这一JavaDoc](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/gradientcheck/GradientCheckUtil.java)
   * 任何新型的层都必须进行梯度检验
-* 参数和梯度（见下段说明）会被压缩为一个单行向量。很重要的一点是，参数和梯度的压缩顺序必须相同。在实践中，这通常是指您向[Gradient对象](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/gradient)添加梯度的顺序应当与层参数被压缩为单行向量（即[Model.params()](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/api/Model.java)）的顺序相同。未能做到这一点是梯度检验失败的常见原因之一。
+* 参数和梯度（见下段说明）会被压缩为一个单行向量。很重要的一点是，参数和梯度的压缩顺序必须相同。在实践中，这通常是指您向[Gradient对象](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/gradient)添加梯度的顺序应当与层参数被压缩为单行向量（即[Model.params()](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/api/Model.java)）的顺序相同。未能做到这一点是梯度检验失败的常见原因之一。
 
 ### 反向传播在DL4J中的实现方式
 
@@ -153,9 +153,9 @@ DL4J目前尚无符号自动微分。这意味着正向传递（预测）和反�
 接下来我们依次介绍您调用MultiLayerNetwork.fit(DataSet)或MultiLayerNet.fit(DataSetIterator)之后发生的每个步骤。我们假定网络在进行反向传播（而不是无监督的预训练）。
 
 1. 设定MultiLayerNetwork的输入和输出（均为INDArray）
-2. 如果[Solver](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/Solver.java)对象不存在，则创建该对象
-3. 调用Solver.optimize()。这会调用[ConvexOptimizer.optimize()](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/api/ConvexOptimizer.java)。ConvexOptimizer（凸优化器）是什么呢？我们用这一抽象层来实现多种优化算法，包括[StochasticGradientDescent](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/StochasticGradie)（随机梯度下降）、[LineGradientDescent](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/LineGradientDesc)（线搜索梯度下降）、[ConjugateGradient](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/ConjugateGradient.java)（共轭梯度）和[L-BFGS](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/LBFGS.java)。
-  请注意，上述每个ConvexOptimizer类都是[BaseOptimizer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/BaseOptimizer.java)的扩展。下一步我们假设现在使用的是StochasticGradientDescent。
+2. 如果[Solver](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/Solver.java)对象不存在，则创建该对象
+3. 调用Solver.optimize()。这会调用[ConvexOptimizer.optimize()](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/api/ConvexOptimizer.java)。ConvexOptimizer（凸优化器）是什么呢？我们用这一抽象层来实现多种优化算法，包括[StochasticGradientDescent](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/StochasticGradie)（随机梯度下降）、[LineGradientDescent](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/LineGradientDesc)（线搜索梯度下降）、[ConjugateGradient](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/ConjugateGradient.java)（共轭梯度）和[L-BFGS](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/LBFGS.java)。
+  请注意，上述每个ConvexOptimizer类都是[BaseOptimizer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/optimize/solvers/BaseOptimizer.java)的扩展。下一步我们假设现在使用的是StochasticGradientDescent。
 4. StochasticGradientDescent.optimize()：这一步发生两件事：首先：系统调用BaseOptimizer.GradientAndScore()，启动梯度计算。其次：系统对参数进行更新。
 5. BaseOptimizer.gradientAndScore()：
   * 调用MultiLayerNetwork.computeGradientAndScore()－计算梯度，然后：
@@ -171,11 +171,11 @@ DL4J目前尚无符号自动微分。这意味着正向传递（预测）和反�
 从MultiLayerNetwork.computeGradientAndScore()继续：
 
 * MultiLayerNetwork首先让网络进行一次完整的正向传递，采用先前设定的输入
-  * 最终系统将对网络从输入到输出之间的每一层调用[Layer.activate(INDArray,boolean)](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/api/Layer.java#L200-200)方法。
+  * 最终系统将对网络从输入到输出之间的每一层调用[Layer.activate(INDArray,boolean)](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/api/Layer.java#L200-200)方法。
   * 在每一层中，输入的激活值会被保存起来。反向传播时需要这些激活值。
 * 随后，MultiLayerNetwork开始对网络进行反向传播，从OutputLayer（输出层）倒回至输入层。
   * 调用MultiLayerNetwork.calcBackpropGradients(INDArray,boolean)
-  * 梯度计算从OutputLayer开始，输出层依据网络预测/输出、标签和在配置中设定的损失函数来计算梯度，[见此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/BaseOutputLayer.java)
+  * 梯度计算从OutputLayer开始，输出层依据网络预测/输出、标签和在配置中设定的损失函数来计算梯度，[见此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/BaseOutputLayer.java)
   * 随后依次用上一层的误差来计算每个层的梯度。
   * 最终设定MultiLayerNetwork.gradient字段，实际上是一项包含每个层的梯度的```Map<String,INDArray>```，之后会被优化器检索提取。
 
@@ -183,4 +183,4 @@ DL4J目前尚无符号自动微分。这意味着正向传递（预测）和反�
 **更新梯度**
 更新梯度需要将每项参数的梯度变为更新值。“更新值”就是梯度在应用学习速率、动量、L1/L2正则化、梯度修剪、除以微批次大小等操作后的值。
 
-这一功能通过[BaseUpdater](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/updater/BaseUpdater.java)以及[各种更新器类](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/updater)来实现。
+这一功能通过[BaseUpdater](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/updater/BaseUpdater.java)以及[各种更新器类](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/updater)来实现。

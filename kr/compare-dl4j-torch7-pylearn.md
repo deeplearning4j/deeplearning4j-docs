@@ -194,7 +194,7 @@ Amazon의 Deep Scalable Sparse Tensor Network Engine ([DSSTNE](https://github.co
 
 ND4J로 수행되는 Deeplearning4j의 기본 선형 대수 연산은 매우 큰 행렬 곱셈에서 [Numpy보다 적어도 두 배 빠른 속도로 실행](http://nd4j.org/benchmarking)되는 것으로 나타났습니다. 그것이 우리의 프레임 워크를 NASA의 제트 추진 연구소 (Jet Propulsion Laboratory)의 팀이 채택한 이유 가운데 하나입니다. 또한 Deeplearning4j는 CUDA C를 사용하는 x86 및 GPU를 포함한 다양한 칩에서 실행되도록 최적화하였습니다.
 
-Torch7과 DL4J는 모두 병렬 처리를 사용하지만 DL4J의 **병렬 처리는 자동** 입니다. 즉, 작업자 노드의 연결 설정을 자동화하여 [Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/spark), [Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/hadoop-yarn), 또는 [Akka 및 AWS](http://deeplearning4j.org/scaleout.html)에서 대규모 병렬 네트워크를 생성하면서 사용자가 라이브러리들을 우회 할 수 있도록 합니다. Deeplearning4j는 특정 문제를 해결하고 신속하게 처리하는 데 가장 적합합니다.
+Torch7과 DL4J는 모두 병렬 처리를 사용하지만 DL4J의 **병렬 처리는 자동** 입니다. 즉, 작업자 노드의 연결 설정을 자동화하여 [Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark), [Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/hadoop-yarn), 또는 [Akka 및 AWS](http://deeplearning4j.org/scaleout.html)에서 대규모 병렬 네트워크를 생성하면서 사용자가 라이브러리들을 우회 할 수 있도록 합니다. Deeplearning4j는 특정 문제를 해결하고 신속하게 처리하는 데 가장 적합합니다.
 
 Deeplearning4j의 전체 기능 목록은 [기능 페이지](./features.html)를 참조하십시오.
 

@@ -77,7 +77,7 @@ epoch终止条件示例：
 
 迭代终止条件示例：
 
-* 如需在达到一定的时间上限时停止定型（不等待当前epoch完成），可使用[MaxTimeIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxTimeIterationTerminationCondition.java)
+* 如需在达到一定的时间上限时停止定型（不等待当前epoch完成），可使用[MaxTimeIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxTimeIterationTerminationCondition.java)
 * 不论何时，只要测试分值超过一定数值便停止定型，可使用[MaxScoreIterationTerminationCondition](https://github.com/deeplearning4j/deeplearning4j/blob/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination/MaxScoreIterationTerminationCondition.java)。比如可以用于在网络调试效果不佳或定型状况不稳定（例如权重/分值膨胀）时立即终止定型。
 
 内置终止类的源代码参见[此目录](https://github.com/deeplearning4j/deeplearning4j/tree/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/termination)
@@ -88,6 +88,6 @@ epoch终止条件示例：
 最后提一下：
 
 * 这个[非常简单的早停法示例](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/misc/earlystopping/EarlyStoppingMNIST.java)可供参考
-* [这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/earlystopping/TestEarlyStopping.java)可能也会帮助
-* 在Spark上也可以进行早停定型。网络配置方法相同；但使用的不是上文中的EarlyStoppingTrainer，而是[SparkEarlyStoppingTrainer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/earlystopping/SparkEarlyStoppingTrainer.java)
-  * [这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/spark/dl4j-spark/src/test/java/org/deeplearning4j/spark/TestEarlyStoppingSpark.java)可以用于基于Spark的早停定型
+* [这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/earlystopping/TestEarlyStopping.java)可能也会帮助
+* 在Spark上也可以进行早停定型。网络配置方法相同；但使用的不是上文中的EarlyStoppingTrainer，而是[SparkEarlyStoppingTrainer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/earlystopping/SparkEarlyStoppingTrainer.java)
+  * [这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/test/java/org/deeplearning4j/spark/TestEarlyStoppingSpark.java)可以用于基于Spark的早停定型

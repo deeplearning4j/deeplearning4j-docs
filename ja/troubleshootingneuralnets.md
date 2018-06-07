@@ -111,7 +111,7 @@ DL4Jでは、「アップデーター」とは、モーメンタム、RMSProp、
 
 ## <a name="resources">勾配正規化</a>
 
-ニューラルネットワークをトレーニングしているときに、勾配が大きくなり過ぎないように、勾配正規化を行うのがいいことがあります（これは再帰型ニューラルネットワークによくある勾配爆発という問題です）。これは、.gradientNormalization(GradientNormalization)や.gradientNormalizationThreshould(double)の方法によって適用することができます。勾配正規化のサンプルは、[こちらの](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)「GradientNormalization.java」をご覧ください。このサンプルのテストコードは[こちら](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/nn/updater/TestGradientNormalization.java)をご覧ください。
+ニューラルネットワークをトレーニングしているときに、勾配が大きくなり過ぎないように、勾配正規化を行うのがいいことがあります（これは再帰型ニューラルネットワークによくある勾配爆発という問題です）。これは、.gradientNormalization(GradientNormalization)や.gradientNormalizationThreshould(double)の方法によって適用することができます。勾配正規化のサンプルは、[こちらの](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)「GradientNormalization.java」をご覧ください。このサンプルのテストコードは[こちら](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/nn/updater/TestGradientNormalization.java)をご覧ください。
 
 ## <a name="rnn">再帰型ニューラルネットワーク：打ち切り型通時的逆伝播</a>
 

@@ -29,8 +29,8 @@ layout: cn-default
 
 DL4J有两种多层神经网络：
 
-- [MultiLayerNetwork](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java)（多层网络），由多个神经网络层堆叠而成（单一输入层和单一输出层）
-- [ComputationGraph](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/ComputationGraph.java)（计算图），网络架构的自由度更大
+- [MultiLayerNetwork](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java)（多层网络），由多个神经网络层堆叠而成（单一输入层和单一输出层）
+- [ComputationGraph](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/ComputationGraph.java)（计算图），网络架构的自由度更大
 
 
 具体而言，ComputationGraph可以构建具备以下功能的网络：
@@ -57,7 +57,7 @@ DL4J有两种多层神经网络：
 
 ### <a name="vertextypes">计算图的各类顶点</a>
 
-ComputationGraph的核心组成部分是[GraphVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java)（图的顶点，亦简称为“点”），而非层。层（更准确地说是[LayerVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/LayerVertex.java)对象）只不过是计算图中的一类顶点。其他类型的顶点包括：
+ComputationGraph的核心组成部分是[GraphVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java)（图的顶点，亦简称为“点”），而非层。层（更准确地说是[LayerVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/LayerVertex.java)对象）只不过是计算图中的一类顶点。其他类型的顶点包括：
 
 - 输入点
 - 对应元素运算点
@@ -68,7 +68,7 @@ ComputationGraph的核心组成部分是[GraphVertex](https://github.com/deeplea
 以下是上述各类顶点的简要介绍。
 
 **LayerVertex**：层点（有神经网络层的顶点），可以用```.addLayer(String,Layer,String...)```方法来添加。第一个参数是层的标签，而最后一个参数则是该层的输入。
-如果您需要手动添加一项[InputPreProcessor](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)（输入预处理器，通常不需要这样操作——参见下一段），可以使用```.addLayer(String,Layer,InputPreProcessor,String...)```方法。
+如果您需要手动添加一项[InputPreProcessor](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)（输入预处理器，通常不需要这样操作——参见下一段），可以使用```.addLayer(String,Layer,InputPreProcessor,String...)```方法。
 
 **InputVertex**：输入点，在配置中用```addInputs(String...)```方法指定。作为输入的字符串可任意指定——它们是由用户定义的标签，之后可以在配置中引用。字符串的数量决定了输入的数量；输入的顺序也决定了fit方法中相应的INDArrays（或DataSet/MultiDataSet对象））的顺序。
 
@@ -78,9 +78,9 @@ ComputationGraph的核心组成部分是[GraphVertex](https://github.com/deeplea
 
 **SubsetVertex**：子集点让您能有针对性地获取另一个顶点输出的部分激活值。例如，要获得另一个标记为“layer1”的顶点的前5项激活值，您可以采用```.addVertex("subset1", new SubsetVertex(0,4), "layer1")```：如此一来，子集点将会输出“layer1”顶点中的第0至第4个（闭区间）激活值。
 
-**PreProcessorVertex**：某些情况下，您可能要使用[InputPreProcessor](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)的功能，但不想让预处理器和某个层联系在一起。这可以用PreProcessorVertex来实现。
+**PreProcessorVertex**：某些情况下，您可能要使用[InputPreProcessor](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)的功能，但不想让预处理器和某个层联系在一起。这可以用PreProcessorVertex来实现。
 
-最后，您还可以用自定义的GraphVertex[配置](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/graph/GraphVertex.java)和[实现](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java)类来自行定义顶点。
+最后，您还可以用自定义的GraphVertex[配置](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/graph/GraphVertex.java)和[实现](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java)类来自行定义顶点。
 
 
 ### <a name="rnnskip">示例1：包含跳跃连接的循环网络</a>
@@ -161,7 +161,7 @@ ComputationGraphConfiguration的功能之一是可以在配置中用```.setInput
 
 setInputType方法有两个效果：
 
-1. 它会自动添加所有需要的[InputPreProcessor](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)。InputPreProcessor对于处理某些层之间的互动是必需的，比如完全连接（稠密）层与卷积层或者循环层与完全连接层之间的互动。
+1. 它会自动添加所有需要的[InputPreProcessor](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)。InputPreProcessor对于处理某些层之间的互动是必需的，比如完全连接（稠密）层与卷积层或者循环层与完全连接层之间的互动。
 2. 它会自动计算一个层的输入数量（.nIn(x) config）。所以，使用```setInputTypes(InputType...)```功能时不必在配置中手动指定.nIn(x)选项。这有助于简化某些架构的构建（比如包含完全连接层的卷积网络）。如果一个层的.nIn(x)已指定，网络使用InputType功能时不会替代已指定的值。
 
 
@@ -185,7 +185,7 @@ MultiDataSet是DataSet的多项输入和/或多项输出版本。在循环神经
 目前有两种使用MultiDataSetIterator的方法：
 
 - 直接实现[MultiDataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/MultiDataSetIterator.java)接口
-- 将[RecordReaderMultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.java)与DataVec记录读取器（RecordReader）结合使用
+- 将[RecordReaderMultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.java)与DataVec记录读取器（RecordReader）结合使用
 
 
 RecordReaderMultiDataSetIterator提供多种数据加载方式。RecordReaderMultiDataSetIterator的具体功能如下：
@@ -196,7 +196,7 @@ RecordReaderMultiDataSetIterator提供多种数据加载方式。RecordReaderMul
 - 可以将单个列从类别索引转换为one-hot表示
 
 
-以下是一些如何使用RecordReaderMultiDataSetIterator的基础示例。您也可以参考[这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIteratorTest.java)。
+以下是一些如何使用RecordReaderMultiDataSetIterator的基础示例。您也可以参考[这些单元测试](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIteratorTest.java)。
 
 ### <a name="rrmdsi1">RecordReaderMultiDataSetIterator示例1：回归数据</a>
 

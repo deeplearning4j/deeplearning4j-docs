@@ -29,8 +29,8 @@ redirect_from: kr/kr-compgraph
 
 DL4J의 심층 신경망에는 두 종류가 있습니다.
 
-- [MultiLayerNetwork](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java)는 신경망을 순차적으로 쌓은 것으로 한 층의 출력은 다음 층의 입력이 됩니다. 즉, 가장 단순하고 흔한 구조의 신경망입니다.
-- [ComputationGraph](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/ComputationGraph.java)는 다양하고 복잡한 신경망으로 `MultiLayerNetwork`보다 더 복잡한 구조로 신경망을 짤 수 있습니다.
+- [MultiLayerNetwork](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java)는 신경망을 순차적으로 쌓은 것으로 한 층의 출력은 다음 층의 입력이 됩니다. 즉, 가장 단순하고 흔한 구조의 신경망입니다.
+- [ComputationGraph](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/ComputationGraph.java)는 다양하고 복잡한 신경망으로 `MultiLayerNetwork`보다 더 복잡한 구조로 신경망을 짤 수 있습니다.
 
 
 다음의 경우에 ComputationGraph가 필요합니다.
@@ -57,7 +57,7 @@ DL4J의 심층 신경망에는 두 종류가 있습니다.
 
 ### <a name="vertextypes">그래프 꼭지점의 종류</a>
 
-ComputationGraph는 층이 아니라 여러 개의 [GraphVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java)를 연결하여 신경망을 구성합니다. 층([LayerVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/LayerVertex.java) objects)도 여러가지 그래프 꼭지점 중 한 유형이며 그 외에도,
+ComputationGraph는 층이 아니라 여러 개의 [GraphVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java)를 연결하여 신경망을 구성합니다. 층([LayerVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/LayerVertex.java) objects)도 여러가지 그래프 꼭지점 중 한 유형이며 그 외에도,
 
 - Input Vertices (입력)
 - Element-wise operation vertices (성분별 연산)
@@ -67,7 +67,7 @@ ComputationGraph는 층이 아니라 여러 개의 [GraphVertex](https://github.
 
 등의 종류가 있습니다. 아래에서 자세히 설명합니다.
 
-**LayerVertex**: 층 꼭지점은 신경망의 층으로 된 꼭지점으로 ```.addLayer(String,Layer,String...)``` 메쏘드로 추가합니다. 첫 번째 입력 변수는 층의 이름이고 마지막 입력 변수는 층에 이 층의 입력입니다. [입력 전처리기 (InputPreProcessor)](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)를 직접 추가하고싶다면 ```.addLayer(String,Layer,InputPreProcessor,String...)``` 메쏘드로 추가합니다. 대부분의 경우에 이 과정은 불필요합니다 (다음 섹션에 자세히 설명합니다).
+**LayerVertex**: 층 꼭지점은 신경망의 층으로 된 꼭지점으로 ```.addLayer(String,Layer,String...)``` 메쏘드로 추가합니다. 첫 번째 입력 변수는 층의 이름이고 마지막 입력 변수는 층에 이 층의 입력입니다. [입력 전처리기 (InputPreProcessor)](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)를 직접 추가하고싶다면 ```.addLayer(String,Layer,InputPreProcessor,String...)``` 메쏘드로 추가합니다. 대부분의 경우에 이 과정은 불필요합니다 (다음 섹션에 자세히 설명합니다).
 
 **InputVertex**: 입력 꼭지점은 ```addInputs(String...)``` 메쏘드를 사용합니. 입력 변수로 들어가는 문자열은 임의의 문자열을 사용할 수 있으며 나중에 입력 꼭지점을 참조할 때 사용합니다. 문자열의 개수는 입력의 개수를 결정하며 입력 데이터와 문자열의 순서는 일치합니다. 또, ```fit``` 메쏘드로 학습을 시작할 때 넣어주는 입력 데이터도 이 순서를 맞춰야합니다.
 
@@ -77,9 +77,9 @@ ComputationGraph는 층이 아니라 여러 개의 [GraphVertex](https://github.
 
 **SubsetVertex**: 부분집합 꼭지점을 이용해 꼭지점의 출력 중 일부만 사용할 수 있습니다. 예를 들어 "layer1" 꼭지점의 최초 다섯개의 값만 사용하려면 ```.addVertex("subset1", new SubsetVertex(0,4), "layer1")```를 이용합니다. 이렇게 하면 "layer1" 꼭지점의 출력 중 0번째부터 4번째까지 (0과 4 모두를 포함) 총 5개의 값만 골라냅니다.
 
-**PreProcessorVertex**: 종종 [입력 전처리기(InputPreProcessor)](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)에 있는 기능을 신경망 중간에 있는 층에서 사용하는 경우가 있습니다. 이 경우에 전처리기 꼭지점을 사용하면 됩니다.
+**PreProcessorVertex**: 종종 [입력 전처리기(InputPreProcessor)](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)에 있는 기능을 신경망 중간에 있는 층에서 사용하는 경우가 있습니다. 이 경우에 전처리기 꼭지점을 사용하면 됩니다.
 
-마지막으로, [configuration](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/graph/GraphVertex.java)과 [implementation](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java) 클래스를 이용해 필요에 맞춘 그래프 꼭지점을 만들어서 사용할 수 있습니다.
+마지막으로, [configuration](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/graph/GraphVertex.java)과 [implementation](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/GraphVertex.java) 클래스를 이용해 필요에 맞춘 그래프 꼭지점을 만들어서 사용할 수 있습니다.
 
 
 ### <a name="rnnskip">Skip연결과 RNN</a>
@@ -160,7 +160,7 @@ ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
 
 이 ```setInputTypes(InputType...)``` 메쏘드는 두 가지 역할을 합니다.
 
-1. 우선, 이 메쏘드는 현재 상황에 필요한 [InputPreProcessor(전처리기)](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)를 추가합니다. 전처리기는 서로 다른 유형의 신경망의 연결을 도와줍니다. 예를 들어 컨볼루션 층과 RNN을 연결해줍니다.
+1. 우선, 이 메쏘드는 현재 상황에 필요한 [InputPreProcessor(전처리기)](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)를 추가합니다. 전처리기는 서로 다른 유형의 신경망의 연결을 도와줍니다. 예를 들어 컨볼루션 층과 RNN을 연결해줍니다.
 
 2. 또 입력 데이터의 개수를 계산해줍니다. 다시 말해,  ```setInputTypes(InputType...)``` 메쏘드를 사용하면 ```.nIn(x)```을 설정해줄 필요가 없습니다. 만일 .nIn(x)를 별도로 설정하는 경우엔 그 값을 활용합니다. 즉 함수 override가 일어나지 않습니다.
 
@@ -185,7 +185,7 @@ MultiDataSet은 여러 개의 입력 및 출력을 지원하는 DataSet입니다
 MultiDataSetIterator 사용 방법은 두 가지 입니다.
 
 - [MultiDataSetIterator](https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/MultiDataSetIterator.java)를 직접 이용하는 방법이 있고,
-- [RecordReaderMultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.java)와 DataVec record reader를 같이 사용하는 방법이 있습니다.
+- [RecordReaderMultiDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.java)와 DataVec record reader를 같이 사용하는 방법이 있습니다.
 
 
 RecordReaderMultiDataSetIterator엔 몇 가지 옵션이 있습니다.
@@ -196,7 +196,7 @@ RecordReaderMultiDataSetIterator엔 몇 가지 옵션이 있습니다.
 - 정수로 된 단일 열의 인덱스를 one-hot 벡터로 변환할 수 있습니다.
 
 
-아래에 있는 RecordReaderMultiDataSetIterator 예제를 참고하십시오. [이 테스트 코드](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIteratorTest.java)도 다양한 예제를 포함하고 있습니다.
+아래에 있는 RecordReaderMultiDataSetIterator 예제를 참고하십시오. [이 테스트 코드](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIteratorTest.java)도 다양한 예제를 포함하고 있습니다.
 
 ### <a name="rrmdsi1">RecordReaderMultiDataSetIterator 예제 1: 회귀 데이터</a>
 

@@ -30,8 +30,8 @@ layout: cn-default
 
 * [受限玻尔兹曼机](./restrictedboltzmannmachine.html)
 * [卷积网络](./convolutionalnets.html)
-* [递归自动编码器](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/models/featuredetectors/autoencoder/recursive/RecursiveAutoEncoderTest.java)
-* [循环网络：长短期记忆（LSTM）](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/models/classifiers/lstm/LSTMTest.java)（包括双向LSTM）
+* [递归自动编码器](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/featuredetectors/autoencoder/recursive/RecursiveAutoEncoderTest.java)
+* [循环网络：长短期记忆（LSTM）](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/classifiers/lstm/LSTMTest.java)（包括双向LSTM）
 * [深度置信网络](./deepbeliefnetwork.html)
 * [降噪及堆叠式降噪自动编码器](./denoisingautoencoder.html)
 * [深度自动编码器](./deepautoencoder.html)

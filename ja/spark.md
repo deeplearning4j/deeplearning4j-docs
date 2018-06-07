@@ -53,7 +53,7 @@ Sparkのクラスター上で行う一般的なトレーニングの流れ（Spa
 **注意**単一の機械によるトレーニングに、Spark localを使用することは*可能*ですが、あまりおすすめはできません（Sparkの同期化とシリアライゼーションのオーバーヘッドが発生するため）。その代わりに、以下を考えてみてください。
 
 * 単一のCPU/GPUシステムの場合、標準的なMultiLayerNetworkまたはComputationGraphのトレーニングを使用する。
-* 複数のCPU/GPUシステムには、[ParallelWrapper](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java)を使用する。これは、機能的にはSparkをローカルモードで実行するのに等しいですが、オーバーヘッドが軽減します（このためトレーニングのパフォーマンスが向上します）。
+* 複数のCPU/GPUシステムには、[ParallelWrapper](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java)を使用する。これは、機能的にはSparkをローカルモードで実行するのに等しいですが、オーバーヘッドが軽減します（このためトレーニングのパフォーマンスが向上します）。
 
 ## <a name="how">DL4JのSpark上での分散ネットワークのトレーニング</a>
 

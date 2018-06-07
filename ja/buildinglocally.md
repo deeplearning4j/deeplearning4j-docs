@@ -271,7 +271,7 @@ copy mkl_rt.dll libblas3.dll
 
 ### スクリプトの構築
 
-deeplearning4jのリポジトリからスクリプトの[build-dl4j-stack.sh](https://github.com/deeplearning4j/deeplearning4j/blob/master/build-dl4j-stack.sh)を使ってソースのlibndj4、ndj4、datavec、deeplearning4jからdeeplearning4jのスタック全体を構築することができます。DL4Jのスタックを複製し、各リポジトリを構築し、それらをローカルのMavenにインストールします。このスクリプトはLinuxとOS Xの両方のプラットフォームで使用可能です。
+deeplearning4jのリポジトリからスクリプトの[build-dl4j-stack.sh](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/build-dl4j-stack.sh)を使ってソースのlibndj4、ndj4、datavec、deeplearning4jからdeeplearning4jのスタック全体を構築することができます。DL4Jのスタックを複製し、各リポジトリを構築し、それらをローカルのMavenにインストールします。このスクリプトはLinuxとOS Xの両方のプラットフォームで使用可能です。
 
 さて、次の説明へと進みましょう。 
 
@@ -359,7 +359,7 @@ cd ..
 
 ## ローカルの依存関係を使用
 
-ローカルのMavenにDL4Jのスタックをインストールした後は、自分の構築ツールにそれを含めることができます。Deeplearning4jの説明については、「[DL4Jをはじめましょう](http://deeplearning4j.org/gettingstarted)」に従い、[master POM](https://github.com/deeplearning4j/deeplearning4j/blob/master/pom.xml)にあるSNAPSHOTバージョンに入れ替えてください。
+ローカルのMavenにDL4Jのスタックをインストールした後は、自分の構築ツールにそれを含めることができます。Deeplearning4jの説明については、「[DL4Jをはじめましょう](http://deeplearning4j.org/gettingstarted)」に従い、[master POM](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/pom.xml)にあるSNAPSHOTバージョンに入れ替えてください。
 
 GradleやSBTなど一部の構築ツールは、プラットフォーム固有のバイナリを取り込むことができませんのでご注意ください。お気に入りの構築ツールをセットアップするには、[こちらの手順](http://nd4j.org/dependencies.html)に従ってください。
 

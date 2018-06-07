@@ -448,7 +448,7 @@ Word2vec是由Tomas Mikolov领导的一支谷歌研究团队提出的[一种对�
 
 ### <a name="sequence">序列向量</a>
 
-Deeplearning4j有一个叫做[SequenceVectors](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/sequencevectors/SequenceVectors.java)的类，它是向量上一级的抽象类，让你可以从包括社交媒体档案、交易信息、蛋白质信息等任何序列中提取特征。如果数据能称为序列，就可以用AbstractVectors通过skip-gram和层次softmax来学习。这与[DeepWalk算法](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/deeplearning4j-graph/src/main/java/org/deeplearning4j/graph/models/deepwalk/DeepWalk.java)兼容，同样也在Deeplearning4j中实现。 
+Deeplearning4j有一个叫做[SequenceVectors](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/sequencevectors/SequenceVectors.java)的类，它是向量上一级的抽象类，让你可以从包括社交媒体档案、交易信息、蛋白质信息等任何序列中提取特征。如果数据能称为序列，就可以用AbstractVectors通过skip-gram和层次softmax来学习。这与[DeepWalk算法](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-graph/src/main/java/org/deeplearning4j/graph/models/deepwalk/DeepWalk.java)兼容，同样也在Deeplearning4j中实现。 
 
 ### <a name="features">Deeplearning4j的Word2Vec特点</a>
 

@@ -23,5 +23,5 @@ ModelSerializer是用于加载和保存模型的类。保存的方法有两种�
 <!---
 Verify up to date before re-including
 以下是加载多层网络或计算图的示例：
-[参见测试示例](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/util/ModelSerializerTest.java)
+[参见测试示例](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/util/ModelSerializerTest.java)
 -->

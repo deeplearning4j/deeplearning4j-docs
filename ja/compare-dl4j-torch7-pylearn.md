@@ -191,7 +191,7 @@ Amazonの[DSSTNE](https://github.com/amznlabs/amazon-dsstne)（Deep Scalable Spa
 
 ND4Jで実行されるDeeplearning4jの基盤である線形代数計算は、[Numpyよりも最低2倍の速度](http://nd4j.org/benchmarking)で大規模な行列の積を計算するということが証明されています。このため、NASAのJet Propulsion Laboratory（ジェット推進研究所）のチームは弊社の技術を採用しています。また、Deeplearning4jはx86やCUDA CのGPUを含む様々なチップ実行できるように最適化されています。
 
-Torch7もDL4Jも並列処理を行いますが、DL4Jの**並列処理は自動**で実行されます。つまり、ノードや接続の設定を自動化し、ライブラリを通ることなく、[Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/spark)、[Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/hadoop-yarn)に並列ネットワークを作成したり、[Akka及びAWS](http://deeplearning4j.org/scaleout.html)を使用できるのです。Deeplearning4jは特定の問題解決を素早く行うのに最適です。 
+Torch7もDL4Jも並列処理を行いますが、DL4Jの**並列処理は自動**で実行されます。つまり、ノードや接続の設定を自動化し、ライブラリを通ることなく、[Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark)、[Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/hadoop-yarn)に並列ネットワークを作成したり、[Akka及びAWS](http://deeplearning4j.org/scaleout.html)を使用できるのです。Deeplearning4jは特定の問題解決を素早く行うのに最適です。 
 
 Deeplearning4jの機能の全リストについては弊社の[features（機能）のページ](./features.html)をご覧ください。
 

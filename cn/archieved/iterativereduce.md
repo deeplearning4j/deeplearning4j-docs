@@ -43,6 +43,6 @@ Hadoop和Spark都是能够进行MapReduce和迭代式归纳的分布式运行时
 
 Deeplearning4j认为分布式运行时是可互换的（但不一定完全等同）；它们都只是整个模块化架构中的一个目录，可以任意替换。这让整体项目能以不同速度演进，而来自其他模块的独立的运行时可以分别被专用于神经网络算法或硬件。Deeplearning4j也能用Akka构建一个独立的分布式架构，在AWS上组织节点。
 
-包括Hadoop和Spark在内的所有向外扩展形式都收录在我们的[向外扩展库](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout)中。
+包括Hadoop和Spark在内的所有向外扩展形式都收录在我们的[向外扩展库](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout)中。
 
 比方说，Deeplearning4j的代码可以与Spark相混合，让DL4J也能像其他应用一样实现分布式运行。 

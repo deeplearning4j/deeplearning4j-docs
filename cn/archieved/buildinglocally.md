@@ -352,7 +352,7 @@ cd ..
 
 ## 使用本地依赖项目
 
-DL4J堆栈安装到本地的Maven代码库之后，就可以将其加入构建工具的依赖项目了。请参阅Deeplearning4j的[完全安装指南](http://deeplearning4j.org/cn/gettingstarted)，以正确的方式将版本替换为目前[主POM](https://github.com/deeplearning4j/deeplearning4j/blob/master/pom.xml)上的SNAPSHOT版本。
+DL4J堆栈安装到本地的Maven代码库之后，就可以将其加入构建工具的依赖项目了。请参阅Deeplearning4j的[完全安装指南](http://deeplearning4j.org/cn/gettingstarted)，以正确的方式将版本替换为目前[主POM](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/pom.xml)上的SNAPSHOT版本。
 
 需要注意的是，某些构建工具，比如Gradle和SBT，无法正确调用特定平台的二进制文件。可以按[此处](http://nd4j.org/dependencies.html)的指南来设置您选用的构建工具。
 

@@ -69,7 +69,7 @@ DataSetIterator是用于遍历列表元素的一个Deeplearning4J类。迭代器
         // 参数包括：DataVec recordReader的类型、批次大小、标签的索引值、标签类别
         // 的数量
 
-DataSetIterator对输入数据集进行迭代，每次迭代均抓取一个或多个（batchSize）新样例，将其载入神经网络可以识别的DataSet（INDArray）对象。上述代码还指示[RecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java)将图像转换为一条元素的直线（向量），而非一个28 x 28的网格（矩阵）；此外还指定了标签的配置。
+DataSetIterator对输入数据集进行迭代，每次迭代均抓取一个或多个（batchSize）新样例，将其载入神经网络可以识别的DataSet（INDArray）对象。上述代码还指示[RecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java)将图像转换为一条元素的直线（向量），而非一个28 x 28的网格（矩阵）；此外还指定了标签的配置。
 
 `RecordReaderDataSetIterator`的参数可以设置任意特定的recordReader（针对图像或声音等数据类型）和批次大小。进行有监督学习时，还可指定标签的索引值，设置输入样例的标签可能有多少种不同的类别（LFW数据集共有5749种标签）。 
 

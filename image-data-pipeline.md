@@ -68,7 +68,7 @@ The DataSetIterator is a Deeplearning4J class that traverses the elements of a l
         // Parameters are, the DataVec recordReader, the batchsize, the offset of the label index, and the total number
         // of label classes
 
-The DataSetIterator iterates through input datasets, fetching one or more (batchSize) new examples with each iteration, and loading those examples into a DataSet(INDArray) object that neural nets can work with. The line above also tells the [RecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java) to convert the image to a straight line (e.g. vector) of elements, rather than a 28 x 28 grid (e.g. matrix); it also specifies the configuration of the labels.
+The DataSetIterator iterates through input datasets, fetching one or more (batchSize) new examples with each iteration, and loading those examples into a DataSet(INDArray) object that neural nets can work with. The line above also tells the [RecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java) to convert the image to a straight line (e.g. vector) of elements, rather than a 28 x 28 grid (e.g. matrix); it also specifies the configuration of the labels.
 
 `RecordReaderDataSetIterator` can take as parameters the specific recordReader you want (for images, sound, etc.) and the batch size. For supervised learning, it will also take a label index and the number of possible labels that can be applied to the input (for LFW, the number of labels is 5,749). 
 

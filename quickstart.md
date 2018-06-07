@@ -239,7 +239,7 @@ Lastly, if you are benchmarking Deeplearnin4j, please consider coming in to our 
 * [LSTMs and Recurrent Networks](./lstm)
 * [Introduction to Deep Neural Networks](./neuralnet-overview)
 * [Convolutional Networks](./convolutionalnets)
-* [Deep Learning Notebook-Based Tutorials](https://github.com/deeplearning4j/deeplearning4j/tree/master/dl4j-examples/tutorials)
+* [Deep Learning Notebook-Based Tutorials](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/dl4j-examples/tutorials)
 * [ND4J: A Tensor Library for the JVM](http://nd4j.org)
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)

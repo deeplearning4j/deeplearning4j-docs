@@ -25,7 +25,7 @@ Deeplearning4j技术先进，以即插即用为目标，通过更多预设的使
 
 * 功能多样的[N维数组](http://nd4j.org/zh-getstarted)类，为Java和Scala设计
 * 与[GPU](http://nd4j.org/gpu_native_backends.html)集合
-* 可在[Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout/hadoop-yarn)、[Spark](./spark.html)上实现扩缩
+* 可在[Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/hadoop-yarn)、[Spark](./spark.html)上实现扩缩
 * [Canova](canova)：机器学习库的通用向量化工具
 * [ND4J：线性代数库，较Numpy快一倍](http://nd4j.org/benchmarking)
 
@@ -36,7 +36,7 @@ Deeplearning4j包括了分布式、多线程的深度学习框架，以及普通
 * [受限玻尔兹曼机](zh/zh-restrictedboltzmannmachine)
 * [卷积网络](zh/zh-convolutionalnets) （图像）
 * [递归网络](zh/zh-usingrnns)/[LSTMs](zh/zh-lstm)（时间序列和传感器数据）
-* [递归自动编码器](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/feedforward/autoencoder/recursive/RecursiveAutoEncoder.java)
+* [递归自动编码器](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/layers/feedforward/autoencoder/recursive/RecursiveAutoEncoder.java)
 * [深度置信网络](deepbeliefnetwork)
 * [深度自动编码器](deepautoencoder)（问－答／数据压缩）
 * 递归神经传感器网络（场景、分析）

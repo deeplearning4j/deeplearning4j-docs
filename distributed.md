@@ -28,7 +28,7 @@ Here are a few more perks were added to original algorithm proposed by Nikko Str
  
 ![Two phases within the cluster](./img/distributed.png)
 
-Note that using Spark entails overhead. In order to determine whether Spark will help you or not, consider using the [Performance Listener](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners/PerformanceListener.java) and look at the millisecond iteration time.
+Note that using Spark entails overhead. In order to determine whether Spark will help you or not, consider using the [Performance Listener](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners/PerformanceListener.java) and look at the millisecond iteration time.
 If it's <= 150ms, Spark may not be worth it.
 
 ## Setting up Your Cluster

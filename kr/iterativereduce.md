@@ -44,5 +44,5 @@ Hadoop에서는 반복적인 리듀스를 수행하는 기능들이 HDFS의 블�
 
 Deeplearning4j considers distributed run-times to be interchangeable (but not necessarily equal); they are all simply a directory in a larger modular architecture that can be swapped in or out. This allows the overall project to evolve at different speeds, and separate run-times from other modules devoted to neural net algorithms on the one hand, and hardware on the other. Deeplearning4j users are also able to build a standalone distributed architecture via Akka, spinning out nodes on AWS.
 
-Hadoop과 Spark이 포함된 확장에 대한 모든 양식은 우리의 [확장 repository](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout)에 포함되어 있습니다.
+Hadoop과 Spark이 포함된 확장에 대한 모든 양식은 우리의 [확장 repository](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout)에 포함되어 있습니다.
 예를 들어 Deeplearning4j 코드는 Spark와 혼용되어 사용될 수 있으며, DL4J 명령들은 다른 것과 동일하게 분산되어 처리될 것입니다.

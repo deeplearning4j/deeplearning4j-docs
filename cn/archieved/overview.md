@@ -106,15 +106,15 @@ DeepLearning4J用于设计神经网络
 
 DeepLearning4J的Github代码库请见[此处](http://github.com/deeplearning4j/deeplearning4j)。代码库的结构如下。
 
-* [deeplearning4j-core](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-core)：包括datasetiterators和在桌面上运行DL4J所需的全部代码。 
-* [deeplearning4j-cuda](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-cuda)：包括cudnn和所有同cuda相关的代码。
-* [deeplearning4j-graph](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-graph)用于deepwalk的图像处理。
-* [deeplearning4j-modelimport](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-modelimport)：导入来自Keras的神经网络模型，可以借此导入Theano、Tensorflow、Caffe、CNTK等主流学习框架的模型
-* [deeplearning4j-nlp-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nlp-parent)：英语、日语、韩语文本分析以及UIMA等工具集的外部分词器和插件。UIMA原本即包括依赖解析、语义角色标记、关系提取和QA系统等功能。我们与UIMA等工具集进行集成，将数据传递给word2vec。
-* [nlp](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nlp-parent/deeplearning4j-nlp)：Word2vec、Doc2vec及其他相关工具。
-* [deeplearning4j-nn](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn) ：精简版的神经网络领域专用语言（DSL），依赖项较少。可配置多层网络，用一种构建器模式来设置超参数。
-* [deeplearning4j-scaleout](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout)：AWS预配置，用parallelwrapper进行桌面参数平均化（单机96核），不希望运行Spark时可不运行；一个版本采用参数服务器，另一个不用；streaming文件夹是基于Kafka和Spark的流式数据处理；spark文件夹是基于Spark的网络定型和自然语言处理：分布式Word2Vec
-* [deeplearning4j-ui-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-ui-parent)：神经网络定型的启发式评估和可视化
+* [deeplearning4j-core](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-core)：包括datasetiterators和在桌面上运行DL4J所需的全部代码。 
+* [deeplearning4j-cuda](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-cuda)：包括cudnn和所有同cuda相关的代码。
+* [deeplearning4j-graph](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-graph)用于deepwalk的图像处理。
+* [deeplearning4j-modelimport](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport)：导入来自Keras的神经网络模型，可以借此导入Theano、Tensorflow、Caffe、CNTK等主流学习框架的模型
+* [deeplearning4j-nlp-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nlp-parent)：英语、日语、韩语文本分析以及UIMA等工具集的外部分词器和插件。UIMA原本即包括依赖解析、语义角色标记、关系提取和QA系统等功能。我们与UIMA等工具集进行集成，将数据传递给word2vec。
+* [nlp](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nlp-parent/deeplearning4j-nlp)：Word2vec、Doc2vec及其他相关工具。
+* [deeplearning4j-nn](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn) ：精简版的神经网络领域专用语言（DSL），依赖项较少。可配置多层网络，用一种构建器模式来设置超参数。
+* [deeplearning4j-scaleout](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout)：AWS预配置，用parallelwrapper进行桌面参数平均化（单机96核），不希望运行Spark时可不运行；一个版本采用参数服务器，另一个不用；streaming文件夹是基于Kafka和Spark的流式数据处理；spark文件夹是基于Spark的网络定型和自然语言处理：分布式Word2Vec
+* [deeplearning4j-ui-parent](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-ui-parent)：神经网络定型的启发式评估和可视化
 
 ### JavaDoc 
 
@@ -142,7 +142,7 @@ DeepLearning4J示例的Github代码库请见[此处](https://github.com/deeplear
 
 ### Github代码库
 
-模型导入其实是DeepLearning4J的一部分，但很有必要将其单独列为一段。Github文件夹请见[此处](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-modelimport)。
+模型导入其实是DeepLearning4J的一部分，但很有必要将其单独列为一段。Github文件夹请见[此处](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport)。
 
 ### 模型导入示例
 

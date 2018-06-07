@@ -204,7 +204,7 @@ DL4J用户界面可以配合Spark使用。但是，截止到0.7.0版，由于依
 - 注意是否出现特别大的更新值：有可能表明网络中有膨胀的梯度
     - 梯度膨胀是一种问题，有可能会导致网络参数变得“混乱”
     - 该情况下有可能是权重初始化、学习速率或输入/标签数据标准化的问题所致
-    - 对循环神经网络而言，添加一些[梯度标准化或梯度裁剪](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)的步骤可能会有帮助
+    - 对循环神经网络而言，添加一些[梯度标准化或梯度裁剪](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/nn/conf/GradientNormalization.java)的步骤可能会有帮助
 
 **模型页面：参数学习速率图**
 

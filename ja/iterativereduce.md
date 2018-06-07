@@ -43,6 +43,6 @@ Hadoopの場合、反復減少のワーカーは、変換されたパラメー�
 
 Deeplearning4jは、分散型ランタイムは互いに交換可能（同じという意味ではありません）だとみなしています。それらはどれもモジュラー型アーキテクチャ内にある1ディレクトリに過ぎず、入れ替え可能だからです。このため、企画全体が別々のスピードで進化することができ、一方でニューラルネットワークのアルゴリズムに専念し、他方でハードウェアに専念する他のモジュールとランタイムを分けることができます。また、Deeplearning4jのユーザーはAkka経由でAWS（Amazon Web Services）にノードをスピンし、スタンドアロンの分散型アーキテクチャを構築することもできます。
 
-HadoopやSparkを含むすべてのスケールアウトのフォームは弊社の[スケールアウト・リポジトリ](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout)から利用可能です。
+HadoopやSparkを含むすべてのスケールアウトのフォームは弊社の[スケールアウト・リポジトリ](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout)から利用可能です。
 
 Deeplearning4jのコードのラインは、例えばSparkと混在させることができ、DL4Jの操作は他と同様に分散されます。 

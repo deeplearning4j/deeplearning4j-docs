@@ -115,7 +115,7 @@ DL4J 사용시 패딩 배열은 데이터를 import하는 단계에서 생성됩
 
 DL4J에서는 RNNs층과 다른 유형의 층을 결합하는 것이 가능합니다. 예를 들어 `GravesLSTM`과 `DenseLayer`를 연결할 수 있습니다. 비디오 데이터가 들어오는 경우엔 컨볼루션 층(Convolutional layer)과 `GravesLSTM`를 결합할 수 있습니다.
 
-이렇게 여러 층을 결합한 신경망이 잘 작동하게 하려면 데이터를 전처리해야합니다. 예를 들어 `CnnToRnnPreProcessor`,  `FeedForwardToRnnPreprocessor`를 이용할 수 있습니다. 전처리기 목록은 [여기](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)에 정리되어있습니다. 대부분의 경우 DL4J는 자동으로 이 전처리기를 추가합니다. 아래의 코드를 참고하면 직접 전처리기를 추가할 수 있습니다. 이 예제는 층 1과 2 사이에 전처리기를 추가하는 코드입니다.
+이렇게 여러 층을 결합한 신경망이 잘 작동하게 하려면 데이터를 전처리해야합니다. 예를 들어 `CnnToRnnPreProcessor`,  `FeedForwardToRnnPreprocessor`를 이용할 수 있습니다. 전처리기 목록은 [여기](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor)에 정리되어있습니다. 대부분의 경우 DL4J는 자동으로 이 전처리기를 추가합니다. 아래의 코드를 참고하면 직접 전처리기를 추가할 수 있습니다. 이 예제는 층 1과 2 사이에 전처리기를 추가하는 코드입니다.
 
 		.inputPreProcessor(2, new RnnToFeedForwardPreProcessor()).
 
@@ -185,13 +185,13 @@ DL4J에서 RNNs 출력은 다른 인공 신경망과 마찬가지로 `MultiLayer
 
 항상 데이터 파일의 각 줄(line)이 시간 단계 하나에 해당한다는 것을 유의하시기 바랍니다.
 
-(아래의 예제와 별도로 [이 테스트 코드](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/canova/RecordReaderDataSetiteratorTest.java)를 참고하셔도 좋습니다.)
+(아래의 예제와 별도로 [이 테스트 코드](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/datasets/canova/RecordReaderDataSetiteratorTest.java)를 참고하셔도 좋습니다.)
 
 #### 예제 1: 동일한 길이의 시계열 입력/라벨이 별도의 파일에 저장된 경우
 
 10개의 시계열 데이터로 이루어진 학습 데이터가 있다고 가정해봅시다. 즉 입력 데이터가 10개, 출력 데이터가 10개로 총 20개의 파일이 있는 경우입니다. 그리고 각 시계열 데이터는 같은 수의 시간 단계로 이루어져 있습니다. 다시 말해 행의 수가 같습니다.
 
-[SequenceRecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/canova/SequenceRecordReaderDataSetIterator.java) 와 [CSVSequenceRecordReader](https://github.com/deeplearning4j/Canova/blob/master/canova-api/src/main/java/org/canova/api/records/reader/impl/CSVSequenceRecordReader.java)를 사용하려면 우선 입력과 출력을 위해 두 개의 `CSVSequenceRecordReader` 인스턴스를 생성합니다.
+[SequenceRecordReaderDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/datasets/canova/SequenceRecordReaderDataSetIterator.java) 와 [CSVSequenceRecordReader](https://github.com/deeplearning4j/Canova/blob/master/canova-api/src/main/java/org/canova/api/records/reader/impl/CSVSequenceRecordReader.java)를 사용하려면 우선 입력과 출력을 위해 두 개의 `CSVSequenceRecordReader` 인스턴스를 생성합니다.
 
 		SequenceRecordReader featureReader = new CSVSequenceRecordReader(1, ",");
 		SequenceRecordReader labelReader = new CSVSequenceRecordReader(1, ",");
