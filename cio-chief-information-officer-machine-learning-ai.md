@@ -41,13 +41,13 @@ To build an AI solution, you need four things:
 * Tooling
 * Infrastructure
 
-We'll explore each in turn. There are technological solutions, and vendors to sell them, which solve for tooling and infrastructure. Getting the right data and team is harder. 
+We'll explore each in turn. There are technological solutions, and vendors to sell them, for AI tooling and infrastructure. Gathering the right data and hiring the right team is harder. 
 
 ### Data
 
 Once you've defined the problem you want to solve, the next question to ask is: "Do I have the data that's pertinent to this problem?" That data is the fuel your algorithms need. Without it, they cannot be trained, and will not be able to make accurate predictions. 
 
-**AI begins with gathering the right data** for the problem that's important to you. If you don't have that data, you need to take a step back and devise a data strategy. That strategy might detail the steps necessary to identify the proper data, gather it, move it to a data lake and store it there.  
+**AI begins with gathering the right data** for the problem that's important to you. If you don't have that data, you need to take a step back and devise a data strategy. That strategy might detail the steps necessary to identify the proper data, gather it, move it to a data lake and store it there. To know which data you want to gather, you might need a *domain expert* who has a theory about what information could be used to predict the outcomes you care about. That is, they already think they know that A causes B, and may even have ways to measure A and B. For example, let's say you want to predict when inventory for something like beer on tap goes out of stock. You might have a theory that by knowing when the last beer delivery was, the volume of the kegs, and measuring the real-time flow related to the beers on tap as well as their historical seasonal consumption, you might have a good way of knowing when your Miller Lite will run out, so you can schedule the next delivery. That's the theory about cause and effect, and each different predictive problem will require someone with knowledge to point your data gathering in the right direction, according to a theory that fits the domain. 
 
 In the previous section, we listed the types of problems that AI can solve. Below, we'll list many of the major data types that AI can work with:
 
