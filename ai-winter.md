@@ -5,7 +5,9 @@ layout: default
 
 # AI Winter: Deep learning and its Discontents
 
-There are two kinds of AI pessimists: One believes AI will become so strong that it destroys humanity, and another believes AI is so flawed, brittle, and overhyped as a technology that the sector will collapse. The first is afraid of killer robots, the second predicts that VC funding will dry up soon. Both kinds receive a lot of attention, although their claims are mutually exclusive. 
+An [AI winter](https://en.wikipedia.org/wiki/AI_winter) is a time when funding and support for artificial intelligence research and startups dries up. AI went through various winters in the 20th century, when early promise turned to disappointment and the best technologists turned their minds to other problems.  
+
+In our time, there are two kinds of AI pessimists: One believes AI will become so strong that it destroys humanity, and another believes AI is so flawed, brittle, and overhyped as a technology that the sector will collapse. The first is afraid of killer robots, the second predicts that the next AI winter is on its way. Both kinds receive a lot of attention, although their claims are mutually exclusive. 
 
 Everyone likes prophecies of doom: messages that arouse fear go viral. These doomsday prophets play to our insecurities. Like a politician seeking re-election might launch a war on terror or a war on drugs, there is a strange war on AI being waged by those who stand at the edge of the technology. Their message of decline implies that they are superior due to their foresight, and that the rest of the world is headed blindly for disaster. 
 
