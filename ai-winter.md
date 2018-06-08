@@ -3,7 +3,7 @@ title: AI Winter
 layout: default
 ---
 
-# AI Winter and the War on AI
+# AI Winter: Deep learning and its Discontents
 
 There are two kinds of AI pessimists: The kind that believes AI will become so strong that it destroys humanity, and the kind that believes AI is so flawed, weak, and overhyped that the sector will collapse. 
 
