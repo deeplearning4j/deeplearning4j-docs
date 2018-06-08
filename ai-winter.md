@@ -25,15 +25,15 @@ Discussions of AI are multipolar and increasingly polarized. That is, people are
 
 As you can see, at the center of all this sturm and drang, the real work of researching and implementing AI continues. 
 
-## Politics
+## Politicization
 
-The issue of AI is becoming more and more politicized, and the political polarization has multiple axes. Political polarization has led to partisanship, paranoia and a loose relationship with the facts. In such situations, it's easy to see how both sides are wrong, or arguing unfairly. 
+The issue of AI is becoming more and more politicized, and the political polarization has multiple axes. Political polarization has led to partisanship, paranoia and a loose relationship with the facts. In such situations, it's easy to see how both sides are wrong, or at least using unsound arguments. 
 
-Domestically within most developed countries, there are those who believe that AI will destroy jobs through automation vs. those who believe that AI will create new industries and offset that unemployment. 
+Within most developed countries, there are those who believe that AI will destroy jobs domestically through automation vs. those who believe that AI will create new industries and offset that unemployment. 
 
-Internationally, there are those who believe the major powers are in an AI arms race, and those who believe that AI is developing fast and well based on the sharing of knowledge among research groups. 
+Internationally, there are those who believe the major powers are in an AI arms race vs. those who believe that AI is developing fast and well based on the open sharing of knowledge among research groups. 
 
-
+In both cases, paradoxically, both sides are right. 
 
 ## AI Pessimists
 
