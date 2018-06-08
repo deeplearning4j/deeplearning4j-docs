@@ -5,9 +5,9 @@ layout: default
 
 # AI Winter: Deep learning and its Discontents
 
-There are two kinds of AI pessimists: The kind that believes AI will become so strong that it destroys humanity, and the kind that believes AI is so flawed, weak, and overhyped that the sector will collapse. 
+There are two kinds of AI pessimists: One believes AI will become so strong that it destroys humanity, and another believes AI is so flawed, brittle, and overhyped as a technology that the sector will collapse. The first is afraid of killer robots, the second predicts that VC funding will dry up soon. Both kinds receive a lot of attention, although their claims are mutually exclusive. 
 
-Both types of AI pessimist receive a lot of attention, although their claims are mutually exclusive. People like to read prophecies of doom: messages that arouse fear go viral. These doomsday prophets play to our insecurities. Like a politician seeking re-election might launch a war on terror or a war on drugs, there is a strange war on AI being waged by those who stand at the edge of the technology. Their message of decline implies that they are superior due to their foresight, and that the rest of the world is headed blindly for disaster. 
+Everyone likes prophecies of doom: messages that arouse fear go viral. These doomsday prophets play to our insecurities. Like a politician seeking re-election might launch a war on terror or a war on drugs, there is a strange war on AI being waged by those who stand at the edge of the technology. Their message of decline implies that they are superior due to their foresight, and that the rest of the world is headed blindly for disaster. 
 
 ```
 “For reasons I have never understood, people like to hear that the world is going to hell.” - Deirdre McCloskey (historian)
@@ -15,7 +15,7 @@ Both types of AI pessimist receive a lot of attention, although their claims are
 “I have observed that not man who hopes when others despair, but the man who despairs when others hope, is admired by a large class of persons as a sage.” - John Stuart Mill
 ```
 
-Discussions of AI are polarized. 
+Discussions of AI are multipolar and increasingly polarized. That is, people are gravitating toward more and more extreme opinions about the future of AI and its impact on society. In addition to the two kinds of pessimism, described above, you have AI hype. The boosters who seek to succeed alongside the technology. It is in their interest to make promises about AI, and to view a world with stronger AI through rose-colored glasses. 
 
 
 
@@ -28,7 +28,7 @@ Internationally, there are those who believe the major powers are in an AI arms 
 
 
 footnote?
-In financial markets, these pessimists are called bears, and their optimistic counterparts are called bulls. Bulls and bears both have biases that color their predictions, and lead them to seek evidence support their beliefs. Being a bull or bear is not so much a matter of being right or wrong, since both tend to be right and wrong sometimes. 
+In financial markets, these pessimists are called bears, and their optimistic counterparts are called bulls. Bulls and bears both have biases that color their predictions, and lead them to seek evidence support their beliefs. Being a bull or bear is not so much a matter of being right or wrong as never being right at the same time. 
 
 ## AI Pessimists
 
