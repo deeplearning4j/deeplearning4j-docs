@@ -47,7 +47,9 @@ We'll explore each in turn. There are technological solutions, and vendors to se
 
 Once you've defined the problem you want to solve, the next question to ask is: "Do I have the data that's pertinent to this problem?" That data is the fuel your algorithms need. Without it, they cannot be trained, and will not be able to make accurate predictions. 
 
-**AI begins with gathering the right data** for the problem that's important to you. If you don't have that data, you need to take a step back and devise a data strategy. That strategy might detail the steps necessary to identify the proper data, gather it, move it to a data lake and store it there. To know which data you want to gather, you might need a *domain expert* who has a theory about what information could be used to predict the outcomes you care about. That is, they already think they know that A causes B, and may even have ways to measure A and B. For example, let's say you want to predict when inventory for something like beer on tap goes out of stock. You might have a theory that by knowing when the last beer delivery was, the volume of the kegs, and measuring the real-time flow related to the beers on tap as well as their historical seasonal consumption, you might have a good way of knowing when your Miller Lite will run out, so you can schedule the next delivery. That's the theory about cause and effect, and each different predictive problem will require someone with knowledge to point your data gathering in the right direction, according to a theory that fits the domain. 
+**AI begins with gathering the right data** for the problem that's important to you. If you don't have that data, you need to take a step back and devise a data strategy. That strategy might detail the steps necessary to identify the proper data, gather it, move it to a data lake and store it there. To know which data you want to gather, you might need a *domain expert* who has a theory about what information could be used to predict the outcomes you care about. That is, they already think they know that A causes B, and may even have ways to measure A and B. 
+
+For example, let's say you want to predict when inventory for something like beer on tap goes out of stock. You might have a theory that by knowing when the last beer delivery was, the volume of the kegs, and measuring the real-time flow related to the beers on tap as well as their historical seasonal consumption, you might have a good way of knowing when your Miller Lite will run out, so you can schedule the next delivery. That's the theory of beer dealing with cause and effect. Each different predictive problem will require someone with knowledge to point your data gathering in the right direction, according to a theory that fits the domain. 
 
 In the previous section, we listed the types of problems that AI can solve. Below, we'll list many of the major data types that AI can work with:
 
@@ -59,7 +61,7 @@ In the previous section, we listed the types of problems that AI can solve. Belo
 * Sound
 * Voice
 
-Many of these data types require no explanation. Everyone knows what an image is. Everyone knows what voice is. 
+Many of these data types require no explanation. Everyone knows what an image is. Everyone knows what sound is. 
 
 #### What's a Time Series?
 
@@ -142,9 +144,9 @@ The public cloud vendors, whose strategy can be summed up as "Accenture for hard
 
 ### AI Infrastructure
 
-Tooling is just the top layer of an array of technologies that you might call AI infrastructure. Why is AI infrastructure different than any other type of IT infrastructure that requires data storage and networking and processing? Well, the most advanced kinds of AI, such as deep artificial neural networks, are data-hungry. The algorithms need to train on a lot of data in order to make accurate predictions. We're talking gigabytes, terabytes and sometimes petabytes of data. Processing that data is computationally intensive. 
+Tooling is just the top layer of an array of technologies that you might call [AI infrastructure](./ai-infrastructure-machine-learning-operations-mlops). Why is AI infrastructure different than any other type of IT infrastructure that requires data storage and networking and processing? Well, the most advanced kinds of AI, such as deep artificial neural networks, are data-hungry. The algorithms need to train on a lot of data in order to make accurate predictions. We're talking gigabytes, terabytes and sometimes petabytes of data. Processing that data is computationally intensive. 
 
-That's why AI creates a giant sucking sound. It's sucking in data. That data needs to be gathered, moved, stored, transformed and processed in order to produce predictions with AI. Doing that efficiently, in order for data scientists to perform experiments in a reasonable amount of time, requires special hardware, fast storage and real-time streaming, for example. 
+That's why AI creates a giant sucking sound. It's sucking in data. That data needs to be gathered, moved, stored, transformed and processed in order to produce predictions with AI. Doing that efficiently (so that data scientists can perform experiments in a reasonable amount of time) requires special hardware, fast storage and real-time streaming. This is the dynamic that Geoff Moore talks about in "Inside the Tornado." Enterprise needs to run a new kind of workload to produce highly accurate, cheap predictions, and that changes everything about IT.
 
 The hardware required is usually a GPU, and there are only two viable GPU makers: Nvidia and AMD (which has the backing of Intel). You can decide not to buy the more expensive chips, of course, but then you're paying your scarce and expensive data scientists to twiddle their thumbs while the algorithms train for hours and days on slower chips. 
 
