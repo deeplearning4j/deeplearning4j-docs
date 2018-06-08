@@ -15,9 +15,15 @@ Everyone likes prophecies of doom: messages that arouse fear go viral. These doo
 “I have observed that not man who hopes when others despair, but the man who despairs when others hope, is admired by a large class of persons as a sage.” - John Stuart Mill
 ```
 
+## Polarization
+
 Discussions of AI are multipolar and increasingly polarized. That is, people are gravitating toward more and more extreme views about the future of AI and its impact on society. In addition to the two kinds of pessimism described above, you have AI hype. The boosters who seek to succeed alongside the technology. It is in their interest to make promises about AI, and to view a world with stronger AI through rose-colored glasses. 
 
+![Alt text](./img/ai_opinions.png)
 
+As you can see, at the center of all this sturm and drang, the real work of researching and implementing AI continues. 
+
+## Politics
 
 The issue of AI is becoming more and more politicized, and the political polarization has multiple axes. Political polarization has led to partisanship, paranoia and a loose relationship with the facts. In such situations, it's easy to see how both sides are wrong, or arguing unfairly. 
 
@@ -27,14 +33,15 @@ Internationally, there are those who believe the major powers are in an AI arms 
 
 
 
-footnote?
-In financial markets, these pessimists are called bears, and their optimistic counterparts are called bulls. Bulls and bears both have biases that color their predictions, and lead them to seek evidence support their beliefs. Being a bull or bear is not so much a matter of being right or wrong as never being right at the same time. 
-
 ## AI Pessimists
 
 * [AI Winter is Well on Its Way](https://blog.piekniewski.info/2018/05/28/ai-winter-is-well-on-its-way/)
 * [AI Winter - Addendum](https://blog.piekniewski.info/2018/06/06/ai-winter-addendum/)
 
-## 
+## AI Pragmatists
 
 * [Is machine learning currently overhyped? (Quora response by Scott Aaronson)](https://www.quora.com/Is-machine-learning-currently-overhyped/answer/Scott-Aaronson)
+
+### Footnotes
+
+* *In financial markets, these pessimists are called bears, and their optimistic counterparts are called bulls. Bulls and bears both have biases that color their predictions, and lead them to seek evidence to support their beliefs. Being a bull or bear is not so much a matter of being right or wrong as never being right at the same time as your opposite number. There's usually someone who calls the market right, and they play musical chairs with everyone else.* 
