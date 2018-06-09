@@ -5,6 +5,8 @@ layout: default
 
 # A Beginner's Guide to Differentiable Programming (DiffProg)
 
+Differentiable programming is another name for a collection of methods now called deep learning. As deep learning attracts more and more hype, attempts are being made to name the field more precisely and differentiate it, so to speak, from popular conceptions of AI. 
+
 Yann LeCun described [differentiable programming](https://www.facebook.com/yann.lecun/posts/10155003011462143) like this:
 
 ```
