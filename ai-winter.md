@@ -23,7 +23,7 @@ Discussions of AI are multipolar and increasingly polarized. That is, people are
 
 ![Alt text](./img/ai_opinions.png)
 
-As you can see, at the center of all this sturm and drang, the real work of researching and implementing AI continues. 
+At the center of all this sturm and drang, far from the poles of fear or hope, the hard, practical work of researching and implementing AI continues, pushed forward incrementally and independent of opinion, by researchers who are as aware of AI's limitations as its capabilities.  
 
 ## Politicization
 
