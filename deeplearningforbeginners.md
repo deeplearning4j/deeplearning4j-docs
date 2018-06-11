@@ -73,6 +73,7 @@ Once you have programming basics down, tackle Java, the world's most widely used
 * [Intro to Programming in Java @Princeton](http://introcs.cs.princeton.edu/java/home/)
 * [Head First Java](http://www.amazon.com/gp/product/0596009208)
 * [Java in a Nutshell](http://www.amazon.com/gp/product/1449370829)
+* [Java Programming for Complete Beginners in 250 Steps](https://www.udemy.com/java-programming-tutorial-for-beginners/?siteID=JVFxdTr9V80-nE4LGc8755WIfh0f9e7Jqw&LSNPUBID=JVFxdTr9V80)
 
 ## Deeplearning4j
 
