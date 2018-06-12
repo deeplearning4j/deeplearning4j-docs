@@ -5,7 +5,7 @@ layout: default
 
 # AI Infrastructure & Machine Learning Operations (MlOps)
 
-AI infrastructure and machine learning operations, or MlOps, are basically synonymous. Both terms denote the technology stack necessary to get machine learning algorithms into production in a stable, scalable and reliable way. 
+AI infrastructure and machine learning operations, or MlOps, are nearly synonymous. Both terms denote the technology stack necessary to get machine learning algorithms into production in a stable, scalable and reliable way. 
 
 That stack extends from the data science tools used to select and train machine learning algorithms down to the hardware those algorithms run on and the data bases and message queues from which they draw the datasets that are their fuel. 
 
@@ -14,6 +14,64 @@ AI infrastructure encompasses almost every stage of the [machine-learning workfl
 Early in the workflow, that includes exploratory data analysis, running large-scale queries on data you've stored. In the middle, AI infrastructure involves training algorithms, probably on a cluster of distributed GPUs. And late in the workflow, it entails deploying those machine-learning models for inference in a reliabile and scalable way, much as you would deploy a web site on a web server. 
 
 Machine learning operations is the machine-learning equivalent of DevOps: it solves the problems of implementing machine-learning in production, notably around the technology infrastructure and tooling necessary to deploy machine-learning algorithms and data pipelines reliably and scalably, so as not to destabilize other parts of the stack. 
+
+## Workloads in Machine Learning Operations 
+
+There are four basic workloads relevant to machine learning operations, listed here in rough order of importance. 
+
+* Batch inference (scoring)
+* Real-time inference
+* Auditing AI model performance
+* Debugging AI jobs
+
+Once an AI model has been trained to produce accurate predictions, it has to be deployed. Like all technology deployed to production, AI models need infrastructure that allows the people responsible for systems and operations to observe what they are doing, whether they are meeting their SLAs, and debug them if necessary. Each of the workloads named above has slightly different metrics by which performance should be judged. 
+
+<p align="center">
+<a href="https://skymind.ai/model-deployment-ml-ops.html" type="button" class="btn btn-lg btn-success"
+        data-ga-event="click"
+        data-ga-category="Click/Button"
+        data-ga-action="GoTo/SKILDocs"
+        data-ga-label="LSTMPage">GET STARTED WITH MACHINE LEARNING OPS</a>
+</p>
+
+### Batch Inference
+
+Batch inference, or scoring a large, historical dataset, assumes that the dataset is large, maybe larger than other machine-learning workloads in production.
+
+With Deeplearning4j, batch inference can be performed by connecting to a Spark cluster, and running a Spark job on a that dataset. To do that, you would access a distributed file system or a data store like S3. (You also might use EMR or Azure.) In short, you run data-processing jobs, and score the data on a distributed system, and save the results offline. Indeed, batch inference is an offline job, as opposed to real-time scoring. 
+
+Batch inference involves no REST API -- it can be performed using Spark alone. So you take a distributed data store, run a Spark job, score the data and store the results. 
+
+The performance metric that should be applied to batch inference is: How many hours does it take this job to run?
+
+### Real-time Inference
+
+Real-time inference is an online process that runs data streams from message queues like Kafka and real-time streaming engines like Flink. This type of scoring will rely on interfaces such as REST APIs or gRPC. 
+
+The most important metric to gauge the performance of models for real-time inference is latency, and the way to ensure latency is either dynamic scaling or auto-scaling. These two types of scaling are slightly different. 
+
+Dynamic scaling tries to maintain consistent infrastructure. For example, an AI cluster with dynamic scaling would be able to monitor the server devoted to inference and, should one fail, would spin up another to replace it and keep the capacity of the inference cluster steady. 
+
+Auto-scaling relates to latency. A cluster enabled for auto-scaling can monitor the latency of the decisions produced by AI models, and would spin up an arbitrary number of new servers to maintain the necessary latency in the face of data surges. 
+
+### Auditing AI Model Performance
+
+Machine-learning operations should prompt the people managing AI deployments to update or retune AI models when their performance lapses, which happens frequently as data and models drift apart and the real-world behavior reflected in the data evolves. AI infrastructure should enable a continuous training loop based on feedback from the software monitoring the deployed models. In a sense, the ideal machine-learning model should monitor itself.
+
+### Debugging AI Deployments
+
+Finally, machine learning operations should support operations teams when they seek to deploy jobs and investigate why a certain job, be it batch inference or auto-scaling for real-time inference, isn't working. 
+
+Many AI vendors claim to help developers deploy AI models, and this frequently involves Docker containers orchestrated by Kubernetes. 
+
+Anyone planning to deploy AI models should ask themselves: 
+
+* How do you observe it?
+* How do you know if it fails? 
+* If the model is wrong, do you have a feedback loop? 
+* How does it scale - does it have an automatic load balancing? 
+
+Most of the time, deployments on Docker don't answer those questions. 
 
 ## Machine Learning Operations (MlOps) vs. Data Science
 
@@ -65,5 +123,6 @@ The Skymind Intelligence Layer (SKIL) is a [machine learning server](./machine-l
 * [Introduction to Random Forests](./random-forest.html)
 * [Open Datasets for Machine Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
+* [AI Winter](./ai-winter.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Machine Learning Model Server for Inference in Production](./machine-learning-server.html)
