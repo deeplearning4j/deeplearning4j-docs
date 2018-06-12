@@ -9,7 +9,7 @@ An [AI winter](https://en.wikipedia.org/wiki/AI_winter) is a time when funding a
 
 AI is an important technology, often [vaguely defined](./ai-artificial-intelligence-definition), and it receives a lot of media attention. That means a lot of people have opinions about it even if they are unfamiliar with how it works and what its limits are. This post gives you a framework by which to interpret opinions about AI, to situate someone who holds an AI opinion stands and understand who their allies and opponents are. Like most divisions of opinion, these differences roughly break down into "I like AI" or "I don't like AI", although there are several reasons why people have chosen not to like it. 
 
-Broadly, there are two kinds of AI pessimists: One believes AI will become so strong that it destroys humanity, and another believes AI is so flawed, brittle, and overhyped as a technology that the sector will collapse. The first is afraid of killer robots, the second predicts that the next AI winter is on its way. Both kinds receive a lot of attention, although their claims are mutually exclusive. 
+Broadly, there are two kinds of AI pessimists: One believes AI will become so strong that it destroys humanity, and another believes AI is so flawed, brittle, and overhyped as a technology that the sector will collapse. The first is afraid of killer robots, the second predicts that the next AI winter is on its way. These we could call the "winterists" and their ideology "AI winterism". Both kinds receive a lot of attention, although their claims are mutually exclusive. 
 
 Everyone likes prophecies of doom: messages that arouse fear are more likely to go viral, because doomsday prophets play to our insecurities. Like a politician seeking re-election might launch a war on terror or a war on drugs, fearmongers standing at the edge of AI are waging a strange war on the technology. Their message of decline implies that they are superior due to their foresight, and that the rest of the world is headed blindly for disaster.  
 
@@ -37,14 +37,30 @@ Internationally, there are those who believe the major powers are in an AI arms 
 
 In both cases, paradoxically, both sides are right. 
 
-## AI Pessimists
+## AI Winterism
+
+
+
+## AI Winterists
 
 * [AI Winter is Well on Its Way](https://blog.piekniewski.info/2018/05/28/ai-winter-is-well-on-its-way/)
 * [AI Winter - Addendum](https://blog.piekniewski.info/2018/06/06/ai-winter-addendum/)
 
+## AI Alarmists
+
+* [Eliezer S. Yudkowsky's Website](http://yudkowsky.net/)
+* [Nik Bostrom, the "Superintelligence" guy](https://nickbostrom.com/)
+* [Max Tegmark and the Future of Life Institute](http://space.mit.edu/home/tegmark/)
+* [Elon Musk](https://www.nytimes.com/2018/06/09/technology/elon-musk-mark-zuckerberg-artificial-intelligence.html)
+
+## AI Boosters
+
+* []()
+
 ## AI Pragmatists
 
 * [Is machine learning currently overhyped? (Quora response by Scott Aaronson)](https://www.quora.com/Is-machine-learning-currently-overhyped/answer/Scott-Aaronson)
+* [Yann LeCun](https://www.facebook.com/yann.lecun)
 
 ### Footnotes
 
