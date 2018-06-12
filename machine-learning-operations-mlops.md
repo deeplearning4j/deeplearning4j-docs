@@ -46,11 +46,11 @@ Dynamic scaling tries to maintain consistent infrastructure. For example, an AI 
 
 Auto-scaling relates to latency. A cluster enabled for auto-scaling can monitor the latency of the decisions produced by AI models, and would spin up an arbitrary number of new servers to maintain the necessary latency in the face of data surges. 
 
-### Auditing AI model performance
+### Auditing AI Model Performance
 
 Machine-learning operations should prompt the people managing AI deployments to update or retune AI models when their performance lapses, which happens frequently as data and models drift apart and the real-world behavior reflected in the data evolves. AI infrastructure should enable a continuous training loop based on feedback from the software monitoring the deployed models. In a sense, the ideal machine-learning model should monitor itself.
 
-### Debugging AI deployments
+### Debugging AI Deployments
 
 Finally, machine learning operations should support operations teams when they seek to deploy jobs and investigate why a certain job, be it batch inference or auto-scaling for real-time inference, isn't working. 
 
