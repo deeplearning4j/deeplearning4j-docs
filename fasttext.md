@@ -5,7 +5,7 @@ layout: default
 
 # FastText: Fast text representation and classification
 
-[FastText is a library created by researchers at Facebook](https://github.com/facebookresearch/fastText) for the representation and classification of texts. It was created by Piotr Bojanowski, Edouard Grave, Armand Joulin and Tomas Mikolov, who is also the creator of [word2vec](./word2vec.html).
+[FastText is a library created by researchers at Facebook](https://github.com/facebookresearch/fastText) for the representation and classification of texts. It was created by Piotr Bojanowski, Edouard Grave, Armand Joulin and Tomas Mikolov, the creator of [word2vec](./word2vec.html).
 
 ## More FastText Resources
 
