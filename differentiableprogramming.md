@@ -74,3 +74,7 @@ Frankly, dynamic computation graphs for deep neural networks sounds an awful lot
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
 * [Distributed Deep Learning on Apache Spark](./spark.html)
+* [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
+* [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
+* [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
+* [AI Winter: Deep Learning and its Discontents](./ai-winter.html)
