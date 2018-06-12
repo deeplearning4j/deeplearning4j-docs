@@ -13,6 +13,14 @@ layout: default
 * [FastText Official Website](https://fasttext.cc/)
 * [FaceBook Research FastText Blog Post](https://research.fb.com/fasttext/)
 
+## Research Related to FastText
+
+* [Probabilistic FastText for Multi-Sense Word Embeddings](https://arxiv.org/abs/1806.02901)
+* [Fast Linear Model for Knowledge Graph Embeddings](https://arxiv.org/abs/1710.10881)
+* [Multi-level Representations for Fine-Grained Typing of Knowledge Base Entities](https://arxiv.org/abs/1701.02025)
+* [Advances in Pre-Training Distributed Word Representations](https://arxiv.org/abs/1712.09405)
+* [Enriching Word Vectors with Subword Information](https://arxiv.org/abs/1607.04606)
+
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview.html)
