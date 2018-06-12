@@ -41,6 +41,8 @@ In both cases, paradoxically, both sides are right.
 
 The main problem with AI winterism is that it seems to arise more from AI hype fatigue than actual contact with contemporary AI research. Sure, hype comes and goes, but AI research is moving so fast that most insiders have trouble keeping up, and AI capacity is tied to brute compute, which is also progressing. 
 
+While fundamental AI research research and complementary technologies like raw compute are making progress, such advances are rarely linear. They come in bursts, and so does the media attention that is paid to them. You might say that AI hype is both cyclic and recurrent. The hype cycle doesn't happen just once. And each advance moves the base a little higher, a sinusoidal curve on an upward tilt. AI winter is a strong metaphorical frame that needs no explanation, and it implies that AI, as a technology, is doomed to be deflated. But you could reframe it by saying that each AI winter is like a cold season occurring on an ever warmer planet. Sure, the temperature goes down, but never quite as much as the last time. 
+
 ## AI Winterists
 
 * [AI Winter is Well on Its Way](https://blog.piekniewski.info/2018/05/28/ai-winter-is-well-on-its-way/)
