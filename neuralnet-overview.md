@@ -339,6 +339,7 @@ For people just getting started with deep learning, the following tutorials and 
 * [Machine Learning Server for Inference in Production](./machine-learning-server.html)
 * [Introduction to Decision Trees](./decision-tree.html)
 * [Introduction to Random Forests](./random-forest.html)
+* [AI Winter: Deep Learning and its Discontents](./ai-winter.html)
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
 * [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
