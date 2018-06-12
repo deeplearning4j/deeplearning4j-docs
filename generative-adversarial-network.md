@@ -287,6 +287,7 @@ if __name__ == '__main__':
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine.html)
 * [Open Datasets for Deep Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
+* [AI Winter: Deep Learning and its Discontents](./ai-winter)
 * [Machine Learning Server for Inference in Production](./machine-learning-server.html)
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
