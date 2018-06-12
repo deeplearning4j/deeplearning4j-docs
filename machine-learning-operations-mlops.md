@@ -96,5 +96,6 @@ The Skymind Intelligence Layer (SKIL) is a [machine learning server](./machine-l
 * [Introduction to Random Forests](./random-forest.html)
 * [Open Datasets for Machine Learning](./opendata.html)
 * [Deep Learning on Apache Spark](./spark.html)
+* [AI Winter](./ai-winter.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Machine Learning Model Server for Inference in Production](./machine-learning-server.html)
