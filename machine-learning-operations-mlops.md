@@ -40,6 +40,10 @@ Auto-scaling relates to latency. A cluster enabled for auto-scaling can monitor 
 
 ### Auditing AI model performance
 
+Machine-learning operations should prompt the people managing AI deployments to update or retune AI models when their performance lapses, which happens frequently as data and models drift apart and the real-world behavior reflected in the data evolves. AI infrastructure should enable a continuous training loop based on feedback from the software monitoring the deployed models. In a sense, the ideal machine-learning model should monitor itself.
+
+### Debugging AI Models
+
 
 
 ## Machine Learning Operations (MlOps) vs. Data Science
