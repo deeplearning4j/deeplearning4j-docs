@@ -19,7 +19,7 @@ There are four basic workloads relevant to machine learning operations, listed h
 Once an AI model has been trained to produce accurate predictions, it has to be deployed. Like all technology deployed to production, AI models need infrastructure that allows the people responsible for systems and operations to observe what they are doing, whether they are meeting their SLAs, and debug them if necessary. Each of the workloads named above has slightly different metrics by which performance should be judged. 
 
 <p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
+<a href="https://skymind.ai/model-deployment-ml-ops.html" type="button" class="btn btn-lg btn-success"
         data-ga-event="click"
         data-ga-category="Click/Button"
         data-ga-action="GoTo/SKILDocs"
