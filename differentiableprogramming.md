@@ -13,6 +13,8 @@ In machine learning, differentiation is used to calculute the relationship betwe
 
 By altering the neural network's parameters, the algorithm can be adjusted to produce less error. By using backpropagation, an objective function, and an updating mechanism for the parameters, the algorithm's model can be written and rewritten until error is minimized. The creation of that machine-learning model can be called differentiable programming. 
 
+## Yann LeCun Proposes a New Buzzword
+
 Yann LeCun described [differentiable programming](https://www.facebook.com/yann.lecun/posts/10155003011462143) like this:
 
 ```
