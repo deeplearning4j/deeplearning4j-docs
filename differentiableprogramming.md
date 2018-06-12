@@ -9,7 +9,9 @@ Differentiable programming is another name for a collection of methods now calle
 
 Differentiable, of course, refers to the calculus technique of differentiation. Differentiation is the act of taking a function's derivative, or its instantaneous rate of change, with respect to one of its variables.
 
-In machine learning, differentiation is used to calculute the relationship between a change in one of an algorithm's variables, and a change related to its output. For example, changing the parameters of a neural network may change the error it generates when making a prediction. By altering the neural network's parameters, the algorithm can be adjusted to produce less error. By using backpropagation, an objective function, and an updating mechanism for the parameters, the algorithm's model can be written and rewritten until error is minimized. The creation of that machine-learning model can be called differentiable programming. 
+In machine learning, differentiation is used to calculute the relationship between a change in one of an algorithm's variables, and a change related to its output. For example, changing the parameters of a neural network may change the error it generates when making a prediction. 
+
+By altering the neural network's parameters, the algorithm can be adjusted to produce less error. By using backpropagation, an objective function, and an updating mechanism for the parameters, the algorithm's model can be written and rewritten until error is minimized. The creation of that machine-learning model can be called differentiable programming. 
 
 Yann LeCun described [differentiable programming](https://www.facebook.com/yann.lecun/posts/10155003011462143) like this:
 
