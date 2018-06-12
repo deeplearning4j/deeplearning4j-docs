@@ -7,6 +7,8 @@ layout: default
 
 An [AI winter](https://en.wikipedia.org/wiki/AI_winter) is a time when funding and support for artificial intelligence research and commercial ventures dries up. AI went through various winters in the 20th century, when early promise turned to disillusion, and the best technologists turned their minds to other problems.  
 
+AI is an important technology, and it receives a lot of media attention. Which means a lot of people have opinions about it even if they are unfamiliar with how it works and what it's limits are. This post gives you a framework by which to interpret opinions about AI, to know where the espouser of an opinion stands and who their allies and opponents are. Like most divisions of opinion, these differences break down roughly into "I like AI" or "I don't like AI", although there are several reasons why people have chosen not to like it. 
+
 In our time, there are two kinds of AI pessimists: One believes AI will become so strong that it destroys humanity, and another believes AI is so flawed, brittle, and overhyped as a technology that the sector will collapse. The first is afraid of killer robots, the second predicts that the next AI winter is on its way. Both kinds receive a lot of attention, although their claims are mutually exclusive. 
 
 Everyone likes prophecies of doom: messages that arouse fear are more likely to go viral, because doomsday prophets play to our insecurities. Like a politician seeking re-election might launch a war on terror or a war on drugs, fearmongers standing at the edge of AI are waging a strange war on the technology. Their message of decline implies that they are superior due to their foresight, and that the rest of the world is headed blindly for disaster.  
