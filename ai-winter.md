@@ -55,12 +55,13 @@ The main problem with AI winterism is that it seems to arise more from AI hype f
 
 ## AI Boosters
 
-* []()
+* Most AI startups
 
 ## AI Pragmatists
 
 * [Is machine learning currently overhyped? (Quora response by Scott Aaronson)](https://www.quora.com/Is-machine-learning-currently-overhyped/answer/Scott-Aaronson)
 * [Yann LeCun](https://www.facebook.com/yann.lecun)
+* [Geoff Hinton](http://www.cs.toronto.edu/~hinton/)
 
 ### Footnotes
 
