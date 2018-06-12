@@ -39,7 +39,7 @@ In both cases, paradoxically, both sides are right.
 
 ## AI Winterism
 
-
+The main problem with AI winterism is that it seems to arise more from AI hype fatigue than actual contact with contemporary AI research. Sure, hype comes and goes, but AI research is moving so fast that most insiders have trouble keeping up, and AI capacity is tied to brute compute, which is also progressing. 
 
 ## AI Winterists
 
