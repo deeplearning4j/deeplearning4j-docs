@@ -524,6 +524,8 @@ Deeplearning4j has a class called [SequenceVectors](https://github.com/deeplearn
 * [Definition of Artificial Intelligence (AI)](./ai-artificial-intelligence-definition.html)
 * [How CIOs Should Think about Machine Learning and AI](./cio-chief-information-officer-machine-learning-ai.html)
 * [AI Infrastructure: Machine Learning Operations (MlOps)](./ai-infrastructure-machine-learning-operations-mlops.html)
+* [AI Winter: Deep Learning and its Discontents](./ai-winter.html)
+* [FastText: Fast text representation and classification](./fasttext.html)
 
 
 ### <a name="doctorow">Word2Vec in Literature</a>
