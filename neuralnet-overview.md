@@ -6,6 +6,10 @@ layout: default
 
 # Introduction to Deep Neural Networks (Deep Learning)
 
+```
+Prediction is not just one of the things your brain does. It is the primary function of the neocortex, and the foundation of intelligence. - Jeff Hawkins
+```
+
 Contents
 
 * <a href="#define">Neural Network Definition</a>
