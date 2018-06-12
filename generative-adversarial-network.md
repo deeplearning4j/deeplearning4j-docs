@@ -7,6 +7,10 @@ redirect_from: gan
 
 # GAN: A Beginner's Guide to Generative Adversarial Networks
 
+```
+"You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.” - John Romero
+```
+
 Generative adversarial networks (GANs) are deep neural net architectures comprised of two nets, pitting one against the other (thus the "adversarial"). 
 
 [GANs were introduced in a paper](https://arxiv.org/abs/1406.2661) by Ian Goodfellow and other researchers at the University of Montreal, including Yoshua Bengio, in 2014. Referring to GANs, Facebook's AI research director Yann LeCun [called adversarial training](https://www.quora.com/What-are-some-recent-and-potentially-upcoming-breakthroughs-in-deep-learning) "the most interesting idea in the last 10 years in ML."
