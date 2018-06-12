@@ -19,7 +19,7 @@ Everyone likes prophecies of doom: messages that arouse fear are more likely to 
 “I have observed that not man who hopes when others despair, but the man who despairs when others hope, is admired by a large class of persons as a sage.” - John Stuart Mill
 ```
 
-## Polarization
+## Polarization of Opinions on AI
 
 Discussions of AI are multipolar and increasingly polarized. That is, people are gravitating toward more and more extreme views about the future of AI and its impact on society. In addition to the two kinds of pessimism described above, you have AI hype. The boosters who seek to succeed alongside the technology. It is in their interest to make promises about AI, and to view a world with stronger AI through rose-colored glasses. 
 
@@ -27,7 +27,7 @@ Discussions of AI are multipolar and increasingly polarized. That is, people are
 
 At the center of all this sturm and drang, far from the poles of fear or hope, the hard, practical work of researching and implementing AI continues, pushed forward incrementally and independent of opinion, by researchers who are as aware of AI's limitations as its capabilities.  
 
-## Politicization
+## Politicization of AI
 
 The issue of AI is becoming more and more politicized, and the political polarization has multiple axes. Political polarization has led to partisanship, paranoia and a loose relationship with the facts. In such situations, it's easy to see how both sides are wrong, or at least using unsound arguments. 
 
