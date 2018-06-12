@@ -46,6 +46,17 @@ Machine-learning operations should prompt the people managing AI deployments to 
 
 Finally, machine learning operations should support operations teams when they seek to deploy jobs and investigate why a certain job, be it batch inference or auto-scaling for real-time inference, isn't working. 
 
+Many AI vendors claim to help developers deploy AI models, and this frequently involves Docker containers orchestrated by Kubernetes. 
+
+Anyone planning to deploy AI models should ask themselves: 
+
+* How do you observe it?
+* How do you know if it fails? 
+* If the model is wrong, do you have a feedback loop? 
+* How does it scale - does it have an automatic load balancing? 
+
+Most of the time, deployments on Docker don't answer those questions. 
+
 ## Machine Learning Operations (MlOps) vs. Data Science
 
 What does MLOps do? It smooths your AI go-to-market strategy. It saves developer time around standing up a cluster, among other tasks. 
