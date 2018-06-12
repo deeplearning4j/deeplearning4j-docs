@@ -1,5 +1,5 @@
 ---
-title: AI Winter
+title: AI Winter: Deep Learning and its Discontents
 layout: default
 ---
 
