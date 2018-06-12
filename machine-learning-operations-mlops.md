@@ -7,6 +7,41 @@ layout: default
 
 Machine learning operations is the machine-learning equivalent of DevOps: it solves the problems of implementing machine-learning in production, notably around the technology infrastructure and tooling necessary to deploy machine-learning algorithms and data pipelines reliably and scalably, so as not to destabilize other parts of the stack. 
 
+## Workloads in Machine Learning Operations 
+
+There are four basic workloads relevant to machine learning operations, listed here in rough order of importance. 
+
+* Batch inference (scoring)
+* Real-time inference
+* Auditing AI model performance
+* Debugging AI jobs
+
+Once an AI model has been trained to produce accurate predictions, it has to be deployed. Like all technology deployed to production, AI models need infrastructure that allows the people responsible for systems and operations to observe what they are doing, whether they are meeting their SLAs, and debug them if necessary. Each of the workloads named above has slightly different metrics by which performance should be judged. 
+
+### Batch Inference
+
+Batch inference, or scoring a large, historical dataset, assumes that the dataset is large, maybe larger than other machine-learning workloads in production.
+
+With Deeplearning4j, batch inference can be performed by connecting to a Spark cluster, and running a Spark job on a that dataset. To do that, you would access a distributed file system or a data store like S3. (You also might use EMR or Azure.) In short, you run data-processing jobs, and score the data on a distributed system, and save the results offline. Indeed, batch inference is an offline job, as opposed to real-time scoring. 
+
+Batch inference involves no REST API -- it can be performed using Spark alone. So you take a distributed data store, run a Spark job, score the data and store the results. 
+
+The performance metric that should be applied to batch inference is: How many hours does it take this job to run?
+
+### Real-time Inference
+
+Real-time inference is an online process that runs data streams from message queues like Kafka and real-time streaming engines like Flink. This type of scoring will rely on interfaces such as REST APIs or gRPC. 
+
+The most important metric to gauge the performance of models for real-time inference is latency, and the way to ensure latency is either dynamic scaling or auto-scaling. These two types of scaling are slightly different. 
+
+Dynamic scaling tries to maintain consistent infrastructure. For example, an AI cluster with dynamic scaling would be able to monitor the server devoted to inference and, should one fail, would spin up another to replace it and keep the capacity of the inference cluster steady. 
+
+Auto-scaling relates to latency. A cluster enabled for auto-scaling can monitor the latency of the decisions produced by AI models, and would spin up an arbitrary number of new servers to maintain the necessary latency in the face of data surges. 
+
+### Auditing AI model performance
+
+
+
 ## Machine Learning Operations (MlOps) vs. Data Science
 
 What does MLOps do? It smooths your AI go-to-market strategy. It saves developer time around standing up a cluster, among other tasks. 
