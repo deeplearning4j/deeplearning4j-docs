@@ -17,7 +17,7 @@ By altering the neural network's parameters, the algorithm can be adjusted to pr
 
 Sometimes the relation between the parameters of a model and the error it produces is difficult or impossible to differentiate. For example, the relationship between actions and rewards in reinforcement learning can be difficult to establish, because rewards in a simulated environment like a game may be sparse, or awarded so occasionally that it is hard to know why. 
 
-## Yann LeCun Proposes a New Buzzword
+## Yann LeCun Nominates a Buzzword
 
 Yann LeCun described [differentiable programming](https://www.facebook.com/yann.lecun/posts/10155003011462143) like this:
 
