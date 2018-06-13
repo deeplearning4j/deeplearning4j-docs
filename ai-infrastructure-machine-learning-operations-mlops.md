@@ -15,6 +15,15 @@ Early in the workflow, that includes exploratory data analysis, running large-sc
 
 Machine learning operations is the machine-learning equivalent of DevOps: it solves the problems of implementing machine-learning in production, notably around the technology infrastructure and tooling necessary to deploy machine-learning algorithms and data pipelines reliably and scalably, so as not to destabilize other parts of the stack. 
 
+Machine learning faces challenges to scaling at the four main stages of its workflow:
+
+* ETL (Data pipelines)
+* Algorithm training
+* Inference
+* Monitoring, Management and Updates
+
+The Skymind Intelligence Layer (SKIL) is a [machine learning server](./machine-learning-server.html) that solves the problem of serving machine-learning models at scale during the inference phase, or what we call machine-learning operations. 
+
 ## Workloads in Machine Learning Operations 
 
 There are four basic workloads relevant to machine learning operations, listed here in rough order of importance. 
