@@ -7,6 +7,8 @@ layout: default
 
 Differentiable programming is another name for a collection of methods now called [deep learning](./neuralnet-overview). As deep learning attracts more and more hype, attempts are being made to name the field more precisely and differentiate it, so to speak, from popular conceptions of AI. 
 
+## What Is Differentiation?
+
 Differentiable, of course, refers to the calculus technique of differentiation. Differentiation is the act of taking a function's derivative, or its instantaneous rate of change, with respect to one of its variables.
 
 In machine learning, differentiation is used to calculute the relationship between a change in one of an algorithm's variables, and a change related to its output. For example, changing the parameters of a neural network may change the error it generates when making a prediction. 
