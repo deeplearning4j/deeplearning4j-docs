@@ -93,22 +93,11 @@ In most situations, data engineers do many of those tasks themselves.
 
 Machine-learning operations concerns itself with the environment where machine learning will run, and managing the complexity the that, which is in fact a great deal of complexity. In that environment, you will probably have multiple databases over multiple teams, maybe multiple Hadoop clusters. You will need consistent dependencies across the cluster, matching your version of TensorFlow to CUDA, for example. While Anaconda manages Python dependencies, it does not handle ETL or tracking (by this we mean observability: do you have a history of what you're doing?) or machine learning model performance (do you have a history of what the model is doing?). 
 
-## Machine Learning Server
-
-Machine learning faces challenges to scaling at the four main stages of its workflow:
-
-* ETL (Data pipelines)
-* Algorithm training
-* Inference
-* Monitoring, Management and Updates
-
-The Skymind Intelligence Layer (SKIL) is a [machine learning server](./machine-learning-server.html) that solves the problem of serving machine-learning models at scale during the inference phase. 
-
 ## The Skymind Intelligence Layer (SKIL): AI infrastructure
 
 The [Skymind Intelligence Layer (SKIL)](https://skymind.ai/ai-infrastructure-mlops.html) is open-core AI infrastructure software intended to make AI model deployment and monitoring scalable, transparent to systems operators, flexible in the ML models it supports, and portable across various hardware and cloud platforms. 
 
-SKIL has a couple important components, notably the SKIL process launcher daemon and the machine learning model server. 
+SKIL has a couple important components, notably the SKIL process launcher daemon and the [machine learning model server](./machine-learning-server). 
 
 The SKIL process launcher daemon is a [background process](https://en.wikipedia.org/wiki/Background_process), or a process that runs behind the UI without need of user intervention. The daemon is what enables SKIL to launch processes such as the machine-learning model server. A [process](https://en.wikipedia.org/wiki/Process_(computing)), of course, is just code that is executed on your hardware. 
 
