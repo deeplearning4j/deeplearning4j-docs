@@ -104,6 +104,30 @@ Machine learning faces challenges to scaling at the four main stages of its work
 
 The Skymind Intelligence Layer (SKIL) is a [machine learning server](./machine-learning-server.html) that solves the problem of serving machine-learning models at scale during the inference phase. 
 
+## The Skymind Intelligence Layer (SKIL): AI infrastructure
+
+The [Skymind Intelligence Layer (SKIL)](https://skymind.ai/ai-infrastructure-mlops.html) is open-core AI infrastructure software intended to make AI model deployment and monitoring scalable, transparent to systems operators, flexible in the ML models it supports, and portable across various hardware and cloud platforms. 
+
+SKIL has a couple important components, notably the SKIL process launcher daemon and the machine learning model server. 
+
+The SKIL process launcher daemon is a [background process](https://en.wikipedia.org/wiki/Background_process), or a process that runs behind the UI without need of user intervention. The daemon is what enables SKIL to launch processes such as the machine-learning model server. A [process](https://en.wikipedia.org/wiki/Process_(computing)), of course, is just code that is executed on your hardware. 
+
+The SKIL process launcher daemon (PLD) runs the process launcher. When you start SKIL, you start the daemon. An analogy would be when you open your laptop, the app to enable the desktop starts running. That desktop app is what allows you to initiate all the processes by clicking around, and those clicks become code. In a sense, the SKIL process launcher daemon is a desktop app for machine learning. It allows you to start ML processes, but its main interface is the CLI. 
+
+What are the most common machine-learning processes you'll use with SKIL?
+
+- Machine-learning model server
+- Load balancer for the model server
+- Zeppelin processes
+- Deployments manager - manages a set of model servers
+- Spark jobs
+- SKIL Spark main - connects the SKIL class path to a Spark cluster
+- Running the UI
+
+The daemon has a REST API, which you are hitting when you enter commands via the CLI or the GUI. It uses mySQL and Zookeeper to set up the cluster: you start a daemon on every node of your cluster, and each daemon connects to Zookeeper. 
+
+SKIL is a process runner. There are others, obviously. For example, Kubernetes allows you to run processes through Docker. But SKIL is a process runner focused on processes necessary for machine learning: GPU connectors, uploading large images, connecting to remote data sources, running Spark batch jobs. 
+
 ### <a name="beginner">More Machine Learning Tutorials</a>
 
 * [Introduction to Neural Networks](./neuralnet-overview.html)
