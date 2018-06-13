@@ -10,6 +10,10 @@ layout: default
 
 # A Beginner's Guide to Recurrent Networks and LSTMs
 
+```
+Properties of cause (as described by Hume in 1739) are association (cause and effect occur together), time order (causes precede effects), and “connection” or direction — that is, repeatedly demonstrable, hence predictable, linkages existing between cause and effect. - M Susser
+```
+
 Contents
 
 * [Feedforward Networks](#feedforward)
@@ -23,9 +27,9 @@ Contents
 
 The purpose of this post is to give students of neural networks an intuition about the functioning of recurrent neural networks and purpose and structure of a prominent RNN variation, LSTMs.
 
-Recurrent nets are a type of artificial neural network designed to recognize patterns in sequences of data, such as text, genomes, handwriting, the spoken word, or numerical times series data emanating from sensors, stock markets and government agencies.
+Recurrent nets are a type of artificial neural network designed to recognize patterns in sequences of data, such as text, genomes, handwriting, the spoken word, or numerical times series data emanating from sensors, stock markets and government agencies. These algorithms take time and sequence into account, they have a temporal dimension. 
 
-They are arguably the most powerful and useful type of neural network, applicable even to images, which can be decomposed into a series of patches and treated as a sequence. 
+Research shows them to be one of the most powerful and useful type of neural network, alongside the [attention mechanism and memory networks](./attention-memory-network). RNNs are applicable even to images, which can be decomposed into a series of patches and treated as a sequence. 
 
 Since recurrent networks possess a certain type of memory, and memory is also part of the human condition, we'll make repeated analogies to memory in the brain.<sup>[1](#one)</sup>
 
