@@ -51,6 +51,7 @@ Frankly, dynamic computation graphs for deep neural networks sounds an awful lot
 
 * [Automatic differentiation in machine learning: a survey](https://arxiv.org/abs/1502.05767)
 * [Software 2.0, by Andrej Karpathy](https://medium.com/@karpathy/software-2-0-a64152b37c35)
+* [VIDEO: Building the Software 2.0 Stack at Tesla, by Andrej Karpathy](https://www.figure-eight.com/building-the-software-2-0-stack-by-andrej-karpathy-from-tesla/)
 * [Slides: Differentiable Programming, Microsoft Research (2016)](http://www.cs.nuim.ie/~gunes/files/Baydin-MSR-Slides-20160201.pdf)
 * [Differentiable Programming @Edge.org](https://www.edge.org/response-detail/26794)
 
