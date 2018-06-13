@@ -47,6 +47,7 @@ While fundamental AI research research and complementary technologies like raw c
 
 * [AI Winter is Well on Its Way](https://blog.piekniewski.info/2018/05/28/ai-winter-is-well-on-its-way/)
 * [AI Winter - Addendum](https://blog.piekniewski.info/2018/06/06/ai-winter-addendum/)
+* [Deep Learning: A Critical Appraisal, by Gary Marcus](https://arxiv.org/ftp/arxiv/papers/1801/1801.00631.pdf)
 
 ## AI Alarmists
 
