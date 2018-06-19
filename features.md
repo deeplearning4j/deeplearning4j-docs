@@ -5,7 +5,7 @@ layout: default
 
 # Features
 
-Here's a non-exhaustive list of Deeplearning4j's features. We'll be updating it as new nets and tools are added. 
+Here's a non-exhaustive list of Deeplearning4j's features. **This is an outdated list.**
 
 ### Integrations
 
@@ -22,17 +22,15 @@ Here's a non-exhaustive list of Deeplearning4j's features. We'll be updating it 
 ### Libraries
 
 * [ND4J: N-dimensional arrays for the JVM](http://nd4j.org)
-* [libND4J: Native CPU/GPU operations for ND4J](https://github.com/deeplearning4j/libnd4j)
-* [DataVec: Data preparation for DL4J](https://github.com/deeplearning4j/DataVec)
-* [Deeplearning4j](https://github.com/deeplearning4j/deeplearning4j)
+* [libND4J: Native CPU/GPU operations for ND4J](https://github.com/deeplearning4j/deeplearning4j/tree/master/libnd4j)
+* [DataVec: Data preparation for DL4J](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec)
+* [Deeplearning4j](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j)
 
 ### Nets
 
 * [Restricted Boltzmann machines](./restrictedboltzmannmachine.html)
 * [Convolutional nets](./convolutionalnets.html)
-* [Recursive autoencoders](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/featuredetectors/autoencoder/recursive/RecursiveAutoEncoderTest.java)
 * [Recurrent nets: Long Short-Term Memory (LSTM)](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/test/java/org/deeplearning4j/models/classifiers/lstm/LSTMTest.java) (including bi-directional LSTMs)
-* [Deep-belief networks](./deepbeliefnetwork.html)
 * [Denoising and Stacked Denoising autoencoders](./denoisingautoencoder.html)
 * [Deep autoencoders](./deepautoencoder.html)
 
