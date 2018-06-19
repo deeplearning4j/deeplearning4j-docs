@@ -235,7 +235,7 @@ Licensing is another distinction among these open-source projects: Theano, Torch
 
 Deeplearning4j's underlying linear algebra computations, performed with ND4J, have been shown to run [at least twice as fast as Numpy](http://nd4j.org/benchmarking) on very large matrix multiplies. That's one reasons why we've been adopted by teams at NASA's Jet Propulsion Laboratory. Moreover, Deeplearning4j has been optimized to run on various chips including x86 and GPUs with CUDA C.
 
-While both Torch and DL4J employ parallelism, DL4J's **parallelism is automatic**. That is, we automate the setting up of worker nodes and connections, allowing users to bypass libs while creating a massively parallel network on [Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark), [Hadoop](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/hadoop-yarn), or with [Akka and AWS](http://deeplearning4j.org/scaleout.html). Deeplearning4j is best suited for solving specific problems, and doing so quickly.
+While both Torch and DL4J employ parallelism, DL4J's **parallelism is automatic**. That is, we automate the setting up of worker nodes and connections, allowing users to bypass libs while creating a massively parallel network on [Spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark), Hadoop, or with [Akka and AWS](http://deeplearning4j.org/scaleout.html). Deeplearning4j is best suited for solving specific problems, and doing so quickly.
 
 For a full list of Deeplearning4j's features, please see our [features page](./features.html).
 

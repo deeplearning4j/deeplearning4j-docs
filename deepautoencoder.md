@@ -9,6 +9,7 @@ layout: default
 The key to artificial intelligence has always been the representation. - Jeff Hawkins
 ```
 
+NOTE: Deep Belief Networks and RBMs have been deprecated in dl4j
 
 A deep autoencoder is composed of two, symmetrical [deep-belief networks](./deepbeliefnetwork.html) that typically have four or five shallow layers representing the encoding half of the net, and second set of four or five layers that make up the decoding half.
 
@@ -158,9 +159,6 @@ public class DeepAutoEncoderExample {
 
 ```
        
-
-To construct a deep autoencoder, please make sure you have the most recent version of [Deeplearning4j and its examples](https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/unsupervised/deepbelief)
-
 For questions about Deep Autoencoders, contact us on [Gitter](https://gitter.im/deeplearning4j/deeplearning4j). 
 
 ## <a name="resources">Other Beginner's Guides for Machine Learning</a>
