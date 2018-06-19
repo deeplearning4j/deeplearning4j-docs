@@ -6,7 +6,7 @@ redirect_from: keras
 
 # Keras Model Import: Supported Features
 
-Little-known fact: Deeplearning4j's creator, Skymind, has two of the top six [Keras contributors](https://github.com/keras-team/keras/graphs/contributors) on our team, making it the largest contributor to Keras after Keras creator Francois Chollet, who's at Google.
+Little-known fact: Deeplearning4j's creator, Skymind, has two of the top five [Keras contributors](https://github.com/keras-team/keras/graphs/contributors) on our team, making it the largest contributor to Keras after Keras creator Francois Chollet, who's at Google.
 
 While not every concept in DL4J has an equivalent in Keras and vice versa, many of the key concepts can be matched. Importing keras models into DL4J is done in our [deeplearning4j-modelimport](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras) module. Below is a comprehensive list of currently supported features.
 
@@ -34,7 +34,7 @@ Mapping keras to DL4J layers is done in the [layers](https://github.com/deeplear
 * <i class="fa fa-check-square-o"></i> [Reshape](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasReshape.java)
 * <i class="fa fa-check-square-o"></i> [Merge](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasMerge.java)
 * <i class="fa fa-check-square-o"></i> [Permute](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasPermute.java)
-* <i class="fa fa-square-o"></i> RepeatVector
+* <i class="fa fa-check-square-o"></i> [RepeatVector](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasRepeatVector.java)
 * <i class="fa fa-square-o"></i> Lambda
 * <i class="fa fa-square-o"></i> ActivityRegularization
 * <i class="fa fa-square-o"></i> Masking
