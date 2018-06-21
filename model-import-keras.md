@@ -21,7 +21,7 @@ Contents
 The `deeplearning4j-modelimport` module provides routines for importing neural network models originally configured
 and trained using [Keras](https://keras.io/), a popular Python deep learning library that provides abstraction
 layers on top of [TensorFlow](https://www.tensorflow.org), [Theano](http://deeplearning.net/software/theano/) and [CNTK](https://docs.microsoft.com/en-us/cognitive-toolkit/)
-backends. You can learn more about saving Keras models on the Keras [FAQ Page](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model). Details about [the Keras features](https://deeplearning4j.org/keras-supported-features) matched in Deeplearning4j are through the link.
+backends. You can learn more about saving Keras models on the Keras [FAQ Page](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model). Details about [the Keras features](https://deeplearning4j.org/keras-supported-features) matched in Deeplearning4j are through the link. 
 
 ![Model Import Schema](./img/dl4j_model_import.jpg)
 
@@ -119,22 +119,22 @@ Once you have imported your model we recommend our own modelserializer class for
 
 You can inquire further by visiting the [DL4J gitter channel](https://gitter.im/deeplearning4j/deeplearning4j). You might consider filing a [feature request via Github](https://github.com/deeplearning4j/deeplearning4j/issues) so that this missing functionality can be placed on the DL4J development roadmap or even sending us a pull request with the necessary changes!
 
-Check back for frequent updates to both the model import module *and* to this page!
+Check back for frequent updates to both the model import module *and* this page!
 
 ## <a name="zoo">Popular Model Support and Model Zoo</a>
 
-VGG16 and other pre-trained models are widely used for demonstration purposes and for retraining for a specific use case. We are proud to announce support for VGG16 import along with some helper functions to properly format and normalize data for ingest, and helper functions to convert the numeric output to labelled text classes.  
-
-In addition to being able to import pre-trained Keras models, DeepLearning4j will actively add models to our own model zoo.
-
+VGG16 and other pre-trained models are widely used for demonstration purposes and for retraining for a specific use case. Deeplearning4j supports VGG16 import along with some helper functions to properly format and normalize data for ingest, and helper functions to convert the numeric output to labelled text classes. In addition to importing pre-trained Keras models, DeepLearning4j will actively add models to our own model zoo.
 
 ## <a name="keras">Why Keras?</a>
 
-Keras is a layer of abstraction that sits atop Python libraries like Theano, Tensorflow CNTK, providing an easier to use interface for deep learning.
+Keras is a layer of abstraction that sits atop Python libraries like Tensorflow, CNTK and Theano, providing an easier-to-use interface for deep learning.
 
-To define a layer in a framework like Theano, you have to precisely define the weights, biases, activation functions and how your input data will be transformed into outputs.
-Moreover, you need to deal with backpropagation and updating those weights and biases. Keras wraps all that. It gives you prefab layers that encompass those calculations and updates.
+To define a layer in a framework like Theano, you have to define the weights, biases, activation functions precisely, as well as specifying how your input data will be transformed into outputs.
+
+Moreover, you need to deal with backpropagation and updating those weights and biases. Keras wraps all that. It gives you prefabricated layers that encompass those calculations and updates.
 
 With Keras, the only thing you define is the shape of the input, the shape of the output, and how you want to calculate the loss. Keras ensures that all the layers are the right size, and that the error gets backpropagated properly.
 
 More information is also available [here](http://deeplearning4j.org/keras).
+
+* *[Skymind](https://skymind.ai) offers commercial support for Keras implementations in enterprise. 
