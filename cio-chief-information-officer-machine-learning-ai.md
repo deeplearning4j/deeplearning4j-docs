@@ -5,9 +5,9 @@ layout: default
 
 # How CIOs Should Think about Machine Learning and AI
 
-For purposes of this post, we're going to treat AI, machine learning and deep learning as interchangeable terms, and we'll just refer to them as "AI" for the sake of brevity. (If you're interested in the differences between them, we compare the [definitions of AI and machine learning here](./ai-machinelearning-deeplearning).)
+For purposes of this post, we're going to treat AI, machine learning and deep learning as interchangeable terms, and we'll just refer to them as "AI" for the sake of brevity. (If you're interested in the differences between them, we compare the [definitions of AI machine learning and deep learning here](./ai-machinelearning-deeplearning).)
 
-It's important for companies and leaders who are trying to adopt AI to share a common language with their teams of software engineers and data scientists. Too often, advanced technology is shrouded in jargon and obfuscations that are obstacles to understanding and fast implementation. The goal of this post is to introduce a set of terms and ways of thinking that can serve as a common language for teams that are starting to build AI solutions.
+It's important for the companies and leaders trying to adopt AI to share a common language with their teams of software engineers and data scientists. Too often, advanced technology is shrouded in jargon and obfuscations that are obstacles to understanding and fast implementation. The goal of this post is to introduce a set of terms and ways of thinking that can serve as a common language for teams that are starting to build AI solutions.
 
 ## What Does AI Do?
 
@@ -18,7 +18,7 @@ What kinds of decisions can you make? There are four types of decisions that peo
 * Classification
 * Clustering
 * Regression
-* Goal-oriented moves
+* Goal-oriented actions
 
 Let's look at a couple examples of each:
 
@@ -28,9 +28,9 @@ Let's look at a couple examples of each:
 
 * **Regression**: Regression just means predicting continuous numerical values. (Classification, in contrast, predicts discrete values. The animal in the photo might be a dog or an elephant or a peacock, but it is not a mix of those categories. With discrete values, there are no gray areas or gradual shifts in values.) For example, houses might be sold for any amount from $100,000 to $3,000,000. You want to predict the price of the house based on its square footage. The larger the house is, the more it is likely to cost, but the relationship between square feet and dollars is not one to one. This is a regression problem that might be expressed as `house_price = slope * square_feet + intercept`. Algorithms can learn the correlations between numerically continuous values as well. 
 
-* **Goal-oriented**: Goal-oriented learning is best described in terms of a video game. In a video game, certain actions win you more points, while others will cost you. That is, there's a correlation between what you do and the amount of points you gain or lose. Algorithms can learn the relationship between your actions and the rewards a game returns to you. Some of these algorithms are called "[reinforcement learning](./deepreinforcementlearning)". Google created an algorithm called AlphaGo that learns those correlations for the board game of Go, and it learned them so well that the algorithm beat the world champion of Go. If you can define problems to be solved as games to be won, and strictly define how points are awarded, then you can apply goal-oriented learning to real-life situations as well. For example, you might reward a robot for successfully pushing a button, or you might reward a drone for every second it remains aloft. In finance, you might teach an algorithm to correlate the buying and selling of securities with the profit or loss it incurs. 
+* **Goal-oriented actions**: Goal-oriented learning is best described in terms of a video game. In a video game, certain actions win you more points, while others will cost you. That is, there's a correlation between what you do and the amount of points you gain or lose. Algorithms can learn the relationship between your actions and the rewards a game returns to you. Some of these algorithms are called "[reinforcement learning](./deepreinforcementlearning)". Google created an algorithm called AlphaGo that learns those correlations for the board game of Go, and it learned them so well that the algorithm beat the world champion of Go. If you can define problems to be solved as games to be won, and strictly define how points are awarded, then you can apply goal-oriented learning to real-life situations as well. For example, you might reward a robot for successfully pushing a button, or you might reward a drone for every second it remains aloft. In finance, you might teach an algorithm to correlate the buying and selling of securities with the profit or loss it incurs. 
 
-If you can't formulate the problem you want to solve as one of these four types of predictions, then you need to start over. Until you achieve strategic clarity over the outcomes you want to predict, it's not much use fiddling with AI. 
+If you can't formulate the problem you want to solve as one of these four types of predictions, then you need to start over. Until you achieve strategic clarity over the outcomes you want to predict, it's not much use fiddling with AI. You'll probably come up with a list of a few things you'd like to predict. Some of those predictions may be pie in the sky: e.g. build me a chatbot like Scarlett Johansson in "Her". We always recommend to start your AI journey with a relatively simple task, the low-hanging fruit. You'll learn a lot on the way to that first win, which will make it easier to rally support for and implement your next AI solution. 
 
 ## What Does AI Need to Work?
 
@@ -41,7 +41,7 @@ To build an AI solution, you need four things:
 * Tooling
 * Infrastructure
 
-We'll explore each in turn. There are technological solutions, and vendors to sell them, for AI tooling and infrastructure. Gathering the right data and hiring the right team is harder. 
+We'll explore each in turn. There are technological solutions, and vendors to sell them, for AI tooling and infrastructure. Gathering the right data and hiring the right team are harder, but no impossible. 
 
 ### Data
 
@@ -171,3 +171,4 @@ The hardware required is usually a GPU, and there are only two viable GPU makers
 * [Deep Learning on Apache Spark](./spark.html)
 * [AI vs. Machine Learning vs. Deep Learning](./ai-machinelearning-deeplearning.html)
 * [Inference in Production: Machine Learning Model Server](./machine-learning-server.html)
+* [AI Infrastructure: Machine Learning Operations, or MlOps](https://blog.skymind.ai/ai-infrastructure-machine-learning-operations-mlops/)
