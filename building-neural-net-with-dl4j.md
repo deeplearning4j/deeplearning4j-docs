@@ -56,7 +56,7 @@ Both configuration classes provide a convenient builder architecture.
 
 ### ComputationGraph Configuration
 
-Here is a configuration of a recurrent neural network taken, from our examples. 
+Here is a configuration of a recurrent neural network taken from our examples. 
 
 ```
 ComputationGraphConfiguration configuration = new NeuralNetConfiguration.Builder()
@@ -102,7 +102,7 @@ Some examples:
 
 * To generate Binary(0,1) output, use a sigmoid activation function on the output layer. The output will be between 0 and 1, and should be treated as a probability that the input belongs to either 0 or 1. 
 
-* To generate output of categorical Targets (1 of C coding), use the Softmax Activation Function for the  output layer. The number of output nodes to equal number of classes beig categorized. Treat output as the probability of an instance of data belonging to each category. 
+* To generate output of categorical Targets (1 of C coding), use the Softmax Activation Function for the  output layer. The number of output nodes to equal number of classes being categorized. Treat output as the probability of an instance of data belonging to each category. 
 
 * To generate Continuous-Valued (bounded range) values, use Sigmoid or Tanh Activation (with scaled range of outputs to range of targets).
 
@@ -135,7 +135,7 @@ DeepLearning4J supports custom activation functions.
 
 ### Weight Initialization
 
-At startup the weights of the Neural Network are randomly initialized. Randomization is important, if the weights of two neurons are identical then they will never be able to diverge and learn different features. Xavier Initialization is widely used and is described in our [glossary](https://deeplearning4j.org/glossary.html#xavier).
+At startup the weights of the Neural Network are randomly initialized. Randomization is important: if the weights of two neurons are identical, then they will never be able to diverge and learn different features. Xavier Initialization is widely used and is described in our [glossary](https://deeplearning4j.org/glossary.html#xavier).
 
 ### Learning Rate
 

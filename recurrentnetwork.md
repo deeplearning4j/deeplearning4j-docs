@@ -41,14 +41,14 @@ Recall that Deeplearning4j's multinetwork configuration lets you create a layer 
 
 ### LSTM Implementations in DL4J
 
-* [Graves LSTM](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java) (Useful for sensor data and time series)
+* [Graves LSTM](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/LSTMCharModellingExample.java) (Useful for sensor data and time series)
 
 
 ## Loading Data for LSTMs
 
 In Deeplearning4j, normal LSTMs expect a matrix in which the first row, *x_i*, is given, and all subsequent rows, *x_s*, are what the neural network attempts to predict. This is a generative model, and there are no labels. There is no limit to the number of rows the matrix can contain, but all rows must have the same length. 
 
-The Graves LSTM, of which an example is forthcoming, is meant to be usesd in a multilayer network. 
+The Graves LSTM, of which an example is forthcoming, is meant to be used in a multilayer network. 
 
 For example, input data could be: 
 

@@ -423,7 +423,7 @@ But if your "sentence" is 1000k words length, you'll have 10 skipgram rounds for
 
 *Q: How does Word2Vec Use Memory?*
 
-*A:* The major memory consumer in w2v is weghts matrix. Math is simple there: NumberOfWords x NumberOfDimensions x 2 x DataType memory footprint.
+*A:* The major memory consumer in w2v is weights matrix. Math is simple there: NumberOfWords x NumberOfDimensions x 2 x DataType memory footprint.
 
 So, if you build w2v model for 100k words using floats, and 100 dimensions, your memory footprint will be 100k x 100 x 2 x 4 (float size) = 80MB RAM just for matri + some space for strings, variables, threads etc.
 
