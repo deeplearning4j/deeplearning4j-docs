@@ -178,7 +178,7 @@ What we are trying to build at each node is a switch (like a neuron...) that tur
 
 When you have a switch, you have a classification problem. Does the input's signal indicate the node should classify it as enough, or not_enough, on or off? A binary decision can be expressed by 1 and 0, and [logistic regression](#logistic) is a non-linear function that squashes input to translate it to a space between 0 and 1. 
 
-The nonlinear transforms at each node are usually s-shaped functions similar to logistic regression. They go by the names of sigmoid (the Greek word for "S"), tanh, hard tanh, etc., and they shaping the output of each node. The output of all nodes, each squashed into an s-shaped space between 0 and 1, is then passed as input to the next layer in a feed forward neural network, and so on until the signal reaches the final layer of the net, where decisions are made. 
+The nonlinear transforms at each node are usually s-shaped functions similar to logistic regression. They go by the names of sigmoid (the Greek word for "S"), tanh, hard tanh, etc., and they shape the output of each node. The output of all nodes, each squashed into an s-shaped space between 0 and 1, is then passed as input to the next layer in a feed forward neural network, and so on until the signal reaches the final layer of the net, where decisions are made. 
 
 ### Gradient Descent
 
@@ -190,7 +190,7 @@ To put a finer point on it, which weight will produce the least error? Which one
 
 As a neural network learns, it slowly adjusts many weights so that they can map signal to meaning correctly. The relationship between network *Error* and each of those *weights* is a derivative, *dE/dw*, that measures the degree to which a slight change in a weight causes a slight change in the error. 
 
-Each weight is just one factor in a deep network that involves many transforms; the signal of the weight passes through activations and sums over several layers, so we use the [chain rule of calculus](https://en.wikipedia.org/wiki/Chain_rule) to march back through the networks activations and outputs and finally arrive at the weight in question, and its relationship to overall error. 
+Each weight is just one factor in a deep network that involves many transforms; the signal of the weight passes through activations and sums over several layers, so we use the [chain rule of calculus](https://en.wikipedia.org/wiki/Chain_rule) to march back through the network's activations and outputs and finally arrive at the weight in question, and its relationship to overall error. 
 
 The chain rule in calculus states that 
 
@@ -225,7 +225,7 @@ The JavaDoc for updaters is part of the DeepLearning4J JavaDoc and is available 
 
 ## <a name="#activation">Activation Functions</a>
 
-The activation function determines what output a node will generate base upon its input. Sigmoid activation functions had been very populare, ReLU is currently very popular. In DeepLearnging4J the activation function is set at the layer level and applies to all neurons in that layer. 
+The activation function determines what output a node will generate base upon its input. Sigmoid activation functions had been very popular, and ReLU is currently very popular. In DeepLearning4J, the activation function is set at the layer level and applies to all neurons in that layer. 
 
 Supported Activation functions
 
@@ -302,8 +302,7 @@ The Loss Function is applied when building your output Layer.
 layer(1, new OutputLayer.Builder(LossFunction.NEGATIVELOGLIKELIHOOD)
 ```
 
-The JavaDoc for the Loss Function is part of ND4J javadoc and is available [here.]
-(https://nd4j.org/doc/org/nd4j/linalg/api/ops/LossFunction.html)
+The JavaDoc for the Loss Function is part of ND4J javadoc and is available [here](https://nd4j.org/doc/org/nd4j/linalg/api/ops/LossFunction.html).
 
 
 
