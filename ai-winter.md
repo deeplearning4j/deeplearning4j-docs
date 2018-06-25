@@ -1,9 +1,9 @@
 ---
-title: AI Winter: Deep Learning and its Discontents
+title: The Next AI Winter: Deep Learning and its Discontents
 layout: default
 ---
 
-# AI Winter: Deep Learning and its Discontents
+# The Next AI Winter: Deep Learning and its Discontents
 
 An [AI winter](https://en.wikipedia.org/wiki/AI_winter) is a time when support for and interest in artificial intelligence research and commercial ventures dries up. AI went through various winters in the 20th century, when early promise turned to disillusion, and the best technologists bent their minds to other problems.  
 
