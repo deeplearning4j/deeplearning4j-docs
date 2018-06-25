@@ -5,7 +5,7 @@ layout: default
 
 # Automated Machine Learning and AI
 
-One of the way AI vendors try to convince companies to buy their machine learning platforms and tools is by claiming that it's automated. That's a key selling point, because most companies are acutely aware that they haven't hired enough data scientists (even they have managed to hire any data scientists at all). 
+One of the ways that AI vendors try to convince companies to buy their machine learning platforms and tools is by claiming that it's automated. That's a key selling point, because most companies are acutely aware that they haven't hired the data scientists they need to build machine learning solutions (if they have managed to hire any data scientists at all...). 
 
 Data scientists are people who explore data, clean it, test algorithms that they think might make accurate predictions about that data, and then tune those algorithms until they work well, like an auto mechanic might tune a car. Here's a more complete list of [tasks in the machine learning workflow](./machine-learning-workflow.html).
 
