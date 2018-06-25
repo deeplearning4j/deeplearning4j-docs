@@ -5,7 +5,7 @@ layout: default
 
 # AI Winter: Deep Learning and its Discontents
 
-An [AI winter](https://en.wikipedia.org/wiki/AI_winter) is a time when funding and support for artificial intelligence research and commercial ventures dries up. AI went through various winters in the 20th century, when early promise turned to disillusion, and the best technologists turned their minds to other problems.  
+An [AI winter](https://en.wikipedia.org/wiki/AI_winter) is a time when support for and interest in artificial intelligence research and commercial ventures dries up. AI went through various winters in the 20th century, when early promise turned to disillusion, and the best technologists bent their minds to other problems.  
 
 Though many [definitions of AI](./ai-artificial-intelligence-definition) are overly vague, it is an important technology that receives a lot of media attention. That means a lot of people have opinions about it even if they are unfamiliar with how it works and what its limits are. This post gives you a framework by which to interpret opinions about AI, to situate someone who holds an AI opinion stands and understand who their allies and opponents are. Like most divisions of opinion, these differences roughly break down into "I like AI" or "I don't like AI", although there are several reasons why people have chosen not to like it. 
 
@@ -42,6 +42,18 @@ In both cases, paradoxically, both sides are right.
 The main problem with AI winterism is that it seems to arise more from AI hype fatigue than actual contact with contemporary AI research. Sure, hype comes and goes, but AI research is moving so fast that most insiders have trouble keeping up, and AI capacity is tied to brute compute, which is also progressing. 
 
 While fundamental AI research research and complementary technologies like raw compute are making progress, such advances are rarely linear. They come in bursts, and so does the media attention that is paid to them. You might say that AI hype is both cyclic and recurrent. The hype cycle doesn't happen just once. And each advance moves the base a little higher, a sinusoidal curve on an upward tilt. AI winter is a strong metaphorical frame that needs no explanation, and it implies that AI, as a technology, is doomed to be deflated. But you could reframe it by saying that each AI winter is like a cold season occurring on an ever warmer planet. Sure, the temperature goes down, but never quite as much as the last time. 
+
+## A History of Winter
+
+A [series of setbacks](https://en.wikipedia.org/wiki/AI_winter#Overview) between the mid-60s and the mid-70s led to the first, true AI winter. Serial disappointments in AI's performance in machine vision, machine translation and basic tasks led to cutbacks in government funding in both Britain and the United States. Notable among these setbacks were:
+
+* The [Mansfield Amendment of 1969](https://en.wikipedia.org/wiki/Mike_Mansfield#Mansfield_Amendments), which forbade military funding of research lacking a direct relationship to specific U.S. military goals
+* The abandonment of connectionism after teh publication of Minsky and Papert's book, *Perceptrons*, which critqued [the algorithm made famous by Frank Rosenblatt](./multilayerperception)
+* The [Lighthill Report of 1973](https://en.wikipedia.org/wiki/AI_winter#The_Lighthill_report), which skewered AI research in the UK and led to cuts in research funding
+
+Interest in [symbolic reasoning](./symbolicreasoning) saw a resurgence in the 1980s, a time when expert systems were commercialized, but that trend collapsed by the early 1990s, as it became apparent that immense, rules-based systems were often brittle, hard to maintain and of course, unable to learn. This period is best exemplified, perhaps, by [Cyc](http://www.cyc.com/).
+
+By the mid-2000s, that winter, too, had ended, as Geoff Hinton and his disciples began to show the first, promising results of [deep neural networks](./neuralnet-overview). 
 
 ## AI Winterists
 
