@@ -48,7 +48,7 @@ While fundamental AI research research and complementary technologies like raw c
 A [series of setbacks](https://en.wikipedia.org/wiki/AI_winter#Overview) between the mid-60s and the mid-70s led to the first, true AI winter. Serial disappointments in AI's performance in machine vision, machine translation and basic tasks led to cutbacks in government funding in both Britain and the United States. Notable among these setbacks were:
 
 * The [Mansfield Amendment of 1969](https://en.wikipedia.org/wiki/Mike_Mansfield#Mansfield_Amendments), which forbade military funding of research lacking a direct relationship to specific U.S. military goals
-* The abandonment of connectionism after teh publication of Minsky and Papert's book, *Perceptrons*, which critqued [the algorithm made famous by Frank Rosenblatt](./multilayerperception)
+* The abandonment of connectionism after the publication of Minsky and Papert's book, *Perceptrons*, which critiqued [the algorithm made famous by Frank Rosenblatt](./multilayerperception)
 * The [Lighthill Report of 1973](https://en.wikipedia.org/wiki/AI_winter#The_Lighthill_report), which skewered AI research in the UK and led to cuts in research funding
 
 Interest in [symbolic reasoning](./symbolicreasoning) saw a resurgence in the 1980s, a time when expert systems were commercialized, but that trend collapsed by the early 1990s, as it became apparent that immense, rules-based systems were often brittle, hard to maintain and of course, unable to learn. This period is best exemplified, perhaps, by [Cyc](http://www.cyc.com/).
