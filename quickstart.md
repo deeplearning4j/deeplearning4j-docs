@@ -23,7 +23,7 @@ We recommend that you join our [Gitter Live Chat](https://gitter.im/deeplearning
 
 Deeplearning4j is a domain-specific language to configure deep neural networks, which are made of multiple layers. Everything starts with a `MultiLayerConfiguration`, which organizes those layers and their hyperparameters.
 
-Hyperparameters are variables that determine how a neural network learns. They include how many times to update the weights of the model, how to initialize those weights, which activation function to attach to the nodes, which optimization algorithm to use, and how fast the model should learn. This is what one configuration would look like: 
+Hyperparameters are variables that determine how a neural network learns. They include how many times to update the weights of the model, how to initialize those weights, which activation function to attach to the nodes, which optimization algorithm to use, and how fast the model should learn. This is what one configuration would look like:
 
 ``` java
     MultiLayerConfiguration conf = new NeuralNetConfiguration.Builder()
@@ -89,7 +89,7 @@ Maven is widely used among Java developers and it's pretty much mandatory for wo
 
 #### <a name="IntelliJ">IntelliJ IDEA</a>
 
-An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) allows you to work with our API and configure neural networks in a few steps. We strongly recommend using [IntelliJ](https://www.jetbrains.com/idea/download/), which communicates with Maven to handle dependencies. The [community edition of IntelliJ](https://www.jetbrains.com/idea/download/) is free. 
+An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) allows you to work with our API and configure neural networks in a few steps. We strongly recommend using [IntelliJ](https://www.jetbrains.com/idea/download/), which communicates with Maven to handle dependencies. The [community edition of IntelliJ](https://www.jetbrains.com/idea/download/) is free.
 
 There are other popular IDEs such as [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices). However, IntelliJ is preferred, and using it will make finding help on [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j) easier if you need it.
 
@@ -113,14 +113,14 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 
 ![select directory](./img/Install_IntJ_1.png)
 
-3. Choose 'Import project from external model' and ensure that Maven is selected. 
+3. Choose 'Import project from external model' and ensure that Maven is selected.
 ![import project](./img/Install_IntJ_2.png)
 
 4. Continue through the wizard's options. Select the SDK that begins with `jdk`. (You may need to click on a plus sign to see your options...) Then click Finish. Wait a moment for IntelliJ to download all the dependencies. You'll see the horizontal bar working on the lower right.
 
 5. Pick an example from the file tree on the left.
 ![run IntelliJ example](./img/Install_IntJ_3.png)
-Right-click the file to run. 
+Right-click the file to run.
 
 ## Using DL4J In Your Own Projects: Configuring the POM.xml File
 
@@ -132,7 +132,7 @@ To run DL4J in your own projects, we highly recommend using Maven for Java users
 
 Every Maven project has a POM file. Here is [how the POM file should appear](https://github.com/deeplearning4j/dl4j-examples/blob/master/pom.xml) when you run your examples.
 
-Within IntelliJ, you will need to choose the first Deeplearning4j example you're going to run. We suggest `MLPClassifierLinear`, as you will almost immediately see the network classify two groups of data in our UI. The file on [Github can be found here](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/feedforward/classification/MLPClassifierLinear.java). 
+Within IntelliJ, you will need to choose the first Deeplearning4j example you're going to run. We suggest `MLPClassifierLinear`, as you will almost immediately see the network classify two groups of data in our UI. The file on [Github can be found here](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/feedforward/classification/MLPClassifierLinear.java).
 
 To run the example, right click on it and select the green button in the drop-down menu. You will see, in IntelliJ's bottom window, a series of scores. The rightmost number is the error score for the network's classifications. If your network is learning, then that number will decrease over time with each batch it processes. At the end, this window will tell you how accurate your neural-network model has become:
 
@@ -149,11 +149,11 @@ Congratulations! You just trained your first neural network with Deeplearning4j.
 1. Join us on Gitter. We have three big community channels.
   * [DL4J Live Chat](https://gitter.im/deeplearning4j/deeplearning4j) is the main channel for all things DL4J. Most people hang out here.
   * [Tuning Help](https://gitter.im/deeplearning4j/deeplearning4j/tuninghelp) is for people just getting started with neural networks. Beginners please visit us here!
-  * [Early Adopters](https://gitter.im/deeplearning4j/deeplearning4j/earlyadopters) is for those who are helping us vet and improve the next release. WARNING: This is for more experienced folks. 
-2. Read the [introduction to deep neural networks](./neuralnet-overview) or [one of our detailed tutorials](./tutorials). 
+  * [Early Adopters](https://gitter.im/deeplearning4j/deeplearning4j/earlyadopters) is for those who are helping us vet and improve the next release. WARNING: This is for more experienced folks.
+2. Read the [introduction to deep neural networks](./neuralnet-overview) or [one of our detailed tutorials](./tutorials).
 3. Check out the more detailed [Comprehensive Setup Guide](./gettingstarted).
 4. Browse the [DL4J documentation](./documentation).
-5. **Python folks**: If you plan to run benchmarks on Deeplearning4j comparing it to well-known Python framework [x], please read [these instructions](https://deeplearning4j.org/benchmark) on how to optimize heap space, garbage collection and ETL on the JVM. By following them, you will see at least a *10x speedup in training time*. 
+5. **Python folks**: If you plan to run benchmarks on Deeplearning4j comparing it to well-known Python framework [x], please read [these instructions](https://deeplearning4j.org/benchmark) on how to optimize heap space, garbage collection and ETL on the JVM. By following them, you will see at least a *10x speedup in training time*.
 
 ### Additional links
 
@@ -171,7 +171,7 @@ Congratulations! You just trained your first neural network with Deeplearning4j.
 ```
 -Djava.library.path=""
 ```
-**Q:** **SPARK ISSUES** I am running the examples and having issues with the Spark based examples such as distributed training or datavec transform options. 
+**Q:** **SPARK ISSUES** I am running the examples and having issues with the Spark based examples such as distributed training or datavec transform options.
 
 
 **A:** You may be missing some dependencies that Spark requires. See this [Stack Overflow discussion](http://stackoverflow.com/a/38735202/3892515) for a discussion of potential dependency issues. Windows users may need the winutils.exe from Hadoop.
@@ -204,9 +204,9 @@ We recommend and use Maven and Intellij. If you prefer Eclipse and dislike Maven
 
 ## DL4J Overview
 
-Deeplearning4j is a framework that lets you pick and choose with everything available from the beginning. We're not Tensorflow (a low-level numerical computing library with automatic differentiation) or Pytorch. For more details, please see [our deep learning library compsheet](https://deeplearning4j.org/compare-dl4j-torch7-pylearn). Deeplearning4j has several subprojects that make it easy-ish to build end-to-end applications. 
+Deeplearning4j is a framework that lets you pick and choose with everything available from the beginning. We're not Tensorflow (a low-level numerical computing library with automatic differentiation) or Pytorch. For more details, please see [our deep learning library compsheet](https://deeplearning4j.org/compare-dl4j-torch7-pylearn). Deeplearning4j has several subprojects that make it easy-ish to build end-to-end applications.
 
-If you'd like to deploy models to production, you might like our [model import from Keras](https://deeplearning4j.org/model-import-keras).
+If you'd like to deploy models to production, you might like our [model import from Keras](https://deeplearning4j.org/keras).
 
 Deeplearning4j has several submodules. These range from a visualization UI to distributed training on Spark. For an overview of these modules, please look at the [**Deeplearning4j examples on Github**](https://github.com/deeplearning4j/dl4j-examples).
 
@@ -224,7 +224,7 @@ If you want to deploy on mobile, you can see our [Android page](http://deeplearn
 We deploy optimized code for various hardware architectures natively. We use C++ based for loops just like everybody else.
 For that, please see our [C++ framework libnd4j](https://github.com/deeplearning4j/libnd4j).
 
-Deeplearning4j has two other notable components: 
+Deeplearning4j has two other notable components:
 
 * [Arbiter: hyperparameter optimization and model evaluation](https://github.com/deeplearning4j/Arbiter)
 * [DataVec: built-in ETL for machine-learning data pipelines](https://github.com/deeplearning4j/DataVec)

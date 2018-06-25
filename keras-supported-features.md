@@ -1,7 +1,6 @@
 ---
 title: Deeplearning4j Keras Model Import - supported features
 layout: default
-redirect_from: keras
 ---
 
 # Keras Model Import: Supported Features
