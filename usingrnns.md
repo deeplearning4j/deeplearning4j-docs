@@ -177,7 +177,7 @@ In either case, we can then do the following:
 
 ### <a name="otherlayertypes">Combining RNN Layers with Other Layer Types</a>
 
-RNN layers in DL4J can be combined with other layer types. For example, it is possible to combine DenseLayer and GravesLSTM layers in the same network; or combine Convolutional (CNN) layers and GravesLSTM layers for video.
+RNN layers in DL4J can be combined with other layer types. For example, it is possible to combine DenseLayer and LSTM layers in the same network; or combine Convolutional (CNN) layers and LSTM layers for video.
 
 Of course, the DenseLayer and Convolutional layers do not handle time series data - they expect a different  type of input. To deal with this, we need to use the layer preprocessor functionality: for example, the CnnToRnnPreProcessor and FeedForwardToRnnPreprocessor classes. See [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/preprocessor) for all preprocessors. Fortunately, in most situations, the DL4J configuration system will automatically add these preprocessors as required. However, the preprocessors can be added manually (overriding the automatic addition of preprocessors, for each layer).
 
