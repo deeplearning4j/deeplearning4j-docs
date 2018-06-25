@@ -46,7 +46,7 @@ Deeplearning4j (and related projects) have a lot of functionality. The goal of t
 
 ## <a name="layers-ff">Feed-Forward Layers</a>
 
-* **DenseLayer** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/layers/feedforward/dense/DenseLayer.java)) - A simple/standard fully-connected layer 
+* **DenseLayer** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/layers/feedforward/dense/DenseLayer.java)) - A simple/standard fully-connected layer
 * **EmbeddingLayer** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/layers/feedforward/embedding/EmbeddingLayer.java)) - Takes positive integer indexes as input, outputs vectors. Only usable as first layer in a model. Mathematically equivalent (when bias is enabled) to DenseLayer with one-hot input, but more efficient.
 
 ## <a name="layers-out">Output Layers</a>
@@ -249,7 +249,7 @@ Available weight initializations. Not again that not all are available in the 0.
 ## <a name="config-updaters">Updaters (Optimizers)</a>
 
 An 'updater' in DL4J is a class that takes raw gradients and modifies them to become updates. These updates will then be applied to the network parameters.
-The [CS231n course notes](http://cs231n.github.io/neural-networks-3/#ada) have a good explanation of some of these updaters. 
+The [CS231n course notes](http://cs231n.github.io/neural-networks-3/#ada) have a good explanation of some of these updaters.
 
 Supported updaters in Deeplearning4j:
 * **AdaDelta** - ([Source](https://github.com/deeplearning4j/nd4j/blob/e92cae4626e2c9cf27d416136f1895b747a32cee/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning/config/AdaDelta.java)) - [Reference](https://arxiv.org/abs/1212.5701)
@@ -272,7 +272,7 @@ You can plot/inspect the learning rate that will be used at any point by calling
 
 Available schedules:
 
-* **ExponentialSchedule** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/schedule/ExponentialSchedule.java)) - Implements ```value(i) = initialValue * gamma^i``` 
+* **ExponentialSchedule** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/schedule/ExponentialSchedule.java)) - Implements ```value(i) = initialValue * gamma^i```
 * **InverseSchedule** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/schedule/InverseSchedule.java)) - Implements ```value(i) = initialValue * (1 + gamma * i)^(-power)```
 * **MapSchedule** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/schedule/MapSchedule.java)) - Learning rate schedule based on a user-provided map. Note that the provided map must have a value for iteration/epoch 0. Has a builder class to conveniently define a schedule.
 * **PolySchedule** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/schedule/PolySchedule.java)) - Implements ```value(i) = initialValue * (1 + i/maxIter)^(-power)```
@@ -318,7 +318,7 @@ Constraints are deterministic limitations that are placed on a model's parameter
 * **MaxNormConstraint** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/constraint/MaxNormConstraint.java)) - Constrain the maximum L2 norm of the incoming weights for each unit to be less than or equal to the specified value. If the L2 norm exceeds the specified value, the weights will be scaled down to satisfy the constraint.
 * **MinMaxNormConstraint** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/constraint/MinMaxNormConstraint.java)) - Constrain the minimum AND maximum L2 norm of the incoming weights for each unit to be between the specified values. Weights will be scaled up/down if required.
 * **NonNegativeConstraint** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/constraint/NonNegativeConstraint.java)) - Constrain all parameters to be non-negative. Negative parameters will be replaced with 0.
-* **UnitNormConstraint** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/b841c0f549194dbdf88b42836df662d9b8ea8c6d/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/constraint/UnitNormConstraint.java)) - Constrain the L2 norm of the incoming weights for each unit to be 1.0. 
+* **UnitNormConstraint** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/b841c0f549194dbdf88b42836df662d9b8ea8c6d/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/constraint/UnitNormConstraint.java)) - Constrain the L2 norm of the incoming weights for each unit to be 1.0.
 
 
 # <a name="data">Data Classes</a>
@@ -336,7 +336,7 @@ These iterators download their data as required. The actual datasets they return
 * **MnistDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl/MnistDataSetIterator.java)) - DataSetIterator for the well-known MNIST digits dataset. By default, returns a row vector (1x784), with values normalized to 0 to 1 range. Use ```.setInputType(InputType.convolutionalFlat())``` to use with CNNs.
 * **EmnistDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl/EmnistDataSetIterator.java)) - Similar to the MNIST digits dataset, but with more examples, and also letters. Includes multiple different splits (letters only, digits only, letters + digits, etc). Same 1x784 format as MNIST, hence (other than different number of labels for some splits) can be used as a drop-in replacement for MnistDataSetIterator. [Reference 1](https://www.nist.gov/itl/iad/image-group/emnist-dataset), [Reference 2](https://arxiv.org/abs/1702.05373)
 * **IrisDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl/IrisDataSetIterator.java)) - An iterator for the well known Iris dataset. 4 features, 3 output classes.
-* **CifarDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl/CifarDataSetIterator.java)) - An iterator for the CIFAR images dataset. 10 classes, 4d features/activations format for CNNs in DL4J: ```[minibatch,channels,height,width] = [minibatch,3,32,32]```. Features are *not* normalized - instead, are in the range 0 to 255. 
+* **CifarDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl/CifarDataSetIterator.java)) - An iterator for the CIFAR images dataset. 10 classes, 4d features/activations format for CNNs in DL4J: ```[minibatch,channels,height,width] = [minibatch,3,32,32]```. Features are *not* normalized - instead, are in the range 0 to 255.
 * **LFWDataSetIterator** - ([Source]())
 * **TinyImageNetDataSetIterator** ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl/TinyImageNetDataSetIterator.java)) - A subset of the standard imagenet dataset; 200 classes, 500 images per class
 * **UciSequenceDataSetIterator** ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl/UciSequenceDataSetIterator.java)) - UCI synthetic control time series dataset
@@ -347,7 +347,7 @@ The iterators in this subsection are used with user-provided data.
 
 * **RecordReaderDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderDataSetIterator.java)) - an iterator that takes a DataVec record reader (such as CsvRecordReader or ImageRecordReader) and handles conversion to DataSets, batching, masking, etc. One of the most commonly used iterators in DL4J. Handles non-sequence data only, as input (i.e., RecordReader, no SequenceeRecordReader).
 * **RecordReaderMultiDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.java)) - the MultiDataSet version of RecordReaderDataSetIterator, that supports multiple readers. Has a builder pattern for creating more complex data pipelines (such as different subsets of a reader's output to different input/output arrays, conversion to one-hot, etc). Handles both sequence and non-sequence data as input.
-* **SequenceRecordReaderDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.java)) - The sequence (SequenceRecordReader) version of RecordReaderDataSetIterator. Users may be better off using RecordReaderMultiDataSetIterator, in conjunction with 
+* **SequenceRecordReaderDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.java)) - The sequence (SequenceRecordReader) version of RecordReaderDataSetIterator. Users may be better off using RecordReaderMultiDataSetIterator, in conjunction with
 * **DoublesDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/DoublesDataSetIterator.java))
 * **FloatsDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/FloatsDataSetIterator.java))
 * **INDArrayDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/INDArrayDataSetIterator.java))
@@ -370,7 +370,7 @@ The iterators in this subsection are used with user-provided data.
 * **IteratorMultiDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/IteratorMultiDataSetIterator.java)) - The ```Iterator<MultiDataSet>``` version of IteratorDataSetIterator
 * **MultiDataSetWrapperIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/MultiDataSetWrapperIterator.java)) - Convert a MultiDataSetIterator to a DataSetIterator. Note that this is only possible if the number of features and labels arrays is equal to 1.
 * **MultipleEpochsIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/MultipleEpochsIterator.java)) - Treat multiple passes (epochs) of the underlying iterator as a single epoch, when training.
-* **WorkspaceShieldDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/WorkspacesShieldDataSetIterator.java)) - Generally used only for debugging, and not usually by users. Detaches/migrates DataSets coming out of the underlying DataSetIterator. 
+* **WorkspaceShieldDataSetIterator** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/WorkspacesShieldDataSetIterator.java)) - Generally used only for debugging, and not usually by users. Detaches/migrates DataSets coming out of the underlying DataSetIterator.
 
 
 ## <a name="data-datavec">Reading Raw Data: DataVec RecordReaders</a>
@@ -390,7 +390,7 @@ End result: the data that comes from your DataSetIterator will now be normalized
 
 In general, you should fit *only* on the training data, and do ```trainData.setPreProcessor(normalizer)``` and ```testData.setPreProcessor(normalizer)``` with the same/single normalizer that has been fit on the training data only.
 
-Note that where appropriate (NormalizerStandardize, NormalizerMinMaxScaler) statistics such as mean/standard-deviation/min/max are shared across time (for time series) and across image x/y locations (but not depth/channels - for image data). 
+Note that where appropriate (NormalizerStandardize, NormalizerMinMaxScaler) statistics such as mean/standard-deviation/min/max are shared across time (for time series) and across image x/y locations (but not depth/channels - for image data).
 
 Data normalization example: [link](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/dataexamples/PreprocessNormalizerExample.java)
 
@@ -407,7 +407,7 @@ Data normalization example: [link](https://github.com/deeplearning4j/dl4j-exampl
 * **ImageMultiPreProcessingScaler** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor/ImageMultiPreProcessingScaler.java)) - A MultiDataSet/MultiDataSetIterator version of ImagePreProcessingScaler
 * **MultiNormalizerStandardize** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor/MultiNormalizerStandardize.java)) - MultiDataSet/MultiDataSetIterator version of NormalizerStandardize
 * **MultiNormalizerMinMaxScaler** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor/MultiNormalizerMinMaxScaler.java)) - MultiDataSet/MultiDataSetIterator version of NormalizerMinMaxScaler
-* **MultiNormalizerHybrid** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor/MultiNormalizerHybrid.java)) - A MultiDataSet normalizer that can combine different normalization types (standardize, min/max etc) for different input/feature and output/label arrays. 
+* **MultiNormalizerHybrid** - ([Source](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor/MultiNormalizerHybrid.java)) - A MultiDataSet normalizer that can combine different normalization types (standardize, min/max etc) for different input/feature and output/label arrays.
 
 
 ## <a name="data-spark">Spark Network Training Data Classes</a>
@@ -461,7 +461,7 @@ Link: [SKIL Community Edition - Quickstart](https://docs.skymind.ai/docs/quickst
 Models created and trained in [Keras](https://keras.io/) (both Keras 1 and 2) can be imported to DL4J.
 
 For further details, see the following pages:
-* [Importing Models from Keras to Deeplearning4j](https://deeplearning4j.org/model-import-keras)
+* [Importing Models from Keras to Deeplearning4j](https://deeplearning4j.org/keras)
 * [Keras Model import: Supported Features](https://deeplearning4j.org/keras-supported-features)
 
 
