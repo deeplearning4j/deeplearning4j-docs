@@ -19,7 +19,7 @@ Everyone likes prophecies of doom: messages that arouse fear are more likely to 
 “I have observed that not man who hopes when others despair, but the man who despairs when others hope, is admired by a large class of persons as a sage.” - John Stuart Mill
 ```
 
-## Polarization of Opinions on AI
+## Polarization of Opinion about AI
 
 Discussions of AI are multipolar and increasingly polarized. That is, people are gravitating toward more and more extreme views about the future of AI and its impact on society. In addition to the two kinds of pessimism described above, you have AI hype. The boosters who seek to succeed alongside the technology. It is in their interest to make promises about AI, and to view a world with stronger AI through rose-colored glasses. 
 
