@@ -65,7 +65,7 @@ And finally, if you want to make art with kd-trees, you could do a lot worse tha
 
 ### <a name="vp">VP Tree</a>
 
-The underlying implementation for K Nearest Neighbors is the [VP Tree](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/clustering/vptree/VPTree.java#L59-59), which we've implemented here. You can think of it as a search engine for coordinate spaces.
+The underlying implementation for K Nearest Neighbors is the [VP Tree](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nearestneighbors-parent/nearestneighbor-core/src/main/java/org/deeplearning4j/clustering/vptree/VPTree.java), which we've implemented here. You can think of it as a search engine for coordinate spaces.
 
 ## <a name="resources">More Machine Learning Tutorials</a>
 

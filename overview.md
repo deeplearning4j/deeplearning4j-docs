@@ -23,14 +23,13 @@ Ingesting, cleaning, joining, scaling, normalizing and transforming data are job
 
 ### Github Repo
 
-The DataVec Github repo is [here](https://github.com/deeplearning4j/datavec). Here is how the repo is organized.
+The DataVec Github repo is [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec). Here is how the repo is organized.
 
-* [datavec-dataframe](https://github.com/deeplearning4j/DataVec/tree/master/datavec-dataframe) : DataVec's built-in equivalent of Pandas Dataframe
-* [datavec-api](https://github.com/deeplearning4j/DataVec/tree/master/datavec-api) : rules for preprocessing data and defining data pipelines.
-* [datavec-data](https://github.com/deeplearning4j/DataVec/tree/master/datavec-data) : knows how to understand audio, video, images, text data types
-* [datavec-spark](https://github.com/deeplearning4j/DataVec/tree/master/datavec-spark) : runs distributed data pipelines on Spark 
-* [datavec-local](https://github.com/deeplearning4j/DataVec/tree/master/datavec-local) : runs Datavec standalone on desktop. For inference. 
-* [datavec-camel](https://github.com/deeplearning4j/DataVec/tree/master/datavec-camel) : connects to external Camel components. Camel allows you to define routes and integrates with many data sources. DataVec-camel sends data to datavec as a destination from whichever Camel source you specify.
+* [datavec-api](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api) : rules for preprocessing data and defining data pipelines.
+* [datavec-data](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-data) : knows how to understand audio, video, images, text data types
+* [datavec-spark](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-spark) : runs distributed data pipelines on Spark 
+* [datavec-local](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-local) : runs Datavec standalone on desktop. For inference. 
+* [datavec-camel](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-camel) : connects to external Camel components. Camel allows you to define routes and integrates with many data sources. DataVec-camel sends data to datavec as a destination from whichever Camel source you specify.
 
 ### DataVec Examples
 

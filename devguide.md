@@ -35,8 +35,6 @@ There are a number of different ways to find things to work on. These include:
 
 * Looking at the issue trackers:
   * [https://github.com/deeplearning4j/deeplearning4j/issues](https://github.com/deeplearning4j/deeplearning4j/issues)
-  * [https://github.com/deeplearning4j/nd4j/issues](https://github.com/deeplearning4j/nd4j/issues)
-  * [https://github.com/deeplearning4j/DataVec/issues](https://github.com/deeplearning4j/Canova/issues)
   * [https://github.com/deeplearning4j/dl4j-examples/issues](https://github.com/deeplearning4j/dl4j-examples/issues)
 * Reviewing our [Roadmap](http://deeplearning4j.org/roadmap.html)
 * Talking to the developers on [Gitter](https://gitter.im/deeplearning4j/deeplearning4j), especially our [early adopters channel](https://gitter.im/deeplearning4j/deeplearning4j/earlyadopters)
@@ -130,7 +128,6 @@ Now, to implement a new layer type, you need to implement all of the following:
 * A Layer (configuration) class, with a Builder class. Follow the design of [these classes](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers)
 * A Layer (implementation) class. Again, follow the design of [these classes](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/layers)
 * A [ParameterInitializer](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/params) for your layer (which is responsible for initializing the initial parameters, given the configuration)
-* A [LayerFactory](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/layers/factory) which extends DefaultLayerFactory, plus add your layer to DefaultLayerFactory.getInstance()
 
 In DL4J, we do not currently have symbolic automatic differentiation. This means that both the forward pass (predictions) and backward pass (backpropagation) code must be implemented manually.
 
