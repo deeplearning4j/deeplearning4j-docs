@@ -11,7 +11,7 @@ layout: default
 # A Beginner's Guide to Recurrent Networks and LSTMs
 
 ```
-Life can only be understood backwards; but it must be lived forwards — Søren Kierkegaard
+Life can only be understood backwards; but it must be lived forwards. — Søren Kierkegaard, Journals
 ```
 
 Contents
