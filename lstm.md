@@ -25,6 +25,8 @@ Contents
 * [Code Sample & Comments](#code)
 * [Resources](#resources)
 
+Søren Kierkegaard didn't really say that. He used the word "life", instead of "data". But for an algorithm, the two words are interchangeable, and it's the algorithm's understanding that we care about. 
+
 The purpose of this post is to give students of neural networks an intuition about the functioning of recurrent neural networks and purpose and structure of a prominent RNN variation, LSTMs.
 
 Recurrent nets are a type of artificial neural network designed to recognize patterns in sequences of data, such as text, genomes, handwriting, the spoken word, or numerical times series data emanating from sensors, stock markets and government agencies. These algorithms take time and sequence into account, they have a temporal dimension. 
