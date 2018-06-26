@@ -17,7 +17,7 @@ layout: default
 The `deeplearning4j-modelimport` module provides routines for importing neural network models originally configured
 and trained using [Keras](https://keras.io/), a popular Python deep learning library that provides abstraction
 layers on top of [TensorFlow](https://www.tensorflow.org), [Theano](http://deeplearning.net/software/theano/) and [CNTK](https://docs.microsoft.com/en-us/cognitive-toolkit/)
-backends. You can learn more about saving Keras models on the Keras [FAQ Page](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model). Details about [the Keras features](https://deeplearning4j.org/keras-supported-features) matched in Deeplearning4j are through the link. 
+backends. You can learn more about saving Keras models on the Keras [FAQ Page](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model). Details about [the Keras features](https://deeplearning4j.org/keras-supported-features) matched in Deeplearning4j are through the link.
 
 Once you have imported your model into DL4J, our full production stack is at your disposal. Please check [here](https://deeplearning4j.org/keras-supported-features) for a complete list of keras features supported through model import.
 
@@ -132,5 +132,3 @@ With Keras, the only thing you define is the shape of the input, the shape of th
 More information is also available [here](http://deeplearning4j.org/keras).
 
 * *[Skymind](https://skymind.ai) offers commercial support for Keras implementations in enterprise.
-
-

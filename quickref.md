@@ -460,7 +460,7 @@ Link: [SKIL Community Edition - Quickstart](https://docs.skymind.ai/docs/quickst
 Models created and trained in [Keras](https://keras.io/) (both Keras 1 and 2) can be imported to DL4J.
 
 For further details, see the following pages:
-* [Importing Models from Keras to Deeplearning4j](https://deeplearning4j.org/keras)
+* [Importing Models from Keras to Deeplearning4j](https://deeplearning4j.org/keras/)
 * [Keras Model import: Supported Features](https://deeplearning4j.org/keras-supported-features)
 
 
