@@ -11,7 +11,7 @@ layout: default
 # A Beginner's Guide to Recurrent Networks and LSTMs
 
 ```
-Properties of cause (as described by Hume in 1739) are association (cause and effect occur together), time order (causes precede effects), and “connection” or direction — that is, repeatedly demonstrable, hence predictable, linkages existing between cause and effect. - M Susser
+Life can only be understood backwards; but it must be lived forwards — Søren Kierkegaard
 ```
 
 Contents
