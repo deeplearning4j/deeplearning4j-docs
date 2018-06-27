@@ -39,7 +39,7 @@ Two reinforcement learning algorithms - Deep-Q learning and A3C - have been impl
 
 ## <a name="define">Reinforcement Learning Definitions</a>
 
-Reinforcement learning can be understand using the concepts of agents, environments, states, actions and rewards, all of which we’ll explain below. Capital letters tend to denote sets of things, and lower-case letters denote a specific instance of that thing; e.g. `A` is all possible actions, while `a` is a specific action contained in the set. 
+Reinforcement learning can be understood using the concepts of agents, environments, states, actions and rewards, all of which we’ll explain below. Capital letters denote sets of things, and lower-case letters denote a specific instance of that set; e.g. `A` is all possible actions, while `a` is a specific action contained in the set. 
 
 * Agent: An **agent** takes actions; for example, a drone making a delivery, or Super Mario navigating a video game. The algorithm is the agent. In life, the agent is you.<sup>[1](#one)</sup>  
 * Action (A): `A` is the set of all possible moves the agent can make. An **action** is almost self-explanatory, but it should be noted that agents choose among a list of possible actions. In video games, the list might include running right or left, jumping high or low, crouching or standing still. In the stock markets, the list might include buying, selling or holding any one of an array of securities and their derivatives. When handling aerial drones, alternatives would include many different velocities and accelerations in 3D space. 
