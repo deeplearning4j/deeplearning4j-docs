@@ -25,7 +25,7 @@ Contents
 Data can only be understood backwards; but it must be lived forwards. — Søren Kierkegaard, Journals
 ```
 
-Søren Kierkegaard didn't say that, actually. He used the word "life" instead of "data". But for an algorithm, the two words are interchangeable, and it's the algorithm's understanding that we care about. 
+Actually, Søren Kierkegaard didn't say that: instead of "data", he used the word "life". But for an algorithm, the two words are interchangeable, and it's the algorithm's understanding that we care about. 
 
 The purpose of this post is to give students of neural networks an intuition about the functioning of recurrent neural networks and purpose and structure of a prominent RNN variation, LSTMs.
 
