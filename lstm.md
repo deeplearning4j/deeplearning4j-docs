@@ -10,10 +10,6 @@ layout: default
 
 # A Beginner's Guide to Recurrent Networks and LSTMs
 
-```
-Data can only be understood backwards; but it must be lived forwards. — Søren Kierkegaard, Journals
-```
-
 Contents
 
 * [Feedforward Networks](#feedforward)
@@ -25,7 +21,11 @@ Contents
 * [Code Sample & Comments](#code)
 * [Resources](#resources)
 
-Søren Kierkegaard didn't really say that. He used the word "life", instead of "data". But for an algorithm, the two words are interchangeable, and it's the algorithm's understanding that we care about. 
+```
+Data can only be understood backwards; but it must be lived forwards. — Søren Kierkegaard, Journals
+```
+
+Søren Kierkegaard didn't say that, actually. He used the word "life" instead of "data". But for an algorithm, the two words are interchangeable, and it's the algorithm's understanding that we care about. 
 
 The purpose of this post is to give students of neural networks an intuition about the functioning of recurrent neural networks and purpose and structure of a prominent RNN variation, LSTMs.
 
