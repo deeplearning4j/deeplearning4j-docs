@@ -54,6 +54,7 @@ Frankly, dynamic computation graphs for deep neural networks sounds an awful lot
 * [VIDEO: Building the Software 2.0 Stack at Tesla, by Andrej Karpathy](https://www.figure-eight.com/building-the-software-2-0-stack-by-andrej-karpathy-from-tesla/)
 * [Slides: Differentiable Programming, Microsoft Research (2016)](http://www.cs.nuim.ie/~gunes/files/Baydin-MSR-Slides-20160201.pdf)
 * [Differentiable Programming @Edge.org](https://www.edge.org/response-detail/26794)
+* [DARTS: Differentiable Architecture Search, by Hanxiao Liu, Karen Simonyan, Yiming Yang](https://arxiv.org/abs/1806.09055) This paper addresses the scalability challenge of architecture search by formulating the task in a differentiable manner. Unlike conventional approaches of applying evolution or reinforcement learning over a discrete and non-differentiable search space, our method is based on the continuous relaxation of the architecture representation, allowing efficient search of the architecture using gradient descent. Extensive experiments on CIFAR-10, ImageNet, Penn Treebank and WikiText-2 show that our algorithm excels in discovering high-performance convolutional architectures for image classification and recurrent architectures for language modeling, while being orders of magnitude faster than state-of-the-art non-differentiable techniques.
 
 ## <a name="resources">More Machine Learning Tutorials</a>
 
