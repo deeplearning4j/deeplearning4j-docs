@@ -71,6 +71,7 @@ Here you'll find an organized list of interesting, high-quality datasets for mac
 * [RectanglesData](http://www.iro.umontreal.ca/~lisa/twiki/bin/view.cgi/Public/RectanglesData): discriminating between wide and tall rectangles
 * [ConvexNonConvex](http://www.iro.umontreal.ca/~lisa/twiki/bin/view.cgi/Public/ConvexNonConvex): discriminating between convex and nonconvex shapes
 * [BackgroundCorrelation](http://www.iro.umontreal.ca/~lisa/twiki/bin/view.cgi/Public/BackgroundCorrelation): controling the degree of correlation in noisy MNIST backgrounds.
+* [Morse Datasets](https://github.com/souryadey/morse-dataset): Generate datasets of varying difficulty for classifying Morse code symbols into English letters, numbers and special characters. 
 
 ## Facial Datasets
 
