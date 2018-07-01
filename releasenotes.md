@@ -35,8 +35,6 @@ layout: default
 
 # <a name="onezerozerobeta">Release Notes for Version 1.0.0-beta</a>
 
-***NOTE: RELEASE NOTES FOR VERSION 1.0.0-beta ARE STILL BEING COMPILED AND ARE NON-FINAL AS OF 18/05/2018***
-
 ## Highlights - 1.0.0-beta Release
 
 * Performance and memory optimizations for DL4J
@@ -93,6 +91,7 @@ layout: default
 
 * ComputationGraph TrainingListener onEpochStart and onEpochEnd methods are not being called correctly
 * DL4J Zoo Model FaceNetNN4Small2 model configuration is incorrect, causing issues during forward pass
+* Early stopping score calculators with values thar should be maximized (accuracy, f1 etc) are not working properly (values are minimized not maximized). Workaround: override ```ScoreCalculator.calculateScore(...)``` and return ```1.0 - super.calculateScore(...)```.
 
 ## <a name="onezerozerobeta-dl4jkeras">Deeplearing4J: Keras Import</a>
 
