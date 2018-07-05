@@ -1,6 +1,8 @@
 ---
 title: Backpropagation & Deep Learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/backpropagation
 ---
 
 # Backpropagation & Deep Learning

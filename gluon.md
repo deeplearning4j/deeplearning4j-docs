@@ -1,6 +1,8 @@
 ---
 title: "Gluon Neural Net API for MxNet and CNTK"
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/gluon
 ---
 
 # Gluon Neural Net API for MxNet and CNTK

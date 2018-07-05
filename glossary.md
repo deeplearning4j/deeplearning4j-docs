@@ -1,6 +1,8 @@
 ---
 title: Deep Learning and Neural Network Glossary
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/glossary
 ---
 
 # Deep Learning and Neural Network Glossary

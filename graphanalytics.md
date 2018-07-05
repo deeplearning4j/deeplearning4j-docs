@@ -3,6 +3,8 @@ title: A Beginner's Guide to Graph Analytics and Deep Learning
 layout: default
 redirect_from: graphtheory
 redirect_from: graphdata
+redirect_to:
+  - https://skymind.ai/wiki/graph-analysis
 ---
 
 # A Beginner's Guide to Graph Analytics and Deep Learning

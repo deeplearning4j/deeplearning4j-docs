@@ -1,6 +1,8 @@
 ---
 title: Autonomous Driving: Car Detection With Deep Learning in Java
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/autonomous-vehicle
 ---
 
 # Car Detection For Autonomous Vehicles With Deep Learning

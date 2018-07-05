@@ -1,6 +1,8 @@
 ---
 title: Markov Chain Monte Carlo and Machine Learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/markov-chain-monte-carlo
 ---
 
 # Markov Chains, Monte Carlo Methods, and Machine Learning

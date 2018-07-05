@@ -2,6 +2,8 @@
 title: A Beginner's Guide to Multilayer Perceptrons
 layout: default
 redirect: perceptron
+redirect_to:
+  - https://skymind.ai/wiki/multilayer-perceptron
 ---
 
 # A Beginner's Guide to Multilayer Perceptrons

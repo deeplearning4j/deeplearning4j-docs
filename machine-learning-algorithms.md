@@ -2,6 +2,8 @@
 title: Machine Learning With Deeplearning4j
 layout: default
 redirect: machinelearning
+redirect_to:
+  - https://skymind.ai/wiki/machine-learning-algorithms
 ---
 
 # A Beginner's Guide to Machine Learning Algorithms

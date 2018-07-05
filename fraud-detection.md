@@ -1,6 +1,8 @@
 ---
 title: "Fraud and Anomaly Detection With Deep Learning"
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/fraud-detection
 ---
 
 # Fraud and Anomaly Detection With Deep Learning

@@ -1,6 +1,8 @@
 ---
 title: AI Infrastructure & Machine Learning Operations (MlOps)
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/ai-infrastructure-machine-learning-operations-mlops
 ---
 
 # AI Infrastructure & Machine Learning Operations (MlOps)

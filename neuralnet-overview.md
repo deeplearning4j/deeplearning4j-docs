@@ -2,6 +2,8 @@
 title: Introduction to Deep Neural Networks (Deep Learning)
 author: Chris V. Nicholson
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/neural-network
 ---
 
 # Introduction to Deep Neural Networks (Deep Learning)

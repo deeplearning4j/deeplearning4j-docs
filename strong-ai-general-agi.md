@@ -1,6 +1,8 @@
 ---
 title: What Is Strong AI? What Is General AI?
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/strong-ai-general-ai
 ---
 
 # What Is Strong AI? What Is General AI?

@@ -1,6 +1,8 @@
 ---
 title: Automated Machine Learning & AI
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/automl-automated-machine-learning-ai
 ---
 
 # Automated Machine Learning and AI

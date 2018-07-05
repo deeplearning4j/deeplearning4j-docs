@@ -2,6 +2,8 @@
 title: A Beginner's Guide to Decision Trees
 layout: default
 redirect: machinelearning
+redirect_to:
+  - https://skymind.ai/wiki/decision-tree
 ---
 
 # A Beginner's Guide to Decision Trees

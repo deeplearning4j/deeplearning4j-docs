@@ -1,6 +1,8 @@
 ---
 title: Open Datasets for Deep Learning & Machine Learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/open-datasets
 ---
 
 # Open Data for Deep Learning & Machine Learning

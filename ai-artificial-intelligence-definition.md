@@ -2,6 +2,8 @@
 title: Definition of Artificial Intelligence (AI)
 layout: default
 author: Chris V. Nicholson
+redirect_to:
+  - https://skymind.ai/wiki/artificial-intelligence-ai
 ---
 
 # Definition of Artificial Intelligence (AI)

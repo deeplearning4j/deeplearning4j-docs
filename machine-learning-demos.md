@@ -1,6 +1,8 @@
 ---
 title: Machine Learning and Deep Learning Demos
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/machine-learning-demos
 ---
 
 # Machine Learning and Deep Learning Demos

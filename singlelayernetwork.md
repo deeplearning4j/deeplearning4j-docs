@@ -1,6 +1,8 @@
 ---
 title: Single-layer neural network
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/single-layer-network
 ---
 
 # Single-layer neural network

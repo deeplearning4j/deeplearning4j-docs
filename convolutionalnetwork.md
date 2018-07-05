@@ -3,6 +3,8 @@ title: A Beginner's Guide to Deep Convolutional Neural Networks (CNNs)
 layout: default
 author: Chris V. Nicholson
 redirect_from: convolutionalnets
+redirect_to:
+  - https://skymind.ai/wiki/convolutional-network
 ---
 
 # A Beginner's Guide to Deep Convolutional Neural Networks (CNNs)

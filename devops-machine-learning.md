@@ -1,6 +1,8 @@
 ---
 title: DevOps for Machine Learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/devops-machine-learning
 ---
 
 # DevOps for Machine Learning

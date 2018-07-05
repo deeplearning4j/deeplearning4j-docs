@@ -1,6 +1,8 @@
 ---
 title: "Tutorial: Recurrent Networks and LSTMs in Java"
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/recurrent-network-rnn
 ---
 
 # Tutorial: Recurrent Networks and LSTMs

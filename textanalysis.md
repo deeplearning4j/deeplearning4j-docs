@@ -1,6 +1,8 @@
 ---
 title: Textual analysis and deep learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/text-analysis
 ---
 
 # Textual analysis and deep learning

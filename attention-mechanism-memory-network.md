@@ -3,6 +3,8 @@ title: A Beginner's Guide to Attention and Memory Networks
 author: Chris V. Nicholson
 layout: default
 redirect: /attention-memory-network.html
+redirect_to:
+  - https://skymind.ai/wiki/attention-mechanism-memory-network
 ---
 
 # A Beginner's Guide to Attention Mechanisms and Memory Networks

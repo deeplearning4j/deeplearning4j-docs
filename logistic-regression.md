@@ -2,6 +2,8 @@
 title: Using Neural Networks With Regression
 layout: default
 redirect_from: linear-regression
+redirect_to:
+  - https://skymind.ai/wiki/logistic-regression
 ---
 
 # Using Neural Networks With Regression

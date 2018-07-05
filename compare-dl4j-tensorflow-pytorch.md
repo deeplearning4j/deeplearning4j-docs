@@ -2,6 +2,8 @@
 title: "Deep Learning Comp Sheet: Deeplearning4j vs. Torch vs. Caffe vs. TensorFlow vs. MxNet vs. CNTK"
 layout: default
 redirect_from: compare-dl4j-torch7-pylearn
+redirect_to:
+  - https://skymind.ai/wiki/comparison-frameworks-dl4j-tensorflow-pytorch
 ---
 
 # Comparing Top Deep Learning Frameworks: Deeplearning4j, PyTorch, TensorFlow, Caffe, Keras, MxNet, Gluon & CNTK

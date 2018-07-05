@@ -1,6 +1,8 @@
 ---
 title: Robotic Process Automation (RPA), AI and Machine Learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/robotic-process-automation-rpa
 ---
 
 # Robotic Process Automation (RPA), AI and Machine Learning

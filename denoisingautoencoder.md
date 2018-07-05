@@ -1,6 +1,8 @@
 ---
 title: Denoising Autoencoders
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/denoising-autoencoder
 ---
 
 # Denoising Autoencoders

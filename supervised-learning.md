@@ -1,6 +1,8 @@
 ---
 title: A Beginner's Guide to Supervised Learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/supervised-learning
 ---
 
 # A Beginner's Guide to Supervised Learning

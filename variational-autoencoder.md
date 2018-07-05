@@ -1,6 +1,8 @@
 ---
 title: Variational Autoencoders (VAE)
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/variational-autoencoder
 ---
 
 # Variational Autoencoders (VAE)

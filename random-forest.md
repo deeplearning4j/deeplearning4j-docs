@@ -2,6 +2,8 @@
 title: A Beginner's Guide to Random Forests
 layout: default
 redirect: machinelearning
+redirect_to:
+  - https://skymind.ai/wiki/random-forest
 ---
 
 # A Beginner's Guide to Random Forests

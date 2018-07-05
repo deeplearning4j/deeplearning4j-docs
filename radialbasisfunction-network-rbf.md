@@ -1,6 +1,8 @@
 ---
 title: A Beginner's Guide to Radial Basis Function Networks
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/radial-basis-function-network-rbf
 ---
 
 # A Beginner's Guide to Radial Basis Function Networks

@@ -1,6 +1,8 @@
 ---
 title: Bag of Words - TF-IDF
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/bagofwords-tf-idf
 ---
 
 # Bag of Words & TF-IDF 

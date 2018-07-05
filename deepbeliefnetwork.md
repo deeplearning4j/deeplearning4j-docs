@@ -1,6 +1,8 @@
 ---
 title: Deep-Belief Networks in Java
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/deep-belief-network
 ---
 
 # Tutorial: Deep-Belief Networks & MNIST

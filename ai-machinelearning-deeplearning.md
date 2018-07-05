@@ -1,6 +1,8 @@
 ---
 title: What's the Difference Between Artificial Intelligence (AI), Machine Learning and Deep Learning?
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/ai-vs-machine-learning-vs-deep-learning
 ---
 
 # What's the Difference Between Artificial Intelligence (AI), Machine Learning and Deep Learning?

@@ -1,6 +1,8 @@
 ---
 title: The Data You Need For Deep Learning
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/data-for-deep-learning
 ---
 
 # The Data You Need For Deep Learning

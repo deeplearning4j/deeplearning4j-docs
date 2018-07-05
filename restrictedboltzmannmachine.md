@@ -1,6 +1,8 @@
 ---
 title: A Beginner's Tutorial for Restricted Boltzmann Machines
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/restricted-boltzmann-machine
 ---
 
 # A Beginner's Tutorial for Restricted Boltzmann Machines

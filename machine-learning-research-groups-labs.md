@@ -1,6 +1,8 @@
 ---
 title: Machine Learning Research Groups & Labs
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/machine-learning-research-groups-labs
 ---
 
 # Machine Learning Research Groups & Labs

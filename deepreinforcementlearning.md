@@ -3,6 +3,8 @@ title: A Beginner's Guide to Deep Reinforcement Learning
 author: Chris V. Nicholson
 layout: default
 redirect_from: reinforcementlearning
+redirect_to:
+  - https://skymind.ai/wiki/deep-reinforcement-learning
 ---
 
 # A Beginner's Guide to Deep Reinforcement Learning 

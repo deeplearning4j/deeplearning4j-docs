@@ -1,6 +1,8 @@
 ---
 title: A Beginner's Guide to Hopfield Networks
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/hopfield-networks
 ---
 
 # A Beginner's Guide to Hopfield Networks

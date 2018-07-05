@@ -1,6 +1,8 @@
 ---
 title: Machine Learning and Deep Learning Software Links
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/machine-learning-software
 ---
 
 # Machine Learning and Deep Learning Software Links

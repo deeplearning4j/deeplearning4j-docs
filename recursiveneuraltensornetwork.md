@@ -1,6 +1,8 @@
 ---
 title: Recursive Neural Tensor Network
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/recursive-neural-tensor-network
 ---
 
 # Recursive Neural Tensor Network

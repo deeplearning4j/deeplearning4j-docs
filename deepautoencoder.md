@@ -1,6 +1,8 @@
 ---
 title: A Beginner's Guide to Deep Autoencoders
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/deep-autoencoder
 ---
 
 # A Beginner's Guide to Deep Autoencoders

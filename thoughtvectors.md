@@ -1,6 +1,8 @@
 ---
 title: Thought Vectors, Deep Learning & the Future of AI
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/thought-vectors
 ---
 
 # Thought Vectors, Deep Learning & the Future of AI

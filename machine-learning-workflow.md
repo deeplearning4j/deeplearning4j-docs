@@ -2,6 +2,8 @@
 title: Machine Learning Workflows in Production
 layout: default
 redirect: workflow
+redirect_to:
+  - https://skymind.ai/wiki/machine-learning-workflow
 ---
 
 # Machine Learning Workflows in Production

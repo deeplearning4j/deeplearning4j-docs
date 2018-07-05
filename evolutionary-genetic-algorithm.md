@@ -1,6 +1,8 @@
 ---
 title: A Beginner's Guide to Evolutionary Algorithms (Genetic Algorithms)
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/evolutionary-genetic-algorithm
 ---
 
 # A Beginner's Guide to Evolutionary Algorithms (Genetic Algorithms)

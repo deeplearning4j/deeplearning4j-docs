@@ -2,6 +2,8 @@
 title: Eigenvectors, Eigenvalues, PCA, Covariance and Entropy
 author: Chris V. Nicholson
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/eigenvector
 ---
 
 # A Beginner's Guide to Eigenvectors, PCA, Covariance and Entropy

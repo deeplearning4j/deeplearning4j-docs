@@ -1,6 +1,8 @@
 ---
 title: The Next AI Winter: Deep Learning and its Discontents
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/ai-winter
 ---
 
 # The Next AI Winter: Deep Learning and its Discontents

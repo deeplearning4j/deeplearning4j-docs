@@ -1,6 +1,8 @@
 ---
 title: "Data sets and machine learning"
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/datasets-ml
 ---
 
 # Data Sets and Machine Learning

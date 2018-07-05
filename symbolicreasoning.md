@@ -2,6 +2,8 @@
 title: A Beginner's Guide to Symbolic Reasoning (Symbolic AI) & Deep Learning
 layout: default
 redirect_from: deepsymboliclearning
+redirect_to:
+  - https://skymind.ai/wiki/symbolic-reasoning
 ---
 
 # A Beginner's Guide to Symbolic Reasoning & Deep Learning

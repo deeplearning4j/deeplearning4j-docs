@@ -1,6 +1,8 @@
 ---
 title: Stacked Denoising AutoEncoders
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/stacked-denoising-autoencoder
 ---
 
 # Stacked Denoising Autoencoders

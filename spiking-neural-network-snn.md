@@ -1,6 +1,8 @@
 ---
 title: Spiking Neural Networks
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/spiking-neural-network-snn
 ---
 
 # A Beginner's Guide to Spiking Neural Networks

@@ -1,6 +1,8 @@
 ---
 title: How Can We Control AI?
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/skynet
 ---
 
 # The Skynet Issue: How Can We Control AI?

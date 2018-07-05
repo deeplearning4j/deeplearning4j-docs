@@ -1,6 +1,8 @@
 ---
 title: What is Artificial Intelligence (AI)? How Is It Built?
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/artificial-intelligence-ai
 ---
 
 # What is Artificial Intelligence (AI)? How Is It Built?

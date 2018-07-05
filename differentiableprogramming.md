@@ -1,6 +1,8 @@
 ---
 title: A Beginner's Guide to Differentiable Programming (DiffProg)
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/differentiable-programming
 ---
 
 # A Beginner's Guide to Differentiable Programming (DiffProg)

@@ -1,6 +1,8 @@
 ---
 title: Artificial Intelligence (AI) for Scala
 layout: default
+redirect_to:
+  - https://skymind.ai/wiki/scala-ai
 ---
 
 ## Artificial Intelligence (AI) for Scala
