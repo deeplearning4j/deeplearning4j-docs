@@ -155,7 +155,7 @@ ND4JやDeeplearning4jは、`NDArray`とテンソルを同義語として扱い�
 
 以下は、Deeplearning4jで畳み込みネットワークを構成する方法の一例です。
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution/LenetMnistExample.java?slice=43:87"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution/LenetMnistExample.java?slice=43:87"></script>
 
 ### <a name="beginner">その他のDeeplearning4jのチュートリアル</a>
 * [Introduction to Neural Networks（ディープニューラルネットワークについて）](neuralnet-overview)

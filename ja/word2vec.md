@@ -380,7 +380,7 @@ skip-gram表現は、Mikolovによって普及され、DL4Jに実装されまし
 
 Word2Vecのセットアップ方法の基本を説明して参りましたが、ここで、DL4JのAPIで使用した[一例](https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/word2vec/Word2VecRawTextExample.java)をご紹介しましょう。
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/word2vec/Word2VecRawTextExample.java?slice=22:64"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/word2vec/Word2VecRawTextExample.java?slice=22:64"></script>
 
 [クイックスタート](quickstart.html)にある手順に従った後、この例をIntelliJで開き、それが動作するかを調べてみてください。トレーニングのコーパスにない語でクエリを行うと、Word2vecモデルは結果をゼロと返します。
 

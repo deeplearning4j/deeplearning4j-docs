@@ -19,7 +19,7 @@ layout: default
 
 マシンを作成するには、単にオートエンコーダのインスタンスを作成し、以下のサンプルのようにcorruptionLevelまたはノイズを設定します。
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/autoencoder/StackedAutoEncoderMnistExample.java?slice=24:96"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/autoencoder/StackedAutoEncoderMnistExample.java?slice=24:96"></script>
 
 このようにして、MNISTのデータを使って可視層一つと隠れ層一つでノイズ除去オートエンコーダを設定します。このネットワークは学習率が0.1、モメンタムが0.9で、損失関数に復元の交差エントロピーを採用しています。 
 

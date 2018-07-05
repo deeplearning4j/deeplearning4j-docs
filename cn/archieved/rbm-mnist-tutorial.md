@@ -43,6 +43,6 @@ DataSetIterator的使用方法如下：
 
 接下来需要定型受限玻尔兹曼机，使之学会重构MNIST数据集。这可以通过如下代码片段实现：
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/unsupervised/deepbelief/DeepAutoEncoderExample.java"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/unsupervised/deepbelief/DeepAutoEncoderExample.java"></script>
 
 下面我们将介绍如何定型深度置信网络，使之能[重构并识别MNIST图像](./deepbeliefnetwork.html)。

@@ -162,7 +162,7 @@ As more and more information is lost, the patterns processed by the convolutiona
 
 Here's one example of how you might configure a ConvNet with Deeplearning4j:
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution/LenetMnistExample.java?slice=35:119"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution/LenetMnistExample.java?slice=35:119"></script>
 
 All Deeplearning4j [examples of convolutional networks are available here](https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/convolution).
 

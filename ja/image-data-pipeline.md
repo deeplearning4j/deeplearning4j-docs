@@ -76,7 +76,7 @@ DataSetIteratorは各イテレーションにつき、新しいサンプルを1�
 
 以下はニューラルネットワークの設定の一例です。ハイパーパラメターの多くは、[NeuralNetConfiguration Class glossary](./neuralnet-configuration.html)に説明がありますので、ここでは一部の重要な特徴についてのみまとめます。
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/unsupervised/deepbelief/DeepAutoEncoderExample.java?slice=29:71"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/unsupervised/deepbelief/DeepAutoEncoderExample.java?slice=29:71"></script>
 
 * *optimizationAlgo*はLBFGSよりLINE_GRADIENT_DESCENTに依存しています。 
 * 画像の各画素を入力ノードにするために*nIn*は784に設定します。画像の寸法が変更すれば（画素の総計がある程度変更）、nlnも変更しなければなりません。

@@ -41,7 +41,7 @@ Finally, word vectors can be taken from Word2vec and substituted for the words i
 
 Instantiating an object of the RNTN class is simple:
 
-<script src="http://gist-it.appspot.com/https://github.com/SkymindIO/deeplearning4j/blob/2f13b4ac4c82fee649c965026f8e5f88c5f1523f/deeplearning4j-scaleout/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/rntn/RNTN.java?slice=1092:1094"></script>
+<script src="https://gist-it.appspot.com/https://github.com/SkymindIO/deeplearning4j/blob/2f13b4ac4c82fee649c965026f8e5f88c5f1523f/deeplearning4j-scaleout/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/rntn/RNTN.java?slice=1092:1094"></script>
 ).-->
 
 ### Summary

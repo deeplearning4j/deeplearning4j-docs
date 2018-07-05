@@ -59,7 +59,7 @@ Sample link to footnote.<sup>[1](#one)</sup>
 </p>
 
 Sample link to a script. Except it's not working here. 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java?slice=61:82"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java?slice=61:82"></script>
 
 ### Footnotes
 

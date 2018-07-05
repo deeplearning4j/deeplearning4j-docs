@@ -13,7 +13,7 @@ Deeplearning4j的自然语言处理（NLP）功能依赖于[ClearTK](https://cle
 
 自然语言的处理包括几个步骤。首先要对语料库进行迭代，创建文档列表，而文档可以和微博一样短，也可以像报刊文章那么长。这一步由语句迭代器，即SentenceIterator来完成，代码如下：
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=33:41"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=33:41"></script>
 
 SentenceIterator封装一个语料库或一篇文本并对其进行整理，比如整理成每行一条微博的格式。它负责将文本一段一段地输入您的自然语言处理系统。虽然SentenceIterator的名称与DatasetIterator相似，但此二者不能加以类比。DatasetIterator用于创建神经网络的定型数据集，而SentenceIterator则通过切分语料库来创建一组字符串。
 
@@ -25,7 +25,7 @@ SentenceIterator封装一个语料库或一篇文本并对其进行整理，比�
 
 分词器和语句迭代器都需要和预处理器配合使用，以应对Unicode等较为杂乱的文本中出现的异常情况，将这类文本转换为统一的格式，比如全部转为小写字母。
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=43:57"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=43:57"></script>
 
 
 
@@ -35,6 +35,6 @@ SentenceIterator封装一个语料库或一篇文本并对其进行整理，比�
 
 词汇表缓存保存着Word2vec和词袋等方法所需的元数据，这两种方法对于词的处理方式截然不同。Word2vec生成词的向量表示，亦称为神经词向量。词向量可以长至包含几百个系数，而这些系数帮助神经网络预测一个词在任何特定语境中的出现概率，比如在另一个特定的词之后出现的概率。以下是配置好的Word2vec：
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=58:74"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=58:74"></script>
 
 获得词向量后，就可以将其输入一个深度神经网络来进行分类、预测、情感分析等操作了。

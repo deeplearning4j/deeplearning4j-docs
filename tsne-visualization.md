@@ -68,5 +68,5 @@ Here is an image of the tsne-standard-coords.csv file plotted using gnuplot.
 ![Tsne data plot](./img/tsne_output.png)
 
 <!-- was this??
-<script src="http://gist-it.appspot.com/https://github.com/agibsonccc/java-deeplearning/blob/master/deeplearning4j-examples/src/main/java/org/deeplearning4j/tsne/TsneExample.java?slice=14:27"></script>
+<script src="https://gist-it.appspot.com/https://github.com/agibsonccc/java-deeplearning/blob/master/deeplearning4j-examples/src/main/java/org/deeplearning4j/tsne/TsneExample.java?slice=14:27"></script>
 -->

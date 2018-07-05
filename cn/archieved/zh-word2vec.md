@@ -389,7 +389,7 @@ WordVectors wordVectors = WordVectorSerializer.loadTxtVectors(new File("words.tx
 
 上文介绍了Word2Vec的基本设置方法，以下是一个[具体示例](https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java)，说明如何在DL4J的API中使用Word2vec：
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=22:64"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/nlp/word2vec/Word2VecRawTextExample.java?slice=22:64"></script>
 
 你可以参照[快速入门](zh-quickstart)中的指示在IntelliJ中打开这一示例，点击运行，看它如何运作。如果你向Word2vec模型查询一个定型语料中没有的词，那么返回的结果会是零。
 

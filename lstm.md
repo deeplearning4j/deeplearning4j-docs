@@ -189,7 +189,7 @@ A [commented example of a LSTM](https://github.com/deeplearning4j/dl4j-examples/
 
 Here's what the LSTM configuration looks like:
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java?slice=61:82"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/recurrent/character/GravesLSTMCharModellingExample.java?slice=61:82"></script>
 
 <p align="center">
 <a href="https://skymind.ai/quickstart" type="button" class="btn btn-lg btn-success"

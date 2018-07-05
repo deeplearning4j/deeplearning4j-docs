@@ -77,7 +77,7 @@ DataSetIterator对输入数据集进行迭代，每次迭代均抓取一个或�
 
 以下是一个神经网络的配置示例。[NeuralNetConfiguration类的术语表](./neuralnet-configuration.html)对许多超参数都已作了说明，所以此处仅对一些比较特殊的参数设置进行简要概述。
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/unsupervised/deepbelief/DeepAutoEncoderExample.java?slice=29:71"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/unsupervised/deepbelief/DeepAutoEncoderExample.java?slice=29:71"></script>
 
 * *optimizationAlgo*依赖LINE_GRADIENT_DESCENT，而不是LBFGS。 
 * *nIn*设定为784，让每个图像像素成为一个输入节点。如果你的图像尺寸改变（即总像素数发生变化），则nIn也应当改变。

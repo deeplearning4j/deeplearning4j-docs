@@ -37,7 +37,7 @@ layout: cn-default
 
 在Deeplearning4j的API中，只需要用多层网络配置类进行指名，就可以创建出所需的网络层。用同样的方法创建一个LSTM即可。 
 
-<script src="http://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/rnn/GravesLSTMCharModellingExample.java?slice=48:218"></script>
+<script src="https://gist-it.appspot.com/https://github.com/deeplearning4j/dl4j-examples/blob/master/src/main/java/org/deeplearning4j/examples/rnn/GravesLSTMCharModellingExample.java?slice=48:218"></script>
 
 ### 在DL4J中实现LSTM
 
