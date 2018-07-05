@@ -2,7 +2,9 @@
 title: GAN: A Beginner's Guide to Generative Adversarial Networks
 layout: default
 author: Chris V. Nicholson
-redirect_to: https://skymind.ai/wiki/generative-adversarial-network-gan
+redirect_from: generative-adversarial-network
+redirect_to:
+  - https://skymind.ai/wiki/generative-adversarial-network-gan
 ---
 
 # GAN: A Beginner's Guide to Generative Adversarial Networks
