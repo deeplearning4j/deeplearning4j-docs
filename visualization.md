@@ -75,7 +75,7 @@ The overview page (one of 3 available pages) contains the following information:
 
 Note that for the bottom two charts, these are displayed as the logarithm (base 10) of the values. Thus a value of -3 on the update: parameter ratio chart corresponds to a ratio of 10<sup>-3</sup> = 0.001.
 
-The ratio of parameters to updates is specifically the ratio of mean magnitudes of these values.
+The ratio of updates to parameters is specifically the ratio of mean magnitudes of these values (i.e., log10(mean(abs(updates))/mean(abs(parameters))).
 
 See the later section of this page on how to use these values in practice.
 
@@ -178,7 +178,7 @@ The score vs. iteration should (overall) go down over time.
 
 **Overview Page and Model Page - Using the Update: Parameter Ratio Chart**
 
-- The ratio of mean magnitude of parameters to updates is provided on both the overview and model pages
+- The ratio of mean magnitude of updates to parameters is provided on both the overview and model pages
     - "Mean magnitude" = the average of the absolute value of the parameters or updates at the current time step
 - The most important use of this ratio is in selecting a learning rate. As a rule of thumb: this ratio should be around 1:1000 = 0.001. On the (log<sub>10</sub>) chart, this corresponds to a value of -3 (i.e., 10<sup>-3</sup> = 0.001)
     - Note that is a rough guide only, and may not be appropriate for all networks. It's often a good starting point, however.
