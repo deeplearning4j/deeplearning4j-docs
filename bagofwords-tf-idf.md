@@ -9,7 +9,7 @@ redirect_to:
 
 [Bag of Words](https://en.wikipedia.org/wiki/Bag-of-words_model) (BoW) is an algorithm that counts how many times a word appears in a document. Those word counts allow us to compare documents and gauge their similarities for applications like search, document classification and topic modeling. BoW is a method for preparing text for input in a deep-learning net. 
 
-BoW lists words with their word counts per document. In the table where the words and documents effectively become vectors are stored, each row is a word, each column is a document and each cell is a word count. Each of the documents in the corpus is represented by columns of equal length. Those are wordcount vectors, an output stripped of context. 
+BoW lists words with their word counts per document. In the table the words and documents are stored effectively as vectors, each row is a word, each column is a document and each cell is a word count. Each of the documents in the corpus is represented by columns of equal length. Those are wordcount vectors, an output stripped of context. 
 
 ![Alt text](./img/wordcount-table.png) 
 
@@ -23,7 +23,7 @@ Before they're fed to the neural net, each vector of wordcounts is normalized su
 
 [Term-frequency-inverse document frequency](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) (TF-IDF) is another way to judge the topic of an article by the words it contains. With TF-IDF, words are given weight -- TF-IDF measures relevance, not frequency. That is, wordcounts are replaced with TF-IDF scores across the whole dataset. 
 
-First, TF-IDF measures the number of times that words appear in a given document (that's term frequency). But because words such as "and" or "the" appear frequently in all documents, those are systematically discounted. That's the inverse-document frequency part. The more documents a word appears in, the less valuable that word is as a signal. That's intended to leave only the frequent AND distinctive words as markers. Each word's TF-IDF relevance is a normalized data format that also adds up to one. 
+First, TF-IDF measures the number of times that words appear in a given document (the frequency). Because words such as "and" or "the" appear frequently in all documents, those are systematically discounted. That's the inverse-document frequency part. The more documents a word appears in, the less valuable that word is as a signal. That's intended to leave only the frequent AND distinctive words as markers. Each word's TF-IDF relevance is a normalized data format that also adds up to one. 
 
 ![Alt text](./img/tfidf.png) 
 
