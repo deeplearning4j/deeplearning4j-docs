@@ -37,7 +37,7 @@ If you don't have Eclipse or JDK1.7 installed, please do that before proceeding.
 
 ### <a name="GetDL4J">Getting Deep Learning 4 Java</a>
 
-The first step is to download DeepLearning4J and the examples. If you have an existing Github account with github client installed, use the GIT instructions. If you're new to GIT and don't have access to Github client due to corporate firewalls and restrictions, use without GIT instructions.
+The first step is to download DeepLearning4J and the examples. If you have an existing Github account with github client installed, use the GIT instructions. If you're new to GIT or don't have access to Github client due to corporate firewalls and restrictions, use without GIT instructions.
 
 #### <a name="WithGIT">With GIT</a>
 
@@ -117,7 +117,7 @@ Here is a list of the jars and a short description.
 
 
 ## <a name="newProject">Creating a new Eclipse Project</a>
-Now that you have the source code for DL4J, DL4j examples and the robottag project, you're ready to create a new project. I'm going to assume you have used Eclipse before, but just in case you haven't here are the step-by-step instructions. Feel free to skip ahead.
+Now that you have the source code for DL4J, DL4j examples and the robottag project, you're ready to create a new project. If you haven't used Eclipse before, here are the step-by-step instructions. Feel free to skip ahead.
 
 1. Start Eclipse
 
