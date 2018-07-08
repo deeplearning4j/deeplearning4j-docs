@@ -5,7 +5,7 @@ layout: default
 
 # Deep Learning in Other Languages
 
-Deep learning goes by several names in English as well as other languages. A fuller, more precise term is deep, artificial neural networks. 
+Deep learning goes by several names in English as well as other languages. A more precise term is artificial neural networks. 
 
 Below, we'll define the following terms in order for each language.
 
