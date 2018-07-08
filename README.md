@@ -82,7 +82,7 @@ If you are modifying the Navigation file for other language, then duplicated the
 
 Navigation html file located at **"_includes/sidebar.html"**
 
-If you are modifying the Navigation file for other language, then duplicated the **sidebar.html** and rename it to **"lang-sidebar.html"** (i.e. cn-sidebar.html)
+If you are modifying the Sidebar file for other language, then duplicated the **sidebar.html** and rename it to **"lang-sidebar.html"** (i.e. cn-sidebar.html)
 
 ---
 
