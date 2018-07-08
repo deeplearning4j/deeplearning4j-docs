@@ -3,9 +3,9 @@ title: DL4J GPU Support
 layout: default
 ---
 
-##Philosophy
+# Philosophy
 
-#Research
+## Research
 Deeplearning4j is *not* a research framework. While it can be used for research, and we even encourage it (apache license),
 we are very use case driven.
 Most research is not directly useful for industry products. Many research papers being published (while having good ideas)
@@ -17,12 +17,12 @@ that help people build products like [DataVec](http://deeplearning4j.org/DataVec
 We recognize the need for flexibility, otherwise we wouldn't have the [Computation Graph](http://deeplearning4j.org/compgraph)
 or [Keras import](http://deeplearning4j.org/keras). 
 
-#Don't rewrite your data pipeline glue code
+## Don't rewrite your data pipeline glue code
 That is what [DataVec](http://deeplearning4j.org/DataVec)  is for.
 Many people are in the habit of writing 1 off code for data pipelines.
 If you are going to do that work anyways, why not contribute to 1 library?
 
-#Spark
+## Spark
 Another audience we get questions from is the spark community. They often ask why we're not more tightly integrated in to spark.
 Pure and simple: Spark is a data access layer not a compute engine. Deep Learning needs things spark will likely never support
 or have the interest in supporting the *right* way. The main thing there being hardware acceleration. We also work on mobile.
@@ -39,7 +39,7 @@ locally *and* on spark, you get the ability to use 1 data pipeline api across co
 
 
 
-#First class JVM
+## First class JVM
 
 There is also this concept of first class jvm. Many frameworks that interact with spark do so via python.
 When interacting with spark, you can do things like distributed grid search and other semi powerful things.
