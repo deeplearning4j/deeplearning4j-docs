@@ -25,7 +25,7 @@ The only problem is, the skills that data scientists possess are hard to automat
 
 So data scientists *tune* algorithms, but what does that mean? When you tune a complex machine (and these algorithms are just mathematical and symbolic machines), you usually have several knobs to turn. It's kind of like cooking something with several ingredients. To produce the right taste, to tune your dish, as it were, those ingredients should be added in proper proportion to one another, just like you might add twice as much [buttermilk as you do butter to a biscuit recipe](https://www.marthastewart.com/349650/biscuits). The idea is, the right proportions matter, and getting them wrong means you can't consume the results.  
 
-A data scientist testing algorithms on data is often operating without a "recipe", and must tune knobs in combination with each other other to explore which combination works. In this case, "working" means tuning an algorithm until it is able to learn efficiently from the data it is given to train upon, so that accurate predictions about the data come out. 
+A data scientist testing algorithms on data is often operating without a "recipe", and must tune knobs in combination with each other  to explore which configuration works. In this case, "working" means tuning an algorithm until it is able to learn efficiently from the training data, so that accurate predictions about test data can be made. 
 
 ### Hyperparameter Optimization
 
@@ -47,9 +47,9 @@ In the world of automated machine learning, we pretend that data exploration and
 
 For example, it's easy to automate machine learning for a simple use case like scoring your leads to Salesforce to predict the likelihood that you will close a sale. That's because the schema of the data -- the things you know about your customers -- is constrained by Salesforce software and fairly standardized across sales teams. An automated machine learning solution focused on lead scoring can make strong assumptions about the type of data you will feed it. 
 
-But companies need machine learning for more than lead scoring. Their use cases differ, and so does their data. In those cases, it can be hard to offer a pre-baked solution. Data pipelines, also known as ETL, are often the stage of the AI workflow that require the most human attention. The real world is messy and data, which represents that world, is usually messy, too. Most datasets need to be explored, cleaned and otherwise pre-processed before that data can be fruitfully used to train a machine-learning algorithm. That cleaning and exploration often requires expert humans. 
+But companies need machine learning for more than lead scoring. Their use cases differ, and so does their data. In those cases, it can be hard to offer a pre-baked solution. Data pipelines, also known as ETL, are often the stage of the AI workflow that require the most human attention. The real world is messy and data, which represents that world, is usually messy too. Most datasets need to be explored, cleaned and otherwise pre-processed before that data can be fruitfully used to train a machine-learning algorithm. That cleaning and exploration often requires expert humans. 
 
-So you can automate machine learning as long as the customer supplies the clean and properly formatted data is like saying you can have your car in any color, as long as it is black. It begs the question. 
+So you can automate machine learning as long as the customer supplies the clean and properly formatted data; This is like saying you can have your car in any color, as long as it is black. It begs the question. 
 
 ### Professional Services
 
