@@ -25,4 +25,4 @@ We recommend deploying machine learning models as a micro-service. TensorFlow de
 
 Model updates should be independent of the application process and scaled independently, so that they are loosely coupled. You have an application, which is usually tiny, that hits the model, which is usually bigger and has different requirements. 
 
-If you find out that your machine-learning model is wrong while it's in production, you want to roll the update out separately. That's the separation of concerns and it should apply to model deployment. 
+If you find that your machine-learning model is wrong while it's in production, you should roll out the update separately. This is separation of concerns for model deployment. 
