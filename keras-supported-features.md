@@ -34,7 +34,7 @@ Mapping keras to DL4J layers is done in the [layers](https://github.com/deeplear
 * <i class="fa fa-check-square-o"></i> [Merge](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasMerge.java)
 * <i class="fa fa-check-square-o"></i> [Permute](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasPermute.java)
 * <i class="fa fa-check-square-o"></i> [RepeatVector](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasRepeatVector.java)
-* <i class="fa fa-square-o"></i> Lambda
+* <i class="fa fa-check-square-o"></i> [Lambda](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasLambda.java)
 * <i class="fa fa-square-o"></i> ActivityRegularization
 * <i class="fa fa-square-o"></i> Masking
 * <i class="fa fa-check-square-o"></i> [SpatialDropout1D](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasSpatialDropout.java)
@@ -94,7 +94,7 @@ DL4J currently does not support Locally-connected layers.
 * <i class="fa fa-check-square-o"></i> Maximum / maximum
 * <i class="fa fa-check-square-o"></i> Concatenate / concatenate
 * <i class="fa fa-square-o"></i> Dot / dot
-* <i class="fa fa-square-o"></i> Cos / cos
+<!-- * <i class="fa fa-square-o"></i> Cos / cos -->
 
 
 ### [Advanced Activation Layers](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/advanced/activations)
