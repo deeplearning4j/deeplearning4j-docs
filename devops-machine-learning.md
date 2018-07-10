@@ -13,7 +13,7 @@ If enterprise organizations hook CI/CD into their app deployment, then they shou
 
 If you update every 24 hours and use load-balancing, then you'll be hitting different end points that should represent the same model, replicated across instances, and you want to ensure that your results are consistent. 
 
-If you're doing A/B testing or gradual rollouts of models, then DevOp teams need to be know which models were rolled out to compare them against the others. If models are producing errors (making bad reccomendations or showing a low conversion rate in the case of recco systems), DevOps should be aware of that feedback to monitor model quality. 
+If you're doing A/B testing or gradual rollouts of models, then DevOp teams need to know which models were rolled out to compare them against the others. If models are producing errors (making bad reccomendations or showing a low conversion rate in the case of recco systems), DevOps should be aware of that feedback to monitor model quality. 
 
 * How big is the memory footprint of a trained neural net model in production? Is it a binary image? Can it be versioned?
 
@@ -25,4 +25,4 @@ We recommend deploying machine learning models as a micro-service. TensorFlow de
 
 Model updates should be independent of the application process and scaled independently, so that they are loosely coupled. You have an application, which is usually tiny, that hits the model, which is usually bigger and has different requirements. 
 
-If you find out that your machine-learning model is wrong while it's in production, you want to roll the update out separately. That's the separation of concerns and it should apply to model deployment. 
+If you find that your machine-learning model is wrong while it's in production, you should roll out the update separately. This is separation of concerns for model deployment. 

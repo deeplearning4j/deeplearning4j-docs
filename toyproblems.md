@@ -5,7 +5,7 @@ layout: default
 
 ## Toy problems 
 
-People often come to us with toy examples they see in text books with small numbers of examples.
+People often come to us with toy problems they see in text books with small number of examples and  little data.
 
 Deeplearning4j's defaults assume lots of data and its often confusing for beginners. Here are a few tuning tips to ensure
 your beginning experience with toy problems goes well. We often advocate for beginners to learn python or matlab

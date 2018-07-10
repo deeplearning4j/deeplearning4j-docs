@@ -51,7 +51,7 @@ Now to make sure that it actually got installed.
     ii  nvidia-prime                   0.6.2                  amd64        Tools to enable NVIDIAs Prime
     ii  nvidia-settings                331.62-0ubuntu1        amd64        Tool for configuring the NVIDIA graphics driver
 
-I also ended up having to install the CUDA libraries from NVidia as well. For older releases, of which 5.5 is, you need
+I also ended up having to install the CUDA libraries from NVidia as well. For older releases, such as 5.5 version, you need
 to go to the [Legacy Toolkit Download](https://developer.nvidia.com/cuda-toolkit-archive) page.
 
 We need the [CUDA 5.5 Toolkit](https://developer.nvidia.com/cuda-toolkit-55-archive). Download and install it. Grab the one 
@@ -86,7 +86,7 @@ These .so files are critical to getting JCuda to run on your machine. I copied t
     $ cp *.so /lib
     $ ldconfig
 
-Take this file I took from the JCublas project:
+Take the file below from the JCublas project:
 
 
 ```
