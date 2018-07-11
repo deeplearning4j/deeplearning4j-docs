@@ -3,7 +3,7 @@ title: A Beginner's Guide to Recurrent Networks and LSTMs
 author: Chris V. Nicholson
 layout: default
 redirect_to:
-  - https://skymind.ai/wiki/recurrent-network-rnn
+  - https://skymind.ai/wiki/lstm
 ---
 
 <head>
