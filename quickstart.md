@@ -229,9 +229,9 @@ Deeplearning4j has two other notable components:
 * [Arbiter: hyperparameter optimization and model evaluation](https://github.com/deeplearning4j/Arbiter)
 * [DataVec: built-in ETL for machine-learning data pipelines](https://github.com/deeplearning4j/DataVec)
 
-Overall, Deeplearning4j is meant to be an end-to-end platform for building real applications. Not just a tensor library with automatic differentiation. If you want that, that's in ND4J and it's called [samediff](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff). Samediff is still in alpha, but if you want to take a crack at contributing, please come in to our [live chat on Gitter](https://gitter.im/deeplearning4j/deeplearning4j).
+Deeplearning4j is meant to be an end-to-end platform for building real applications, not just a tensor library with automatic differentiation. If you want a tensor library with autodiff, please see ND4J and and [samediff](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff). Samediff is still in alpha, but if you want to contribute, please join our [live chat on Gitter](https://gitter.im/deeplearning4j/deeplearning4j).
 
-Lastly, if you are benchmarking Deeplearnin4j, please consider coming in to our live chat and asking for tips. Deeplearning4j has [all the knobs](http://deeplearning4j.org/native) but some may not work as the Python frameworks to do. You have to build Deeplearning4j from source for some applications.
+Lastly, if you are benchmarking Deeplearnin4j, please consider coming in to our live chat and asking for tips. Deeplearning4j has [all the knobs](http://deeplearning4j.org/native), but some may not work exactly like the Python frameworks to do. You have to build Deeplearning4j from source for some applications.
 
 ### <a name="beginner">Other Deep Learning Tutorials</a>
 * [Restricted Boltzmann Machines](./restrictedboltzmannmachine)
@@ -244,5 +244,5 @@ Lastly, if you are benchmarking Deeplearnin4j, please consider coming in to our 
 * [MNIST for Beginners](./mnist-for-beginners.html)
 * [Glossary of Deep-Learning and Neural-Net Terms](./glossary.html)
 * [Generative Adversarial Networks (GANs)](./generative-adversarial-network)
-* [Reinforcement Learning for Java and Scala](./reinforcementlearning)
+* [Reinforcement Learning for Java and Scala](./deepreinforcementlearning)
 * [Word2vec, Neural Word Embeddings and Node2vec for Java](./word2vec)
