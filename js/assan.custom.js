@@ -60,12 +60,8 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     //popover
     $('[data-toggle="popover"]').popover();
-//knob circle progress bar
+    //knob circle progress bar
     $(".progress-circle").knob();
-//text illate
-    $('.tlt').textillate({
-        loop: true
-    });
     //smooth scroll
     smoothScroll.init({
         selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)

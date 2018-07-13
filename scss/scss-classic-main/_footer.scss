@@ -59,9 +59,9 @@ Footer styles
 
 .footer-list-item{
     li{
-        padding-left:20px;
         padding-bottom:10px;
         position:relative;
+        font-weight: 700;
         &:last-child{
             padding-bottom: 0px;
         }
@@ -69,8 +69,6 @@ Footer styles
             position: absolute;
             top:0;
             left:0;
-               content: "\f105";
-            font-family: 'FontAwesome';
         }
         a{
             color:rgba(#fff,.8);

@@ -13,31 +13,51 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Deeplearning4j - Open source, distributed deep learning for the JVM
-email: your-email@example.com
+title: Deeplearning4j
+email: help@skymind.io
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Open source, distributed deep learning for the JVM
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: deeplearning4j
+github_username:  deeplearning4j
 
 # Build settings
 markdown: kramdown
 theme: minima
-plugins:
-  - jekyll-feed
+
+# collections
+collections_dir: docs
+
+defaults:
+  - scope:
+      path: ""
+      type: v10-api
+    values:
+      layout: api
+  - scope:
+      path: ""
+      type: v10-guide
+    values:
+      layout: guide
+
+collections:
+  v10-api:
+    output: true
+    permalink: /docs/v1.0/api/:name
+  v10-guide:
+    output: true
+    permalink: /docs/v1.0/guide/:name
+
 
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .rvmrc
+  - .rbenv-version
+  - README.md
+  - Rakefile
+  - changelog.md
