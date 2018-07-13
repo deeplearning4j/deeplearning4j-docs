@@ -9,12 +9,13 @@ The site is hosted on Github pages and when files are merged to the default bran
 
 To develop and test site content locally, you must have the following tools installed on your system:
 
-- Jekyll
+- Ruby (suggest using `rbenv`)
 - NodeJS/NPM
 
-Once you have Jekyll and NPM installed on your local machine, navigate to the root directory of this repostory and then run:
+Once you have Ruby and NPM installed on your local machine, navigate to the root directory of this repostory and then run:
 
 ```shell
+gem install jekyll bundler
 npm install
 ```
 
