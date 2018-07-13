@@ -1,0 +1,58 @@
+/*
+Top bar style
+*/
+.top-bar{
+    padding-top:5px;
+    
+    &.light{
+            background-color:rgba($primary-color,.02);
+    }
+    .list-inline{
+        .list-inline-item{
+            padding:0px 0px;
+            margin-right:0px;
+            a{
+                font-size: 12px;
+                display: block;
+                color:#999;
+                margin:0!important;
+                &.social-icon-sm{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+.links{
+    .list-inline-item{
+        position:relative;
+        padding:0 7px!important;
+        &:before{
+            content: "";
+            position: absolute;
+            right:0;
+            width: 1px;
+            height:30%;
+            top:35%;
+            background: rgba(0,0,0,0.1);
+        }
+        &:last-child:before{
+            display: none;
+        }
+        &:first-child{
+            padding-left: 0px;
+        }
+        i{
+            color:rgba(0,0,0,0.1);
+        }
+        a{
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+/**dark top bar**/
+.top-bar.dark{
+    background: #222;
+}

@@ -1,0 +1,75 @@
+/*
+Page title styles
+*/
+.page-titles{
+    &.title-gray{
+        background-color: #eee;
+    }
+    &.title-dark{
+        background-color: #323232;
+        h4{
+            color:#aeaeae;
+            span{
+                color:#fff;
+            }
+        }
+        .breadcrumb .breadcrumb-item{
+            color:#fff;
+            a{
+              color:#fff;  
+            }
+            &.active{
+                opacity:0.5;
+            }
+        }
+    }
+    h4{
+           margin-top: 0;
+        font-family:$base-font;
+        text-transform:capitalize;
+        font-weight:400;        
+        font-size:13px;
+        color:#999;
+        span{
+            font-weight: 600;
+            text-transform: capitalize;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+            font-family:$title-font;
+            color:#252525;
+        }
+    }
+}
+
+.page-titles-img{
+ text-align: center;
+ h1{
+     color:#fff;
+     font-weight: 700;
+     font-size:1.7rem;
+ }
+ p{
+     color: rgba(255,255,255,.8);
+ }
+}
+.title-space-lg{
+    padding-top: 14em;
+    padding-bottom: 7em;
+}
+
+
+.page-title-sm-gray{
+    padding: 30px 0;
+    padding-bottom: 20px;
+    background-color: #f5f5f5;
+    .breadcrumb{
+        margin-bottom: 0px;
+        li.breadcrumb-item{
+            font-size: 13px;
+        }
+    }
+    h4{
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}

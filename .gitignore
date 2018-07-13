@@ -14,3 +14,5 @@ _site/
 .idea/
 .idea/workspace.xml
 *.iml
+node_modules
+.sass_cache/

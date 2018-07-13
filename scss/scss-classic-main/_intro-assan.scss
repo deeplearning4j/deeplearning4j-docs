@@ -1,0 +1,262 @@
+/*
+Assan Demos landing page style
+*/
+.page-demos{
+    font-family:$base-font!important;
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.btn,.navbar .nav-link{
+        font-weight: 300;
+        font-family: $base-font;
+    }
+    .title-heading1 h3{
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: -2px;
+    }
+    .demos-bs-4{
+        padding-top:90px;
+        padding-bottom: 50px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .demo-card{
+        position:relative;
+        img{
+            transition: all .3s;
+            -webkit-transition: all .3s;
+            border-radius: 5px;
+            border:1px solid #eee;
+        }
+        a{
+            display: block;
+            position: absolute;
+            left: 0;
+            top:0;
+            width:100%;
+            height:100%;
+            z-index: 2;
+        }
+        h5{
+            text-transform: capitalize;
+            font-family: $base-font;
+            font-weight: 400;
+            color: #000;
+            font-size:14px;
+        }
+        &:hover{
+            img{
+                transform: translateY(-5px);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            }
+        }
+        .badge{
+            display: inline-block;
+            padding: 0 8px;
+            height: 25px;
+            border-radius: 3px;
+            background: #d93636;
+            line-height: 25px;
+            color: #fff;
+            text-align: center;
+            z-index: 0;
+            position: relative;
+            font-size: 10px;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+    }
+    .demos-navbar.navbar.navbar-dark.bg-dark{
+        border:0px;
+        border-bottom: 1px solid rgba(#fff,.1)!important;
+        background-color:$dark-color!important;
+        padding-top:0px;
+        padding-bottom:0px;
+        ul.navbar-nav{
+            margin-right: 0px;
+        }
+        .navbar-nav .nav-link{
+            color: rgba(#fff,.7);
+            text-transform: capitalize;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            position:relative;
+            &:hover,&:focus,&.active{
+                color:#fff!important;
+            }
+            .badge{
+                position: absolute;
+                top:6px;
+                right: 0;
+                border-radius: 3px;
+                padding-bottom: 4px;
+            }
+        }
+        .navbar-brand span{
+            font-size: 12px;
+            opacity:0.5;
+        }
+    }
+    .demos-hero{
+        background-image: linear-gradient(to top, #f9f9f9 0%, #fff 100%);
+        padding-top:10rem;
+        padding-bottom:0rem;
+        font-family:$base-font;
+        h2.h1{
+            text-transform:capitalize;
+            color:rgba(#fff,1);
+            font-weight:300;
+            line-height:1.8;
+            font-family:$base-font;
+            span{
+                font-weight:300;
+                color:#fff;
+                display: inline-block;
+                padding-bottom: 0px;
+                border-bottom: 5px solid rgba(#fff,.2);
+            }
+        }
+        h5,.tlt.h1{
+            font-family:$base-font;
+        }
+        .tlt.h1{
+            font-weight: 300;        
+            font-size:44px;
+        }
+    }
+    .demos-navbar.navbar.navbar-transparent.nav-sticky .navbar-brand .logo {
+        position: relative;
+        top: -4px;
+    }
+    .butttons-demo{
+        padding-top: 50px;
+        position: relative;
+        &:before{
+            content: "";
+            width: 90px;
+            height: 1px;
+            background-color: rgba(#fff,.2);
+            position: absolute;
+            left:50%;
+            top:0;
+            margin-left:-45px;
+        }
+    }
+    .navbar.fixed-top.navbar-dark.bg-primary{
+        background-color: $primary-color!important;
+        .navbar-nav{
+            margin-right: 0px!important;
+        }
+    }
+    .quote-most{
+        font-weight:400;
+        font-size:1.9rem;
+        line-height:1.8;
+    }
+    .b3demos{
+        a.demo-card{
+            display:block;
+            h5{
+                padding-top:20px;
+                text-align:center;
+            }
+            .label{
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                width: 60px;
+                height: 60px;
+                line-height: 55px;
+                text-align: center;
+                color: #fff;
+                border-radius: 50%;
+                z-index: 9;
+                display: block;
+            }
+        }
+    }
+    .features-container{
+        text-align:center;
+        img{
+            padding:0px;
+            width:60px;
+            display: block;
+            margin:0 auto;
+            margin-bottom: 25px;
+        }
+        h5{
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 15px;
+            position:relative;
+            padding-bottom:15px;
+            margin-bottom:20px;
+            &:after{
+                content: "";
+                position: absolute;
+                left:50%;
+                bottom:0;
+                margin-left: -25px;
+                width:50px;
+                height:2px;
+                background-color: $primary-color;
+            }
+        }
+        p{
+            opacity:0.6;
+            border-bottom: 1px solid #eee;
+            padding-bottom:40px;
+            margin-bottom:0px;
+        }
+    }
+
+    .feedback-box{
+        padding:30px 15px;
+        background-color: #fff;
+        margin-bottom: 40px;
+        h5{
+            margin-bottom: 0px;
+            font-size:14px;
+        }
+        p{
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.8;
+            color:#888;
+        }
+    }
+    .demos-navbar.navbar-dark.bg-dark .navbar-nav .nav-item .nav-link.btn.mt-2{
+        margin-top: 10px!important;
+        color: #fff!important;
+        &.btn-white{
+            color:#333!important;
+            &:hover,&:focus,&:active{
+                box-shadow: 0px 10px 30px rgba(#000,.2);
+                color: #333!important;
+            }
+        }
+    }
+    .navbar-toggler-right {
+        position: absolute;
+        right: 0rem;
+        top: -2px;
+        cursor: pointer;
+        color: #fff;
+    }
+    .navbar-brand span{
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: top;
+        opacity:0.5;
+    }
+}
+@media(max-width:992px){
+    .page-demos{
+        .demos-navbar.navbar.navbar-dark.bg-dark{
+            padding-top:.6rem;
+            padding-bottom: .6rem;
+        }
+    }
+}

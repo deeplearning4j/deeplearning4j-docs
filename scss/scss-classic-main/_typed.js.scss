@@ -1,0 +1,66 @@
+/********typed text cursor style*********/
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  color: $primary-color;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typed-text{
+        font-size:2.5rem;
+        font-weight:700;
+color:#000;
+        line-height:2rem;
+        text-transform:capitalize;
+        font-family:$title-font;
+        .typed{                   
+        color:$primary-color;
+            display:inline-block;
+                  &:after {
+  content: '_';
+  font-size: 1.2rem;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  position: relative;
+  margin-left: 6px;
+}
+        }
+}
+.typed-cursor{
+    display:inline-block;
+     line-height:2.5rem;
+}

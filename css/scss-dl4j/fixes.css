@@ -1,0 +1,3 @@
+.dropdown-none::after {
+  vertical-align: .275em;
+  content: ""; }

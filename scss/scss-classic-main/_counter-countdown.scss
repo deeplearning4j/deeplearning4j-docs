@@ -1,0 +1,24 @@
+/*
+Countdown
+*/
+.count-down{
+    text-align:center;
+    .cd-row{
+        display: inline-block;
+        >div{
+            display: inline-block;
+            width:100px;
+            text-transform: uppercase;
+        }
+    }
+    h1{
+       font-size: 2.9rem;
+    }
+}
+.bg-parallax{
+    .count-down{
+        h1{
+            color: #fff;
+        }
+    }
+}

@@ -1,50 +1,41 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en">
+    <head>
+        
+        {% include head.html %}  
+        
+    </head>
 
-{% include header.html %}
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
 
-<style>
-  /* Fix subscribe form formatting */
-  li.subscribe-form {
-    padding: 2px 20px !important;
-  }
+        {% include topbar.html %}
 
-  .hs-richtext {
-    margin-bottom: -30px;
-  }
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
 
-  .hs-button {
-    background-color: #2196f3;
-    border-color: #2196f3;
-    color: #fff;
-    margin-top: 10px;
-  }
+        {% include nav.html %}
 
-</style>
+        <div class="page-titles title-dark pt30 pb20 mb70">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-6">
+                        <h4><span>{{ page.title }}</span></h4>
+                    </div>
+                    <div class=" col-md-6 mb0">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- Top Navigation -->
-<header class="site-header navbar-fullwidth">
-  {% include navigation.html %}
-</header>
-<!-- END Top Navigation -->
-<!-- Sidebar -->
-<aside class="sidebar sidebar-boxed sidebar-dark">
-  <a class="sidebar-brand" href="../index.html"><img src="../assets/themes/thedocs/img/DL4J.png"
-                                                     alt="Deeplearning4j"></a>
-  {% include sidebar.html %}
-</aside>
-<!-- END Sidebar -->
+        <div class="container mb70">
 
-<main class="container-fluid">
-  <div class="row">
+            {{ content }}
 
-    <!-- Main Content -->
-    <article class="main-content" role="main">
-      {{ content }}
-    </article>
-    <!-- END Main Content -->
-  </div>
-</main>
-
-{% include gitterbtn.html %}
-{% include footer.html %}
+        </div>
+               
+        {% include footer.html %}
+    </body>
+</html>

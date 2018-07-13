@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        {% include head.html %}  
+        
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
+
+        {% include topbar.html %}
+
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+
+        {% include nav.html %}
+
+        <div class="page-titles title-dark pt30 pb20 mb70">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-6">
+                        <h4>Page - <span>Left Sidebar</span></h4>
+                    </div>
+                    <div class=" col-md-6 mb0">
+                        <ol class="breadcrumb text-md-right">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Left Sidebar</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mb70">
+            <div class="row">
+                <div class="col-lg-3 mb40">
+                    <div class="mb40">
+                        <h4 class="sidebar-title">Categories</h4>
+                        <ul class="list-unstyled categories">
+                            <li><a href="#">Branding</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li class="active"><a href="#">Wild</a>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Nature</a></li>
+                                    <li><a href="#">Lorem</a></li>
+                                    <li><a href="#">Ipsum</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Branding</a></li>
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Wild</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+
+                    {{ content }}
+
+                </div>
+            </div>
+        </div>
+
+        {% include docbtns.html %}
+               
+        {% include footer.html %}
+    </body>
+</html>

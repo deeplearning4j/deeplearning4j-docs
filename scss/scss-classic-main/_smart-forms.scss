@@ -1,0 +1,97 @@
+/*
+Smart form customization
+*/
+.smart-container{
+    box-shadow: none;
+}
+.smart-wrap{
+    padding:0px;
+}
+.smart-container{
+    margin:0 auto;
+}
+.smart-forms{
+    font-family:$title-font;
+     .form-body {
+        padding:0px;
+        padding-bottom: 20px;
+    }
+    .form-footer {
+    overflow: hidden;
+    padding:0px;
+    padding-top: 0px;
+    background: #fff;
+    background-image: none;
+}
+    .refresh-captcha{
+        background-color: $info-color;
+        border-color: $primary-color;
+    }
+    .button{
+        padding:13px 25px 13px!important;
+        font-family: $title-font;
+        text-transform: uppercase;
+    }
+    .btn-primary{
+        background-color: $primary-color;
+
+        &:active {
+            background-color: $primary-color;
+        }
+        &:hover,&:focus{
+            background-color: $primary-color;
+        }
+    }
+    .input-hint{
+        font-family: $base-font;
+    }
+}
+.feedback-form{
+    margin:0px;
+    box-shadow:none;
+    border:0px;
+    .form-body{
+        padding:0px;
+    }
+}
+.smart-forms .rating:hover .rating-star:hover, .smart-forms .rating:hover .rating-star:hover ~ .rating-star, .smart-forms .rating-input:checked ~ .rating-star{
+    color:$primary-color;
+}
+.smart-forms .tagline span,.smart-forms .smart-link{
+    color:$primary-color;
+}
+.smart-forms .gui-input:hover, .smart-forms .gui-textarea:hover, .smart-forms .select > select:hover, .smart-forms .select-multiple select:hover, .smart-forms .gui-input:hover ~ .input-hint, .smart-forms .file .gui-file:hover + .gui-input, .smart-forms .gui-textarea:hover ~ .input-hint{
+    border-color:$primary-color;
+}
+.smart-forms .gui-input:focus, .smart-forms .gui-textarea:focus, .smart-forms .select > select:focus, .smart-forms .select-multiple select:focus{
+    border-color:$primary-color;
+        -webkit-box-shadow: 0px 0px 3px $primary-color inset;
+    -moz-box-shadow: 0px 0px 3px $primary-color inset;
+    -o-box-shadow: 0px 0px 3px $primary-color inset;
+    box-shadow: 0px 0px 3px $primary-color inset;
+}
+.smart-forms .gui-input:focus ~ .field-icon i, .smart-forms .gui-textarea:focus ~ .field-icon i {
+    color: $primary-color!important;   
+}
+.smart-forms input:hover + .checkbox, .smart-forms input:hover + .radio {
+    border-color: $primary-color!important;   
+}
+.smart-forms input:checked + .checkbox, .smart-forms input:checked + .radio {
+    border: 3px solid $primary-color!important;   
+}
+
+.smart-forms input:focus + .checkbox:before{
+    border-color:$primary-color!important;
+}
+.smart-forms input:checked + .checkbox:before, .smart-forms input:checked + .radio:before{
+ border-color:$primary-color!important;   
+}
+.smart-forms .radio:before{
+    background:$primary-color!important;   
+}
+.smart-forms label, .smart-forms input, .smart-forms button, .smart-forms select, .smart-forms textarea{
+    font-family:$title-font!important;   
+}
+.smart-forms .select-multiple select:focus, .smart-forms .gui-input:focus ~ .input-hint, .smart-forms .gui-textarea:focus ~ .input-hint, .smart-forms .file .gui-file:focus + .gui-input{
+    border-color: $primary-color!important;  
+}

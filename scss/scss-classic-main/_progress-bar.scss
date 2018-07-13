@@ -1,0 +1,33 @@
+/*
+Progress bars
+*/
+.progress{
+    margin-bottom:10px;
+    height:15px;
+    border-radius:100px;
+    &.progress-default{
+        .progress-bar{
+            background:$primary-color;
+            border-radius:100px;
+            line-height:15px;
+        }
+    }
+}
+.progress-label{
+    margin-bottom:5px;
+    margin-top:15px;
+
+    .progress-title,.progress-value{
+        font-weight: 500;
+        font-family: $title-font;
+        text-transform:capitalize;
+        display: inline-block;
+        margin-right:5px;
+    }
+    .progress-title{
+        text-transform: uppercase;
+        font-size: .7rem;
+        font-weight:700;
+        color:$primary-color;
+    }
+}

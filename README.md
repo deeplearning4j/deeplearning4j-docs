@@ -1,127 +1,33 @@
-# WEBSITE GUIDELINE
+deeplearning4j-docs
+===================
 
-## PERMALINK
+The documentation for Deeplearning4j and all of its libraries (DL4J, ND4J, Arbiter, DataVec, etc.) live in this repository.
 
-**DEFAULT ENGLISH** = deeplearning4j.org/**title**
+## Developing
 
-**OTHER LANGUAGE** = deeplearning4j.org/*lang*/**title**
+The site is hosted on Github pages and when files are merged to the default branch `gh-pages` a Jekyll server hosted by Github automatically generates the static content and publishes them to the deeplearning4j.org domain.
 
-**EXAMPLE:**
+To develop and test site content locally, you must have the following tools installed on your system:
 
-1. English  = deeplearning4j.org/**title**
-2. Chinese  = deeplearning4j.org/*cn*/**title**
-3. Korean   = deeplearning4j.org/*kr*/**title**
-4. Japanese = deeplearning4j.org/*jp*/**title**
+- Jekyll
+- NodeJS/NPM
 
----
+Once you have Jekyll and NPM installed on your local machine, navigate to the root directory of this repostory and then run:
 
-## WEBSITE STRUCTURE
+```shell
+npm install
+```
 
-The deeplearning4j.org website divided into the following sections:
+This will ensure tools such as Gulp are installed to your local filesystem.
 
-1. Landing Page (deeplearning4j.org)
-2. Content Page (deeplearning4j.org/xxx)
-  * header
-  * navigation
-  * sidebar
-  * footer
+### Running Locally
 
----
+If you want to start up a server that hot reloads web content after edits, run the following two commands in parallel from the root of this repository (such as two terminal windows):
 
-### Landing Page
+```shell
+jekyll serve
+```
 
-To edit the Landing Page, edit the html file located at **"_layouts/index.html"**
-
----
-
-### Content Page
-
-The default content layout is located at **"_layouts/default.html"**. The default layout contains html blocks from **"_includes/"**:
-
-1. header.html
-2. navigation.html
-3. sidebar.html
-4. footer.html
-
-
-![WEBSITE LAYOUT](/img/website-layout.jpg)
-
-To write a post with the layout you want, you should add this in the beginning of your post:
-
-**---**
-
-**title: YOUR TITLE**
-
-**layout: default (or other layout you preferred)**
-
-**---**
-
-In example:
-
-![MD LAYOUT](/img/sample-layout-theme.jpg)
-
----
-
-### Header
-
-Header html file located at **"_includes/header.html"**
-
-**NOTE:** You shouldn't edit this file unless needed.
-
----
-
-### Navigation
-
-Navigation html file located at **"_includes/navigation.html"**
-
-If you are modifying the Navigation file for other language, then duplicated the **navigation.html** and rename it to **"lang-navigation.html"** (i.e. cn-navigation.html)
-
----
-
-### Sidebar
-
-Navigation html file located at **"_includes/sidebar.html"**
-
-If you are modifying the Sidebar file for other language, then duplicated the **sidebar.html** and rename it to **"lang-sidebar.html"** (i.e. cn-sidebar.html)
-
----
-
-### Footer
-
-Footer html file located at **"_includes/footer.html"**
-
-**NOTE:** You shouldn't edit this file unless needed.
-
----
-
-## STYLING (Standard)
-
-### For Image Use the following code:
-
-&lt;img class="img-responsive center-block" src="../img/**your-image-name-here.png**" alt="deeplearning4j"&gt;
-
-### If you are putting up the dl4j or other code, use the following:
-
-**More than one line:**
-
-&lt;pre class="line-numbers"&gt;&lt;code class="language-java"&gt;
-
-*your code here*
-
-*your code here*
-
-*...*
-
-&lt;/code&gt;&lt;/pr&gt;
-
-
-
-**Only one line:**
-
-&lt;pre&gt;&lt;code class="language-java"&gt;
-
-*your code here*
-
-&lt;/code&gt;&lt;/pr&gt;
-
-**NOTE**: Please use **&amp;lt;** for **&lt;**, and **&amp;gt;** for **&gt;** in order not to mess up with the html coding.
+```shell
+gulp watch
+```

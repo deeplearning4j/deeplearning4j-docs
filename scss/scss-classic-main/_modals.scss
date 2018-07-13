@@ -1,0 +1,13 @@
+/*
+Modals Style
+*/
+.popup-content-area{
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 450px;
+    margin: 40px auto;
+    position: relative;
+    &.white-popup{
+        background: #fff;
+    }
+}

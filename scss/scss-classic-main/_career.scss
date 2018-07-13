@@ -1,0 +1,16 @@
+/*
+Career 
+*/
+.career-card{
+    padding: 40px 20px;
+    background: rgba($primary-color,.02);
+    margin-bottom: 40px;
+    h2{
+        color:$primary-color;
+        font-weight:500;
+        small{
+            font-size: .7rem;
+            color:#aeaeae;
+        }
+    }
+}

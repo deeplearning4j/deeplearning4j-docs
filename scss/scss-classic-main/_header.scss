@@ -1,0 +1,400 @@
+/*
+Assan Header Style
+*/
+.navbar{    
+    >.container{
+        position: relative;
+    }
+}
+.navbar-light.bg-faded{
+    background: #fff;
+    border-bottom: 0px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.7);
+}
+.navbar-nav>li{
+    >.nav-link{
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-size: .75rem; 
+        font-family: $title-font;
+    }
+    .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+        color: $primary-color;
+    }
+    &.dropdown-full-width{
+        position: static;
+    }
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .open>.nav-link {
+    color: $primary-color;
+}
+.navbar-toggler-right {
+    position: absolute;
+    right: 5rem;
+    top:0;
+}
+.single-navbar .navbar-toggler-right{
+    right: 0px;
+}
+.navbar-toggler{
+    border: 0px!important;
+}
+.navbar-inverse .navbar-right-elements .list-inline > li > a{
+    color: rgba(255,255,255,.5);
+}
+.navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover,.navbar-inverse .navbar-right-elements .list-inline > li > a:hover {
+    color: rgba(255,255,255,.75);
+}
+.navbar-right-elements{
+    float: none!important;
+    position:absolute;
+    top:28px;
+    right:15px;
+    .list-inline{
+        margin-bottom: 0px;
+        >li{
+            >a{
+                color:#999;
+                padding:.3rem .3rem;
+                display: block;
+                position:relative;
+                top: -2px;
+                i{
+                    display: block;
+                }
+                .badge{
+                    position: absolute;
+                    top:-10px;right:-5px;
+                    font-weight: 300;
+                    font-size:11px;
+                    padding: 0px;
+                    width:18px;
+                    height:18px;
+                    line-height: 18px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+.search-inline{
+    width: 100%;
+    left:0;
+    padding-left:15px;
+    padding-right: 15px;
+    top:0;
+    height: 100%;
+    position: absolute;
+    opacity:0;
+    visibility: hidden;
+    background-color:#fff;
+    z-index:9;
+    &.search-visible{
+        opacity:1;
+        visibility: visible;
+        animation: fadeInDown 0.3s ease-out forwards;
+    }
+    button[type="submit"]{
+        position: absolute;
+        right:52px;top:0;
+        background-color: transparent;
+        border:0px;
+        top: 0;
+        right:80px;
+        padding: 0px;
+        cursor: pointer;
+        width: 80px;
+        height: 100%;
+        background: #222;
+        color:#fff;
+    }
+    .form-control{
+        border:0px;
+        padding-left:0;
+        font-size:2rem;
+        position: absolute;
+        left:1%;
+        top:0;
+        height:100%;
+        width:99%;
+        font-family: $title-font;
+        font-weight: 700;
+    }
+    .search-close{
+        position: absolute;
+        top: 0;
+        right:0;
+        color: #999;
+        width: 80px;
+        height: 100%;
+        text-align: center;
+        display: table;
+        i{
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+.navbar-brand{
+    position: relative;
+}
+/**canvas header**/
+.pushy{
+    width: 290px;
+    &.pushy-right {
+        -webkit-transform: translate3d(290px, 0, 0);
+        -ms-transform: translate3d(290px, 0, 0);
+        transform: translate3d(290px, 0, 0);
+    }
+}
+.pushy-open-left .pushy, .pushy-open-right .pushy {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.pushy-open-left .site-overlay, .pushy-open-right .site-overlay{
+    background: rgba(#fff,.8);
+}
+.pushy{
+    .cart-content{
+        padding:30px 15px;
+        position:relative;
+        h4 small{
+            font-size: 13px;
+            display: block;
+            padding-bottom:10px;
+            color:rgba(255,255,255,0.8);
+        }
+        .pushy-link{
+            display: inline-block;
+            position: absolute;
+            top:10px;right:10px;
+            padding:0;
+        }
+        ul{
+            padding-top:30px;
+            li{
+                padding:20px 0;
+                border-bottom:1px solid rgba(255,255,255,0.1);
+                a:not(.btn-primary){
+                    padding:0;
+                    font-size:14px;               
+                    .img-fluid{
+                        width: 60px;
+                        margin-right:15px;
+                    }
+                }
+                .close{
+                    text-shadow:none;
+                    color:#fff;
+                    font-size:1rem;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    a.btn-primary{
+        color:#fff;
+    }
+}
+
+/***********Header dark**************/
+
+/**header transparent and semi transparent**/
+@media(min-width:992px){
+    .navbar{
+        padding: 0rem 1rem;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu.dropdown-mega-fw{
+        left:0;
+    }
+    .navbar-light.navbar-transparent .navbar-brand{
+        top: 0px;
+    }
+    li.nav-item.nav-button {
+        position: relative;
+        top: 13px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: .9rem;
+        padding-left: .9rem;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+    .navbar-nav{
+        margin-right: -15px;
+    }
+    .navbar-nav{
+        margin-right:65px;
+    }
+    .single-navbar .navbar-nav{
+        margin-right: 0px;
+    }
+    .navbar.navbar-transparent{
+        position:absolute;
+        width:100%;
+        left:0;
+        top:0;
+        z-index: 99;
+        &.navbar-light.bg-faded{
+            background: transparent;
+            border:0px;
+            .nav-link{
+                color: rgba(255,255,255,.7);
+
+                &:hover{
+                    color: rgba(255,255,255,1);
+                }
+            }
+            .active .nav-link,.show .nav-link{
+                color: rgba(255,255,255,1);
+            }
+            &.navbar-semi-transparent{
+                background-color:rgba(#fff,.1);
+            }
+        }
+        &.navbar-dark.bg-dark{
+            background: transparent!important;
+            border:0px;
+            .nav-link,.navbar-right-elements .list-inline > li > a{
+                color: rgba(0,0,0,.7);
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+            .nav-item.active .nav-link,.nav-item .nav-link.active{
+                color:$primary-color!important;
+            }
+
+        }
+        .dropdown-menu{
+            border-top-color: $primary-color;
+        }
+        .search-inline .form-control{
+            padding-left: .75rem;
+        }
+        .navbar-right-elements .list-inline > li > a{
+            color: rgba(255,255,255,.7);              
+            &:hover{
+                color: rgba(255,255,255,1);
+            }
+        }
+        &.nav-sticky.nav-stick-top{
+            .active .nav-link,.nav-item.show .nav-link{
+                color: $primary-color!important;
+            }
+        }
+    }
+    /**header sticky**/
+    .navbar.navbar-transparent.nav-sticky{
+        .navbar-brand .logo{
+            position: absolute;
+            top:-10px;
+            &.logo-dark{
+                opacity:0;
+            }
+        }
+        &.nav-stick-top{
+            width:100%;
+            position: fixed;
+            top:0;
+            left:0;
+            z-index: 999;
+
+            &.navbar-light.bg-faded{
+                background-color: #fff;
+                box-shadow: 0px 0px 20px rgba(#000,.1);
+                animation: fadeInDown 0.3s ease-out forwards;
+                .navbar-brand .logo{
+                    &.logo-dark{
+                        opacity:1;
+                    }
+                    &.logo-light{
+                        opacity:0;
+                    }
+                }
+                .nav-item .nav-link,.navbar-right-elements .list-inline > li > a{
+                    color: rgba(0,0,0,0.7);
+                }
+            }
+            &.navbar-dark.bg-dark{
+                background-color: #292b2c!important;
+                box-shadow: 0px 0px 20px rgba(#000,.1);
+                animation: fadeInDown 0.3s ease-out forwards;
+                .nav-item .nav-link,.navbar-right-elements .list-inline > li > a{
+                    color: rgba(255,255,255,0.7);
+                }
+                .navbar-brand .logo.logo-dark{
+                    opacity:1;
+                }
+                .navbar-brand .logo.logo-light{
+                    opacity:0;
+                }
+                .nav-item.active .nav-link{
+                    color:$primary-color!important;
+                }
+                .navbar-brand{
+                    top:5px;
+                }
+            }
+            .active .nav-link,.show .nav-link{
+                color: $primary-color;
+            }
+        }
+    }
+    .nav-sticky-top.navbar-light.bg-faded{
+        box-shadow: 0px 0px 20px rgba(#000,.1);
+        .navbar-brand{
+            top:0px;
+        }
+    }
+    /**navbar light transparent**/
+    .navbar-light.navbar-transparent-light{
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        z-index: 999;
+        background-color:transparent;
+    }
+    .nav-logo-center{
+        .navbar-brand{
+            position: absolute;
+            left:50%;
+            margin-left:-66px;
+            top:33px!important;
+        }
+    }
+    .nav-sticky-top{
+        z-index: 9999!important;
+    }
+
+}
+
+/**seconday navbar**/
+.navbar-seconday{
+    padding: .4rem 0;
+    .nav-link{
+        text-transform: uppercase;
+        color: #666;
+        font-weight: 700;
+        font-family: $title-font;
+        padding: 1rem 1rem;
+    }
+    &.nav-stick-top{
+        position: fixed;
+        left:0;
+        top:0;
+        width: 100%;
+        z-index: 99;
+    }
+    ul li a.nav-link.active{
+        color: $primary-color;
+    }
+}

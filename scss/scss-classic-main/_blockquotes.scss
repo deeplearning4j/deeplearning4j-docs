@@ -1,0 +1,41 @@
+/*
+Blockquotes
+*/
+.blockquote footer,.quote footer{
+    font-weight: 500;
+    color: #999;
+}
+.quote{
+    position: relative;
+   border:0px!important;
+    &:before{
+        font-family: 'themify';
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        content: "\e67f";
+        position: absolute;
+        width: 38x;
+        height: 38px;
+        line-height: 38px;
+        font-size: 32px;
+        top:-10px;
+        left:0;
+        color: #EEE;
+    }
+    p{
+        position: relative;
+        &:first-letter{
+            padding-left: 40px;
+        }
+    }
+}
+.quote.blockquote-reverse{
+    &:before{
+        right: 0;
+    }
+    p:first-letter{
+        padding-left: 0px;
+    }
+}
