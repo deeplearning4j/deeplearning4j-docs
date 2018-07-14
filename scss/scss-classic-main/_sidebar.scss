@@ -14,9 +14,11 @@ Template sidebar
         font: inherit;
         cursor: pointer;
     }
+    >li{
+        margin-bottom: 15px;  
+    }
     li{
-        vertical-align:middle;
-        margin-bottom: 15px;    
+        vertical-align:middle;  
         >ul{
             >li>a{
                 font-weight: 300;

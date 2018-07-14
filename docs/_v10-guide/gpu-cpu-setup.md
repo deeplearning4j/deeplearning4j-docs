@@ -2,34 +2,51 @@
 title: Hardware and CPU/GPU Setup
 short_title: GPU/CPU Setup
 description: Hardware setup for Deeplearning4j, including GPUs and CUDA.
-category: Get Started
-weight: 10
+category: Configuration
+weight: 1
 ---
 
-## ND4J Cuda Backends for GPUs
+## ND4J backends for GPUs and CPUs
 
-You can choose GPUs or native CPUs for your backend linear algebra operations by changing the dependencies in ND4J's POM.xml file. Your selection will affect both ND4J and [Deeplearning4j](http://deeplearning4j.org). Check our [dependencies page](dependencies.html) for instructions on configuring your POM.xml file.
+You can choose GPUs or native CPUs for your backend linear algebra operations by changing the dependencies in ND4J's POM.xml file. Your selection will affect both ND4J and DL4J being used in your application.
 
-If you have CUDA v9.2+ installed, then you need to define the _artifactId_ like this:
+If you have CUDA v9.2+ installed and NVIDIA-compatible hardware, then your dependency declaration will look like:
+
 ```xml
 <dependency>
  <groupId>org.nd4j</groupId>
- <artifactId>nd4j-cuda-9.2</artifactId>
- <version>${nd4j.version}</version>
+ <artifactId>nd4j-cuda-{{ page.cudaVersion }}</artifactId>
+ <version>{{ page.version }}</version>
 </dependency>
 ```
 
-You can replace the `<artifactId> ... </artifactId>`, depending on your preference:
+Otherwise you will need to use the native implementation of ND4J as a CPU backend:
 
-```
-nd4j-cuda-$CUDA_VERSION (where CUDA_VERSION is a valid CUDA version supported by Deeplearning4j)
+```xml
+<dependency>
+ <groupId>org.nd4j</groupId>
+ <artifactId>nd4j-native</artifactId>
+ <version>{{ page.version }}</version>
+</dependency>
 ```
 
-That's it.
+## System architectures
+
+If you are developing your project on multiple operating systems/system architectures, you can add `-platform` to the end of your `artifactId` which will download binaries for most major systems.
+
+```xml
+<dependency>
+ ...
+ <artifactId>nd4j-native-platform</artifactId>
+ ...
+</dependency>
+```
+
+## Multiple GPUs
 
 If you have several GPUs, but your system is forcing you to use just one, you can use the helper `CudaEnvironment.getInstance().getConfiguration().allowMultiGPU(true);` as first line of your `main()` method.
 
 
-## Setup CUDA
+## CUDA Installation
 
-Check the NVIDIA guides for instructions on setting up CUDA on the NVIDIA [CUDA website](http://docs.nvidia.com/cuda/).
+Check the NVIDIA guides for instructions on setting up CUDA on the NVIDIA [website](http://docs.nvidia.com/cuda/).

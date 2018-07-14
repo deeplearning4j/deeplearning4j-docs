@@ -35,11 +35,15 @@ defaults:
       type: v10-api
     values:
       layout: api
+      version: 1.0.0
+      cudaVersion: 9.2
   - scope:
       path: ""
       type: v10-guide
     values:
       layout: guide
+      version: 1.0.0
+      cudaVersion: 9.2
 
 collections:
   v10-api:

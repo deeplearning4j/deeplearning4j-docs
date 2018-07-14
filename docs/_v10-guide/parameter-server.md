@@ -6,17 +6,11 @@ category: Tuning & Training
 weight: 10
 ---
 
-# Distributed Training: Gradients Sharing
+## Distributed training with gradients sharing
 
-As of release 0.9.1 (or the 0.9.2-SNAPSHOT), DeepLearning4j supports distributed training in the Apache Spark environment and [Aeron](https://github.com/real-logic/Aeron) for high performance inter-node communication outside of Spark.
+DeepLearning4j supports distributed training in the Apache Spark environment and [Aeron](https://github.com/real-logic/Aeron) for high performance inter-node communication outside of Spark. The idea is relatively simple: individual workers calculate gradients on their DataSets. 
 
-The idea is relatively simple: individual workers calculate gradients on their DataSets. 
-
-Before gradients are applied to the network weights, they are accumulated in an intermediate storage mechanism (one for each machine). 
-
-After aggregation, updated values above some configurable threshold are propagated across the network as a sparse binary array. 
-
-Values below the threshold are stored and added to future updates, hence they are not lost, but merely delayed in their communication. 
+Before gradients are applied to the network weights, they are accumulated in an intermediate storage mechanism (one for each machine). After aggregation, updated values above some configurable threshold are propagated across the network as a sparse binary array. Values below the threshold are stored and added to future updates, hence they are not lost, but merely delayed in their communication. 
 
 This thresholding approach reduces the network communication requirements by many orders of magnitude compared to a 
 naive approach of sending the entire dense update, or parameter vector, while maintaining high accuracy. 
@@ -122,16 +116,16 @@ for (int i = 0; i < numEpochs; i++) {
 **_PLEASE NOTE_**: This configuration assumes that you have UDP port 40123 open on ALL nodes within your cluster.
 
 
-# Effective Scalability
+## Effective Scalability
 
 Network IO has its own price, and this algorithm does some IO as well. Additional overhead to training time can be calculated as `updates encoding time + message serialization time + updates application from other workers`.
 
 The longer the original iteration time, the less relative impact will come from sharing, and the better hypothetical scalability you will get.
 
 Here's a simple form that'll help you with scalability expectations:
-{% include scalability.html %}
+{% include formscalability.html %}
 
-# Performance Hints
+## Performance Hints
 
 ### Executors, Cores, Parallelism
 

@@ -2766,9 +2766,11 @@ Template sidebar
   font: inherit;
   cursor: pointer; }
 
-.categories li {
-  vertical-align: middle;
+.categories > li {
   margin-bottom: 15px; }
+
+.categories li {
+  vertical-align: middle; }
   .categories li > ul > li > a {
     font-weight: 300; }
   .categories li a {

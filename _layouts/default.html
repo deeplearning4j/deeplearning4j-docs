@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
-        {% include head.html %}  
+        {% include head.html %}
         
     </head>
 
@@ -11,7 +10,9 @@
             <div id="preloader-inner"></div>
         </div><!--/preloader-->
 
+        {% if page.topbar != "hide" %}
         {% include topbar.html %}
+        {% endif %}
 
         <!-- Site Overlay -->
         <div class="site-overlay"></div>

@@ -1,6 +1,6 @@
 ---
-title: ND4J Programming Guide
-short_title: Programming Guide
+title: ND4J Overview
+short_title: Overview
 description: Comprehensive programming guide for ND4J.
 category: ND4J
 weight: 0
