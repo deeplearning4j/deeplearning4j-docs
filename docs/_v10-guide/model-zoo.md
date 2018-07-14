@@ -2,13 +2,13 @@
 title: Deeplearning4j Model Zoo
 short_title: Model Zoo
 description: Prebuilt model architectures and weights for out-of-the-box application.
-category: Get Started
+category: Models
 weight: 3
 ---
 
-# Deeplearning4j Model Zoo
+## About the Deeplearning4j model zoo
 
-Deeplearning4j has native model zoo that can be accessed and instantiated directly from DL4J. The model zoo also includes pretrained weights for different datasets that are downloaded automatically and checked for integrity. 🚀
+Deeplearning4j has native model zoo that can be accessed and instantiated directly from DL4J. The model zoo also includes pretrained weights for different datasets that are downloaded automatically and checked for integrity using a checksum mechanism.
 
 If you want to use the new model zoo, you will need to add it as a dependency. A Maven POM would add the following:
 
@@ -20,11 +20,11 @@ If you want to use the new model zoo, you will need to add it as a dependency. A
 </dependency>
 ```
 
-## Getting Started
+## Getting started
 
 Once you've successfully added the zoo dependency to your project, you can start to import and use models. Each model extends the `ZooModel` abstract class and uses the `InstantiableModel` interface. These classes provide methods that help you initialize either an empty, fresh network or a pretrained network.
 
-### Initializing Fresh Networks
+### Initializing fresh configurations
 
 You can instantly instantiate a model from the zoo using the `.init()` method. For example, if you want to instantiate a fresh, untrained network of AlexNet you can use the following code:
 
@@ -49,7 +49,7 @@ ZooModel zooModel = new AlexNet(numberOfClassesInYourData, randomSeed, iteration
 MultiLayerConfiguration net = zooModel.conf();
 ```
 
-### Initializing Pretrained Weights
+### Initializing pretrained weights
 
 Some models have pretrained weights available, and a small number of models are pretrained across different datasets. `PretrainedType` is an enumerator that outlines different weight types, which includes `IMAGENET`, `MNIST`, `CIFAR10`, and `VGGFACE`.
 
@@ -78,7 +78,7 @@ Note that for convolutional models, input shape information follows the NCHW con
 
 
 
-## What's in the Zoo?
+## What's in the zoo?
 
 The model zoo comes with well-known image recognition configurations in the deep learning community. The zoo also includes an LSTM for text generation, and a simple CNN for general image recognition.
 
@@ -98,46 +98,9 @@ This includes ImageNet models such as VGG-16, ResNet-50, AlexNet, Inception-ResN
 * [VGG16](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/VGG16.java)	
 * [VGG19](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/VGG19.java)
 
-## Advanced Usage
+## Advanced usage
 
 The zoo comes with a couple additional features if you're looking to use the models for different use cases.
-
-### Model Selector
-
-The `ModelSelector` allows you to select multiple models at once. This method was created for testing multiple models at once.
-
-When you use the selector, it returns a `Map<ZooType, ZooModel>` collection. Passing `ZooType.RESNET50` to `ModelSelector.select(ZooType.RESNET50)` would return a collection of type `HashMap<ZooType.RESNET50, new ResNet50()>`. However, if you wanted to initialize multiple models for a specific dataset, you can pass appropriate params to the selector like `ModelSelector.select(ZooType.RESNET50, numLabels, seed, iterations)`.
-
-Let's say you wanted to benchmark all of the models that had pretrained weights available for ImageNet. The following code allows you to select all of the convolutional models, check if weights are available, and then execute your own code:
-
-```
-import org.deeplearning4j.zoo.*;
-...
-
-// select all convolutional models
-Map<ZooType, ZooModel> models = ModelSelector.select(ZooType.CNN);
-
-for (Map.Entry<ZooType, ZooModel> entry : models.entrySet()) {
-    ZooModel zooModel = entry.getValue();
-
-    if(zooModel.pretrainedAvailable(PretrainedType.IMAGENET)) {
-        Model net = zooModel.initPretrained(PretrainedType.IMAGENET);
-
-        // do what you want with pretrained model
-    }
-
-    // clean up for current model (helps prevent OOMs)
-    Nd4j.getWorkspaceManager().destroyAllWorkspacesForCurrentThread();
-    System.gc();
-    Thread.sleep(1000);
-}
-```
-
-Alternatively, you can select specific models by doing:
-
-```
-ModelSelector.select(ZooType.RESNET50, ZooType.VGG16, ZooType,VGG19);
-```
 
 ### Changing Inputs
 
@@ -154,13 +117,4 @@ Pretrained models are perfect for transfer learning! You can read more about tra
 
 ### Workspaces
 
-Initialization methods often have an additional parameter named `workspaceMode`. For the majority of users you will not need to use this; however, if you have a large machine that has "beefy" specifications, you can pass `WorkspaceMode.SINGLE`. To learn more about workspaces, please see [this section](https://deeplearning4j.org/workspaces).
-
-## Other Model Zoos
-
-* [Caffe Model Zoo](https://github.com/BVLC/caffe/wiki/Model-Zoo) (The original model zoo ;)
-* [Tensorflow Model Zoo](https://github.com/tensorflow/models)
-* [PyTorch Vision Model Zoo](https://github.com/pytorch/vision/tree/master/torchvision)
-* [Keras Model Zoo](https://github.com/fchollet/deep-learning-models)
-* [MxNet Model Zoo](https://mxnet.apache.org/model_zoo/index.html)
-* [CNTK Model Zoo](https://www.microsoft.com/en-us/cognitive-toolkit/features/model-gallery/)
+Initialization methods often have an additional parameter named `workspaceMode`. For the majority of users you will not need to use this; however, if you have a large machine that has "beefy" specifications, you can pass `WorkspaceMode.SINGLE` for models such as VGG-19 that have many millions of parameters. To learn more about workspaces, please see [this section](https://deeplearning4j.org/workspaces).
