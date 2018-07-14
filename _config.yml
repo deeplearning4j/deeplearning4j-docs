@@ -26,6 +26,9 @@ github_username:  deeplearning4j
 markdown: kramdown
 theme: minima
 
+# dl4j variables
+latestVersion: v1.0
+
 # collections
 collections_dir: docs
 

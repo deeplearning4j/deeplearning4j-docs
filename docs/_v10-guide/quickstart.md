@@ -26,25 +26,27 @@ For this quickstart tutorial, you will learn how to set up an environment that w
 
 Notebooks are interactive coding environments that can be easily installed on a computer and exported and shared with others. This quickstart will use an open-source notebook tool known as [Apache Zeppelin](https://zeppelin.apache.org/). This tutorial and others like it are already prepackaged on a community edition of [SKIL](https://skymind.ai/platform) from Skymind (the creators of Deeplearning4j), and we will be using a tool known as [Docker](https://docs.docker.com/install/) to download and run the tutorial.
 
-<ul class="step-text">
-  <li>
-    <h5>Download Docker CE</h5>
-    <p>If you don't already have Docker on your system, visit the [Docker install page](ttps://docs.docker.com/install/) and install the version of Docker that works best for you. You can test if you have Docker installed by opening a terminal and running `docker --version`.</p>
-  </li>
+#### Download Docker CE
+If you don't already have Docker on your system, visit the [Docker install page](ttps://docs.docker.com/install/) and install the version of Docker that works best for you. You can test if you have Docker installed by opening a terminal and running `docker --version`.
 
-  <li>
-    <h5>Pull the SKIL-CE image</h5>
-    <p>With a single command you can download the SKIL-CE image that has this tutorial (and other deep learning guides) directly to your machine. Use the `docker pull` command to copy an image from Docker's website to your own machine. To pull the SKIL-CE image, run the following command:</p>
-    <p>`docker pull skymindops/skil-ce:1.1.0`</p>
-    <p><small>Alternatively, if you already have Apache Zeppelin you can import our notebooks directly from [our tutorials repository](https://github.com/deeplearning4j/deeplearning4j/blob/master/dl4j-examples/tutorials/).</small></p>
-  </li>
+#### Pull the SKIL-CE image
+With a single command you can download the SKIL-CE image that has this tutorial (and other deep learning guides) directly to your machine. Use the `docker pull` command to copy an image from Docker's website to your own machine. To pull the SKIL-CE image, run the following command:
 
-  <li>
-    <h5>Run the SKIL image</h5>
-    <p>Now you're ready to run the SKIL image and open Zeppelin and the quickstart notebook. Run the following command and you'll see the image "boot up":</p>
-    <p>`docker run -it --rm --name skil -p 9008:9008 -p 8080:8080 skymindops/skil-ce:1.1.0 bash /start-skil.sh`</p>
-  </li>
-</ul>
+```shell
+docker pull skymindops/skil-ce:1.1.0
+```
+
+<div class="alert alert-info" role="alert">
+  Alternatively, if you already have Apache Zeppelin you can import our notebooks directly from [our tutorials repository](https://github.com/deeplearning4j/deeplearning4j/blob/master/dl4j-examples/tutorials/).
+</div>
+
+#### Run the SKIL image</h5>
+Now you're ready to run the SKIL image and open Zeppelin and the quickstart notebook. Run the following command and you'll see the image "boot up":
+
+```shell
+docker run -it --rm --name skil -p 9008:9008 -p 8080:8080 skymindops/skil-ce:1.1.0 bash /start-skil.sh
+```
+
 
 ### Running the Quickstart tutorial
 
