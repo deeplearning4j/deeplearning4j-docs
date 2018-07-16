@@ -7,14 +7,15 @@ layout: default
 
 ----
 
+- [Writing Custom Import Layers](./writing-custom-import-layers)
+- [Advanced Activations](./advanced-activations)
+- [Normalization](./normalization)
 - [Noise](./noise)
 - [Wrappers](./wrappers)
-- [Embeddings](./embeddings)
-- [Normalization](./normalization)
 - [About Importing Layers](./about-importing-layers)
-- [Convolutional](./convolutional)
-- [Core](./core)
-- [Writing Custom Import Layers](./writing-custom-import-layers)
-- [Pooling](./pooling)
+- [Embeddings](./embeddings)
 - [Recurrent](./recurrent)
-- [Advanced Activations](./advanced-activations)
+- [Pooling](./pooling)
+- [Local](./local)
+- [Core](./core)
+- [Convolutional](./convolutional)

@@ -232,6 +232,41 @@ Get LSTM forget gate bias initialization from Keras layer configuration.
 Utility functions for Keras RNN layers
 
 
+<b>getUnrollRecurrentLayer</b> 
+```java
+public static boolean getUnrollRecurrentLayer(KerasLayerConfiguration conf, Map<String, Object> layerConfig)
+            throws InvalidKerasConfigurationException 
+```
+
+
+Get unroll parameter to decide whether to unroll RNN with BPTT or not.
+
+- param conf        KerasLayerConfiguration
+- param layerConfig dictionary containing Keras layer properties
+- return boolean unroll parameter
+- throws InvalidKerasConfigurationException Invalid Keras configuration
+
+
+---
+<b>Methods</b>
+
+---
+<b>getRecurrentDropout</b> 
+```java
+public static double getRecurrentDropout(KerasLayerConfiguration conf, Map<String, Object> layerConfig)
+            throws UnsupportedKerasConfigurationException, InvalidKerasConfigurationException 
+```
+
+
+Get recurrent weight dropout from Keras layer configuration.
+Non-zero dropout rates are currently not supported.
+
+- param conf        KerasLayerConfiguration
+- param layerConfig dictionary containing Keras layer properties
+- return recurrent dropout rate
+- throws InvalidKerasConfigurationException Invalid Keras configuration
+
+
 ----
 
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/recurrent/KerasSimpleRnn.java) </span>
