@@ -342,6 +342,76 @@ Get layer output type.
 
 ----
 
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasLambda.java) </span>
+## KerasLambda
+
+Wraps a DL4J SameDiffLambda into a KerasLayer
+
+
+<b>KerasLambda</b> 
+```java
+public KerasLambda(Map<String, Object> layerConfig, SameDiffLayer sameDiffLayer)
+            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig dictionary containing Keras layer configuration
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+---
+<b>Constructors</b>
+
+---
+<b>KerasLambda</b> 
+```java
+public KerasLambda(Map<String, Object> layerConfig, boolean enforceTrainingConfig,
+                       SameDiffLayer sameDiffLayer)
+            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig           dictionary containing Keras layer configuration
+- param enforceTrainingConfig whether to enforce training-related configuration options
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+<b>getOutputType</b> 
+```java
+public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Get layer output type.
+
+- param inputType Array of InputTypes
+- return output type as InputType
+- throws InvalidKerasConfigurationException Invalid Keras config
+
+
+---
+<b>Methods</b>
+
+---
+<b>getSameDiffLayer</b> 
+```java
+public SameDiffLayer getSameDiffLayer() 
+```
+
+
+Get DL4J SameDiffLayer.
+
+- return SameDiffLayer
+
+
+----
+
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasMerge.java) </span>
 ## KerasMerge
 

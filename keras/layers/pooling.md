@@ -301,3 +301,17 @@ Get layer output type.
 
 Utility functionality for Keras pooling layers.
 
+
+<b>mapPoolingType</b> 
+```java
+public static PoolingType mapPoolingType(String className, KerasLayerConfiguration conf)
+            throws UnsupportedKerasConfigurationException 
+```
+
+
+Map Keras pooling layers to DL4J pooling types.
+
+- param className name of the Keras pooling class
+- return DL4J pooling type
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
