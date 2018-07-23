@@ -1,5 +1,5 @@
 ---
-title: Core Deeplearning4j Concepts
+title: Core Concepts in Deeplearning4j
 short_title: Core Concepts
 description: Introduction to core Deeplearning4j concepts.
 category: Get Started

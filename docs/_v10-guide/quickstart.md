@@ -1,5 +1,5 @@
 ---
-title: Quick Start Guide for Deeplearning4j
+title: Quickstart Guide for DL4J
 short_title: Quickstart
 description: Get started fast with Eclipse Deeplearning4j.
 category: Get Started

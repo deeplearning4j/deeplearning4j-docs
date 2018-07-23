@@ -1,5 +1,5 @@
 ---
-title: User Guide
+title: Guide
 short_title: Guide
 description: In-depth documentation for Eclipse Deeplearning4j including import, distributed training, early stopping, and GPU setup.
 layout: default
@@ -21,7 +21,9 @@ topbar: hide
 	        </h4>
 	        <ul class="list-group list-group-flush">
 	        {% for item in pages %}
-		        <li class="list-group-item"><a href="{{item.url}}">{{item.short_title}}</a></li>
+		        <li class="list-group-item"><a href="{{item.url}}" data-toggle="tooltip" data-original-title="{{ item.description }}" data-placement="right">
+		        	{{item.short_title}}
+		        </a></li>
 		    {%endfor%}
 	        </ul>
 	    </div>

@@ -10,7 +10,7 @@
 
         {% include nav.html %}
 
-        <div class="page-titles title-dark pt30 pb20 mb70">
+        <div class="page-titles title-dark pt30 pb20 mb50">
             <div class="container">
                 <div class="row">
                     <div class=" col-md-6">
@@ -47,7 +47,9 @@
                                 {% assign pages = group.items | sort: "weight"  %}
 
                                 {% for item in pages %}
-                                    <li><a href="{{ item.url }}">{{ item.short_title }} {% if item.title == page.title %} <i class="fa fa-caret-right"></i> {% endif %}</a></li>
+                                    <li><a href="{{ item.url }}">
+                                        {{ item.short_title }} {% if item.title == page.title %} <i class="fa fa-caret-right"></i> {% endif %}
+                                    </a></li>
                                 {%endfor%}
                                 </ul>
                             </li>
