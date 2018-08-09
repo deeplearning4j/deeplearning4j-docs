@@ -6,7 +6,7 @@ layout: default
 topbar: hide
 ---
 
-{% assign groups = site.v100-beta2 | group_by: "category" | sort_by: "name" %}
+{% assign groups = site.latest | group_by: "category" | sort_by: "name" %}
 
 <div class="row mason-grid">
 	{% for group in groups %}
