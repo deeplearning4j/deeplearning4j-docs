@@ -35,30 +35,30 @@
                         <a href="/faq">FAQs</a>
                     </li>
                     <li>
-                        <a href="/docs/{{ site.latestVersion }}/guide/contribute">Contribute</a>
+                        <a href="/docs/{{ site.versionString }}/deeplearning4j-contribute">Contribute</a>
                     </li>
                     <li>
                         <a href="/press">Press</a>
                     </li>
                     <li>
-                        <a href="/why-dl4j">Why DL4J?</a>
+                        <a href="/why-deep-learning">Why Deep Learning?</a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-2 col-md-6 mb40">
                 <h3>&nbsp;</h3>
                 <ul class="list-unstyled footer-list-item">
-                    <li>
+                    <!-- <li>
                         <a href="#">API</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="https://github.com/deeplearning4j/dl4j-examples" target="_blank">Examples</a>
                     </li>
                     <li>
-                        <a href="#">Tutorials</a>
+                        <a href="https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/dl4j-examples/tutorials">Tutorials</a>
                     </li>
                     <li>
-                        <a href="/docs/v1.0/guide/">Guide</a>
+                        <a href="/docs/{{ site.versionString }}/">Guide</a>
                     </li>
                     <li>
                         <a href="/support">Support</a>
@@ -67,7 +67,7 @@
             </div>
             <div class="col-lg-4 col-md-6 mb40">
                 <h3>Statistics</h3>
-                <img src="images/map-img.png" alt="" class="img-fluid">
+                <img src="images/github-stats.png" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -104,6 +104,17 @@
 <script src="/js/assan.custom.js"></script>
 
 <script type="text/javascript">
+    // get started sort
+    var $gs = $('.mason-grid-card:contains("Get Started")'),
+        gsCopy = $gs.clone()
+    $gs.remove()
+    $('.mason-grid').first().prepend(gsCopy)
+    // keras sort
+    var $ki = $('.mason-grid-card:contains("Keras Import")'),
+        kiCopy = $ki.clone()
+    $ki.remove()
+    $('.mason-grid').last().append(kiCopy)
+
     $('.mason-grid').masonry({
       // options
       itemSelector: '.mason-grid-card',
