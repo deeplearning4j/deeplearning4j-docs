@@ -14,7 +14,7 @@ weight: 4
 Imports a 1D locally connected layer from Keras.
 
 
-#### KerasLocallyConnected1D 
+##### KerasLocallyConnected1D 
 ```java
 public KerasLocallyConnected1D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -26,10 +26,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasLocallyConnected1D" aria-expanded="false" aria-controls="KerasLocallyConnected1D">Show methods</button>
-<div class="collapse" id="KerasLocallyConnected1D"><div class="card card-body">
-
-#### getLocallyConnected1DLayer 
+##### getLocallyConnected1DLayer 
 ```java
 public LocallyConnected1D getLocallyConnected1DLayer() 
 ```
@@ -41,7 +38,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -53,7 +50,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -64,7 +61,6 @@ Set weights for 1D locally connected layer.
 - param weights Map from parameter name to INDArray.
 
 
-</div></div>
 
 
 ### KerasLocallyConnected2D
@@ -73,7 +69,7 @@ Set weights for 1D locally connected layer.
 Imports a 2D locally connected layer from Keras.
 
 
-#### KerasLocallyConnected2D 
+##### KerasLocallyConnected2D 
 ```java
 public KerasLocallyConnected2D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -85,10 +81,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasLocallyConnected2D" aria-expanded="false" aria-controls="KerasLocallyConnected2D">Show methods</button>
-<div class="collapse" id="KerasLocallyConnected2D"><div class="card card-body">
-
-#### getLocallyConnected2DLayer 
+##### getLocallyConnected2DLayer 
 ```java
 public LocallyConnected2D getLocallyConnected2DLayer() 
 ```
@@ -100,7 +93,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -112,7 +105,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -122,5 +115,3 @@ Set weights for 2D locally connected layer.
 
 - param weights Map from parameter name to INDArray.
 
-
-</div></div>

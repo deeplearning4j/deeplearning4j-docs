@@ -16,7 +16,7 @@ removed and dilations are now available through the "dilated" argument in regula
 
 author: Max Pumperla
 
-#### KerasAtrousConvolution1D 
+##### KerasAtrousConvolution1D 
 ```java
 public KerasAtrousConvolution1D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -28,10 +28,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasAtrousConvolution1D" aria-expanded="false" aria-controls="KerasAtrousConvolution1D">Show methods</button>
-<div class="collapse" id="KerasAtrousConvolution1D"><div class="card card-body">
-
-#### getAtrousConvolution1D 
+##### getAtrousConvolution1D 
 ```java
 public Convolution1DLayer getAtrousConvolution1D() 
 ```
@@ -43,7 +40,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -56,7 +53,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasAtrousConvolution2D
@@ -67,7 +63,7 @@ removed and dilations are now available through the "dilated" argument in regula
 
 author: Max Pumperla
 
-#### KerasAtrousConvolution2D 
+##### KerasAtrousConvolution2D 
 ```java
 public KerasAtrousConvolution2D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -79,10 +75,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasAtrousConvolution2D" aria-expanded="false" aria-controls="KerasAtrousConvolution2D">Show methods</button>
-<div class="collapse" id="KerasAtrousConvolution2D"><div class="card card-body">
-
-#### getAtrousConvolution2D 
+##### getAtrousConvolution2D 
 ```java
 public ConvolutionLayer getAtrousConvolution2D() 
 ```
@@ -94,7 +87,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -107,7 +100,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasConvolution1D
@@ -116,7 +108,7 @@ Get layer output type.
 Imports a 1D Convolution layer from Keras.
 
 
-#### KerasConvolution1D 
+##### KerasConvolution1D 
 ```java
 public KerasConvolution1D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -127,10 +119,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasConvolution1D" aria-expanded="false" aria-controls="KerasConvolution1D">Show methods</button>
-<div class="collapse" id="KerasConvolution1D"><div class="card card-body">
-
-#### getConvolution1DLayer 
+##### getConvolution1DLayer 
 ```java
 public Convolution1DLayer getConvolution1DLayer() 
 ```
@@ -142,7 +131,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException
 - throws UnsupportedKerasConfigurationException
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -154,7 +143,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -167,7 +156,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras configuration exception
 - see org.deeplearning4j.nn.conf.InputPreProcessor
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -178,7 +167,6 @@ Set weights for layer.
 - param weights   Map from parameter name to INDArray.
 
 
-</div></div>
 
 
 ### KerasConvolution2D
@@ -187,7 +175,7 @@ Set weights for layer.
 Imports a 2D Convolution layer from Keras.
 
 
-#### KerasConvolution2D 
+##### KerasConvolution2D 
 ```java
 public KerasConvolution2D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -199,10 +187,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasConvolution2D" aria-expanded="false" aria-controls="KerasConvolution2D">Show methods</button>
-<div class="collapse" id="KerasConvolution2D"><div class="card card-body">
-
-#### getConvolution2DLayer 
+##### getConvolution2DLayer 
 ```java
 public ConvolutionLayer getConvolution2DLayer() 
 ```
@@ -214,7 +199,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -227,7 +212,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasConvolution3D
@@ -236,7 +220,7 @@ Get layer output type.
 Imports a 3D Convolution layer from Keras.
 
 
-#### KerasConvolution3D 
+##### KerasConvolution3D 
 ```java
 public KerasConvolution3D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -248,10 +232,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasConvolution3D" aria-expanded="false" aria-controls="KerasConvolution3D">Show methods</button>
-<div class="collapse" id="KerasConvolution3D"><div class="card card-body">
-
-#### getConvolution3DLayer 
+##### getConvolution3DLayer 
 ```java
 public ConvolutionLayer getConvolution3DLayer() 
 ```
@@ -263,7 +244,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -276,7 +257,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasConvolutionUtils
@@ -285,10 +265,7 @@ Get layer output type.
 Utility functionality for Keras convolution layers.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasConvolutionUtils" aria-expanded="false" aria-controls="KerasConvolutionUtils">Show methods</button>
-<div class="collapse" id="KerasConvolutionUtils"><div class="card card-body">
-
-#### getConvolutionModeFromConfig 
+##### getConvolutionModeFromConfig 
 ```java
 public static ConvolutionMode getConvolutionModeFromConfig(Map<String, Object> layerConfig,
                                                                KerasLayerConfiguration conf)
@@ -303,7 +280,6 @@ Get (convolution) stride from Keras layer configuration.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasCropping1D
@@ -312,7 +288,7 @@ Get (convolution) stride from Keras layer configuration.
 Imports a Keras Cropping 1D layer.
 
 
-#### KerasCropping1D 
+##### KerasCropping1D 
 ```java
 public KerasCropping1D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -326,10 +302,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasCropping1D" aria-expanded="false" aria-controls="KerasCropping1D">Show methods</button>
-<div class="collapse" id="KerasCropping1D"><div class="card card-body">
-
-#### getCropping1DLayer 
+##### getCropping1DLayer 
 ```java
 public Cropping1D getCropping1DLayer() 
 ```
@@ -342,7 +315,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -355,7 +328,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasCropping2D
@@ -364,7 +336,7 @@ Get layer output type.
 Imports a Keras Cropping 2D layer.
 
 
-#### KerasCropping2D 
+##### KerasCropping2D 
 ```java
 public KerasCropping2D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -378,10 +350,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasCropping2D" aria-expanded="false" aria-controls="KerasCropping2D">Show methods</button>
-<div class="collapse" id="KerasCropping2D"><div class="card card-body">
-
-#### getCropping2DLayer 
+##### getCropping2DLayer 
 ```java
 public Cropping2D getCropping2DLayer() 
 ```
@@ -394,7 +363,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -407,7 +376,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasCropping3D
@@ -416,7 +384,7 @@ Get layer output type.
 Imports a Keras Cropping 3D layer.
 
 
-#### KerasCropping3D 
+##### KerasCropping3D 
 ```java
 public KerasCropping3D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -430,10 +398,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasCropping3D" aria-expanded="false" aria-controls="KerasCropping3D">Show methods</button>
-<div class="collapse" id="KerasCropping3D"><div class="card card-body">
-
-#### getCropping3DLayer 
+##### getCropping3DLayer 
 ```java
 public Cropping3D getCropping3DLayer() 
 ```
@@ -446,7 +411,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -459,7 +424,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasDeconvolution2D
@@ -468,7 +432,7 @@ Get layer output type.
 Imports a 2D Deconvolution layer from Keras.
 
 
-#### KerasDeconvolution2D 
+##### KerasDeconvolution2D 
 ```java
 public KerasDeconvolution2D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -480,10 +444,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasDeconvolution2D" aria-expanded="false" aria-controls="KerasDeconvolution2D">Show methods</button>
-<div class="collapse" id="KerasDeconvolution2D"><div class="card card-body">
-
-#### getDeconvolution2DLayer 
+##### getDeconvolution2DLayer 
 ```java
 public Deconvolution2D getDeconvolution2DLayer() 
 ```
@@ -495,7 +456,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -508,7 +469,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasDepthwiseConvolution2D
@@ -517,7 +477,7 @@ Get layer output type.
 Keras depth-wise convolution 2D layer support
 
 
-#### KerasDepthwiseConvolution2D 
+##### KerasDepthwiseConvolution2D 
 ```java
 public KerasDepthwiseConvolution2D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -529,10 +489,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasDepthwiseConvolution2D" aria-expanded="false" aria-controls="KerasDepthwiseConvolution2D">Show methods</button>
-<div class="collapse" id="KerasDepthwiseConvolution2D"><div class="card card-body">
-
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -544,7 +501,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras configuration
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration
 
-#### getDepthwiseConvolution2DLayer 
+##### getDepthwiseConvolution2DLayer 
 ```java
 public DepthwiseConvolution2D getDepthwiseConvolution2DLayer() 
 ```
@@ -554,7 +511,7 @@ Get DL4J DepthwiseConvolution2D.
 
 - return DepthwiseConvolution2D
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -567,7 +524,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasSeparableConvolution2D
@@ -576,7 +532,7 @@ Get layer output type.
 Keras separable convolution 2D layer support
 
 
-#### KerasSeparableConvolution2D 
+##### KerasSeparableConvolution2D 
 ```java
 public KerasSeparableConvolution2D(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -588,10 +544,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasSeparableConvolution2D" aria-expanded="false" aria-controls="KerasSeparableConvolution2D">Show methods</button>
-<div class="collapse" id="KerasSeparableConvolution2D"><div class="card card-body">
-
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -603,7 +556,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras configuration
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration
 
-#### getSeparableConvolution2DLayer 
+##### getSeparableConvolution2DLayer 
 ```java
 public SeparableConvolution2D getSeparableConvolution2DLayer() 
 ```
@@ -613,7 +566,7 @@ Get DL4J SeparableConvolution2D.
 
 - return SeparableConvolution2D
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -626,7 +579,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasSpaceToDepth
@@ -635,7 +587,7 @@ Get layer output type.
 Constructor from parsed Keras layer configuration dictionary.
 
 
-#### KerasSpaceToDepth 
+##### KerasSpaceToDepth 
 ```java
 public KerasSpaceToDepth(Map<String, Object> layerConfig, boolean enforceTrainingConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -650,10 +602,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration exception
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasSpaceToDepth" aria-expanded="false" aria-controls="KerasSpaceToDepth">Show methods</button>
-<div class="collapse" id="KerasSpaceToDepth"><div class="card card-body">
-
-#### getSpaceToDepthLayer 
+##### getSpaceToDepthLayer 
 ```java
 public SpaceToDepthLayer getSpaceToDepthLayer() 
 ```
@@ -663,7 +612,7 @@ Get DL4J SpaceToDepth layer.
 
 - return SpaceToDepth layer
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -676,7 +625,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasUpsampling1D
@@ -685,7 +633,7 @@ Get layer output type.
 Keras Upsampling1D layer support
 
 
-#### KerasUpsampling1D 
+##### KerasUpsampling1D 
 ```java
 public KerasUpsampling1D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -699,10 +647,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration exception
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasUpsampling1D" aria-expanded="false" aria-controls="KerasUpsampling1D">Show methods</button>
-<div class="collapse" id="KerasUpsampling1D"><div class="card card-body">
-
-#### getUpsampling1DLayer 
+##### getUpsampling1DLayer 
 ```java
 public Upsampling1D getUpsampling1DLayer() 
 ```
@@ -715,7 +660,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras configuration exception
 - throws UnsupportedKerasConfigurationException Invalid Keras configuration exception
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -728,7 +673,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasUpsampling2D
@@ -737,7 +681,7 @@ Get layer output type.
 Keras Upsampling2D layer support
 
 
-#### KerasUpsampling2D 
+##### KerasUpsampling2D 
 ```java
 public KerasUpsampling2D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -751,10 +695,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration exception
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasUpsampling2D" aria-expanded="false" aria-controls="KerasUpsampling2D">Show methods</button>
-<div class="collapse" id="KerasUpsampling2D"><div class="card card-body">
-
-#### getUpsampling2DLayer 
+##### getUpsampling2DLayer 
 ```java
 public Upsampling2D getUpsampling2DLayer() 
 ```
@@ -767,7 +708,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras configuration exception
 - throws UnsupportedKerasConfigurationException Invalid Keras configuration exception
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -780,7 +721,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasUpsampling3D
@@ -789,7 +729,7 @@ Get layer output type.
 Keras Upsampling3D layer support
 
 
-#### KerasUpsampling3D 
+##### KerasUpsampling3D 
 ```java
 public KerasUpsampling3D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -803,10 +743,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras configuration exception
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasUpsampling3D" aria-expanded="false" aria-controls="KerasUpsampling3D">Show methods</button>
-<div class="collapse" id="KerasUpsampling3D"><div class="card card-body">
-
-#### getUpsampling3DLayer 
+##### getUpsampling3DLayer 
 ```java
 public Upsampling3D getUpsampling3DLayer() 
 ```
@@ -819,7 +756,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras configuration exception
 - throws UnsupportedKerasConfigurationException Invalid Keras configuration exception
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -832,7 +769,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasZeroPadding1D
@@ -841,7 +777,7 @@ Get layer output type.
 Imports a Keras ZeroPadding 1D layer.
 
 
-#### KerasZeroPadding1D 
+##### KerasZeroPadding1D 
 ```java
 public KerasZeroPadding1D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -855,10 +791,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasZeroPadding1D" aria-expanded="false" aria-controls="KerasZeroPadding1D">Show methods</button>
-<div class="collapse" id="KerasZeroPadding1D"><div class="card card-body">
-
-#### getZeroPadding1DLayer 
+##### getZeroPadding1DLayer 
 ```java
 public ZeroPadding1DLayer getZeroPadding1DLayer() 
 ```
@@ -871,7 +804,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -884,7 +817,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasZeroPadding2D
@@ -893,7 +825,7 @@ Get layer output type.
 Imports a Keras ZeroPadding 2D layer.
 
 
-#### KerasZeroPadding2D 
+##### KerasZeroPadding2D 
 ```java
 public KerasZeroPadding2D(Map<String, Object> layerConfig)
                     throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -908,10 +840,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasZeroPadding2D" aria-expanded="false" aria-controls="KerasZeroPadding2D">Show methods</button>
-<div class="collapse" id="KerasZeroPadding2D"><div class="card card-body">
-
-#### getZeroPadding2DLayer 
+##### getZeroPadding2DLayer 
 ```java
 public ZeroPaddingLayer getZeroPadding2DLayer() 
 ```
@@ -924,7 +853,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -937,7 +866,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasZeroPadding3D
@@ -946,7 +874,7 @@ Get layer output type.
 Imports a Keras ZeroPadding 3D layer.
 
 
-#### KerasZeroPadding3D 
+##### KerasZeroPadding3D 
 ```java
 public KerasZeroPadding3D(Map<String, Object> layerConfig)
                     throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -961,10 +889,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasZeroPadding3D" aria-expanded="false" aria-controls="KerasZeroPadding3D">Show methods</button>
-<div class="collapse" id="KerasZeroPadding3D"><div class="card card-body">
-
-#### getZeroPadding3DLayer 
+##### getZeroPadding3DLayer 
 ```java
 public ZeroPadding3DLayer getZeroPadding3DLayer() 
 ```
@@ -977,7 +902,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -989,5 +914,3 @@ Get layer output type.
 - return              output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-
-</div></div>

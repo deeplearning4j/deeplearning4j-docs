@@ -18,10 +18,7 @@ either as
 - separate text file storing model JSON configuration and HDF5 file storing weights.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasModelImport" aria-expanded="false" aria-controls="KerasModelImport">Show methods</button>
-<div class="collapse" id="KerasModelImport"><div class="card card-body">
-
-#### importKerasModelAndWeights 
+##### importKerasModelAndWeights 
 ```java
 public static ComputationGraph importKerasModelAndWeights(
             InputStream modelHdf5Stream,
@@ -36,7 +33,7 @@ Load Keras (Functional API) Model saved using model.save_model(...).
 - return ComputationGraph
 - see ComputationGraph
 
-#### importKerasModelAndWeights 
+##### importKerasModelAndWeights 
 ```java
 public static ComputationGraph importKerasModelAndWeights(InputStream modelHdf5Stream) 
 ```
@@ -48,7 +45,7 @@ Load Keras (Functional API) Model saved using model.save_model(...).
 - return ComputationGraph
 - see ComputationGraph
 
-#### importKerasSequentialModelAndWeights 
+##### importKerasSequentialModelAndWeights 
 ```java
 public static MultiLayerNetwork importKerasSequentialModelAndWeights(InputStream modelHdf5Stream,
                                                                          boolean enforceTrainingConfig)
@@ -63,7 +60,7 @@ Load Keras Sequential model saved using model.save_model(...).
 - return ComputationGraph
 - see ComputationGraph
 
-#### importKerasSequentialModelAndWeights 
+##### importKerasSequentialModelAndWeights 
 ```java
 public static MultiLayerNetwork importKerasSequentialModelAndWeights(InputStream modelHdf5Stream)
             throws IOException, InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -76,7 +73,7 @@ Load Keras Sequential model saved using model.save_model(...).
 - return ComputationGraph
 - see ComputationGraph
 
-#### importKerasModelAndWeights 
+##### importKerasModelAndWeights 
 ```java
 public static ComputationGraph importKerasModelAndWeights(String modelHdf5Filename, int[] inputShape,
                                                               boolean enforceTrainingConfig)
@@ -95,7 +92,7 @@ Load Keras (Functional API) Model saved using model.save_model(...).
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 - see ComputationGraph
 
-#### importKerasModelAndWeights 
+##### importKerasModelAndWeights 
 ```java
 public static ComputationGraph importKerasModelAndWeights(String modelHdf5Filename, boolean enforceTrainingConfig)
             throws IOException, UnsupportedKerasConfigurationException, InvalidKerasConfigurationException 
@@ -112,7 +109,7 @@ Load Keras (Functional API) Model saved using model.save_model(...).
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 - see ComputationGraph
 
-#### importKerasModelAndWeights 
+##### importKerasModelAndWeights 
 ```java
 public static ComputationGraph importKerasModelAndWeights(String modelHdf5Filename)
             throws IOException, UnsupportedKerasConfigurationException, InvalidKerasConfigurationException 
@@ -128,7 +125,7 @@ Load Keras (Functional API) Model saved using model.save_model(...).
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 - see ComputationGraph
 
-#### importKerasSequentialModelAndWeights 
+##### importKerasSequentialModelAndWeights 
 ```java
 public static MultiLayerNetwork importKerasSequentialModelAndWeights(String modelHdf5Filename,
                                                                          int[] inputShape,
@@ -146,7 +143,7 @@ Load Keras Sequential model saved using model.save_model(...).
 - throws IOException IO exception
 - see MultiLayerNetwork
 
-#### importKerasSequentialModelAndWeights 
+##### importKerasSequentialModelAndWeights 
 ```java
 public static MultiLayerNetwork importKerasSequentialModelAndWeights(String modelHdf5Filename,
                                                                          boolean enforceTrainingConfig)
@@ -162,7 +159,7 @@ Load Keras Sequential model saved using model.save_model(...).
 - throws IOException IO exception
 - see MultiLayerNetwork
 
-#### importKerasSequentialModelAndWeights 
+##### importKerasSequentialModelAndWeights 
 ```java
 public static MultiLayerNetwork importKerasSequentialModelAndWeights(String modelHdf5Filename)
             throws IOException, InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -176,7 +173,7 @@ Load Keras Sequential model saved using model.save_model(...).
 - throws IOException IO exception
 - see MultiLayerNetwork
 
-#### importKerasModelAndWeights 
+##### importKerasModelAndWeights 
 ```java
 public static ComputationGraph importKerasModelAndWeights(String modelJsonFilename, String weightsHdf5Filename,
                                                               boolean enforceTrainingConfig)
@@ -194,7 +191,7 @@ saved separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see ComputationGraph
 
-#### importKerasModelAndWeights 
+##### importKerasModelAndWeights 
 ```java
 public static ComputationGraph importKerasModelAndWeights(String modelJsonFilename, String weightsHdf5Filename)
             throws IOException, InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -210,7 +207,7 @@ saved separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see ComputationGraph
 
-#### importKerasSequentialModelAndWeights 
+##### importKerasSequentialModelAndWeights 
 ```java
 public static MultiLayerNetwork importKerasSequentialModelAndWeights(String modelJsonFilename,
                                                                          String weightsHdf5Filename,
@@ -229,7 +226,7 @@ saved separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see MultiLayerNetwork
 
-#### importKerasSequentialModelAndWeights 
+##### importKerasSequentialModelAndWeights 
 ```java
 public static MultiLayerNetwork importKerasSequentialModelAndWeights(String modelJsonFilename,
                                                                          String weightsHdf5Filename)
@@ -246,7 +243,7 @@ saved separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see MultiLayerNetwork
 
-#### importKerasModelConfiguration 
+##### importKerasModelConfiguration 
 ```java
 public static ComputationGraphConfiguration importKerasModelConfiguration(String modelJsonFilename,
                                                                               boolean enforceTrainingConfig)
@@ -263,7 +260,7 @@ separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see ComputationGraph
 
-#### importKerasModelConfiguration 
+##### importKerasModelConfiguration 
 ```java
 public static ComputationGraphConfiguration importKerasModelConfiguration(String modelJsonFilename)
             throws IOException, InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -278,7 +275,7 @@ separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see ComputationGraph
 
-#### importKerasSequentialConfiguration 
+##### importKerasSequentialConfiguration 
 ```java
 public static MultiLayerConfiguration importKerasSequentialConfiguration(String modelJsonFilename,
                                                                              boolean enforceTrainingConfig)
@@ -295,7 +292,7 @@ separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see MultiLayerNetwork
 
-#### importKerasSequentialConfiguration 
+##### importKerasSequentialConfiguration 
 ```java
 public static MultiLayerConfiguration importKerasSequentialConfiguration(String modelJsonFilename)
             throws IOException, InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -310,5 +307,3 @@ separately using calls to model.to_json() and model.save_weights(...).
 - throws IOException IO exception
 - see MultiLayerNetwork
 
-
-</div></div>

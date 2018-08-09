@@ -45,10 +45,7 @@ JavaRDD<List<Writable>> joined = SparkTransformExecutor.executeJoin(join, leftRd
 
 Local transform executor
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#LocalTransformExecutor" aria-expanded="false" aria-controls="LocalTransformExecutor">Show methods</button>
-<div class="collapse" id="LocalTransformExecutor"><div class="card card-body">
-
-#### isTryCatch 
+##### isTryCatch 
 ```java
 public static boolean isTryCatch() 
 ```
@@ -63,7 +60,6 @@ that return a sequence, use {- link #executeToSequence(List, TransformProcess)}
 - return Processed data
 
 
-</div></div>
 
 
 ### SparkTransformExecutor
@@ -74,10 +70,7 @@ transform process
 on spark rdds.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SparkTransformExecutor" aria-expanded="false" aria-controls="SparkTransformExecutor">Show methods</button>
-<div class="collapse" id="SparkTransformExecutor"><div class="card card-body">
-
-#### isTryCatch 
+##### isTryCatch 
 ```java
 public static boolean isTryCatch() 
 ```
@@ -85,5 +78,3 @@ public static boolean isTryCatch()
 
 - deprecated Use static methods instead of instance methods on SparkTransformExecutor
 
-
-</div></div>

@@ -20,10 +20,7 @@ If you are configuring complex networks such as InceptionV4, you will need to us
 
 ## General layers
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ActivationLayer" aria-expanded="false" aria-controls="ActivationLayer">Show methods</button>
-<div class="collapse" id="ActivationLayer"><div class="card card-body">
-
-#### activation 
+##### activation 
 ```java
 public Builder activation(String activationFunction) 
 ```
@@ -36,7 +33,6 @@ Typical values include:<br>
 - deprecated Use {- link #activation(Activation)} or {- link - activation(IActivation)}
 
 
-</div></div>
 
 
 ### DenseLayer
@@ -63,10 +59,7 @@ with all but one value being zero).<br>
 weight rows can be considered a vector/embedding for each example.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#EmbeddingLayer" aria-expanded="false" aria-controls="EmbeddingLayer">Show methods</button>
-<div class="collapse" id="EmbeddingLayer"><div class="card card-body">
-
-#### hasBias 
+##### hasBias 
 ```java
 public Builder hasBias(boolean hasBias)
 ```
@@ -77,7 +70,6 @@ If true: include bias parameters in the layer. False (default): no bias.
 - param hasBias If true: include bias parameters in this layer
 
 
-</div></div>
 
 
 ### EmbeddingSequenceLayer
@@ -91,10 +83,7 @@ The output of this layer is 3D, namely of shape [numExamples, nOut, inputLength]
 weight rows can be considered a vector/embedding of each index.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#EmbeddingSequenceLayer" aria-expanded="false" aria-controls="EmbeddingSequenceLayer">Show methods</button>
-<div class="collapse" id="EmbeddingSequenceLayer"><div class="card card-body">
-
-#### hasBias 
+##### hasBias 
 ```java
 public Builder hasBias(boolean hasBias) 
 ```
@@ -104,7 +93,7 @@ If true: include bias parameters in the layer. False (default): no bias.
 
 - param hasBias If true: include bias parameters in this layer
 
-#### inputLength 
+##### inputLength 
 ```java
 public Builder inputLength(int inputLength) 
 ```
@@ -115,7 +104,7 @@ Set input sequence length for this embedding layer.
 - param inputLength input sequence length
 - return Builder
 
-#### inferInputLength 
+##### inferInputLength 
 ```java
 public Builder inferInputLength(boolean inferInputLength) 
 ```
@@ -127,7 +116,6 @@ Set input sequence inference mode for embedding layer.
 - return Builder
 
 
-</div></div>
 
 
 ### GlobalPoolingLayer
@@ -158,10 +146,7 @@ as 1s: this gives
 <br>
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#GlobalPoolingLayer" aria-expanded="false" aria-controls="GlobalPoolingLayer">Show methods</button>
-<div class="collapse" id="GlobalPoolingLayer"><div class="card card-body">
-
-#### poolingDimensions 
+##### poolingDimensions 
 ```java
 public Builder poolingDimensions(int... poolingDimensions) 
 ```
@@ -174,7 +159,7 @@ Default for CNN3D data: pooling dimensions 2,3,4 (depth, height and width)
 
 - param poolingDimensions Pooling dimensions to use
 
-#### poolingType 
+##### poolingType 
 ```java
 public Builder poolingType(PoolingType poolingType) 
 ```
@@ -182,7 +167,7 @@ public Builder poolingType(PoolingType poolingType)
 
 - param poolingType Pooling type for global pooling
 
-#### collapseDimensions 
+##### collapseDimensions 
 ```java
 public Builder collapseDimensions(boolean collapseDimensions) 
 ```
@@ -202,7 +187,7 @@ If false:<br>
 
 - param collapseDimensions Whether to collapse the dimensions or not
 
-#### pnorm 
+##### pnorm 
 ```java
 public Builder pnorm(int pnorm) 
 ```
@@ -213,7 +198,6 @@ P-norm constant. Only used if using {- link PoolingType#PNORM} for the pooling t
 - param pnorm P-norm constant
 
 
-</div></div>
 
 
 ### LocalResponseNormalization
@@ -221,10 +205,7 @@ P-norm constant. Only used if using {- link PoolingType#PNORM} for the pooling t
 
 Created by nyghtowl on 10/29/15.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#LocalResponseNormalization" aria-expanded="false" aria-controls="LocalResponseNormalization">Show methods</button>
-<div class="collapse" id="LocalResponseNormalization"><div class="card card-body">
-
-#### k 
+##### k 
 ```java
 public Builder k(double k) 
 ```
@@ -234,7 +215,7 @@ LRN scaling constant k. Default: 2
 
 - param k
 
-#### n 
+##### n 
 ```java
 public Builder n(double n) 
 ```
@@ -244,7 +225,7 @@ Number of adjacent kernel maps to use when doing LRN. default: 5
 
 - param n    Number of adjacent kernel maps
 
-#### alpha 
+##### alpha 
 ```java
 public Builder alpha(double alpha) 
 ```
@@ -254,7 +235,7 @@ LRN scaling constant alpha. Default: 1e-4
 
 - param alpha    Scaling constant
 
-#### beta 
+##### beta 
 ```java
 public Builder beta(double beta) 
 ```
@@ -265,7 +246,6 @@ Scaling constant beta. Default: 0.75
 - param beta    Scaling constant
 
 
-</div></div>
 
 
 ### LocallyConnected1D
@@ -275,10 +255,7 @@ SameDiff version of a 1D locally connected layer.
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#LocallyConnected1D" aria-expanded="false" aria-controls="LocallyConnected1D">Show methods</button>
-<div class="collapse" id="LocallyConnected1D"><div class="card card-body">
-
-#### setInputSize 
+##### setInputSize 
 ```java
 public Builder setInputSize(int inputSize)
 ```
@@ -290,7 +267,6 @@ Set input filter size for this locally connected 1D layer
 - return Builder
 
 
-</div></div>
 
 
 ### LocallyConnected2D
@@ -300,10 +276,7 @@ SameDiff version of a 2D locally connected layer.
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#LocallyConnected2D" aria-expanded="false" aria-controls="LocallyConnected2D">Show methods</button>
-<div class="collapse" id="LocallyConnected2D"><div class="card card-body">
-
-#### setInputSize 
+##### setInputSize 
 ```java
 public Builder setInputSize(int... inputSize)
 ```
@@ -315,7 +288,6 @@ Set input filter size (h,w) for this locally connected 2D layer
 - return Builder
 
 
-</div></div>
 
 
 ### LossLayer
@@ -377,10 +349,7 @@ TODO: We will eventually want to NOT subclass off of SubsamplingLayer.
 Upsampling 1D layer
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Upsampling1D" aria-expanded="false" aria-controls="Upsampling1D">Show methods</button>
-<div class="collapse" id="Upsampling1D"><div class="card card-body">
-
-#### size 
+##### size 
 ```java
 public Builder size(int size) 
 ```
@@ -390,7 +359,7 @@ Upsampling size int
 
 - param size    upsampling size in single spatial dimension of this 1D layer
 
-#### size 
+##### size 
 ```java
 public Builder size(int[] size) 
 ```
@@ -401,7 +370,6 @@ Upsampling size int array with a single element
 - param size    upsampling size in single spatial dimension of this 1D layer
 
 
-</div></div>
 
 
 ### Upsampling2D
@@ -410,10 +378,7 @@ Upsampling size int array with a single element
 Upsampling 2D layer
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Upsampling2D" aria-expanded="false" aria-controls="Upsampling2D">Show methods</button>
-<div class="collapse" id="Upsampling2D"><div class="card card-body">
-
-#### size 
+##### size 
 ```java
 public Builder size(int size) 
 ```
@@ -423,7 +388,7 @@ Upsampling size int, used for both height and width
 
 - param size upsampling size in height and width dimensions
 
-#### size 
+##### size 
 ```java
 public Builder size(int[] size) 
 ```
@@ -434,7 +399,6 @@ Upsampling size array
 - param size upsampling size in height and width dimensions
 
 
-</div></div>
 
 
 ### Upsampling3D
@@ -443,10 +407,7 @@ Upsampling size array
 Upsampling 3D layer
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Upsampling3D" aria-expanded="false" aria-controls="Upsampling3D">Show methods</button>
-<div class="collapse" id="Upsampling3D"><div class="card card-body">
-
-#### size 
+##### size 
 ```java
 public Builder size(int size) 
 ```
@@ -456,7 +417,7 @@ Upsampling size as int, so same upsampling size is used for depth, width and hei
 
 - param size upsampling size in height, width and depth dimensions
 
-#### size 
+##### size 
 ```java
 public Builder size(int[] size) 
 ```
@@ -467,7 +428,6 @@ Upsampling size as int, so same upsampling size is used for depth, width and hei
 - param size upsampling size in height, width and depth dimensions
 
 
-</div></div>
 
 
 ### ZeroPadding1DLayer
@@ -477,10 +437,7 @@ Zero padding 1D layer for convolutional neural networks.
 Allows padding to be done separately for top and bottom.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ZeroPadding1DLayer" aria-expanded="false" aria-controls="ZeroPadding1DLayer">Show methods</button>
-<div class="collapse" id="ZeroPadding1DLayer"><div class="card card-body">
-
-#### build 
+##### build 
 ```java
 public ZeroPadding1DLayer build() 
 ```
@@ -489,7 +446,6 @@ public ZeroPadding1DLayer build()
 - param padding  Padding for both the left and right
 
 
-</div></div>
 
 
 ### ZeroPadding3DLayer
@@ -500,10 +456,7 @@ Allows padding to be done separately for "left" and "right"
 in all three spatial dimensions.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ZeroPadding3DLayer" aria-expanded="false" aria-controls="ZeroPadding3DLayer">Show methods</button>
-<div class="collapse" id="ZeroPadding3DLayer"><div class="card card-body">
-
-#### build 
+##### build 
 ```java
 public ZeroPadding3DLayer build() 
 ```
@@ -512,7 +465,6 @@ public ZeroPadding3DLayer build()
 - param padding Padding for both the left and right in all three spatial dimensions
 
 
-</div></div>
 
 
 ### ZeroPaddingLayer
@@ -522,10 +474,7 @@ Zero padding layer for convolutional neural networks.
 Allows padding to be done separately for top/bottom/left/right
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ZeroPaddingLayer" aria-expanded="false" aria-controls="ZeroPaddingLayer">Show methods</button>
-<div class="collapse" id="ZeroPaddingLayer"><div class="card card-body">
-
-#### build 
+##### build 
 ```java
 public ZeroPaddingLayer build() 
 ```
@@ -536,7 +485,6 @@ public ZeroPaddingLayer build()
 - param padWidth  Padding for both the left and right
 
 
-</div></div>
 
 
 ### ElementWiseMultiplicationLayer
@@ -551,10 +499,7 @@ Note that the input and output sizes of the element-wise layer are the same for 
 
 created by jingshu
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ElementWiseMultiplicationLayer" aria-expanded="false" aria-controls="ElementWiseMultiplicationLayer">Show methods</button>
-<div class="collapse" id="ElementWiseMultiplicationLayer"><div class="card card-body">
-
-#### getMemoryReport 
+##### getMemoryReport 
 ```java
 public LayerMemoryReport getMemoryReport(InputType inputType) 
 ```
@@ -566,7 +511,6 @@ This is a report of the estimated memory consumption for the given layer
 - return Memory report for the layer
 
 
-</div></div>
 
 
 ### RepeatVector
@@ -578,10 +522,7 @@ RepeatVector takes a mini-batch of vectors of shape (mb, length) and a repeat fa
 a 3D tensor of shape (mb, n, length) in which x is repeated n times.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#RepeatVector" aria-expanded="false" aria-controls="RepeatVector">Show methods</button>
-<div class="collapse" id="RepeatVector"><div class="card card-body">
-
-#### repetitionFactor 
+##### repetitionFactor 
 ```java
 public Builder repetitionFactor(int n) 
 ```
@@ -592,7 +533,6 @@ Set repetition factor for RepeatVector layer
 - param n upsampling size in height and width dimensions
 
 
-</div></div>
 
 
 ### Yolo2OutputLayer
@@ -615,10 +555,7 @@ H = output/label height<br>
 W = output/label width<br>
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Yolo2OutputLayer" aria-expanded="false" aria-controls="Yolo2OutputLayer">Show methods</button>
-<div class="collapse" id="Yolo2OutputLayer"><div class="card card-body">
-
-#### lambdaCoord 
+##### lambdaCoord 
 ```java
 public Builder lambdaCoord(double lambdaCoord)
 ```
@@ -629,7 +566,7 @@ Default (as per paper): 5
 
 - param lambdaCoord Lambda value for size/scale component of loss function
 
-#### lambbaNoObj 
+##### lambbaNoObj 
 ```java
 public Builder lambbaNoObj(double lambdaNoObj)
 ```
@@ -640,7 +577,7 @@ Default (as per paper): 0.5
 
 - param lambdaNoObj Lambda value for no-object (confidence) component of the loss function
 
-#### lossPositionScale 
+##### lossPositionScale 
 ```java
 public Builder lossPositionScale(ILossFunction lossPositionScale)
 ```
@@ -650,7 +587,7 @@ Loss function for position/scale component of the loss function
 
 - param lossPositionScale Loss function for position/scale
 
-#### lossClassPredictions 
+##### lossClassPredictions 
 ```java
 public Builder lossClassPredictions(ILossFunction lossClassPredictions)
 ```
@@ -661,7 +598,7 @@ paper), however Loss MCXENT could also be used (which is more common for classif
 
 - param lossClassPredictions Loss function for the class prediction error component of the YOLO loss function
 
-#### boundingBoxPriors 
+##### boundingBoxPriors 
 ```java
 public Builder boundingBoxPriors(INDArray boundingBoxes)
 ```
@@ -674,7 +611,6 @@ a value of 1.0 would correspond to one grid cell; a value of 13 would correspond
 - param boundingBoxes Bounding box prior dimensions (width, height)
 
 
-</div></div>
 
 
 ### MaskLayer

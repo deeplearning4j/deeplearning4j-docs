@@ -88,10 +88,7 @@ which allows for an arbitrary directed acyclic graph connection structure betwee
 MultiLayerNetwork is trainable via backprop, with optional pretraining, depending on the type of layers it contains.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#MultiLayerNetwork" aria-expanded="false" aria-controls="MultiLayerNetwork">Show methods</button>
-<div class="collapse" id="MultiLayerNetwork"><div class="card card-body">
-
-#### setCacheMode 
+##### setCacheMode 
 ```java
 public void setCacheMode(CacheMode mode) 
 ```
@@ -100,7 +97,7 @@ public void setCacheMode(CacheMode mode)
 Workspace for working memory for a single layer: forward pass and backward pass
 Note that this is opened/closed once per op (activate/backpropGradient call)
 
-#### pretrain 
+##### pretrain 
 ```java
 public void pretrain(DataSetIterator iter) 
 ```
@@ -111,7 +108,7 @@ Initialize the network based on the configuration
 - param conf   the configuration json
 - param params the parameters
 
-#### pretrain 
+##### pretrain 
 ```java
 public void pretrain(DataSetIterator iter, int numEpochs)
 ```
@@ -126,7 +123,7 @@ each layer manually using {- link #pretrainLayer(int, DataSetIterator)}
 
 - param iter Training data
 
-#### pretrainLayer 
+##### pretrainLayer 
 ```java
 public void pretrainLayer(int layerIdx, DataSetIterator iter) 
 ```
@@ -134,7 +131,7 @@ public void pretrainLayer(int layerIdx, DataSetIterator iter)
 
 Fit for one epoch - see {- link #pretrainLayer(int, DataSetIterator, int)}
 
-#### pretrainLayer 
+##### pretrainLayer 
 ```java
 public void pretrainLayer(int layerIdx, DataSetIterator iter, int numEpochs) 
 ```
@@ -148,7 +145,7 @@ If the specified layer index (0 to numLayers - 1) is not a pretrainable layer, t
 - param iter      Training data
 - param numEpochs Number of epochs to fit the specified layer for
 
-#### pretrainLayer 
+##### pretrainLayer 
 ```java
 public void pretrainLayer(int layerIdx, INDArray features) 
 ```
@@ -160,7 +157,7 @@ If the specified layer index (0 to numLayers - 1) is not a pretrainable layer, t
 - param layerIdx Index of the layer to train (0 to numLayers-1)
 - param features Training data array
 
-#### setParams 
+##### setParams 
 ```java
 public void setParams(INDArray params) 
 ```
@@ -171,7 +168,7 @@ This is functionally equivalent to calling
 {- code init(null, false)}.
 - see MultiLayerNetwork#init(INDArray, boolean)
 
-#### activate 
+##### activate 
 ```java
 public INDArray activate(TrainingMode training) 
 ```
@@ -183,7 +180,7 @@ various neuralNets and output layer
 
 - return the params for this neural net
 
-#### fit 
+##### fit 
 ```java
 public void fit(MultiDataSet dataSet) 
 ```
@@ -206,7 +203,7 @@ For multiple time steps: [miniBatchSize,inputSize,inputTimeSeriesLength]
 i.e., is 2d, output has shape [miniBatchSize,outputSize] (i.e., also 2d).<br>
 Otherwise output is 3d [miniBatchSize,outputSize,inputTimeSeriesLength] when using RnnOutputLayer.
 
-#### fit 
+##### fit 
 ```java
 public void fit(@NonNull MultiDataSetIterator iterator, int numEpochs)
 ```
@@ -218,7 +215,7 @@ Equvalent to calling {- link #fit(MultiDataSetIterator)} numEpochs times in a lo
 - param iterator  Training data (DataSetIterator). Iterator must support resetting
 - param numEpochs Number of training epochs, >= 1
 
-#### fit 
+##### fit 
 ```java
 public void fit(MultiDataSetIterator iterator) 
 ```
@@ -230,7 +227,7 @@ MultiLayerNetwork only supports 1 input and 1 output)
 
 - param iterator  Training data (DataSetIterator). Iterator must support resetting
 
-#### evaluate 
+##### evaluate 
 ```java
 public Evaluation evaluate(DataSetIterator iterator, List<String> labelsList, int topN) 
 ```
@@ -244,7 +241,7 @@ For 'standard' accuracy evaluation only, use topN = 1
 - param topN       N value for top N accuracy evaluation
 - return Evaluation object, summarizing the results of the evaluation on the provided DataSetIterator
 
-#### summary 
+##### summary 
 ```java
 public String summary() 
 ```
@@ -256,7 +253,7 @@ Will also give information about frozen layers, if any.
 - return Summary as a string
 - see #memoryInfo(int, InputType)
 
-#### summary 
+##### summary 
 ```java
 public String summary(InputType inputType) 
 ```
@@ -269,7 +266,7 @@ Will also give information about frozen layers, if any.
 - return Summary as a string
 - see #memoryInfo(int, InputType)
 
-#### memoryInfo 
+##### memoryInfo 
 ```java
 public String memoryInfo(int minibatch, InputType inputType)
 ```
@@ -286,7 +283,7 @@ inference.
 - param inputType    Input type to the network
 - return A String with information about network memory use information
 
-#### incrementEpochCount 
+##### incrementEpochCount 
 ```java
 public void incrementEpochCount()
 ```
@@ -294,7 +291,7 @@ public void incrementEpochCount()
 
 This method just makes sure there's no state preserved within layers
 
-#### save 
+##### save 
 ```java
 public void save( File f ) throws IOException 
 ```
@@ -308,7 +305,7 @@ if further training will be undertaken.
 - see ModelSerializer ModelSerializer for more details (and saving/loading via streams)
 - see #save(File, boolean)
 
-#### save 
+##### save 
 ```java
 public void save(File f, boolean saveUpdater) throws IOException
 ```
@@ -322,7 +319,7 @@ usually be saved if further training is required
 - see ModelSerializer ModelSerializer for more details (and saving/loading via streams)
 - see #save(File, boolean)
 
-#### load 
+##### load 
 ```java
 public static MultiLayerNetwork load(File f, boolean loadUpdater) throws IOException 
 ```
@@ -335,7 +332,7 @@ etc) - use <i>false</i> if no further training is required, or <i>true</i> if fu
 will be undertaken
 - see ModelSerializer ModelSerializer for more details (and saving/loading via streams)
 
-#### toComputationGraph 
+##### toComputationGraph 
 ```java
 public ComputationGraph toComputationGraph()
 ```
@@ -345,7 +342,7 @@ Convert this MultiLayerNetwork to a ComputationGraph
 
 - return ComputationGraph equivalent to this network (including parameters and updater state)
 
-#### setLearningRate 
+##### setLearningRate 
 ```java
 public void setLearningRate(double newLr)
 ```
@@ -361,7 +358,7 @@ should be used in preference to calling this method at every iteration.
 - see #setLearningRate(ISchedule)
 - see #setLearningRate(int, double)
 
-#### setLearningRate 
+##### setLearningRate 
 ```java
 public void setLearningRate(ISchedule newLr)
 ```
@@ -376,7 +373,7 @@ and {- link MultiLayerConfiguration#setEpochCount(int)} if this is required
 - see #setLearningRate(ISchedule)
 - see #setLearningRate(int, double)
 
-#### setLearningRate 
+##### setLearningRate 
 ```java
 public void setLearningRate(int layerNumber, double newLr)
 ```
@@ -394,7 +391,7 @@ should be used in preference to calling this method at every iteration. Note als
 - see #setLearningRate(ISchedule)
 - see #setLearningRate(int, double)
 
-#### setLearningRate 
+##### setLearningRate 
 ```java
 public void setLearningRate(int layerNumber, ISchedule newLr)
 ```
@@ -412,7 +409,7 @@ and {- link MultiLayerConfiguration#setEpochCount(int)} if this is required
 - see #setLearningRate(ISchedule)
 - see #setLearningRate(int, double)
 
-#### getLearningRate 
+##### getLearningRate 
 ```java
 public Double getLearningRate(int layerNumber)
 ```
@@ -423,7 +420,7 @@ Note: If the layer has no learning rate (no parameters, or an updater without a 
 - param layerNumber   Layer number to get the learning rate for
 - return Learning rate for the specified layer, or null
 
-#### layerSize 
+##### layerSize 
 ```java
 public int layerSize(int layer) 
 ```
@@ -438,7 +435,7 @@ Note that the meaning of the "layer size" can depend on the type of layer. For e
 - param layer Index of the layer to get the size of. Must be in range 0 to nLayers-1 inclusive
 - return Size of the layer
 
-#### layerInputSize 
+##### layerInputSize 
 ```java
 public int layerInputSize(int layer) 
 ```
@@ -454,7 +451,7 @@ Note that the meaning of the "input size" can depend on the type of layer. For e
 - param layer Index of the layer to get the size of. Must be in range 0 to nLayers-1 inclusive
 - return Size of the layer
 
-#### equals 
+##### equals 
 ```java
 public boolean equals(Object obj) 
 ```
@@ -505,5 +502,3 @@ argument; {- code false} otherwise.
 - see #hashCode()
 - see HashMap
 
-
-</div></div>

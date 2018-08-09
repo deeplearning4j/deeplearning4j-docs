@@ -14,7 +14,7 @@ weight: 4
 Imports a BatchNormalization layer from Keras.
 
 
-#### KerasBatchNormalization 
+##### KerasBatchNormalization 
 ```java
 public KerasBatchNormalization(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -26,10 +26,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasBatchNormalization" aria-expanded="false" aria-controls="KerasBatchNormalization">Show methods</button>
-<div class="collapse" id="KerasBatchNormalization"><div class="card card-body">
-
-#### getBatchNormalizationLayer 
+##### getBatchNormalizationLayer 
 ```java
 public BatchNormalization getBatchNormalizationLayer() 
 ```
@@ -41,7 +38,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -53,7 +50,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### getNumParams 
+##### getNumParams 
 ```java
 public int getNumParams() 
 ```
@@ -63,7 +60,7 @@ Returns number of trainable parameters in layer.
 
 - return number of trainable parameters (4)
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -73,5 +70,3 @@ Set weights for layer.
 
 - param weights Map from parameter name to INDArray.
 
-
-</div></div>

@@ -29,10 +29,7 @@ FixedValue is a ParameterSpace that defines only a single fixed value
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ContinuousParameterSpace" aria-expanded="false" aria-controls="ContinuousParameterSpace">Show methods</button>
-<div class="collapse" id="ContinuousParameterSpace"><div class="card card-body">
-
-#### getValue 
+##### getValue 
 ```java
 public Double getValue(double[] input) 
 ```
@@ -44,7 +41,6 @@ ContinuousParameterSpace with uniform distribution between the minimum and maxim
 - param max Maximum value that can be generated
 
 
-</div></div>
 
 
 ### DiscreteParameterSpace
@@ -61,10 +57,7 @@ A DiscreteParameterSpace is used for a set of un-ordered values
 some minimum and maximum value
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#IntegerParameterSpace" aria-expanded="false" aria-controls="IntegerParameterSpace">Show methods</button>
-<div class="collapse" id="IntegerParameterSpace"><div class="card card-body">
-
-#### getMin 
+##### getMin 
 ```java
 public int getMin() 
 ```
@@ -76,7 +69,6 @@ Create an IntegerParameterSpace with a uniform distribution between the specifie
 - param max Max value, inclusive
 
 
-</div></div>
 
 
 ### MathOp

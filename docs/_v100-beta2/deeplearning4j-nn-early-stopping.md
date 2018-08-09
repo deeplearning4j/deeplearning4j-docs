@@ -148,10 +148,7 @@ Score function for variational autoencoder reconstruction error for a MultiLayer
 VariationalAutoencoder layer must be first layer in the network
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#VAEReconErrorScoreCalculator" aria-expanded="false" aria-controls="VAEReconErrorScoreCalculator">Show methods</button>
-<div class="collapse" id="VAEReconErrorScoreCalculator"><div class="card card-body">
-
-#### minimizeScore 
+##### minimizeScore 
 ```java
 public boolean minimizeScore() 
 ```
@@ -163,7 +160,6 @@ Constructor for reconstruction ERROR
 - param iterator
 
 
-</div></div>
 
 
 ### VAEReconProbScoreCalculator
@@ -173,10 +169,7 @@ Score calculator for variational autoencoder reconstruction probability or recon
 MultiLayerNetwork or ComputationGraph. VariationalAutoencoder layer must be first layer in the network<br>
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#VAEReconProbScoreCalculator" aria-expanded="false" aria-controls="VAEReconProbScoreCalculator">Show methods</button>
-<div class="collapse" id="VAEReconProbScoreCalculator"><div class="card card-body">
-
-#### minimizeScore 
+##### minimizeScore 
 ```java
 public boolean minimizeScore() 
 ```
@@ -190,7 +183,6 @@ for details
 - param logProb If true: calculate (negative) log probability. False: probability
 
 
-</div></div>
 
 
 ### BestScoreEpochTerminationCondition

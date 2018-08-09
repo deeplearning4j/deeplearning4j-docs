@@ -286,10 +286,7 @@ ModelSerializer.writeModel(model, "yolo2_dl4j_inference.v1.zip", false);
 The channels of the 608x608 input images need to be in RGB order (not BGR), with values normalized within [0, 1].
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#YOLO2" aria-expanded="false" aria-controls="YOLO2">Show methods</button>
-<div class="collapse" id="YOLO2"><div class="card card-body">
-
-#### pretrainedUrl 
+##### pretrainedUrl 
 ```java
 public String pretrainedUrl(PretrainedType pretrainedType) 
 ```
@@ -297,5 +294,3 @@ public String pretrainedUrl(PretrainedType pretrainedType)
 
 Default prior boxes for the model
 
-
-</div></div>

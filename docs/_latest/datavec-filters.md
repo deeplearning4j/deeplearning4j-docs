@@ -27,10 +27,7 @@ If condition is satisfied (returns true): remove the example or sequence<br>
 If condition is not satisfied (returns false): keep the example or sequence
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ConditionFilter" aria-expanded="false" aria-controls="ConditionFilter">Show methods</button>
-<div class="collapse" id="ConditionFilter"><div class="card card-body">
-
-#### removeExample 
+##### removeExample 
 ```java
 public boolean removeExample(Object writables) 
 ```
@@ -39,7 +36,7 @@ public boolean removeExample(Object writables)
 - param writables Example
 - return true if example should be removed, false to keep
 
-#### removeSequence 
+##### removeSequence 
 ```java
 public boolean removeSequence(Object sequence) 
 ```
@@ -48,7 +45,7 @@ public boolean removeSequence(Object sequence)
 - param sequence sequence example
 - return true if example should be removed, false to keep
 
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -58,7 +55,7 @@ Get the output schema for this transformation, given an input schema
 
 - param inputSchema
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -69,7 +66,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -81,7 +78,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### Filter
@@ -101,10 +97,7 @@ if the examples/sequences contains
 invalid values in any of a specified set of columns.
 Invalid values are determined with respect to the schema
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#FilterInvalidValues" aria-expanded="false" aria-controls="FilterInvalidValues">Show methods</button>
-<div class="collapse" id="FilterInvalidValues"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -112,7 +105,7 @@ public Schema transform(Schema inputSchema)
 
 - param columnsToFilterIfInvalid Columns to check for invalid values
 
-#### removeExample 
+##### removeExample 
 ```java
 public boolean removeExample(Object writables) 
 ```
@@ -121,7 +114,7 @@ public boolean removeExample(Object writables)
 - param writables Example
 - return true if example should be removed, false to keep
 
-#### removeSequence 
+##### removeSequence 
 ```java
 public boolean removeSequence(Object sequence) 
 ```
@@ -130,7 +123,7 @@ public boolean removeSequence(Object sequence)
 - param sequence sequence example
 - return true if example should be removed, false to keep
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -141,7 +134,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -153,7 +146,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### InvalidNumColumns
@@ -161,10 +153,7 @@ This will often be the same as the input
 
 Remove invalid records of a certain size.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#InvalidNumColumns" aria-expanded="false" aria-controls="InvalidNumColumns">Show methods</button>
-<div class="collapse" id="InvalidNumColumns"><div class="card card-body">
-
-#### removeExample 
+##### removeExample 
 ```java
 public boolean removeExample(Object writables) 
 ```
@@ -173,7 +162,7 @@ public boolean removeExample(Object writables)
 - param writables Example
 - return true if example should be removed, false to keep
 
-#### removeSequence 
+##### removeSequence 
 ```java
 public boolean removeSequence(Object sequence) 
 ```
@@ -182,7 +171,7 @@ public boolean removeSequence(Object sequence)
 - param sequence sequence example
 - return true if example should be removed, false to keep
 
-#### removeExample 
+##### removeExample 
 ```java
 public boolean removeExample(List<Writable> writables) 
 ```
@@ -191,7 +180,7 @@ public boolean removeExample(List<Writable> writables)
 - param writables Example
 - return true if example should be removed, false to keep
 
-#### removeSequence 
+##### removeSequence 
 ```java
 public boolean removeSequence(List<List<Writable>> sequence) 
 ```
@@ -200,7 +189,7 @@ public boolean removeSequence(List<List<Writable>> sequence)
 - param sequence sequence example
 - return true if example should be removed, false to keep
 
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -210,7 +199,7 @@ Get the output schema for this transformation, given an input schema
 
 - param inputSchema
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -221,7 +210,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -232,5 +221,3 @@ This will often be the same as the input
 
 - return the output column names
 
-
-</div></div>

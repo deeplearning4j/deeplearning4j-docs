@@ -14,7 +14,7 @@ weight: 4
 Builds a DL4J Bidirectional layer from a Keras Bidirectional layer wrapper
 
 
-#### KerasBidirectional 
+##### KerasBidirectional 
 ```java
 public KerasBidirectional(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -26,10 +26,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasBidirectional" aria-expanded="false" aria-controls="KerasBidirectional">Show methods</button>
-<div class="collapse" id="KerasBidirectional"><div class="card card-body">
-
-#### getUnderlyingRecurrentLayer 
+##### getUnderlyingRecurrentLayer 
 ```java
 public Layer getUnderlyingRecurrentLayer() 
 ```
@@ -41,7 +38,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getBidirectionalLayer 
+##### getBidirectionalLayer 
 ```java
 public Bidirectional getBidirectionalLayer() 
 ```
@@ -51,7 +48,7 @@ Get DL4J Bidirectional layer.
 
 - return Bidirectional Layer
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -63,7 +60,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### getNumParams 
+##### getNumParams 
 ```java
 public int getNumParams() 
 ```
@@ -73,7 +70,7 @@ Returns number of trainable parameters in layer.
 
 - return number of trainable parameters
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -86,7 +83,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras configuration exception
 - see org.deeplearning4j.nn.conf.InputPreProcessor
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -96,5 +93,3 @@ Set weights for Bidirectional layer.
 
 - param weights Map of weights
 
-
-</div></div>

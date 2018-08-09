@@ -16,10 +16,7 @@ See "geographic midpoint" at: http://www.geomidpoint.com/methods.html
 For implementation algorithm, see: http://www.geomidpoint.com/calculation.html
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#GeographicMidpointReduction" aria-expanded="false" aria-controls="GeographicMidpointReduction">Show methods</button>
-<div class="collapse" id="GeographicMidpointReduction"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -28,7 +25,6 @@ public Schema transform(Schema inputSchema)
 - param delim Delimiter for the coordinates in text format. For example, if format is "lat,long" use ","
 
 
-</div></div>
 
 
 ### StringReducer
@@ -43,10 +39,7 @@ Uses are:
 (2) Reduction operations in time series (windowing ops, etc)
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringReducer" aria-expanded="false" aria-controls="StringReducer">Show methods</button>
-<div class="collapse" id="StringReducer"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema schema) 
 ```
@@ -54,7 +47,7 @@ public Schema transform(Schema schema)
 
 Get the output schema, given the input schema
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public Builder outputColumnName(String outputColumnName) 
 ```
@@ -67,7 +60,7 @@ the default specified here.
 
 - param defaultOp Default reduction operation to perform
 
-#### appendColumns 
+##### appendColumns 
 ```java
 public Builder appendColumns(String... columns) 
 ```
@@ -75,7 +68,7 @@ public Builder appendColumns(String... columns)
 
 Reduce the specified columns by taking the minimum value
 
-#### prependColumns 
+##### prependColumns 
 ```java
 public Builder prependColumns(String... columns) 
 ```
@@ -83,7 +76,7 @@ public Builder prependColumns(String... columns)
 
 Reduce the specified columns by taking the maximum value
 
-#### mergeColumns 
+##### mergeColumns 
 ```java
 public Builder mergeColumns(String... columns) 
 ```
@@ -91,7 +84,7 @@ public Builder mergeColumns(String... columns)
 
 Reduce the specified columns by taking the sum of values
 
-#### replaceColumn 
+##### replaceColumn 
 ```java
 public Builder replaceColumn(String... columns) 
 ```
@@ -99,7 +92,7 @@ public Builder replaceColumn(String... columns)
 
 Reduce the specified columns by taking the mean of the values
 
-#### customReduction 
+##### customReduction 
 ```java
 public Builder customReduction(String column, ColumnReduction columnReduction) 
 ```
@@ -110,7 +103,7 @@ Reduce the specified column using a custom column reduction functionality.
 - param column          Column to execute the custom reduction functionality on
 - param columnReduction Column reduction to execute on that column
 
-#### setIgnoreInvalid 
+##### setIgnoreInvalid 
 ```java
 public Builder setIgnoreInvalid(String... columns) 
 ```
@@ -123,5 +116,3 @@ If the column has any restrictions (min/max values, regex for Strings etc) these
 
 - param columns Columns to set 'ignore invalid' for
 
-
-</div></div>

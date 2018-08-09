@@ -14,7 +14,7 @@ weight: 4
 Imports an Activation layer from Keras.
 
 
-#### KerasActivation 
+##### KerasActivation 
 ```java
 public KerasActivation(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -28,10 +28,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasActivation" aria-expanded="false" aria-controls="KerasActivation">Show methods</button>
-<div class="collapse" id="KerasActivation"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -44,7 +41,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getActivationLayer 
+##### getActivationLayer 
 ```java
 public ActivationLayer getActivationLayer() 
 ```
@@ -55,7 +52,6 @@ Get DL4J ActivationLayer.
 - return ActivationLayer
 
 
-</div></div>
 
 
 ### KerasDense
@@ -64,7 +60,7 @@ Get DL4J ActivationLayer.
 Imports a Dense layer from Keras.
 
 
-#### KerasDense 
+##### KerasDense 
 ```java
 public KerasDense(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -76,10 +72,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasDense" aria-expanded="false" aria-controls="KerasDense">Show methods</button>
-<div class="collapse" id="KerasDense"><div class="card card-body">
-
-#### getDenseLayer 
+##### getDenseLayer 
 ```java
 public DenseLayer getDenseLayer() 
 ```
@@ -91,7 +84,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -103,7 +96,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### getNumParams 
+##### getNumParams 
 ```java
 public int getNumParams() 
 ```
@@ -113,7 +106,7 @@ Returns number of trainable parameters in layer.
 
 - return number of trainable parameters (2)
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -124,7 +117,6 @@ Set weights for layer.
 - param weights Dense layer weights
 
 
-</div></div>
 
 
 ### KerasDropout
@@ -133,7 +125,7 @@ Set weights for layer.
 Imports a Dropout layer from Keras.
 
 
-#### KerasDropout 
+##### KerasDropout 
 ```java
 public KerasDropout(Map<String, Object> layerConfig)
                     throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -147,10 +139,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasDropout" aria-expanded="false" aria-controls="KerasDropout">Show methods</button>
-<div class="collapse" id="KerasDropout"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -163,7 +152,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getDropoutLayer 
+##### getDropoutLayer 
 ```java
 public DropoutLayer getDropoutLayer() 
 ```
@@ -174,7 +163,6 @@ Get DL4J DropoutLayer.
 - return  DropoutLayer
 
 
-</div></div>
 
 
 ### KerasFlatten
@@ -183,7 +171,7 @@ Get DL4J DropoutLayer.
 Imports a Keras Flatten layer as a DL4J {Cnn,Rnn}ToFeedForwardInputPreProcessor.
 
 
-#### KerasFlatten 
+##### KerasFlatten 
 ```java
 public KerasFlatten(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -197,10 +185,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasFlatten" aria-expanded="false" aria-controls="KerasFlatten">Show methods</button>
-<div class="collapse" id="KerasFlatten"><div class="card card-body">
-
-#### isInputPreProcessor 
+##### isInputPreProcessor 
 ```java
 public boolean isInputPreProcessor() 
 ```
@@ -213,7 +198,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -226,7 +211,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - see org.deeplearning4j.nn.conf.InputPreProcessor
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -239,7 +224,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasLambda
@@ -248,7 +232,7 @@ Get layer output type.
 Wraps a DL4J SameDiffLambda into a KerasLayer
 
 
-#### KerasLambda 
+##### KerasLambda 
 ```java
 public KerasLambda(Map<String, Object> layerConfig, SameDiffLayer sameDiffLayer)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -262,10 +246,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasLambda" aria-expanded="false" aria-controls="KerasLambda">Show methods</button>
-<div class="collapse" id="KerasLambda"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -278,7 +259,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getSameDiffLayer 
+##### getSameDiffLayer 
 ```java
 public SameDiffLayer getSameDiffLayer() 
 ```
@@ -289,7 +270,6 @@ Get DL4J SameDiffLayer.
 - return SameDiffLayer
 
 
-</div></div>
 
 
 ### KerasMerge
@@ -300,7 +280,7 @@ Imports a Keras Merge layer as a DL4J Merge (graph) vertex.
 TODO: handle axes arguments that alter merge behavior (requires changes to DL4J?)
 
 
-#### KerasMerge 
+##### KerasMerge 
 ```java
 public KerasMerge(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -312,10 +292,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasMerge" aria-expanded="false" aria-controls="KerasMerge">Show methods</button>
-<div class="collapse" id="KerasMerge"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) 
 ```
@@ -328,7 +305,6 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-</div></div>
 
 
 ### KerasPermute
@@ -337,7 +313,7 @@ Constructor from parsed Keras layer configuration dictionary.
 Imports Permute layer from Keras
 
 
-#### KerasPermute 
+##### KerasPermute 
 ```java
 public KerasPermute(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -351,10 +327,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasPermute" aria-expanded="false" aria-controls="KerasPermute">Show methods</button>
-<div class="collapse" id="KerasPermute"><div class="card card-body">
-
-#### isInputPreProcessor 
+##### isInputPreProcessor 
 ```java
 public boolean isInputPreProcessor() 
 ```
@@ -367,7 +340,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws
             InvalidKerasConfigurationException 
@@ -381,7 +354,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - see InputPreProcessor
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -394,7 +367,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasRepeatVector
@@ -403,7 +375,7 @@ Get layer output type.
 Imports a Keras RepeatVector layer
 
 
-#### KerasRepeatVector 
+##### KerasRepeatVector 
 ```java
 public KerasRepeatVector(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -417,10 +389,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasRepeatVector" aria-expanded="false" aria-controls="KerasRepeatVector">Show methods</button>
-<div class="collapse" id="KerasRepeatVector"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -433,7 +402,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getRepeatVectorLayer 
+##### getRepeatVectorLayer 
 ```java
 public RepeatVector getRepeatVectorLayer() 
 ```
@@ -444,7 +413,6 @@ Get DL4J RepeatVector.
 - return  RepeatVector
 
 
-</div></div>
 
 
 ### KerasReshape
@@ -453,7 +421,7 @@ Get DL4J RepeatVector.
 Imports Reshape layer from Keras
 
 
-#### KerasReshape 
+##### KerasReshape 
 ```java
 public KerasReshape(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -467,10 +435,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasReshape" aria-expanded="false" aria-controls="KerasReshape">Show methods</button>
-<div class="collapse" id="KerasReshape"><div class="card card-body">
-
-#### isInputPreProcessor 
+##### isInputPreProcessor 
 ```java
 public boolean isInputPreProcessor() 
 ```
@@ -483,7 +448,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -496,7 +461,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - see org.deeplearning4j.nn.conf.InputPreProcessor
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -509,7 +474,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasSpatialDropout
@@ -518,7 +482,7 @@ Get layer output type.
 Keras wrapper for DL4J dropout layer with SpatialDropout, works 1D-3D.
 
 
-#### KerasSpatialDropout 
+##### KerasSpatialDropout 
 ```java
 public KerasSpatialDropout(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -530,10 +494,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasSpatialDropout" aria-expanded="false" aria-controls="KerasSpatialDropout">Show methods</button>
-<div class="collapse" id="KerasSpatialDropout"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -545,7 +506,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getSpatialDropoutLayer 
+##### getSpatialDropoutLayer 
 ```java
 public DropoutLayer getSpatialDropoutLayer() 
 ```
@@ -555,5 +516,3 @@ Get DL4J DropoutLayer with spatial dropout.
 
 - return DropoutLayer
 
-
-</div></div>

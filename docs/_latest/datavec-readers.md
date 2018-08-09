@@ -29,10 +29,7 @@ You can hook a custom `RecordListener` to a record reader for debugging or visua
 
 ## Types of readers
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ComposableRecordReader" aria-expanded="false" aria-controls="ComposableRecordReader">Show methods</button>
-<div class="collapse" id="ComposableRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(InputSplit split) throws IOException, InterruptedException 
 ```
@@ -45,7 +42,6 @@ concatenation would be next & addAll on the collection
 return one record
 
 
-</div></div>
 
 
 ### ConcatenatingRecordReader
@@ -64,10 +60,7 @@ Combine multiple readers into a single reader. Records are read sequentially - t
 File reader/writer
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#FileRecordReader" aria-expanded="false" aria-controls="FileRecordReader">Show methods</button>
-<div class="collapse" id="FileRecordReader"><div class="card card-body">
-
-#### getCurrentLabel 
+##### getCurrentLabel 
 ```java
 public int getCurrentLabel() 
 ```
@@ -79,7 +72,6 @@ in the label list
 - return The index of the current file's parent directory
 
 
-</div></div>
 
 
 ### LineRecordReader
@@ -106,10 +98,7 @@ Collection record reader for sequences.
 Mainly used for testing.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CollectionSequenceRecordReader" aria-expanded="false" aria-controls="CollectionSequenceRecordReader">Show methods</button>
-<div class="collapse" id="CollectionSequenceRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(InputSplit split) throws IOException, InterruptedException 
 ```
@@ -120,7 +109,6 @@ public void initialize(InputSplit split) throws IOException, InterruptedExceptio
 are a sequence, and the outer list/collection is a list of sequences
 
 
-</div></div>
 
 
 ### ListStringRecordReader
@@ -129,10 +117,7 @@ are a sequence, and the outer list/collection is a list of sequences
 Iterates through a list of strings return a record.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ListStringRecordReader" aria-expanded="false" aria-controls="ListStringRecordReader">Show methods</button>
-<div class="collapse" id="ListStringRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(InputSplit split) throws IOException, InterruptedException 
 ```
@@ -144,7 +129,7 @@ Called once at initialization.
 - throws IOException
 - throws InterruptedException
 
-#### initialize 
+##### initialize 
 ```java
 public void initialize(Configuration conf, InputSplit split) throws IOException, InterruptedException 
 ```
@@ -157,7 +142,7 @@ Called once at initialization.
 - throws IOException
 - throws InterruptedException
 
-#### hasNext 
+##### hasNext 
 ```java
 public boolean hasNext() 
 ```
@@ -167,7 +152,7 @@ Get the next record
 
 - return The list of next record
 
-#### reset 
+##### reset 
 ```java
 public void reset() 
 ```
@@ -177,7 +162,7 @@ List of label strings
 
 - return
 
-#### nextRecord 
+##### nextRecord 
 ```java
 public Record nextRecord() 
 ```
@@ -191,7 +176,7 @@ Implementations of this method should not close the DataInputStream
 - param dataInputStream
 - throws IOException if error occurs during reading from the input stream
 
-#### close 
+##### close 
 ```java
 public void close() throws IOException 
 ```
@@ -209,7 +194,7 @@ the {- code IOException}.
 
 - throws IOException if an I/O error occurs
 
-#### setConf 
+##### setConf 
 ```java
 public void setConf(Configuration conf) 
 ```
@@ -219,7 +204,7 @@ Set the configuration to be used by this object.
 
 - param conf
 
-#### getConf 
+##### getConf 
 ```java
 public Configuration getConf() 
 ```
@@ -228,7 +213,6 @@ public Configuration getConf()
 Return the configuration used by this object.
 
 
-</div></div>
 
 
 ### CSVRecordReader
@@ -237,10 +221,7 @@ Return the configuration used by this object.
 Simple csv record reader.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CSVRecordReader" aria-expanded="false" aria-controls="CSVRecordReader">Show methods</button>
-<div class="collapse" id="CSVRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(Configuration conf, InputSplit split) throws IOException, InterruptedException 
 ```
@@ -250,7 +231,6 @@ Skip first n lines
 - param skipNumLines the number of lines to skip
 
 
-</div></div>
 
 
 ### CSVRegexRecordReader
@@ -281,10 +261,7 @@ In practice the sliding window size starts at 1, then linearly increase to maxLi
 linearly decrease back to 1.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CSVVariableSlidingWindowRecordReader" aria-expanded="false" aria-controls="CSVVariableSlidingWindowRecordReader">Show methods</button>
-<div class="collapse" id="CSVVariableSlidingWindowRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(Configuration conf, InputSplit split) throws IOException, InterruptedException 
 ```
@@ -293,7 +270,6 @@ public void initialize(Configuration conf, InputSplit split) throws IOException,
 No-arg constructor with the default number of lines per sequence (10)
 
 
-</div></div>
 
 
 ### LibSvmRecordReader
@@ -350,10 +326,7 @@ Further details on the format can be found at
 - http://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_svmlight_file.html
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SVMLightRecordReader" aria-expanded="false" aria-controls="SVMLightRecordReader">Show methods</button>
-<div class="collapse" id="SVMLightRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(Configuration conf, InputSplit split) throws IOException, InterruptedException 
 ```
@@ -366,7 +339,7 @@ Must be called before attempting to read records.
 - throws IOException
 - throws InterruptedException
 
-#### setConf 
+##### setConf 
 ```java
 public void setConf(Configuration conf) 
 ```
@@ -378,7 +351,7 @@ Set configuration.
 - throws IOException
 - throws InterruptedException
 
-#### hasNext 
+##### hasNext 
 ```java
 public boolean hasNext() 
 ```
@@ -389,7 +362,7 @@ commented out. May read ahead and cache a line.
 
 - return
 
-#### nextRecord 
+##### nextRecord 
 ```java
 public Record nextRecord() 
 ```
@@ -400,7 +373,6 @@ Return next record as list of Writables.
 - return
 
 
-</div></div>
 
 
 ### RegexLineRecordReader
@@ -438,10 +410,7 @@ or skip invalid but log a warning (SkipInvalidWithWarning)
 to have a transform process applied before being returned.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#TransformProcessRecordReader" aria-expanded="false" aria-controls="TransformProcessRecordReader">Show methods</button>
-<div class="collapse" id="TransformProcessRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(InputSplit split) throws IOException, InterruptedException 
 ```
@@ -453,7 +422,7 @@ Called once at initialization.
 - throws IOException
 - throws InterruptedException
 
-#### initialize 
+##### initialize 
 ```java
 public void initialize(Configuration conf, InputSplit split) throws IOException, InterruptedException 
 ```
@@ -466,7 +435,7 @@ Called once at initialization.
 - throws IOException
 - throws InterruptedException
 
-#### hasNext 
+##### hasNext 
 ```java
 public boolean hasNext() 
 ```
@@ -476,7 +445,7 @@ Get the next record
 
 - return
 
-#### reset 
+##### reset 
 ```java
 public void reset() 
 ```
@@ -486,7 +455,7 @@ List of label strings
 
 - return
 
-#### nextRecord 
+##### nextRecord 
 ```java
 public Record nextRecord() 
 ```
@@ -500,7 +469,7 @@ Implementations of this method should not close the DataInputStream
 - param dataInputStream
 - throws IOException if error occurs during reading from the input stream
 
-#### loadFromMetaData 
+##### loadFromMetaData 
 ```java
 public Record loadFromMetaData(RecordMetaData recordMetaData) throws IOException 
 ```
@@ -514,7 +483,7 @@ load multiple records at once using {- link #loadFromMetaData(List)}
 - return Single record for the given RecordMetaData instance
 - throws IOException If I/O error occurs during loading
 
-#### setListeners 
+##### setListeners 
 ```java
 public void setListeners(RecordListener... listeners) 
 ```
@@ -526,7 +495,7 @@ Load multiple records from the given a list of {- link RecordMetaData} instances
 - return Multiple records for the given RecordMetaData instances
 - throws IOException If I/O error occurs during loading
 
-#### setListeners 
+##### setListeners 
 ```java
 public void setListeners(Collection<RecordListener> listeners) 
 ```
@@ -536,7 +505,7 @@ Set the record listeners for this record reader.
 
 - param listeners
 
-#### close 
+##### close 
 ```java
 public void close() throws IOException 
 ```
@@ -554,7 +523,7 @@ the {- code IOException}.
 
 - throws IOException if an I/O error occurs
 
-#### setConf 
+##### setConf 
 ```java
 public void setConf(Configuration conf) 
 ```
@@ -564,7 +533,7 @@ Set the configuration to be used by this object.
 
 - param conf
 
-#### getConf 
+##### getConf 
 ```java
 public Configuration getConf() 
 ```
@@ -573,7 +542,6 @@ public Configuration getConf()
 Return the configuration used by this object.
 
 
-</div></div>
 
 
 ### TransformProcessSequenceRecordReader
@@ -582,10 +550,7 @@ Return the configuration used by this object.
 to be transformed before being returned.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#TransformProcessSequenceRecordReader" aria-expanded="false" aria-controls="TransformProcessSequenceRecordReader">Show methods</button>
-<div class="collapse" id="TransformProcessSequenceRecordReader"><div class="card card-body">
-
-#### setConf 
+##### setConf 
 ```java
 public void setConf(Configuration conf) 
 ```
@@ -595,7 +560,7 @@ Set the configuration to be used by this object.
 
 - param conf
 
-#### getConf 
+##### getConf 
 ```java
 public Configuration getConf() 
 ```
@@ -603,7 +568,7 @@ public Configuration getConf()
 
 Return the configuration used by this object.
 
-#### batchesSupported 
+##### batchesSupported 
 ```java
 public boolean batchesSupported() 
 ```
@@ -613,7 +578,7 @@ Returns a sequence record.
 
 - return a sequence of records
 
-#### nextSequence 
+##### nextSequence 
 ```java
 public SequenceRecord nextSequence() 
 ```
@@ -627,7 +592,7 @@ Implementations of this method should not close the DataInputStream
 - param dataInputStream
 - throws IOException if error occurs during reading from the input stream
 
-#### loadSequenceFromMetaData 
+##### loadSequenceFromMetaData 
 ```java
 public SequenceRecord loadSequenceFromMetaData(RecordMetaData recordMetaData) throws IOException 
 ```
@@ -641,7 +606,7 @@ load multiple records at once using {- link #loadSequenceFromMetaData(List)}
 - return Single sequence record for the given RecordMetaData instance
 - throws IOException If I/O error occurs during loading
 
-#### initialize 
+##### initialize 
 ```java
 public void initialize(InputSplit split) throws IOException, InterruptedException 
 ```
@@ -653,7 +618,7 @@ Load multiple sequence records from the given a list of {- link RecordMetaData} 
 - return Multiple sequence record for the given RecordMetaData instances
 - throws IOException If I/O error occurs during loading
 
-#### initialize 
+##### initialize 
 ```java
 public void initialize(Configuration conf, InputSplit split) throws IOException, InterruptedException 
 ```
@@ -666,7 +631,7 @@ Called once at initialization.
 - throws IOException
 - throws InterruptedException
 
-#### hasNext 
+##### hasNext 
 ```java
 public boolean hasNext() 
 ```
@@ -676,7 +641,7 @@ Get the next record
 
 - return
 
-#### reset 
+##### reset 
 ```java
 public void reset() 
 ```
@@ -686,7 +651,7 @@ List of label strings
 
 - return
 
-#### nextRecord 
+##### nextRecord 
 ```java
 public Record nextRecord() 
 ```
@@ -700,7 +665,7 @@ Implementations of this method should not close the DataInputStream
 - param dataInputStream
 - throws IOException if error occurs during reading from the input stream
 
-#### loadFromMetaData 
+##### loadFromMetaData 
 ```java
 public Record loadFromMetaData(RecordMetaData recordMetaData) throws IOException 
 ```
@@ -714,7 +679,7 @@ load multiple records at once using {- link #loadFromMetaData(List)}
 - return Single record for the given RecordMetaData instance
 - throws IOException If I/O error occurs during loading
 
-#### setListeners 
+##### setListeners 
 ```java
 public void setListeners(RecordListener... listeners) 
 ```
@@ -726,7 +691,7 @@ Load multiple records from the given a list of {- link RecordMetaData} instances
 - return Multiple records for the given RecordMetaData instances
 - throws IOException If I/O error occurs during loading
 
-#### setListeners 
+##### setListeners 
 ```java
 public void setListeners(Collection<RecordListener> listeners) 
 ```
@@ -736,7 +701,7 @@ Set the record listeners for this record reader.
 
 - param listeners
 
-#### close 
+##### close 
 ```java
 public void close() throws IOException 
 ```
@@ -755,7 +720,6 @@ the {- code IOException}.
 - throws IOException if an I/O error occurs
 
 
-</div></div>
 
 
 ### NativeAudioRecordReader
@@ -796,10 +760,7 @@ This iterates over a root folder and returns a frame
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#VideoRecordReader" aria-expanded="false" aria-controls="VideoRecordReader">Show methods</button>
-<div class="collapse" id="VideoRecordReader"><div class="card card-body">
-
-#### initialize 
+##### initialize 
 ```java
 public void initialize(InputSplit split) throws IOException, InterruptedException 
 ```
@@ -810,7 +771,6 @@ Load the record reader with the given height and width
 - param width the width load
 
 
-</div></div>
 
 
 ### TfidfRecordReader

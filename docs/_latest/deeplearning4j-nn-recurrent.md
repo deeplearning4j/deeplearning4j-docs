@@ -362,10 +362,7 @@ Bidirectional layer wrapper you can make any recurrent layer bidirectional, in p
 Note that this layer adds the output of both directions, which translates into "ADD" mode in Bidirectional.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#GravesBidirectionalLSTM" aria-expanded="false" aria-controls="GravesBidirectionalLSTM">Show methods</button>
-<div class="collapse" id="GravesBidirectionalLSTM"><div class="card card-body">
-
-#### gateActivationFunction 
+##### gateActivationFunction 
 ```java
 public Builder gateActivationFunction(String gateActivationFn) 
 ```
@@ -376,7 +373,7 @@ Note: This should be bounded to range 0-1: sigmoid or hard sigmoid, for example
 
 - param gateActivationFn Activation function for the LSTM gates
 
-#### gateActivationFunction 
+##### gateActivationFunction 
 ```java
 public Builder gateActivationFunction(Activation gateActivationFn) 
 ```
@@ -387,7 +384,7 @@ Note: This should be bounded to range 0-1: sigmoid or hard sigmoid, for example
 
 - param gateActivationFn Activation function for the LSTM gates
 
-#### gateActivationFunction 
+##### gateActivationFunction 
 ```java
 public Builder gateActivationFunction(IActivation gateActivationFn) 
 ```
@@ -399,7 +396,6 @@ Note: This should be bounded to range 0-1: sigmoid or hard sigmoid, for example
 - param gateActivationFn Activation function for the LSTM gates
 
 
-</div></div>
 
 
 ### GravesLSTM
@@ -444,10 +440,7 @@ Parameters are not shared here - there are 2 separate copies of the wrapped RNN 
 <br>
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Bidirectional" aria-expanded="false" aria-controls="Bidirectional">Show methods</button>
-<div class="collapse" id="Bidirectional"><div class="card card-body">
-
-#### getNOut 
+##### getNOut 
 ```java
 public long getNOut() 
 ```
@@ -463,7 +456,7 @@ In all cases except CONCAT, the output activations size is the same size as the 
 by this layer. In the CONCAT case, the output activations size (dimension 1) is 2x larger than the standard RNN's
 activations array.
 
-#### getUpdaterByParam 
+##### getUpdaterByParam 
 ```java
 public IUpdater getUpdaterByParam(String paramName) 
 ```
@@ -476,7 +469,6 @@ is not necessarily the case
 - return IUpdater for the parameter
 
 
-</div></div>
 
 
 ### LastTimeStep

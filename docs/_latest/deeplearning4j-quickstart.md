@@ -1,16 +1,16 @@
 ---
 title: Deeplearning4j Quickstart
-short_title: Maven Quickstart
+short_title: Quickstart
 description: Quickstart for Java using Maven
 category: Get Started
-weight: 0
+weight: 1
 ---
 
-## Get started with Maven
+## Get started
 
 This is everything you need to run DL4J examples and begin your own projects.
 
-We recommend that you join our [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j). Gitter is where you can request help and give feedback, but please do use this guide before asking questions we've answered below. If you are new to deep learning, we've included [a road map for beginners](./deeplearningforbeginners.html) with links to courses, readings and other resources.
+We recommend that you join our [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j). Gitter is where you can request help and give feedback, but please do use this guide before asking questions we've answered below. If you are new to deep learning, we've included [a road map for beginners](./deeplearning4j-beginners) with links to courses, readings and other resources.
 
 ### A Taste of Code
 

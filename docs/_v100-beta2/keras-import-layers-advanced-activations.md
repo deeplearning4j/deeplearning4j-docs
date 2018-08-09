@@ -14,7 +14,7 @@ weight: 4
 Imports LeakyReLU layer from Keras
 
 
-#### KerasLeakyReLU 
+##### KerasLeakyReLU 
 ```java
 public KerasLeakyReLU(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -28,10 +28,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Invalid Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasLeakyReLU" aria-expanded="false" aria-controls="KerasLeakyReLU">Show methods</button>
-<div class="collapse" id="KerasLeakyReLU"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -44,7 +41,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - throws UnsupportedKerasConfigurationException Invalid Keras config
 
-#### getActivationLayer 
+##### getActivationLayer 
 ```java
 public ActivationLayer getActivationLayer() 
 ```
@@ -55,7 +52,6 @@ Get DL4J ActivationLayer.
 - return ActivationLayer
 
 
-</div></div>
 
 
 ### KerasPReLU
@@ -64,7 +60,7 @@ Get DL4J ActivationLayer.
 Imports PReLU layer from Keras
 
 
-#### KerasPReLU 
+##### KerasPReLU 
 ```java
 public KerasPReLU(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -78,10 +74,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Invalid Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasPReLU" aria-expanded="false" aria-controls="KerasPReLU">Show methods</button>
-<div class="collapse" id="KerasPReLU"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -94,7 +87,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - throws UnsupportedKerasConfigurationException Invalid Keras config
 
-#### getPReLULayer 
+##### getPReLULayer 
 ```java
 public PReLULayer getPReLULayer() 
 ```
@@ -104,7 +97,7 @@ Get DL4J ActivationLayer.
 
 - return ActivationLayer
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -115,7 +108,6 @@ Set weights for layer.
 - param weights Dense layer weights
 
 
-</div></div>
 
 
 ### KerasThresholdedReLU
@@ -124,7 +116,7 @@ Set weights for layer.
 Imports ThresholdedReLU layer from Keras
 
 
-#### KerasThresholdedReLU 
+##### KerasThresholdedReLU 
 ```java
 public KerasThresholdedReLU(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -138,10 +130,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Invalid Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasThresholdedReLU" aria-expanded="false" aria-controls="KerasThresholdedReLU">Show methods</button>
-<div class="collapse" id="KerasThresholdedReLU"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -154,7 +143,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - throws UnsupportedKerasConfigurationException Invalid Keras config
 
-#### getActivationLayer 
+##### getActivationLayer 
 ```java
 public ActivationLayer getActivationLayer() 
 ```
@@ -164,5 +153,3 @@ Get DL4J ActivationLayer.
 
 - return ActivationLayer
 
-
-</div></div>

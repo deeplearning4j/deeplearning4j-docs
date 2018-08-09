@@ -61,10 +61,7 @@ DataAnalysis analysis = AnalyzeLocal.analyze(mySchema, csvRecordReader, maxHisto
 Analyse the specified data - returns a DataAnalysis object with summary information about each column
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AnalyzeLocal" aria-expanded="false" aria-controls="AnalyzeLocal">Show methods</button>
-<div class="collapse" id="AnalyzeLocal"><div class="card card-body">
-
-#### analyze 
+##### analyze 
 ```java
 public static DataAnalysis analyze(Schema schema, RecordReader rr, int maxHistogramBuckets)
 ```
@@ -76,7 +73,7 @@ Analyse the specified data - returns a DataAnalysis object with summary informat
 - param rr     Data to analyze
 - return DataAnalysis for data
 
-#### analyzeQualitySequence 
+##### analyzeQualitySequence 
 ```java
 public static DataQualityAnalysis analyzeQualitySequence(Schema schema, SequenceRecordReader data) 
 ```
@@ -87,7 +84,7 @@ Analyze the data quality of sequence data - provides a report on missing values,
 - param data   Data to analyze
 - return DataQualityAnalysis object
 
-#### analyzeQuality 
+##### analyzeQuality 
 ```java
 public static DataQualityAnalysis analyzeQuality(final Schema schema, final RecordReader data) 
 ```
@@ -99,7 +96,6 @@ Analyze the data quality of data - provides a report on missing values, values t
 - return DataQualityAnalysis object
 
 
-</div></div>
 
 
 ### AnalyzeSpark
@@ -109,10 +105,7 @@ AnalizeSpark: static methods for
 analyzing and
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AnalyzeSpark" aria-expanded="false" aria-controls="AnalyzeSpark">Show methods</button>
-<div class="collapse" id="AnalyzeSpark"><div class="card card-body">
-
-#### analyzeSequence 
+##### analyzeSequence 
 ```java
 public static SequenceDataAnalysis analyzeSequence(Schema schema, JavaRDD<List<List<Writable>>> data,
                     int maxHistogramBuckets) 
@@ -125,7 +118,7 @@ public static SequenceDataAnalysis analyzeSequence(Schema schema, JavaRDD<List<L
 - param maxHistogramBuckets
 - return
 
-#### analyze 
+##### analyze 
 ```java
 public static DataAnalysis analyze(Schema schema, JavaRDD<List<Writable>> data) 
 ```
@@ -137,7 +130,7 @@ Analyse the specified data - returns a DataAnalysis object with summary informat
 - param data   Data to analyze
 - return       DataAnalysis for data
 
-#### analyzeQualitySequence 
+##### analyzeQualitySequence 
 ```java
 public static DataQualityAnalysis analyzeQualitySequence(Schema schema, JavaRDD<List<List<Writable>>> data) 
 ```
@@ -151,7 +144,7 @@ Randomly sample values from a single column
 - param data          Data to sample from
 - return              A list of random samples
 
-#### analyzeQuality 
+##### analyzeQuality 
 ```java
 public static DataQualityAnalysis analyzeQuality(final Schema schema, final JavaRDD<List<Writable>> data) 
 ```
@@ -162,7 +155,7 @@ Analyze the data quality of data - provides a report on missing values, values t
 - param data   Data to analyze
 - return DataQualityAnalysis object
 
-#### min 
+##### min 
 ```java
 public static Writable min(JavaRDD<List<Writable>> allData, String columnName, Schema schema)
 ```
@@ -177,7 +170,7 @@ Values are considered invalid according to the Schema / ColumnMetaData
 - param data           Data
 - return               List of invalid examples
 
-#### max 
+##### max 
 ```java
 public static Writable max(JavaRDD<List<Writable>> allData, String columnName, Schema schema)
 ```
@@ -190,5 +183,3 @@ Get the maximum value for the specified column
 - param schema     Schema of the data
 - return           Maximum value for the column
 
-
-</div></div>

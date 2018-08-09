@@ -14,7 +14,7 @@ weight: 4
 Imports an Embedding layer from Keras.
 
 
-#### KerasEmbedding 
+##### KerasEmbedding 
 ```java
 public KerasEmbedding() throws UnsupportedKerasConfigurationException 
 ```
@@ -25,10 +25,7 @@ Pass through constructor for unit tests
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasEmbedding" aria-expanded="false" aria-controls="KerasEmbedding">Show methods</button>
-<div class="collapse" id="KerasEmbedding"><div class="card card-body">
-
-#### getEmbeddingLayer 
+##### getEmbeddingLayer 
 ```java
 public EmbeddingSequenceLayer getEmbeddingLayer() 
 ```
@@ -40,7 +37,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -52,7 +49,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### getNumParams 
+##### getNumParams 
 ```java
 public int getNumParams() 
 ```
@@ -62,7 +59,7 @@ Returns number of trainable parameters in layer.
 
 - return number of trainable parameters (1)
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -72,5 +69,3 @@ Set weights for layer.
 
 - param weights Embedding layer weights
 
-
-</div></div>

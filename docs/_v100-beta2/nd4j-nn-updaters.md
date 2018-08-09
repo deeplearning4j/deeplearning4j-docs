@@ -42,10 +42,7 @@ Ada delta updater. More robust adagrad that keeps track of a moving window
 average of the gradient rather than the every decaying learning rates of adagrad
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AdaDeltaUpdater" aria-expanded="false" aria-controls="AdaDeltaUpdater">Show methods</button>
-<div class="collapse" id="AdaDeltaUpdater"><div class="card card-body">
-
-#### applyUpdater 
+##### applyUpdater 
 ```java
 public void applyUpdater(INDArray gradient, int iteration, int epoch) 
 ```
@@ -60,7 +57,6 @@ updated gradient for
 - return the update gradient
 
 
-</div></div>
 
 
 ### AdaGradUpdater
@@ -72,10 +68,7 @@ Adapted from: http://xcorr.net/2014/01/23/adagrad-eliminating-learning-rates-in-
 See also http://cs231n.github.io/neural-networks-3/#ada
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AdaGradUpdater" aria-expanded="false" aria-controls="AdaGradUpdater">Show methods</button>
-<div class="collapse" id="AdaGradUpdater"><div class="card card-body">
-
-#### applyUpdater 
+##### applyUpdater 
 ```java
 public void applyUpdater(INDArray gradient, int iteration, int epoch) 
 ```
@@ -89,7 +82,6 @@ Note that each gradient passed in becomes adapted over time, hence the opName ad
 - param iteration
 
 
-</div></div>
 
 
 ### AdaMaxUpdater
@@ -99,10 +91,7 @@ The AdaMax updater, a variant of Adam.
 http://arxiv.org/abs/1412.6980
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AdaMaxUpdater" aria-expanded="false" aria-controls="AdaMaxUpdater">Show methods</button>
-<div class="collapse" id="AdaMaxUpdater"><div class="card card-body">
-
-#### applyUpdater 
+##### applyUpdater 
 ```java
 public void applyUpdater(INDArray gradient, int iteration, int epoch) 
 ```
@@ -115,7 +104,6 @@ Calculate the update based on the given gradient
 - return the gradient
 
 
-</div></div>
 
 
 ### AdamUpdater
@@ -125,10 +113,7 @@ The Adam updater.
 http://arxiv.org/abs/1412.6980
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AdamUpdater" aria-expanded="false" aria-controls="AdamUpdater">Show methods</button>
-<div class="collapse" id="AdamUpdater"><div class="card card-body">
-
-#### applyUpdater 
+##### applyUpdater 
 ```java
 public void applyUpdater(INDArray gradient, int iteration, int epoch) 
 ```
@@ -141,7 +126,6 @@ Calculate the update based on the given gradient
 - return the gradient
 
 
-</div></div>
 
 
 ### GradientUpdater
@@ -160,10 +144,7 @@ The Nadam updater.
 https://arxiv.org/pdf/1609.04747.pdf
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#NadamUpdater" aria-expanded="false" aria-controls="NadamUpdater">Show methods</button>
-<div class="collapse" id="NadamUpdater"><div class="card card-body">
-
-#### applyUpdater 
+##### applyUpdater 
 ```java
 public void applyUpdater(INDArray gradient, int iteration, int epoch) 
 ```
@@ -176,7 +157,6 @@ Calculate the update based on the given gradient
 - return the gradient
 
 
-</div></div>
 
 
 ### NesterovsUpdater
@@ -187,10 +167,7 @@ Keep track of the previous layer's gradient
 and use it as a way of updating the gradient.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#NesterovsUpdater" aria-expanded="false" aria-controls="NesterovsUpdater">Show methods</button>
-<div class="collapse" id="NesterovsUpdater"><div class="card card-body">
-
-#### applyUpdater 
+##### applyUpdater 
 ```java
 public void applyUpdater(INDArray gradient, int iteration, int epoch) 
 ```
@@ -203,7 +180,6 @@ Get the nesterov update
 - return
 
 
-</div></div>
 
 
 ### NoOpUpdater

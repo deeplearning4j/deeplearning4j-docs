@@ -14,7 +14,7 @@ weight: 4
 Imports a Keras LSTM layer as a DL4J LSTM layer.
 
 
-#### KerasLstm 
+##### KerasLstm 
 ```java
 public KerasLstm(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -26,10 +26,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasLstm" aria-expanded="false" aria-controls="KerasLstm">Show methods</button>
-<div class="collapse" id="KerasLstm"><div class="card card-body">
-
-#### getLSTMLayer 
+##### getLSTMLayer 
 ```java
 public Layer getLSTMLayer() 
 ```
@@ -41,7 +38,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -53,7 +50,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### getNumParams 
+##### getNumParams 
 ```java
 public int getNumParams() 
 ```
@@ -63,7 +60,7 @@ Returns number of trainable parameters in layer.
 
 - return number of trainable parameters (12)
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -76,7 +73,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras configuration exception
 - see org.deeplearning4j.nn.conf.InputPreProcessor
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -86,7 +83,7 @@ Set weights for layer.
 
 - param weights LSTM layer weights
 
-#### getUnroll 
+##### getUnroll 
 ```java
 public boolean getUnroll() 
 ```
@@ -96,7 +93,7 @@ Get whether LSTM layer should be unrolled (for truncated BPTT).
 
 - return whether to unroll the LSTM
 
-#### getGateActivationFromConfig 
+##### getGateActivationFromConfig 
 ```java
 public IActivation getGateActivationFromConfig(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -109,7 +106,7 @@ Get LSTM gate activation function from Keras layer configuration.
 - return LSTM inner activation function
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### getForgetBiasInitFromConfig 
+##### getForgetBiasInitFromConfig 
 ```java
 public double getForgetBiasInitFromConfig(Map<String, Object> layerConfig, boolean train)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -123,7 +120,6 @@ Get LSTM forget gate bias initialization from Keras layer configuration.
 - throws InvalidKerasConfigurationException Unsupported Keras config
 
 
-</div></div>
 
 
 ### KerasRnnUtils
@@ -132,10 +128,7 @@ Get LSTM forget gate bias initialization from Keras layer configuration.
 Utility functions for Keras RNN layers
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasRnnUtils" aria-expanded="false" aria-controls="KerasRnnUtils">Show methods</button>
-<div class="collapse" id="KerasRnnUtils"><div class="card card-body">
-
-#### getUnrollRecurrentLayer 
+##### getUnrollRecurrentLayer 
 ```java
 public static boolean getUnrollRecurrentLayer(KerasLayerConfiguration conf, Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException 
@@ -149,7 +142,7 @@ Get unroll parameter to decide whether to unroll RNN with BPTT or not.
 - return boolean unroll parameter
 - throws InvalidKerasConfigurationException Invalid Keras configuration
 
-#### getRecurrentDropout 
+##### getRecurrentDropout 
 ```java
 public static double getRecurrentDropout(KerasLayerConfiguration conf, Map<String, Object> layerConfig)
             throws UnsupportedKerasConfigurationException, InvalidKerasConfigurationException 
@@ -165,7 +158,6 @@ Non-zero dropout rates are currently not supported.
 - throws InvalidKerasConfigurationException Invalid Keras configuration
 
 
-</div></div>
 
 
 ### KerasSimpleRnn
@@ -174,7 +166,7 @@ Non-zero dropout rates are currently not supported.
 Imports a Keras SimpleRNN layer as a DL4J SimpleRnn layer.
 
 
-#### KerasSimpleRnn 
+##### KerasSimpleRnn 
 ```java
 public KerasSimpleRnn(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -186,10 +178,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasSimpleRnn" aria-expanded="false" aria-controls="KerasSimpleRnn">Show methods</button>
-<div class="collapse" id="KerasSimpleRnn"><div class="card card-body">
-
-#### getSimpleRnnLayer 
+##### getSimpleRnnLayer 
 ```java
 public Layer getSimpleRnnLayer() 
 ```
@@ -201,7 +190,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -213,7 +202,7 @@ Get layer output type.
 - return output type as InputType
 - throws InvalidKerasConfigurationException Invalid Keras config
 
-#### getNumParams 
+##### getNumParams 
 ```java
 public int getNumParams() 
 ```
@@ -223,7 +212,7 @@ Returns number of trainable parameters in layer.
 
 - return number of trainable parameters (12)
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -236,7 +225,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras configuration exception
 - see org.deeplearning4j.nn.conf.InputPreProcessor
 
-#### getUnroll 
+##### getUnroll 
 ```java
 public boolean getUnroll() 
 ```
@@ -246,7 +235,7 @@ Get whether SimpleRnn layer should be unrolled (for truncated BPTT).
 
 - return whether RNN should be unrolled (boolean)
 
-#### setWeights 
+##### setWeights 
 ```java
 public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigurationException 
 ```
@@ -257,5 +246,3 @@ Set weights for layer.
 - param weights Simple RNN weights
 - throws InvalidKerasConfigurationException Invalid Keras configuration exception
 
-
-</div></div>

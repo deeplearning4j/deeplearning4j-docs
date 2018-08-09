@@ -133,10 +133,7 @@ Currently, CalculateSortedRank can only be applied on standard (i.e., non-sequen
 Furthermore, the current implementation can only sort on one column
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CalculateSortedRank" aria-expanded="false" aria-controls="CalculateSortedRank">Show methods</button>
-<div class="collapse" id="CalculateSortedRank"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -147,7 +144,7 @@ public Schema transform(Schema inputSchema)
 - param sortOnColumn     Name of the column to sort on
 - param comparator       Comparator used to sort examples
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -158,7 +155,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -169,5 +166,3 @@ This will often be the same as the input
 
 - return the output column names
 
-
-</div></div>

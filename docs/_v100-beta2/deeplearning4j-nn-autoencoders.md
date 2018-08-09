@@ -36,10 +36,7 @@ Consequently, the sigmoid activation function should be used to bound activation
 functions that do not produce outputs in the range of 0 to 1 (including relu, tanh, and many others) should be avoided.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#BernoulliReconstructionDistribution" aria-expanded="false" aria-controls="BernoulliReconstructionDistribution">Show methods</button>
-<div class="collapse" id="BernoulliReconstructionDistribution"><div class="card card-body">
-
-#### hasLossFunction 
+##### hasLossFunction 
 ```java
 public boolean hasLossFunction() 
 ```
@@ -48,7 +45,6 @@ public boolean hasLossFunction()
 Create a BernoulliReconstructionDistribution with the default Sigmoid activation function
 
 
-</div></div>
 
 
 ### CompositeReconstructionDistribution
@@ -60,10 +56,7 @@ The typical use is to combine for example continuous and binary data in the same
 distributions for continuous variables. In either case, this class allows users to model (for example) the first 10 values
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CompositeReconstructionDistribution" aria-expanded="false" aria-controls="CompositeReconstructionDistribution">Show methods</button>
-<div class="collapse" id="CompositeReconstructionDistribution"><div class="card card-body">
-
-#### addDistribution 
+##### addDistribution 
 ```java
 public Builder addDistribution(int distributionSize, ReconstructionDistribution distribution) 
 ```
@@ -79,7 +72,6 @@ being modelled by distribution Y.
 - param distribution        Distribution to model data with
 
 
-</div></div>
 
 
 ### ExponentialReconstructionDistribution
@@ -97,10 +89,7 @@ Regarding the choice of activation function: the parameterization above supports
 therefore a symmetric activation function such as "identity" or perhaps "tanh" is preferred.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ExponentialReconstructionDistribution" aria-expanded="false" aria-controls="ExponentialReconstructionDistribution">Show methods</button>
-<div class="collapse" id="ExponentialReconstructionDistribution"><div class="card card-body">
-
-#### hasLossFunction 
+##### hasLossFunction 
 ```java
 public boolean hasLossFunction() 
 ```
@@ -109,7 +98,6 @@ public boolean hasLossFunction()
 - deprecated Use {- link #ExponentialReconstructionDistribution(Activation)}
 
 
-</div></div>
 
 
 ### GaussianReconstructionDistribution
@@ -126,10 +114,7 @@ For activation functions, identity and perhaps tanh are typical - though tanh (u
 possible value for mean and log variance. Asymmetric activation functions such as sigmoid or relu should be avoided.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#GaussianReconstructionDistribution" aria-expanded="false" aria-controls="GaussianReconstructionDistribution">Show methods</button>
-<div class="collapse" id="GaussianReconstructionDistribution"><div class="card card-body">
-
-#### hasLossFunction 
+##### hasLossFunction 
 ```java
 public boolean hasLossFunction() 
 ```
@@ -138,7 +123,6 @@ public boolean hasLossFunction()
 Create a GaussianReconstructionDistribution with the default identity activation function.
 
 
-</div></div>
 
 
 ### LossFunctionWrapper
@@ -177,10 +161,7 @@ Thus, scores reported during pretraining in DL4J are the negative of the variati
 The backpropagation and learning procedure is otherwise as described there.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#VariationalAutoencoder" aria-expanded="false" aria-controls="VariationalAutoencoder">Show methods</button>
-<div class="collapse" id="VariationalAutoencoder"><div class="card card-body">
-
-#### encoderLayerSizes 
+##### encoderLayerSizes 
 ```java
 public Builder encoderLayerSizes(int... encoderLayerSizes) 
 ```
@@ -191,7 +172,7 @@ Typically the number and size of the decoder layers (set via {- link #decoderLay
 
 - param encoderLayerSizes    Size of each encoder layer in the variational autoencoder
 
-#### decoderLayerSizes 
+##### decoderLayerSizes 
 ```java
 public Builder decoderLayerSizes(int... decoderLayerSizes) 
 ```
@@ -202,7 +183,7 @@ Typically the number and size of the decoder layers is similar to the encoder la
 
 - param decoderLayerSizes    Size of each deccoder layer in the variational autoencoder
 
-#### reconstructionDistribution 
+##### reconstructionDistribution 
 ```java
 public Builder reconstructionDistribution(ReconstructionDistribution distribution) 
 ```
@@ -215,7 +196,7 @@ This should be selected carefully based on the type of data being modelled. For 
 
 - param distribution    Reconstruction distribution
 
-#### lossFunction 
+##### lossFunction 
 ```java
 public Builder lossFunction(IActivation outputActivationFn, LossFunctions.LossFunction lossFunction) 
 ```
@@ -230,7 +211,7 @@ Note: clearly, setting the loss function here will override any previously set r
 - param outputActivationFn Activation function for the output/reconstruction
 - param lossFunction       Loss function to use
 
-#### lossFunction 
+##### lossFunction 
 ```java
 public Builder lossFunction(Activation outputActivationFn, LossFunctions.LossFunction lossFunction) 
 ```
@@ -245,7 +226,7 @@ Note: clearly, setting the loss function here will override any previously set r
 - param outputActivationFn Activation function for the output/reconstruction
 - param lossFunction       Loss function to use
 
-#### lossFunction 
+##### lossFunction 
 ```java
 public Builder lossFunction(IActivation outputActivationFn, ILossFunction lossFunction) 
 ```
@@ -260,7 +241,7 @@ Note: clearly, setting the loss function here will override any previously set r
 - param outputActivationFn Activation function for the output/reconstruction
 - param lossFunction       Loss function to use
 
-#### pzxActivationFn 
+##### pzxActivationFn 
 ```java
 public Builder pzxActivationFn(IActivation activationFunction) 
 ```
@@ -272,7 +253,7 @@ bounded in range [0,infinity).
 
 - param activationFunction    Activation function for p(z|x)
 
-#### pzxActivationFunction 
+##### pzxActivationFunction 
 ```java
 public Builder pzxActivationFunction(Activation activation) 
 ```
@@ -284,7 +265,7 @@ bounded in range [0,infinity).
 
 - param activation    Activation function for p(z|x)
 
-#### nOut 
+##### nOut 
 ```java
 public Builder nOut(int nOut) 
 ```
@@ -295,7 +276,7 @@ distribution P(Z|data) during pretraining.
 
 - param nOut    Size of P(Z|data) and output size
 
-#### numSamples 
+##### numSamples 
 ```java
 public Builder numSamples(int numSamples) 
 ```
@@ -308,5 +289,3 @@ datapoint can be set to 1 as long as the minibatch size M was large enough, e.g.
 
 - param numSamples    Number of samples per data point for pretraining
 
-
-</div></div>

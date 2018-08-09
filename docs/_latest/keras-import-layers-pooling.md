@@ -14,7 +14,7 @@ weight: 4
 Imports a Keras Pooling layer as a DL4J Subsampling layer.
 
 
-#### KerasGlobalPooling 
+##### KerasGlobalPooling 
 ```java
 public KerasGlobalPooling(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -28,10 +28,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasGlobalPooling" aria-expanded="false" aria-controls="KerasGlobalPooling">Show methods</button>
-<div class="collapse" id="KerasGlobalPooling"><div class="card card-body">
-
-#### getGlobalPoolingLayer 
+##### getGlobalPoolingLayer 
 ```java
 public GlobalPoolingLayer getGlobalPoolingLayer() 
 ```
@@ -44,7 +41,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getInputPreprocessor 
+##### getInputPreprocessor 
 ```java
 public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -57,7 +54,7 @@ Gets appropriate DL4J InputPreProcessor for given InputTypes.
 - throws InvalidKerasConfigurationException Invalid Keras config
 - see org.deeplearning4j.nn.conf.InputPreProcessor
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -70,7 +67,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasPooling1D
@@ -79,7 +75,7 @@ Get layer output type.
 Imports a Keras 1D Pooling layer as a DL4J Subsampling layer.
 
 
-#### KerasPooling1D 
+##### KerasPooling1D 
 ```java
 public KerasPooling1D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -93,10 +89,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasPooling1D" aria-expanded="false" aria-controls="KerasPooling1D">Show methods</button>
-<div class="collapse" id="KerasPooling1D"><div class="card card-body">
-
-#### getSubsampling1DLayer 
+##### getSubsampling1DLayer 
 ```java
 public Subsampling1DLayer getSubsampling1DLayer() 
 ```
@@ -109,7 +102,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -122,7 +115,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasPooling2D
@@ -131,7 +123,7 @@ Get layer output type.
 Imports a Keras 2D Pooling layer as a DL4J Subsampling layer.
 
 
-#### KerasPooling2D 
+##### KerasPooling2D 
 ```java
 public KerasPooling2D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -145,10 +137,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasPooling2D" aria-expanded="false" aria-controls="KerasPooling2D">Show methods</button>
-<div class="collapse" id="KerasPooling2D"><div class="card card-body">
-
-#### getSubsampling2DLayer 
+##### getSubsampling2DLayer 
 ```java
 public SubsamplingLayer getSubsampling2DLayer() 
 ```
@@ -161,7 +150,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -174,7 +163,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasPooling3D
@@ -183,7 +171,7 @@ Get layer output type.
 Imports a Keras 3D Pooling layer as a DL4J Subsampling3D layer.
 
 
-#### KerasPooling3D 
+##### KerasPooling3D 
 ```java
 public KerasPooling3D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -197,10 +185,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasPooling3D" aria-expanded="false" aria-controls="KerasPooling3D">Show methods</button>
-<div class="collapse" id="KerasPooling3D"><div class="card card-body">
-
-#### getSubsampling3DLayer 
+##### getSubsampling3DLayer 
 ```java
 public Subsampling3DLayer getSubsampling3DLayer() 
 ```
@@ -213,7 +198,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -226,7 +211,6 @@ Get layer output type.
 - throws InvalidKerasConfigurationException Invalid Keras config
 
 
-</div></div>
 
 
 ### KerasPoolingUtils
@@ -235,10 +219,7 @@ Get layer output type.
 Utility functionality for Keras pooling layers.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasPoolingUtils" aria-expanded="false" aria-controls="KerasPoolingUtils">Show methods</button>
-<div class="collapse" id="KerasPoolingUtils"><div class="card card-body">
-
-#### mapPoolingType 
+##### mapPoolingType 
 ```java
 public static PoolingType mapPoolingType(String className, KerasLayerConfiguration conf)
             throws UnsupportedKerasConfigurationException 
@@ -251,5 +232,3 @@ Map Keras pooling layers to DL4J pooling types.
 - return DL4J pooling type
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-
-</div></div>

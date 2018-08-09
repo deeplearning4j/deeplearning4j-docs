@@ -134,10 +134,7 @@ the same place. For a time series of length n, this would normally mean, that th
 the following padding is left untouched, but more complex masks are supported (e.g. [1, 0, 1, 0, ...].<br>
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ReverseTimeSeriesVertex" aria-expanded="false" aria-controls="ReverseTimeSeriesVertex">Show methods</button>
-<div class="collapse" id="ReverseTimeSeriesVertex"><div class="card card-body">
-
-#### setBackpropGradientsViewArray 
+##### setBackpropGradientsViewArray 
 ```java
 public void setBackpropGradientsViewArray(INDArray backpropGradientsViewArray) 
 ```
@@ -146,5 +143,3 @@ public void setBackpropGradientsViewArray(INDArray backpropGradientsViewArray)
 Gets the current mask array from the provided input
 - return The mask or null, if no input was provided
 
-
-</div></div>

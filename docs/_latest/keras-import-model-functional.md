@@ -83,7 +83,7 @@ Build ComputationGraph from Keras (Functional API) Model or
 Sequential model configuration.
 
 
-#### KerasModel 
+##### KerasModel 
 ```java
 public KerasModel(KerasModelBuilder modelBuilder)
             throws UnsupportedKerasConfigurationException, IOException, InvalidKerasConfigurationException 
@@ -98,10 +98,7 @@ public KerasModel(KerasModelBuilder modelBuilder)
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasModel" aria-expanded="false" aria-controls="KerasModel">Show methods</button>
-<div class="collapse" id="KerasModel"><div class="card card-body">
-
-#### getComputationGraphConfiguration 
+##### getComputationGraphConfiguration 
 ```java
 public ComputationGraphConfiguration getComputationGraphConfiguration()
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -121,7 +118,7 @@ will generate warnings but will be otherwise ignored.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getComputationGraph 
+##### getComputationGraph 
 ```java
 public ComputationGraph getComputationGraph()
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -132,7 +129,7 @@ Build a ComputationGraph from this Keras Model configuration and import weights.
 
 - return ComputationGraph
 
-#### getComputationGraph 
+##### getComputationGraph 
 ```java
 public ComputationGraph getComputationGraph(boolean importWeights)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
@@ -145,4 +142,3 @@ Build a ComputationGraph from this Keras Model configuration and (optionally) im
 - return ComputationGraph
 
 
-</div></div>

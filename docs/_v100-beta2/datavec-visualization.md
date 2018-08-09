@@ -13,10 +13,7 @@ weight: 10
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#HtmlAnalysis" aria-expanded="false" aria-controls="HtmlAnalysis">Show methods</button>
-<div class="collapse" id="HtmlAnalysis"><div class="card card-body">
-
-#### createHtmlAnalysisString 
+##### createHtmlAnalysisString 
 ```java
 public static String createHtmlAnalysisString(DataAnalysis analysis) throws Exception 
 ```
@@ -29,7 +26,7 @@ to a .html file.
 - param analysis Data analysis object to render
 - see #createHtmlAnalysisFile(DataAnalysis, File)
 
-#### createHtmlAnalysisFile 
+##### createHtmlAnalysisFile 
 ```java
 public static void createHtmlAnalysisFile(DataAnalysis dataAnalysis, File output) throws Exception 
 ```
@@ -42,7 +39,6 @@ numerical columns
 - param output       Output file (should have extension .html)
 
 
-</div></div>
 
 
 ### HtmlSequencePlotting
@@ -53,10 +49,7 @@ Each file contains only one sequence. Each column is plotted separately; only nu
 plotted.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#HtmlSequencePlotting" aria-expanded="false" aria-controls="HtmlSequencePlotting">Show methods</button>
-<div class="collapse" id="HtmlSequencePlotting"><div class="card card-body">
-
-#### createHtmlSequencePlots 
+##### createHtmlSequencePlots 
 ```java
 public static String createHtmlSequencePlots(String title, Schema schema, List<List<Writable>> sequence)
                     throws Exception 
@@ -70,7 +63,7 @@ Create a HTML file with plots for the given sequence.
 - param sequence Sequence to plot
 - return HTML file as a string
 
-#### createHtmlSequencePlotFile 
+##### createHtmlSequencePlotFile 
 ```java
 public static void createHtmlSequencePlotFile(String title, Schema schema, List<List<Writable>> sequence,
                     File output) throws Exception 
@@ -83,5 +76,3 @@ Create a HTML file with plots for the given sequence and write it to a file.
 - param schema   Schema for the data
 - param sequence Sequence to plot
 
-
-</div></div>

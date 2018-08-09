@@ -34,10 +34,7 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 3D convolution layer configuration
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Convolution3D" aria-expanded="false" aria-controls="Convolution3D">Show methods</button>
-<div class="collapse" id="Convolution3D"><div class="card card-body">
-
-#### hasBias 
+##### hasBias 
 ```java
 public boolean hasBias() 
 ```
@@ -48,7 +45,7 @@ The data format of the input and output data.
 the format could be “NCDHW”, the data storage order is: [batchSize, inputChannels, inputDepth, inputHeight, inputWidth].
 Alternatively, the format “NDHWC”, the data is stored in the order of: [batchSize, inputDepth, inputHeight, inputWidth, inputChannels].
 
-#### kernelSize 
+##### kernelSize 
 ```java
 public Builder kernelSize(int... kernelSize) 
 ```
@@ -59,7 +56,7 @@ Set kernel size for 3D convolutions in (depth, height, width) order
 - param kernelSize kernel size
 - return 3D convolution layer builder
 
-#### stride 
+##### stride 
 ```java
 public Builder stride(int... stride) 
 ```
@@ -70,7 +67,7 @@ Set stride size for 3D convolutions in (depth, height, width) order
 - param stride kernel size
 - return 3D convolution layer builder
 
-#### padding 
+##### padding 
 ```java
 public Builder padding(int... padding) 
 ```
@@ -81,7 +78,7 @@ Set padding size for 3D convolutions in (depth, height, width) order
 - param padding kernel size
 - return 3D convolution layer builder
 
-#### dilation 
+##### dilation 
 ```java
 public Builder dilation(int... dilation) 
 ```
@@ -93,7 +90,6 @@ Set dilation size for 3D convolutions in (depth, height, width) order
 - return 3D convolution layer builder
 
 
-</div></div>
 
 
 ### Deconvolution2D
@@ -111,10 +107,7 @@ For an intuitive guide to convolution arithmetic and shapes, see:
 https://arxiv.org/abs/1603.07285v1
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Deconvolution2D" aria-expanded="false" aria-controls="Deconvolution2D">Show methods</button>
-<div class="collapse" id="Deconvolution2D"><div class="card card-body">
-
-#### hasBias 
+##### hasBias 
 ```java
 public boolean hasBias()
 ```
@@ -126,7 +119,7 @@ nOut is the number of filters to be used in the net or in other words the channe
 The builder specifies the filter/kernel size, the stride and padding
 The pooling layer takes the kernel size
 
-#### convolutionMode 
+##### convolutionMode 
 ```java
 public Builder convolutionMode(ConvolutionMode convolutionMode) 
 ```
@@ -137,7 +130,7 @@ See {- link ConvolutionMode} for more details
 
 - param convolutionMode    Convolution mode for layer
 
-#### kernelSize 
+##### kernelSize 
 ```java
 public Builder kernelSize(int... kernelSize) 
 ```
@@ -150,7 +143,6 @@ kernel
 - return
 
 
-</div></div>
 
 
 ### DepthwiseConvolution2D
@@ -164,10 +156,7 @@ specify the number of outputs per input map. This convolution
 is carried out with the specified kernel sizes, stride and padding values.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#DepthwiseConvolution2D" aria-expanded="false" aria-controls="DepthwiseConvolution2D">Show methods</button>
-<div class="collapse" id="DepthwiseConvolution2D"><div class="card card-body">
-
-#### depthMultiplier 
+##### depthMultiplier 
 ```java
 public Builder depthMultiplier(int depthMultiplier) 
 ```
@@ -179,7 +168,7 @@ Set channels multiplier for depth-wise convolution
 outputs in channels-wise step.
 - return Builder
 
-#### kernelSize 
+##### kernelSize 
 ```java
 public Builder kernelSize(int... kernelSize) 
 ```
@@ -193,7 +182,6 @@ kernel
 - return
 
 
-</div></div>
 
 
 ### SeparableConvolution2D
@@ -217,10 +205,7 @@ The result of chaining these two operations will result in a tensor of the
 same shape as that for a standard conv2d operation.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SeparableConvolution2D" aria-expanded="false" aria-controls="SeparableConvolution2D">Show methods</button>
-<div class="collapse" id="SeparableConvolution2D"><div class="card card-body">
-
-#### hasBias 
+##### hasBias 
 ```java
 public boolean hasBias()
 ```
@@ -232,7 +217,7 @@ nOut is the number of filters to be used in the net or in other words the channe
 The builder specifies the filter/kernel size, the stride and padding
 The pooling layer takes the kernel size
 
-#### constrainPointWise 
+##### constrainPointWise 
 ```java
 public Builder constrainPointWise(LayerConstraint... constraints) 
 ```
@@ -244,7 +229,7 @@ Set channels multiplier of channels-wise step in separable convolution
 outputs in channels-wise step.
 - return Builder
 
-#### kernelSize 
+##### kernelSize 
 ```java
 public Builder kernelSize(int... kernelSize) 
 ```
@@ -257,7 +242,6 @@ kernel
 - return
 
 
-</div></div>
 
 
 ### Cropping1D
@@ -267,10 +251,7 @@ Cropping layer for convolutional (1d) neural networks.
 Allows cropping to be done separately for top/bottom
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Cropping1D" aria-expanded="false" aria-controls="Cropping1D">Show methods</button>
-<div class="collapse" id="Cropping1D"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(int layerIndex, InputType inputType) 
 ```
@@ -278,7 +259,7 @@ public InputType getOutputType(int layerIndex, InputType inputType)
 
 - param cropTopBottom Amount of cropping to apply to both the top and the bottom of the input activations
 
-#### build 
+##### build 
 ```java
 public Cropping1D build() 
 ```
@@ -287,7 +268,6 @@ public Cropping1D build()
 - param cropping Cropping amount for top/bottom(in that order). Must be length 1 or 2 array.
 
 
-</div></div>
 
 
 ### Cropping2D
@@ -297,10 +277,7 @@ Cropping layer for convolutional (2d) neural networks.
 Allows cropping to be done separately for top/bottom/left/right
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Cropping2D" aria-expanded="false" aria-controls="Cropping2D">Show methods</button>
-<div class="collapse" id="Cropping2D"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(int layerIndex, InputType inputType) 
 ```
@@ -309,7 +286,7 @@ public InputType getOutputType(int layerIndex, InputType inputType)
 - param cropTopBottom Amount of cropping to apply to both the top and the bottom of the input activations
 - param cropLeftRight Amount of cropping to apply to both the left and the right of the input activations
 
-#### build 
+##### build 
 ```java
 public Cropping2D build() 
 ```
@@ -318,7 +295,6 @@ public Cropping2D build()
 - param cropping Cropping amount for top/bottom/left/right (in that order). Must be length 4 array.
 
 
-</div></div>
 
 
 ### Cropping3D
@@ -329,10 +305,7 @@ Allows cropping to be done separately for upper and lower bounds of
 depth, height and width dimensions.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Cropping3D" aria-expanded="false" aria-controls="Cropping3D">Show methods</button>
-<div class="collapse" id="Cropping3D"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(int layerIndex, InputType inputType) 
 ```
@@ -342,7 +315,7 @@ public InputType getOutputType(int layerIndex, InputType inputType)
 - param cropHeight Amount of cropping to apply to both height boundaries of the input activations
 - param cropWidth  Amount of cropping to apply to both width boundaries of the input activations
 
-#### build 
+##### build 
 ```java
 public Cropping3D build() 
 ```
@@ -353,5 +326,3 @@ crop depth, crop height, crop width or
 crop left depth, crop right depth, crop left height, crop right height, crop left width,
 crop right width
 
-
-</div></div>

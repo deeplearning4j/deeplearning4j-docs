@@ -14,7 +14,7 @@ weight: 4
 Keras wrapper for DL4J dropout layer with AlphaDropout.
 
 
-#### KerasAlphaDropout 
+##### KerasAlphaDropout 
 ```java
 public KerasAlphaDropout(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -26,10 +26,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasAlphaDropout" aria-expanded="false" aria-controls="KerasAlphaDropout">Show methods</button>
-<div class="collapse" id="KerasAlphaDropout"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -41,7 +38,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getAlphaDropoutLayer 
+##### getAlphaDropoutLayer 
 ```java
 public DropoutLayer getAlphaDropoutLayer() 
 ```
@@ -52,7 +49,6 @@ Get DL4J DropoutLayer with Alpha dropout.
 - return DropoutLayer
 
 
-</div></div>
 
 
 ### KerasGaussianDropout
@@ -61,7 +57,7 @@ Get DL4J DropoutLayer with Alpha dropout.
 Keras wrapper for DL4J dropout layer with GaussianDropout.
 
 
-#### KerasGaussianDropout 
+##### KerasGaussianDropout 
 ```java
 public KerasGaussianDropout(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -73,10 +69,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Invalid Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasGaussianDropout" aria-expanded="false" aria-controls="KerasGaussianDropout">Show methods</button>
-<div class="collapse" id="KerasGaussianDropout"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -88,7 +81,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getGaussianDropoutLayer 
+##### getGaussianDropoutLayer 
 ```java
 public DropoutLayer getGaussianDropoutLayer() 
 ```
@@ -99,7 +92,6 @@ Get DL4J DropoutLayer with Gaussian dropout.
 - return DropoutLayer
 
 
-</div></div>
 
 
 ### KerasGaussianNoise
@@ -108,7 +100,7 @@ Get DL4J DropoutLayer with Gaussian dropout.
 Keras wrapper for DL4J dropout layer with GaussianNoise.
 
 
-#### KerasGaussianNoise 
+##### KerasGaussianNoise 
 ```java
 public KerasGaussianNoise(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
@@ -120,10 +112,7 @@ Pass-through constructor from KerasLayer
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#KerasGaussianNoise" aria-expanded="false" aria-controls="KerasGaussianNoise">Show methods</button>
-<div class="collapse" id="KerasGaussianNoise"><div class="card card-body">
-
-#### getOutputType 
+##### getOutputType 
 ```java
 public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
 ```
@@ -135,7 +124,7 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-#### getGaussianNoiseLayer 
+##### getGaussianNoiseLayer 
 ```java
 public DropoutLayer getGaussianNoiseLayer() 
 ```
@@ -145,5 +134,3 @@ Get DL4J DropoutLayer with Gaussian dropout.
 
 - return DropoutLayer
 
-
-</div></div>

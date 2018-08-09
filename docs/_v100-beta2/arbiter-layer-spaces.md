@@ -112,10 +112,7 @@ Layer space for LSTM layers
 
 Use hiddenLayerSize instead
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#OCNNLayerSpace" aria-expanded="false" aria-controls="OCNNLayerSpace">Show methods</button>
-<div class="collapse" id="OCNNLayerSpace"><div class="card card-body">
-
-#### numHidden 
+##### numHidden 
 ```java
 public Builder numHidden(int numHidden) 
 ```
@@ -126,7 +123,6 @@ Use hiddenLayerSize instead
 - return
 
 
-</div></div>
 
 
 ### OutputLayerSpace

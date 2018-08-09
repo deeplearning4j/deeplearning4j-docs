@@ -63,10 +63,7 @@ DataVec comes with a few `Schema` classes and helper utilities for 2D and sequen
 Join class: used to specify a join (like an SQL join)
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Join" aria-expanded="false" aria-controls="Join">Show methods</button>
-<div class="collapse" id="Join"><div class="card card-body">
-
-#### setSchemas 
+##### setSchemas 
 ```java
 public Builder setSchemas(Schema left, Schema right) 
 ```
@@ -81,7 +78,7 @@ RightOuter: Return all examples from the right data, whether there is a matching
 FullOuter: return all examples from both left/right, whether there is a matching value from the other side or not.
 (If not: other values will have NullWritable instead)
 
-#### setKeyColumns 
+##### setKeyColumns 
 ```java
 public Builder setKeyColumns(String... keyColumnNames) 
 ```
@@ -89,7 +86,7 @@ public Builder setKeyColumns(String... keyColumnNames)
 
 - deprecated Use {- link #setJoinColumns(String...)}
 
-#### setKeyColumnsLeft 
+##### setKeyColumnsLeft 
 ```java
 public Builder setKeyColumnsLeft(String... keyColumnNames) 
 ```
@@ -97,7 +94,7 @@ public Builder setKeyColumnsLeft(String... keyColumnNames)
 
 - deprecated Use {- link #setJoinColumnsLeft(String...)}
 
-#### setKeyColumnsRight 
+##### setKeyColumnsRight 
 ```java
 public Builder setKeyColumnsRight(String... keyColumnNames) 
 ```
@@ -105,7 +102,7 @@ public Builder setKeyColumnsRight(String... keyColumnNames)
 
 - deprecated Use {- link #setJoinColumnsRight(String...)}
 
-#### setJoinColumnsLeft 
+##### setJoinColumnsLeft 
 ```java
 public Builder setJoinColumnsLeft(String... joinColumnNames) 
 ```
@@ -115,7 +112,7 @@ Specify the names of the columns to join on, for the left data)
 The idea: join examples where firstDataValues(joinColumNamesLeft[i]) == secondDataValues(joinColumnNamesRight[i]) for all i
 - param joinColumnNames Names of the columns to join on (for left data)
 
-#### setJoinColumnsRight 
+##### setJoinColumnsRight 
 ```java
 public Builder setJoinColumnsRight(String... joinColumnNames) 
 ```
@@ -126,7 +123,6 @@ The idea: join examples where firstDataValues(joinColumNamesLeft[i]) == secondDa
 - param joinColumnNames Names of the columns to join on (for left data)
 
 
-</div></div>
 
 
 ### InferredSchema
@@ -154,10 +150,7 @@ restrictions on the allowable values for each column.<br>
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Schema" aria-expanded="false" aria-controls="Schema">Show methods</button>
-<div class="collapse" id="Schema"><div class="card card-body">
-
-#### sameTypes 
+##### sameTypes 
 ```java
 public boolean sameTypes(Schema schema) 
 ```
@@ -168,7 +161,7 @@ given metadata
 - param columnMetaData the metadata to create the
 schema from
 
-#### newSchema 
+##### newSchema 
 ```java
 public Schema newSchema(List<ColumnMetaData> columnMetaData) 
 ```
@@ -183,7 +176,7 @@ to identify what a process will do to a given {- link Schema}.
 - return the metadata that is different (in order)
 between this schema and the other schema
 
-#### numColumns 
+##### numColumns 
 ```java
 public int numColumns() 
 ```
@@ -193,7 +186,7 @@ Returns the number of columns or fields
 for this schema
 - return the number of columns or fields for this schema
 
-#### getName 
+##### getName 
 ```java
 public String getName(int column) 
 ```
@@ -205,7 +198,7 @@ given column at the specified index
 to get the name for
 - return the name of the column at the specified index
 
-#### getType 
+##### getType 
 ```java
 public ColumnType getType(int column) 
 ```
@@ -216,7 +209,7 @@ for the column at the specified index
 - param column the index of the column to get the type for
 - return the type of the column to at the specified inde
 
-#### getType 
+##### getType 
 ```java
 public ColumnType getType(String columnName) 
 ```
@@ -227,7 +220,7 @@ for the column at the specified index
 - param columnName the index of the column to get the type for
 - return the type of the column to at the specified inde
 
-#### getMetaData 
+##### getMetaData 
 ```java
 public ColumnMetaData getMetaData(int column) 
 ```
@@ -239,7 +232,7 @@ at the specified column index
 to get the metadata for
 - return the metadata at ths specified index
 
-#### getMetaData 
+##### getMetaData 
 ```java
 public ColumnMetaData getMetaData(String column) 
 ```
@@ -250,7 +243,7 @@ column name
 - param column the name of the column to get metadata for
 - return the metadata for the given column name
 
-#### getIndexOfColumn 
+##### getIndexOfColumn 
 ```java
 public int getIndexOfColumn(String columnName) 
 ```
@@ -260,7 +253,7 @@ Return a copy of the list column names
 - return a copy of the list of column names
 for this schema
 
-#### hasColumn 
+##### hasColumn 
 ```java
 public boolean hasColumn(String columnName) 
 ```
@@ -271,7 +264,7 @@ Return the indices of the columns, given their namess
 - param columnNames Name of the columns to get indices for
 - return Column indexes
 
-#### toJson 
+##### toJson 
 ```java
 public String toJson() 
 ```
@@ -280,7 +273,7 @@ public String toJson()
 Serialize this schema to json
 - return a json representation of this schema
 
-#### toYaml 
+##### toYaml 
 ```java
 public String toYaml() 
 ```
@@ -289,7 +282,7 @@ public String toYaml()
 Serialize this schema to yaml
 - return the yaml representation of this schema
 
-#### fromJson 
+##### fromJson 
 ```java
 public static Schema fromJson(String json) 
 ```
@@ -299,7 +292,7 @@ Create a schema from a given json string
 - param json the json to create the schema from
 - return the created schema based on the json
 
-#### fromYaml 
+##### fromYaml 
 ```java
 public static Schema fromYaml(String yaml) 
 ```
@@ -310,7 +303,7 @@ yaml string
 - param yaml the yaml to create the schema from
 - return the created schema based on the yaml
 
-#### addColumnFloat 
+##### addColumnFloat 
 ```java
 public Builder addColumnFloat(String name) 
 ```
@@ -320,7 +313,7 @@ Add a Float column with no restrictions on the allowable values, except for no N
 
 - param name Name of the column
 
-#### addColumnFloat 
+##### addColumnFloat 
 ```java
 public Builder addColumnFloat(String name, Float minAllowedValue, Float maxAllowedValue) 
 ```
@@ -333,7 +326,7 @@ Add a Float column with the specified restrictions (and no NaN/Infinite values a
 - param maxAllowedValue Maximum allowed value (inclusive). If null: no restriction
 - return
 
-#### addColumnFloat 
+##### addColumnFloat 
 ```java
 public Builder addColumnFloat(String name, Float minAllowedValue, Float maxAllowedValue, boolean allowNaN,
                                        boolean allowInfinite) 
@@ -348,7 +341,7 @@ Add a Float column with the specified restrictions
 - param allowNaN        If false: don't allow NaN values. If true: allow.
 - param allowInfinite   If false: don't allow infinite values. If true: allow
 
-#### addColumnsFloat 
+##### addColumnsFloat 
 ```java
 public Builder addColumnsFloat(String... columnNames) 
 ```
@@ -358,7 +351,7 @@ Add multiple Float columns with no restrictions on the allowable values of the c
 
 - param columnNames Names of the columns to add
 
-#### addColumnsFloat 
+##### addColumnsFloat 
 ```java
 public Builder addColumnsFloat(String pattern, int minIdxInclusive, int maxIdxInclusive) 
 ```
@@ -372,7 +365,7 @@ For example, to add columns "myFloatCol_0", "myFloatCol_1", "myFloatCol_2", use
 - param minIdxInclusive Minimum column index to use (inclusive)
 - param maxIdxInclusive Maximum column index to use (inclusive)
 
-#### addColumnsFloat 
+##### addColumnsFloat 
 ```java
 public Builder addColumnsFloat(String pattern, int minIdxInclusive, int maxIdxInclusive,
                                         Float minAllowedValue, Float maxAllowedValue, boolean allowNaN, boolean allowInfinite) 
@@ -391,7 +384,7 @@ For example, to add columns "myFloatCol_0", "myFloatCol_1", "myFloatCol_2", use
 - param allowNaN        If false: don't allow NaN values. If true: allow.
 - param allowInfinite   If false: don't allow infinite values. If true: allow
 
-#### addColumnDouble 
+##### addColumnDouble 
 ```java
 public Builder addColumnDouble(String name) 
 ```
@@ -401,7 +394,7 @@ Add a Double column with no restrictions on the allowable values, except for no 
 
 - param name Name of the column
 
-#### addColumnDouble 
+##### addColumnDouble 
 ```java
 public Builder addColumnDouble(String name, Double minAllowedValue, Double maxAllowedValue) 
 ```
@@ -414,7 +407,7 @@ Add a Double column with the specified restrictions (and no NaN/Infinite values 
 - param maxAllowedValue Maximum allowed value (inclusive). If null: no restriction
 - return
 
-#### addColumnDouble 
+##### addColumnDouble 
 ```java
 public Builder addColumnDouble(String name, Double minAllowedValue, Double maxAllowedValue, boolean allowNaN,
                         boolean allowInfinite) 
@@ -429,7 +422,7 @@ Add a Double column with the specified restrictions
 - param allowNaN        If false: don't allow NaN values. If true: allow.
 - param allowInfinite   If false: don't allow infinite values. If true: allow
 
-#### addColumnsDouble 
+##### addColumnsDouble 
 ```java
 public Builder addColumnsDouble(String... columnNames) 
 ```
@@ -439,7 +432,7 @@ Add multiple Double columns with no restrictions on the allowable values of the 
 
 - param columnNames Names of the columns to add
 
-#### addColumnsDouble 
+##### addColumnsDouble 
 ```java
 public Builder addColumnsDouble(String pattern, int minIdxInclusive, int maxIdxInclusive) 
 ```
@@ -453,7 +446,7 @@ For example, to add columns "myDoubleCol_0", "myDoubleCol_1", "myDoubleCol_2", u
 - param minIdxInclusive Minimum column index to use (inclusive)
 - param maxIdxInclusive Maximum column index to use (inclusive)
 
-#### addColumnsDouble 
+##### addColumnsDouble 
 ```java
 public Builder addColumnsDouble(String pattern, int minIdxInclusive, int maxIdxInclusive,
                         Double minAllowedValue, Double maxAllowedValue, boolean allowNaN, boolean allowInfinite) 
@@ -472,7 +465,7 @@ For example, to add columns "myDoubleCol_0", "myDoubleCol_1", "myDoubleCol_2", u
 - param allowNaN        If false: don't allow NaN values. If true: allow.
 - param allowInfinite   If false: don't allow infinite values. If true: allow
 
-#### addColumnInteger 
+##### addColumnInteger 
 ```java
 public Builder addColumnInteger(String name) 
 ```
@@ -482,7 +475,7 @@ Add an Integer column with no restrictions on the allowable values
 
 - param name Name of the column
 
-#### addColumnInteger 
+##### addColumnInteger 
 ```java
 public Builder addColumnInteger(String name, Integer minAllowedValue, Integer maxAllowedValue) 
 ```
@@ -494,7 +487,7 @@ Add an Integer column with the specified min/max allowable values
 - param minAllowedValue Minimum allowed value (inclusive). If null: no restriction
 - param maxAllowedValue Maximum allowed value (inclusive). If null: no restriction
 
-#### addColumnsInteger 
+##### addColumnsInteger 
 ```java
 public Builder addColumnsInteger(String... names) 
 ```
@@ -504,7 +497,7 @@ Add multiple Integer columns with no restrictions on the min/max allowable value
 
 - param names Names of the integer columns to add
 
-#### addColumnsInteger 
+##### addColumnsInteger 
 ```java
 public Builder addColumnsInteger(String pattern, int minIdxInclusive, int maxIdxInclusive) 
 ```
@@ -518,7 +511,7 @@ For example, to add columns "myIntegerCol_0", "myIntegerCol_1", "myIntegerCol_2"
 - param minIdxInclusive Minimum column index to use (inclusive)
 - param maxIdxInclusive Maximum column index to use (inclusive)
 
-#### addColumnsInteger 
+##### addColumnsInteger 
 ```java
 public Builder addColumnsInteger(String pattern, int minIdxInclusive, int maxIdxInclusive,
                         Integer minAllowedValue, Integer maxAllowedValue) 
@@ -535,7 +528,7 @@ For example, to add columns "myIntegerCol_0", "myIntegerCol_1", "myIntegerCol_2"
 - param minAllowedValue Minimum allowed value (inclusive). If null: no restriction
 - param maxAllowedValue Maximum allowed value (inclusive). If null: no restriction
 
-#### addColumnCategorical 
+##### addColumnCategorical 
 ```java
 public Builder addColumnCategorical(String name, String... stateNames) 
 ```
@@ -546,7 +539,7 @@ Add a Categorical column, with the specified state names
 - param name       Name of the column
 - param stateNames Names of the allowable states for this categorical column
 
-#### addColumnCategorical 
+##### addColumnCategorical 
 ```java
 public Builder addColumnCategorical(String name, List<String> stateNames) 
 ```
@@ -557,7 +550,7 @@ Add a Categorical column, with the specified state names
 - param name       Name of the column
 - param stateNames Names of the allowable states for this categorical column
 
-#### addColumnLong 
+##### addColumnLong 
 ```java
 public Builder addColumnLong(String name) 
 ```
@@ -567,7 +560,7 @@ Add a Long column, with no restrictions on the min/max values
 
 - param name Name of the column
 
-#### addColumnLong 
+##### addColumnLong 
 ```java
 public Builder addColumnLong(String name, Long minAllowedValue, Long maxAllowedValue) 
 ```
@@ -579,7 +572,7 @@ Add a Long column with the specified min/max allowable values
 - param minAllowedValue Minimum allowed value (inclusive). If null: no restriction
 - param maxAllowedValue Maximum allowed value (inclusive). If null: no restriction
 
-#### addColumnsLong 
+##### addColumnsLong 
 ```java
 public Builder addColumnsLong(String... names) 
 ```
@@ -589,7 +582,7 @@ Add multiple Long columns, with no restrictions on the allowable values
 
 - param names Names of the Long columns to add
 
-#### addColumnsLong 
+##### addColumnsLong 
 ```java
 public Builder addColumnsLong(String pattern, int minIdxInclusive, int maxIdxInclusive) 
 ```
@@ -603,7 +596,7 @@ For example, to add columns "myLongCol_0", "myLongCol_1", "myLongCol_2", use
 - param minIdxInclusive Minimum column index to use (inclusive)
 - param maxIdxInclusive Maximum column index to use (inclusive)
 
-#### addColumnsLong 
+##### addColumnsLong 
 ```java
 public Builder addColumnsLong(String pattern, int minIdxInclusive, int maxIdxInclusive, Long minAllowedValue,
                         Long maxAllowedValue) 
@@ -620,7 +613,7 @@ For example, to add columns "myLongCol_0", "myLongCol_1", "myLongCol_2", use
 - param minAllowedValue Minimum allowed value (inclusive). If null: no restriction
 - param maxAllowedValue Maximum allowed value (inclusive). If null: no restriction
 
-#### addColumn 
+##### addColumn 
 ```java
 public Builder addColumn(ColumnMetaData metaData) 
 ```
@@ -630,7 +623,7 @@ Add a column
 
 - param metaData metadata for this column
 
-#### addColumnString 
+##### addColumnString 
 ```java
 public Builder addColumnString(String name) 
 ```
@@ -640,7 +633,7 @@ Add a String column with no restrictions on the allowable values.
 
 - param name Name of  the column
 
-#### addColumnsString 
+##### addColumnsString 
 ```java
 public Builder addColumnsString(String... columnNames) 
 ```
@@ -650,7 +643,7 @@ Add multiple String columns with no restrictions on the allowable values
 
 - param columnNames Names of the String columns to add
 
-#### addColumnString 
+##### addColumnString 
 ```java
 public Builder addColumnString(String name, String regex, Integer minAllowableLength,
                         Integer maxAllowableLength) 
@@ -664,7 +657,7 @@ Add a String column with the specified restrictions
 - param minAllowableLength Minimum allowable length for the String to be considered valid
 - param maxAllowableLength Maximum allowable length for the String to be considered valid
 
-#### addColumnsString 
+##### addColumnsString 
 ```java
 public Builder addColumnsString(String pattern, int minIdxInclusive, int maxIdxInclusive) 
 ```
@@ -678,7 +671,7 @@ For example, to add columns "myStringCol_0", "myStringCol_1", "myStringCol_2", u
 - param minIdxInclusive Minimum column index to use (inclusive)
 - param maxIdxInclusive Maximum column index to use (inclusive)
 
-#### addColumnsString 
+##### addColumnsString 
 ```java
 public Builder addColumnsString(String pattern, int minIdxInclusive, int maxIdxInclusive, String regex,
                         Integer minAllowedLength, Integer maxAllowedLength) 
@@ -696,7 +689,7 @@ For example, to add columns "myStringCol_0", "myStringCol_1", "myStringCol_2", u
 - param minAllowedLength Minimum allowed length of strings (inclusive). If null: no restriction
 - param maxAllowedLength Maximum allowed length of strings (inclusive). If null: no restriction
 
-#### addColumnTime 
+##### addColumnTime 
 ```java
 public Builder addColumnTime(String columnName, TimeZone timeZone) 
 ```
@@ -709,7 +702,7 @@ use String columns + StringToTimeTransform
 - param columnName Name of the column
 - param timeZone   Time zone of the time column
 
-#### addColumnTime 
+##### addColumnTime 
 ```java
 public Builder addColumnTime(String columnName, DateTimeZone timeZone) 
 ```
@@ -722,7 +715,7 @@ use String columns + StringToTimeTransform
 - param columnName Name of the column
 - param timeZone   Time zone of the time column
 
-#### addColumnTime 
+##### addColumnTime 
 ```java
 public Builder addColumnTime(String columnName, DateTimeZone timeZone, Long minValidValue, Long maxValidValue) 
 ```
@@ -737,7 +730,7 @@ use String columns + StringToTimeTransform
 - param minValidValue Minumum allowable time (in milliseconds). May be null.
 - param maxValidValue Maximum allowable time (in milliseconds). May be null.
 
-#### addColumnNDArray 
+##### addColumnNDArray 
 ```java
 public Builder addColumnNDArray(String columnName, long[] shape) 
 ```
@@ -748,7 +741,7 @@ Add a NDArray column
 - param columnName Name of the column
 - param shape      shape of the NDArray column. Use -1 in entries to specify as "variable length" in that dimension
 
-#### build 
+##### build 
 ```java
 public Schema build() 
 ```
@@ -756,7 +749,7 @@ public Schema build()
 
 Create the Schema
 
-#### inferMultiple 
+##### inferMultiple 
 ```java
 public static Schema inferMultiple(List<List<Writable>> record) 
 ```
@@ -767,7 +760,7 @@ The column names are based on indexing.
 - param record the record to infer from
 - return the infered schema
 
-#### infer 
+##### infer 
 ```java
 public static Schema infer(List<Writable> record) 
 ```
@@ -779,7 +772,6 @@ The column names are based on indexing.
 - return the infered schema
 
 
-</div></div>
 
 
 ### SequenceSchema
@@ -787,10 +779,7 @@ The column names are based on indexing.
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SequenceSchema" aria-expanded="false" aria-controls="SequenceSchema">Show methods</button>
-<div class="collapse" id="SequenceSchema"><div class="card card-body">
-
-#### inferSequenceMulti 
+##### inferSequenceMulti 
 ```java
 public static SequenceSchema inferSequenceMulti(List<List<List<Writable>>> record) 
 ```
@@ -802,7 +791,7 @@ on the record
 - return the inferred sequence schema
 
 
-#### inferSequence 
+##### inferSequence 
 ```java
 public static SequenceSchema inferSequence(List<List<Writable>> record) 
 ```
@@ -814,5 +803,3 @@ on the record
 - return the inferred sequence schema
 
 
-
-</div></div>

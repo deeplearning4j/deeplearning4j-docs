@@ -18,10 +18,7 @@ these can be chained together,
 like NOT(OR(AND(...),AND(...)))
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#BooleanCondition" aria-expanded="false" aria-controls="BooleanCondition">Show methods</button>
-<div class="collapse" id="BooleanCondition"><div class="card card-body">
-
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -32,7 +29,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -43,7 +40,7 @@ This will often be the same as the input
 
 - return the output column names
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -56,7 +53,7 @@ the condition for
 - return true if the condition is met
 false otherwise
 
-#### conditionSequence 
+##### conditionSequence 
 ```java
 public boolean conditionSequence(Object sequence) 
 ```
@@ -68,7 +65,7 @@ Condition on arbitrary input
 do a condition on
 - return true if the condition for the sequence is met false otherwise
 
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -78,7 +75,7 @@ Get the output schema for this transformation, given an input schema
 
 - param inputSchema
 
-#### AND 
+##### AND 
 ```java
 public static Condition AND(Condition... conditions) 
 ```
@@ -88,7 +85,7 @@ And of all the given conditions
 - param conditions the conditions to and
 - return a joint and of all these conditions
 
-#### OR 
+##### OR 
 ```java
 public static Condition OR(Condition... conditions) 
 ```
@@ -98,7 +95,7 @@ Or of all the given conditions
 - param conditions the conditions to or
 - return a joint and of all these conditions
 
-#### NOT 
+##### NOT 
 ```java
 public static Condition NOT(Condition condition) 
 ```
@@ -108,7 +105,7 @@ Not of  the given condition
 - param condition the conditions to and
 - return a joint and of all these condition
 
-#### XOR 
+##### XOR 
 ```java
 public static Condition XOR(Condition first, Condition second) 
 ```
@@ -120,7 +117,6 @@ And of all the given conditions
 - return the xor of these 2 conditions
 
 
-</div></div>
 
 
 ### SequenceConditionMode
@@ -139,10 +135,7 @@ For certain single-column conditions: how should we apply these to sequences?<br
 
 Created by agibsonccc on 11/26/16.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#BooleanColumnCondition" aria-expanded="false" aria-controls="BooleanColumnCondition">Show methods</button>
-<div class="collapse" id="BooleanColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -155,7 +148,7 @@ meets the condition set by this operation
 - return true if the condition is met
 false otherwise
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -169,7 +162,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### CategoricalColumnCondition
@@ -177,10 +169,7 @@ false otherwise
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CategoricalColumnCondition" aria-expanded="false" aria-controls="CategoricalColumnCondition">Show methods</button>
-<div class="collapse" id="CategoricalColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -193,7 +182,7 @@ Uses default sequence condition mode, {- link BaseColumnCondition#DEFAULT_SEQUEN
 - param op         Operation (== or != only)
 - param value      Value to use in the condition
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -207,7 +196,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### DoubleColumnCondition
@@ -215,10 +203,7 @@ false otherwise
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#DoubleColumnCondition" aria-expanded="false" aria-controls="DoubleColumnCondition">Show methods</button>
-<div class="collapse" id="DoubleColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -231,7 +216,7 @@ Uses default sequence condition mode, {- link BaseColumnCondition#DEFAULT_SEQUEN
 - param op         Operation (<, >=, !=, etc)
 - param value      Value to use in the condition
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -245,7 +230,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### InfiniteColumnCondition
@@ -254,10 +238,7 @@ false otherwise
 A column condition that simply checks whether a floating point value is infinite
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#InfiniteColumnCondition" aria-expanded="false" aria-controls="InfiniteColumnCondition">Show methods</button>
-<div class="collapse" id="InfiniteColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -266,7 +247,6 @@ public boolean columnCondition(Writable writable)
 - param columnName Column check for the condition
 
 
-</div></div>
 
 
 ### IntegerColumnCondition
@@ -274,10 +254,7 @@ public boolean columnCondition(Writable writable)
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#IntegerColumnCondition" aria-expanded="false" aria-controls="IntegerColumnCondition">Show methods</button>
-<div class="collapse" id="IntegerColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -290,7 +267,7 @@ Uses default sequence condition mode, {- link BaseColumnCondition#DEFAULT_SEQUEN
 - param op         Operation (<, >=, !=, etc)
 - param value      Value to use in the condition
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -304,7 +281,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### InvalidValueColumnCondition
@@ -317,10 +293,7 @@ For example, if a Writable contains String values in an Integer column (and thes
 the condition would return true, as these values are invalid according to the schema.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#InvalidValueColumnCondition" aria-expanded="false" aria-controls="InvalidValueColumnCondition">Show methods</button>
-<div class="collapse" id="InvalidValueColumnCondition"><div class="card card-body">
-
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -334,7 +307,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### LongColumnCondition
@@ -342,10 +314,7 @@ false otherwise
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#LongColumnCondition" aria-expanded="false" aria-controls="LongColumnCondition">Show methods</button>
-<div class="collapse" id="LongColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -358,7 +327,7 @@ Uses default sequence condition mode, {- link BaseColumnCondition#DEFAULT_SEQUEN
 - param op         Operation (<, >=, !=, etc)
 - param value      Value to use in the condition
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -372,7 +341,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### NaNColumnCondition
@@ -381,10 +349,7 @@ false otherwise
 A column condition that simply checks whether a floating point value is NaN
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#NaNColumnCondition" aria-expanded="false" aria-controls="NaNColumnCondition">Show methods</button>
-<div class="collapse" id="NaNColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -393,7 +358,6 @@ public boolean columnCondition(Writable writable)
 - param columnName Name of the column to check the condition for
 
 
-</div></div>
 
 
 ### NullWritableColumnCondition
@@ -403,10 +367,7 @@ Condition that applies to the values in any column. Specifically, condition is t
 if the Writable value is a NullWritable, and false for any other value
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#NullWritableColumnCondition" aria-expanded="false" aria-controls="NullWritableColumnCondition">Show methods</button>
-<div class="collapse" id="NullWritableColumnCondition"><div class="card card-body">
-
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -420,7 +381,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### StringColumnCondition
@@ -428,10 +388,7 @@ false otherwise
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringColumnCondition" aria-expanded="false" aria-controls="StringColumnCondition">Show methods</button>
-<div class="collapse" id="StringColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -444,7 +401,7 @@ Uses default sequence condition mode, {- link BaseColumnCondition#DEFAULT_SEQUEN
 - param op         Operation (== or != only)
 - param value      Value to use in the condition
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -458,7 +415,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### TimeColumnCondition
@@ -467,10 +423,7 @@ false otherwise
 Condition that applies to the values
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#TimeColumnCondition" aria-expanded="false" aria-controls="TimeColumnCondition">Show methods</button>
-<div class="collapse" id="TimeColumnCondition"><div class="card card-body">
-
-#### columnCondition 
+##### columnCondition 
 ```java
 public boolean columnCondition(Writable writable) 
 ```
@@ -483,7 +436,7 @@ Uses default sequence condition mode, {- link BaseColumnCondition#DEFAULT_SEQUEN
 - param op         Operation (<, >=, !=, etc)
 - param value      Time value (in epoch millisecond format) to use in the condition
 
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -497,7 +450,6 @@ the condition for
 false otherwise
 
 
-</div></div>
 
 
 ### TrivialColumnCondition
@@ -524,10 +476,7 @@ Condition return true if the String matches the regex, or false otherwise<br>
 <b>Note:</b> Uses Writable.toString(), hence can potentially be applied to non-String columns
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringRegexColumnCondition" aria-expanded="false" aria-controls="StringRegexColumnCondition">Show methods</button>
-<div class="collapse" id="StringRegexColumnCondition"><div class="card card-body">
-
-#### condition 
+##### condition 
 ```java
 public boolean condition(Object input) 
 ```
@@ -540,5 +489,3 @@ the condition for
 - return true if the condition is met
 false otherwise
 
-
-</div></div>

@@ -69,10 +69,7 @@ an ordered list of transformations
 to be executed on some data
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#TransformProcess" aria-expanded="false" aria-controls="TransformProcess">Show methods</button>
-<div class="collapse" id="TransformProcess"><div class="card card-body">
-
-#### getFinalSchema 
+##### getFinalSchema 
 ```java
 public Schema getFinalSchema() 
 ```
@@ -82,7 +79,7 @@ Get the action list that this transform process
 will execute
 - return
 
-#### getSchemaAfterStep 
+##### getSchemaAfterStep 
 ```java
 public Schema getSchemaAfterStep(int step) 
 ```
@@ -94,7 +91,7 @@ Steps are indexed from 0: so getSchemaAfterStep(0) is after one transform has be
 - param step Index of the step
 - return Schema of the data, after that (and all prior) steps have been executed
 
-#### toJson 
+##### toJson 
 ```java
 public String toJson() 
 ```
@@ -107,7 +104,7 @@ and ConvertFromSequence operations require the full data set to be processed at 
 - param input
 - return
 
-#### toYaml 
+##### toYaml 
 ```java
 public String toYaml() 
 ```
@@ -117,7 +114,7 @@ Convert the TransformProcess to a YAML string
 
 - return TransformProcess, as YAML
 
-#### fromJson 
+##### fromJson 
 ```java
 public static TransformProcess fromJson(String json) 
 ```
@@ -127,7 +124,7 @@ Deserialize a JSON String (created by {- link #toJson()}) to a TransformProcess
 
 - return TransformProcess, from JSON
 
-#### fromYaml 
+##### fromYaml 
 ```java
 public static TransformProcess fromYaml(String yaml) 
 ```
@@ -137,7 +134,7 @@ Deserialize a JSON String (created by {- link #toJson()}) to a TransformProcess
 
 - return TransformProcess, from JSON
 
-#### transform 
+##### transform 
 ```java
 public Builder transform(Transform transform) 
 ```
@@ -159,7 +156,7 @@ Note that the returned categories will be sorted alphabetically
 - param columnIndex te column index to get categories for
 - return
 
-#### filter 
+##### filter 
 ```java
 public Builder filter(Filter filter) 
 ```
@@ -169,7 +166,7 @@ Add a filter operation to be executed after the previously-added operations have
 
 - param filter Filter operation to execute
 
-#### filter 
+##### filter 
 ```java
 public Builder filter(Condition condition) 
 ```
@@ -182,7 +179,7 @@ If condition is not satisfied (returns false): keep the example or sequence
 
 - param condition Condition to filter on
 
-#### removeColumns 
+##### removeColumns 
 ```java
 public Builder removeColumns(String... columnNames) 
 ```
@@ -192,7 +189,7 @@ Remove all of the specified columns, by name
 
 - param columnNames Names of the columns to remove
 
-#### removeColumns 
+##### removeColumns 
 ```java
 public Builder removeColumns(Collection<String> columnNames) 
 ```
@@ -202,7 +199,7 @@ Remove all of the specified columns, by name
 
 - param columnNames Names of the columns to remove
 
-#### removeAllColumnsExceptFor 
+##### removeAllColumnsExceptFor 
 ```java
 public Builder removeAllColumnsExceptFor(String... columnNames) 
 ```
@@ -211,7 +208,7 @@ public Builder removeAllColumnsExceptFor(String... columnNames)
 Remove all columns, except for those that are specified here
 - param columnNames    Names of the columns to keep
 
-#### removeAllColumnsExceptFor 
+##### removeAllColumnsExceptFor 
 ```java
 public Builder removeAllColumnsExceptFor(Collection<String> columnNames) 
 ```
@@ -220,7 +217,7 @@ public Builder removeAllColumnsExceptFor(Collection<String> columnNames)
 Remove all columns, except for those that are specified here
 - param columnNames    Names of the columns to keep
 
-#### renameColumn 
+##### renameColumn 
 ```java
 public Builder renameColumn(String oldName, String newName) 
 ```
@@ -231,7 +228,7 @@ Rename a single column
 - param oldName Original column name
 - param newName New column name
 
-#### renameColumns 
+##### renameColumns 
 ```java
 public Builder renameColumns(List<String> oldNames, List<String> newNames) 
 ```
@@ -242,7 +239,7 @@ Rename multiple columns
 - param oldNames List of original column names
 - param newNames List of new column names
 
-#### reorderColumns 
+##### reorderColumns 
 ```java
 public Builder reorderColumns(String... newOrder) 
 ```
@@ -254,7 +251,7 @@ the end, according to their current relative ordering
 
 - param newOrder Names of the columns, in the order they will appear in the output
 
-#### duplicateColumn 
+##### duplicateColumn 
 ```java
 public Builder duplicateColumn(String column, String newName) 
 ```
@@ -265,7 +262,7 @@ Duplicate a single column
 - param column Name of the column to duplicate
 - param newName    Name of the new (duplicate) column
 
-#### duplicateColumns 
+##### duplicateColumns 
 ```java
 public Builder duplicateColumns(List<String> columnNames, List<String> newNames) 
 ```
@@ -276,7 +273,7 @@ Duplicate a set of columns
 - param columnNames Names of the columns to duplicate
 - param newNames    Names of the new (duplicated) columns
 
-#### integerMathOp 
+##### integerMathOp 
 ```java
 public Builder integerMathOp(String column, MathOp mathOp, int scalar) 
 ```
@@ -288,7 +285,7 @@ Perform a mathematical operation (add, subtract, scalar max etc) on the specifie
 - param mathOp     The mathematical operation
 - param scalar     The scalar value to use in the mathematical operation
 
-#### integerColumnsMathOp 
+##### integerColumnsMathOp 
 ```java
 public Builder integerColumnsMathOp(String newColumnName, MathOp mathOp, String... columnNames) 
 ```
@@ -301,7 +298,7 @@ New column is added to the end.
 - param mathOp        Mathematical operation to execute on the columns
 - param columnNames   Names of the columns to use in the mathematical operation
 
-#### longMathOp 
+##### longMathOp 
 ```java
 public Builder longMathOp(String columnName, MathOp mathOp, long scalar) 
 ```
@@ -313,7 +310,7 @@ Perform a mathematical operation (add, subtract, scalar max etc) on the specifie
 - param mathOp     The mathematical operation
 - param scalar     The scalar value to use in the mathematical operation
 
-#### longColumnsMathOp 
+##### longColumnsMathOp 
 ```java
 public Builder longColumnsMathOp(String newColumnName, MathOp mathOp, String... columnNames) 
 ```
@@ -326,7 +323,7 @@ New column is added to the end.
 - param mathOp        Mathematical operation to execute on the columns
 - param columnNames   Names of the columns to use in the mathematical operation
 
-#### floatMathOp 
+##### floatMathOp 
 ```java
 public Builder floatMathOp(String columnName, MathOp mathOp, float scalar) 
 ```
@@ -338,7 +335,7 @@ Perform a mathematical operation (add, subtract, scalar max etc) on the specifie
 - param mathOp     The mathematical operation
 - param scalar     The scalar value to use in the mathematical operation
 
-#### floatColumnsMathOp 
+##### floatColumnsMathOp 
 ```java
 public Builder floatColumnsMathOp(String newColumnName, MathOp mathOp, String... columnNames) 
 ```
@@ -351,7 +348,7 @@ New column is added to the end.
 - param mathOp        Mathematical operation to execute on the columns
 - param columnNames   Names of the columns to use in the mathematical operation
 
-#### floatMathFunction 
+##### floatMathFunction 
 ```java
 public Builder floatMathFunction(String columnName, MathFunction mathFunction) 
 ```
@@ -362,7 +359,7 @@ Perform a mathematical operation (such as sin(x), ceil(x), exp(x) etc) on a colu
 - param columnName   Column name to operate on
 - param mathFunction MathFunction to apply to the column
 
-#### doubleMathOp 
+##### doubleMathOp 
 ```java
 public Builder doubleMathOp(String columnName, MathOp mathOp, double scalar) 
 ```
@@ -374,7 +371,7 @@ Perform a mathematical operation (add, subtract, scalar max etc) on the specifie
 - param mathOp     The mathematical operation
 - param scalar     The scalar value to use in the mathematical operation
 
-#### doubleColumnsMathOp 
+##### doubleColumnsMathOp 
 ```java
 public Builder doubleColumnsMathOp(String newColumnName, MathOp mathOp, String... columnNames) 
 ```
@@ -387,7 +384,7 @@ New column is added to the end.
 - param mathOp        Mathematical operation to execute on the columns
 - param columnNames   Names of the columns to use in the mathematical operation
 
-#### doubleMathFunction 
+##### doubleMathFunction 
 ```java
 public Builder doubleMathFunction(String columnName, MathFunction mathFunction) 
 ```
@@ -398,7 +395,7 @@ Perform a mathematical operation (such as sin(x), ceil(x), exp(x) etc) on a colu
 - param columnName   Column name to operate on
 - param mathFunction MathFunction to apply to the column
 
-#### timeMathOp 
+##### timeMathOp 
 ```java
 public Builder timeMathOp(String columnName, MathOp mathOp, long timeQuantity, TimeUnit timeUnit) 
 ```
@@ -411,7 +408,7 @@ Perform a mathematical operation (add, subtract, scalar min/max only) on the spe
 - param timeQuantity The quantity used in the mathematical op
 - param timeUnit     The unit that timeQuantity is specified in
 
-#### categoricalToOneHot 
+##### categoricalToOneHot 
 ```java
 public Builder categoricalToOneHot(String... columnNames) 
 ```
@@ -422,7 +419,7 @@ This involves the creation of multiple new columns each.
 
 - param columnNames Names of the categorical column(s) to convert to a one-hot representation
 
-#### categoricalToInteger 
+##### categoricalToInteger 
 ```java
 public Builder categoricalToInteger(String... columnNames) 
 ```
@@ -434,7 +431,7 @@ each integer has the value 0 to numCategories-1.
 
 - param columnNames Name of the categorical column(s) to convert to an integer representation
 
-#### integerToCategorical 
+##### integerToCategorical 
 ```java
 public Builder integerToCategorical(String columnName, List<String> categoryStateNames) 
 ```
@@ -446,7 +443,7 @@ a categorical representation, given the specified state names
 - param columnName         Name of the column to convert
 - param categoryStateNames Names of the states for the categorical column
 
-#### integerToCategorical 
+##### integerToCategorical 
 ```java
 public Builder integerToCategorical(String columnName, Map<Integer, String> categoryIndexNameMap) 
 ```
@@ -458,7 +455,7 @@ mapping between integer indexes and state names
 - param columnName           Name of the column to convert
 - param categoryIndexNameMap Names of the states for the categorical column
 
-#### integerToOneHot 
+##### integerToOneHot 
 ```java
 public Builder integerToOneHot(String columnName, int minValue, int maxValue) 
 ```
@@ -470,7 +467,7 @@ Convert an integer column to a set of 1 hot columns, based on the value in integ
 - param minValue   Minimum value possible for the integer column (inclusive)
 - param maxValue   Maximum value possible for the integer column (inclusive)
 
-#### addConstantColumn 
+##### addConstantColumn 
 ```java
 public Builder addConstantColumn(String newColumnName, ColumnType newColumnType, Writable fixedValue) 
 ```
@@ -482,7 +479,7 @@ Add a new column, where all values in the column are identical and as specified.
 - param newColumnType Type of the new column
 - param fixedValue    Value in the new column for all records
 
-#### addConstantDoubleColumn 
+##### addConstantDoubleColumn 
 ```java
 public Builder addConstantDoubleColumn(String newColumnName, double value) 
 ```
@@ -493,7 +490,7 @@ Add a new double column, where the value for that column (for all records) are i
 - param newColumnName Name of the new column
 - param value         Value in the new column for all records
 
-#### addConstantIntegerColumn 
+##### addConstantIntegerColumn 
 ```java
 public Builder addConstantIntegerColumn(String newColumnName, int value) 
 ```
@@ -505,7 +502,7 @@ e value for that column (for all records) are identical
 - param newColumnName Name of the new column
 - param value         Value of the new column for all records
 
-#### addConstantLongColumn 
+##### addConstantLongColumn 
 ```java
 public Builder addConstantLongColumn(String newColumnName, long value) 
 ```
@@ -516,7 +513,7 @@ Add a new integer column, where the value for that column (for all records) are 
 - param newColumnName Name of the new column
 - param value         Value in the new column for all records
 
-#### convertToString 
+##### convertToString 
 ```java
 public Builder convertToString(String inputColumn) 
 ```
@@ -526,7 +523,7 @@ Convert the specified column to a string.
 - param inputColumn the input column to convert
 - return builder pattern
 
-#### convertToDouble 
+##### convertToDouble 
 ```java
 public Builder convertToDouble(String inputColumn) 
 ```
@@ -536,7 +533,7 @@ Convert the specified column to a double.
 - param inputColumn the input column to convert
 - return builder pattern
 
-#### convertToInteger 
+##### convertToInteger 
 ```java
 public Builder convertToInteger(String inputColumn) 
 ```
@@ -546,7 +543,7 @@ Convert the specified column to an integer.
 - param inputColumn the input column to convert
 - return builder pattern
 
-#### normalize 
+##### normalize 
 ```java
 public Builder normalize(String column, Normalize type, DataAnalysis da) 
 ```
@@ -558,7 +555,7 @@ Normalize the specified column with a given type of normalization
 - param type   Type of normalization to apply
 - param da     DataAnalysis object
 
-#### convertToSequence 
+##### convertToSequence 
 ```java
 public Builder convertToSequence(String keyColumn, SequenceComparator comparator) 
 ```
@@ -570,7 +567,7 @@ Within each sequence, values are ordered using the provided {- link SequenceComp
 - param keyColumn  Column to use as a key (values with the same key will be combined into sequences)
 - param comparator A SequenceComparator to order the values within each sequence (for example, by time or String order)
 
-#### convertToSequence 
+##### convertToSequence 
 ```java
 public Builder convertToSequence() 
 ```
@@ -581,7 +578,7 @@ of length 1, without any join/group operations. Note that more commonly, joining
 use {- link #convertToSequence(List, SequenceComparator)} for this functionality
 
 
-#### convertToSequence 
+##### convertToSequence 
 ```java
 public Builder convertToSequence(List<String> keyColumns, SequenceComparator comparator) 
 ```
@@ -594,7 +591,7 @@ Within each sequence, values are ordered using the provided {- link SequenceComp
 - param keyColumns  Column to use as a key (values with the same key will be combined into sequences)
 - param comparator A SequenceComparator to order the values within each sequence (for example, by time or String order)
 
-#### convertFromSequence 
+##### convertFromSequence 
 ```java
 public Builder convertFromSequence() 
 ```
@@ -602,7 +599,7 @@ public Builder convertFromSequence()
 
 Convert a sequence to a set of individual values (by treating each value in each sequence as a separate example)
 
-#### splitSequence 
+##### splitSequence 
 ```java
 public Builder splitSequence(SequenceSplit split) 
 ```
@@ -612,7 +609,7 @@ Split sequences into 1 or more other sequences. Used for example to split large 
 
 - param split SequenceSplit that defines how splits will occur
 
-#### trimSequence 
+##### trimSequence 
 ```java
 public Builder trimSequence(int numStepsToTrim, boolean trimFromStart) 
 ```
@@ -624,7 +621,7 @@ may be of length 0, if the input sequence is less than or equal to N.
 - param numStepsToTrim Number of time steps to trim from the sequence
 - param trimFromStart  If true: Trim values from the start of the sequence. If false: trim values from the end.
 
-#### offsetSequence 
+##### offsetSequence 
 ```java
 public Builder offsetSequence(List<String> columnsToOffset, int offsetAmount,
                                       SequenceOffsetTransform.OperationType operationType) 
@@ -640,7 +637,7 @@ See {- link SequenceOffsetTransform} for details on exactly what this operation 
 moved to later time steps)
 - param operationType   Whether the offset should be done in-place or by adding a new column
 
-#### reduce 
+##### reduce 
 ```java
 public Builder reduce(IAssociativeReducer reducer) 
 ```
@@ -651,7 +648,7 @@ Reduce (i.e., aggregate/combine) a set of examples (typically by key).
 
 - param reducer Reducer to use
 
-#### reduceSequence 
+##### reduceSequence 
 ```java
 public Builder reduceSequence(IAssociativeReducer reducer) 
 ```
@@ -663,7 +660,7 @@ after the reduction, use {- code transform(new ReduceSequenceTransform(reducer))
 
 - param reducer        Reducer to use to reduce each window
 
-#### reduceSequenceByWindow 
+##### reduceSequenceByWindow 
 ```java
 public Builder reduceSequenceByWindow(IAssociativeReducer reducer, WindowFunction windowFunction) 
 ```
@@ -676,7 +673,7 @@ a singe value (using the reducer). In this example, the output is a sequence, wi
 - param reducer        Reducer to use to reduce each window
 - param windowFunction Window function to find apply on each sequence individually
 
-#### sequenceMovingWindowReduce 
+##### sequenceMovingWindowReduce 
 ```java
 public Builder sequenceMovingWindowReduce(String columnName, int lookback, ReduceOp op) 
 ```
@@ -694,7 +691,7 @@ For example, for a simple moving average, length 20: {- code new SequenceMovingW
 - param lookback   Look back period for windowing
 - param op         Reduction operation to perform on each window
 
-#### calculateSortedRank 
+##### calculateSortedRank 
 ```java
 public Builder calculateSortedRank(String newColumnName, String sortOnColumn, WritableComparator comparator) 
 ```
@@ -713,7 +710,7 @@ Furthermore, the current implementation can only sort on one column
 - param sortOnColumn  Column to sort on
 - param comparator    Comparator used to sort examples
 
-#### calculateSortedRank 
+##### calculateSortedRank 
 ```java
 public Builder calculateSortedRank(String newColumnName, String sortOnColumn, WritableComparator comparator,
                                            boolean ascending) 
@@ -734,7 +731,7 @@ Furthermore, the current implementation can only sort on one column
 - param comparator    Comparator used to sort examples
 - param ascending     If true: sort ascending. False: descending
 
-#### stringToCategorical 
+##### stringToCategorical 
 ```java
 public Builder stringToCategorical(String columnName, List<String> stateNames) 
 ```
@@ -745,7 +742,7 @@ Convert the specified String column to a categorical column. The state names mus
 - param columnName Name of the String column to convert to categorical
 - param stateNames State names of the category
 
-#### stringRemoveWhitespaceTransform 
+##### stringRemoveWhitespaceTransform 
 ```java
 public Builder stringRemoveWhitespaceTransform(String columnName) 
 ```
@@ -755,7 +752,7 @@ Remove all whitespace characters from the values in the specified String column
 
 - param columnName Name of the column to remove whitespace from
 
-#### stringMapTransform 
+##### stringMapTransform 
 ```java
 public Builder stringMapTransform(String columnName, Map<String, String> mapping) 
 ```
@@ -770,7 +767,7 @@ not be modified.
 - param columnName Name of the column in which to do replacement
 - param mapping    Map of oldValues -> newValues
 
-#### stringToTimeTransform 
+##### stringToTimeTransform 
 ```java
 public Builder stringToTimeTransform(String column, String format, DateTimeZone dateTimeZone) 
 ```
@@ -782,7 +779,7 @@ Convert a String column (containing a date/time String) to a time column (by par
 - param format       Format of the strings. Time format is specified as per http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html
 - param dateTimeZone Timezone of the column
 
-#### appendStringColumnTransform 
+##### appendStringColumnTransform 
 ```java
 public Builder appendStringColumnTransform(String column, String toAppend) 
 ```
@@ -793,7 +790,7 @@ Append a String to a specified column
 - param column      Column to append the value to
 - param toAppend    String to append to the end of each writable
 
-#### conditionalReplaceValueTransform 
+##### conditionalReplaceValueTransform 
 ```java
 public Builder conditionalReplaceValueTransform(String column, Writable newValue, Condition condition) 
 ```
@@ -806,7 +803,7 @@ If the condition does not hold, the original values are not modified.
 - param newValue  Value to use as replacement, if condition is satisfied
 - param condition Condition that must be satisfied for replacement
 
-#### conditionalReplaceValueTransformWithDefault 
+##### conditionalReplaceValueTransformWithDefault 
 ```java
 public Builder conditionalReplaceValueTransformWithDefault(String column, Writable yesVal, Writable noVal, Condition condition) 
 ```
@@ -820,7 +817,7 @@ Replace it with a "no" value, otherwise.
 - param noVal  Value to use as replacement, if condition is not satisfied
 - param condition Condition that must be satisfied for replacement
 
-#### conditionalCopyValueTransform 
+##### conditionalCopyValueTransform 
 ```java
 public Builder conditionalCopyValueTransform(String columnToReplace, String sourceColumn, Condition condition) 
 ```
@@ -834,7 +831,7 @@ that will be modified if the condition is satisfied/true.<br>
 - param sourceColumn       Name of the column from which the new values will be
 - param condition          Condition to use
 
-#### replaceStringTransform 
+##### replaceStringTransform 
 ```java
 public Builder replaceStringTransform(String columnName, Map<String, String> mapping) 
 ```
@@ -876,7 +873,7 @@ For example:
 - param columnName Name of the column in which to do replacement
 - param mapping    Map of old values or regular expression to new values
 
-#### ndArrayScalarOpTransform 
+##### ndArrayScalarOpTransform 
 ```java
 public Builder ndArrayScalarOpTransform(String columnName, MathOp op, double value) 
 ```
@@ -888,7 +885,7 @@ Element-wise NDArray math operation (add, subtract, etc) on an NDArray column
 - param op         Operation to perform
 - param value      Value for the operation
 
-#### ndArrayColumnsMathOpTransform 
+##### ndArrayColumnsMathOpTransform 
 ```java
 public Builder ndArrayColumnsMathOpTransform(String newColumnName, MathOp mathOp, String... columnNames) 
 ```
@@ -901,7 +898,7 @@ The existing columns are unchanged, a new NDArray column is added
 - param mathOp        Operation to perform
 - param columnNames   Name of the columns used as input to the operation
 
-#### ndArrayMathFunctionTransform 
+##### ndArrayMathFunctionTransform 
 ```java
 public Builder ndArrayMathFunctionTransform(String columnName, MathFunction mathFunction) 
 ```
@@ -913,7 +910,7 @@ performed in place.
 - param columnName   Name of the column to perform the operation on
 - param mathFunction Mathematical function to apply
 
-#### ndArrayDistanceTransform 
+##### ndArrayDistanceTransform 
 ```java
 public Builder ndArrayDistanceTransform(String newColumnName, Distance distance, String firstCol,
                                                 String secondCol) 
@@ -928,7 +925,7 @@ operation adds a new Double column (with the specified name) with the result.
 - param firstCol      first column to use in the distance calculation
 - param secondCol     second column to use in the distance calculation
 
-#### build 
+##### build 
 ```java
 public TransformProcess build() 
 ```
@@ -937,7 +934,6 @@ public TransformProcess build()
 Create the TransformProcess object
 
 
-</div></div>
 
 
 ### CategoricalToIntegerTransform
@@ -945,10 +941,7 @@ Create the TransformProcess object
 
 Created by Alex on 4/03/2016.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CategoricalToIntegerTransform" aria-expanded="false" aria-controls="CategoricalToIntegerTransform">Show methods</button>
-<div class="collapse" id="CategoricalToIntegerTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -960,7 +953,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -970,7 +963,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -981,7 +974,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -993,7 +986,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### CategoricalToOneHotTransform
@@ -1001,10 +993,7 @@ This will often be the same as the input
 
 Created by Alex on 4/03/2016.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#CategoricalToOneHotTransform" aria-expanded="false" aria-controls="CategoricalToOneHotTransform">Show methods</button>
-<div class="collapse" id="CategoricalToOneHotTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1016,7 +1005,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1026,7 +1015,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1037,7 +1026,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1049,7 +1038,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### IntegerToCategoricalTransform
@@ -1057,10 +1045,7 @@ This will often be the same as the input
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#IntegerToCategoricalTransform" aria-expanded="false" aria-controls="IntegerToCategoricalTransform">Show methods</button>
-<div class="collapse" id="IntegerToCategoricalTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1072,7 +1057,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1083,7 +1068,6 @@ Transform a sequence
 - param sequence
 
 
-</div></div>
 
 
 ### PivotTransform
@@ -1102,10 +1086,7 @@ and input (col0Val, b, x, col3Val) gets mapped to (col0Val, 0, x, 0, col3Val).
 When expanding columns, a default value is used - for example 0 for numerical columns.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#PivotTransform" aria-expanded="false" aria-controls="PivotTransform">Show methods</button>
-<div class="collapse" id="PivotTransform"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -1116,7 +1097,6 @@ public Schema transform(Schema inputSchema)
 - param valueColumnName Name of the column that contains the value
 
 
-</div></div>
 
 
 ### StringToCategoricalTransform
@@ -1125,10 +1105,7 @@ public Schema transform(Schema inputSchema)
 Convert a String column
 to a categorical column
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringToCategoricalTransform" aria-expanded="false" aria-controls="StringToCategoricalTransform">Show methods</button>
-<div class="collapse" id="StringToCategoricalTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1140,7 +1117,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1151,7 +1128,6 @@ Transform a sequence
 - param sequence
 
 
-</div></div>
 
 
 ### AddConstantColumnTransform
@@ -1170,10 +1146,7 @@ The duplicated columns
 are placed immediately after the original columns
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#DuplicateColumnsTransform" aria-expanded="false" aria-controls="DuplicateColumnsTransform">Show methods</button>
-<div class="collapse" id="DuplicateColumnsTransform"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -1182,7 +1155,7 @@ public Schema transform(Schema inputSchema)
 - param columnsToDuplicate List of columns to duplicate
 - param newColumnNames     List of names for the new (duplicate) columns
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1194,7 +1167,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1204,7 +1177,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1215,7 +1188,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1227,7 +1200,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### RemoveAllColumnsExceptForTransform
@@ -1239,10 +1211,7 @@ specified as ones to keep
 To specify only the columns
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#RemoveAllColumnsExceptForTransform" aria-expanded="false" aria-controls="RemoveAllColumnsExceptForTransform">Show methods</button>
-<div class="collapse" id="RemoveAllColumnsExceptForTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1254,7 +1223,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1264,7 +1233,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1275,7 +1244,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1287,7 +1256,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### RemoveColumnsTransform
@@ -1297,10 +1265,7 @@ Remove the specified columns from the data.
 To specify only the columns to keep,
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#RemoveColumnsTransform" aria-expanded="false" aria-controls="RemoveColumnsTransform">Show methods</button>
-<div class="collapse" id="RemoveColumnsTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1312,7 +1277,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1322,7 +1287,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1333,7 +1298,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1345,7 +1310,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### RenameColumnsTransform
@@ -1354,10 +1318,7 @@ This will often be the same as the input
 Rename one or more columns
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#RenameColumnsTransform" aria-expanded="false" aria-controls="RenameColumnsTransform">Show methods</button>
-<div class="collapse" id="RenameColumnsTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1369,7 +1330,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1379,7 +1340,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1390,7 +1351,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1402,7 +1363,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### ReorderColumnsTransform
@@ -1413,10 +1373,7 @@ Note: A partial list of columns can be used here. Any columns that are not expli
 will be placed after those that are in the output, without changing their relative order.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ReorderColumnsTransform" aria-expanded="false" aria-controls="ReorderColumnsTransform">Show methods</button>
-<div class="collapse" id="ReorderColumnsTransform"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -1424,7 +1381,7 @@ public Schema transform(Schema inputSchema)
 
 - param newOrder A partial or complete order of the columns in the output
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1436,7 +1393,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1446,7 +1403,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1457,7 +1414,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1469,7 +1426,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### ConditionalCopyValueTransform
@@ -1487,10 +1443,7 @@ and replaced (or not) separately (i.e., Condition.condition(List<Writable>)
 is used on each time step individually)
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ConditionalCopyValueTransform" aria-expanded="false" aria-controls="ConditionalCopyValueTransform">Show methods</button>
-<div class="collapse" id="ConditionalCopyValueTransform"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -1500,7 +1453,7 @@ public Schema transform(Schema inputSchema)
 - param sourceColumn    Name of the column to get the new value from
 - param condition       Condition
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1512,7 +1465,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1522,7 +1475,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1533,7 +1486,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1545,7 +1498,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### ConditionalReplaceValueTransform
@@ -1559,10 +1511,7 @@ that will be modified if the condition is satisfied/true.<br>
 and replaced (or not) separately (i.e., Condition.condition(List<Writable>) is used on each time step individually)
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ConditionalReplaceValueTransform" aria-expanded="false" aria-controls="ConditionalReplaceValueTransform">Show methods</button>
-<div class="collapse" id="ConditionalReplaceValueTransform"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -1572,7 +1521,7 @@ public Schema transform(Schema inputSchema)
 - param newValue        New value to use
 - param condition       Condition
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1584,7 +1533,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1594,7 +1543,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1605,7 +1554,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1617,7 +1566,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### ConditionalReplaceValueTransformWithDefault
@@ -1640,10 +1588,7 @@ and replaced (or not) separately (i.e., Condition.condition(List<Writable>) is u
 Convert any value to an Double
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ConvertToDouble" aria-expanded="false" aria-controls="ConvertToDouble">Show methods</button>
-<div class="collapse" id="ConvertToDouble"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public DoubleWritable map(Writable writable) 
 ```
@@ -1652,7 +1597,6 @@ public DoubleWritable map(Writable writable)
 - param column Name of the column to convert to a Double column
 
 
-</div></div>
 
 
 ### DoubleColumnsMathOpTransform
@@ -1664,10 +1608,7 @@ For example, if newColumnName=="newCol", mathOp==Add, and columns=={"col1","col2
 with name "newCol" has value col1+col2.<br>
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#DoubleColumnsMathOpTransform" aria-expanded="false" aria-controls="DoubleColumnsMathOpTransform">Show methods</button>
-<div class="collapse" id="DoubleColumnsMathOpTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1679,7 +1620,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1690,7 +1631,6 @@ Transform a sequence
 - param sequence
 
 
-</div></div>
 
 
 ### DoubleMathFunctionTransform
@@ -1708,10 +1648,7 @@ Double mathematical operation.<br>
 This is an in-place operation of the double column value and a double scalar.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#DoubleMathOpTransform" aria-expanded="false" aria-controls="DoubleMathOpTransform">Show methods</button>
-<div class="collapse" id="DoubleMathOpTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1723,7 +1660,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1734,7 +1671,6 @@ Transform a sequence
 - param sequence
 
 
-</div></div>
 
 
 ### Log2Normalizer
@@ -1745,10 +1681,7 @@ Maps values in range (columnMin to infinity) to (0 to infinity)
 Most suitable for values with a geometric/negative exponential type distribution.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Log2Normalizer" aria-expanded="false" aria-controls="Log2Normalizer">Show methods</button>
-<div class="collapse" id="Log2Normalizer"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1761,7 +1694,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### MinMaxNormalizer
@@ -1772,10 +1704,7 @@ Normalizer to map (min to max) -> (newMin-to newMax) linearly. <br>
 Mathematically: (newMax-newMin)/(max-min)  (x-min) + newMin
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#MinMaxNormalizer" aria-expanded="false" aria-controls="MinMaxNormalizer">Show methods</button>
-<div class="collapse" id="MinMaxNormalizer"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1788,7 +1717,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### StandardizeNormalizer
@@ -1798,10 +1726,7 @@ Normalize using (x-mean)/stdev.
 Also known as a standard score, standardization etc.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StandardizeNormalizer" aria-expanded="false" aria-controls="StandardizeNormalizer">Show methods</button>
-<div class="collapse" id="StandardizeNormalizer"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1814,7 +1739,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### SubtractMeanNormalizer
@@ -1822,10 +1746,7 @@ in to another object
 
 Normalize by substracting the mean
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SubtractMeanNormalizer" aria-expanded="false" aria-controls="SubtractMeanNormalizer">Show methods</button>
-<div class="collapse" id="SubtractMeanNormalizer"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1838,7 +1759,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### ConvertToInteger
@@ -1847,10 +1767,7 @@ in to another object
 Convert any value to an Integer.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ConvertToInteger" aria-expanded="false" aria-controls="ConvertToInteger">Show methods</button>
-<div class="collapse" id="ConvertToInteger"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public IntWritable map(Writable writable) 
 ```
@@ -1860,7 +1777,6 @@ public IntWritable map(Writable writable)
 - param column Name of the column to convert to an integer
 
 
-</div></div>
 
 
 ### IntegerColumnsMathOpTransform
@@ -1876,10 +1792,7 @@ with name "newCol" has value col1+col2.<br>
 if a decimal output value is required.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#IntegerColumnsMathOpTransform" aria-expanded="false" aria-controls="IntegerColumnsMathOpTransform">Show methods</button>
-<div class="collapse" id="IntegerColumnsMathOpTransform"><div class="card card-body">
-
-#### toString 
+##### toString 
 ```java
 public String toString() 
 ```
@@ -1889,7 +1802,7 @@ public String toString()
 - param mathOp        Mathematical operation. Only Add/Subtract/Multiply/Divide/Modulus is allowed here
 - param columns       Columns to use in the mathematical operation
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1901,7 +1814,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1912,7 +1825,6 @@ Transform a sequence
 - param sequence
 
 
-</div></div>
 
 
 ### IntegerMathOpTransform
@@ -1922,10 +1834,7 @@ Integer mathematical operation.<br>
 This is an in-place operation of the integer column value and an integer scalar.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#IntegerMathOpTransform" aria-expanded="false" aria-controls="IntegerMathOpTransform">Show methods</button>
-<div class="collapse" id="IntegerMathOpTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1938,7 +1847,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### IntegerToOneHotTransform
@@ -1948,10 +1856,7 @@ Convert an integer column to a  set of one-hot columns.
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#IntegerToOneHotTransform" aria-expanded="false" aria-controls="IntegerToOneHotTransform">Show methods</button>
-<div class="collapse" id="IntegerToOneHotTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -1963,7 +1868,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -1973,7 +1878,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -1984,7 +1889,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -1996,7 +1901,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### ReplaceEmptyIntegerWithValueTransform
@@ -2004,10 +1908,7 @@ This will often be the same as the input
 
 Replace an empty/missing integer with a certain value.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ReplaceEmptyIntegerWithValueTransform" aria-expanded="false" aria-controls="ReplaceEmptyIntegerWithValueTransform">Show methods</button>
-<div class="collapse" id="ReplaceEmptyIntegerWithValueTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2020,7 +1921,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### ReplaceInvalidWithIntegerTransform
@@ -2028,10 +1928,7 @@ in to another object
 
 Replace an invalid (non-integer) value in a column with a specified integer
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ReplaceInvalidWithIntegerTransform" aria-expanded="false" aria-controls="ReplaceInvalidWithIntegerTransform">Show methods</button>
-<div class="collapse" id="ReplaceInvalidWithIntegerTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2044,7 +1941,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### LongColumnsMathOpTransform
@@ -2057,10 +1953,7 @@ with name "newCol" has value col1+col2.<br>
 if a decimal output value is required.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#LongColumnsMathOpTransform" aria-expanded="false" aria-controls="LongColumnsMathOpTransform">Show methods</button>
-<div class="collapse" id="LongColumnsMathOpTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2072,7 +1965,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -2083,7 +1976,6 @@ Transform a sequence
 - param sequence
 
 
-</div></div>
 
 
 ### LongMathOpTransform
@@ -2093,10 +1985,7 @@ Long mathematical operation.<br>
 This is an in-place operation of the long column value and an long scalar.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#LongMathOpTransform" aria-expanded="false" aria-controls="LongMathOpTransform">Show methods</button>
-<div class="collapse" id="LongMathOpTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2109,7 +1998,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### TextToCharacterIndexTransform
@@ -2149,10 +2037,7 @@ Note: this is an <i>in-place</i> operation: i.e., the values in each column are 
 and apply the difference operation in-place on the copy.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SequenceDifferenceTransform" aria-expanded="false" aria-controls="SequenceDifferenceTransform">Show methods</button>
-<div class="collapse" id="SequenceDifferenceTransform"><div class="card card-body">
-
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -2163,7 +2048,7 @@ Output column name is the same as the input column name.
 
 - param columnName Name of the column to perform the operation on.
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -2174,7 +2059,7 @@ This will often be the same as the input
 
 - return the output column names
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2186,7 +2071,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -2197,7 +2082,6 @@ Transform a sequence
 - param sequence
 
 
-</div></div>
 
 
 ### SequenceMovingWindowReduceTransform
@@ -2211,10 +2095,7 @@ or determine the minimum or maximum values in the last N time steps.
 
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#SequenceMovingWindowReduceTransform" aria-expanded="false" aria-controls="SequenceMovingWindowReduceTransform">Show methods</button>
-<div class="collapse" id="SequenceMovingWindowReduceTransform"><div class="card card-body">
-
-#### defaultOutputColumnName 
+##### defaultOutputColumnName 
 ```java
 public static String defaultOutputColumnName(String originalName, int lookback, ReduceOp op) 
 ```
@@ -2226,7 +2107,7 @@ Default: Perform your former reduction as normal, with as many values are availa
 SpecifiedValue: use the given/specified value instead of the actual output value. For example, you could assign
 values of 0 or NullWritable to positions 0 through 18 of the output.
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2238,7 +2119,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -2248,7 +2129,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -2259,7 +2140,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -2271,7 +2152,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### SequenceOffsetTransform
@@ -2304,10 +2184,7 @@ Append a String to the
 values in a single column
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#AppendStringColumnTransform" aria-expanded="false" aria-controls="AppendStringColumnTransform">Show methods</button>
-<div class="collapse" id="AppendStringColumnTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2320,7 +2197,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### ChangeCaseStringTransform
@@ -2341,10 +2217,7 @@ columns so user must remove those manually, if desired.
 TODO: use new String Reduce functionality in DataVec?
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ConcatenateStringColumns" aria-expanded="false" aria-controls="ConcatenateStringColumns">Show methods</button>
-<div class="collapse" id="ConcatenateStringColumns"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -2352,7 +2225,7 @@ public Schema transform(Schema inputSchema)
 
 - param columnsToConcatenate A partial or complete order of the columns in the output
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2364,7 +2237,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -2374,7 +2247,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -2385,7 +2258,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -2397,7 +2270,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### ConvertToString
@@ -2406,10 +2278,7 @@ This will often be the same as the input
 Convert any value to a string.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ConvertToString" aria-expanded="false" aria-controls="ConvertToString">Show methods</button>
-<div class="collapse" id="ConvertToString"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Text map(Writable writable) 
 ```
@@ -2421,7 +2290,7 @@ string
 - param writable the writable to transform
 - return the string form of this writable
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2434,7 +2303,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### MapAllStringsExceptListTransform
@@ -2443,10 +2311,7 @@ in to another object
 This method maps all String values, except those is the specified list, to a single String  value
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#MapAllStringsExceptListTransform" aria-expanded="false" aria-controls="MapAllStringsExceptListTransform">Show methods</button>
-<div class="collapse" id="MapAllStringsExceptListTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2459,7 +2324,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### RemoveWhiteSpaceTransform
@@ -2467,10 +2331,7 @@ in to another object
 
 String transform that removes all whitespace charaters
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#RemoveWhiteSpaceTransform" aria-expanded="false" aria-controls="RemoveWhiteSpaceTransform">Show methods</button>
-<div class="collapse" id="RemoveWhiteSpaceTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2483,7 +2344,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### ReplaceEmptyStringTransform
@@ -2491,10 +2351,7 @@ in to another object
 
 Replace empty String values with the specified String
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ReplaceEmptyStringTransform" aria-expanded="false" aria-controls="ReplaceEmptyStringTransform">Show methods</button>
-<div class="collapse" id="ReplaceEmptyStringTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2507,7 +2364,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### ReplaceStringTransform
@@ -2515,10 +2371,7 @@ in to another object
 
 Replaces String values that match regular expressions.
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ReplaceStringTransform" aria-expanded="false" aria-controls="ReplaceStringTransform">Show methods</button>
-<div class="collapse" id="ReplaceStringTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Text map(final Writable writable) 
 ```
@@ -2529,7 +2382,6 @@ Constructs a new ReplaceStringTransform using the specified
 - param map Key: regular expression; Value: replacement value
 
 
-</div></div>
 
 
 ### StringListToCategoricalSetTransform
@@ -2540,10 +2392,7 @@ Suppose the possible String values were {"a","b","c","d"} and the String column 
 the String "a,c", then the 4 output columns would have values ["true","false","true","false"]
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringListToCategoricalSetTransform" aria-expanded="false" aria-controls="StringListToCategoricalSetTransform">Show methods</button>
-<div class="collapse" id="StringListToCategoricalSetTransform"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -2555,7 +2404,7 @@ public Schema transform(Schema inputSchema)
 as the newColumnNames list
 - param delimiter      The delimiter for the Strings to convert
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2567,7 +2416,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -2577,7 +2426,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -2588,7 +2437,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -2600,7 +2449,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### StringListToCountsNDArrayTransform
@@ -2610,10 +2458,7 @@ Converts String column into a bag-of-words (BOW) represented as an NDArray of "c
 Note that the original column is removed in the process
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringListToCountsNDArrayTransform" aria-expanded="false" aria-controls="StringListToCountsNDArrayTransform">Show methods</button>
-<div class="collapse" id="StringListToCountsNDArrayTransform"><div class="card card-body">
-
-#### transform 
+##### transform 
 ```java
 public Schema transform(Schema inputSchema) 
 ```
@@ -2624,7 +2469,7 @@ public Schema transform(Schema inputSchema)
 - param delimiter      The delimiter for the Strings to convert
 - param ignoreUnknown  Whether to ignore unknown tokens
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2636,7 +2481,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -2646,7 +2491,7 @@ Transform a sequence
 
 - param sequence
 
-#### outputColumnName 
+##### outputColumnName 
 ```java
 public String outputColumnName() 
 ```
@@ -2657,7 +2502,7 @@ after the operation has been applied
 
 - return the output column name
 
-#### columnName 
+##### columnName 
 ```java
 public String columnName() 
 ```
@@ -2669,7 +2514,6 @@ This will often be the same as the input
 - return the output column names
 
 
-</div></div>
 
 
 ### StringListToIndicesNDArrayTransform
@@ -2693,10 +2537,7 @@ If a String appears in the data but does not appear in the provided map (as a ke
 not be modified.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringMapTransform" aria-expanded="false" aria-controls="StringMapTransform">Show methods</button>
-<div class="collapse" id="StringMapTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Text map(Writable writable) 
 ```
@@ -2706,7 +2547,7 @@ public Text map(Writable writable)
 - param columnName Name of the column
 - param map Key: From. Value: To
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2719,7 +2560,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### DeriveColumnsFromTimeTransform
@@ -2729,10 +2569,7 @@ Create a number of new columns by deriving their values from a Time column.
 Can be used for example to create new columns with the year, month, day, hour, minute, second etc.
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#DeriveColumnsFromTimeTransform" aria-expanded="false" aria-controls="DeriveColumnsFromTimeTransform">Show methods</button>
-<div class="collapse" id="DeriveColumnsFromTimeTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2744,7 +2581,7 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-#### mapSequence 
+##### mapSequence 
 ```java
 public Object mapSequence(Object sequence) 
 ```
@@ -2754,7 +2591,7 @@ Transform a sequence
 
 - param sequence
 
-#### toString 
+##### toString 
 ```java
 public String toString() 
 ```
@@ -2766,7 +2603,6 @@ after the operation has been applied
 - return the output column name
 
 
-</div></div>
 
 
 ### StringToTimeTransform
@@ -2777,10 +2613,7 @@ Convert a String column to a time column by parsing the date/time String, using 
 Time format is specified as per http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#StringToTimeTransform" aria-expanded="false" aria-controls="StringToTimeTransform">Show methods</button>
-<div class="collapse" id="StringToTimeTransform"><div class="card card-body">
-
-#### getNewColumnMetaData 
+##### getNewColumnMetaData 
 ```java
 public ColumnMetaData getNewColumnMetaData(String newName, ColumnMetaData oldColumnType) 
 ```
@@ -2795,7 +2628,7 @@ static formats array.
 - param columnName Name of the String column
 - param timeZone   Timezone for time parsing
 
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2808,7 +2641,6 @@ in to another object
 - return the transformed writable
 
 
-</div></div>
 
 
 ### TimeMathOpTransform
@@ -2820,10 +2652,7 @@ Note: only the following MathOps are supported: Add, Subtract, ScalarMin, Scalar
 For ScalarMin/Max, the TimeUnit must be milliseconds - i.e., value must be in epoch millisecond format
 
 
-<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#TimeMathOpTransform" aria-expanded="false" aria-controls="TimeMathOpTransform">Show methods</button>
-<div class="collapse" id="TimeMathOpTransform"><div class="card card-body">
-
-#### map 
+##### map 
 ```java
 public Object map(Object input) 
 ```
@@ -2835,5 +2664,3 @@ in to another object
 - param input the record to transform
 - return the transformed writable
 
-
-</div></div>
