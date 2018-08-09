@@ -147,7 +147,7 @@ layout: default
 ### ND4J: New Features
 
 * ND4J: all indexing is now done with longs instead of ints to allow for arrays with dimensions and lengths greater than Integer.MAX_VALUE (approx. 2.1 billion)
-* Added the ability to write Numpy .npy format using ```Nd4j.writeAsNumpy(INDArray,File)``` and con.vert an INDArray to a numpy strict in-memory using ```Nd4j.convertToNumpy(INDArray)``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5973)
+* Added the ability to write Numpy .npy format using ```Nd4j.writeAsNumpy(INDArray,File)``` and convert an INDArray to a numpy strict in-memory using ```Nd4j.convertToNumpy(INDArray)``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5973)
 * ND4j-common ClassPathResource: added ClassPathResource.copyDirectory(File) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5298)
 * SameDiff: A significant number of new ops, and backprop implementations for existing ops
 * Added Nd4j.randomBernoulli/Binomial/Exponential convenience methods [Link](https://github.com/deeplearning4j/deeplearning4j/blob/b887d2f0601fc6562a5a278e822690d2c338aaad/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/factory/Nd4j.java#L3150-L3223)
