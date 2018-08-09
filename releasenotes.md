@@ -133,19 +133,21 @@ layout: default
 
 ## <a name="onezerozerobeta2-dl4jkeras">Deeplearing4J: Keras Import</a>
 
-
-
-### Deeplearning4J: Keras Import - API Changes (Transition Guide): 1.0.0-beta to 1.0.0-beta2
-
-
-
+* Keras model import now imports every Keras application
+* Supports GlobalPooling3D layer import
+* Supports RepeatVector layer import
+* Supports LocallyConnected1D and LocallyConnected2D layers
+* Keras Lambda layers can now be imported by registering custom SameDiff layers
+* All Keras optimizers are now supported
+* All advanced activation functions can now be imported.
+* Many minor bugs have been fixed, including proper weight setting for all configurations of BatchNormalization, improvements to Reshape SeparableConvolution2D, and full support of Bidirectional layers.
 
 ## <a name="onezerozerobeta2-nd4j">ND4J</a>
 
 ### ND4J: New Features
 
 * ND4J: all indexing is now done with longs instead of ints to allow for arrays with dimensions and lengths greater than Integer.MAX_VALUE (approx. 2.1 billion)
-* Added the ability to write Numpy .npy format using ```Nd4j.writeAsNumpy(INDArray,File)``` and convert an INDArray to a numpy strict in-memory using ```Nd4j.convertToNumpy(INDArray)``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5973)
+* Added the ability to write Numpy .npy format using ```Nd4j.writeAsNumpy(INDArray,File)``` and con.vert an INDArray to a numpy strict in-memory using ```Nd4j.convertToNumpy(INDArray)``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5973)
 * ND4j-common ClassPathResource: added ClassPathResource.copyDirectory(File) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5298)
 * SameDiff: A significant number of new ops, and backprop implementations for existing ops
 * Added Nd4j.randomBernoulli/Binomial/Exponential convenience methods [Link](https://github.com/deeplearning4j/deeplearning4j/blob/b887d2f0601fc6562a5a278e822690d2c338aaad/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/factory/Nd4j.java#L3150-L3223)
