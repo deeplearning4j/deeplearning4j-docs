@@ -46,14 +46,14 @@ defaults:
       type: v100-beta2
     values:
       layout: guide
-      version: 1.0.0-snapshot
+      version: 1.0.0-beta2
       cudaVersion: 9.2
   - scope:
       path: ""
       type: latest
     values:
       layout: guide
-      version: 1.0.0-beta2
+      version: 1.0.0-SNAPSHOT
       cudaVersion: 9.2
 
 collections:
