@@ -27,7 +27,8 @@ markdown: kramdown
 theme: minima
 
 # dl4j variables
-latestVersion: v1.0
+versionString: v1.0.0-RC
+versionUri: v100-RC
 
 # collections
 collections_dir: docs
@@ -35,26 +36,16 @@ collections_dir: docs
 defaults:
   - scope:
       path: ""
-      type: v10-api
-    values:
-      layout: api
-      version: 1.0.0
-      cudaVersion: 9.2
-  - scope:
-      path: ""
-      type: v10-guide
+      type: v100-beta2
     values:
       layout: guide
-      version: 1.0.0
+      version: 1.0.0-beta2
       cudaVersion: 9.2
 
 collections:
-  v10-api:
+  v100-RC:
     output: true
-    permalink: /docs/v1.0/api/:name
-  v10-guide:
-    output: true
-    permalink: /docs/v1.0/guide/:name
+    permalink: /docs/v1.0.0-beta2/:name
 
 
 # Exclude from processing.
