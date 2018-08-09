@@ -22,6 +22,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: deeplearning4j
 github_username:  deeplearning4j
 
+plugins:
+  - jekyll-sitemap
+
+# sitemap
+url: "http://deeplearning4j.org" # the base hostname & protocol for your site
+
 # Build settings
 markdown: kramdown
 theme: minima
