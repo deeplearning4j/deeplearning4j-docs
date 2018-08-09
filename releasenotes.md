@@ -40,24 +40,24 @@ layout: default
 * <a href="#four">Version 0.4.0</a>
 
 
-# <a name="onezerozerobeta">Release Notes for Version 1.0.0-beta2</a>
+# <a name="onezerozerobeta2">Release Notes for Version 1.0.0-beta2</a>
 
 ## Highlights - 1.0.0-beta2 Release
 
 * ND4J/Deeplearning4j: Added support for CUDA 9.2. Dropped support for CUDA 9.1. (1.0.0-beta2 release has CUDA 8.0, 9.0 and 9.2 support)
-* Deeplearning4j: New SameDiff layers with training support - [TODO LINKS]
+* Deeplearning4j: New SameDiff layers with training support - [Link](https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/samediff) [Link](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/samediff)
 * Deeplearning4j resource (datasets, pretrained models) storage directory can now be configured via ```DL4JResources.setBaseDirectory``` method or ```org.deeplearning4j.resources.directory``` system property
 * ND4J: all indexing is now done with longs instead of ints to allow for arrays with dimensions and lengths greater than Integer.MAX_VALUE (approx. 2.1 billion)
 * ND4J: nd4j-native-platform will now use Intel MKL-DNN as the default/bundled BLAS implementation (replacing OpenBLAS as the previous default)
-* Deeplearning4j: Added Out-of-memory (OOM) crash dump reporting functionality. Provides a dump with memory use and configuration if training/inference OOMs.
-* Deeplearning4j - new layers: Locally connected 1d, 
+* Deeplearning4j: Added Out-of-memory (OOM) crash dump reporting functionality. Provides a dump with memory use and configuration if training/inference OOMs (to assist with debugging and tuning memory configuration).
+* Deeplearning4j - new layers: Locally connected 1d [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LocallyConnected1D.java), Locally connected 2d [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LocallyConnected2D.java)
 
 
 ## <a name="onezerozerobeta2-dl4j">Deeplearning4J</a>
 
 ### Deeplearning4J: New Features
 
-* Added new SameDiff layers (automatic differentiation - only single class, forward pass definition required) to DL4J with full training support - SameDiffLayer, SameDiffVertex, SameDiffOutputLayer, SameDiffLambdaLayer, SameDiffLambdaVertex - note that these are CPU-only execution for now [Link](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/samediff) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5730)
+* Added new SameDiff layers (automatic differentiation - only single class, forward pass definition required) to DL4J with full training support - SameDiffLayer, SameDiffVertex, SameDiffOutputLayer, SameDiffLambdaLayer, SameDiffLambdaVertex - note that these are CPU-only execution for now [Link](https://github.com/deeplearning4j/dl4j-examples/tree/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/samediff) [Link](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/samediff) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5730)
 * Resource (datasets, pretrained models) storage directory can now be configured via ```DL4JResources.setBaseDirectory``` method or ```org.deeplearning4j.resources.directory``` system property. Note that it is also possible to set a different base location for downloads (for local mirrors of DL4J resources) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5315)
 * Added Out-of-memory (OOM) crash dump reporting functionality. Provides a dump with memory use and configuration if training/inference OOMs. Same information is available (without a crash) for MultiLayerNetwork/ComputationGraph.memoryInfo methods. Can be disabled (or output directory set) using [system properties](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-common/src/main/java/org/deeplearning4j/config/DL4JSystemProperties.java) - [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/util/CrashReportingUtil.java)
 * Added Composite[Multi]DataSetPreProcessor to enable multiple [Multi]DataSetPreProcessors to be applied in a single iterator [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor/CompositeDataSetPreProcessor.java)
@@ -129,6 +129,7 @@ layout: default
 
 ### Deelpearning4J: 1.0.0-beta2 Known Issues
 
+* Windows users are unable to load the HDF5 files used in SvhnLabelProvider (used in HouseNumberDetection example). Linux/Mac users are unaffected. A workaround for windows users is to add the sonatype snapshot dependency ```org.bytedeco.javacpp-presets:hdf5-platform:jar:1.10.2-1.4.3-SNAPSHOT``` [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6017)
 
 ## <a name="onezerozerobeta2-dl4jkeras">Deeplearing4J: Keras Import</a>
 
@@ -204,7 +205,7 @@ layout: default
 ### DataVec: API Changes (Transition Guide): 1.0.0-beta to 1.0.0-beta2
 
 
-## <a name="onezerozerobeta-arbiter">Arbiter</a>
+## <a name="onezerozerobeta2-arbiter">Arbiter</a>
 
 ### Arbiter: New Features
 
@@ -215,16 +216,16 @@ layout: default
 
 * DataProvider has been deprecated. Use DataProvider instead.
 
-## <a name="onezerozerobeta-rl4j">RL4J</a>
+## <a name="onezerozerobeta2-rl4j">RL4J</a>
 
 * stepCounter, epochCounter and historyProcessor can now be set [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5972)
 * Random seed is now loaded for ACPolicy is loaded [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5543)
 
 
-## <a name="onezerozerobeta-scalnet">ScalNet</a>
+## <a name="onezerozerobeta2-scalnet">ScalNet</a>
 
 
-## <a name="onezerozerobeta-nd4s">ND4S</a>
+## <a name="onezerozerobeta2-nd4s">ND4S</a>
 
 
 ---
