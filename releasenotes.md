@@ -123,7 +123,7 @@ layout: default
 
 * GravesLSTM has been deprecated in favor of LSTM due to lack of CuDNN support but otherwise similar accuracy to in practice. Use LSTM class instead.
 * deeplearning4j-modelexport-solr: now uses Lucene/Solr version 7.4.0 (was 7.3.0) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5744)
-* Mask arrays for CNN2d layers must be in broadcastable 4d format: ```[minibatch,depth or 1, height or 1, width or 1]``` - previously they were 2d with shape ```[minibatch,height]``` or ```[minibatch,width]`. This provents ambiguity in later cases (pooling layers), and allows for more complex masking scenarios (such as masking for different image sizes in same minibatch). [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5942)
+* Mask arrays for CNN2d layers must be in broadcastable 4d format: ```[minibatch,depth or 1, height or 1, width or 1]``` - previously they were 2d with shape ```[minibatch,height]``` or ```[minibatch,width]```. This provents ambiguity in later cases (pooling layers), and allows for more complex masking scenarios (such as masking for different image sizes in same minibatch). [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5942)
 * Some older/deprecated Model and Layer methods have been removed. (validateInput(), initParams()). Some custom layers may need to be updated as a result [Link](https://github.com/deeplearning4j/deeplearning4j/pull/5954)
 
 
