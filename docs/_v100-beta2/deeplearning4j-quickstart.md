@@ -104,15 +104,15 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 
 2. Open IntelliJ and choose Import Project. Then select the main 'dl4j-examples' directory. (Note: the example in the illustration below refers to an outdated repository named dl4j-0.4-examples. However, the repository that you will download and install will be called dl4j-examples).
 
-![select directory](./img/Install_IntJ_1.png)
+![select directory](/images/guide/Install_IntJ_1.png)
 
 3. Choose 'Import project from external model' and ensure that Maven is selected.
-![import project](./img/Install_IntJ_2.png)
+![import project](/images/guide/Install_IntJ_2.png)
 
 4. Continue through the wizard's options. Select the SDK that begins with `jdk`. (You may need to click on a plus sign to see your options...) Then click Finish. Wait a moment for IntelliJ to download all the dependencies. You'll see the horizontal bar working on the lower right.
 
 5. Pick an example from the file tree on the left.
-![run IntelliJ example](./img/Install_IntJ_3.png)
+![run IntelliJ example](/images/guide/Install_IntJ_3.png)
 Right-click the file to run.
 
 ## Using DL4J In Your Own Projects: Configuring the POM.xml File
@@ -129,11 +129,11 @@ Within IntelliJ, you will need to choose the first Deeplearning4j example you're
 
 To run the example, right click on it and select the green button in the drop-down menu. You will see, in IntelliJ's bottom window, a series of scores. The rightmost number is the error score for the network's classifications. If your network is learning, then that number will decrease over time with each batch it processes. At the end, this window will tell you how accurate your neural-network model has become:
 
-![mlp classifier results](./img/mlp_classifier_results.png)
+![mlp classifier results](/images/guide/mlp_classifier_results.png)
 
 In another window, a graph will appear, showing you how the multilayer perceptron (MLP) has classified the data in the example. It will look like this:
 
-![mlp classifier viz](./img/mlp_classifier_viz.png)
+![mlp classifier viz](/images/guide/mlp_classifier_viz.png)
 
 Congratulations! You just trained your first neural network with Deeplearning4j. Now, why don't you try our next tutorial: [**MNIST for Beginners**](./mnist-for-beginners), where you'll learn how to classify images.
 
