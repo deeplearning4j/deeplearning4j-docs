@@ -133,12 +133,14 @@ layout: default
 
 ## <a name="onezerozerobeta2-dl4jkeras">Deeplearing4J: Keras Import</a>
 
-
-
-### Deeplearning4J: Keras Import - API Changes (Transition Guide): 1.0.0-beta to 1.0.0-beta2
-
-
-
+* Keras model import now imports every Keras application
+* Supports GlobalPooling3D layer import
+* Supports RepeatVector layer import
+* Supports LocallyConnected1D and LocallyConnected2D layers
+* Keras Lambda layers can now be imported by registering custom SameDiff layers
+* All Keras optimizers are now supported
+* All advanced activation functions can now be imported.
+* Many minor bugs have been fixed, including proper weight setting for all configurations of BatchNormalization, improvements to Reshape SeparableConvolution2D, and full support of Bidirectional layers.
 
 ## <a name="onezerozerobeta2-nd4j">ND4J</a>
 
