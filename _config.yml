@@ -24,6 +24,7 @@ github_username:  deeplearning4j
 
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # sitemap
 url: "http://deeplearning4j.org" # the base hostname & protocol for your site
@@ -47,8 +48,18 @@ defaults:
       layout: guide
       version: 1.0.0-beta2
       cudaVersion: 9.2
+  - scope:
+      path: ""
+      type: latest
+    values:
+      layout: guide
+      version: 1.0.0-beta2
+      cudaVersion: 9.2
 
 collections:
+  latest:
+    output: true
+    permalink: /docs/latest/:name
   v100-beta2:
     output: true
     permalink: /docs/v1.0.0-beta2/:name

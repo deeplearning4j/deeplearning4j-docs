@@ -3,6 +3,7 @@ title: Release Notes
 short_title: Release Notes
 description: New changes in each release of Eclipse Deeplearning4j.
 layout: default
+redirect_from: "/releasenotes"
 ---
 
 **Contents**
