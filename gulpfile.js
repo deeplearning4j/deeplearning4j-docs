@@ -28,7 +28,8 @@ gulp.task('concatJs', function () {
                 'vendor/jquery-knob/dist/jquery.knob.min.js',
                 'js/smooth-scroll.min.js',
                 'vendor/particles.js/particles.min.js',
-                'js/jquery.sticky.js',
+                'js/jquery.sticky.js',,
+                'js/jquery.masonry.min.js',
                 'vendor/flowtype/flowtype.js'
             ])
             .pipe(concat('plugins.js'))
