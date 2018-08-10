@@ -19,14 +19,32 @@ While neural networks are typically run on powerful computers using multiple GPU
 It is also recommended that you download and install IntelliJ IDEA, Maven, and the complete dl4j-examples directory for building and building and training neural nets on your desktop instead of android studio. A quickstart guide for setting up DL4j projects can be found [here](https://deeplearning4j.org/quickstart).
 ## <a name="head_link2">Required Dependencies</a>
 In order to use Deeplearning4J in your Android projects, you will need to add the following dependencies to your app module’s build.gradle file. Depending on the type of neural network used in your application, you may need to add additional dependencies.
-``` java
-compile 'org.deeplearning4j:deeplearning4j-nn:0.9.1'
-compile 'org.nd4j:nd4j-native:0.9.1'
-compile 'org.nd4j:nd4j-native:0.9.1:android-x86'
-compile 'org.nd4j:nd4j-native:0.9.1:android-arm'
-compile 'org.bytedeco:javacpp:1.4'
-compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-x86'
-compile 'org.bytedeco.javacpp-presets:openblas:0.2.19-1.3:android-arm'
+``` groovy
+compile (group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: '1.0.0-beta2') {
+        exclude group: 'org.bytedeco.javacpp-presets', module: 'opencv-platform'
+        exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
+        exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
+    }
+    compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2'
+    compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-arm"
+    compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-arm64"
+    compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-x86"
+    compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-x86_64"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2'
+    compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-arm"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-arm64"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-x86"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-x86_64"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2'
+    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-arm"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-arm64"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-x86"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-x86_64"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2'
+    compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-arm"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-arm64"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-x86"
+    compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-x86_64"
 testCompile 'junit:junit:4.12'
 ```
 DL4J depends on ND4J, which is a library that offers fast n-dimensional arrays. ND4J in turn depends on a platform-specific native code library called JavaCPP, therefore you must load a version of ND4J that matches the architecture of the Android device. Both -x86 and -arm types can be included to support multiple device processor types.

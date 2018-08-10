@@ -29,28 +29,34 @@ For best results, you’ll need the following:
 To be able to use Deeplearning4J in your project, add the following compile dependencies to your app module’s build.gradle file:
 
 ``` groovy
-
-compile (group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: '1.0.0-beta') {
+compile (group: 'org.deeplearning4j', name: 'deeplearning4j-nn', version: '1.0.0-beta2') {
     exclude group: 'org.bytedeco.javacpp-presets', module: 'opencv-platform'
     exclude group: 'org.bytedeco.javacpp-presets', module: 'leptonica-platform'
     exclude group: 'org.bytedeco.javacpp-presets', module: 'hdf5-platform'
 }
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta'
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-arm"
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-arm64"
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-x86"
-compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta', classifier: "android-x86_64"
-compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm"
-compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-arm64"
-compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-x86"
-compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.2.20-1.4.1', classifier: "android-x86_64"
-compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-arm"
-compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-arm64"
-compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86"
-compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.1-1.4.1', classifier: "android-x86_64"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2'
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-arm"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-arm64"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-x86"
+compile group: 'org.nd4j', name: 'nd4j-native', version: '1.0.0-beta2', classifier: "android-x86_64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2'
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-arm"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-arm64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-x86"
+compile group: 'org.bytedeco.javacpp-presets', name: 'openblas', version: '0.3.0-1.4.2', classifier: "android-x86_64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2'
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-arm"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-arm64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-x86"
+compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '3.4.2-1.4.2', classifier: "android-x86_64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2'
+compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-arm"
+compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-arm64"
+compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-x86"
+compile group: 'org.bytedeco.javacpp-presets', name: 'leptonica', version: '1.76.0-1.4.2', classifier: "android-x86_64"
 
 ```
-If you choose to use a SNAPSHOT version of the dependencies with gradle, you will need to create the a pom.xml file in the root directory and run mvn compile on it from the terminal. You will also need to include ``` mavenLocal() ``` in the ```  repository {} ``` block of the build.gradle file. An example pom.xml file is provided below.
+If you choose to use a SNAPSHOT version of the dependencies with gradle, you will need to create the a pom.xml file in the root directory and run ``` mvn -U compile ``` on it from the terminal. You will also need to include ``` mavenLocal() ``` in the ```  repository {} ``` block of the build.gradle file. An example pom.xml file is provided below.
 
 ``` xml
 <project>
