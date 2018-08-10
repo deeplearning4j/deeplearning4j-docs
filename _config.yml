@@ -34,7 +34,8 @@ markdown: kramdown
 theme: minima
 
 # dl4j variables
-versionString: v1.0.0-beta2
+versionString: latest
+latestVersion: v1.0.0-beta2
 versionUri: v100-beta2
 
 # collections

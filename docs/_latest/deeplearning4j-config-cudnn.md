@@ -1,9 +1,12 @@
 ---
 title: Using Deeplearning4j with cuDNN
-layout: default
+short_title: cuDNN
+description: Using the NVIDIA cuDNN library with DL4J.
+category: Configuration
+weight: 3
 ---
 
-# Using Deeplearning4j with cuDNN
+## Using Deeplearning4j with cuDNN
 
 Deeplearning4j supports CUDA but can be further accelerated with cuDNN. Most 2D CNN layers (such as ConvolutionLayer, SubsamplingLayer, etc), and also LSTM and BatchNormalization layers support CuDNN.
 
@@ -12,7 +15,7 @@ To use cuDNN, you will first need to switch ND4J to the CUDA backend. This can b
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
 	   <artifactId>nd4j-cuda-8.0-platform</artifactId>
-	   <version>${nd4j.version}</version>
+	   <version>{{page.version}}</version>
 	 </dependency>
 
 or
@@ -20,7 +23,7 @@ or
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
 	   <artifactId>nd4j-cuda-9.0-platform</artifactId>
-	   <version>${nd4j.version}</version>
+	   <version>{{page.version}}</version>
 	 </dependency>
 
 or
@@ -28,7 +31,7 @@ or
 	 <dependency>
 	   <groupId>org.nd4j</groupId>
 	   <artifactId>nd4j-cuda-9.2-platform</artifactId>
-	   <version>${nd4j.version}</version>
+	   <version>{{page.version}}</version>
 	 </dependency>
 
 More information about that can be found among the [installation instructions for ND4J](http://nd4j.org/getstarted).
@@ -38,7 +41,7 @@ The only other thing we need to do to have DL4J load cuDNN is to add a dependenc
 	 <dependency>
 	   <groupId>org.deeplearning4j</groupId>
 	   <artifactId>deeplearning4j-cuda-8.0</artifactId>
-	   <version>${dl4j.version}</version>
+	   <version>{{page.version}}</version>
 	 </dependency>
 
 or
@@ -46,7 +49,7 @@ or
 	 <dependency>
 	   <groupId>org.deeplearning4j</groupId>
 	   <artifactId>deeplearning4j-cuda-9.0</artifactId>
-	   <version>${dl4j.version}</version>
+	   <version>{{page.version}}</version>
 	 </dependency>
 
 or
@@ -54,7 +57,7 @@ or
 	 <dependency>
 	   <groupId>org.deeplearning4j</groupId>
 	   <artifactId>deeplearning4j-cuda-9.2</artifactId>
-	   <version>${dl4j.version}</version>
+	   <version>{{page.version}}</version>
 	 </dependency>
 
 The actual library for cuDNN is not bundled, so be sure to download and install the appropriate package for your platform from NVIDIA:
