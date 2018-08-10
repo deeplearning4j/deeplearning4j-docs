@@ -48,13 +48,15 @@ defaults:
     values:
       layout: guide
       version: 1.0.0-beta2
+      presetsversion: 1.4.1
       cudaVersion: 9.2
   - scope:
       path: ""
       type: latest
     values:
       layout: guide
-      version: 1.0.0-SNAPSHOT
+      version: 1.0.0-beta2
+      presetsversion: 1.4.1
       cudaVersion: 9.2
 
 collections:
