@@ -352,6 +352,9 @@ Note that in the case of training data that contains time series of different le
 
 ## Available layers
 
+
+---
+
 ### GravesBidirectionalLSTM
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/GravesBidirectionalLSTM.java) </span>
 
@@ -398,6 +401,9 @@ Note: This should be bounded to range 0-1: sigmoid or hard sigmoid, for example
 
 
 
+
+---
+
 ### GravesLSTM
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/GravesLSTM.java) </span>
 
@@ -408,6 +414,9 @@ CuDNN for faster network training on CUDA (Nvidia) GPUs
 
 
 
+
+---
+
 ### LSTM
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LSTM.java) </span>
 
@@ -415,6 +424,9 @@ LSTM recurrent net without peephole connections.
 
 
 
+
+
+---
 
 ### RnnLossLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/RnnLossLayer.java) </span>
@@ -430,6 +442,9 @@ Input and output activations are same as other RNN layers: 3 dimensions with sha
 
 
 
+
+
+---
 
 ### Bidirectional
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/recurrent/Bidirectional.java) </span>
@@ -471,6 +486,9 @@ is not necessarily the case
 
 
 
+
+---
+
 ### LastTimeStep
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/recurrent/LastTimeStep.java) </span>
 
@@ -482,6 +500,9 @@ series (in the same minibatch) are handled as expected here.
 
 
 
+
+
+---
 
 ### SimpleRnn
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/recurrent/SimpleRnn.java) </span>

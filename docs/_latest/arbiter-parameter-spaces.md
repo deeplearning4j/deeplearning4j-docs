@@ -8,6 +8,9 @@ weight: 1
 
 ## Parameter Spaces
 
+
+---
+
 ### BooleanSpace
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/BooleanSpace.java) </span>
 
@@ -16,6 +19,9 @@ If argument to setValue is less than or equal to 0.5 it will return True else Fa
 
 
 
+
+---
+
 ### FixedValue
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/FixedValue.java) </span>
 
@@ -23,6 +29,9 @@ FixedValue is a ParameterSpace that defines only a single fixed value
 
 
 
+
+
+---
 
 ### ContinuousParameterSpace
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/continuous/ContinuousParameterSpace.java) </span>
@@ -43,6 +52,9 @@ ContinuousParameterSpace with uniform distribution between the minimum and maxim
 
 
 
+
+---
+
 ### DiscreteParameterSpace
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/discrete/DiscreteParameterSpace.java) </span>
 
@@ -50,6 +62,9 @@ A DiscreteParameterSpace is used for a set of un-ordered values
 
 
 
+
+
+---
 
 ### IntegerParameterSpace
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/integer/IntegerParameterSpace.java) </span>
@@ -71,6 +86,9 @@ Create an IntegerParameterSpace with a uniform distribution between the specifie
 
 
 
+
+---
+
 ### MathOp
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/math/MathOp.java) </span>
 
@@ -80,6 +98,9 @@ using this to 2x the size of the previous layer
 
 
 
+
+
+---
 
 ### PairMathOp
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/math/PairMathOp.java) </span>

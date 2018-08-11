@@ -80,6 +80,9 @@ MultiLayerConfiguration.Builder builder = new NeuralNetConfiguration.Builder()
 
 ## API
 
+
+---
+
 ### MultiLayerNetwork
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java) </span>
 

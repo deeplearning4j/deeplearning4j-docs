@@ -20,6 +20,9 @@ You can also write your own filters by implementing the `Filter` interface, thou
 
 ## Available filters
 
+
+---
+
 ### ConditionFilter
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/ConditionFilter.java) </span>
 
@@ -80,6 +83,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### Filter
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/Filter.java) </span>
 
@@ -88,6 +94,9 @@ Filter: a method of removing examples
 
 
 
+
+
+---
 
 ### FilterInvalidValues
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/FilterInvalidValues.java) </span>
@@ -147,6 +156,9 @@ This will often be the same as the input
 
 
 
+
+
+---
 
 ### InvalidNumColumns
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/InvalidNumColumns.java) </span>

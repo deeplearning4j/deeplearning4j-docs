@@ -8,6 +8,9 @@ weight: 1
 
 ## Available reductions
 
+
+---
+
 ### GeographicMidpointReduction
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/reduce/impl/GeographicMidpointReduction.java) </span>
 
@@ -26,6 +29,9 @@ public Schema transform(Schema inputSchema)
 
 
 
+
+
+---
 
 ### StringReducer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/stringreduce/StringReducer.java) </span>

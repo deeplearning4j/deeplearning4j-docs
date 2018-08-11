@@ -55,6 +55,9 @@ DataAnalysis analysis = AnalyzeLocal.analyze(mySchema, csvRecordReader, maxHisto
 
 ## Utilities
 
+
+---
+
 ### AnalyzeLocal
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-local/src/main/java/org/datavec/local/transforms/AnalyzeLocal.java) </span>
 
@@ -97,6 +100,9 @@ Analyze the data quality of data - provides a report on missing values, values t
 
 
 
+
+
+---
 
 ### AnalyzeSpark
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-spark/src/main/java/org/datavec/spark/transform/AnalyzeSpark.java) </span>

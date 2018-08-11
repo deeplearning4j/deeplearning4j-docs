@@ -16,6 +16,9 @@ RBMs are no longer supported as of version 0.9.x. They are no longer best-in-cla
 
 ## Supported layers
 
+
+---
+
 ### AutoEncoder
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/AutoEncoder.java) </span>
 
@@ -25,6 +28,9 @@ a reconstruction function.
 
 
 
+
+
+---
 
 ### BernoulliReconstructionDistribution
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/BernoulliReconstructionDistribution.java) </span>
@@ -46,6 +52,9 @@ Create a BernoulliReconstructionDistribution with the default Sigmoid activation
 
 
 
+
+
+---
 
 ### CompositeReconstructionDistribution
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/CompositeReconstructionDistribution.java) </span>
@@ -74,6 +83,9 @@ being modelled by distribution Y.
 
 
 
+
+---
+
 ### ExponentialReconstructionDistribution
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/ExponentialReconstructionDistribution.java) </span>
 
@@ -100,6 +112,9 @@ public boolean hasLossFunction()
 
 
 
+
+---
+
 ### GaussianReconstructionDistribution
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/GaussianReconstructionDistribution.java) </span>
 
@@ -125,6 +140,9 @@ Create a GaussianReconstructionDistribution with the default identity activation
 
 
 
+
+---
+
 ### LossFunctionWrapper
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/LossFunctionWrapper.java) </span>
 
@@ -137,6 +155,9 @@ means of calculating the negative log probability.
 
 
 
+
+---
+
 ### ReconstructionDistribution
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/ReconstructionDistribution.java) </span>
 
@@ -145,6 +166,9 @@ to specify the form of the distribution p(data|x). For example, real-valued data
 
 
 
+
+
+---
 
 ### VariationalAutoencoder
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/VariationalAutoencoder.java) </span>

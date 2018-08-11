@@ -8,6 +8,9 @@ weight: 4
 
 ## Keras local layers
 
+
+---
+
 ### KerasLocallyConnected1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/local/KerasLocallyConnected1D.java) </span>
 
@@ -62,6 +65,9 @@ Set weights for 1D locally connected layer.
 
 
 
+
+
+---
 
 ### KerasLocallyConnected2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/local/KerasLocallyConnected2D.java) </span>

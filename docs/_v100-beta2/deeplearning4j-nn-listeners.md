@@ -23,6 +23,9 @@ model.setListeners(new ScoreIterationListener(1));
 
 ## Available listeners
 
+
+---
+
 ### EvaluativeListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//EvaluativeListener.java) </span>
 
@@ -53,6 +56,9 @@ Evaluation will be launched after each frequency iteration
 
 
 
+
+---
+
 ### TimeIterationListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//TimeIterationListener.java) </span>
 
@@ -70,6 +76,9 @@ Constructor
 
 
 
+
+
+---
 
 ### CheckpointListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CheckpointListener.java) </span>
@@ -129,6 +138,9 @@ have been automatically deleted (given the configuration) will not be returned h
 
 
 
+
+---
+
 ### ScoreIterationListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ScoreIterationListener.java) </span>
 
@@ -146,6 +158,9 @@ public ScoreIterationListener(int printIterations)
 
 
 
+
+---
+
 ### ParamAndGradientIterationListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ParamAndGradientIterationListener.java) </span>
 
@@ -160,6 +175,9 @@ These
 
 
 
+
+
+---
 
 ### SleepyTrainingListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SleepyTrainingListener.java) </span>
@@ -182,6 +200,9 @@ In this mode parkNanos() call will be used, to make process really idle
 
 
 
+
+---
+
 ### ComposableIterationListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ComposableIterationListener.java) </span>
 
@@ -189,12 +210,18 @@ A group of listeners
 
 
 
+
+---
+
 ### SharedGradient
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SharedGradient.java) </span>
 
 
 
 
+
+
+---
 
 ### CollectScoresIterationListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresIterationListener.java) </span>
@@ -264,6 +291,9 @@ Export the scores to the specified file in delimited (one per line) UTF-8 format
 
 
 
+
+---
+
 ### CollectScoresListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresListener.java) </span>
 
@@ -272,12 +302,18 @@ A simple listener that collects scores to a list every N iterations. Can also op
 
 
 
+
+---
+
 ### Checkpoint
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//Checkpoint.java) </span>
 
 
 
 
+
+
+---
 
 ### PerformanceListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//PerformanceListener.java) </span>

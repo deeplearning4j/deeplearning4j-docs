@@ -16,12 +16,18 @@ Most of the time you do not need to interact with the record classes directly, u
 
 ## Types of records
 
+
+---
+
 ### Record
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/Record.java) </span>
 
 
 
 
+
+
+---
 
 ### SequenceRecord
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/SequenceRecord.java) </span>

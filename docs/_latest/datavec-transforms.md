@@ -61,6 +61,9 @@ for(int i=0; i<numActions; i++ ){
 
 ## Available transformations and conversions
 
+
+---
+
 ### TransformProcess
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/TransformProcess.java) </span>
 
@@ -936,6 +939,9 @@ Create the TransformProcess object
 
 
 
+
+---
+
 ### CategoricalToIntegerTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/categorical/CategoricalToIntegerTransform.java) </span>
 
@@ -987,6 +993,9 @@ This will often be the same as the input
 
 
 
+
+
+---
 
 ### CategoricalToOneHotTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/categorical/CategoricalToOneHotTransform.java) </span>
@@ -1040,6 +1049,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### IntegerToCategoricalTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/categorical/IntegerToCategoricalTransform.java) </span>
 
@@ -1070,6 +1082,9 @@ Transform a sequence
 
 
 
+
+---
+
 ### PivotTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/categorical/PivotTransform.java) </span>
 
@@ -1098,6 +1113,9 @@ public Schema transform(Schema inputSchema)
 
 
 
+
+
+---
 
 ### StringToCategoricalTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/categorical/StringToCategoricalTransform.java) </span>
@@ -1130,6 +1148,9 @@ Transform a sequence
 
 
 
+
+---
+
 ### AddConstantColumnTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/column/AddConstantColumnTransform.java) </span>
 
@@ -1137,6 +1158,9 @@ Add a new column, where the values in that column for all records are identical 
 
 
 
+
+
+---
 
 ### DuplicateColumnsTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/column/DuplicateColumnsTransform.java) </span>
@@ -1202,6 +1226,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### RemoveAllColumnsExceptForTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/column/RemoveAllColumnsExceptForTransform.java) </span>
 
@@ -1258,6 +1285,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### RemoveColumnsTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/column/RemoveColumnsTransform.java) </span>
 
@@ -1312,6 +1342,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### RenameColumnsTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/column/RenameColumnsTransform.java) </span>
 
@@ -1364,6 +1397,9 @@ This will often be the same as the input
 
 
 
+
+
+---
 
 ### ReorderColumnsTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/column/ReorderColumnsTransform.java) </span>
@@ -1427,6 +1463,9 @@ This will often be the same as the input
 
 
 
+
+
+---
 
 ### ConditionalCopyValueTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/condition/ConditionalCopyValueTransform.java) </span>
@@ -1500,6 +1539,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### ConditionalReplaceValueTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/condition/ConditionalReplaceValueTransform.java) </span>
 
@@ -1568,6 +1610,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### ConditionalReplaceValueTransformWithDefault
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/condition/ConditionalReplaceValueTransformWithDefault.java) </span>
 
@@ -1581,6 +1626,9 @@ and replaced (or not) separately (i.e., Condition.condition(List<Writable>) is u
 
 
 
+
+
+---
 
 ### ConvertToDouble
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/ConvertToDouble.java) </span>
@@ -1598,6 +1646,9 @@ public DoubleWritable map(Writable writable)
 
 
 
+
+
+---
 
 ### DoubleColumnsMathOpTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/DoubleColumnsMathOpTransform.java) </span>
@@ -1633,6 +1684,9 @@ Transform a sequence
 
 
 
+
+---
+
 ### DoubleMathFunctionTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/DoubleMathFunctionTransform.java) </span>
 
@@ -1640,6 +1694,9 @@ A simple transform to do common mathematical operations, such as sin(x), ceil(x)
 
 
 
+
+
+---
 
 ### DoubleMathOpTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/DoubleMathOpTransform.java) </span>
@@ -1673,6 +1730,9 @@ Transform a sequence
 
 
 
+
+---
+
 ### Log2Normalizer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/Log2Normalizer.java) </span>
 
@@ -1695,6 +1755,9 @@ in to another object
 
 
 
+
+
+---
 
 ### MinMaxNormalizer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/MinMaxNormalizer.java) </span>
@@ -1719,6 +1782,9 @@ in to another object
 
 
 
+
+---
+
 ### StandardizeNormalizer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/StandardizeNormalizer.java) </span>
 
@@ -1741,6 +1807,9 @@ in to another object
 
 
 
+
+---
+
 ### SubtractMeanNormalizer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/doubletransform/SubtractMeanNormalizer.java) </span>
 
@@ -1761,6 +1830,9 @@ in to another object
 
 
 
+
+---
+
 ### ConvertToInteger
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/integer/ConvertToInteger.java) </span>
 
@@ -1778,6 +1850,9 @@ public IntWritable map(Writable writable)
 
 
 
+
+
+---
 
 ### IntegerColumnsMathOpTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/integer/IntegerColumnsMathOpTransform.java) </span>
@@ -1827,6 +1902,9 @@ Transform a sequence
 
 
 
+
+---
+
 ### IntegerMathOpTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/integer/IntegerMathOpTransform.java) </span>
 
@@ -1848,6 +1926,9 @@ in to another object
 
 
 
+
+
+---
 
 ### IntegerToOneHotTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/integer/IntegerToOneHotTransform.java) </span>
@@ -1903,6 +1984,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### ReplaceEmptyIntegerWithValueTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/integer/ReplaceEmptyIntegerWithValueTransform.java) </span>
 
@@ -1923,6 +2007,9 @@ in to another object
 
 
 
+
+---
+
 ### ReplaceInvalidWithIntegerTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/integer/ReplaceInvalidWithIntegerTransform.java) </span>
 
@@ -1942,6 +2029,9 @@ in to another object
 
 
 
+
+
+---
 
 ### LongColumnsMathOpTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/longtransform/LongColumnsMathOpTransform.java) </span>
@@ -1978,6 +2068,9 @@ Transform a sequence
 
 
 
+
+---
+
 ### LongMathOpTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/longtransform/LongMathOpTransform.java) </span>
 
@@ -2000,6 +2093,9 @@ in to another object
 
 
 
+
+---
+
 ### TextToCharacterIndexTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/nlp/TextToCharacterIndexTransform.java) </span>
 
@@ -2009,6 +2105,9 @@ For example, "abc" would be converted to [1, 2, 3]. Values in other columns will
 
 
 
+
+
+---
 
 ### TextToTermIndexSequenceTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/nlp/TextToTermIndexSequenceTransform.java) </span>
@@ -2020,6 +2119,9 @@ columns will be duplicated.
 
 
 
+
+
+---
 
 ### SequenceDifferenceTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/sequence/SequenceDifferenceTransform.java) </span>
@@ -2083,6 +2185,9 @@ Transform a sequence
 
 
 
+
+
+---
 
 ### SequenceMovingWindowReduceTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/sequence/SequenceMovingWindowReduceTransform.java) </span>
@@ -2154,6 +2259,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### SequenceOffsetTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/sequence/SequenceOffsetTransform.java) </span>
 
@@ -2177,6 +2285,9 @@ at the end.
 
 
 
+
+---
+
 ### AppendStringColumnTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/AppendStringColumnTransform.java) </span>
 
@@ -2199,6 +2310,9 @@ in to another object
 
 
 
+
+---
+
 ### ChangeCaseStringTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/ChangeCaseStringTransform.java) </span>
 
@@ -2206,6 +2320,9 @@ Change case (to, e.g, all lower case) of String column.
 
 
 
+
+
+---
 
 ### ConcatenateStringColumns
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/ConcatenateStringColumns.java) </span>
@@ -2272,6 +2389,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### ConvertToString
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/ConvertToString.java) </span>
 
@@ -2305,6 +2425,9 @@ in to another object
 
 
 
+
+---
+
 ### MapAllStringsExceptListTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/MapAllStringsExceptListTransform.java) </span>
 
@@ -2326,6 +2449,9 @@ in to another object
 
 
 
+
+---
+
 ### RemoveWhiteSpaceTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/RemoveWhiteSpaceTransform.java) </span>
 
@@ -2345,6 +2471,9 @@ in to another object
 
 
 
+
+
+---
 
 ### ReplaceEmptyStringTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/ReplaceEmptyStringTransform.java) </span>
@@ -2366,6 +2495,9 @@ in to another object
 
 
 
+
+---
+
 ### ReplaceStringTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/ReplaceStringTransform.java) </span>
 
@@ -2383,6 +2515,9 @@ Constructs a new ReplaceStringTransform using the specified
 
 
 
+
+
+---
 
 ### StringListToCategoricalSetTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/StringListToCategoricalSetTransform.java) </span>
@@ -2451,6 +2586,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### StringListToCountsNDArrayTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/StringListToCountsNDArrayTransform.java) </span>
 
@@ -2516,6 +2654,9 @@ This will often be the same as the input
 
 
 
+
+---
+
 ### StringListToIndicesNDArrayTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/StringListToIndicesNDArrayTransform.java) </span>
 
@@ -2526,6 +2667,9 @@ into a dense array.
 
 
 
+
+
+---
 
 ### StringMapTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/string/StringMapTransform.java) </span>
@@ -2561,6 +2705,9 @@ in to another object
 
 
 
+
+
+---
 
 ### DeriveColumnsFromTimeTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/time/DeriveColumnsFromTimeTransform.java) </span>
@@ -2605,6 +2752,9 @@ after the operation has been applied
 
 
 
+
+---
+
 ### StringToTimeTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/time/StringToTimeTransform.java) </span>
 
@@ -2642,6 +2792,9 @@ in to another object
 
 
 
+
+
+---
 
 ### TimeMathOpTransform
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/time/TimeMathOpTransform.java) </span>

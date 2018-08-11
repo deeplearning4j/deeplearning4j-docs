@@ -89,6 +89,9 @@ Note that `EarlyStoppingParallelTrainer` doesn't support all of the functionalit
 
 
 
+
+---
+
 ### AutoencoderScoreCalculator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/AutoencoderScoreCalculator.java) </span>
 
@@ -96,6 +99,9 @@ Score function for a MultiLayerNetwork or ComputationGraph with a single
 
 
 
+
+
+---
 
 ### ClassificationScoreCalculator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/ClassificationScoreCalculator.java) </span>
@@ -106,6 +112,9 @@ Used for both MultiLayerNetwork and ComputationGraph
 
 
 
+
+---
+
 ### DataSetLossCalculator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculator.java) </span>
 
@@ -113,6 +122,9 @@ Calculate the score (loss function value) on a given data set (usually a test se
 
 
 
+
+
+---
 
 ### DataSetLossCalculatorCG
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculatorCG.java) </span>
@@ -124,6 +136,9 @@ Typically used to calculate the loss on a test set.
 
 
 
+
+---
+
 ### ROCScoreCalculator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/ROCScoreCalculator.java) </span>
 
@@ -133,6 +148,9 @@ ComputationGraph
 
 
 
+
+---
+
 ### RegressionScoreCalculator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/RegressionScoreCalculator.java) </span>
 
@@ -140,6 +158,9 @@ Calculate the regression score of the network (MultiLayerNetwork or ComputationG
 
 
 
+
+
+---
 
 ### VAEReconErrorScoreCalculator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/VAEReconErrorScoreCalculator.java) </span>
@@ -161,6 +182,9 @@ Constructor for reconstruction ERROR
 
 
 
+
+
+---
 
 ### VAEReconProbScoreCalculator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/VAEReconProbScoreCalculator.java) </span>
@@ -184,6 +208,9 @@ for details
 
 
 
+
+
+---
 
 ### BestScoreEpochTerminationCondition
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/termination/BestScoreEpochTerminationCondition.java) </span>
@@ -213,6 +240,9 @@ lesserBetter flag to false (feel free to give the flag a better name)
 
 
 
+
+
+---
 
 ### ScoreImprovementEpochTerminationCondition
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/termination/ScoreImprovementEpochTerminationCondition.java) </span>

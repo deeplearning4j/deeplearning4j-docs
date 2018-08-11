@@ -8,6 +8,9 @@ weight: 10
 
 ## Utilities
 
+
+---
+
 ### HtmlAnalysis
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/ui/HtmlAnalysis.java) </span>
 
@@ -40,6 +43,9 @@ numerical columns
 
 
 
+
+
+---
 
 ### HtmlSequencePlotting
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/ui/HtmlSequencePlotting.java) </span>

@@ -57,6 +57,9 @@ Once you've defined your join and you've loaded the data into DataVec, you must 
 
 DataVec comes with a few `Schema` classes and helper utilities for 2D and sequence types of data.
 
+
+---
+
 ### Join
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/join/Join.java) </span>
 
@@ -125,6 +128,9 @@ The idea: join examples where firstDataValues(joinColumNamesLeft[i]) == secondDa
 
 
 
+
+---
+
 ### InferredSchema
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/InferredSchema.java) </span>
 
@@ -138,6 +144,9 @@ field is blank/null, it will also become the default type.
 
 
 
+
+
+---
 
 ### Schema
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/Schema.java) </span>
@@ -773,6 +782,9 @@ The column names are based on indexing.
 
 
 
+
+
+---
 
 ### SequenceSchema
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/SequenceSchema.java) </span>

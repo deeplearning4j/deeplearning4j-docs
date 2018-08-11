@@ -18,6 +18,9 @@ In Eclipse Deeplearning4j a vertex is a type of layer that acts as a node in a `
 
 
 
+
+---
+
 ### L2NormalizeVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/L2NormalizeVertex.java) </span>
 
@@ -25,6 +28,9 @@ L2NormalizeVertex performs L2 normalization on a single input.
 
 
 
+
+
+---
 
 ### L2Vertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/L2Vertex.java) </span>
@@ -40,6 +46,9 @@ L2 vertices to calculate two real numbers which can be fed into a LossLayer to c
 
 
 
+
+---
+
 ### PoolHelperVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/PoolHelperVertex.java) </span>
 
@@ -48,6 +57,9 @@ importation of Caffe's GoogLeNet from https://gist.github.com/joelouismarino/a2e
 
 
 
+
+
+---
 
 ### ReshapeVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ReshapeVertex.java) </span>
@@ -58,6 +70,9 @@ to the next layer. ReshapeVertex also ensures the shape is valid for the backwar
 
 
 
+
+---
+
 ### ScaleVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ScaleVertex.java) </span>
 
@@ -67,6 +82,9 @@ under control.
 
 
 
+
+
+---
 
 ### ShiftVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ShiftVertex.java) </span>
@@ -87,6 +105,9 @@ to accomplish that.
 
 
 
+
+---
+
 ### StackVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/StackVertex.java) </span>
 
@@ -101,6 +122,9 @@ This vertex will automatically stack all available inputs.
 
 
 
+
+
+---
 
 ### UnstackVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/UnstackVertex.java) </span>
@@ -120,6 +144,9 @@ explicitly defined by the user to properly calculate an step.
 
 
 
+
+
+---
 
 ### ReverseTimeSeriesVertex
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/rnn/ReverseTimeSeriesVertex.java) </span>

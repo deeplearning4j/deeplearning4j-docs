@@ -12,6 +12,9 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 
 ## Available layers
 
+
+---
+
 ### Convolution1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution1D.java) </span>
 
@@ -20,6 +23,9 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 
 
 
+
+---
+
 ### Convolution2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution2D.java) </span>
 
@@ -27,6 +33,9 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 
 
 
+
+
+---
 
 ### Convolution3D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution3D.java) </span>
@@ -92,6 +101,9 @@ Set dilation size for 3D convolutions in (depth, height, width) order
 
 
 
+
+---
+
 ### Deconvolution2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Deconvolution2D.java) </span>
 
@@ -145,6 +157,9 @@ kernel
 
 
 
+
+---
+
 ### DepthwiseConvolution2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/DepthwiseConvolution2D.java) </span>
 
@@ -183,6 +198,9 @@ kernel
 
 
 
+
+
+---
 
 ### SeparableConvolution2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/SeparableConvolution2D.java) </span>
@@ -244,6 +262,9 @@ kernel
 
 
 
+
+---
+
 ### Cropping1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping1D.java) </span>
 
@@ -269,6 +290,9 @@ public Cropping1D build()
 
 
 
+
+
+---
 
 ### Cropping2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping2D.java) </span>
@@ -296,6 +320,9 @@ public Cropping2D build()
 
 
 
+
+
+---
 
 ### Cropping3D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping3D.java) </span>

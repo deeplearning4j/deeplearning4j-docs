@@ -8,6 +8,9 @@ weight: 10
 
 ## Available models
 
+
+---
+
 ### AlexNet
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/AlexNet.java) </span>
 
@@ -28,6 +31,9 @@ Weight distribution uses 0.1 std for all layers in the paper but 0.005 in the de
 
 
 
+
+---
+
 ### Darknet19
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/Darknet19.java) </span>
 
@@ -45,6 +51,9 @@ The output labels are as per https://github.com/pjreddie/darknet/blob/master/dat
 
 
 
+
+---
+
 ### FaceNetNN4Small2
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/FaceNetNN4Small2.java) </span>
 
@@ -55,6 +64,9 @@ Also based on the OpenFace implementation: http://reports-archive.adm.cs.cmu.edu
 
 
 
+
+---
+
 ### InceptionResNetV1
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/InceptionResNetV1.java) </span>
 
@@ -64,6 +76,9 @@ Also based on the OpenFace implementation: http://reports-archive.adm.cs.cmu.edu
 
 
 
+
+
+---
 
 ### LeNet
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/LeNet.java) </span>
@@ -77,6 +92,9 @@ MNIST weights for this model are available and have been converted from https://
 
 
 
+
+
+---
 
 ### NASNet
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/NASNet.java) </span>
@@ -95,6 +113,9 @@ ImageNet weights for this model are available and have been converted from https
 
 
 
+
+---
+
 ### ResNet50
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/ResNet50.java) </span>
 
@@ -106,6 +127,9 @@ ImageNet weights for this model are available and have been converted from https
 
 
 
+
+---
+
 ### SimpleCNN
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/SimpleCNN.java) </span>
 
@@ -114,6 +138,9 @@ Reference: https://github.com/oarriaga/face_classification
 
 
 
+
+
+---
 
 ### SqueezeNet
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/SqueezeNet.java) </span>
@@ -129,6 +156,9 @@ ImageNet weights for this model are available and have been converted from https
 
 
 
+
+---
+
 ### TextGenerationLSTM
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/TextGenerationLSTM.java) </span>
 
@@ -140,6 +170,9 @@ Walt Whitman weights are available for generating text from his works, adapted f
 
 
 
+
+
+---
 
 ### TinyYOLO
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/TinyYOLO.java) </span>
@@ -187,6 +220,9 @@ The channels of the 416x416 input images need to be in RGB order (not BGR), with
 
 
 
+
+---
+
 ### UNet
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/UNet.java) </span>
 
@@ -200,6 +236,9 @@ Weights are available for image segmentation trained on a synthetic dataset
 
 
 
+
+
+---
 
 ### VGG16
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/VGG16.java) </span>
@@ -217,6 +256,9 @@ VGGFace weights for this model are available and have been converted from https:
 
 
 
+
+---
+
 ### VGG19
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/VGG19.java) </span>
 
@@ -227,6 +269,9 @@ ImageNet weights for this model are available and have been converted from https
 
 
 
+
+
+---
 
 ### Xception
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/Xception.java) </span>
@@ -241,6 +286,9 @@ ImageNet weights for this model are available and have been converted from https
 
 
 
+
+
+---
 
 ### YOLO2
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-zoo/src/main/java/org/deeplearning4j/zoo/model/YOLO2.java) </span>

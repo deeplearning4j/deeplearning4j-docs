@@ -35,6 +35,9 @@ Typical values include:<br>
 
 
 
+
+---
+
 ### DenseLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/DenseLayer.java) </span>
 
@@ -45,6 +48,9 @@ If true (default): include bias parameters in the model. False: no bias.
 
 
 
+
+
+---
 
 ### EmbeddingLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/EmbeddingLayer.java) </span>
@@ -71,6 +77,9 @@ If true: include bias parameters in the layer. False (default): no bias.
 
 
 
+
+
+---
 
 ### EmbeddingSequenceLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/EmbeddingSequenceLayer.java) </span>
@@ -117,6 +126,9 @@ Set input sequence inference mode for embedding layer.
 
 
 
+
+
+---
 
 ### GlobalPoolingLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/GlobalPoolingLayer.java) </span>
@@ -200,6 +212,9 @@ P-norm constant. Only used if using {- link PoolingType#PNORM} for the pooling t
 
 
 
+
+---
+
 ### LocalResponseNormalization
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LocalResponseNormalization.java) </span>
 
@@ -248,6 +263,9 @@ Scaling constant beta. Default: 0.75
 
 
 
+
+---
+
 ### LocallyConnected1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LocallyConnected1D.java) </span>
 
@@ -268,6 +286,9 @@ Set input filter size for this locally connected 1D layer
 
 
 
+
+
+---
 
 ### LocallyConnected2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LocallyConnected2D.java) </span>
@@ -290,6 +311,9 @@ Set input filter size (h,w) for this locally connected 2D layer
 
 
 
+
+---
+
 ### LossLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LossLayer.java) </span>
 
@@ -298,6 +322,9 @@ an input without MLP logic.
 
 
 
+
+
+---
 
 ### OutputLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/OutputLayer.java) </span>
@@ -308,6 +335,9 @@ This includes classification as well as regression
 
 
 
+
+---
+
 ### Pooling1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Pooling1D.java) </span>
 
@@ -317,6 +347,9 @@ Supports the following pooling types: MAX, AVG, SUM, PNORM, NONE
 
 
 
+
+---
+
 ### Pooling2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Pooling2D.java) </span>
 
@@ -325,6 +358,9 @@ Supports the following pooling types: MAX, AVG, SUM, PNORM, NONE
 Supports the following pooling types: MAX, AVG, SUM, PNORM, NONE
 
 
+
+
+---
 
 ### Subsampling1DLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Subsampling1DLayer.java) </span>
@@ -342,6 +378,9 @@ TODO: We will eventually want to NOT subclass off of SubsamplingLayer.
 
 
 
+
+
+---
 
 ### Upsampling1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling1D.java) </span>
@@ -372,6 +411,9 @@ Upsampling size int array with a single element
 
 
 
+
+---
+
 ### Upsampling2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling2D.java) </span>
 
@@ -400,6 +442,9 @@ Upsampling size array
 
 
 
+
+
+---
 
 ### Upsampling3D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling3D.java) </span>
@@ -430,6 +475,9 @@ Upsampling size as int, so same upsampling size is used for depth, width and hei
 
 
 
+
+---
+
 ### ZeroPadding1DLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/ZeroPadding1DLayer.java) </span>
 
@@ -447,6 +495,9 @@ public ZeroPadding1DLayer build()
 
 
 
+
+
+---
 
 ### ZeroPadding3DLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/ZeroPadding3DLayer.java) </span>
@@ -467,6 +518,9 @@ public ZeroPadding3DLayer build()
 
 
 
+
+---
+
 ### ZeroPaddingLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/ZeroPaddingLayer.java) </span>
 
@@ -486,6 +540,9 @@ public ZeroPaddingLayer build()
 
 
 
+
+
+---
 
 ### ElementWiseMultiplicationLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/misc/ElementWiseMultiplicationLayer.java) </span>
@@ -513,6 +570,9 @@ This is a report of the estimated memory consumption for the given layer
 
 
 
+
+---
+
 ### RepeatVector
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/misc/RepeatVector.java) </span>
 
@@ -534,6 +594,9 @@ Set repetition factor for RepeatVector layer
 
 
 
+
+
+---
 
 ### Yolo2OutputLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/objdetect/Yolo2OutputLayer.java) </span>
@@ -613,6 +676,9 @@ a value of 1.0 would correspond to one grid cell; a value of 13 would correspond
 
 
 
+
+---
+
 ### MaskLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/util/MaskLayer.java) </span>
 
@@ -621,6 +687,9 @@ this layer. It can be used with 2d (feed-forward), 3d (time series) or 4d (CNN) 
 
 
 
+
+
+---
 
 ### MaskZeroLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/util/MaskZeroLayer.java) </span>

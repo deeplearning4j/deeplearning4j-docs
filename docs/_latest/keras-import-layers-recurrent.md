@@ -8,6 +8,9 @@ weight: 4
 
 ## Keras recurrent layers
 
+
+---
+
 ### KerasLstm
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/recurrent/KerasLstm.java) </span>
 
@@ -122,6 +125,9 @@ Get LSTM forget gate bias initialization from Keras layer configuration.
 
 
 
+
+---
+
 ### KerasRnnUtils
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/recurrent/KerasRnnUtils.java) </span>
 
@@ -159,6 +165,9 @@ Non-zero dropout rates are currently not supported.
 
 
 
+
+
+---
 
 ### KerasSimpleRnn
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/recurrent/KerasSimpleRnn.java) </span>
