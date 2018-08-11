@@ -18,19 +18,19 @@ Most of the examples make use of DataVec, a toolkit for preprocessing and clearn
 
 This example takes the canonical Iris dataset of the flower species of the same name, whose relevant measurements are sepal length, sepal width, petal length and petal width. It builds a Spark RDD from the relatively small dataset and runs an analysis against it. 
 
-* [Show me the code](http://github.com/deeplearning4j/dl4j-examples/blob/master/datavec-examples/src/main/java/org/datavec/transform/analysis/IrisAnalysis.java)
+[Show me the code](http://github.com/deeplearning4j/dl4j-examples/blob/master/datavec-examples/src/main/java/org/datavec/transform/analysis/IrisAnalysis.java)
 
 ### BasicDataVecExample.java
 
 This example loads data into a Spark RDD. All DataVec transform operations use Spark RDDs. Here, we use DataVec to filter data, apply time transformations and remove columns.
 
-* [Show me the code](http://github.com/deeplearning4j/dl4j-examples/blob/master/datavec-examples/src/main/java/org/datavec/transform/basic/BasicDataVecExample.java)
+[Show me the code](http://github.com/deeplearning4j/dl4j-examples/blob/master/datavec-examples/src/main/java/org/datavec/transform/basic/BasicDataVecExample.java)
 
 ### PrintSchemasAtEachStep.java
 
 This example shows the print Schema tools that are useful to visualize and to ensure that the code for the transform is behaving as expected. 
 
-* [Show me the code](http://github.com/deeplearning4j/dl4j-examples/blob/master/datavec-examples/src/main/java/org/datavec/transform/debugging/PrintSchemasAtEachStep.java)
+[Show me the code](http://github.com/deeplearning4j/dl4j-examples/blob/master/datavec-examples/src/main/java/org/datavec/transform/debugging/PrintSchemasAtEachStep.java)
 
 ### JoinExample.java
 
