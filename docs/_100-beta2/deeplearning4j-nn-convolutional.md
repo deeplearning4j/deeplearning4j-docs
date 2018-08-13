@@ -18,7 +18,7 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 ### Convolution1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution1D.java) </span>
 
-1D convolution layer
+1D convolution layer. Expects input activations of shape [minibatch,channels,sequenceLength]
 
 
 
@@ -107,16 +107,15 @@ Set dilation size for 3D convolutions in (depth, height, width) order
 ### Deconvolution2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Deconvolution2D.java) </span>
 
-2D deconvolution layer configuration
+2D deconvolution layer configuration<br>
 
 Deconvolutions are also known as transpose convolutions or fractionally strided convolutions.
 In essence, deconvolutions swap forward and backward pass with regular 2D convolutions.
 
-See the paper by Matt Zeiler for details:
-http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf
+See the paper by Matt Zeiler for details: <a href="http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf">http://www.matthewzeiler.com/wp-content/uploads/2017/07/cvpr2010.pdf</a>
 
 For an intuitive guide to convolution arithmetic and shapes, see:
-https://arxiv.org/abs/1603.07285v1
+<a href="https://arxiv.org/abs/1603.07285v1">https://arxiv.org/abs/1603.07285v1</a>
 
 
 ##### hasBias 
@@ -189,12 +188,29 @@ public Builder kernelSize(int... kernelSize)
 ```
 
 
-Size of the convolution
-rows/columns
+Size of the convolution rows/columns
 
-- param kernelSize the height and width of the
-kernel
-- return
+- param kernelSize the height and width of the kernel
+
+##### stride 
+```java
+public Builder stride(int... stride) 
+```
+
+
+Stride of the convolution in rows/columns (height/width) dimensions
+
+- param stride Stride of the layer
+
+##### padding 
+```java
+public Builder padding(int... padding) 
+```
+
+
+Padding of the convolution in rows/columns (height/width) dimensions
+
+- param padding Padding of the layer
 
 
 
@@ -253,11 +269,26 @@ public Builder kernelSize(int... kernelSize)
 ```
 
 
-Size of the convolution
-rows/columns
-- param kernelSize the height and width of the
-kernel
-- return
+Size of the convolution rows/columns (height/width)
+- param kernelSize the height and width of the kernel
+
+##### stride 
+```java
+public Builder stride(int... stride) 
+```
+
+
+Stride of the convolution rows/columns (height/width)
+- param stride the stride of the kernel (in h/w dimensions)
+
+##### padding 
+```java
+public Builder padding(int... padding) 
+```
+
+
+Padding - rows/columns (height/width)
+- param padding the padding in h/w dimensions
 
 
 
@@ -286,7 +317,7 @@ public Cropping1D build()
 ```
 
 
-- param cropping Cropping amount for top/bottom(in that order). Must be length 1 or 2 array.
+- param cropping Cropping amount for top/bottom (in that order). Must be length 1 or 2 array.
 
 
 

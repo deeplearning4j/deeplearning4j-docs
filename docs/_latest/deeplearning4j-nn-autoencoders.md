@@ -22,9 +22,27 @@ RBMs are no longer supported as of version 0.9.x. They are no longer best-in-cla
 ### AutoEncoder
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/AutoEncoder.java) </span>
 
-Autoencoder.
-Add Gaussian noise to input and learn
-a reconstruction function.
+Autoencoder layer.
+Adds noise to input and learn a reconstruction function.
+
+
+##### corruptionLevel 
+```java
+public Builder corruptionLevel(double corruptionLevel) 
+```
+
+
+Builder - sets the level of corruption - 0.0 (none) to 1.0 (all values corrupted)
+- param corruptionLevel Corruption level (0 to 1)
+
+##### sparsity 
+```java
+public Builder sparsity(double sparsity) 
+```
+
+
+Autoencoder sparity parameter
+- param sparsity Sparsity
 
 
 
@@ -175,7 +193,7 @@ to specify the form of the distribution p(data|x). For example, real-valued data
 
 Variational Autoencoder layer
 
-See: Kingma & Welling, 2013: Auto-Encoding Variational Bayes - https://arxiv.org/abs/1312.6114
+See: Kingma & Welling, 2013: Auto-Encoding Variational Bayes - <a href="https://arxiv.org/abs/1312.6114">https://arxiv.org/abs/1312.6114</a>
 
 This implementation allows multiple encoder and decoder layers, the number and sizes of which can be set independently.
 

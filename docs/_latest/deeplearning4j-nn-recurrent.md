@@ -359,7 +359,7 @@ Note that in the case of training data that contains time series of different le
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/GravesBidirectionalLSTM.java) </span>
 
 Bidirectional LSTM recurrent net, based on Graves: Supervised Sequence Labelling with Recurrent Neural Networks
-http://www.cs.toronto.edu/~graves/phd.pdf
+<a href="http://www.cs.toronto.edu/~graves/phd.pdf">http://www.cs.toronto.edu/~graves/phd.pdf</a>
 
 Bidirectional layer wrapper you can make any recurrent layer bidirectional, in particular GravesLSTM.
 Note that this layer adds the output of both directions, which translates into "ADD" mode in Bidirectional.
@@ -408,7 +408,7 @@ Note: This should be bounded to range 0-1: sigmoid or hard sigmoid, for example
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/GravesLSTM.java) </span>
 
 LSTM recurrent net, based on Graves: Supervised Sequence Labelling with Recurrent Neural Networks
-http://www.cs.toronto.edu/~graves/phd.pdf
+<a href="http://www.cs.toronto.edu/~graves/phd.pdf">http://www.cs.toronto.edu/~graves/phd.pdf</a>
 
 CuDNN for faster network training on CUDA (Nvidia) GPUs
 
@@ -420,7 +420,8 @@ CuDNN for faster network training on CUDA (Nvidia) GPUs
 ### LSTM
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LSTM.java) </span>
 
-LSTM recurrent net without peephole connections.
+LSTM recurrent neural network layer without peephole connections.
+Supports CuDNN acceleration - see <a href="https://deeplearning4j.org/cudnn>https://deeplearning4j.org/cudnn</a> for details
 
 
 
@@ -432,13 +433,43 @@ LSTM recurrent net without peephole connections.
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/RnnLossLayer.java) </span>
 
 Recurrent Neural Network Loss Layer.<br>
-Handles calculation of gradients etc for various objective functions.<br>
+Handles calculation of gradients etc for various objective (loss) functions.<br>
 distributed dense component here. Consequently, the output activations size is equal to the input size.<br>
 Input and output activations are same as other RNN layers: 3 dimensions with shape
-[miniBatchSize,nIn,timeSeriesLength] and [miniBatchSize,nOut,timeSeriesLength] respectively.
+[miniBatchSize,nIn,timeSeriesLength] and [miniBatchSize,nOut,timeSeriesLength] respectively.<br>
+Note that RnnLossLayer also has the option to configure an activation function
+
+
+##### nIn 
+```java
+public Builder nIn(int nIn) 
+```
+
+
+- param lossFunction Loss function for the loss layer
 
 
 
+
+
+---
+
+### RnnOutputLayer
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/RnnOutputLayer.java) </span>
+
+and labels of shape [minibatch,nOut,sequenceLength]. It also supports mask arrays.
+<br>
+Note that RnnOutputLayer can also be used for 1D CNN layers, which also have [minibatch,nOut,sequenceLength]
+activations/labels shape.
+
+
+##### build 
+```java
+public RnnOutputLayer build() 
+```
+
+
+- param lossFunction Loss function for the output layer
 
 
 
@@ -492,7 +523,7 @@ is not necessarily the case
 ### LastTimeStep
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/recurrent/LastTimeStep.java) </span>
 
-LastTimeStep is a "wrapper" layer: it wraps any RNN layer, and extracts out the last time step during forward pass,
+LastTimeStep is a "wrapper" layer: it wraps any RNN (or CNN1D) layer, and extracts out the last time step during forward pass,
 and returns it as a row vector (per example). That is, for 3d (time series) input (with shape [minibatch, layerSize,
 timeSeriesLength]), we take the last time step and return it as a 2d array with shape [minibatch, layerSize].<br>
 Note that the last time step operation takes into account any mask arrays, if present: thus, variable length time
@@ -508,7 +539,8 @@ series (in the same minibatch) are handled as expected here.
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/recurrent/SimpleRnn.java) </span>
 
 Simple RNN - aka "vanilla" RNN is the simplest type of recurrent neural network layer.
-It implements out_t = activationFn( in_t  inWeight + out_(t-1)  recurrentWeights + bias).
 
-Note that other architectures (LSTM, etc) are usually more effective, especially for longer time series
+Note that other architectures (LSTM, etc) are usually much more effective, especially for longer time series;
+however SimpleRnn is very fast to compute, and hence may be considered where the length of the temporal dependencies
+in the dataset are only a few steps long.
 

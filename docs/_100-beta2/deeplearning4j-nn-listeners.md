@@ -49,9 +49,9 @@ public void iterationDone(Model model, int iteration, int epoch)
 ```
 
 
-Evaluation will be launched after each frequency iteration
-- param iterator
-- param frequency
+- param iterator  Iterator to provide data for evaluation
+- param frequency Frequency (in number of iterations/epochs according to the invocation type) to perform evaluation
+- param type      Type of value for 'frequency' - iteration end, epoch end, etc
 
 
 
@@ -63,7 +63,9 @@ Evaluation will be launched after each frequency iteration
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//TimeIterationListener.java) </span>
 
 Time Iteration Listener.
-This listener displays into INFO logs the remaining time in minutes and the date of the end of the process. 
+This listener displays into INFO logs the remaining time in minutes and the date of the end of the process.
+Remaining time is estimated from the amount of time for training so far, and the total number of iterations
+specified by the user
 
 ##### TimeIterationListener 
 ```java
@@ -72,7 +74,7 @@ public TimeIterationListener(int iterationCount)
 
 
 Constructor
-- param iterationCount The global number of iteration of the process 
+- param iterationCount The global number of iteration for training (all epochs)
 
 
 
@@ -144,7 +146,8 @@ have been automatically deleted (given the configuration) will not be returned h
 ### ScoreIterationListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ScoreIterationListener.java) </span>
 
-Score iteration listener
+Score iteration listener. Reports the score (value of the loss function )of the network during training every
+N iterations
 
 
 ##### ScoreIterationListener 
@@ -170,8 +173,6 @@ format (for example, when learning on a system accessed via SSH etc).
 i.e., is intended to aid network tuning and debugging<br>
 This iteration listener is set up to calculate mean, min, max, and mean absolute value
 of each type of parameter and gradient in the network at each iteration.<br>
-These
-
 
 
 
@@ -182,8 +183,8 @@ These
 ### SleepyTrainingListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SleepyTrainingListener.java) </span>
 
-This TrainingListener implementation provides a way to "sleep" during specific Neural Network training phases.
-Suitable for debugging/testing purposes.
+This TrainingListener implementation provides a way to "sleep" during specific Neural Network training phases.<br>
+Suitable for debugging/testing purposes only.
 
 PLEASE NOTE: All timers treat time values as milliseconds.
 PLEASE NOTE: Do not use it in production environment.

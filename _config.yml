@@ -44,7 +44,7 @@ collections_dir: docs
 defaults:
   - scope:
       path: ""
-      type: v100-beta2
+      type: 100-beta2
     values:
       layout: guide
       version: 1.0.0-beta2
@@ -65,7 +65,7 @@ collections:
     permalink: /docs/latest/:name
   v100-beta2:
     output: true
-    permalink: /docs/v1.0.0-beta2/:name
+    permalink: /docs/1.0.0-beta2/:name
 
 
 # Exclude from processing.

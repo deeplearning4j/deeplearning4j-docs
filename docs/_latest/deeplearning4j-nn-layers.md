@@ -20,6 +20,22 @@ If you are configuring complex networks such as InceptionV4, you will need to us
 
 ## General layers
 
+
+---
+
+### ActivationLayer
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/ActivationLayer.java) </span>
+
+Activation layer is a simple layer that applies the specified activation function to the input activations
+
+##### clone 
+```java
+public ActivationLayer clone() 
+```
+
+
+- param activation Activation function for the layer
+
 ##### activation 
 ```java
 public Builder activation(String activationFunction) 
@@ -32,6 +48,22 @@ Typical values include:<br>
 "hardtanh", "leakyrelu", "maxout", "softsign", "softplus"
 - deprecated Use {- link #activation(Activation)} or {- link - activation(IActivation)}
 
+##### activation 
+```java
+public Builder activation(IActivation activationFunction) 
+```
+
+
+- param activationFunction Activation function for the layer
+
+##### activation 
+```java
+public Builder activation(Activation activation) 
+```
+
+
+- param activation Activation function for the layer
+
 
 
 
@@ -41,10 +73,40 @@ Typical values include:<br>
 ### DenseLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/DenseLayer.java) </span>
 
+Dense layer: a standard fully connected feed forward layer
+
+##### hasBias 
+```java
+public Builder hasBias(boolean hasBias)
+```
+
+
 If true (default): include bias parameters in the model. False: no bias.
 
+- param hasBias If true: include bias parameters in this model
 
 
+
+
+
+---
+
+### DropoutLayer
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/DropoutLayer.java) </span>
+
+Dropout layer. This layer simply applies dropout at training time, and passes activations through unmodified at test
+
+
+##### build 
+```java
+public DropoutLayer build() 
+```
+
+
+Create a dropout layer with standard {- link Dropout}, with the specified probability of retaining the
+input activation. See {- link Dropout} for the full details
+
+- param dropout Activation retain probability.
 
 
 
@@ -56,13 +118,14 @@ If true (default): include bias parameters in the model. False: no bias.
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/EmbeddingLayer.java) </span>
 
 Embedding layer: feed-forward layer that expects single integers per example as input (class numbers, in range 0 to numClass-1)
-as input. This input has shape [numExamples,1] instead of [numExamples,numClasses] for the equivalent one-hot representation.
 Mathematically, EmbeddingLayer is equivalent to using a DenseLayer with a one-hot representation for the input; however,
 it can be much more efficient with a large number of classes (as a dense layer + one-hot input does a matrix multiply
 with all but one value being zero).<br>
 <b>Note</b>: can only be used as the first layer for a network<br>
 <b>Note 2</b>: For a given example index i, the output is activationFunction(weights.getRow(i) + bias), hence the
-weight rows can be considered a vector/embedding for each example.
+weight rows can be considered a vector/embedding for each example.<br>
+Note also that embedding layer has an activation function (set to IDENTITY to disable) and optional bias (which is
+disabled by default)
 
 
 ##### hasBias 
@@ -85,11 +148,14 @@ If true: include bias parameters in the layer. False (default): no bias.
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/EmbeddingSequenceLayer.java) </span>
 
 Embedding layer for sequences: feed-forward layer that expects fixed-length number (inputLength) of integers/indices
-per example as input, ranged from 0 to numClasses - 1. This input thus has shape [numExamples, inputLength].
-The output of this layer is 3D, namely of shape [numExamples, nOut, inputLength].
+per example as input, ranged from 0 to numClasses - 1. This input thus has shape [numExamples, inputLength] or
+shape [numExamples, 1, inputLength].<br>
+The output of this layer is 3D (sequence/time series), namely of shape [numExamples, nOut, inputLength].
 <b>Note</b>: can only be used as the first layer for a network<br>
 <b>Note 2</b>: For a given example index i, the output is activationFunction(weights.getRow(i) + bias), hence the
-weight rows can be considered a vector/embedding of each index.
+weight rows can be considered a vector/embedding of each index.<br>
+Note also that embedding layer has an activation function (set to IDENTITY to disable) and optional bias (which is
+disabled by default)
 
 
 ##### hasBias 
@@ -151,10 +217,10 @@ Behaviour with default settings:<br>
 
 
 Alternatively, by setting collapseDimensions = false in the configuration, it is possible to retain the reduced dimensions
-as 1s: this gives
-- [miniBatchSize, vectorSize, 1] for RNN output,
-- [miniBatchSize, channels, 1, 1] for CNN output, and
-- [miniBatchSize, channels, 1, 1, 1] for CNN3D output.
+as 1s: this gives<br>
+- [miniBatchSize, vectorSize, 1] for RNN output,<br>
+- [miniBatchSize, channels, 1, 1] for CNN output, and<br>
+- [miniBatchSize, channels, 1, 1, 1] for CNN3D output.<br>
 <br>
 
 
@@ -218,7 +284,8 @@ P-norm constant. Only used if using {- link PoolingType#PNORM} for the pooling t
 ### LocalResponseNormalization
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LocalResponseNormalization.java) </span>
 
-Created by nyghtowl on 10/29/15.
+Local response normalization layer<br>
+See section 3.3 of <a href="http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf">http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf</a>
 
 ##### k 
 ```java
@@ -228,7 +295,7 @@ public Builder k(double k)
 
 LRN scaling constant k. Default: 2
 
-- param k
+- param k Scaling constant
 
 ##### n 
 ```java
@@ -272,6 +339,77 @@ Scaling constant beta. Default: 0.75
 SameDiff version of a 1D locally connected layer.
 
 
+##### nIn 
+```java
+public Builder nIn(int nIn) 
+```
+
+
+- param nIn Number of inputs to the layer (input size)
+
+##### nOut 
+```java
+public Builder nOut(int nOut) 
+```
+
+
+- param nOut Number of outputs (output size)
+
+##### activation 
+```java
+public Builder activation(Activation activation) 
+```
+
+
+- param activation Activation function for the layer
+
+##### kernelSize 
+```java
+public Builder kernelSize(int k) 
+```
+
+
+- param k Kernel size for the layer
+
+##### stride 
+```java
+public Builder stride(int s) 
+```
+
+
+- param s Stride for the layer
+
+##### padding 
+```java
+public Builder padding(int p) 
+```
+
+
+- param p Padding for the layer. Not used if {- link ConvolutionMode#Same} is set
+
+##### convolutionMode 
+```java
+public Builder convolutionMode(ConvolutionMode cm) 
+```
+
+
+- param cm Convolution mode for the layer. See {- link ConvolutionMode} for details
+
+##### dilation 
+```java
+public Builder dilation(int d) 
+```
+
+
+- param d Dilation for the layer
+
+##### hasBias 
+```java
+public Builder hasBias(boolean hasBias)
+```
+
+
+- param hasBias If true (default is false) the layer will have a bias
 
 ##### setInputSize 
 ```java
@@ -297,6 +435,78 @@ SameDiff version of a 2D locally connected layer.
 
 
 
+##### nIn 
+```java
+public Builder nIn(int nIn) 
+```
+
+
+- param nIn Number of inputs to the layer (input size)
+
+##### nOut 
+```java
+public Builder nOut(int nOut) 
+```
+
+
+- param nOut Number of outputs (output size)
+
+##### activation 
+```java
+public Builder activation(Activation activation) 
+```
+
+
+- param activation Activation function for the layer
+
+##### kernelSize 
+```java
+public Builder kernelSize(int... k) 
+```
+
+
+- param k Kernel size for the layer. Must be 2 values (height/width)
+
+##### stride 
+```java
+public Builder stride(int... s) 
+```
+
+
+- param s Stride for the layer. Must be 2 values (height/width)
+
+##### padding 
+```java
+public Builder padding(int... p) 
+```
+
+
+- param p Padding for the layer. Not used if {- link ConvolutionMode#Same} is set. Must be 2 values (height/width)
+
+##### convolutionMode 
+```java
+public Builder convolutionMode(ConvolutionMode cm) 
+```
+
+
+- param cm Convolution mode for the layer. See {- link ConvolutionMode} for details
+
+##### dilation 
+```java
+public Builder dilation(int... d) 
+```
+
+
+- param d Dilation for the layer. Must be 2 values (height/width)
+
+##### hasBias 
+```java
+public Builder hasBias(boolean hasBias)
+```
+
+
+- param hasBias If true (default is false) the layer will have a bias
+
 ##### setInputSize 
 ```java
 public Builder setInputSize(int... inputSize)
@@ -317,8 +527,18 @@ Set input filter size (h,w) for this locally connected 2D layer
 ### LossLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LossLayer.java) </span>
 
-LossLayer is a flexible output "layer" that performs a loss function on
-an input without MLP logic.
+LossLayer is a flexible output layer that performs a loss function on an input without MLP logic.<br>
+but LossLayer does not have any parameters. Consequently, setting nIn/nOut isn't supported - the output size
+is the same size as the input activations.
+
+
+##### nIn 
+```java
+public Builder nIn(int nIn) 
+```
+
+
+- param lossFunction Loss function for the loss layer
 
 
 
@@ -329,8 +549,19 @@ an input without MLP logic.
 ### OutputLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/OutputLayer.java) </span>
 
-Output layer with different objective co-occurrences for different objectives.
-This includes classification as well as regression
+Output layer used for training via backpropagation based on labels and a specified loss function.
+Can be configured for both classification and regression.
+Note that OutputLayer has parameters - it contains a fully-connected layer (effectively contains a DenseLayer)
+internally. This allows the output size to be different to the layer input size.
+
+
+##### build 
+```java
+public OutputLayer build() 
+```
+
+
+- param lossFunction Loss function for the output layer
 
 
 
@@ -341,7 +572,6 @@ This includes classification as well as regression
 ### Pooling1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Pooling1D.java) </span>
 
-1D Pooling layer.
 
 Supports the following pooling types: MAX, AVG, SUM, PNORM, NONE
 
@@ -353,7 +583,6 @@ Supports the following pooling types: MAX, AVG, SUM, PNORM, NONE
 ### Pooling2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Pooling2D.java) </span>
 
-2D Pooling layer.
 
 Supports the following pooling types: MAX, AVG, SUM, PNORM, NONE
 
@@ -365,16 +594,9 @@ Supports the following pooling types: MAX, AVG, SUM, PNORM, NONE
 ### Subsampling1DLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Subsampling1DLayer.java) </span>
 
-1D (temporal) subsampling layer. Currently, we just subclass off the
-SubsamplingLayer and hard code the "width" dimension to 1. Also, this
-layer accepts RNN InputTypes instead of CNN InputTypes.
+1D (temporal) subsampling layer - also known as pooling layer.<br>
 
-This approach treats a multivariate time series with L timesteps and
-P variables as an L x 1 x P image (L rows high, 1 column wide, P
-channels deep). The kernel should be H<L pixels high and W=1 pixels
-wide.
-
-TODO: We will eventually want to NOT subclass off of SubsamplingLayer.
+Supports the following pooling types: MAX, AVG, SUM, PNORM
 
 
 
@@ -385,7 +607,16 @@ TODO: We will eventually want to NOT subclass off of SubsamplingLayer.
 ### Upsampling1D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling1D.java) </span>
 
-Upsampling 1D layer
+Upsampling 1D layer<br>
+Example:
+<pre>
+If input (for a single example, with channels down page, and sequence from left to right) is:
+[ A1, A2, A3]
+[ B1, B2, B3]
+Then output with size = 2 is:
+[ A1, A1, A2, A2, A3, A3]
+[ B1, B1, B2, B2, B3, B2]
+</pre>
 
 
 ##### size 
@@ -394,7 +625,7 @@ public Builder size(int size)
 ```
 
 
-Upsampling size int
+Upsampling size
 
 - param size    upsampling size in single spatial dimension of this 1D layer
 
@@ -404,7 +635,7 @@ public Builder size(int[] size)
 ```
 
 
-Upsampling size int array with a single element
+Upsampling size int array with a single element. Array must be length 1
 
 - param size    upsampling size in single spatial dimension of this 1D layer
 
@@ -417,7 +648,21 @@ Upsampling size int array with a single element
 ### Upsampling2D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling2D.java) </span>
 
-Upsampling 2D layer
+Upsampling 2D layer<br>
+Repeats each value (or rather, set of depth values) in the height and width dimensions by size[0] and size[1]
+times respectively.<br>
+Example:
+<pre>
+Input (slice for one example and channel)
+[ A, B ]
+[ C, D ]
+Size = [2, 2]
+Output (slice for one example and channel)
+[ A, A, B, B ]
+[ A, A, B, B ]
+[ C, C, D, D ]
+[ C, C, D, D ]
+</pre>
 
 
 ##### size 
@@ -449,7 +694,8 @@ Upsampling size array
 ### Upsampling3D
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Upsampling3D.java) </span>
 
-Upsampling 3D layer
+Upsampling 3D layer<br>
+Repeats each value (all channel values for each x/y/z location) by size[0], size[1] and size[2]<br>
 
 
 ##### size 
@@ -524,7 +770,7 @@ public ZeroPadding3DLayer build()
 ### ZeroPaddingLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/ZeroPaddingLayer.java) </span>
 
-Zero padding layer for convolutional neural networks.
+Zero padding layer for convolutional neural networks (2D CNNs).
 Allows padding to be done separately for top/bottom/left/right
 
 
@@ -547,7 +793,6 @@ public ZeroPaddingLayer build()
 ### ElementWiseMultiplicationLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/misc/ElementWiseMultiplicationLayer.java) </span>
 
-Elementwise multiplication layer with weights: implements out = activationFn(input . w + b) where:<br>
 - w is a learnable weight vector of length nOut<br>
 - "." is element-wise multiplication<br>
 - b is a bias vector<br>
@@ -602,20 +847,34 @@ Set repetition factor for RepeatVector layer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/objdetect/Yolo2OutputLayer.java) </span>
 
 Output (loss) layer for YOLOv2 object detection model, based on the papers:
-YOLO9000: Better, Faster, Stronger - Redmon & Farhadi (2016) - https://arxiv.org/abs/1612.08242<br>
+YOLO9000: Better, Faster, Stronger - Redmon & Farhadi (2016) - <a href="https://arxiv.org/abs/1612.08242">https://arxiv.org/abs/1612.08242</a><br>
 and<br>
 You Only Look Once: Unified, Real-Time Object Detection - Redmon et al. (2016) -
-http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf<br>
-
+<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf">http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf</a>
+<br>
 This loss function implementation is based on the YOLOv2 version of the paper. However, note that it doesn't
 currently support simultaneous training on both detection and classification datasets as described in the
-YOlO9000 paper.
+YOlO9000 paper.<br>
 
 Note: Input activations to the Yolo2OutputLayer should have shape: [minibatch, b(5+c), H, W], where:<br>
-b = number of bounding boxes (determined by config)<br>
+b = number of bounding boxes (determined by config - see papers for details)<br>
 c = number of classes<br>
 H = output/label height<br>
 W = output/label width<br>
+<br>
+Important: In practice, this means that the last convolutional layer before your Yolo2OutputLayer should have output
+depth of b(5+c). Thus if you change the number of bounding boxes, or change the number of object classes,
+the number of channels (nOut of the last convolution layer) needs to also change.
+<br>
+Label format: [minibatch, 4+C, H, W]<br>
+Order for labels depth: [x1,y1,x2,y2,(class labels)]<br>
+x1 = box top left position<br>
+y1 = as above, y axis<br>
+x2 = box bottom right position<br>
+y2 = as above y axis<br>
+Note: labels are represented as a multiple of grid size - for a 13x13 grid, (0,0) is top left, (13,13) is bottom right<br>
+Note also that mask arrays are not required - this implementation infers the presence or absence of objects in each grid
+cell from the class labels (which should be 1-hot if an object is present, or all 0s otherwise).
 
 
 ##### lambdaCoord 
@@ -694,4 +953,14 @@ this layer. It can be used with 2d (feed-forward), 3d (time series) or 4d (CNN) 
 ### MaskZeroLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/util/MaskZeroLayer.java) </span>
 
+Wrapper which masks timesteps with 0 activation.
+Assumes that the input shape is [batch_size, input_size, timesteps].
+
+##### getOutputType 
+```java
+public InputType getOutputType(int layerIndex, InputType inputType) 
+```
+
+
+- param underlying The underlying layer to wrap and mask activations for
 
