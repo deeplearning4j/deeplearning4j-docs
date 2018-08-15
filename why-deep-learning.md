@@ -5,7 +5,7 @@ description: When to choose deep learning vs. other algorithms.
 layout: default
 ---
 
-# When to Choose Deep Learning
+## When to Choose Deep Learning
 
 Where does deep learning fit into machine learning and other optimization algorithms, and what kind of problems can it solve? These are the first questions to answer as you choose the tools to tackle whatever data problem you have. 
 
@@ -21,7 +21,7 @@ That very basic function, which occurs in our minds before we have the chance to
 
 For deep learning to work well, it needs lots of data. So first of all, you should have that. (Deep learning has distinct advantages over machine learning when processing **unstructured data**. It doesn't need you to label everything to discover patterns.)
 
-Next, you need a question you want answered. What does this unstructured data consist of? Are there images that require labels? Voices that need names? Speech that should be matched with written text? Video with multiple objects that you want to analyze? Or texts you would like to group by sentiment or content? Those are all concrete questions deep learning can help with. If those match your problem, then you should [choose your algorithm](./neuralnetworktable.html). 
+Next, you need a question you want answered. What does this unstructured data consist of? Are there images that require labels? Voices that need names? Speech that should be matched with written text? Video with multiple objects that you want to analyze? Or texts you would like to group by sentiment or content? Those are all concrete questions deep learning can help with. If those match your problem, then you should choose your algorithm. 
 
 In short: Does your problem require that some object or phenomenon be identified amid a sea of input? Do you need to isolate some event before you can make a decision? Answering "yes" to these questions may lead you to choose deep learning. 
 

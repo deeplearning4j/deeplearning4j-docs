@@ -437,7 +437,7 @@ redirect_from: "/releasenotes"
 - Added MultiLayerNetwork.toComputationGraph() method ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/988630b1c8cde8da6414ca80d146097c902993fb/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java#L3391-L3398))
 - Added NetworkUtils convenience methods to easily change the learning rate of an already initialized network ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/util/NetworkUtils.java))
 - Added MultiLayerNetwork.save(File)/.load(File) and ComputationGraph.save(File)/.load(File) convenience methods ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4401))
-- Added CheckpointListener to periodically save a copy of the model during training (every N iter/epochs, every T time units) ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners/checkpoint/CheckpointListener.java))
+- Added CheckpointListener to periodically save a copy of the model during training (every N iter/epochs, every T time units) ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners/CheckpointListener.java))
 - Added ComputationGraph output method overloads with mask arrays ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/4553))
 - New LossMultiLabel loss function for multi-label classification ([Link](https://github.com/deeplearning4j/nd4j/pull/2724))
 - Added new model zoo models:
