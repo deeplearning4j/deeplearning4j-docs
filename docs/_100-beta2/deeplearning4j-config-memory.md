@@ -60,7 +60,7 @@ As of 0.9.2-SNAPSHOT, it's possible to use a memory-mapped file instead of RAM w
 
 Here's sample code:
 
-```
+```java
 WorkspaceConfiguration mmap = WorkspaceConfiguration.builder()
                 .initialSize(1000000000)
                 .policyLocation(LocationPolicy.MMAP)
