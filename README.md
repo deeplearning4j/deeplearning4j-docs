@@ -49,3 +49,15 @@ jekyll serve
 ```shell
 gulp watch
 ```
+
+### Regenerating Tutorials
+
+Tutorials are converted from Jupyter notebooks with the extension `.ipynb` in the examples repository, and generated into pages directly accessible on the docs website. If you need to update the tutorials, run the command:
+
+```shell
+cd utils
+export DL4J_TUTORIALS_DIR=/path/to/dl4j-examples/tutorials/
+bash convert_tutorials.sh
+```
+
+The conversion script will handle everything automatically.

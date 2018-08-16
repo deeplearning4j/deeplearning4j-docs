@@ -44,6 +44,12 @@ collections_dir: docs
 defaults:
   - scope:
       path: ""
+      type: tutorials
+    values:
+      layout: tutorial
+      github_raw_base: https://raw.githubusercontent.com/deeplearning4j/dl4j-examples/master/tutorials/
+  - scope:
+      path: ""
       type: 100-beta2
     values:
       layout: guide
@@ -60,6 +66,11 @@ defaults:
       cudaVersion: 9.2
 
 collections:
+  # tutorials
+  tutorials:
+    output: true
+    permalink: /tutorials/:name
+  # versioned user guides
   latest:
     output: true
     permalink: /docs/latest/:name
@@ -79,3 +90,4 @@ exclude:
   - README.md
   - Rakefile
   - changelog.md
+  - utils/
