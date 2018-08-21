@@ -15,35 +15,10 @@ Neural networks work best when the data they’re fed is normalized, constrained
 
 ---
 
-### MultiNormalizerStandardize
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerStandardize.java) </span>
+### NormalizerStrategy
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStrategy.java) </span>
 
-Pre processor for MultiDataSet that normalizes feature values (and optionally label values) to have 0 mean and
-a standard deviation of 1
-
-
-##### load 
-```java
-public void load(@NonNull List<File> featureFiles, @NonNull List<File> labelFiles) throws IOException 
-```
-
-
-Load means and standard deviations from the file system
-
-- param featureFiles source files for features, requires 2 files per input, alternating mean and stddev files
-- param labelFiles   source files for labels, requires 2 files per output, alternating mean and stddev files
-
-##### save 
-```java
-public void save(@NonNull List<File> featureFiles, @NonNull List<File> labelFiles) throws IOException 
-```
-
-
-- param featureFiles target files for features, requires 2 files per input, alternating mean and stddev files
-- param labelFiles   target files for labels, requires 2 files per output, alternating mean and stddev files
-- deprecated use {- link MultiStandardizeSerializerStrategy} instead
-
-Save the current means and standard deviations to the file system
+Interface for strategies that can normalize and denormalize data arrays based on statistics of the population
 
 
 
@@ -51,20 +26,43 @@ Save the current means and standard deviations to the file system
 
 ---
 
-### ImageMultiPreProcessingScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageMultiPreProcessingScaler.java) </span>
+### ImageFlatteningDataSetPreProcessor
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageFlatteningDataSetPreProcessor.java) </span>
 
-A preprocessor specifically for images that applies min max scaling to one or more of the feature arrays
-in a MultiDataSet.<br>
+A DataSetPreProcessor used to flatten a 4d CNN features array to a flattened 2d format (for use in networks such
+as a DenseLayer/multi-layer perceptron)
+
+
+
+
+
+---
+
+### Normalizer
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//Normalizer.java) </span>
+
+Base interface for all normalizers
+
+
+
+
+
+---
+
+### ImagePreProcessingScaler
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImagePreProcessingScaler.java) </span>
+
+Created by susaneraly on 6/23/16.
+A preprocessor specifically for images that applies min max scaling
 Can take a range, so pixel values can be scaled from 0->255 to minRange->maxRange
 default minRange = 0 and maxRange = 1;
 If pixel values are not 8 bits, you can specify the number of bits as the third argument in the constructor
 For values that are already floating point, specify the number of bits as 1
 
 
-##### ImageMultiPreProcessingScaler 
+##### ImagePreProcessingScaler 
 ```java
-public ImageMultiPreProcessingScaler(double a, double b, int maxBits, int[] featureIndices) 
+public ImagePreProcessingScaler(double a, double b, int maxBits) 
 ```
 
 
@@ -72,8 +70,39 @@ Preprocessor can take a range as minRange and maxRange
 - param a, default = 0
 - param b, default = 1
 - param maxBits in the image, default = 8
-- param featureIndices Indices of feature arrays to process. If only one feature array is present,
-this should always be 0
+
+
+##### fit 
+```java
+public void fit(DataSet dataSet) 
+```
+
+
+Fit a dataset (only compute
+based on the statistics from this dataset0
+
+- param dataSet the dataset to compute on
+
+##### fit 
+```java
+public void fit(DataSetIterator iterator) 
+```
+
+
+Iterates over a dataset
+accumulating statistics for normalization
+
+- param iterator the iterator to use for
+collecting statistics.
+
+##### transform 
+```java
+public void transform(DataSet toPreProcess) 
+```
+
+
+Transform the data
+- param toPreProcess the dataset to transform
 
 
 
@@ -81,15 +110,73 @@ this should always be 0
 
 ---
 
-### StandardizeStrategy
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//StandardizeStrategy.java) </span>
+### NormalizerMinMaxScaler
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerMinMaxScaler.java) </span>
 
-of the means and standard deviations of the population
+Pre processor for DataSets that normalizes feature values (and optionally label values) to lie between a minimum
+and maximum value (by default between 0 and 1)
+
+
+##### NormalizerMinMaxScaler 
+```java
+public NormalizerMinMaxScaler(double minRange, double maxRange) 
+```
+
+
+Preprocessor can take a range as minRange and maxRange
+
+- param minRange
+- param maxRange
+
+
+##### load 
+```java
+public void load(File... statistics) throws IOException 
+```
+
+
+Load the given min and max
+
+- param statistics the statistics to load
+- throws IOException
+
+##### save 
+```java
+public void save(File... files) throws IOException 
+```
+
+
+Save the current min and max
+
+- param files the statistics to save
+- throws IOException
+- deprecated use {- link NormalizerSerializer instead}
+
+
+
+
+
+---
+
+### MinMaxStrategy
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MinMaxStrategy.java) </span>
+
+statistics of the upper and lower bounds of the population
+
+
+##### MinMaxStrategy 
+```java
+public MinMaxStrategy(double minRange, double maxRange) 
+```
+
+
+- param minRange the target range lower bound
+- param maxRange the target range upper bound
 
 
 ##### preProcess 
 ```java
-public void preProcess(INDArray array, INDArray maskArray, DistributionStats stats) 
+public void preProcess(INDArray array, INDArray maskArray, MinMaxStats stats) 
 ```
 
 
@@ -100,7 +187,7 @@ Normalize a data array
 
 ##### revert 
 ```java
-public void revert(INDArray array, INDArray maskArray, DistributionStats stats) 
+public void revert(INDArray array, INDArray maskArray, MinMaxStats stats) 
 ```
 
 
@@ -115,23 +202,12 @@ Denormalize a data array
 
 ---
 
-### MultiNormalizerMinMaxScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerMinMaxScaler.java) </span>
+### MultiDataNormalization
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiDataNormalization.java) </span>
 
-Pre processor for MultiDataSet that normalizes feature values (and optionally label values) to lie between a minimum
-and maximum value (by default between 0 and 1)
-
-
-##### MultiNormalizerMinMaxScaler 
-```java
-public MultiNormalizerMinMaxScaler(double minRange, double maxRange) 
-```
-
-
-Preprocessor can take a range as minRange and maxRange
-
-- param minRange the target range lower bound
-- param maxRange the target range upper bound
+An interface for multi dataset normalizers.
+Data normalizers compute some sort of statistics
+over a MultiDataSet and scale the data in some way.
 
 
 
@@ -139,20 +215,34 @@ Preprocessor can take a range as minRange and maxRange
 
 ---
 
-### CompositeMultiDataSetPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeMultiDataSetPreProcessor.java) </span>
+### NormalizerStandardize
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStandardize.java) </span>
 
-A simple Composite MultiDataSetPreProcessor - allows you to apply multiple MultiDataSetPreProcessors sequentially
-on the one MultiDataSet, in the order they are passed to the constructor
+Created by susaneraly, Ede Meijer
+variance and mean
+Pre processor for DataSet that normalizes feature values (and optionally label values) to have 0 mean and a standard
+deviation of 1
 
-
-##### CompositeMultiDataSetPreProcessor 
+##### load 
 ```java
-public CompositeMultiDataSetPreProcessor(MultiDataSetPreProcessor... preProcessors)
+public void load(File... files) throws IOException 
 ```
 
 
-- param preProcessors Preprocessors to apply. They will be applied in this order
+Load the means and standard deviations from the file system
+
+- param files the files to load from. Needs 4 files if normalizing labels, otherwise 2.
+
+##### save 
+```java
+public void save(File... files) throws IOException 
+```
+
+
+- param files the files to save to. Needs 4 files if normalizing labels, otherwise 2.
+- deprecated use {- link NormalizerSerializer} instead
+
+Save the current means and standard deviations to the file system
 
 
 
@@ -160,11 +250,12 @@ public CompositeMultiDataSetPreProcessor(MultiDataSetPreProcessor... preProcesso
 
 ---
 
-### ImageFlatteningDataSetPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageFlatteningDataSetPreProcessor.java) </span>
+### DataNormalization
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//DataNormalization.java) </span>
 
-A DataSetPreProcessor used to flatten a 4d CNN features array to a flattened 2d format (for use in networks such
-as a DenseLayer/multi-layer perceptron)
+An interface for data normalizers.
+Data normalizers compute some sort of statistics
+over a dataset and scale the data in some way.
 
 
 
@@ -455,47 +546,35 @@ Undo (revert) the normalization applied by this DataNormalization instance to th
 
 ---
 
-### NormalizerMinMaxScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerMinMaxScaler.java) </span>
+### MultiNormalizerStandardize
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerStandardize.java) </span>
 
-Pre processor for DataSets that normalizes feature values (and optionally label values) to lie between a minimum
-and maximum value (by default between 0 and 1)
-
-
-##### NormalizerMinMaxScaler 
-```java
-public NormalizerMinMaxScaler(double minRange, double maxRange) 
-```
-
-
-Preprocessor can take a range as minRange and maxRange
-
-- param minRange
-- param maxRange
+Pre processor for MultiDataSet that normalizes feature values (and optionally label values) to have 0 mean and
+a standard deviation of 1
 
 
 ##### load 
 ```java
-public void load(File... statistics) throws IOException 
+public void load(@NonNull List<File> featureFiles, @NonNull List<File> labelFiles) throws IOException 
 ```
 
 
-Load the given min and max
+Load means and standard deviations from the file system
 
-- param statistics the statistics to load
-- throws IOException
+- param featureFiles source files for features, requires 2 files per input, alternating mean and stddev files
+- param labelFiles   source files for labels, requires 2 files per output, alternating mean and stddev files
 
 ##### save 
 ```java
-public void save(File... files) throws IOException 
+public void save(@NonNull List<File> featureFiles, @NonNull List<File> labelFiles) throws IOException 
 ```
 
 
-Save the current min and max
+- param featureFiles target files for features, requires 2 files per input, alternating mean and stddev files
+- param labelFiles   target files for labels, requires 2 files per output, alternating mean and stddev files
+- deprecated use {- link MultiStandardizeSerializerStrategy} instead
 
-- param files the statistics to save
-- throws IOException
-- deprecated use {- link NormalizerSerializer instead}
+Save the current means and standard deviations to the file system
 
 
 
@@ -503,103 +582,33 @@ Save the current min and max
 
 ---
 
-### CompositeDataSetPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeDataSetPreProcessor.java) </span>
+### StandardizeStrategy
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//StandardizeStrategy.java) </span>
 
-A simple Composite DataSetPreProcessor - allows you to apply multiple DataSetPreProcessors sequentially
-on the one DataSet, in the order they are passed to the constructor
+of the means and standard deviations of the population
 
 
-##### CompositeDataSetPreProcessor 
+##### preProcess 
 ```java
-public CompositeDataSetPreProcessor(DataSetPreProcessor... preProcessors)
+public void preProcess(INDArray array, INDArray maskArray, DistributionStats stats) 
 ```
 
 
-- param preProcessors Preprocessors to apply. They will be applied in this order
+Normalize a data array
 
+- param array the data to normalize
+- param stats statistics of the data population
 
-
-
-
----
-
-### Normalizer
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//Normalizer.java) </span>
-
-Base interface for all normalizers
-
-
-
-
-
----
-
-### NormalizerStrategy
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStrategy.java) </span>
-
-Interface for strategies that can normalize and denormalize data arrays based on statistics of the population
-
-
-
-
-
----
-
-### ImagePreProcessingScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImagePreProcessingScaler.java) </span>
-
-Created by susaneraly on 6/23/16.
-A preprocessor specifically for images that applies min max scaling
-Can take a range, so pixel values can be scaled from 0->255 to minRange->maxRange
-default minRange = 0 and maxRange = 1;
-If pixel values are not 8 bits, you can specify the number of bits as the third argument in the constructor
-For values that are already floating point, specify the number of bits as 1
-
-
-##### ImagePreProcessingScaler 
+##### revert 
 ```java
-public ImagePreProcessingScaler(double a, double b, int maxBits) 
+public void revert(INDArray array, INDArray maskArray, DistributionStats stats) 
 ```
 
 
-Preprocessor can take a range as minRange and maxRange
-- param a, default = 0
-- param b, default = 1
-- param maxBits in the image, default = 8
+Denormalize a data array
 
-
-##### fit 
-```java
-public void fit(DataSet dataSet) 
-```
-
-
-Fit a dataset (only compute
-based on the statistics from this dataset0
-
-- param dataSet the dataset to compute on
-
-##### fit 
-```java
-public void fit(DataSetIterator iterator) 
-```
-
-
-Iterates over a dataset
-accumulating statistics for normalization
-
-- param iterator the iterator to use for
-collecting statistics.
-
-##### transform 
-```java
-public void transform(DataSet toPreProcess) 
-```
-
-
-Transform the data
-- param toPreProcess the dataset to transform
+- param array the data to denormalize
+- param stats statistics of the data population
 
 
 
@@ -652,34 +661,20 @@ Transform the data
 
 ---
 
-### NormalizerStandardize
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStandardize.java) </span>
+### CompositeMultiDataSetPreProcessor
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeMultiDataSetPreProcessor.java) </span>
 
-Created by susaneraly, Ede Meijer
-variance and mean
-Pre processor for DataSet that normalizes feature values (and optionally label values) to have 0 mean and a standard
-deviation of 1
+A simple Composite MultiDataSetPreProcessor - allows you to apply multiple MultiDataSetPreProcessors sequentially
+on the one MultiDataSet, in the order they are passed to the constructor
 
-##### load 
+
+##### CompositeMultiDataSetPreProcessor 
 ```java
-public void load(File... files) throws IOException 
+public CompositeMultiDataSetPreProcessor(MultiDataSetPreProcessor... preProcessors)
 ```
 
 
-Load the means and standard deviations from the file system
-
-- param files the files to load from. Needs 4 files if normalizing labels, otherwise 2.
-
-##### save 
-```java
-public void save(File... files) throws IOException 
-```
-
-
-- param files the files to save to. Needs 4 files if normalizing labels, otherwise 2.
-- deprecated use {- link NormalizerSerializer} instead
-
-Save the current means and standard deviations to the file system
+- param preProcessors Preprocessors to apply. They will be applied in this order
 
 
 
@@ -687,12 +682,20 @@ Save the current means and standard deviations to the file system
 
 ---
 
-### MultiDataNormalization
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiDataNormalization.java) </span>
+### CompositeDataSetPreProcessor
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeDataSetPreProcessor.java) </span>
 
-An interface for multi dataset normalizers.
-Data normalizers compute some sort of statistics
-over a MultiDataSet and scale the data in some way.
+A simple Composite DataSetPreProcessor - allows you to apply multiple DataSetPreProcessors sequentially
+on the one DataSet, in the order they are passed to the constructor
+
+
+##### CompositeDataSetPreProcessor 
+```java
+public CompositeDataSetPreProcessor(DataSetPreProcessor... preProcessors)
+```
+
+
+- param preProcessors Preprocessors to apply. They will be applied in this order
 
 
 
@@ -700,54 +703,51 @@ over a MultiDataSet and scale the data in some way.
 
 ---
 
-### MinMaxStrategy
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MinMaxStrategy.java) </span>
+### ImageMultiPreProcessingScaler
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageMultiPreProcessingScaler.java) </span>
 
-statistics of the upper and lower bounds of the population
+A preprocessor specifically for images that applies min max scaling to one or more of the feature arrays
+in a MultiDataSet.<br>
+Can take a range, so pixel values can be scaled from 0->255 to minRange->maxRange
+default minRange = 0 and maxRange = 1;
+If pixel values are not 8 bits, you can specify the number of bits as the third argument in the constructor
+For values that are already floating point, specify the number of bits as 1
 
 
-##### MinMaxStrategy 
+##### ImageMultiPreProcessingScaler 
 ```java
-public MinMaxStrategy(double minRange, double maxRange) 
+public ImageMultiPreProcessingScaler(double a, double b, int maxBits, int[] featureIndices) 
 ```
 
+
+Preprocessor can take a range as minRange and maxRange
+- param a, default = 0
+- param b, default = 1
+- param maxBits in the image, default = 8
+- param featureIndices Indices of feature arrays to process. If only one feature array is present,
+this should always be 0
+
+
+
+
+
+---
+
+### MultiNormalizerMinMaxScaler
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerMinMaxScaler.java) </span>
+
+Pre processor for MultiDataSet that normalizes feature values (and optionally label values) to lie between a minimum
+and maximum value (by default between 0 and 1)
+
+
+##### MultiNormalizerMinMaxScaler 
+```java
+public MultiNormalizerMinMaxScaler(double minRange, double maxRange) 
+```
+
+
+Preprocessor can take a range as minRange and maxRange
 
 - param minRange the target range lower bound
 - param maxRange the target range upper bound
-
-
-##### preProcess 
-```java
-public void preProcess(INDArray array, INDArray maskArray, MinMaxStats stats) 
-```
-
-
-Normalize a data array
-
-- param array the data to normalize
-- param stats statistics of the data population
-
-##### revert 
-```java
-public void revert(INDArray array, INDArray maskArray, MinMaxStats stats) 
-```
-
-
-Denormalize a data array
-
-- param array the data to denormalize
-- param stats statistics of the data population
-
-
-
-
-
----
-
-### DataNormalization
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//DataNormalization.java) </span>
-
-An interface for data normalizers.
-Data normalizers compute some sort of statistics
-over a dataset and scale the data in some way.
 

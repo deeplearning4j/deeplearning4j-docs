@@ -75,15 +75,15 @@ Get layer output type.
 
 ---
 
-### KerasPooling1D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/pooling/KerasPooling1D.java) </span>
+### KerasPooling3D
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/pooling/KerasPooling3D.java) </span>
 
-Imports a Keras 1D Pooling layer as a DL4J Subsampling layer.
+Imports a Keras 3D Pooling layer as a DL4J Subsampling3D layer.
 
 
-##### KerasPooling1D 
+##### KerasPooling3D 
 ```java
-public KerasPooling1D(Map<String, Object> layerConfig)
+public KerasPooling3D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
 ```
 
@@ -95,9 +95,9 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-##### getSubsampling1DLayer 
+##### getSubsampling3DLayer 
 ```java
-public Subsampling1DLayer getSubsampling1DLayer() 
+public Subsampling3DLayer getSubsampling3DLayer() 
 ```
 
 
@@ -126,15 +126,15 @@ Get layer output type.
 
 ---
 
-### KerasPooling3D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/pooling/KerasPooling3D.java) </span>
+### KerasPooling1D
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/pooling/KerasPooling1D.java) </span>
 
-Imports a Keras 3D Pooling layer as a DL4J Subsampling3D layer.
+Imports a Keras 1D Pooling layer as a DL4J Subsampling layer.
 
 
-##### KerasPooling3D 
+##### KerasPooling1D 
 ```java
-public KerasPooling3D(Map<String, Object> layerConfig)
+public KerasPooling1D(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
 ```
 
@@ -146,9 +146,9 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-##### getSubsampling3DLayer 
+##### getSubsampling1DLayer 
 ```java
-public Subsampling3DLayer getSubsampling3DLayer() 
+public Subsampling1DLayer getSubsampling1DLayer() 
 ```
 
 
