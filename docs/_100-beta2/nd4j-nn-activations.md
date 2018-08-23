@@ -27,93 +27,10 @@ GraphBuilder graphBuilder = new NeuralNetConfiguration.Builder()
 
 ---
 
-### ActivationSoftSign
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSoftSign.java) </span>
+### ActivationSigmoid
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSigmoid.java) </span>
 
-f_i(x) = x_i / (1+|x_i|)
-
-
-
-
----
-
-### ActivationCube
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationCube.java) </span>
-
-f(x) = x^3
-
-
-
-
----
-
-### ActivationRectifiedTanh
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationRectifiedTanh.java) </span>
-
-Rectified tanh
-
-Essentially max(0, tanh(x))
-
-Underlying implementation is in native code
-
-
-
-
----
-
-### ActivationThresholdedReLU
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationThresholdedReLU.java) </span>
-
-Thresholded RELU
-
-f(x) = x for x > theta, f(x) = 0 otherwise. theta defaults to 1.0
-
-
-
-
-
----
-
-### ActivationIdentity
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationIdentity.java) </span>
-
-f(x) = x
-
-
-
-
----
-
-### ActivationReLU6
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationReLU6.java) </span>
-
-f(x) = min(max(input, cutoff), 6)
-
-
-
-
----
-
-### ActivationPReLU
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationPReLU.java) </span>
-
-/ Parametrized Rectified Linear Unit (PReLU)
-
-f(x) = alpha  x for x < 0, f(x) = x for x >= 0
-
-alpha has the same shape as x and is a learned parameter.
-
-
-
-
-
----
-
-### ActivationSoftmax
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSoftmax.java) </span>
-
-f_i(x) = exp(x_i - shift) / sum_j exp(x_j - shift)
-where shift = max_i(x_i)
+f(x) = 1 / (1 + exp(-x))
 
 
 
@@ -130,20 +47,39 @@ f(x) = x  sigmoid(x)
 
 ---
 
-### ActivationTanH
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationTanH.java) </span>
+### ActivationRationalTanh
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationRationalTanh.java) </span>
 
-f(x) = (exp(x) - exp(-x)) / (exp(x) + exp(-x))
+Rational tanh approximation
+From https://arxiv.org/pdf/1508.01292v3
+
+f(x) = 1.7159  tanh(2x/3)
+where tanh is approximated as follows,
+tanh(y) ~ sgn(y)  { 1 - 1/(1+|y|+y^2+1.41645y^4)}
+
+Underlying implementation is in native code
 
 
 
 
 ---
 
-### ActivationSoftPlus
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSoftPlus.java) </span>
+### ActivationHardTanH
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationHardTanH.java) </span>
 
-f(x) = log(1+e^x)
+⎧  1, if x >  1
+f(x) =   ⎨ -1, if x < -1
+⎩  x, otherwise
+
+
+
+
+---
+
+### ActivationIdentity
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationIdentity.java) </span>
+
+f(x) = x
 
 
 
@@ -176,6 +112,40 @@ Empirical Evaluation of Rectified Activations in Convolutional Network</a>
 
 ---
 
+### ActivationELU
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationELU.java) </span>
+
+f(x) = alpha  (exp(x) - 1.0); x < 0
+= x ; x>= 0
+
+alpha defaults to 1, if not specified
+
+
+
+
+---
+
+### ActivationSoftmax
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSoftmax.java) </span>
+
+f_i(x) = exp(x_i - shift) / sum_j exp(x_j - shift)
+where shift = max_i(x_i)
+
+
+
+
+---
+
+### ActivationReLU6
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationReLU6.java) </span>
+
+f(x) = min(max(input, cutoff), 6)
+
+
+
+
+---
+
 ### ActivationReLU
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationReLU.java) </span>
 
@@ -186,29 +156,74 @@ f(x) = max(0, x)
 
 ---
 
-### ActivationHardTanH
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationHardTanH.java) </span>
+### ActivationSoftSign
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSoftSign.java) </span>
 
-⎧  1, if x >  1
-f(x) =   ⎨ -1, if x < -1
-⎩  x, otherwise
+f_i(x) = x_i / (1+|x_i|)
 
 
 
 
 ---
 
-### ActivationRationalTanh
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationRationalTanh.java) </span>
+### ActivationCube
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationCube.java) </span>
 
-Rational tanh approximation
-From https://arxiv.org/pdf/1508.01292v3
+f(x) = x^3
 
-f(x) = 1.7159  tanh(2x/3)
-where tanh is approximated as follows,
-tanh(y) ~ sgn(y)  { 1 - 1/(1+|y|+y^2+1.41645y^4)}
+
+
+
+---
+
+### ActivationLReLU
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationLReLU.java) </span>
+
+Leaky RELU
+f(x) = max(0, x) + alpha  min(0, x)
+alpha defaults to 0.01
+
+
+
+
+---
+
+### ActivationThresholdedReLU
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationThresholdedReLU.java) </span>
+
+Thresholded RELU
+
+f(x) = x for x > theta, f(x) = 0 otherwise. theta defaults to 1.0
+
+
+
+
+
+---
+
+### ActivationRectifiedTanh
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationRectifiedTanh.java) </span>
+
+Rectified tanh
+
+Essentially max(0, tanh(x))
 
 Underlying implementation is in native code
+
+
+
+
+---
+
+### ActivationPReLU
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationPReLU.java) </span>
+
+/ Parametrized Rectified Linear Unit (PReLU)
+
+f(x) = alpha  x for x < 0, f(x) = x for x >= 0
+
+alpha has the same shape as x and is a learned parameter.
+
 
 
 
@@ -225,32 +240,17 @@ https://arxiv.org/pdf/1706.02515.pdf
 
 ---
 
-### ActivationELU
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationELU.java) </span>
+### ActivationSoftPlus
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSoftPlus.java) </span>
 
-f(x) = alpha  (exp(x) - 1.0); x < 0
-= x ; x>= 0
-
-alpha defaults to 1, if not specified
+f(x) = log(1+e^x)
 
 
 
 
 ---
 
-### ActivationSigmoid
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationSigmoid.java) </span>
+### ActivationTanH
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationTanH.java) </span>
 
-f(x) = 1 / (1 + exp(-x))
-
-
-
-
----
-
-### ActivationLReLU
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/activations/impl//ActivationLReLU.java) </span>
-
-Leaky RELU
-f(x) = max(0, x) + alpha  min(0, x)
-alpha defaults to 0.01
+f(x) = (exp(x) - exp(-x)) / (exp(x) + exp(-x))

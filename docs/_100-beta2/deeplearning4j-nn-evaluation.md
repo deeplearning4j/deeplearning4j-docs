@@ -212,6 +212,582 @@ See [ROCBinary JavaDoc](https://deeplearning4j.org/api/{{page.version}}/org/deep
 
 ---
 
+### ROCBinary
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCBinary.java) </span>
+
+ROC (Receiver Operating Characteristic) for multi-task binary classifiers.
+
+distribution), ROCBinary assumes that all outputs are independent binary variables. This also differs from
+
+ROCBinary supports per-example and per-output masking: for per-output masking, any particular output may be absent
+(mask value 0) and hence won't be included in the calculated ROC.
+
+##### ROCBinary 
+```java
+public ROCBinary(int thresholdSteps) 
+```
+
+
+- param thresholdSteps Number of threshold steps to use for the ROC calculation. Set to 0 for exact ROC calculation
+
+
+##### reset 
+```java
+public void reset() 
+```
+
+
+- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
+- param rocRemoveRedundantPts Usually set to true. If true,  remove any redundant points from ROC and P-R curves
+
+##### numLabels 
+```java
+public int numLabels() 
+```
+
+
+Returns the number of labels - (i.e., size of the prediction/labels arrays) - if known. Returns -1 otherwise
+
+##### getCountActualPositive 
+```java
+public long getCountActualPositive(int outputNum) 
+```
+
+
+Get the actual positive count (accounting for any masking) for  the specified output/column
+
+- param outputNum Index of the output (0 to {- link #numLabels()}-1)
+
+##### getCountActualNegative 
+```java
+public long getCountActualNegative(int outputNum) 
+```
+
+
+Get the actual negative count (accounting for any masking) for  the specified output/column
+
+- param outputNum Index of the output (0 to {- link #numLabels()}-1)
+
+##### getRocCurve 
+```java
+public RocCurve getRocCurve(int outputNum) 
+```
+
+
+Get the ROC curve for the specified output
+- param outputNum Number of the output to get the ROC curve for
+- return ROC curve
+
+##### getPrecisionRecallCurve 
+```java
+public PrecisionRecallCurve getPrecisionRecallCurve(int outputNum) 
+```
+
+
+Get the Precision-Recall curve for the specified output
+- param outputNum Number of the output to get the P-R curve for
+- return  Precision recall curve
+
+##### calculateAverageAuc 
+```java
+public double calculateAverageAuc() 
+```
+
+
+Macro-average AUC for all outcomes
+- return the (macro-)average AUC for all outcomes.
+
+##### calculateAverageAUCPR 
+```java
+public double calculateAverageAUCPR()
+```
+
+
+- return the (macro-)average AUPRC (area under precision recall curve)
+
+##### calculateAUC 
+```java
+public double calculateAUC(int outputNum) 
+```
+
+
+Calculate the AUC - Area Under (ROC) Curve<br>
+Utilizes trapezoidal integration internally
+
+- param outputNum Output number to calculate AUC for
+- return AUC
+
+##### calculateAUCPR 
+```java
+public double calculateAUCPR(int outputNum) 
+```
+
+
+Calculate the AUCPR - Area Under Curve - Precision Recall<br>
+Utilizes trapezoidal integration internally
+
+- param outputNum Output number to calculate AUCPR for
+- return AUCPR
+
+##### setLabelNames 
+```java
+public void setLabelNames(List<String> labels) 
+```
+
+
+Set the label names, for printing via {- link #stats()}
+
+
+
+
+
+---
+
+### ConfusionMatrix
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ConfusionMatrix.java) </span>
+
+Creates an empty confusion Matrix
+
+##### ConfusionMatrix 
+```java
+public ConfusionMatrix(ConfusionMatrix<T> other) 
+```
+
+
+Creates a new ConfusionMatrix initialized with the contents of another ConfusionMatrix.
+
+
+##### toString 
+```java
+public String toString() 
+```
+
+
+Increments the entry specified by actual and predicted by one.
+
+##### toCSV 
+```java
+public String toCSV() 
+```
+
+
+Outputs the ConfusionMatrix as comma-separated values for easy import into spreadsheets
+
+##### toHTML 
+```java
+public String toHTML() 
+```
+
+
+Outputs Confusion Matrix in an HTML table. Cascading Style Sheets (CSS) can control the table's
+appearance by defining the empty-space, actual-count-header, predicted-class-header, and
+count-element classes. For example
+
+- return html string
+
+
+
+
+
+---
+
+### ROCMultiClass
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCMultiClass.java) </span>
+
+ROC (Receiver Operating Characteristic) for multi-class classifiers.
+
+The ROC curves are produced by treating the predictions as a set of one-vs-all classifiers, and then calculating
+ROC curves for each. In practice, this means for N classes, we get N ROC curves.
+
+
+##### ROCMultiClass 
+```java
+public ROCMultiClass(int thresholdSteps) 
+```
+
+
+- param thresholdSteps Number of threshold steps to use for the ROC calculation. Set to 0 for exact ROC calculation
+
+
+##### reset 
+```java
+public void reset() 
+```
+
+
+- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
+- param rocRemoveRedundantPts Usually set to true. If true,  remove any redundant points from ROC and P-R curves
+
+##### eval 
+```java
+public void eval(INDArray labels, INDArray predictions) 
+```
+
+
+Evaluate (collect statistics for) the given minibatch of data.
+For time series (3 dimensions) use {- link #evalTimeSeries(INDArray, INDArray)} or {- link #evalTimeSeries(INDArray, INDArray, INDArray)}
+
+- param labels      Labels / true outcomes
+- param predictions Predictions
+
+##### getRocCurve 
+```java
+public RocCurve getRocCurve(int classIdx) 
+```
+
+
+Get the (one vs. all) ROC curve for the specified class
+- param classIdx Class index to get the ROC curve for
+- return ROC curve for the given class
+
+##### getPrecisionRecallCurve 
+```java
+public PrecisionRecallCurve getPrecisionRecallCurve(int classIdx) 
+```
+
+
+Get the (one vs. all) Precision-Recall curve for the specified class
+- param classIdx Class to get the P-R curve for
+- return  Precision recall curve for the given class
+
+##### calculateAUC 
+```java
+public double calculateAUC(int classIdx) 
+```
+
+
+Calculate the AUC - Area Under ROC Curve<br>
+Utilizes trapezoidal integration internally
+
+- return AUC
+
+##### calculateAUCPR 
+```java
+public double calculateAUCPR(int classIdx) 
+```
+
+
+Calculate the AUPRC - Area Under Curve Precision Recall <br>
+Utilizes trapezoidal integration internally
+
+- return AUC
+
+##### calculateAverageAUC 
+```java
+public double calculateAverageAUC() 
+```
+
+
+Calculate the macro-average (one-vs-all) AUC for all classes
+
+##### calculateAverageAUCPR 
+```java
+public double calculateAverageAUCPR() 
+```
+
+
+Calculate the macro-average (one-vs-all) AUCPR (area under precision recall curve) for all classes
+
+##### getCountActualPositive 
+```java
+public long getCountActualPositive(int outputNum) 
+```
+
+
+Get the actual positive count (accounting for any masking) for  the specified class
+
+- param outputNum Index of the class
+
+##### getCountActualNegative 
+```java
+public long getCountActualNegative(int outputNum) 
+```
+
+
+Get the actual negative count (accounting for any masking) for  the specified output/column
+
+- param outputNum Index of the class
+
+##### merge 
+```java
+public void merge(ROCMultiClass other) 
+```
+
+
+Merge this ROCMultiClass instance with another.
+This ROCMultiClass instance is modified, by adding the stats from the other instance.
+
+- param other ROCMultiClass instance to combine with this one
+
+
+
+
+
+---
+
+### EvaluationAveraging
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationAveraging.java) </span>
+
+The averaging approach for binary valuation measures when applied to multiclass classification problems.
+Macro averaging: weight each class equally<br>
+Micro averaging: weight each example equally<br>
+Generally, macro averaging is preferred for imbalanced datasets
+
+
+
+
+
+---
+
+### RegressionEvaluation
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//RegressionEvaluation.java) </span>
+
+Evaluation method for the evaluation of regression algorithms.<br>
+Provides the following metrics, for each column:<br>
+- MSE: mean squared error<br>
+- MAE: mean absolute error<br>
+- RMSE: root mean squared error<br>
+- RSE: relative squared error<br>
+- PC: pearson correlation coefficient<br>
+- R^2: coefficient of determination
+See for example: http://www.saedsayad.com/model_evaluation_r.htm
+
+
+##### RegressionEvaluation 
+```java
+public RegressionEvaluation() 
+```
+
+
+- return True if the metric should be minimized, or false if the metric should be maximized.
+For example, MSE of 0 is best, but R^2 of 1.0 is best
+
+
+##### correlationR2 
+```java
+public double correlationR2(int column) 
+```
+
+
+Legacy method for the correlation score.
+
+- param column Column to evaluate
+- return Pearson Correlation for the given column
+- see {- link #pearsonCorrelation(int)}
+- deprecated Use {- link #pearsonCorrelation(int)} instead.
+For the R2 score use {- link #rSquared(int)}.
+
+##### pearsonCorrelation 
+```java
+public double pearsonCorrelation(int column) 
+```
+
+
+Pearson Correlation Coefficient for samples
+
+- param column Column to evaluate
+- return Pearson Correlation Coefficient for column with index {- code column}
+- see <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#For_a_sample">Wikipedia</a>
+
+##### rSquared 
+```java
+public double rSquared(int column) 
+```
+
+
+Coefficient of Determination (R^2 Score)
+
+- param column Column to evaluate
+- return R^2 score for column with index {- code column}
+- see <a href="https://en.wikipedia.org/wiki/Coefficient_of_determination">Wikipedia</a>
+
+##### averageMeanSquaredError 
+```java
+public double averageMeanSquaredError() 
+```
+
+
+Average MSE across all columns
+- return
+
+##### averageMeanAbsoluteError 
+```java
+public double averageMeanAbsoluteError() 
+```
+
+
+Average MAE across all columns
+- return
+
+##### averagerootMeanSquaredError 
+```java
+public double averagerootMeanSquaredError() 
+```
+
+
+Average RMSE across all columns
+- return
+
+##### averagerelativeSquaredError 
+```java
+public double averagerelativeSquaredError() 
+```
+
+
+Average RSE across all columns
+- return
+
+##### averagecorrelationR2 
+```java
+public double averagecorrelationR2() 
+```
+
+
+Legacy method for the correlation average across all columns.
+
+- return Pearson Correlation averaged over all columns
+- see {- link #averagePearsonCorrelation()}
+- deprecated Use {- link #averagePearsonCorrelation()} instead.
+For the R2 score use {- link #averageRSquared()}.
+
+##### averagePearsonCorrelation 
+```java
+public double averagePearsonCorrelation() 
+```
+
+
+Average Pearson Correlation Coefficient across all columns
+
+- return Pearson Correlation Coefficient across all columns
+
+##### averageRSquared 
+```java
+public double averageRSquared() 
+```
+
+
+Average R2 across all columns
+
+- return R2 score accross all columns
+
+
+
+
+
+---
+
+### ROC
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROC.java) </span>
+
+ROC (Receiver Operating Characteristic) for binary classifiers.<br>
+ROC has 2 modes of operation:
+(a) Thresholded (less memory)<br>
+(b) Exact (default; use numSteps == 0 to set. May not scale to very large datasets)
+
+
+Thresholded Is an approximate method, that (for large datasets) may use significantly less memory than exact..
+Whereas exact implementations will automatically calculate the threshold points based on the data set to give a
+'smoother' and more accurate  ROC curve (or optimal cut points for diagnostic purposes), thresholded uses fixed steps
+of size 1.0 / thresholdSteps, as this allows easy implementation for batched and distributed evaluation scenarios (where the
+full data set is not available in memory on any one machine at once).
+Note that in some cases (very skewed probability predictions, for example) the threshold approach can be inaccurate,
+often underestimating the true area.
+
+The data is assumed to be binary classification - nColumns == 1 (single binary output variable) or nColumns == 2
+(probability distribution over 2 classes, with column 1 being values for 'positive' examples)
+
+
+##### ROC 
+```java
+public ROC(int thresholdSteps) 
+```
+
+
+- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
+
+
+##### reset 
+```java
+public void reset() 
+```
+
+
+- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
+- param rocRemoveRedundantPts Usually set to true. If true,  remove any redundant points from ROC and P-R curves
+
+##### eval 
+```java
+public void eval(INDArray labels, INDArray predictions) 
+```
+
+
+Evaluate (collect statistics for) the given minibatch of data.
+For time series (3 dimensions) use {- link #evalTimeSeries(INDArray, INDArray)} or {- link #evalTimeSeries(INDArray, INDArray, INDArray)}
+
+- param labels      Labels / true outcomes
+- param predictions Predictions
+
+##### getPrecisionRecallCurve 
+```java
+public PrecisionRecallCurve getPrecisionRecallCurve() 
+```
+
+
+Get the precision recall curve as array.
+return[0] = threshold array<br>
+return[1] = precision array<br>
+return[2] = recall array<br>
+
+- return
+
+##### getRocCurve 
+```java
+public RocCurve getRocCurve() 
+```
+
+
+Get the ROC curve, as a set of (threshold, falsePositive, truePositive) points
+
+- return ROC curve
+
+##### calculateAUC 
+```java
+public double calculateAUC() 
+```
+
+
+Calculate the AUROC - Area Under ROC Curve<br>
+Utilizes trapezoidal integration internally
+
+- return AUC
+
+##### calculateAUCPR 
+```java
+public double calculateAUCPR() 
+```
+
+
+Calculate the area under the precision/recall curve - aka AUCPR
+
+- return
+
+##### merge 
+```java
+public void merge(ROC other) 
+```
+
+
+Merge this ROC instance with another.
+This ROC instance is modified, by adding the stats from the other instance.
+
+- param other ROC instance to combine with this one
+
+
+
+
+
+---
+
 ### Evaluation
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//Evaluation.java) </span>
 
@@ -897,658 +1473,6 @@ via {- link #getConfusionMatrix()}
 
 ---
 
-### ROCBinary
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCBinary.java) </span>
-
-ROC (Receiver Operating Characteristic) for multi-task binary classifiers.
-
-distribution), ROCBinary assumes that all outputs are independent binary variables. This also differs from
-
-ROCBinary supports per-example and per-output masking: for per-output masking, any particular output may be absent
-(mask value 0) and hence won't be included in the calculated ROC.
-
-##### ROCBinary 
-```java
-public ROCBinary(int thresholdSteps) 
-```
-
-
-- param thresholdSteps Number of threshold steps to use for the ROC calculation. Set to 0 for exact ROC calculation
-
-
-##### reset 
-```java
-public void reset() 
-```
-
-
-- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
-- param rocRemoveRedundantPts Usually set to true. If true,  remove any redundant points from ROC and P-R curves
-
-##### numLabels 
-```java
-public int numLabels() 
-```
-
-
-Returns the number of labels - (i.e., size of the prediction/labels arrays) - if known. Returns -1 otherwise
-
-##### getCountActualPositive 
-```java
-public long getCountActualPositive(int outputNum) 
-```
-
-
-Get the actual positive count (accounting for any masking) for  the specified output/column
-
-- param outputNum Index of the output (0 to {- link #numLabels()}-1)
-
-##### getCountActualNegative 
-```java
-public long getCountActualNegative(int outputNum) 
-```
-
-
-Get the actual negative count (accounting for any masking) for  the specified output/column
-
-- param outputNum Index of the output (0 to {- link #numLabels()}-1)
-
-##### getRocCurve 
-```java
-public RocCurve getRocCurve(int outputNum) 
-```
-
-
-Get the ROC curve for the specified output
-- param outputNum Number of the output to get the ROC curve for
-- return ROC curve
-
-##### getPrecisionRecallCurve 
-```java
-public PrecisionRecallCurve getPrecisionRecallCurve(int outputNum) 
-```
-
-
-Get the Precision-Recall curve for the specified output
-- param outputNum Number of the output to get the P-R curve for
-- return  Precision recall curve
-
-##### calculateAverageAuc 
-```java
-public double calculateAverageAuc() 
-```
-
-
-Macro-average AUC for all outcomes
-- return the (macro-)average AUC for all outcomes.
-
-##### calculateAverageAUCPR 
-```java
-public double calculateAverageAUCPR()
-```
-
-
-- return the (macro-)average AUPRC (area under precision recall curve)
-
-##### calculateAUC 
-```java
-public double calculateAUC(int outputNum) 
-```
-
-
-Calculate the AUC - Area Under (ROC) Curve<br>
-Utilizes trapezoidal integration internally
-
-- param outputNum Output number to calculate AUC for
-- return AUC
-
-##### calculateAUCPR 
-```java
-public double calculateAUCPR(int outputNum) 
-```
-
-
-Calculate the AUCPR - Area Under Curve - Precision Recall<br>
-Utilizes trapezoidal integration internally
-
-- param outputNum Output number to calculate AUCPR for
-- return AUCPR
-
-##### setLabelNames 
-```java
-public void setLabelNames(List<String> labels) 
-```
-
-
-Set the label names, for printing via {- link #stats()}
-
-
-
-
-
----
-
-### ConfusionMatrix
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ConfusionMatrix.java) </span>
-
-Creates an empty confusion Matrix
-
-##### ConfusionMatrix 
-```java
-public ConfusionMatrix(ConfusionMatrix<T> other) 
-```
-
-
-Creates a new ConfusionMatrix initialized with the contents of another ConfusionMatrix.
-
-
-##### toString 
-```java
-public String toString() 
-```
-
-
-Increments the entry specified by actual and predicted by one.
-
-##### toCSV 
-```java
-public String toCSV() 
-```
-
-
-Outputs the ConfusionMatrix as comma-separated values for easy import into spreadsheets
-
-##### toHTML 
-```java
-public String toHTML() 
-```
-
-
-Outputs Confusion Matrix in an HTML table. Cascading Style Sheets (CSS) can control the table's
-appearance by defining the empty-space, actual-count-header, predicted-class-header, and
-count-element classes. For example
-
-- return html string
-
-
-
-
-
----
-
-### ROCMultiClass
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCMultiClass.java) </span>
-
-ROC (Receiver Operating Characteristic) for multi-class classifiers.
-
-The ROC curves are produced by treating the predictions as a set of one-vs-all classifiers, and then calculating
-ROC curves for each. In practice, this means for N classes, we get N ROC curves.
-
-
-##### ROCMultiClass 
-```java
-public ROCMultiClass(int thresholdSteps) 
-```
-
-
-- param thresholdSteps Number of threshold steps to use for the ROC calculation. Set to 0 for exact ROC calculation
-
-
-##### reset 
-```java
-public void reset() 
-```
-
-
-- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
-- param rocRemoveRedundantPts Usually set to true. If true,  remove any redundant points from ROC and P-R curves
-
-##### eval 
-```java
-public void eval(INDArray labels, INDArray predictions) 
-```
-
-
-Evaluate (collect statistics for) the given minibatch of data.
-For time series (3 dimensions) use {- link #evalTimeSeries(INDArray, INDArray)} or {- link #evalTimeSeries(INDArray, INDArray, INDArray)}
-
-- param labels      Labels / true outcomes
-- param predictions Predictions
-
-##### getRocCurve 
-```java
-public RocCurve getRocCurve(int classIdx) 
-```
-
-
-Get the (one vs. all) ROC curve for the specified class
-- param classIdx Class index to get the ROC curve for
-- return ROC curve for the given class
-
-##### getPrecisionRecallCurve 
-```java
-public PrecisionRecallCurve getPrecisionRecallCurve(int classIdx) 
-```
-
-
-Get the (one vs. all) Precision-Recall curve for the specified class
-- param classIdx Class to get the P-R curve for
-- return  Precision recall curve for the given class
-
-##### calculateAUC 
-```java
-public double calculateAUC(int classIdx) 
-```
-
-
-Calculate the AUC - Area Under ROC Curve<br>
-Utilizes trapezoidal integration internally
-
-- return AUC
-
-##### calculateAUCPR 
-```java
-public double calculateAUCPR(int classIdx) 
-```
-
-
-Calculate the AUPRC - Area Under Curve Precision Recall <br>
-Utilizes trapezoidal integration internally
-
-- return AUC
-
-##### calculateAverageAUC 
-```java
-public double calculateAverageAUC() 
-```
-
-
-Calculate the macro-average (one-vs-all) AUC for all classes
-
-##### calculateAverageAUCPR 
-```java
-public double calculateAverageAUCPR() 
-```
-
-
-Calculate the macro-average (one-vs-all) AUCPR (area under precision recall curve) for all classes
-
-##### getCountActualPositive 
-```java
-public long getCountActualPositive(int outputNum) 
-```
-
-
-Get the actual positive count (accounting for any masking) for  the specified class
-
-- param outputNum Index of the class
-
-##### getCountActualNegative 
-```java
-public long getCountActualNegative(int outputNum) 
-```
-
-
-Get the actual negative count (accounting for any masking) for  the specified output/column
-
-- param outputNum Index of the class
-
-##### merge 
-```java
-public void merge(ROCMultiClass other) 
-```
-
-
-Merge this ROCMultiClass instance with another.
-This ROCMultiClass instance is modified, by adding the stats from the other instance.
-
-- param other ROCMultiClass instance to combine with this one
-
-
-
-
-
----
-
-### ROC
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROC.java) </span>
-
-ROC (Receiver Operating Characteristic) for binary classifiers.<br>
-ROC has 2 modes of operation:
-(a) Thresholded (less memory)<br>
-(b) Exact (default; use numSteps == 0 to set. May not scale to very large datasets)
-
-
-Thresholded Is an approximate method, that (for large datasets) may use significantly less memory than exact..
-Whereas exact implementations will automatically calculate the threshold points based on the data set to give a
-'smoother' and more accurate  ROC curve (or optimal cut points for diagnostic purposes), thresholded uses fixed steps
-of size 1.0 / thresholdSteps, as this allows easy implementation for batched and distributed evaluation scenarios (where the
-full data set is not available in memory on any one machine at once).
-Note that in some cases (very skewed probability predictions, for example) the threshold approach can be inaccurate,
-often underestimating the true area.
-
-The data is assumed to be binary classification - nColumns == 1 (single binary output variable) or nColumns == 2
-(probability distribution over 2 classes, with column 1 being values for 'positive' examples)
-
-
-##### ROC 
-```java
-public ROC(int thresholdSteps) 
-```
-
-
-- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
-
-
-##### reset 
-```java
-public void reset() 
-```
-
-
-- param thresholdSteps Number of threshold steps to use for the ROC calculation. If set to 0: use exact calculation
-- param rocRemoveRedundantPts Usually set to true. If true,  remove any redundant points from ROC and P-R curves
-
-##### eval 
-```java
-public void eval(INDArray labels, INDArray predictions) 
-```
-
-
-Evaluate (collect statistics for) the given minibatch of data.
-For time series (3 dimensions) use {- link #evalTimeSeries(INDArray, INDArray)} or {- link #evalTimeSeries(INDArray, INDArray, INDArray)}
-
-- param labels      Labels / true outcomes
-- param predictions Predictions
-
-##### getPrecisionRecallCurve 
-```java
-public PrecisionRecallCurve getPrecisionRecallCurve() 
-```
-
-
-Get the precision recall curve as array.
-return[0] = threshold array<br>
-return[1] = precision array<br>
-return[2] = recall array<br>
-
-- return
-
-##### getRocCurve 
-```java
-public RocCurve getRocCurve() 
-```
-
-
-Get the ROC curve, as a set of (threshold, falsePositive, truePositive) points
-
-- return ROC curve
-
-##### calculateAUC 
-```java
-public double calculateAUC() 
-```
-
-
-Calculate the AUROC - Area Under ROC Curve<br>
-Utilizes trapezoidal integration internally
-
-- return AUC
-
-##### calculateAUCPR 
-```java
-public double calculateAUCPR() 
-```
-
-
-Calculate the area under the precision/recall curve - aka AUCPR
-
-- return
-
-##### merge 
-```java
-public void merge(ROC other) 
-```
-
-
-Merge this ROC instance with another.
-This ROC instance is modified, by adding the stats from the other instance.
-
-- param other ROC instance to combine with this one
-
-
-
-
-
----
-
-### IEvaluation
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//IEvaluation.java) </span>
-
-A general purpose interface for evaluating neural networks - methods are shared by implemetations such as
-
-
-
-
-
----
-
-### EvaluationCalibration
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationCalibration.java) </span>
-
-EvaluationCalibration is an evaluation class designed to analyze the calibration of a classifier.<br>
-It provides a number of tools for this purpose:
-- Counts of the number of labels and predictions for each class<br>
-- Reliability diagram (or reliability curve)<br>
-- Residual plot (histogram)<br>
-- Histograms of probabilities, including probabilities for each class separately<br>
-<br>
-References:<br>
-- Reliability diagram: see for example Niculescu-Mizil and Caruana 2005, Predicting Good Probabilities With
-Supervised Learning<br>
-- Residual plot: see Wallace and Dahabreh 2012, Class Probability Estimates are Unreliable for Imbalanced Data
-(and How to Fix Them)<br>
-
-
-
-##### EvaluationCalibration 
-```java
-public EvaluationCalibration() 
-```
-
-
-Create an EvaluationCalibration instance with the default number of bins
-
-
-##### eval 
-```java
-public void eval(INDArray labels, INDArray networkPredictions, INDArray maskArray) 
-```
-
-
-Create an EvaluationCalibration instance with the specified number of bins
-
-- param reliabilityDiagNumBins Number of bins for the reliability diagram (usually 10)
-- param histogramNumBins       Number of bins for the histograms
-
-##### getReliabilityDiagram 
-```java
-public ReliabilityDiagram getReliabilityDiagram(int classIdx) 
-```
-
-
-Get the reliability diagram for the specified class
-
-- param classIdx Index of the class to get the reliability diagram for
-
-##### getResidualPlotAllClasses 
-```java
-public Histogram getResidualPlotAllClasses() 
-```
-
-
-- return The number of observed labels for each class. For N classes, be returned array is of length N, with
-out[i] being the number of labels of class i
-
-##### getResidualPlot 
-```java
-public Histogram getResidualPlot(int labelClassIdx) 
-```
-
-
-Get the residual plot, only for examples of the specified class.. The residual plot is defined as a histogram of<br>
-|label_i - prob(class_i | input)| for all and examples; for this particular method, only predictions where
-i == labelClassIdx are included.<br>
-In general, small residuals indicate a superior classifier to large residuals.
-
-- param labelClassIdx Index of the class to get the residual plot for
-- return Residual plot (histogram) - all predictions/classes
-
-##### getProbabilityHistogramAllClasses 
-```java
-public Histogram getProbabilityHistogramAllClasses() 
-```
-
-
-Return a probability histogram for all predictions/classes.
-
-- return Probability histogram
-
-##### getProbabilityHistogram 
-```java
-public Histogram getProbabilityHistogram(int labelClassIdx) 
-```
-
-
-Return a probability histogram of the specified label class index. That is, for label class index i,
-a histogram of P(class_i | input) is returned, only for those examples that are labelled as class i.
-
-- param labelClassIdx Index of the label class to get the histogram for
-- return Probability histogram
-
-
-
-
-
----
-
-### EvaluationUtils
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationUtils.java) </span>
-
-Utility methods for performing evaluation
-
-
-##### precision 
-```java
-public static double precision(long tpCount, long fpCount, double edgeCase) 
-```
-
-
-Calculate the precision from true positive and false positive counts
-
-- param tpCount  True positive count
-- param fpCount  False positive count
-- param edgeCase Edge case value use to avoid 0/0
-- return Precision
-
-##### recall 
-```java
-public static double recall(long tpCount, long fnCount, double edgeCase) 
-```
-
-
-Calculate the recall from true positive and false negative counts
-
-- param tpCount  True positive count
-- param fnCount  False negative count
-- param edgeCase Edge case values used to avoid 0/0
-- return Recall
-
-##### falsePositiveRate 
-```java
-public static double falsePositiveRate(long fpCount, long tnCount, double edgeCase) 
-```
-
-
-Calculate the false positive rate from the false positive count and true negative count
-
-- param fpCount  False positive count
-- param tnCount  True negative count
-- param edgeCase Edge case values are used to avoid 0/0
-- return False positive rate
-
-##### falseNegativeRate 
-```java
-public static double falseNegativeRate(long fnCount, long tpCount, double edgeCase) 
-```
-
-
-Calculate the false negative rate from the false negative counts and true positive count
-
-- param fnCount  False negative count
-- param tpCount  True positive count
-- param edgeCase Edge case value to use to avoid 0/0
-- return False negative rate
-
-##### fBeta 
-```java
-public static double fBeta(double beta, long tp, long fp, long fn) 
-```
-
-
-Calculate the F beta value from counts
-
-- param beta Beta of value to use
-- param tp   True positive count
-- param fp   False positive count
-- param fn   False negative count
-- return F beta
-
-##### fBeta 
-```java
-public static double fBeta(double beta, double precision, double recall) 
-```
-
-
-Calculate the F-beta value from precision and recall
-
-- param beta      Beta value to use
-- param precision Precision
-- param recall    Recall
-- return F-beta value
-
-##### gMeasure 
-```java
-public static double gMeasure(double precision, double recall) 
-```
-
-
-Calculate the G-measure from precision and recall
-
-- param precision Precision value
-- param recall    Recall value
-- return G-measure
-
-##### matthewsCorrelation 
-```java
-public static double matthewsCorrelation(long tp, long fp, long fn, long tn) 
-```
-
-
-Calculate the binary Matthews correlation coefficient from counts
-
-- param tp True positive count
-- param fp False positive counts
-- param fn False negative counts
-- param tn True negative count
-- return Matthews correlation coefficient
-
-
-
-
-
----
-
 ### EvaluationBinary
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationBinary.java) </span>
 
@@ -1785,136 +1709,98 @@ Get a String representation of the EvaluationBinary class, using the specified p
 
 ---
 
-### RegressionEvaluation
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//RegressionEvaluation.java) </span>
+### EvaluationCalibration
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationCalibration.java) </span>
 
-Evaluation method for the evaluation of regression algorithms.<br>
-Provides the following metrics, for each column:<br>
-- MSE: mean squared error<br>
-- MAE: mean absolute error<br>
-- RMSE: root mean squared error<br>
-- RSE: relative squared error<br>
-- PC: pearson correlation coefficient<br>
-- R^2: coefficient of determination
-See for example: http://www.saedsayad.com/model_evaluation_r.htm
+EvaluationCalibration is an evaluation class designed to analyze the calibration of a classifier.<br>
+It provides a number of tools for this purpose:
+- Counts of the number of labels and predictions for each class<br>
+- Reliability diagram (or reliability curve)<br>
+- Residual plot (histogram)<br>
+- Histograms of probabilities, including probabilities for each class separately<br>
+<br>
+References:<br>
+- Reliability diagram: see for example Niculescu-Mizil and Caruana 2005, Predicting Good Probabilities With
+Supervised Learning<br>
+- Residual plot: see Wallace and Dahabreh 2012, Class Probability Estimates are Unreliable for Imbalanced Data
+(and How to Fix Them)<br>
 
 
-##### RegressionEvaluation 
+
+##### EvaluationCalibration 
 ```java
-public RegressionEvaluation() 
+public EvaluationCalibration() 
 ```
 
 
-- return True if the metric should be minimized, or false if the metric should be maximized.
-For example, MSE of 0 is best, but R^2 of 1.0 is best
+Create an EvaluationCalibration instance with the default number of bins
 
 
-##### correlationR2 
+##### eval 
 ```java
-public double correlationR2(int column) 
+public void eval(INDArray labels, INDArray networkPredictions, INDArray maskArray) 
 ```
 
 
-Legacy method for the correlation score.
+Create an EvaluationCalibration instance with the specified number of bins
 
-- param column Column to evaluate
-- return Pearson Correlation for the given column
-- see {- link #pearsonCorrelation(int)}
-- deprecated Use {- link #pearsonCorrelation(int)} instead.
-For the R2 score use {- link #rSquared(int)}.
+- param reliabilityDiagNumBins Number of bins for the reliability diagram (usually 10)
+- param histogramNumBins       Number of bins for the histograms
 
-##### pearsonCorrelation 
+##### getReliabilityDiagram 
 ```java
-public double pearsonCorrelation(int column) 
+public ReliabilityDiagram getReliabilityDiagram(int classIdx) 
 ```
 
 
-Pearson Correlation Coefficient for samples
+Get the reliability diagram for the specified class
 
-- param column Column to evaluate
-- return Pearson Correlation Coefficient for column with index {- code column}
-- see <a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient#For_a_sample">Wikipedia</a>
+- param classIdx Index of the class to get the reliability diagram for
 
-##### rSquared 
+##### getResidualPlotAllClasses 
 ```java
-public double rSquared(int column) 
+public Histogram getResidualPlotAllClasses() 
 ```
 
 
-Coefficient of Determination (R^2 Score)
+- return The number of observed labels for each class. For N classes, be returned array is of length N, with
+out[i] being the number of labels of class i
 
-- param column Column to evaluate
-- return R^2 score for column with index {- code column}
-- see <a href="https://en.wikipedia.org/wiki/Coefficient_of_determination">Wikipedia</a>
-
-##### averageMeanSquaredError 
+##### getResidualPlot 
 ```java
-public double averageMeanSquaredError() 
+public Histogram getResidualPlot(int labelClassIdx) 
 ```
 
 
-Average MSE across all columns
-- return
+Get the residual plot, only for examples of the specified class.. The residual plot is defined as a histogram of<br>
+|label_i - prob(class_i | input)| for all and examples; for this particular method, only predictions where
+i == labelClassIdx are included.<br>
+In general, small residuals indicate a superior classifier to large residuals.
 
-##### averageMeanAbsoluteError 
+- param labelClassIdx Index of the class to get the residual plot for
+- return Residual plot (histogram) - all predictions/classes
+
+##### getProbabilityHistogramAllClasses 
 ```java
-public double averageMeanAbsoluteError() 
+public Histogram getProbabilityHistogramAllClasses() 
 ```
 
 
-Average MAE across all columns
-- return
+Return a probability histogram for all predictions/classes.
 
-##### averagerootMeanSquaredError 
+- return Probability histogram
+
+##### getProbabilityHistogram 
 ```java
-public double averagerootMeanSquaredError() 
+public Histogram getProbabilityHistogram(int labelClassIdx) 
 ```
 
 
-Average RMSE across all columns
-- return
+Return a probability histogram of the specified label class index. That is, for label class index i,
+a histogram of P(class_i | input) is returned, only for those examples that are labelled as class i.
 
-##### averagerelativeSquaredError 
-```java
-public double averagerelativeSquaredError() 
-```
-
-
-Average RSE across all columns
-- return
-
-##### averagecorrelationR2 
-```java
-public double averagecorrelationR2() 
-```
-
-
-Legacy method for the correlation average across all columns.
-
-- return Pearson Correlation averaged over all columns
-- see {- link #averagePearsonCorrelation()}
-- deprecated Use {- link #averagePearsonCorrelation()} instead.
-For the R2 score use {- link #averageRSquared()}.
-
-##### averagePearsonCorrelation 
-```java
-public double averagePearsonCorrelation() 
-```
-
-
-Average Pearson Correlation Coefficient across all columns
-
-- return Pearson Correlation Coefficient across all columns
-
-##### averageRSquared 
-```java
-public double averageRSquared() 
-```
-
-
-Average R2 across all columns
-
-- return R2 score accross all columns
+- param labelClassIdx Index of the label class to get the histogram for
+- return Probability histogram
 
 
 
@@ -1922,11 +1808,125 @@ Average R2 across all columns
 
 ---
 
-### EvaluationAveraging
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationAveraging.java) </span>
+### EvaluationUtils
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationUtils.java) </span>
 
-The averaging approach for binary valuation measures when applied to multiclass classification problems.
-Macro averaging: weight each class equally<br>
-Micro averaging: weight each example equally<br>
-Generally, macro averaging is preferred for imbalanced datasets
+Utility methods for performing evaluation
+
+
+##### precision 
+```java
+public static double precision(long tpCount, long fpCount, double edgeCase) 
+```
+
+
+Calculate the precision from true positive and false positive counts
+
+- param tpCount  True positive count
+- param fpCount  False positive count
+- param edgeCase Edge case value use to avoid 0/0
+- return Precision
+
+##### recall 
+```java
+public static double recall(long tpCount, long fnCount, double edgeCase) 
+```
+
+
+Calculate the recall from true positive and false negative counts
+
+- param tpCount  True positive count
+- param fnCount  False negative count
+- param edgeCase Edge case values used to avoid 0/0
+- return Recall
+
+##### falsePositiveRate 
+```java
+public static double falsePositiveRate(long fpCount, long tnCount, double edgeCase) 
+```
+
+
+Calculate the false positive rate from the false positive count and true negative count
+
+- param fpCount  False positive count
+- param tnCount  True negative count
+- param edgeCase Edge case values are used to avoid 0/0
+- return False positive rate
+
+##### falseNegativeRate 
+```java
+public static double falseNegativeRate(long fnCount, long tpCount, double edgeCase) 
+```
+
+
+Calculate the false negative rate from the false negative counts and true positive count
+
+- param fnCount  False negative count
+- param tpCount  True positive count
+- param edgeCase Edge case value to use to avoid 0/0
+- return False negative rate
+
+##### fBeta 
+```java
+public static double fBeta(double beta, long tp, long fp, long fn) 
+```
+
+
+Calculate the F beta value from counts
+
+- param beta Beta of value to use
+- param tp   True positive count
+- param fp   False positive count
+- param fn   False negative count
+- return F beta
+
+##### fBeta 
+```java
+public static double fBeta(double beta, double precision, double recall) 
+```
+
+
+Calculate the F-beta value from precision and recall
+
+- param beta      Beta value to use
+- param precision Precision
+- param recall    Recall
+- return F-beta value
+
+##### gMeasure 
+```java
+public static double gMeasure(double precision, double recall) 
+```
+
+
+Calculate the G-measure from precision and recall
+
+- param precision Precision value
+- param recall    Recall value
+- return G-measure
+
+##### matthewsCorrelation 
+```java
+public static double matthewsCorrelation(long tp, long fp, long fn, long tn) 
+```
+
+
+Calculate the binary Matthews correlation coefficient from counts
+
+- param tp True positive count
+- param fp False positive counts
+- param fn False negative counts
+- param tn True negative count
+- return Matthews correlation coefficient
+
+
+
+
+
+---
+
+### IEvaluation
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//IEvaluation.java) </span>
+
+A general purpose interface for evaluating neural networks - methods are shared by implemetations such as
 
