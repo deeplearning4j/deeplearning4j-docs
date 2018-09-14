@@ -355,9 +355,9 @@ for cases where they cannot be inferred automatically.
 - param processor to be used on the data
 - return Builder
 
-##### build 
+##### validateOutputLayerConfig 
 ```java
-public MultiLayerNetwork build() 
+public GraphBuilder validateOutputLayerConfig(boolean validateOutputLayerConfig)
 ```
 
 
@@ -366,79 +366,9 @@ Returns a model with the fine tune configuration and specified architecture chan
 
 - return MultiLayerNetwork
 
-##### fineTuneConfiguration 
+##### build 
 ```java
-public GraphBuilder fineTuneConfiguration(FineTuneConfiguration fineTuneConfiguration) 
-```
-
-
-Computation Graph to tweak for transfer learning
-- param origGraph
-
-##### setFeatureExtractor 
-```java
-public GraphBuilder setFeatureExtractor(String... layerName) 
-```
-
-
-Specify a layer vertex to set as a "feature extractor"
-The specified layer vertex and the layers on the path from an input vertex to it it will be "frozen" with parameters staying constant
-- param layerName
-- return Builder
-
-##### nOutReplace 
-```java
-public GraphBuilder nOutReplace(String layerName, int nOut, WeightInit scheme) 
-```
-
-
-Modify the architecture of a vertex layer by changing nOut
-Note this will also affect the vertex layer that follows the layer specified, unless it is the output layer
-Currently does not support modifying nOut of layers that feed into non-layer vertices like merge, subset etc
-To modify nOut for such vertices use remove vertex, followed by add vertex
-Can specify different weight init schemes for the specified layer and the layer that follows it.
-
-- param layerName The name of the layer to change nOut of
-- param nOut      Value of nOut to change to
-- param scheme    Weight init scheme to use for params in layerName and the layers following it
-- return GraphBuilder
-- see org.deeplearning4j.nn.weights.WeightInit DISTRIBUTION
-
-##### nOutReplace 
-```java
-public GraphBuilder nOutReplace(String layerName, int nOut, Distribution dist) 
-```
-
-
-Modify the architecture of a vertex layer by changing nOut
-Note this will also affect the vertex layer that follows the layer specified, unless it is the output layer
-Currently does not support modifying nOut of layers that feed into non-layer vertices like merge, subset etc
-To modify nOut for such vertices use remove vertex, followed by add vertex
-Can specify different weight init schemes for the specified layer and the layer that follows it.
-
-- param layerName The name of the layer to change nOut of
-- param nOut      Value of nOut to change to
-- param dist      Weight distribution scheme to use
-- return GraphBuilder
-- see org.deeplearning4j.nn.weights.WeightInit DISTRIBUTION
-
-##### nOutReplace 
-```java
-public GraphBuilder nOutReplace(String layerName, int nOut, Distribution dist, Distribution distNext) 
-```
-
-
-Modified nOut of specified layer. Also affects layers following layerName unless they are output layers
-- param layerName The name of the layer to change nOut of
-- param nOut      Value of nOut to change to
-- param dist      Weight distribution scheme to use for layerName
-- param distNext  Weight distribution scheme for layers following layerName
-- return GraphBuilder
-- see org.deeplearning4j.nn.weights.WeightInit DISTRIBUTION
-
-##### removeVertexKeepConnections 
-```java
-public GraphBuilder removeVertexKeepConnections(String outputName) 
+public ComputationGraph build() 
 ```
 
 
@@ -447,96 +377,6 @@ Note the expectation here is to then add back another vertex with the same name 
 Possibly with references to vertices that no longer exist
 - param outputName
 - return
-
-##### removeVertexAndConnections 
-```java
-public GraphBuilder removeVertexAndConnections(String vertexName) 
-```
-
-
-Remove specified vertex and it's connections from the computation graph
-- param vertexName
-- return
-
-##### addLayer 
-```java
-public GraphBuilder addLayer(String layerName, Layer layer, String... layerInputs) 
-```
-
-
-Add a layer of the specified configuration to the computation graph
-- param layerName
-- param layer
-- param layerInputs
-- return
-
-##### addLayer 
-```java
-public GraphBuilder addLayer(String layerName, Layer layer, InputPreProcessor preProcessor,
-                        String... layerInputs) 
-```
-
-
-Add a layer with a specified preprocessor
-- param layerName
-- param layer
-- param preProcessor
-- param layerInputs
-- return
-
-##### addVertex 
-```java
-public GraphBuilder addVertex(String vertexName, GraphVertex vertex, String... vertexInputs) 
-```
-
-
-Add a vertex of the given configuration to the computation graph
-- param vertexName
-- param vertex
-- param vertexInputs
-- return
-
-##### setOutputs 
-```java
-public GraphBuilder setOutputs(String... outputNames) 
-```
-
-
-Set outputs to the computation graph, will add to ones that are existing
-Also determines the order, like in ComputationGraphConfiguration
-- param outputNames
-- return
-
-##### setInputs 
-```java
-public GraphBuilder setInputs(String... inputs) 
-```
-
-
-Sets new inputs for the computation graph. This method will remove any
-pre-existing inputs.
-- param inputs String names of each graph input.
-- return {- code GraphBuilder} instance.
-
-##### setInputTypes 
-```java
-public GraphBuilder setInputTypes(InputType... inputTypes) 
-```
-
-
-Sets the input type of corresponding inputs.
-- param inputTypes The type of input (such as convolutional).
-- return {- code GraphBuilder} instance.
-
-##### build 
-```java
-public ComputationGraph build() 
-```
-
-
-Returns a computation graph build to specifications.
-Init has been internally called. Can be fit directly.
-- return Computation graph
 
 
 

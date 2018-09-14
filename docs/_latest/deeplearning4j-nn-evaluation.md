@@ -626,7 +626,7 @@ public double falseAlarmRate()
 
 
 False Alarm Rate (FAR) reflects rate of misclassified to classified records
-http://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1058&context=isw<br>
+<a href="http://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1058&context=isw">http://ro.ecu.edu.au/cgi/viewcontent.cgi?article=1058&context=isw</a><br>
 Note: value returned will differ depending on number of classes and settings.<br>
 1. For binary classification, if the positive class is set (via default value of 1, via constructor,
 or via {- link #setBinaryPositiveClass(Integer)}), the returned value will be for the specified positive class
@@ -1795,8 +1795,9 @@ Provides the following metrics, for each column:<br>
 - RMSE: root mean squared error<br>
 - RSE: relative squared error<br>
 - PC: pearson correlation coefficient<br>
-- R^2: coefficient of determination
-See for example: http://www.saedsayad.com/model_evaluation_r.htm
+- R^2: coefficient of determination<br>
+<br>
+See for example: <a href="http://www.saedsayad.com/model_evaluation_r.htm">http://www.saedsayad.com/model_evaluation_r.htm</a>
 
 
 ##### RegressionEvaluation 

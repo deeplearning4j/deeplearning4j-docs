@@ -221,6 +221,15 @@ Stop the training once we achieved an expected score. Normally this will stop if
 the initialized score. If you want to stop the training once the score increases the defined score set the
 lesserBetter flag to false (feel free to give the flag a better name)
 
+##### initialize 
+```java
+public void initialize() 
+```
+
+
+- deprecated "lessBetter" argument no longer used
+
+
 
 
 

@@ -953,14 +953,5 @@ this layer. It can be used with 2d (feed-forward), 3d (time series) or 4d (CNN) 
 ### MaskZeroLayer
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/util/MaskZeroLayer.java) </span>
 
-Wrapper which masks timesteps with 0 activation.
+Wrapper which masks timesteps with activation equal to the specified masking value (0.0 default).
 Assumes that the input shape is [batch_size, input_size, timesteps].
-
-##### getOutputType 
-```java
-public InputType getOutputType(int layerIndex, InputType inputType) 
-```
-
-
-- param underlying The underlying layer to wrap and mask activations for
-

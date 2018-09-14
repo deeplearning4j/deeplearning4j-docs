@@ -189,6 +189,55 @@ Get DL4J RepeatVector.
 
 ---
 
+### KerasMasking
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasMasking.java) </span>
+
+Imports Keras masking layers.
+
+
+##### KerasMasking 
+```java
+public KerasMasking(Map<String, Object> layerConfig)
+            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig dictionary containing Keras layer configuration
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+##### getOutputType 
+```java
+public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig           dictionary containing Keras layer configuration
+- param enforceTrainingConfig whether to enforce training-related configuration options
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+##### getMaskingLayer 
+```java
+public MaskZeroLayer getMaskingLayer() 
+```
+
+
+Get DL4J MaskZeroLayer.
+
+- return MaskZeroLayer
+
+
+
+
+
+---
+
 ### KerasActivation
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasActivation.java) </span>
 

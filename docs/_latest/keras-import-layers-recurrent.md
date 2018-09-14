@@ -11,15 +11,15 @@ weight: 4
 
 ---
 
-### KerasLstm
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/recurrent/KerasLstm.java) </span>
+### KerasLSTM
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/recurrent/KerasLSTM.java) </span>
 
 Imports a Keras LSTM layer as a DL4J LSTM layer.
 
 
-##### KerasLstm 
+##### KerasLSTM 
 ```java
-public KerasLstm(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
+public KerasLSTM(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
 
 

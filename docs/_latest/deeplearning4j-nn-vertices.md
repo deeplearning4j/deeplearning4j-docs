@@ -53,7 +53,8 @@ L2 vertices to calculate two real numbers which can be fed into a LossLayer to c
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/PoolHelperVertex.java) </span>
 
 A custom layer for removing the first column and row from an input. This is meant to allow
-importation of Caffe's GoogLeNet from https://gist.github.com/joelouismarino/a2ede9ab3928f999575423b9887abd14.
+importation of Caffe's GoogLeNet from <a href="https://gist.github.com/joelouismarino/a2ede9ab3928f999575423b9887abd14">
+https://gist.github.com/joelouismarino/a2ede9ab3928f999575423b9887abd14</a>.
 
 
 
