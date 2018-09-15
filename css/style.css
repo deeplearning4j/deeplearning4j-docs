@@ -3717,6 +3717,9 @@ Template responsive style
   vertical-align: .275em;
   content: ""; }
 
+.page-content {
+  max-width: 100%; }
+
 .btn-outline-grey {
   border: 2px solid #676767;
   background-color: transparent;
