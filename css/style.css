@@ -3718,7 +3718,7 @@ Template responsive style
   content: ""; }
 
 .page-content {
-  max-width: 100%; }
+  max-width: 60%; }
 
 .btn-outline-grey {
   border: 2px solid #676767;
