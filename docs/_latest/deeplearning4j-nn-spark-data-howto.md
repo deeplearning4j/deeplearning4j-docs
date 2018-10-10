@@ -11,9 +11,9 @@ weight: 2
 
 This page provides some guides on how to create data pipelines for both training and evaluation when using Deeplearning4j on Spark.
 
-This page assumes some familiarity with Spark (RDDs, master vs. workers, etc) and deeplearning4j (networks, DataSet etc).
+This page assumes some familiarity with Spark (RDDs, master vs. workers, etc) and Deeplearning4j (networks, DataSet etc).
 
-As with training on a single machine, the final step of a data pipeline should be to produce a DataSet (single features arrays, single label array) or MultiDataSet (one or more feature arrays, one or more label arrays). In the case of Spark, the final step of a data pipeline is data in one of the following formats:
+As with training on a single machine, the final step of a data pipeline should be to produce a DataSet (single features arrays, single label array) or MultiDataSet (one or more feature arrays, one or more label arrays). In the case of DL4J on Spark, the final step of a data pipeline is data in one of the following formats:
 (a) an ```RDD<DataSet>```/```JavaRDD<DataSet>```
 (b) an ```RDD<MultiDataSet>```/```JavaRDD<MultiDataSet>```
 (c) a directory of serialized DataSet/MultiDataSet (minibatch) objects on network storage such as HDFS, S3 or Azure blob storage
@@ -23,7 +23,6 @@ Once data is in one of those four formats, it can be used for training or evalua
 
 **Note:** When training multiple models on a single dataset, it is best practice to preprocess your data once, and save it to network storage such as HDFS.
 Then, when training the network you can call ```SparkDl4jMultiLayer.fit(String path)``` or ```SparkComputationGraph.fit(String path)``` where ```path``` is the directory where you saved the files.
-There are multiple approaches to this - 
 
 
 Spark Data Prepration: How-To Guides
@@ -43,11 +42,13 @@ This guide shows how to load data contained in one or more CSV files and produce
 The process is fairly straightforward. Note that the ```DataVecDataSetFunction``` is very similar to the ```RecordReaderDataSetIterator``` that is often used for single machine training.
 
 For example, suppose the CSV had the following format - 6 total columns: 5 features followed by an integer class index for classification, and 10 possible classes
+
 ```
 1.0,3.2,4.5,1.1,6.3,0
 1.6,2.4,5.9,0.2,2.2,1
 ...
 ```
+
 we could load this data for classification using the following code:
 ```
 String filePath = "hdfs:///your/path/some_csv_file.csv";
@@ -61,7 +62,7 @@ int numLabelClasses = 10;   //10 classes for the label
 JavaRDD<DataSet> rddDataSetClassification = rddWritables.map(new DataVecDataSetFunction(labelIndex, numLabelClasses, false));
 ```
 
-However, if this dataset was for regression instead, with again 6 total columns, 3 feature columns (positions 0, 1 and 2) and 3 label columns (positions 3, 4 and 5) we could load it using the same process as above, but changing the last 3 lines to:
+However, if this dataset was for regression instead, with again 6 total columns, 3 feature columns (positions 0, 1 and 2 in the file rows) and 3 label columns (positions 3, 4 and 5) we could load it using the same process as above, but changing the last 3 lines to:
 
 ```
 int firstLabelColumn = 3;   //First column index for label
@@ -75,8 +76,8 @@ As noted at the start of this page, it is considered a best practice to preproce
 
 There are a number of reasons for this:
 * Better performance (avoid redundant loading/calculation): When fitting multiple models from the same dataset, it is faster to preprocess this data once and save to disk rather than preprocessing it again for every single training run.
-* Minimizing memory and other resources: By exporting and fitting from disk, we only need to keep the DataSets we are currently using (plus a small async prefetch buffer) in memory, rather than also keeping many unused DataSet objects in memory. Exporting results in lower total memory use and hence we can use larger networks, or larger minibatch sizes.
-* Avoiding recomputation: When an RDD is too large to fit into memory, some parts of it may need to be recomputed. When this occurs, Spark will recompute parts of the data pipeline multiple times, costing us both time and memory. A pre-export step avoids this recomputation entirely.
+* Minimizing memory and other resources: By exporting and fitting from disk, we only need to keep the DataSets we are currently using (plus a small async prefetch buffer) in memory, rather than also keeping many unused DataSet objects in memory. Exporting results in lower total memory use and hence we can use larger networks, larger minibatch sizes, or allocate fewer resources to our job.
+* Avoiding recomputation: When an RDD is too large to fit into memory, some parts of it may need to be recomputed before it can be used (depending on the cache settings). When this occurs, Spark will recompute parts of the data pipeline multiple times, costing us both time and memory. A pre-export step avoids this recomputation entirely.
 
 **Step 1: Saving**
 
@@ -106,7 +107,7 @@ paths.foreach(new VoidFunction<String>() {
 ```
 
 
-Saving an ```RDD<MultiDataSet>``` can in the same way using be done using ```BatchAndExportMultiDataSetsFunction``` instead, which takes the same arguments.
+Saving an ```RDD<MultiDataSet>``` can be done in the same way using ```BatchAndExportMultiDataSetsFunction``` instead, which takes the same arguments.
 
 **Step 2: Loading and Fitting**
 
@@ -121,6 +122,7 @@ Similarly, we can use ```SparkComputationGraph.fitMultiDataSet(String path)``` i
 
 
 Alternatively, we can load up the paths in a few different ways, depending on if or how we saved them:
+
 ```
 JavaSparkContext sc = new JavaSparkContext();
 
@@ -146,9 +148,9 @@ Then we can execute training on these paths by using methods such as ```SparkDl4
 ## <a name="singletocluster">How to prepare data on a single machine for use on a cluster: saving DataSets</a>
 
 Another possible workflow is to start with the data pipeline on a single machine, and export the DataSet or MultiDataSet objects for use on the cluster.
-This workflow clearly isn't as scalable as preparing data on a cluster (you are using just one machine to prepare data) but it can be an easier option in some cases, especially when you have an existing data pipeline.
+This workflow clearly isn't as scalable as preparing data on a cluster (you are using just one machine to prepare data) but it can be an easy option in some cases, especially when you have an existing data pipeline.
 
-This section assumes you have an existing ```DataSetIterator``` or ```MultiDataSetIterator```. There are many different ways to create one, which is outside of the scope of this guide.
+This section assumes you have an existing ```DataSetIterator``` or ```MultiDataSetIterator``` used for single-machine training. There are many different ways to create one, which is outside of the scope of this guide.
 
 **Step 1: Save the DataSets or MultiDataSets**
 
@@ -168,7 +170,7 @@ The process for saving MultiDataSets is almost identical.
 
 As an aside: you can read these saved DataSet objects on a single machine (for non-Spark training) using [FileDataSetIterator](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator/file/FileDataSetIterator.java)).
 
-An alternative approach is to save directly to the cluster using output streams, to (for example) HDFS. This can only be done if the machine running the code is properly configured with the required libraries and access rights. For example, to sawe the DataSets directly to HDFS you could use:
+An alternative approach is to save directly to the cluster using output streams, to (for example) HDFS. This can only be done if the machine running the code is properly configured with the required libraries and access rights. For example, to save the DataSets directly to HDFS you could use:
 
 ```
 JavaSparkContext sc = new JavaSparkContext();
@@ -250,7 +252,7 @@ RecordReaderConverter.convert(recordReader, writer);
 
 The process for using a ```SequenceRecordReader``` combined with a ```MapFileSequenceRecordWriter``` is virtually the same.
 
-Note also that ```MapFileRecordWriter``` and ```MapFileSequenceRecordWriter``` both support splitting - i.e., creating multiple smaller map files
+Note also that ```MapFileRecordWriter``` and ```MapFileSequenceRecordWriter``` both support splitting - i.e., creating multiple smaller map files instead of creating one single (potentially multi-GB) map file. Using splitting is recommended when saving data in this manner for use with Spark.
 
 **Step 2: Copy to HDFS or other network file storage**
 
@@ -276,10 +278,10 @@ JavaRDD<DataSet> rddDataSetClassification = rdd.map(new DataVecDataSetFunction(l
 This guide shows how load CSV files for training an RNN.
 The assumption is that the dataset is comprised of multiple CSV files, where:
 
-* each CSV represents one sequence
+* each CSV file represents one sequence
 * each row/line of the CSV contains the values for one time step (one or more columns/values, same number of values in all rows for all files) 
 * each CSV may contain a different number of lines to other CSVs (i.e., variable length sequences are OK here)
-* header lines either aren't present, or are present in all files
+* header lines either aren't present in any files, or are present in all files
 
 A data pipeline can be created using the following process:
 ```
@@ -288,7 +290,7 @@ JavaPairRDD<String, PortableDataStream> origData = sc.binaryFiles(directoryWithC
 
 int numHeaderLinesEachFile = 0; //No header lines
 int delimiter = ",";            //Comma delimited files
-SequenceRecordReader seqRR = new CSVSequenceRecordReader(numHeaderLinesEachFile, );
+SequenceRecordReader seqRR = new CSVSequenceRecordReader(numHeaderLinesEachFile, delimiter);
 
 JavaRDD<List<List<Writable>>> sequencesRdd = origData.map(new SequenceRecordReaderFunction(seqRR));
 
@@ -303,8 +305,7 @@ JavaRDD<DataSet> dataSetRdd = sequencesRdd.map(new DataVecSequenceDataSetFunctio
 
 This guide shows how to create an ```RDD<DataSet>``` for image classification, starting from images stored on a network file system such as HDFS.
 
-Note that one limitation of the implementation is that the set of classes (i.e., the class/category labels) needs to be known provided or collected manually.
-This guide assumes they are available by some means.
+Note that one limitation of the implementation is that the set of classes (i.e., the class/category labels when doing classification) needs to be known, provided or collected manually. This differs from using ImageRecordReader for classification on a single machine, which can automatically infer the set of class labels.
 
 First, assume the images are in subdirectories based on their class labels. For example, suppose there are two classes, "cat" and "dog", the directory structure would look like:
 ```
@@ -315,16 +316,16 @@ rootDir/dog/img0.jpg
 rootDir/dog/img1.jpg
 ...
 ```
-(Note the file names don't matter in this example - however, the parent directory names the class labels)
+(Note the file names don't matter in this example - however, the parent directory names are the class labels)
 
-The data pipeline can be constructed as follows:
+The data pipeline for image classification can be constructed as follows:
 ```
 String rootDir = "hdfs://path/to/rootDir";
 JavaPairRDD<String, PortableDataStream> files = sc.binaryFiles(rootDir);
 
 List<String> labelsList = Arrays.asList("cat", "dog");  //Substitute your class labels here
 
-int imageHW = 224;     //Height/width to convert images to
+int imageHW = 224;              //Height/width to convert images to
 int imageChannels = 3;          //Image channels to convert images to - 3 = RGB, 1 = grayscale
 ImageRecordReader imageRecordReader = new ImageRecordReader(imageHW, imageHW, imageChannels);
 rr.setLabels(labelsList);
@@ -350,7 +351,7 @@ PathLabelGenerator labelGenerator = new PatternPathLabelGenerator("_", 0);  //Sp
 ImageRecordReader imageRecordReader = new ImageRecordReader(imageHW, imageHW, imageChannels, labelGenerator);
 ```
 
-Note that PathLabelGenerator returns a Writable object, so for tasks like image segmentation, you can return an INDArray using the NDArrayWritable class.
+Note that PathLabelGenerator returns a Writable object, so for tasks like image segmentation, you can return an INDArray using the NDArrayWritable class in a custom PathLabelGenerator.
 
 
 ## <a name="customformat">How to load prepared minibatches in custom format</a>
@@ -358,6 +359,7 @@ Note that PathLabelGenerator returns a Writable object, so for tasks like image 
 DL4J Spark training supports the ability to load data serialized in a custom format. The assumption is that each file on the remote/network storage represents a single minibatch of data in some readable format.
 
 Note that this approach is typically not required or recommended for most users, but is provided as an additional option for advanced users or those with pre-prepared data in a custom format or a format that is not natively supported by DL4J.
+When files represent a single record/example (instead of a minibatch) in a custom format, a custom RecordReader could be used instead.
 
 The interfaces of note are:
 
