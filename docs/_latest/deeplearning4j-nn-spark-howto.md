@@ -23,6 +23,7 @@ Before Training Guides
 During and After Training Guides
 * [How to perform distributed test set evaluation](#evaluation)
 * [How to save (and load) neural networks trained on Spark](#saveload)
+* [How to perform distributed inference](#inference)
 
 Problems and Troubleshooting Guides
 * [How to debug common Spark dependency problems (NoClassDefFoundExcption and similar)](#dependencyproblems)
@@ -284,6 +285,25 @@ try(BufferedInputStream is = new BufferedInputStream(fileSystem.open(new Path(ou
     net = ModelSerializer.restoreMultiLayerNetwork(is);
 }
 ```
+
+
+
+## <a name="inference">How to perform distributed inference</a>
+
+Deeplearning4j's Spark implementation supports distributed inference. That is, we can easily generate predictions on an RDD of inputs using a cluster of machines.
+This distributed inference can also be used for networks trained on a single machine and loaded for Spark (see the the [saving/loading section](#saveload) for details on how to load a saved network for use with Spark).
+
+Note: If you want to perform evaluation (i.e., calculate accuracy, F1, MSE, etc), refer to the [evaluation how-to](#evaluation) instead.
+
+The method signatures for performing distributed inference are as follows:
+```
+SparkDl4jMultiLayer.feedForwardWithKey(JavaPairRDD<K, INDArray> featuresData, int batchSize) : JavaPairRDD<K, INDArray>
+SparkComputationGraph.feedForwardWithKey(JavaPairRDD<K, INDArray[]> featuresData, int batchSize) : JavaPairRDD<K, INDArray[]>
+```
+There are also overloads that accept an input mask array, when required
+
+Note the parameter ```K``` - this is a generic type to signify the unique 'key' used to identify each example. The key values are not used as part of the inference process. This key is required as Spark's RDDs are unordered - without this, we would have no way to know which element in the predictions RDD corresponds to which element in the input RDD.
+The batch size parameter is used to specify the minibatch size when performing inference. It does not impact the values returned, but instead is used to balance memory use vs. computational efficiency: large batches might compute a little quicker overall, but require more memory. In many cases, a batch size of 64 is a good starting point to try if you are unsure of what to use.
 
 
 
