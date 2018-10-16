@@ -180,6 +180,7 @@ Both (a) and (b) must be available for ND4J/DL4J to run using an available CUDA 
 For configuring dependencies for Spark jobs, see the [uber-jar section](#uberjar) above.
 For configuring cuDNN on a single node, see [Using Deeplearning4j with CuDNN](./deeplearning4j-config-cudnn)
 
+<br><br>
 
 ## <a name="cpusgpus">How to use CPUs on master, GPUs on the workers</a>
 
@@ -257,6 +258,8 @@ Then, at the start of your training job, add the following code:
 
 Note that when using Deeplearning4j's SparkDl4jMultiLayer or SparkComputationGraph classes, a warning will be logged if the Kryo configuration is incorrect.
 
+<br><br>
+
 ## <a name="yarngpus">How to use YARN and GPUs</a>
 
 For DL4J, the only requirement for CUDA GPUs is to use the appropriate backend, with the appropriate NVIDIA libraries either installed on each node, or provided in the uber-JAR (see [Spark how-to guide](deeplearning4j-scaleout-howto) for more details).
@@ -277,9 +280,9 @@ The summary: adding ```--conf spark.locality.wait=0``` to your Spark submit conf
 
 For more details, see [link 1](https://spark.apache.org/docs/latest/tuning.html#data-locality) and [link 2](https://spark.apache.org/docs/latest/configuration.html#scheduling).
 
-# During and After Training Guides
-
 <br><br>
+
+# During and After Training Guides
 
 ## <a name="evaluation">How to perform distributed test set evaluation</a>
 
@@ -502,7 +505,7 @@ One additional setting that is worth knowing about is the (experimental) Spark c
 
 <br><br>
 
-## <a href="caching">How to Cache RDD[INDArray] and RDD[DataSet] Safely</a>
+## <a name="caching">How to Cache RDD[INDArray] and RDD[DataSet] Safely</a>
 
 Spark has some issues regarding how it handles Java objects with large off-heap components, such as the DataSet and INDArray objects used in Deeplearning4j. This section explains the issues related to caching/persisting these objects.
 
@@ -530,7 +533,7 @@ However, for ```MEMORY_ONLY_SER``` and ```MEMORY_AND_DISK_SER``` Spark stores bl
 
 <br><br>
 
-## <a href="ntperror">How to fix "Error querying NTP server" errors</a>
+## <a name="ntperror">How to fix "Error querying NTP server" errors</a>
 
 DL4J's parameter averaging implementation has the option to collect training stats, by using ```SparkDl4jMultiLayer.setCollectTrainingStats(true)```.
 When this is enabled, internet access is required to connect to the NTP (network time protocal) server.
@@ -549,7 +552,7 @@ To use the system clock time source, add the following to Spark submit:
 
 <br><br>
 
-## <a href="ubuntu16">Failed training on Ubuntu 16.04 (Ubuntu bug that may affect DL4J users)</a>
+## <a name="ubuntu16">Failed training on Ubuntu 16.04 (Ubuntu bug that may affect DL4J users)</a>
 
 When running a Spark on YARN cluster on Ubuntu 16.04 machines, chances are that after finishing a job, all processes owned by the user running Hadoop/YARN are killed. This is related to a bug in Ubuntu, which is documented at https://bugs.launchpad.net/ubuntu/+source/procps/+bug/1610499. There's also a Stackoverflow discussion about it at http://stackoverflow.com/questions/38419078/logouts-while-running-hadoop-under-ubuntu-16-04.
 
