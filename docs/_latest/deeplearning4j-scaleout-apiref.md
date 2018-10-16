@@ -13,6 +13,310 @@ This page provides the API reference for key classes required to do distributed 
 
 ---
 
+### SharedTrainingMaster
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark-parameterserver/src/main/java/org/deeplearning4j/spark/parameterserver/training/SharedTrainingMaster.java) </span>
+
+SharedTrainingMaster implements distributed training of neural networks using a compressed quantized gradient (update)
+sharing implementation based on the Strom 2015 paper "Scalable Distributed DNN Training Using Commodity GPU Cloud Computing":
+<a href="https://s3-us-west-2.amazonaws.com/amazon.jobs-public-documents/strom_interspeech2015.pdf">https://s3-us-west-2.amazonaws.com/amazon.jobs-public-documents/strom_interspeech2015.pdf</a>.
+The Deeplearning4j implementation makes a number of modifications, such as having the option to use a parameter-server
+based implementation for fault tolerance and execution where multicast networking support is not available.
+
+
+##### fromJson 
+```java
+public static SharedTrainingMaster fromJson(String jsonStr) 
+```
+
+
+Create a SharedTrainingMaster instance by deserializing a JSON string that has been serialized with
+{- link #toJson()}
+
+- param jsonStr SharedTrainingMaster configuration serialized as JSON
+
+##### fromYaml 
+```java
+public static SharedTrainingMaster fromYaml(String yamlStr) 
+```
+
+
+Create a SharedTrainingMaster instance by deserializing a YAML string that has been serialized with
+{- link #toYaml()}
+
+- param yamlStr SharedTrainingMaster configuration serialized as YAML
+
+##### collectTrainingStats 
+```java
+public Builder collectTrainingStats(boolean enable) 
+```
+
+
+Create a SharedTrainingMaster with defaults other than the RDD number of examples
+- param rddDataSetNumExamples When fitting from an {- code RDD<DataSet>} how many examples are in each dataset?
+
+##### repartitionData 
+```java
+public Builder repartitionData(Repartition repartition) 
+```
+
+
+This parameter defines when repartition is applied (if applied).
+- param repartition Repartition setting
+- deprecated Use {- link #repartitioner(Repartitioner)}
+
+##### repartitionStrategy 
+```java
+public Builder repartitionStrategy(RepartitionStrategy repartitionStrategy) 
+```
+
+
+Used in conjunction with {- link #repartitionData(Repartition)} (which defines <i>when</i> repartitioning should be
+conducted), repartitionStrategy defines <i>how</i> the repartitioning should be done. See {- link RepartitionStrategy}
+for details
+
+- param repartitionStrategy Repartitioning strategy to use
+- deprecated Use {- link #repartitioner(Repartitioner)}
+
+##### storageLevel 
+```java
+public Builder storageLevel(StorageLevel storageLevel) 
+```
+
+
+Set the storage level for {- code RDD<DataSet>}s.<br>
+Default: StorageLevel.MEMORY_ONLY_SER() - i.e., store in memory, in serialized form<br>
+To use no RDD persistence, use {- code null}<br>
+Note that this only has effect when {- code RDDTrainingApproach.Direct} is used (which is not the default),
+and when fitting from an {- code RDD<DataSet>}.
+
+<b>Note</b>: Spark's StorageLevel.MEMORY_ONLY() and StorageLevel.MEMORY_AND_DISK() can be problematic when
+it comes to off-heap data (which DL4J/ND4J uses extensively). Spark does not account for off-heap memory
+when deciding if/when to drop blocks to ensure enough free memory; consequently, for DataSet RDDs that are
+larger than the total amount of (off-heap) memory, this can lead to OOM issues. Put another way: Spark counts
+the on-heap size of DataSet and INDArray objects only (which is negligible) resulting in a significant
+underestimate of the true DataSet object sizes. More DataSets are thus kept in memory than we can really afford.<br>
+<br>
+Note also that fitting directly from an {- code RDD<DataSet>} is discouraged - it is better to export your
+prepared data once and call (for example} {- code SparkDl4jMultiLayer.fit(String savedDataDirectory)}.
+See DL4J's Spark website documentation for details.<br>
+
+- param storageLevel Storage level to use for DataSet RDDs
+
+##### rddTrainingApproach 
+```java
+public Builder rddTrainingApproach(RDDTrainingApproach rddTrainingApproach) 
+```
+
+
+The approach to use when training on a {- code RDD<DataSet>} or {- code RDD<MultiDataSet>}.
+Default: {- link RDDTrainingApproach#Export}, which exports data to a temporary directory first.<br>
+The default cluster temporary directory is used, though can be configured using {- link #exportDirectory(String)}
+Note also that fitting directly from an {- code RDD<DataSet>} is discouraged - it is better to export your
+prepared data once and call (for example} {- code SparkDl4jMultiLayer.fit(String savedDataDirectory)}.
+See DL4J's Spark website documentation for details.<br>
+
+- param rddTrainingApproach Training approach to use when training from a {- code RDD<DataSet>} or {- code RDD<MultiDataSet>}
+
+##### exportDirectory 
+```java
+public Builder exportDirectory(String exportDirectory) 
+```
+
+
+When {- link #rddTrainingApproach(RDDTrainingApproach)} is set to {- link RDDTrainingApproach#Export} (as it is by default)
+the data is exported to a temporary directory first.
+
+Default: null. -> use {hadoop.tmp.dir}/dl4j/. In this case, data is exported to {hadoop.tmp.dir}/dl4j/SOME_UNIQUE_ID/<br>
+If you specify a directory, the directory {exportDirectory}/SOME_UNIQUE_ID/ will be used instead.
+
+- param exportDirectory Base directory to export data
+
+##### rngSeed 
+```java
+public Builder rngSeed(long rngSeed) 
+```
+
+
+Random number generator seed, used mainly for enforcing repeatable splitting/repartitioning on RDDs
+Default: no seed set (i.e., random seed)
+
+- param rngSeed RNG seed
+
+##### updatesThreshold 
+```java
+public Builder updatesThreshold(double threshold) 
+```
+
+
+Threshold for updates encoding. Lower values might improve convergence, but increase amount of network communication.<br>
+Values that are too low may also impact network convergence. If convergence problems are observed, try increasing
+or decreasing this by a factor of 10 - say 1e-4 and 1e-2.<br>
+For technical details, see the paper <a href="https://s3-us-west-2.amazonaws.com/amazon.jobs-public-documents/strom_interspeech2015.pdf">
+Scalable Distributed DNN Training Using Commodity GPU Cloud Computing</a>
+<br>
+Default value: 1e-3<br>
+<br>
+Note also that the threshold will be adjusted somewhat during training to avoid the updates becoming too sparse
+- i.e., the threshold will be automatically reduced if required during training. See also {- link #minUpdatesThreshold(double)}
+for this configuration.
+- param threshold The encoding threshold to use
+
+##### minUpdatesThreshold 
+```java
+public Builder minUpdatesThreshold(double minThreshold) 
+```
+
+
+Once update with given threshold become too sparse, threshold will be decreased by thresholdStep, but not below minimum threshold.
+This method is used to set that minimum threshold.
+
+Default value: 1e-5
+- param minThreshold Minimum threshold to allow when adapting the threshold value
+- return
+
+##### thresholdStep 
+```java
+public Builder thresholdStep(double step) 
+```
+
+
+Step size for threshold decay. When sparsity is less than than that specified by {- link #stepTrigger(double)}
+(default 0.05) how big a step should we use to reduce the threshold?<br>
+Larger steps result in faster (but coarser) adaption of the threshold. <br>
+Default value: 1e-5
+- param step Step size
+- return
+
+##### stepTrigger 
+```java
+public Builder stepTrigger(double stepTrigger) 
+```
+
+
+Target sparsity/dense level, as a percentage, when threshold step will happen. i.e. 5 value = 5% of original updates size.
+<br>
+Default value: 0.05 (i.e., 0.05%)
+- param stepTrigger Sparsity level for triggering decreasing the threshold
+- return
+
+##### stepDelay 
+```java
+public Builder stepDelay(int stepDelay) 
+```
+
+
+Wait at least X iterations between applying threshold decay
+
+Default value: 50
+- param stepDelay Delay before decreasing the threshold. Smaller values mean faster adaption, but might be due to noise
+- return
+
+##### shakeFrequency 
+```java
+public Builder shakeFrequency(int frequency) 
+```
+
+
+During neural network training, every 'frequency' iterations, the executors will send encoded dense updates with
+a lower threshold. This configuration in disabled by default.<br>
+The idea is to occasionally communicate smaller gradients more quickly than they might otherwise be communicated.<br>
+Please note: If you'll set this value too low (i.e. 1) - it might lead to worse training performance and could
+also impact convergence.<br>
+<br>
+Default value: 0 (disabled)
+- param frequency Frequency for performing a 'shake' update
+
+##### batchSizePerWorker 
+```java
+public Builder batchSizePerWorker(int batchSize) 
+```
+
+
+Minibatch size to use when training workers. In principle, the source data (i.e., {- code RDD<DataSet>} etc)
+can have a different number of examples in each {- code DataSet} than we want to use when training.
+i.e., we can split or combine DataSets if required.
+
+- param batchSize Minibatch size to use when fitting each worker
+
+##### workersPerNode 
+```java
+public Builder workersPerNode(int numWorkers) 
+```
+
+
+This method allows to configure number of network training threads per cluster node.<br>
+Default value: -1, which defines automated number of workers selection, based on hardware present in system
+(i.e., number of GPUs, if training on a GPU enabled system).
+<br>
+When training on GPUs, you should use 1 worker per GPU (which is the default). For CPUs, 1 worker per
+node is usually preferred, though multi-CPU (i.e., multiple physical CPUs) or CPUs with large core counts
+may have better throughput (i.e., more examples per second) when increasing the number of workers,
+at the expense of more memory consumed. Note that if you increase the number of workers on a CPU system,
+you should set the number of OpenMP threads using the {- code OMP_NUM_THREADS} property - see
+{- link org.nd4j.config.ND4JEnvironmentVars#OMP_NUM_THREADS} for more details.
+For example, a machine with 32 physical cores could use 4 workers with {- code OMP_NUM_THREADS=8}
+
+- param numWorkers Number of workers on each node.
+
+##### debugLongerIterations 
+```java
+public Builder debugLongerIterations(long timeMs) 
+```
+
+
+This method allows you to artificially extend iteration time using Thread.sleep() for a given time.
+
+PLEASE NOTE: Never use that option in production environment. It's suited for debugging purposes only.
+
+- param timeMs
+- return
+
+##### transport 
+```java
+public Builder transport(Transport transport) 
+```
+
+
+Optional method: Transport implementation to be used as TransportType.CUSTOM for VoidParameterAveraging method<br>
+Generally not used by users
+
+- param transport Transport to use
+- return
+
+##### workerPrefetchNumBatches 
+```java
+public Builder workerPrefetchNumBatches(int prefetchNumBatches)
+```
+
+
+Number of minibatches to asynchronously prefetch on each worker when training. Default: 2, which is usually suitable
+in most cases. Increasing this might help in some cases of ETL (data loading) bottlenecks, at the expense
+of greater memory consumption
+- param prefetchNumBatches Number of batches to prefetch
+
+##### repartitioner 
+```java
+public Builder repartitioner(Repartitioner repartitioner)
+```
+
+
+Repartitioner to use to repartition data before fitting.<br>
+DL4J performs a MapPartitions operation for training, hence how the data is partitioned can matter a lot for
+performance - too few partitions (or very imbalanced partitions can result in poor cluster utilization, due to
+some workers being idle. A larger number of smaller partitions can help to avoid so-called "end-of-epoch"
+effects where training can only complete once the last/slowest worker finishes it's partition.<br>
+Default repartitioner is {- link DefaultRepartitioner}, which repartitions equally up to a maximum of 5000
+partitions, and is usually suitable for most purposes. In the worst case, the "end of epoch" effect
+when using the partitioner should be limited to a maximum of the amount of time required to process a single partition.
+
+- param repartitioner Repartitioner to use
+
+
+
+
+
+---
+
 ### SparkComputationGraph
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/impl/graph/SparkComputationGraph.java) </span>
 
