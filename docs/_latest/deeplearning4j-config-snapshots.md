@@ -16,16 +16,16 @@ weight: 10
 
 ## <a name="Introduction">Overview/Introduction</a>
 
-We provide automated daily builds of our repositories: ND4J/DataVec/DeepLearning4j/RL4J etc. So, all newest functionality & bug fixes are delivered daily.
+We provide automated daily builds of repositories such as ND4J, DataVec, DeepLearning4j, RL4J etc. So all the newest functionality and most recent bug fixes are released daily.
 
-Snapshots work like any other maven dependencies, just served from custom repository, instead of Maven Central.
+Snapshots work like any other Maven dependency. The only difference is that they are served from a custom repository rather than from Maven Central.
 
-**Note that due to ongoing development, snapshots should be considered less stable than releases: breaking changes or bugs can in principle be introduced at any point during the course of normal development. Typically, releases (not snapshots) should be used when possible, unless a bug fix or new feature is required.**
+**Due to ongoing development, snapshots should be considered less stable than releases: breaking changes or bugs can in principle be introduced at any point during the course of normal development. Typically, releases (not snapshots) should be used when possible, unless a bug fix or new feature is required.**
 
 ## <a name="Setup_Instructions">Setup Instructions</a>
 
 **Step 1:**
-To use snapshots in your project, you should just add snapshot repository information to your `pom.xml`, like shown below:
+To use snapshots in your project, you should add snapshot repository information like this to your `pom.xml` file:
 
 ```
 <repositories>
@@ -43,10 +43,9 @@ To use snapshots in your project, you should just add snapshot repository inform
 </repositories>
 ```
 
-For more details on the repositories section, see the [Maven documentation repositories section](https://maven.apache.org/settings.html#Repositories)
-
 **Step 2:**
-And specify snapshot version. We follow simple rule. If latest stable release version is `A.B.C`, snapshot version will be `A.B.(C+1)-SNAPSHOT`. The current snapshot version is `1.0.0-SNAPSHOT`.
+Make sure to specify the snapshot version. We follow a simple rule: If the latest stable release version is `A.B.C`, the snapshot version will be `A.B.(C+1)-SNAPSHOT`. The current snapshot version is `1.0.0-SNAPSHOT`.
+For more details on the repositories section of the pom.xml file, see [Maven documentation](https://maven.apache.org/settings.html#Repositories)
 
 If using properties like the DL4J examples, change:
 From version:
@@ -99,11 +98,11 @@ Two commands that might be useful when using snapshot dependencies in Maven is a
 An alternative approach to (1) is to set ```<updatePolicy>always</updatePolicy>``` in the ```<repositories>``` section found earlier in this page.
 An alternative approach to (2) is to set ```<updatePolicy>never</updatePolicy>``` in the ```<repositories>``` section found earlier in this page.
 
-## <a name="Note_to_gradle_users">Note to gradle users</a>
+## <a name="Note_to_gradle_users">Note to Gradle users</a>
 
-Snapshots will not work with gradle. You will have to use maven to download the files. After that you may try using your local maven repository with mavenLocal().
+Snapshots will not work with Gradle. You must use Maven to download the files. After that, you may try using your local Maven repository with `mavenLocal()`.
 
-A bare minimum file like
+A bare minimum file like this:
 
 ```Gradle
 version '1.0-SNAPSHOT'
@@ -128,9 +127,6 @@ dependencies {
 }
 ```
 
-should work but does not. This is due to [a bug in gradle](https://github.com/gradle/gradle/issues/2882)
-
-
-Gradle with snapshots *and* maven classifiers appears to be a problem. 
+should work in theory, but it does not. This is due to [a bug in Gradle](https://github.com/gradle/gradle/issues/2882). Gradle with snapshots *and* Maven classifiers appears to be a problem.
 
  Of note when using the nd4j-native backend on Gradle (and SBT - but not Maven), you need to add openblas as a dependency. We do this for you in the -platform pom. Reference the -platform pom [here](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-backend-impls/nd4j-native-platform/pom.xml#L19) to double check your dependencies. Note that these are version properties. See the ```<properties>``` section of the pom for current versions of the openblas and javacpp presets required to run nd4j-native.
