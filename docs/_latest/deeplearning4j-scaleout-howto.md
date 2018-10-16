@@ -34,7 +34,7 @@ Problems and Troubleshooting Guides
 * [Fixing libgomp issues on Amazon Elastic MapReduce](#libgomp)
 * [Failed training on Ubuntu 16.04 (Ubuntu bug that may affect DL4J Spark users)](#ubuntu16)
 
-
+<br><br>
 
 # Before Training - How-To Guides
 
@@ -77,7 +77,8 @@ Note that if you add a Spark dependency such as spark-core_2.11, this can be set
 
 
 When training on CUDA GPUs, there are a couple of possible cases when adding CUDA dependencies:
-*Case 1: Cluster nodes have CUDA toolkit installed on the master and worker nodes*
+
+**Case 1: Cluster nodes have CUDA toolkit installed on the master and worker nodes**
 
 When the CUDA toolkit and CuDNN are available on the cluster nodes, we can use a smaller dependency:
 * If the OS building the uber-jar is the same OS as the cluster: include nd4j-cuda-x.x
@@ -85,7 +86,7 @@ When the CUDA toolkit and CuDNN are available on the cluster nodes, we can use a
 * In both cases, include 
 where x.x is the CUDA version - for example, x.x=9.2 for CUDA 9.2.
 
-*Case 2: Cluster nodes do NOT have the CUDA toolkit installed on the master and worker nodes*
+**Case 2: Cluster nodes do NOT have the CUDA toolkit installed on the master and worker nodes**
 
 When CUDA/CuDNN are NOT installed on the cluster nodes, we can do the following:
 * First, include the dependencies as per 'Case 1' above
@@ -159,7 +160,7 @@ Be sure to use the large ```...-bin.jar``` file as this is the shaded jar with a
 That's is - you should now have an uber-jar that is suitable for submitting to spark-submit for training networks on Spark with CPUs or NVIDA (CUDA) GPUs.
 
 
-
+<br><br>
 
 ## <a name="gpus">How to use GPUs for training on Spark</a>
 
@@ -190,7 +191,7 @@ Assuming the master/driver is executing on a CPU machine, and the workers are ex
 When multiple backends are present on the classpath, by default the CUDA backend will be tried first. If this cannot be loaded, the CPU (nd4j-native) backend will be loaded second. Thus, if the driver does not have a GPU, it should fall back to using a CPU. However, this default behaviour can be changed by setting the ```BACKEND_PRIORITY_CPU``` or ```BACKEND_PRIORITY_GPU``` environment variables on the master/driver, as described [here](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-common/src/main/java/org/nd4j/config/ND4JEnvironmentVars.java).
 The exact process for setting environment variables may depend on the cluster manager - Spark standalone vs. YARN vs. Mesos. Please consult the documentation for each on how to set the environment variables for Spark jobs for the driver/master.
 
-
+<br><br>
 
 ## <a name="memory">How to configure memory settings for Spark</a>
 
@@ -230,6 +231,8 @@ All up, this might look like (for YARN, with 4GB on-heap, 5GB off-heap, 6GB YARN
 --class my.class.name.here --num-executors 4 --executor-cores 8 --executor-memory 4G --driver-memory 4G --conf "spark.executor.extraJavaOptions=-Dorg.bytedeco.javacpp.maxbytes=5G" --conf "spark.driver.extraJavaOptions=-Dorg.bytedeco.javacpp.maxbytes=5G" --conf spark.yarn.executor.memoryOverhead=6144
 ```
 
+<br><br>
+
 ## <a name="kryo">How to use Kryo Serialization with DL4J and ND4J</a>
 
 Deeplearning4j and ND4J can utilize Kryo serialization, with appropriate configuration.
@@ -264,6 +267,8 @@ For these versions, it is possible to utilize node labels to ensure that jobs ar
 
 Note that YARN-specific memory configuration (see [memory how-to](deeplearning4j-scaleout-howto#memory)) is also required.
 
+<br><br>
+
 ## <a name="locality">How to configure Spark Locality Configuration</a>
 
 Configuring Spark locality settings is an optional configuration option that can improve training performance.
@@ -273,6 +278,8 @@ The summary: adding ```--conf spark.locality.wait=0``` to your Spark submit conf
 For more details, see [link 1](https://spark.apache.org/docs/latest/tuning.html#data-locality) and [link 2](https://spark.apache.org/docs/latest/configuration.html#scheduling).
 
 # During and After Training Guides
+
+<br><br>
 
 ## <a name="evaluation">How to perform distributed test set evaluation</a>
 
@@ -350,6 +357,7 @@ String json = SparkUtils.readStringFromFile(writeTo, sc);
 Evaluation eval = Evaluation.fromJson(json);
 ```
 
+<br><br>
 
 ## <a name="saveload">How to save (and load) neural networks trained on Spark</a>
 
@@ -382,6 +390,7 @@ try(BufferedInputStream is = new BufferedInputStream(fileSystem.open(new Path(ou
 }
 ```
 
+<br><br>
 
 
 ## <a name="inference">How to perform distributed inference</a>
@@ -401,7 +410,7 @@ There are also overloads that accept an input mask array, when required
 Note the parameter ```K``` - this is a generic type to signify the unique 'key' used to identify each example. The key values are not used as part of the inference process. This key is required as Spark's RDDs are unordered - without this, we would have no way to know which element in the predictions RDD corresponds to which element in the input RDD.
 The batch size parameter is used to specify the minibatch size when performing inference. It does not impact the values returned, but instead is used to balance memory use vs. computational efficiency: large batches might compute a little quicker overall, but require more memory. In many cases, a batch size of 64 is a good starting point to try if you are unsure of what to use.
 
-
+<br><br><br>
 
 # Problems and Troubleshooting Guides
 
@@ -491,6 +500,7 @@ This means that for dependencies that are added by Spark, you can't simply exclu
 
 One additional setting that is worth knowing about is the (experimental) Spark configuration options, ```spark.driver.userClassPathFirst``` and ```spark.executor.userClassPathFirst``` (See the [Spark configuartion docs](https://spark.apache.org/docs/latest/configuration.html) for more details). In some cases, these options may be a fix for dependency issues.
 
+<br><br>
 
 ## <a href="caching">How to Cache RDD[INDArray] and RDD[DataSet] Safely</a>
 
@@ -518,6 +528,8 @@ The problem with Spark is how it handles memory. In particular, Spark will drop 
 
 However, for ```MEMORY_ONLY_SER``` and ```MEMORY_AND_DISK_SER``` Spark stores blocks in *serialized* form, on the Java heap. The size of objects stored in serialized form can be estimated accurately by Spark (there is no off-heap memory component for the serialized objects) and consequently Spark will drop blocks when required - avoiding any out of memory issues.
 
+<br><br>
+
 ## <a href="ntperror">How to fix "Error querying NTP server" errors</a>
 
 DL4J's parameter averaging implementation has the option to collect training stats, by using ```SparkDl4jMultiLayer.setCollectTrainingStats(true)```.
@@ -534,6 +546,8 @@ To use the system clock time source, add the following to Spark submit:
 --conf spark.driver.extraJavaOptions=-Dorg.deeplearning4j.spark.time.TimeSource=org.deeplearning4j.spark.time.SystemClockTimeSource
 --conf spark.executor.extraJavaOptions=-Dorg.deeplearning4j.spark.time.TimeSource=org.deeplearning4j.spark.time.SystemClockTimeSource
 ```
+
+<br><br>
 
 ## <a href="ubuntu16">Failed training on Ubuntu 16.04 (Ubuntu bug that may affect DL4J users)</a>
 
