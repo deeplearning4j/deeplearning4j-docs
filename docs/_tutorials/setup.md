@@ -21,6 +21,8 @@ If you're coming from non-JVM languages like Python or R, you may want to read a
 
 #### Run via Docker
 
+<div class="alert">Note that the zeppelin-dl4j container uses a previous version of Eclipse Deeplearning4j. The container will be updated with the next major release.</div> 
+
 [Docker](https://www.docker.com/) is an easy-to-use containerization platform. This is the preferred method for running Zeppelin. Download the latest release from the [Skymind Docker Hub](https://hub.docker.com/r/skymindops/zeppelin-dl4j/).
 
 We've assembled a special Docker with all dependencies installed:
