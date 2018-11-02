@@ -65,13 +65,14 @@ redirect_from: "/releasenotes"
 
 * Added OutputAdapter interface and ```MultiLayerNetwork/ComputationGraph.output``` overloads using OutputAdapter (avoids allocating off-heap memory that needs to be cleaned up by GC) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6229), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/api/OutputAdapter.java), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/6bef4d587da9471e885a1616eb3f13239d91face/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java#L2300-L2316)
 * Added ComputationGraph/MultiLayerNetwork rnnTimeStep overload with user-specified workspace. [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6295)
+* Added Cnn3DLossLayer [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Cnn3DLossLayer.java)
 * ParallelInference:
     - Instances can now update the model in real-time (without re-init) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6190)
     - Added ParallelInference INPLACE mode [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6229)
 * Added validation for incompatible loss/activation function combinations (such as softmax+nOut=1, or sigmoid+mcxent). New validation can be disabled using outputValidation(false) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6280)
 * Spark training backend refactoring
      - Implemented chunked messaging to reduce memory requirements for large messages [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6115)
-     - Added full fault tolerance (robust failure recovery) for gradient sharing implementation [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6115)
+     - Added full fault tolerance (robust failure recovery) for gradient sharing implementation [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6115) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6455)
      - Added MeshBuildMode configuration for improved scalability for large clusters [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-parameter-server-parent/nd4j-parameter-server-node/src/main/java/org/nd4j/parameterserver/distributed/v2/enums/MeshBuildMode.java)
      - Port config
      - GC
@@ -80,7 +81,11 @@ redirect_from: "/releasenotes"
      - Fixed v100 encoding issue
      - Fixed multi-gpu thread locality issues
 * Added FailureTestingListener for fault tolerance/debugging purposes [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners/FailureTestingListener.java)
-
+* Upgraded Apache Lucene/Solr to version 7.5.0 (from 7.4.0) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6485)
+* Added system properties (```org.deeplearning4j.tempdir``` and ```org.nd4j.tempdir```) to allow overriding of the temporary directories ND4J and DL4J use [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6362) [Link](https://github.com/deeplearning4j/deeplearning4j/commit/21dc50fb069f4584df8560340c56f1be2bf2430e)
+* Mode MultiLayerNetwork/ComputationGraph.clearLayerStates methods public (was protected) [Link](https://github.com/deeplearning4j/deeplearning4j/commit/dc192d29257736995f7878f32576f206ef13eac0)
+* ```AbstactLayer.layerConf()``` method is now public [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6553)
+* ParallelWrapper module now no longer has a Scala version suffix for artifact id; new artifact id is ```deeplearning4j-parallel-wrapper``` [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6560)
 
 ### Deeplearning4J: Bug Fixes and Optimizations
 
@@ -98,10 +103,23 @@ redirect_from: "/releasenotes"
 * Fixed an issue with dropout masks being cleared prematurely on output layers in ComputationGraph [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6326)
 * RecordReaderMultiDataSetIterator now supports 5D arrays (for 3D CNNs) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6366)
 * Fixed bug in multi input/output ComputationGraphs with TBPTT combined with both masking and different number of input/output arrays [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6375)
+* Improved input validation/exceptions for batch normalization layer [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6403)
+* Fixed bug with TransferLearning GraphBuilder nOutReplace when combined with subsampling layers [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6389)
+* SimpleRnnParamInitializer now properly respects bias initialization configuration [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6431)
+* Fixed SqueezeNet zoo model non-pretrained configuration [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6500)
+* Fixed Xception zoo model non-pretrained configuration [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6501)
+* Fixed an issue with some evaluation signatures for multi-output ComputationGraphs [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6497)
+* Improved MultiLayerNetwork/ComputationGraph summary method formatting for large nets [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6502)
+* Fixed an issue where gradient normalization could result in NaNs if gradient is exactly 0.0 for all parameters in a layer [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6539#issuecomment-427726265)
+* Fixed an issue where MultiLayerNetwork/ComputationGraph.setLearningRate could throw an exception for SGD and NoOp updaters [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6520)
+* Fixed an issue with StackVertex plus masking in some rare cases [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6490)
+* Fixed an issue with JSON deserialization of frozen layers in pre-1.0.0-alpha format [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6552)
+
 
 ### Deeplearning4J: API Changes (Transition Guide): 1.0.0-beta2 to 1.0.0-beta3
 
 * MultiLayerConfiguration/ComputationGraphConfiguration ```pretrain(boolean)``` and ```backprop(boolean)``` have been deprecated and are no longer used. Use fit and pretrain/pretrainLayer methods instead. [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6296)
+* ParallelWrapper module now no longer has a Scala version suffix for artifact id; new artifact id is ```deeplearning4j-parallel-wrapper``` which should be used instead [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6560)
 
 ### Deelpearning4J: 1.0.0-beta3 Known Issues
 
@@ -112,12 +130,14 @@ redirect_from: "/releasenotes"
 * Elephas [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6197)
 * Fixed issue with importing models with reshaping after an embedding layer [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6175)
 * Added support for Keras masking layers [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6250)
+* Fixed JSON deserialization issue with some layers/preprocessors, such as Permute [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6489)
 
 ## <a name="onezerozerobeta3-nd4j">ND4J</a>
 
 ### ND4J: New Features
 
 * Added GraphServer implementation: c++ inference server for SameDiff (and Tensorflow, via TF import) with Java API [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6273)
+* SameDiff instances can now be loaded from serialized FlatBuffers format (SameDiff.asFlatFile plus fromFlatFile) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6484) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5759)
 * Added MKL-DNN support for some operations (Conv2d, etc) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6204)
 * Added Nd4j.where op method (same semantics as numpy.where) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6242)
 * Added Nd4j.stack op method (combine arrays + increase array rank by 1) [Link](https://github.com/deeplearning4j/deeplearning4j/blob/663224cc901e99553ff775fb1ebdde479b5648fd/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/factory/Nd4j.java#L5165-L5178)
@@ -130,6 +150,9 @@ redirect_from: "/releasenotes"
     - deconv3d op added [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6387)
     - Unsorted segment ops added [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6391)
     - Segment_X backprop ops added [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6402)
+    - batchnorm_new op added that supports multiple axes for mean/variance [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6443)
+* Nd4j Preconditions class now has methods for formatting INDArray arguments [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6451), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6470)
+* SameDiff loss functions: cleanup plus forward pass implementation [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6534)
 
 ### ND4J: Bug Fixes and Optimizations
 
@@ -151,11 +174,21 @@ redirect_from: "/releasenotes"
     - Split and space_to_batch fixes [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6318)
     - Broadcast dynamic shape [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6365)
     - embedding_lookup op now supports multiple input arrays [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6311)
+    - Matrix determinant op edge case (rank 0 result) shape fix [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6441)
 * SameDiff TensorFlow import: fixes for multiple operations [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6145), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6196), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6236), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6373)
 * SameDiff: Improved error handling for multiple outputs case [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6216)
 * Fixed issue where INDArray.permute would not correctly throw an exception for invalid length case [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6159)
 * Fixed issues with INDArray.get/put with SpecifiedIndex [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6341), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6327)
 * Minor change to DataSet.merge - signature now accepts any DataSet subtypes [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6424)
+* INDArray.transposei operation was not in-place [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6401)
+* Fixed issues with INDArray.mmul with MMulTranspose [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6378)
+* Added additional order validation for ND4J creation methods (create, rand, etc) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6442)
+* Fix for ND4J binary deserialization (BinarySerde) when deserializing from heap byte buffers [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6461)
+* Fixed issue with Nd4j-common ClassPathResource path resolution in some IDEs [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6483)
+* Fixed issue where INDArray.get(interval) on rank 1 array would return rank 2 array [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6347)
+* Fixed a validation issue with Nd4j.gemm/mmuli on views [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6521) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6543)
+* INDArray.assign(INDArray) no longer allows assigning different shape arrays (other than scalar/vector cases) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6545)
+* NDarrayStrings (and INDArray.toString()) now always uses US locale when formatting numbers [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6537)
 
 ### ND4J: Known Issues
 
@@ -169,11 +202,13 @@ redirect_from: "/releasenotes"
 
 ### DataVec: New Features
 
+* Added NativeImageLoader method overloads for org.opencv.core.Mat and String as filename [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6459)
 
 ### DataVec: Optimizations and Bug Fixes
 
 * Fix for JDBCRecordReader handling of null values [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6113)
 * Improved errors/validation for ObjectDetectionRecordReader for invalid input (where image object centers are outside of image bounds) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6101)
+* Fixed issue where FileSplit using methods that are unavailable on earlier versions of Android [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6457)
 
 
 ### DataVec: API Changes (Transition Guide): 1.0.0-beta2 to 1.0.0-beta3
