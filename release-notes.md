@@ -7,7 +7,7 @@ redirect_from: "/releasenotes"
 ---
 
 **Contents**
-* <a href="#onezerozerobeta3">Version 1.0.0-beta2</a>
+* <a href="#onezerozerobeta3">Version 1.0.0-beta3</a>
     - <a href="#onezerozerobeta3-dl4j">Deeplearning4j</a>
     - <a href="#onezerozerobeta3-dl4jkeras">Deeplearning4j Keras Import</a>
     - <a href="#onezerozerobeta3-nd4j">ND4J</a>
@@ -60,7 +60,6 @@ redirect_from: "/releasenotes"
 * ND4J/Deeplearning4j: Added support for CUDA 10.0. Dropped support for CUDA 8.0. (1.0.0-beta3 release has CUDA 9.0, 9.2 and 10.0 support)
 * SameDiff now supports training and evaluation from DataSetIterator and MultiDataSetIterator
 * DL4J Spark training (gradient sharing) is now fully fault tolerant, and has improvements for threshold adaption (potentially more robust convergence). Ports can now be easily configured independently on master/workers.
-* 
 
 
 ## <a name="onezerozerobeta3-dl4j">Deeplearning4J</a>
@@ -132,15 +131,12 @@ redirect_from: "/releasenotes"
 * Fixed rare issue for Async(Multi)DataSetIterator with large prefetch values [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6662)
 
 
-
 ### Deeplearning4J: API Changes (Transition Guide): 1.0.0-beta2 to 1.0.0-beta3
 
 * IEvaluation classes in DL4J have been deprecated and moved to ND4J so they are available for SameDiff training. Functionality and APIs are unchanged
 * MultiLayerConfiguration/ComputationGraphConfiguration ```pretrain(boolean)``` and ```backprop(boolean)``` have been deprecated and are no longer used. Use fit and pretrain/pretrainLayer methods instead. [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6296)
 * ParallelWrapper module now no longer has a Scala version suffix for artifact id; new artifact id is ```deeplearning4j-parallel-wrapper``` which should be used instead [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6560)
 * deeplearning4j-nlp-korean module now has Scala version suffix; new artifact ID is ```deeplearning4j-nlp-korean_2.10``` and ```deeplearning4j-nlp-korean_2.11``` [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6306)
-
-### Deelpearning4J: 1.0.0-beta3 Known Issues
 
 
 ## <a name="onezerozerobeta3-dl4jkeras">Deeplearing4J: Keras Import</a>
@@ -222,8 +218,6 @@ redirect_from: "/releasenotes"
 * VersionCheck functionality: handle case where SimpleFileVisitor is not available on earlier versions of Android [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6609)
 * SameDiff convolution layer configuration (Conv2dConfig/Conv3dConfig/Pooling3dConfig etc) have had parameter names aligned [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5577)
 
-### ND4J: Known Issues
-
 
 ### ND4J: API Changes (Transition Guide): 1.0.0-beta2 to 1.0.0-beta3
 
@@ -247,12 +241,8 @@ redirect_from: "/releasenotes"
 * Fixed issue with JDBCRecordReader's handling of real-valued column result types [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6617)
 * Added validation and useful exception for CSVRecordReader/LineRecordReader being used without initialization [Link](https://github.com/deeplearning4j/deeplearning4j/commit/fdffabd38bc8e5f2498a144576864f7dc5c33fa8)
 
-### DataVec: API Changes (Transition Guide): 1.0.0-beta2 to 1.0.0-beta3
-
 
 ## <a name="onezerozerobeta3-arbiter">Arbiter</a>
-
-### Arbiter: New Features
 
 ### Arbiter: Fixes
 
