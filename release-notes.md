@@ -141,6 +141,9 @@ redirect_from: "/releasenotes"
 * ParallelWrapper module now no longer has a Scala version suffix for artifact id; new artifact id is ```deeplearning4j-parallel-wrapper``` which should be used instead [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6560)
 * deeplearning4j-nlp-korean module now has Scala version suffix due to scala dependencies; new artifact ID is ```deeplearning4j-nlp-korean_2.10``` and ```deeplearning4j-nlp-korean_2.11``` [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6306)
 
+### Deeplearning4J: Known issues: 1.0.0-beta3
+
+* Running multiple Spark training jobs simultaneously on the one physical node (i.e., multiple JVMs from one or more Spark jobs) may cause problems with network communication. A workaround for this is to manually set a unique stream ID manually in the VoidConfiguration. Use a unique (or random) integer value for different jobs [Link](https://github.com/deeplearning4j/deeplearning4j/blob/b05c95b05404b722f908daf601ba290907d9c81e/nd4j/nd4j-parameter-server-parent/nd4j-parameter-server-node/src/main/java/org/nd4j/parameterserver/distributed/conf/VoidConfiguration.java#L48-L52)
 
 ## <a name="onezerozerobeta3-dl4jkeras">Deeplearing4J: Keras Import</a>
 
