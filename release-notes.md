@@ -58,7 +58,7 @@ redirect_from: "/releasenotes"
 ## Highlights - 1.0.0-beta3 Release
 
 * ND4J/Deeplearning4j: Added support for CUDA 10.0. Dropped support for CUDA 8.0. (1.0.0-beta3 release has CUDA 9.0, 9.2 and 10.0 support)
-* SameDiff now supports training and evaluation from DataSetIterator and MultiDataSetIterator
+* SameDiff now supports training and evaluation from DataSetIterator and MultiDataSetIterator. Evaluation classes have been moved to ND4J.
 * DL4J Spark training (gradient sharing) is now fully fault tolerant, and has improvements for threshold adaption (potentially more robust convergence). Ports can now be easily configured independently on master/workers.
 
 
@@ -66,7 +66,7 @@ redirect_from: "/releasenotes"
 
 ### Deeplearning4J: New Features
 
-* Added OutputAdapter interface and ```MultiLayerNetwork/ComputationGraph.output``` overloads using OutputAdapter (avoids allocating off-heap memory that needs to be cleaned up by GC) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6229), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/api/OutputAdapter.java), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/6bef4d587da9471e885a1616eb3f13239d91face/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java#L2300-L2316)
+* Added OutputAdapter interface and ```MultiLayerNetwork/ComputationGraph.output``` method overloads using OutputAdapter (avoids allocating off-heap memory that needs to be cleaned up by GC) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6229), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/api/OutputAdapter.java), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/6bef4d587da9471e885a1616eb3f13239d91face/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java#L2300-L2316)
 * Added ComputationGraph/MultiLayerNetwork rnnTimeStep overload with user-specified workspace. [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6295)
 * Added Cnn3DLossLayer [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Cnn3DLossLayer.java)
 * ParallelInference: Instances can now update the model in real-time (without re-init) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6190)
@@ -90,6 +90,9 @@ redirect_from: "/releasenotes"
 
 ### Deeplearning4J: Bug Fixes and Optimizations
 
+* Fixed an issue where L1/L2 and updaters (Adam, Nesterov, etc) were applied before dividing gradients by minibatch to obtain average gradient. To maintain old behaviour, use ```NeuralNetConfiguration.Builder.legacyBatchScaledL2(true)``` [Link](https://github.com/deeplearning4j/deeplearning4j/blob/87167e91c616584a296abe637d408a8efd9e05b7/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/NeuralNetConfiguration.java#L1034-L1045).
+    - Note that learning rates may need to be decreased for some updaters (such as Adam) to account for this change vs. earlier versions. Some other updaters (such as SGD, NoOp, etc) should be unaffected.
+    - Note that deserialized (loaded) configurations/networks saved in 1.0.0-beta2 or earlier will default to old behaviour for backward compatibility. All new networks (created in 1.0.0-beta3) will default to the new behaviour.
 * Fixed an issue where EarlyStoppingScoreCalculator would not correctly handle "maximize score" cases instead of minimizing [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6237)
 * Fixed order (BGR vs. RGB) for VGG16ImagePreProcessor channel offset values [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6254)
 * Fixed bug with variational autoencoders using weight noise [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6289)
@@ -136,7 +139,7 @@ redirect_from: "/releasenotes"
 * IEvaluation classes in DL4J have been deprecated and moved to ND4J so they are available for SameDiff training. Functionality and APIs are unchanged
 * MultiLayerConfiguration/ComputationGraphConfiguration ```pretrain(boolean)``` and ```backprop(boolean)``` have been deprecated and are no longer used. Use fit and pretrain/pretrainLayer methods instead. [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6296)
 * ParallelWrapper module now no longer has a Scala version suffix for artifact id; new artifact id is ```deeplearning4j-parallel-wrapper``` which should be used instead [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6560)
-* deeplearning4j-nlp-korean module now has Scala version suffix; new artifact ID is ```deeplearning4j-nlp-korean_2.10``` and ```deeplearning4j-nlp-korean_2.11``` [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6306)
+* deeplearning4j-nlp-korean module now has Scala version suffix due to scala dependencies; new artifact ID is ```deeplearning4j-nlp-korean_2.10``` and ```deeplearning4j-nlp-korean_2.11``` [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6306)
 
 
 ## <a name="onezerozerobeta3-dl4jkeras">Deeplearing4J: Keras Import</a>
@@ -222,8 +225,13 @@ redirect_from: "/releasenotes"
 ### ND4J: API Changes (Transition Guide): 1.0.0-beta2 to 1.0.0-beta3
 
 * CUDA 8.0 support has been removed. CUDA 9.0, 9.2 and 10.0 support is available in 1.0.0-beta3
-* nd4j-jackson and nd4j-base64 module contents have been deprecated; use the equivalent classes in nd4j-api from now on [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6599)
+* nd4j-base64 module contents have been deprecated; use the equivalent classes in nd4j-api from now on [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6599)
+* Some classes in nd4j-jackson module has been deprecated; use the equivalent classes in nd4j-api from now on [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6599)
 
+
+### ND4J: Known issues: 1.0.0-beta3
+
+* Android users may need to manually exclude the (now deprecated) module nd4j-base64. This is due to ```org.nd4j.serde.base64.Nd4jBase64``` class being present in both nd4j-api and nd4j-base64 modules. Both versions have identical content. Use ```exclude group: 'org.nd4j', module: 'nd4j-base64'``` to exclude.
 
 
 ## <a name="onezerozerobeta3-datavec">DataVec</a>
@@ -247,11 +255,6 @@ redirect_from: "/releasenotes"
 ### Arbiter: Fixes
 
 * Fixed some issues with dropout layers [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6265)
-
-## <a name="onezerozerobeta3-rl4j">RL4J</a>
-
-
-## <a name="onezerozerobeta3-scalnet">ScalNet</a>
 
 
 ## <a name="onezerozerobeta3-nd4s">ND4S</a>
