@@ -144,87 +144,40 @@ Default: no seed set (i.e., random seed)
 
 ##### updatesThreshold 
 ```java
-public Builder updatesThreshold(double threshold) 
+public Builder updatesThreshold(double updatesThreshold)
 ```
 
 
-Threshold for updates encoding. Lower values might improve convergence, but increase amount of network communication.<br>
+- deprecated Use {- link #thresholdAlgorithm(ThresholdAlgorithm)} with (for example) {- link AdaptiveThresholdAlgorithm}
+
+##### thresholdAlgorithm 
+```java
+public Builder thresholdAlgorithm(ThresholdAlgorithm thresholdAlgorithm)
+```
+
+
+Algorithm to use to determine the threshold for updates encoding. Lower values might improve convergence, but
+increase amount of network communication<br>
 Values that are too low may also impact network convergence. If convergence problems are observed, try increasing
 or decreasing this by a factor of 10 - say 1e-4 and 1e-2.<br>
 For technical details, see the paper <a href="https://s3-us-west-2.amazonaws.com/amazon.jobs-public-documents/strom_interspeech2015.pdf">
-Scalable Distributed DNN Training Using Commodity GPU Cloud Computing</a>
-<br>
-Default value: 1e-3<br>
-<br>
-Note also that the threshold will be adjusted somewhat during training to avoid the updates becoming too sparse
-- i.e., the threshold will be automatically reduced if required during training. See also {- link #minUpdatesThreshold(double)}
-for this configuration.
-- param threshold The encoding threshold to use
+Scalable Distributed DNN Training Using Commodity GPU Cloud Computing</a><br>
+See also {- link ThresholdAlgorithm}<br><br>
+Default: {- link AdaptiveThresholdAlgorithm} with default parameters
+- param thresholdAlgorithm Threshold algorithm to use to determine encoding threshold
 
-##### minUpdatesThreshold 
+##### residualPostProcessor 
 ```java
-public Builder minUpdatesThreshold(double minThreshold) 
+public Builder residualPostProcessor(ResidualPostProcessor residualPostProcessor)
 ```
 
 
-Once update with given threshold become too sparse, threshold will be decreased by thresholdStep, but not below minimum threshold.
-This method is used to set that minimum threshold.
+Residual post processor. See {- link ResidualPostProcessor} for details.
 
-Default value: 1e-5
-- param minThreshold Minimum threshold to allow when adapting the threshold value
-- return
+Default: {- code new ResidualClippingPostProcessor(5.0, 5)} - i.e., a {- link ResidualClippingPostProcessor}
+that clips the residual to +/- 5x current threshold, every 5 iterations.
 
-##### thresholdStep 
-```java
-public Builder thresholdStep(double step) 
-```
-
-
-Step size for threshold decay. When sparsity is less than than that specified by {- link #stepTrigger(double)}
-(default 0.05) how big a step should we use to reduce the threshold?<br>
-Larger steps result in faster (but coarser) adaption of the threshold. <br>
-Default value: 1e-5
-- param step Step size
-- return
-
-##### stepTrigger 
-```java
-public Builder stepTrigger(double stepTrigger) 
-```
-
-
-Target sparsity/dense level, as a percentage, when threshold step will happen. i.e. 5 value = 5% of original updates size.
-<br>
-Default value: 0.05 (i.e., 0.05%)
-- param stepTrigger Sparsity level for triggering decreasing the threshold
-- return
-
-##### stepDelay 
-```java
-public Builder stepDelay(int stepDelay) 
-```
-
-
-Wait at least X iterations between applying threshold decay
-
-Default value: 50
-- param stepDelay Delay before decreasing the threshold. Smaller values mean faster adaption, but might be due to noise
-- return
-
-##### shakeFrequency 
-```java
-public Builder shakeFrequency(int frequency) 
-```
-
-
-During neural network training, every 'frequency' iterations, the executors will send encoded dense updates with
-a lower threshold. This configuration in disabled by default.<br>
-The idea is to occasionally communicate smaller gradients more quickly than they might otherwise be communicated.<br>
-Please note: If you'll set this value too low (i.e. 1) - it might lead to worse training performance and could
-also impact convergence.<br>
-<br>
-Default value: 0 (disabled)
-- param frequency Frequency for performing a 'shake' update
+- param residualPostProcessor Residual post processor to use
 
 ##### batchSizePerWorker 
 ```java
@@ -310,6 +263,45 @@ partitions, and is usually suitable for most purposes. In the worst case, the "e
 when using the partitioner should be limited to a maximum of the amount of time required to process a single partition.
 
 - param repartitioner Repartitioner to use
+
+##### workerTogglePeriodicGC 
+```java
+public Builder workerTogglePeriodicGC(boolean workerTogglePeriodicGC)
+```
+
+
+Used to disable the periodic garbage collection calls on the workers.<br>
+Equivalent to {- code Nd4j.getMemoryManager().togglePeriodicGc(workerTogglePeriodicGC);}<br>
+Pass false to disable periodic GC on the workers or true (equivalent to the default, or not setting it) to keep it enabled.
+
+- param workerTogglePeriodicGC Worker periodic garbage collection setting
+
+##### workerPeriodicGCFrequency 
+```java
+public Builder workerPeriodicGCFrequency(int workerPeriodicGCFrequency)
+```
+
+
+Used to set the periodic garbage collection frequency on the workers.<br>
+Equivalent to calling {- code Nd4j.getMemoryManager().setAutoGcWindow(workerPeriodicGCFrequency);} on each worker<br>
+Does not have any effect if {- link #workerTogglePeriodicGC(boolean)} is set to false
+
+- param workerPeriodicGCFrequency The periodic GC frequency to use on the workers
+
+##### encodingDebugMode 
+```java
+public Builder encodingDebugMode(boolean enabled)
+```
+
+
+Enable debug mode for threshold encoding. When enabled, various statistics for the threshold and the residual
+will be calculated and logged on each worker (at info log level).<br>
+This information can be used to check if the encoding threshold is too big (for example, virtually all updates
+are much smaller than the threshold) or too big (majority of updates are much larger than the threshold).<br>
+encodingDebugMode is disabled by default.<br>
+<b>IMPORTANT</b>: enabling this has a performance overhead, and should not be enabled unless the debug information is actually required.<br>
+
+- param enabled True to enable
 
 
 
@@ -576,7 +568,7 @@ a key for each example.
 
 ##### evaluate 
 ```java
-public Evaluation evaluate(RDD<DataSet> data) 
+public Evaluation evaluate(String path, DataSetLoader loader)
 ```
 
 
@@ -594,160 +586,14 @@ between keys and data sets to score)
 
 ##### evaluate 
 ```java
-public Evaluation evaluate(JavaRDD<DataSet> data) 
+public Evaluation evaluate(String path, MultiDataSetLoader loader)
 ```
 
 
-Evaluate the network (classification performance) in a distributed manner on the provided data
-
-- param data Data to evaluate on
-- return Evaluation object; results of evaluation on all examples in the data set
-
-##### evaluate 
-```java
-public Evaluation evaluate(RDD<DataSet> data, List<String> labelsList) 
-```
-
-
-{- code RDD<DataSet>} overload of {- link #evaluate(JavaRDD, List)}
-
-##### evaluateRegression 
-```java
-public RegressionEvaluation evaluateRegression(JavaRDD<DataSet> data) 
-```
-
-
-Evaluate the network (regression performance) in a distributed manner on the provided data
-
-- param data Data to evaluate
-- return     {- link RegressionEvaluation} instance with regression performance
-
-##### evaluateRegression 
-```java
-public RegressionEvaluation evaluateRegression(JavaRDD<DataSet> data, int minibatchSize) 
-```
-
-
-Evaluate the network (regression performance) in a distributed manner on the provided data
-
-- param data Data to evaluate
-- param minibatchSize Minibatch size to use when doing performing evaluation
-- return     {- link RegressionEvaluation} instance with regression performance
-
-##### evaluate 
-```java
-public Evaluation evaluate(JavaRDD<DataSet> data, List<String> labelsList) 
-```
-
-
-Evaluate the network (classification performance) in a distributed manner, using default batch size and a provided
-list of labels
-
-- param data       Data to evaluate on
-- param labelsList List of labels used for evaluation
-- return Evaluation object; results of evaluation on all examples in the data set
-
-##### evaluateROC 
-```java
-public ROC evaluateROC(JavaRDD<DataSet> data) 
-```
-
-
-Perform ROC analysis/evaluation on the given DataSet in a distributed manner, using the default number of
-threshold steps ({- link #DEFAULT_ROC_THRESHOLD_STEPS}) and the default minibatch size ({- link #DEFAULT_EVAL_SCORE_BATCH_SIZE})
-
-- param data                    Test set data (to evaluate on)
-- return ROC for the entire data set
-
-##### evaluateROC 
-```java
-public ROC evaluateROC(JavaRDD<DataSet> data, int thresholdSteps, int evaluationMinibatchSize) 
-```
-
-
-Perform ROC analysis/evaluation on the given DataSet in a distributed manner
-
-- param data                    Test set data (to evaluate on)
-- param thresholdSteps          Number of threshold steps for ROC - see {- link ROC}
-- param evaluationMinibatchSize Minibatch size to use when performing ROC evaluation
-- return ROC for the entire data set
-
-##### evaluateROCMultiClass 
-```java
-public ROCMultiClass evaluateROCMultiClass(JavaRDD<DataSet> data) 
-```
-
-
-Perform ROC analysis/evaluation (for the multi-class case, using {- link ROCMultiClass} on the given DataSet in a distributed manner
-
-- param data                    Test set data (to evaluate on)
-- return ROC for the entire data set
-
-##### evaluateROCMultiClass 
-```java
-public ROCMultiClass evaluateROCMultiClass(JavaRDD<DataSet> data, int thresholdSteps, int evaluationMinibatchSize) 
-```
-
-
-Perform ROC analysis/evaluation (for the multi-class case, using {- link ROCMultiClass} on the given DataSet in a distributed manner
-
-- param data                    Test set data (to evaluate on)
-- param thresholdSteps          Number of threshold steps for ROC - see {- link ROC}
-- param evaluationMinibatchSize Minibatch size to use when performing ROC evaluation
-- return ROCMultiClass for the entire data set
-
-##### evaluate 
-```java
-public Evaluation evaluate(JavaRDD<DataSet> data, List<String> labelsList, int evalBatchSize) 
-```
-
-
-Evaluate the network (classification performance) in a distributed manner, using specified batch size and a provided
-list of labels
-
-- param data          Data to evaluate on
-- param labelsList    List of labels used for evaluation
-- param evalBatchSize Batch size to use when conducting evaluations
-- return Evaluation object; results of evaluation on all examples in the data set
-
-##### evaluateMDS 
-```java
-public Evaluation evaluateMDS(JavaRDD<MultiDataSet> data) 
-```
-
-
-Evaluate the network (classification performance) in a distributed manner on the provided data
-
-##### evaluateMDS 
-```java
-public Evaluation evaluateMDS(JavaRDD<MultiDataSet> data, int minibatchSize) 
-```
-
-
-Evaluate the network (classification performance) in a distributed manner on the provided data
-
-##### evaluateRegressionMDS 
-```java
-public RegressionEvaluation evaluateRegressionMDS(JavaRDD<MultiDataSet> data) 
-```
-
-
-Evaluate the network (regression performance) in a distributed manner on the provided data
-
-- param data Data to evaluate
-- return     {- link RegressionEvaluation} instance with regression performance
-
-##### evaluateRegressionMDS 
-```java
-public RegressionEvaluation evaluateRegressionMDS(JavaRDD<MultiDataSet> data, int minibatchSize) 
-```
-
-
-Evaluate the network (regression performance) in a distributed manner on the provided data
-
-- param data Data to evaluate
-- param minibatchSize Minibatch size to use when doing performing evaluation
-- return     {- link RegressionEvaluation} instance with regression performance
+Evaluate the single-output network on a directory containing a set of MultiDataSet objects to be loaded with a {- link MultiDataSetLoader}.
+Uses default batch size of {- link #DEFAULT_EVAL_SCORE_BATCH_SIZE}
+- param path Path/URI to the directory containing the datasets to load
+- return Evaluation
 
 ##### evaluateROCMDS 
 ```java
@@ -755,25 +601,7 @@ public ROC evaluateROCMDS(JavaRDD<MultiDataSet> data)
 ```
 
 
-Perform ROC analysis/evaluation on the given DataSet in a distributed manner, using the default number of
-threshold steps ({- link #DEFAULT_ROC_THRESHOLD_STEPS}) and the default minibatch size ({- link #DEFAULT_EVAL_SCORE_BATCH_SIZE})
-
-- param data                    Test set data (to evaluate on)
-- return ROC for the entire data set
-
-##### evaluateROCMDS 
-```java
-public ROC evaluateROCMDS(JavaRDD<MultiDataSet> data, int rocThresholdNumSteps, int minibatchSize) 
-```
-
-
-Perform ROC analysis/evaluation on the given DataSet in a distributed manner, using the specified number of
-steps and minibatch size
-
-- param data                    Test set data (to evaluate on)
-- param rocThresholdNumSteps    See {- link ROC} for details
-- param minibatchSize           Minibatch size for evaluation
-- return ROC for the entire data set
+{- code RDD<DataSet>} overload of {- link #evaluate(JavaRDD)}
 
 
 
@@ -1074,174 +902,6 @@ a key for each example.
 - param batchSize                  Batch size to use when doing scoring
 - return A JavaDoubleRDD containing the scores of each example
 - see MultiLayerNetwork#scoreExamples(DataSet, boolean)
-
-##### evaluate 
-```java
-public Evaluation evaluate(RDD<DataSet> data) 
-```
-
-
-Score the examples individually, using the default batch size {- link #DEFAULT_EVAL_SCORE_BATCH_SIZE}. Unlike {- link #calculateScore(JavaRDD, boolean)},
-this method returns a score for each example separately<br>
-Note: The provided JavaPairRDD has a key that is associated with each example and returned score.<br>
-<b>Note:</b> The DataSet objects passed in must have exactly one example in them (otherwise: can't have a 1:1 association
-between keys and data sets to score)
-
-- param data                       Data to score
-- param includeRegularizationTerms If  true: include the l1/l2 regularization terms with the score (if any)
-- param <K>                        Key type
-- return A {- code JavaPairRDD<K,Double>} containing the scores of each example
-- see MultiLayerNetwork#scoreExamples(DataSet, boolean)
-
-##### evaluate 
-```java
-public Evaluation evaluate(String path)
-```
-
-
-Evaluate on a directory containing a set of DataSet objects serialized with {- link DataSet#save(OutputStream)}
-- param path Path/URI to the directory containing the dataset objects
-- return Evaluation
-
-##### evaluate 
-```java
-public Evaluation evaluate(String path, DataSetLoader loader) 
-```
-
-
-Evaluate on a directory containing a set of DataSet objects to be loaded with a {- link DataSetLoader}.
-Uses default batch size of {- link #DEFAULT_EVAL_SCORE_BATCH_SIZE}
-- param path Path/URI to the directory containing the datasets to load
-- return Evaluation
-
-##### evaluate 
-```java
-public Evaluation evaluate(String path, int batchSize, DataSetLoader loader)
-```
-
-
-Evaluate on a directory containing a set of DataSet objects to be loaded with a {- link DataSetLoader}.
-Uses default batch size of {- link #DEFAULT_EVAL_SCORE_BATCH_SIZE}
-- param path Path/URI to the directory containing the datasets to load
-- return Evaluation
-
-##### evaluate 
-```java
-public Evaluation evaluate(JavaRDD<DataSet> data) 
-```
-
-
-Evaluate the network (classification performance) in a distributed manner on the provided data
-
-- param data Data to evaluate on
-- return Evaluation object; results of evaluation on all examples in the data set
-
-##### evaluate 
-```java
-public Evaluation evaluate(RDD<DataSet> data, List<String> labelsList) 
-```
-
-
-{- code RDD<DataSet>} overload of {- link #evaluate(JavaRDD, List)}
-
-##### evaluateRegression 
-```java
-public RegressionEvaluation evaluateRegression(JavaRDD<DataSet> data) 
-```
-
-
-Evaluate the network (regression performance) in a distributed manner on the provided data
-
-- param data Data to evaluate
-- return     {- link RegressionEvaluation} instance with regression performance
-
-##### evaluateRegression 
-```java
-public RegressionEvaluation evaluateRegression(JavaRDD<DataSet> data, int minibatchSize) 
-```
-
-
-Evaluate the network (regression performance) in a distributed manner on the provided data
-
-- param data Data to evaluate
-- param minibatchSize Minibatch size to use when doing performing evaluation
-- return     {- link RegressionEvaluation} instance with regression performance
-
-##### evaluate 
-```java
-public Evaluation evaluate(JavaRDD<DataSet> data, List<String> labelsList) 
-```
-
-
-Evaluate the network (classification performance) in a distributed manner, using default batch size and a provided
-list of labels
-
-- param data       Data to evaluate on
-- param labelsList List of labels used for evaluation
-- return Evaluation object; results of evaluation on all examples in the data set
-
-##### evaluateROC 
-```java
-public ROC evaluateROC(JavaRDD<DataSet> data) 
-```
-
-
-Perform ROC analysis/evaluation on the given DataSet in a distributed manner, using the default number of
-threshold steps ({- link #DEFAULT_ROC_THRESHOLD_STEPS}) and the default minibatch size ({- link #DEFAULT_EVAL_SCORE_BATCH_SIZE})
-
-- param data                    Test set data (to evaluate on)
-- return ROC for the entire data set
-
-##### evaluateROC 
-```java
-public ROC evaluateROC(JavaRDD<DataSet> data, int thresholdSteps, int evaluationMinibatchSize) 
-```
-
-
-Perform ROC analysis/evaluation on the given DataSet in a distributed manner
-
-- param data                    Test set data (to evaluate on)
-- param thresholdSteps          Number of threshold steps for ROC - see {- link ROC}
-- param evaluationMinibatchSize Minibatch size to use when performing ROC evaluation
-- return ROC for the entire data set
-
-##### evaluateROCMultiClass 
-```java
-public ROCMultiClass evaluateROCMultiClass(JavaRDD<DataSet> data) 
-```
-
-
-Perform ROC analysis/evaluation (for the multi-class case, using {- link ROCMultiClass} on the given DataSet in a distributed manner
-
-- param data                    Test set data (to evaluate on)
-- return ROC for the entire data set
-
-##### evaluateROCMultiClass 
-```java
-public ROCMultiClass evaluateROCMultiClass(JavaRDD<DataSet> data, int thresholdSteps, int evaluationMinibatchSize) 
-```
-
-
-Perform ROC analysis/evaluation (for the multi-class case, using {- link ROCMultiClass} on the given DataSet in a distributed manner
-
-- param data                    Test set data (to evaluate on)
-- param thresholdSteps          Number of threshold steps for ROC - see {- link ROC}
-- param evaluationMinibatchSize Minibatch size to use when performing ROC evaluation
-- return ROCMultiClass for the entire data set
-
-##### evaluate 
-```java
-public Evaluation evaluate(JavaRDD<DataSet> data, List<String> labelsList, int evalBatchSize) 
-```
-
-
-Evaluate the network (classification performance) in a distributed manner, using specified batch size and a provided
-list of labels
-
-- param data          Data to evaluate on
-- param labelsList    List of labels used for evaluation
-- param evalBatchSize Batch size to use when conducting evaluations
-- return Evaluation object; results of evaluation on all examples in the data set
 
 
 
