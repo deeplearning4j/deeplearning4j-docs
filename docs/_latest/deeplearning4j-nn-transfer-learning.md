@@ -270,7 +270,7 @@ Can specify different weight init schemes for the specified layer and the layer 
 - param dist     Distribution to use for params in the layerNum
 - param distNext Distribution to use for parmas in layerNum+1
 - return Builder
-- see org.deeplearning4j.nn.weights.WeightInit DISTRIBUTION
+- see org.deeplearning4j.nn.weights.WeightInitDistribution
 
 ##### nOutReplace 
 ```java
@@ -287,7 +287,7 @@ Can specify different weight init schemes for the specified layer and the layer 
 - param scheme   Weight init scheme to use for params in layerNum
 - param distNext Distribution to use for parmas in layerNum+1
 - return Builder
-- see org.deeplearning4j.nn.weights.WeightInit DISTRIBUTION
+- see org.deeplearning4j.nn.weights.WeightInitDistribution
 
 ##### nOutReplace 
 ```java
@@ -304,7 +304,64 @@ Can specify different weight init schemes for the specified layer and the layer 
 - param dist       Distribution to use for parmas in layerNum
 - param schemeNext Weight init scheme to use for params in layerNum+1
 - return Builder
-- see org.deeplearning4j.nn.weights.WeightInit DISTRIBUTION
+- see org.deeplearning4j.nn.weights.WeightInitDistribution
+
+##### nOutReplace 
+```java
+public Builder nOutReplace(int layerNum, int nOut, IWeightInit scheme, IWeightInit schemeNext) 
+```
+
+
+Modify the architecture of a layer by changing nOut
+Note this will also affect the layer that follows the layer specified, unless it is the output layer
+Can specify different weight init schemes for the specified layer and the layer that follows it.
+
+- param layerNum   The index of the layer to change nOut of
+- param nOut       Value of nOut to change to
+- param scheme     Weight Init scheme to use for params in the layerNum
+- param schemeNext Weight Init scheme to use for params in the layerNum+1
+
+##### nInReplace 
+```java
+public Builder nInReplace(int layerNum, int nIn, WeightInit scheme) 
+```
+
+
+Modify the architecture of a vertex layer by changing nIn of the specified layer.<br>
+Note that only the specified layer will be modified - all other layers will not be changed by this call.
+
+- param layerNum The number of the layer to change nIn of
+- param nIn      Value of nIn to change to
+- param scheme   Weight init scheme to use for params in layerName
+- return Builder
+
+##### nInReplace 
+```java
+public Builder nInReplace(int layerNum, int nIn, WeightInit scheme, Distribution dist) 
+```
+
+
+Modify the architecture of a vertex layer by changing nIn of the specified layer.<br>
+Note that only the specified layer will be modified - all other layers will not be changed by this call.
+
+- param layerNum The number of the layer to change nIn of
+- param nIn      Value of nIn to change to
+- param scheme   Weight init scheme to use for params in layerName
+- return Builder
+
+##### nInReplace 
+```java
+public Builder nInReplace(int layerNum, int nIn, IWeightInit scheme) 
+```
+
+
+Modify the architecture of a vertex layer by changing nIn of the specified layer.<br>
+Note that only the specified layer will be modified - all other layers will not be changed by this call.
+
+- param layerNum The number of the layer to change nIn of
+- param nIn      Value of nIn to change to
+- param scheme   Weight init scheme to use for params in layerName
+- return Builder
 
 ##### removeOutputLayer 
 ```java
@@ -372,11 +429,13 @@ public ComputationGraph build()
 ```
 
 
-Remove the specified vertex from the computation graph but keep it's connections.
-Note the expectation here is to then add back another vertex with the same name or else the graph will be left in an invalid state
-Possibly with references to vertices that no longer exist
-- param outputName
-- return
+Modify the architecture of a vertex layer by changing nIn of the specified layer.<br>
+Note that only the specified layer will be modified - all other layers will not be changed by this call.
+
+- param layerName The name of the layer to change nIn of
+- param nIn       Value of nIn to change to
+- param scheme    Weight init scheme to use for params in layerName and the layers following it
+- return GraphBuilder
 
 
 

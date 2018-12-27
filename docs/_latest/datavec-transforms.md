@@ -782,6 +782,19 @@ Convert a String column (containing a date/time String) to a time column (by par
 - param format       Format of the strings. Time format is specified as per http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html
 - param dateTimeZone Timezone of the column
 
+##### stringToTimeTransform 
+```java
+public Builder stringToTimeTransform(String column, String format, DateTimeZone dateTimeZone, Locale locale) 
+```
+
+
+Convert a String column (containing a date/time String) to a time column (by parsing the date/time String)
+
+- param column       String column containing the date/time Strings
+- param format       Format of the strings. Time format is specified as per http://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html
+- param dateTimeZone Timezone of the column
+- param locale       Locale of the column
+
 ##### appendStringColumnTransform 
 ```java
 public Builder appendStringColumnTransform(String column, String toAppend) 

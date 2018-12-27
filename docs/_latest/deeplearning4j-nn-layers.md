@@ -327,6 +327,18 @@ Scaling constant beta. Default: 0.75
 
 - param beta    Scaling constant
 
+##### cudnnAllowFallback 
+```java
+public Builder cudnnAllowFallback(boolean allowFallback) 
+```
+
+
+When using CuDNN and an error is encountered, should fallback to the non-CuDNN implementatation be allowed?
+If set to false, an exception in CuDNN will be propagated back to the user. If false, the built-in (non-CuDNN)
+implementation for BatchNormalization will be used
+
+- param allowFallback Whether fallback to non-CuDNN implementation should be used
+
 
 
 
