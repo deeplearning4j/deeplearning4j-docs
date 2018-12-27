@@ -23,7 +23,8 @@ The instructions below apply to all DL4J and ND4J submodules, such as `deeplearn
 
 ## Add a backend
 
-DL4J relies on ND4J for hardware-specific implementations and tensor operations. Add a backend by pasting the following code into your `pom.xml`:
+DL4J relies on ND4J for hardware-specific implementations and tensor operations. Add a backend by pasting the following snippet into your `pom.xml`:
+
 ```xml
 <dependencies>
   <dependency>

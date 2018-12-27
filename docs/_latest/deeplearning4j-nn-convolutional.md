@@ -49,10 +49,10 @@ public boolean hasBias()
 ```
 
 
-An optional dataFormat from: “NDHWC”, “NCDHW”. Defaults to “NCDHW”. 
-The data format of the input and output data. 
-the format could be “NCDHW”, the data storage order is: [batchSize, inputChannels, inputDepth, inputHeight, inputWidth].
-Alternatively, the format “NDHWC”, the data is stored in the order of: [batchSize, inputDepth, inputHeight, inputWidth, inputChannels].
+An optional dataFormat: "NDHWC" or "NCDHW". Defaults to "NCDHW".<br>
+The data format of the input and output data. <br>
+For "NCDHW" (also known as 'channels first' format), the data storage order is: [batchSize, inputChannels, inputDepth, inputHeight, inputWidth].<br>
+For "NDHWC" ('channels last' format), the data is stored in the order of: [batchSize, inputDepth, inputHeight, inputWidth, inputChannels].
 
 ##### kernelSize 
 ```java
@@ -97,6 +97,18 @@ Set dilation size for 3D convolutions in (depth, height, width) order
 
 - param dilation kernel size
 - return 3D convolution layer builder
+
+##### dataFormat 
+```java
+public Builder dataFormat(DataFormat dataFormat) 
+```
+
+
+The data format for input and output activations.<br>
+NCDHW: activations (in/out) should have shape [minibatch, channels, depth, height, width]<br>
+NDHWC: activations (in/out) should have shape [minibatch, depth, height, width, channels]<br>
+
+- param dataFormat Data format to use for activations
 
 
 

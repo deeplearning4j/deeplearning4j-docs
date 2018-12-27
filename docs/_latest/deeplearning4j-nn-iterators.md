@@ -44,37 +44,6 @@ while(mnistTest.hasNext()){
 
 ---
 
-### CifarDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//CifarDataSetIterator.java) </span>
-
-CifarDataSetIterator is an iterator for Cifar10 dataset - 10 classes, with 32x32 images with 3 channels (RGB)
-
-Also supports a special preProcessor used to normalize the dataset based on Sergey Zagoruyko example
-<a href="https://github.com/szagoruyko/cifar.torch">https://github.com/szagoruyko/cifar.torch</a>
-
-##### CifarDataSetIterator 
-```java
-public CifarDataSetIterator(int batchSize, int numExamples) 
-```
-
-
-Loads images with given  batchSize & numExamples returned by the generator.
-
-
-##### next 
-```java
-public DataSet next(int batchSize) 
-```
-
-
-Loads images with given  batchSize, numExamples, & version returned by the generator.
-
-
-
-
-
----
-
 ### EmnistDataSetIterator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//EmnistDataSetIterator.java) </span>
 
@@ -148,6 +117,31 @@ public static boolean isBalanced(Set dataSet)
 Get the labels as a character array
 
 - return Labels
+
+
+
+
+
+---
+
+### Cifar10DataSetIterator
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//Cifar10DataSetIterator.java) </span>
+
+CifarDataSetIterator is an iterator for CIFAR-10 dataset - 10 classes, with 32x32 images with 3 channels (RGB)
+
+This fetcher uses a cached version of the CIFAR dataset which is converted to PNG images,
+see: <a href="https://pjreddie.com/projects/cifar-10-dataset-mirror/">https://pjreddie.com/projects/cifar-10-dataset-mirror/</a>.
+
+
+##### Cifar10DataSetIterator 
+```java
+public Cifar10DataSetIterator(int batchSize) 
+```
+
+
+Create an iterator for the training set, with random iteration order (RNG seed fixed to 123)
+
+- param batchSize Minibatch size for the iterator
 
 
 
@@ -1075,6 +1069,17 @@ public DoublesDataSetIterator(@NonNull Iterable<Pair<double[], double[]>> iterab
 
 ---
 
+### DummyBlockMultiDataSetIterator
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyBlockMultiDataSetIterator.java) </span>
+
+This class provides baseline implementation of BlockMultiDataSetIterator interface
+
+
+
+
+
+---
+
 ### MultipleEpochsIterator
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//MultipleEpochsIterator.java) </span>
 
@@ -1311,6 +1316,17 @@ operation is not supported by this iterator
 yet been called, or the {- code remove} method has already
 been called after the last call to the {- code next}
 method
+
+
+
+
+
+---
+
+### DummyBlockDataSetIterator
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyBlockDataSetIterator.java) </span>
+
+This class provides baseline implementation of BlockDataSetIterator interface
 
 
 
