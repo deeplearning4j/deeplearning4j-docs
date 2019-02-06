@@ -17,8 +17,10 @@ To develop and test site content locally, you must have the following tools inst
 Once you have Ruby and NPM installed on your local machine, navigate to the root directory of this repostory and then run:
 
 ```shell
+rbenv install 2.3.1
 gem install jekyll bundler
 npm install
+bundle install
 ```
 
 This will ensure tools such as Gulp are installed to your local filesystem.
@@ -43,7 +45,7 @@ Note that the user guide also uses Jekyll headers with some specific changes. Pl
 If you want to start up a server that hot reloads web content after edits, run the following two commands in parallel from the root of this repository (such as two terminal windows):
 
 ```shell
-jekyll serve
+bundle exec jekyll serve
 ```
 
 ```shell
