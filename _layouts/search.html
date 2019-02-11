@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+        
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
+
+        {% if page.topbar != "hide" %}
+        {% include topbar.html %}
+        {% endif %}
+
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+
+        {% include nav.html %}
+
+        <div class="page-titles title-dark pt30 pb20 mb70">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-6">
+                        <h4><span>{{ page.title }}</span></h4>
+                    </div>
+                    <div class=" col-md-6 mb0">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <input class="form-control form-control-lg mb20" id="searchinput" type="text" placeholder="Type something...">
+
+            <div class="mb80 text-center" id="searchloader">
+                <img src="data:image/gif;base64,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">
+            </div>
+
+            <div class="card-accordion card-accordion-simple card-accordion-icons-left mb80" id="searchresults" role="tablist" aria-multiselectable="true">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-header accordion-header" role="tab" id="headingOne2"> <a data-toggle="collapse" data-parent="#card-accordion-simple" href="#collapseOneList" aria-expanded="true" aria-controls="collapseOne"> Collapsible Group Item #1 </a> </div>
+                    <div id="collapseOneList" class="collapse show" role="tabpanel" aria-labelledby="headingOne1">
+                      <div class="card-body">Abico dignissim eum gilvus modo refero utrum vel velit. Erat et meus nibh paulatim praesent suscipere.</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- there shouldn't be any template content passed here -->
+        {{ content }}
+               
+        {% include footer.html %}
+
+        <script type="text/javascript">
+            $( document ).ready(function() {
+                // capture the incoming query and reset the hash
+                var query = window.location.hash.split('#')[1];
+                window.location.hash = '';
+                var $input = $('#searchinput');
+                $input.val(decodeURIComponent(query));
+                $('#searchloader').show();
+                $('#searchresults').hide();
+
+                // search data
+                $.getJSON('https://fess.deeplearning4j.org/json/?q='+encodeURIComponent($input.val()), function(data) {
+                    console.log(data);
+
+                    $('#searchloader').hide();
+                    $('#searchresults').show();
+                });
+
+                //setup before functions
+                var typingTimer;                //timer identifier
+                var doneTypingInterval = 2000;  //time in ms, 5 second for example
+
+                //on keyup, start the countdown
+                $input.on('keyup', function () {
+                    $('#searchloader').show();
+                    $('#searchresults').hide();
+                    clearTimeout(typingTimer);
+                    typingTimer = setTimeout(doneTyping, doneTypingInterval);
+                });
+
+                //on keydown, clear the countdown 
+                $input.on('keydown', function () {
+                  clearTimeout(typingTimer);
+                });
+
+                //user is "finished typing," do something
+                function doneTyping () {
+                    $.getJSON('https://fess.deeplearning4j.org/json/?q='+encodeURIComponent($input.val()), function(data) {
+                        console.log(data);
+
+                        $('#searchloader').hide();
+                        $('#searchresults').show();
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
