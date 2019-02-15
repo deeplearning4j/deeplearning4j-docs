@@ -3717,8 +3717,12 @@ Template responsive style
   vertical-align: .275em;
   content: ""; }
 
+@media (max-width: 823px) {
+  .page-content {
+    max-width: 100% !important; } }
+
 .page-content {
-  max-width: 60%; }
+  max-width: 75%; }
 
 .btn-outline-grey {
   border: 2px solid #676767;
