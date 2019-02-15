@@ -3109,7 +3109,7 @@ Top bar style
   background: #222; }
 
 /*
-Career 
+Career
 */
 .career-card {
   padding: 40px 20px;
@@ -3767,7 +3767,8 @@ Template responsive style
   position: absolute;
   top: 40px;
   width: 100%;
-  height: 500px; }
+  height: 500px;
+  z-index: -1; }
 
 .hero-home {
   background: none; }
