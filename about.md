@@ -20,3 +20,7 @@ Deeplearning4j has been featured in [Wired](http://www.wired.com/2014/06/skymind
 If you plan to publish an academic paper and wish to cite Deeplearning4j, please use this format:
 
 Eclipse Deeplearning4j Development Team. Deeplearning4j: Open-source distributed deep learning for the JVM, Apache Software Foundation License 2.0. [http://deeplearning4j.org](http://deeplearning4j.org)
+
+## Supporters
+
+Profiling supported by [YourKit](https://www.yourkit.com/).
