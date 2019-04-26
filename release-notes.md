@@ -109,6 +109,7 @@ MKL-DNN support is implemented for the following layer types:
 * SubsamplingLayer and Subsampling1DLayer (and MaxPooling2D/AvgPooling2D/Pooling2DDerivative ND4J ops)
 * BatchNormalization layer (and BatchNorm ND4J op)
 * LocalResponseNormalization layer (and LocalResponseNormalization ND4J op)
+* Convolution3D layer (and Conv3D/Conv3DDerivative ND4J ops)
 
 MKL-DNN support for other layer types (such as LSTM) will be added in a future release.
 MKL-DNN can be disabled using `Nd4jCpu.Environment.getInstance().setUseMKLDNN(false);`
@@ -149,6 +150,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Added validation to MultiLayerNetwork/ComputationGraph that throws an exception when attempting to perform Regression evaluation on a classifier, or vice-versa ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6735), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6774))
 * Added `ComputationGraph.output(List<String> layers, boolean train, INDArray[] features, INDArray[] featureMasks)` method to get the activations for a specific set of layers/vertices only (without redundant calculations) ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6736))
 * Weight initialization for networks is now implemented as classes (not just enumerations) and hence is now extesible via IWeightInit interface ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/weights/IWeightInit.java)); i.e., custom weight initializations are now supported ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6820), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6813))
+* Added `Cifar10DataSetIterator` to replace `CifarDataSetIterator` ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6875), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6834#issuecomment-446095723))
 
 ### Deeplearning4J: Bug Fixes and Optimizations
 
@@ -161,6 +163,11 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Fixed an edge case with ParallelInference on CUDA where (very rarely) input array operations (such as normalization) may not be fully completed before transferring an array between threads ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6730), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6774))
 * Fixed an edge case with KFoldIterator when the total number of examples is not a multiple of the batch size ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6786), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6810))
 * Fixed an issue where DL4J UI could throw a `NoClassDefFoundError` on Java 9/10/11 ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6819), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/5804))
+* Keras import: added aliases for weight initialization ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6849))
+* Fixed issue where dropout instances would not be correctly cloned when network configuration was cloned ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6841))
+* Fixed workspace issue with ElementwiseVertex with single input ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6811))
+* Fixed issue with UI where detaching StatsStorage could attempt to remove storage twice, resulting in an exception ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6859))
+* Fixed issue where LossMultiLabel would generate NaNs when all labels in minibatch are the same class. Now 0 gradient is returned instead. ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6893), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6880))
 
 ### Deeplearning4J: API Changes (Transition Guide): 1.0.0-beta3 to 1.0.0-beta4
 
@@ -172,7 +179,9 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 
 ### ND4J/SameDiff: Features and Enhancements
 
+* Added INDArray.close() method to allow users to manually release off-heap memory immediately ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6883))
 * SameDiff: Added TensorFlowImportValidator tool to determine if a TensorFlow graph can likely be imported into SameDiff. Reports the operations used and whether they are supported in SameDiff ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/imports/tensorflow/TensorFlowImportValidator.java))
+* Added Nd4j.createFromNpzFile method to load Numpy npz files ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6837))
 * ND4J/SameDiff - new operations added:
     * [NonMaxSuppression](https://github.com/deeplearning4j/deeplearning4j/pull/6685), [LogMatrixDeterminant](https://github.com/deeplearning4j/deeplearning4j/pull/6689), [NthElement](https://github.com/deeplearning4j/deeplearning4j/pull/6699), [TruncateMod](https://github.com/deeplearning4j/deeplearning4j/pull/6699)
     * [Cholesky Decomposition](https://github.com/deeplearning4j/deeplearning4j/pull/6703), [Image resize nearest neighbor](https://github.com/deeplearning4j/deeplearning4j/pull/6705), [crop_and_resize](https://github.com/deeplearning4j/deeplearning4j/pull/6711)
@@ -184,6 +193,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 ### ND4J/SameDiff: API Changes (Transition Guide): 1.0.0-beta3 to 1.0.0-beta4
 
 * nd4j-base64 module (deprecated in beta3) has been removed. Nd4jBase64 class has been moved to nd4j-api ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6672))
+* When specifying arguments for op execution along dimension (for example, reductions) the reduction axis are now specified in the operation constructor - not separately in the OpExecutioner call. ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6902))
 
 ### ND4J/SameDiff: Bug Fixes and Optimizations
 
@@ -192,6 +202,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Fixed edge case with FileDocumentIterator with empty documents ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6712))
 * SameDiff: Numerous fixes and enhancements
     * [1](https://github.com/deeplearning4j/deeplearning4j/issues/6674), [2](https://github.com/deeplearning4j/deeplearning4j/pull/6816)
+    * Improved functionality for losses ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6844))
 
 ### ND4J: Known issues: 1.0.0-beta4
 
@@ -199,6 +210,8 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 ## <a name="onezerozerobeta4-datavec">DataVec</a>
 
 ### DataVec: Features and Enhancements
+
+* StringToTimeTransform now supports setting Locale ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6901), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6825))
 
 ### DataVec: Optimizations and Bug Fixes
 
