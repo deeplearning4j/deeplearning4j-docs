@@ -178,6 +178,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Added Wasserstein loss function ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7406))
 * Keras import: Improved errors/exceptions for lambda layer import ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7535))
 * Apache Lucene/Solr upgraded from 7.5.0 to 7.7.1 ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7539))
+* KMeans clustering strategy is now configurable ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7471))
 
 ### Deeplearning4J: Bug Fixes and Optimizations
 
