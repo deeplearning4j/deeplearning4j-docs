@@ -150,6 +150,8 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Added MKL-DNN support for Conv/Pool/BatchNorm/LRN layers. MKL-DNN will be used automatically when using nd4j-native backend. ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7151), [Link](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/layers/mkldnn))
 * L1/L2 regularization now made into a class; weight decay added, with better control as to when/how it is applied. See [this page](https://www.fast.ai/2018/07/02/adam-weight-decay/) for more details on the difference between L2 and weight decay. In general, weight decay should be preferred to L2 regularization. ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7097), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/7079))
 * Added dot product attention layers: [AttentionVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/graph/AttentionVertex.java), [LearnedSelfAttentionLayer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LearnedSelfAttentionLayer.java), [RecurrentAttentionLayer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/RecurrentAttentionLayer.java) and [SelfAttentionLayer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/SelfAttentionLayer.java)
+* The parameter/activation datatypes for new models can be set for new networks using the `dataType(DataType)` method on NeuralNetConfiguration.Builder ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7532))
+* MultiLayerNetwork/ComputationGraph can be converted between (floating point) datatypes FP16/32/64 for the parameters and activations using the `MultiLayerNetwork/ComputationGraph.convertDataType(DataType)` methods ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7531), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/7520))
 * EmbeddingLayer and EmbeddingSequenceLayer builders now have `.weightInit(INDArray)` and `.weightInit(Word2Vec)` methods for initializing parameters from pretrained word vectors ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7173))
 * PerformanceListener can now be configured to report garbage collection information (number/duration) [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6717)
 * Evaluation class will now check for NaNs in the predicted output and throw an exception instead treating argMax(NaNs) as having value 0 ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6748))
@@ -174,6 +176,8 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Added EvaluationBinary false alarm rate calculation ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7320))
 * ComputationGraph GraphBuilder now has an appendLayer method that can be used to add layers connected to the last added layer/vertex ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7403))
 * Added Wasserstein loss function ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7406))
+* Keras import: Improved errors/exceptions for lambda layer import ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7535))
+* Apache Lucene/Solr upgraded from 7.5.0 to 7.7.1 ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7539))
 
 ### Deeplearning4J: Bug Fixes and Optimizations
 
@@ -216,6 +220,11 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Fixed a ComputationGraph issue where an input into a single layer/vertex repeated multiple times could fail during training ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7420))
 * Improved performance for KMeans implementation ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7427))
 * Fixed an issue with rnnGetPreviousState for RNNs in 'wrapper' layers such as FrozenLayer ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7437))
+* Keras import: Fixed an issue with order of words when importing some Keras tokenizers ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7448))
+* Keras import: fixed issue with possible UnsupportedOperationException in KerasTokenizer class ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7073))
+* Keras import: fixed an import issue with models combining embeddings, reshape and convolution layers ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7013))
+* Keras import: fixed an import issue with input type inference for some RNN models ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6995))
+* Fixed some padding issues in LocallyConnected1D/2D layers ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7541))
 
 ### Deeplearning4J: API Changes (Transition Guide): 1.0.0-beta3 to 1.0.0-beta4
 
@@ -227,6 +236,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 
 ### ND4J/SameDiff: Features and Enhancements
 
+* Removed reliance on periodic garbage collection calls for handling memory management of out-of-workspace (detached) INDArrays ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7506))
 * Added INDArray.close() method to allow users to manually release off-heap memory immediately ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6883))
 * SameDiff: Added TensorFlowImportValidator tool to determine if a TensorFlow graph can likely be imported into SameDiff. Reports the operations used and whether they are supported in SameDiff ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/imports/tensorflow/TensorFlowImportValidator.java))
 * Added Nd4j.createFromNpzFile method to load Numpy npz files ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6837))
@@ -263,16 +273,21 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Added SDVariable convenience methods for dot, reshape, permute ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7371))
 * Added SameDiff SDIndex.point(long, boolean keepDim) method (to keep point indices in output array as size 1 axis) ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7392))
 * Added SameDiff ProtoBufToFlatBufConversion command line tool for doing TensorFlow frozen model (protobuf) to SameDiff FlatBuffers conversion ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7460))
+* Improved DataType validation for SameDiff operations ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6861))
 
 
 ### ND4J/SameDiff: API Changes (Transition Guide): 1.0.0-beta3 to 1.0.0-beta4
 
+* ND4J datatypes - significant changes, see highlights at top of  this section
 * nd4j-base64 module (deprecated in beta3) has been removed. Nd4jBase64 class has been moved to nd4j-api ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6672))
 * When specifying arguments for op execution along dimension (for example, reductions) the reduction axis are now specified in the operation constructor - not separately in the OpExecutioner call. ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6902))
 * Removed old Java loop-based BooleanIndexing methods. Equivalent native ops should be used instead. ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7007))
 * Removed Nd4j.ENFORCE_NUMERICAL_STABILITY, Nd4j.copyOnOps, etc ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6884))
 * SameDiff "op creator" methods (SameDiff.tanh(), SameDiff.conv2d(...) etc) have been moved to subclasses - access creators via SameDiff.math()/random()/nn()/cnn()/rnn()/loss() methods or SameDiff.math/random/nn/cnn/rnn/loss fields ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7174))
 * Nd4j.emptyLike(INDArray) has been removed. Use Nd4j.like(INDArray) instead ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7252))
+* org.nd4jutil.StringUtils removed; suggest using Apache commons lang3 StringUtils instead ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7487))
+* ND4J Jackson RowVector(De)Serializer has been deprecated due to datatype changes; NDArrayText(De)Serializer should be used instead ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7561), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/7577))
+* nd4j-instrumentation module has been removed due to lack of use/maintenance ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7627))
 
 ### ND4J/SameDiff: Bug Fixes and Optimizations
 
@@ -286,6 +301,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
     * Fixed edge cases in loops ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7033), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/7035))
 * Fixed issue with Nd4j.vstack on 1d arrays returning 1d output, not 2d stacked output ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6985))
 * Conv2D op can infer kernel size from input arrays directly when required ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7098), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/7008))
+* Fixed an issue with Numpy format export - `Nd4j.toNpyByteArray(INDArray)` ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7466))
 * Fixes for SameDiff when it is used within an external workspace ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7124))
 * Fixed an issue where empty NDArrays would be reported as having scalar shape information, length 1 ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7163))
 * Optimization: libnd4j (c++) indexing for ops will use uint for faster offset calculations when required and possible ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7164))
@@ -299,11 +315,16 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Improved performonce of one_hot operation ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7339)), tanh operation ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7379))
 * Improved performance for transform operations ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7359))
 * Optimization: empty arrays are created only once and cached (as they are immutable) ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7168))
-* Improved performance on operations using tensor along dimension for parallelization ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7347))
+* Improved performance on operations using tensor along dimension for parallelization ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7347), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/7557))
 * Improved performance on "reduce 3" reduction operations ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7464))
 * Improved handling of CUDA contexts in heavily multi-threaded environments ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7434))
 * Fixed an issue where Evaluation.reset() would incorrectly clear the String class labels ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7435))
 * SameDiff: Improved gradient calculation performance/efficiency; "gradients" are now no longer defined for non-floating-point variables, and variables that aren't required to calculate loss or parameter gradients ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7452))
+* Behaviour of IEvaluation instances now no longer depends on the global (default) datatype setting ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7550))
+* INDArray.get(point(x), y) or .get(y, point(x)) now returns rank 1 arrays when performed on rank 2 arrays ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7092))
+* Removed reliance on Guava for SameDiff, fixing potential issue for Java 11/12 and when earlier versions of Guava are on the classpath ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7575), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/7170))
+* ND4J indexing (INDArray.get) implementation rewritten for better performance and reliability ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7577))
+* Fixes for local response normalization backprop op ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7597))
 
 
 
@@ -318,6 +339,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * StringToTimeTransform now supports setting Locale ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6901), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6825))
 * Added StreamInputSplit for creating local data pipelines where data is stored remotely on storage such as HDFS or S3 ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/datavec/datavec-api/src/main/java/org/datavec/api/split/StreamInputSplit.java), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/7351))
 * LineRecordReader (and subtypes) now have the option to define the character set ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7407))
+* Added TokenizerBagOfWordsTermSequenceIndexTransform (TFIDF transform), GazeteerTransform (binary vector for word present) and MultiNlpTransform transforms; added BagOfWordsTransform interface ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7542))
 
 ### DataVec: Optimizations and Bug Fixes
 
