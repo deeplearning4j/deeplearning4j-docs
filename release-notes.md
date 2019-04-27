@@ -155,6 +155,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Evaluation class will now check for NaNs in the predicted output and throw an exception instead treating argMax(NaNs) as having value 0 ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6748))
 * Added ModelAdapter for ParallelInference for convenience and for use cases such as YOLO (allows improved performance by avoiding detached (out-of-workspace) arrays) ([Link]())
 * Added GELU Activation function ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7426))
+* Added BertIterator (a MultiDataSetIterator for BERT training - supervised and unsupervised) [Link](https://github.com/deeplearning4j/deeplearning4j/pull/7430)
 * Added validation to MultiLayerNetwork/ComputationGraph that throws an exception when attempting to perform Regression evaluation on a classifier, or vice-versa ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6735), [Link](https://github.com/deeplearning4j/deeplearning4j/pull/6774))
 * Added `ComputationGraph.output(List<String> layers, boolean train, INDArray[] features, INDArray[] featureMasks)` method to get the activations for a specific set of layers/vertices only (without redundant calculations) ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6736))
 * Weight initialization for networks is now implemented as classes (not just enumerations) and hence is now extesible via IWeightInit interface ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/weights/IWeightInit.java)); i.e., custom weight initializations are now supported ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6820), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6813))
@@ -214,6 +215,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Fixed minor issue where ComputationGraph.summary() would throw a NullPointerException if init() had not already been called ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7353))
 * Fixed a ComputationGraph issue where an input into a single layer/vertex repeated multiple times could fail during training ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7420))
 * Improved performance for KMeans implementation ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7427))
+* Fixed an issue with rnnGetPreviousState for RNNs in 'wrapper' layers such as FrozenLayer ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7437))
 
 ### Deeplearning4J: API Changes (Transition Guide): 1.0.0-beta3 to 1.0.0-beta4
 
@@ -260,6 +262,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Added SDVariable method overloads (plus, minus, times, etc) for Kotlin ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7367))
 * Added SDVariable convenience methods for dot, reshape, permute ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7371))
 * Added SameDiff SDIndex.point(long, boolean keepDim) method (to keep point indices in output array as size 1 axis) ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7392))
+* Added SameDiff ProtoBufToFlatBufConversion command line tool for doing TensorFlow frozen model (protobuf) to SameDiff FlatBuffers conversion ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7460))
 
 
 ### ND4J/SameDiff: API Changes (Transition Guide): 1.0.0-beta3 to 1.0.0-beta4
@@ -297,6 +300,10 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Improved performance for transform operations ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7359))
 * Optimization: empty arrays are created only once and cached (as they are immutable) ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7168))
 * Improved performance on operations using tensor along dimension for parallelization ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7347))
+* Improved performance on "reduce 3" reduction operations ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7464))
+* Improved handling of CUDA contexts in heavily multi-threaded environments ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7434))
+* Fixed an issue where Evaluation.reset() would incorrectly clear the String class labels ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7435))
+* SameDiff: Improved gradient calculation performance/efficiency; "gradients" are now no longer defined for non-floating-point variables, and variables that aren't required to calculate loss or parameter gradients ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7452))
 
 
 
