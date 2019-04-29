@@ -336,6 +336,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 
 ### DataVec: Features and Enhancements
 
+* Added PythonTransform (arbitrary python code execution for pre processing) ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7188), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/datavec/datavec-python/src/main/java/org/datavec/python/PythonTransform.java))
 * Added FirstDigit (Benford's law) transform ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7260), [Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/transform/categorical/FirstDigitTransform.java))
 * StringToTimeTransform now supports setting Locale ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/6901), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/6825))
 * Added StreamInputSplit for creating local data pipelines where data is stored remotely on storage such as HDFS or S3 ([Link](https://github.com/deeplearning4j/deeplearning4j/blob/master/datavec/datavec-api/src/main/java/org/datavec/api/split/StreamInputSplit.java), [Link](https://github.com/deeplearning4j/deeplearning4j/issues/7351))
