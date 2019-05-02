@@ -35,8 +35,8 @@ theme: minima
 
 # dl4j variables
 versionString: latest
-latestVersion: 1.0.0-beta3
-versionUri: 100-beta3
+latestVersion: 1.0.0-beta4
+versionUri: 100-beta4
 
 # collections
 collections_dir: docs
