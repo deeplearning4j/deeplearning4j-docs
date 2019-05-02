@@ -102,6 +102,11 @@ The following [datatypes](https://github.com/deeplearning4j/deeplearning4j/blob/
 
 CUDA versions supported in 1.0.0-beta4: CUDA 9.2, 10.0, 10.1.
 
+**ND4J: Mac/OSX CUDA support dropped**
+
+Mac (OSX) CUDA binaries are no longer provided. Linux (x86_64, ppc64le) and Windows (x86_64) CUDA support remains.
+OSX CPU support (x86_64) is still available.
+
 **DL4J/ND4J: MKL-DNN Support Added**
 DL4J (and ND4J conv2d etc ops) now support MKL-DNN by default when running on CPU/native backend.
 MKL-DNN support is implemented for the following layer types:
