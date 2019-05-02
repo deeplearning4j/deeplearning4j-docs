@@ -8,14 +8,10 @@ redirect_from: "/releasenotes"
 
 **Contents**
 * <a href="#onezerozerobeta4">Version 1.0.0-beta4</a>
-    - <a href="#onezerozerobeta4-dl4j">Deeplearning4j</a>
-    - <a href="#onezerozerobeta4-dl4jkeras">Deeplearning4j Keras Import</a>
+    - <a href="#onezerozerobeta4-dl4j">Deeplearning4j and DL4J Keras Import</a>
     - <a href="#onezerozerobeta4-nd4j">ND4J and SameDiff</a>
     - <a href="#onezerozerobeta4-datavec">DataVec</a>
     - <a href="#onezerozerobeta4-arbiter">Arbiter</a>
-    - <a href="#onezerozerobeta4-rl4j">RL4J</a>
-    - <a href="#onezerozerobeta4-scalnet">ScalNet</a>
-    - <a href="#onezerozerobeta4-nd4s">ND4S</a>
 * <a href="#onezerozerobeta3">Version 1.0.0-beta3</a>
     - <a href="#onezerozerobeta3-dl4j">Deeplearning4j</a>
     - <a href="#onezerozerobeta3-dl4jkeras">Deeplearning4j Keras Import</a>
@@ -117,7 +113,10 @@ MKL-DNN support is implemented for the following layer types:
 * Convolution3D layer (and Conv3D/Conv3DDerivative ND4J ops)
 
 MKL-DNN support for other layer types (such as LSTM) will be added in a future release.
-MKL-DNN can be disabled using `Nd4jCpu.Environment.getInstance().setUseMKLDNN(false);`
+
+MKL-DNN can be disabled globally (ND4J and DL4J) using `Nd4jCpu.Environment.getInstance().setUseMKLDNN(false);`
+
+MKL-DNN can be disabled globally for specific ops by setting `ND4J_MKL_FALLBACK` environment variable to the name of the operations to have MKL-DNN support disabled for. For example: `ND4J_MKL_FALLBACK=conv2d,conv2d_bp`
 
 **ND4J: Improved Performance due to Memory Management Changes**
 
@@ -147,6 +146,12 @@ Now, behaviour should be more consistent for these rank 0/1 cases.
 Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 array with shape [1,x] and [x,1] respectively), the `getRow(long,boolean)` and `getColumn(long,boolean)` methods can be used.
 
 **DL4J: Attention layers added**
+
+* [AttentionVertex](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/graph/AttentionVertex.java)
+* [LearnedSelfAttentionLayer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/LearnedSelfAttentionLayer.java)
+* [RecurrentAttentionLayer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/RecurrentAttentionLayer.java)
+* [SelfAttentionLayer](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/SelfAttentionLayer.java)
+
 
 ## <a name="onezerozerobeta4-dl4j">Deeplearning4J</a>
 
@@ -231,12 +236,6 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Keras import: fixed an import issue with models combining embeddings, reshape and convolution layers ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7013))
 * Keras import: fixed an import issue with input type inference for some RNN models ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/6995))
 * Fixed some padding issues in LocallyConnected1D/2D layers ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7541))
-
-### Deeplearning4J: API Changes (Transition Guide): 1.0.0-beta3 to 1.0.0-beta4
-
-### Deeplearning4J: Known issues: 1.0.0-beta4
-
-## <a name="onezerozerobeta4-dl4jkeras">Deeplearing4J: Keras Import</a>
 
 ## <a name="onezerozerobeta4-nd4j">ND4J and SameDiff</a>
 
@@ -333,10 +332,6 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Fixes for local response normalization backprop op ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7597))
 
 
-
-### ND4J: Known issues: 1.0.0-beta4
-
-
 ## <a name="onezerozerobeta4-datavec">DataVec</a>
 
 ### DataVec: Features and Enhancements
@@ -361,8 +356,6 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 ### Arbiter: Fixes
 
 * Fixed an issue where early stopping used in Arbiter would result in a serialization exception ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7029))
-
-## <a name="onezerozerobeta4-nd4s">ND4S</a>
 
 
 ---
