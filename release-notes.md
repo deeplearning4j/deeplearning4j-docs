@@ -331,6 +331,10 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * ND4J indexing (INDArray.get) implementation rewritten for better performance and reliability ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7577))
 * Fixes for local response normalization backprop op ([Link](https://github.com/deeplearning4j/deeplearning4j/pull/7597))
 
+### ND4J: Known Issues
+
+* Most CustomOperation operations (such as those used in SameDiff) are CPU only until next release. GPU support was not completed in time for 1.0.0-beta4 release.
+* Some users with Intel Skylake CPUs have reported deadlocks on MKL-DNN convolution 2d backprop operations (DL4J ConvolutionLayer backprop, ND4J "conv2d_bp" operation) when OMP_NUM_THREADS is set to 8 or higher. Investigations suggest this is likely an issue with MKL-DNN, not DL4J/ND4J. See [Issue 7637](https://github.com/deeplearning4j/deeplearning4j/issues/7637). Workaround: Disable MKL-DNN for conv2d_bp operation via ND4J_MKL_FALLBACK (see earlier) or disable MKL-DNN globally, for Skylake CPUs.
 
 ## <a name="onezerozerobeta4-datavec">DataVec</a>
 
