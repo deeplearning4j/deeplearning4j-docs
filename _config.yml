@@ -61,9 +61,9 @@ defaults:
       type: latest
     values:
       layout: guide
-      version: 1.0.0-beta3
-      presetsversion: 1.4.1
-      cudaVersion: 9.2
+      version: 1.0.0-beta4
+      presetsversion: 1.5
+      cudaVersion: 10.1
 
 collections:
   # tutorials
