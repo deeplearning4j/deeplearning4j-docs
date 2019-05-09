@@ -50,12 +50,12 @@ defaults:
       github_raw_base: https://raw.githubusercontent.com/deeplearning4j/dl4j-examples/master/tutorials/
   - scope:
       path: ""
-      type: 100-beta2
+      type: 100-beta4
     values:
       layout: guide
-      version: 1.0.0-beta2
-      presetsversion: 1.4.1
-      cudaVersion: 9.2
+      version: 1.0.0-beta4
+      presetsversion: 1.5
+      cudaVersion: 10.1
   - scope:
       path: ""
       type: latest
@@ -76,7 +76,7 @@ collections:
     permalink: /docs/latest/:name
   v100-beta2:
     output: true
-    permalink: /docs/1.0.0-beta2/:name
+    permalink: /docs/1.0.0-beta4/:name
 
 
 # Exclude from processing.
