@@ -26,46 +26,24 @@ ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
 
 ---
 
-### NoOpUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NoOpUpdater.java) </span>
+### NadamUpdater
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NadamUpdater.java) </span>
 
-NoOp updater: gradient updater that makes no changes to the gradient
-
-
-
+The Nadam updater.
+https://arxiv.org/pdf/1609.04747.pdf
 
 
----
-
-### RmsPropUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//RmsPropUpdater.java) </span>
-
-RMS Prop updates:
-
-http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
-http://cs231n.github.io/neural-networks-3/#ada
+##### applyUpdater 
+```java
+public void applyUpdater(INDArray gradient, int iteration, int epoch) 
+```
 
 
+Calculate the update based on the given gradient
 
-
-
----
-
-### SgdUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//SgdUpdater.java) </span>
-
-SGD updater applies a learning rate only
-
-
-
-
----
-
-### AMSGradUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AMSGradUpdater.java) </span>
-
-The AMSGrad updater<br>
-Reference: On the Convergence of Adam and Beyond - https://openreview.net/forum?id=ryQu7f-RZ
+- param gradient  the gradient to get the update for
+- param iteration
+- return the gradient
 
 
 
@@ -99,10 +77,88 @@ Get the nesterov update
 
 ---
 
+### RmsPropUpdater
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//RmsPropUpdater.java) </span>
+
+RMS Prop updates:
+
+http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
+http://cs231n.github.io/neural-networks-3/#ada
+
+
+
+
+
+---
+
+### AdaGradUpdater
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaGradUpdater.java) </span>
+
+Vectorized Learning Rate used per Connection Weight
+<p/>
+Adapted from: http://xcorr.net/2014/01/23/adagrad-eliminating-learning-rates-in-stochastic-gradient-descent
+See also http://cs231n.github.io/neural-networks-3/#ada
+
+
+##### applyUpdater 
+```java
+public void applyUpdater(INDArray gradient, int iteration, int epoch) 
+```
+
+
+Gets feature specific learning rates
+Adagrad keeps a history of gradients being passed in.
+Note that each gradient passed in becomes adapted over time, hence the opName adagrad
+
+- param gradient  the gradient to get learning rates for
+- param iteration
+
+
+
+
+
+---
+
 ### AdaMaxUpdater
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaMaxUpdater.java) </span>
 
 The AdaMax updater, a variant of Adam.
+http://arxiv.org/abs/1412.6980
+
+
+##### applyUpdater 
+```java
+public void applyUpdater(INDArray gradient, int iteration, int epoch) 
+```
+
+
+Calculate the update based on the given gradient
+
+- param gradient  the gradient to get the update for
+- param iteration
+- return the gradient
+
+
+
+
+
+---
+
+### NoOpUpdater
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NoOpUpdater.java) </span>
+
+NoOp updater: gradient updater that makes no changes to the gradient
+
+
+
+
+
+---
+
+### AdamUpdater
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdamUpdater.java) </span>
+
+The Adam updater.
 http://arxiv.org/abs/1412.6980
 
 
@@ -154,6 +210,16 @@ updated gradient for
 
 ---
 
+### SgdUpdater
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//SgdUpdater.java) </span>
+
+SGD updater applies a learning rate only
+
+
+
+
+---
+
 ### GradientUpdater
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//GradientUpdater.java) </span>
 
@@ -166,75 +232,9 @@ for handling updates.
 
 ---
 
-### AdaGradUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaGradUpdater.java) </span>
+### AMSGradUpdater
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AMSGradUpdater.java) </span>
 
-Vectorized Learning Rate used per Connection Weight
-<p/>
-Adapted from: http://xcorr.net/2014/01/23/adagrad-eliminating-learning-rates-in-stochastic-gradient-descent
-See also http://cs231n.github.io/neural-networks-3/#ada
-
-
-##### applyUpdater 
-```java
-public void applyUpdater(INDArray gradient, int iteration, int epoch) 
-```
-
-
-Gets feature specific learning rates
-Adagrad keeps a history of gradients being passed in.
-Note that each gradient passed in becomes adapted over time, hence the opName adagrad
-
-- param gradient  the gradient to get learning rates for
-- param iteration
-
-
-
-
-
----
-
-### AdamUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdamUpdater.java) </span>
-
-The Adam updater.
-http://arxiv.org/abs/1412.6980
-
-
-##### applyUpdater 
-```java
-public void applyUpdater(INDArray gradient, int iteration, int epoch) 
-```
-
-
-Calculate the update based on the given gradient
-
-- param gradient  the gradient to get the update for
-- param iteration
-- return the gradient
-
-
-
-
-
----
-
-### NadamUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NadamUpdater.java) </span>
-
-The Nadam updater.
-https://arxiv.org/pdf/1609.04747.pdf
-
-
-##### applyUpdater 
-```java
-public void applyUpdater(INDArray gradient, int iteration, int epoch) 
-```
-
-
-Calculate the update based on the given gradient
-
-- param gradient  the gradient to get the update for
-- param iteration
-- return the gradient
+The AMSGrad updater<br>
+Reference: On the Convergence of Adam and Beyond - https://openreview.net/forum?id=ryQu7f-RZ
 

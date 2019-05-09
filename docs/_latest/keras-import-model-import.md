@@ -23,9 +23,8 @@ either as
 
 ##### importKerasModelAndWeights 
 ```java
-public static ComputationGraph importKerasModelAndWeights(
-            InputStream modelHdf5Stream,
-            boolean enforceTrainingConfig) 
+public static ComputationGraph importKerasModelAndWeights( InputStream modelHdf5Stream, boolean enforceTrainingConfig)
+            throws IOException, UnsupportedKerasConfigurationException, InvalidKerasConfigurationException
 ```
 
 
@@ -38,7 +37,7 @@ Load Keras (Functional API) Model saved using model.save_model(...).
 
 ##### importKerasModelAndWeights 
 ```java
-public static ComputationGraph importKerasModelAndWeights(InputStream modelHdf5Stream) 
+public static ComputationGraph importKerasModelAndWeights(InputStream modelHdf5Stream) throws IOException, UnsupportedKerasConfigurationException, InvalidKerasConfigurationException 
 ```
 
 

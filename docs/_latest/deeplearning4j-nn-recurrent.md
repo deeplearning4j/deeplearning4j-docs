@@ -448,9 +448,9 @@ Input and output activations are same as other RNN layers: 3 dimensions with sha
 RnnLossLayer also has the option to configure an activation function
 
 
-##### nIn 
+##### setNIn 
 ```java
-public Builder nIn(int nIn) 
+public void setNIn(int nIn)
 ```
 
 

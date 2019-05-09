@@ -813,32 +813,6 @@ Also appends the label if specified
 
 ---
 
-### VideoRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-image/src/main/java/org/datavec/image/recordreader/VideoRecordReader.java) </span>
-
-
-A video is just a moving window of pictures.
-It should be processed as such.
-This iterates over a root folder and returns a frame
-
-
-
-##### initialize 
-```java
-public void initialize(InputSplit split) throws IOException, InterruptedException 
-```
-
-
-Load the record reader with the given height and width
-- param height the height to load
-- param width the width load
-
-
-
-
-
----
-
 ### TfidfRecordReader
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-nlp/src/main/java/org/datavec/nlp/reader/TfidfRecordReader.java) </span>
 

@@ -160,6 +160,112 @@ For eg, if a learning rate is specified this learning rate will apply to all unf
 
 ---
 
+### TransferLearningHelper
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//TransferLearningHelper.java) </span>
+
+This class is intended for use with the transfer learning API.
+Often times transfer learning models have "frozen" layers where parameters are held constant during training
+For ease of training and quick turn around times, the dataset to be trained on can be featurized and saved to disk.
+Featurizing in this case refers to conducting a forward pass on the network and saving the activations from the output
+of the frozen layers.
+During training the forward pass and the backward pass through the frozen layers can be skipped entirely and the "featurized"
+dataset can be fit with the smaller unfrozen part of the computation graph which allows for quicker iterations.
+The class internally traverses the computation graph/MLN and builds an instance of the computation graph/MLN that is
+equivalent to the unfrozen subset.
+
+
+##### TransferLearningHelper 
+```java
+public TransferLearningHelper(ComputationGraph orig, String... frozenOutputAt) 
+```
+
+
+Will modify the given comp graph (in place!) to freeze vertices from input to the vertex specified.
+
+- param orig           Comp graph
+- param frozenOutputAt vertex to freeze at (hold params constant during training)
+
+
+##### errorIfGraphIfMLN 
+```java
+public void errorIfGraphIfMLN() 
+```
+
+
+Expects a computation graph where some vertices are frozen
+
+- param orig
+
+##### unfrozenGraph 
+```java
+public ComputationGraph unfrozenGraph() 
+```
+
+
+Returns the unfrozen subset of the original computation graph as a computation graph
+Note that with each call to featurizedFit the parameters to the original computation graph are also updated
+
+##### unfrozenMLN 
+```java
+public MultiLayerNetwork unfrozenMLN() 
+```
+
+
+Returns the unfrozen layers of the MultiLayerNetwork as a multilayernetwork
+Note that with each call to featurizedFit the parameters to the original MLN are also updated
+
+##### outputFromFeaturized 
+```java
+public INDArray outputFromFeaturized(INDArray input) 
+```
+
+
+Use to get the output from a featurized input
+
+- param input featurized data
+- return output
+
+##### featurize 
+```java
+public MultiDataSet featurize(MultiDataSet input) 
+```
+
+
+Runs through the comp graph and saves off a new model that is simply the "unfrozen" part of the origModel
+This "unfrozen" model is then used for training with featurized data
+
+##### featurize 
+```java
+public DataSet featurize(DataSet input) 
+```
+
+
+During training frozen vertices/layers can be treated as "featurizing" the input
+The forward pass through these frozen layer/vertices can be done in advance and the dataset saved to disk to iterate
+quickly on the smaller unfrozen part of the model
+Currently does not support datasets with feature masks
+
+- param input multidataset to feed into the computation graph with frozen layer vertices
+- return a multidataset with input features that are the outputs of the frozen layer vertices and the original labels.
+
+##### fitFeaturized 
+```java
+public void fitFeaturized(MultiDataSetIterator iter) 
+```
+
+
+Fit from a featurized dataset.
+The fit is conducted on an internally instantiated subset model that is representative of the unfrozen part of the original model.
+After each call on fit the parameters for the original model are updated
+
+- param iter
+
+
+
+
+
+---
+
 ### FineTuneConfiguration
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//FineTuneConfiguration.java) </span>
 
@@ -436,110 +542,4 @@ Note that only the specified layer will be modified - all other layers will not 
 - param nIn       Value of nIn to change to
 - param scheme    Weight init scheme to use for params in layerName and the layers following it
 - return GraphBuilder
-
-
-
-
-
----
-
-### TransferLearningHelper
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//TransferLearningHelper.java) </span>
-
-This class is intended for use with the transfer learning API.
-Often times transfer learning models have "frozen" layers where parameters are held constant during training
-For ease of training and quick turn around times, the dataset to be trained on can be featurized and saved to disk.
-Featurizing in this case refers to conducting a forward pass on the network and saving the activations from the output
-of the frozen layers.
-During training the forward pass and the backward pass through the frozen layers can be skipped entirely and the "featurized"
-dataset can be fit with the smaller unfrozen part of the computation graph which allows for quicker iterations.
-The class internally traverses the computation graph/MLN and builds an instance of the computation graph/MLN that is
-equivalent to the unfrozen subset.
-
-
-##### TransferLearningHelper 
-```java
-public TransferLearningHelper(ComputationGraph orig, String... frozenOutputAt) 
-```
-
-
-Will modify the given comp graph (in place!) to freeze vertices from input to the vertex specified.
-
-- param orig           Comp graph
-- param frozenOutputAt vertex to freeze at (hold params constant during training)
-
-
-##### errorIfGraphIfMLN 
-```java
-public void errorIfGraphIfMLN() 
-```
-
-
-Expects a computation graph where some vertices are frozen
-
-- param orig
-
-##### unfrozenGraph 
-```java
-public ComputationGraph unfrozenGraph() 
-```
-
-
-Returns the unfrozen subset of the original computation graph as a computation graph
-Note that with each call to featurizedFit the parameters to the original computation graph are also updated
-
-##### unfrozenMLN 
-```java
-public MultiLayerNetwork unfrozenMLN() 
-```
-
-
-Returns the unfrozen layers of the MultiLayerNetwork as a multilayernetwork
-Note that with each call to featurizedFit the parameters to the original MLN are also updated
-
-##### outputFromFeaturized 
-```java
-public INDArray outputFromFeaturized(INDArray input) 
-```
-
-
-Use to get the output from a featurized input
-
-- param input featurized data
-- return output
-
-##### featurize 
-```java
-public MultiDataSet featurize(MultiDataSet input) 
-```
-
-
-Runs through the comp graph and saves off a new model that is simply the "unfrozen" part of the origModel
-This "unfrozen" model is then used for training with featurized data
-
-##### featurize 
-```java
-public DataSet featurize(DataSet input) 
-```
-
-
-During training frozen vertices/layers can be treated as "featurizing" the input
-The forward pass through these frozen layer/vertices can be done in advance and the dataset saved to disk to iterate
-quickly on the smaller unfrozen part of the model
-Currently does not support datasets with feature masks
-
-- param input multidataset to feed into the computation graph with frozen layer vertices
-- return a multidataset with input features that are the outputs of the frozen layer vertices and the original labels.
-
-##### fitFeaturized 
-```java
-public void fitFeaturized(MultiDataSetIterator iter) 
-```
-
-
-Fit from a featurized dataset.
-The fit is conducted on an internally instantiated subset model that is representative of the unfrozen part of the original model.
-After each call on fit the parameters for the original model are updated
-
-- param iter
 

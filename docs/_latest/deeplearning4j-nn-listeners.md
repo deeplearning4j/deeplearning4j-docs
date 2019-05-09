@@ -59,83 +59,9 @@ public void iterationDone(Model model, int iteration, int epoch)
 
 ---
 
-### TimeIterationListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//TimeIterationListener.java) </span>
+### Checkpoint
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//Checkpoint.java) </span>
 
-Time Iteration Listener.
-This listener displays into INFO logs the remaining time in minutes and the date of the end of the process.
-Remaining time is estimated from the amount of time for training so far, and the total number of iterations
-specified by the user
-
-##### TimeIterationListener 
-```java
-public TimeIterationListener(int iterationCount) 
-```
-
-
-Constructor
-- param iterationCount The global number of iteration for training (all epochs)
-
-
-
-
-
----
-
-### CheckpointListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CheckpointListener.java) </span>
-
-
-CheckpointListener: The goal of this listener is to periodically save a copy of the model during training..<br>
-Model saving may be done:<br>
-1. Every N epochs<br>
-2. Every N iterations<br>
-3. Every T time units (every 15 minutes, for example)<br>
-Or some combination of the 3.<br>
-<br>
-<br>
-<b>Example 1</b>: Saving a checkpoint every 2 epochs, keep all model files
-<pre>
-.keepAll() //Don't delete any models
-.saveEveryNEpochs(2)
-.build()
-}
-</pre>
-<br>
-<b>Example 2</b>: Saving a checkpoint every 1000 iterations, but keeping only the last 3 models (all older model
-files will be automatically deleted)
-<pre>
-.keepLast(3)
-.saveEveryNIterations(1000)
-.build();
-}
-</pre>
-<br>
-<b>Example 3</b>: Saving a checkpoint every 15 minutes, keeping the most recent 3 and otherwise every 4th checkpoint
-file:
-<pre>
-.keepLastAndEvery(3, 4)
-.saveEvery(15, TimeUnit.MINUTES)
-.build();
-}
-</pre>
-<br>
-Note that you can mix these: for example, to save every epoch and every 15 minutes (independent of last save time):<br>
-To save every epoch, and every 15 minutes, <i>since the last model save</i> use:<br>
-Note that is this last example, the <i>sinceLast</i> parameter is true. This means the 15-minute counter will be
-reset any time a model is saved.<br>
-
-
-##### CheckpointListener 
-```java
-public CheckpointListener build()
-```
-
-
-List all available checkpoints. A checkpoint is 'available' if the file can be loaded. Any checkpoint files that
-have been automatically deleted (given the configuration) will not be returned here.
-
-- return List of checkpoint files that can be loaded
 
 
 
@@ -164,60 +90,10 @@ public ScoreIterationListener(int printIterations)
 
 ---
 
-### ParamAndGradientIterationListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ParamAndGradientIterationListener.java) </span>
-
-An iteration listener that provides details on parameters and gradients at each iteration during traning.
-Attempts to provide much of the same information as the UI histogram iteration listener, but in a text-based
-format (for example, when learning on a system accessed via SSH etc).
-i.e., is intended to aid network tuning and debugging<br>
-This iteration listener is set up to calculate mean, min, max, and mean absolute value
-of each type of parameter and gradient in the network at each iteration.<br>
-
-
-
-
-
----
-
-### SleepyTrainingListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SleepyTrainingListener.java) </span>
-
-This TrainingListener implementation provides a way to "sleep" during specific Neural Network training phases.<br>
-Suitable for debugging/testing purposes only.
-
-PLEASE NOTE: All timers treat time values as milliseconds.
-PLEASE NOTE: Do not use it in production environment.
-
-
-##### onEpochStart 
-```java
-public void onEpochStart(Model model) 
-```
-
-
-In this mode parkNanos() call will be used, to make process really idle
-
-
-
-
-
----
-
 ### ComposableIterationListener
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ComposableIterationListener.java) </span>
 
 A group of listeners
-
-
-
-
----
-
-### SharedGradient
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SharedGradient.java) </span>
-
-
 
 
 
@@ -295,10 +171,60 @@ Export the scores to the specified file in delimited (one per line) UTF-8 format
 
 ---
 
-### CollectScoresListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresListener.java) </span>
+### CheckpointListener
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CheckpointListener.java) </span>
 
-A simple listener that collects scores to a list every N iterations. Can also optionally log the score.
+
+CheckpointListener: The goal of this listener is to periodically save a copy of the model during training..<br>
+Model saving may be done:<br>
+1. Every N epochs<br>
+2. Every N iterations<br>
+3. Every T time units (every 15 minutes, for example)<br>
+Or some combination of the 3.<br>
+<br>
+<br>
+<b>Example 1</b>: Saving a checkpoint every 2 epochs, keep all model files
+<pre>
+.keepAll() //Don't delete any models
+.saveEveryNEpochs(2)
+.build()
+}
+</pre>
+<br>
+<b>Example 2</b>: Saving a checkpoint every 1000 iterations, but keeping only the last 3 models (all older model
+files will be automatically deleted)
+<pre>
+.keepLast(3)
+.saveEveryNIterations(1000)
+.build();
+}
+</pre>
+<br>
+<b>Example 3</b>: Saving a checkpoint every 15 minutes, keeping the most recent 3 and otherwise every 4th checkpoint
+file:
+<pre>
+.keepLastAndEvery(3, 4)
+.saveEvery(15, TimeUnit.MINUTES)
+.build();
+}
+</pre>
+<br>
+Note that you can mix these: for example, to save every epoch and every 15 minutes (independent of last save time):<br>
+To save every epoch, and every 15 minutes, <i>since the last model save</i> use:<br>
+Note that is this last example, the <i>sinceLast</i> parameter is true. This means the 15-minute counter will be
+reset any time a model is saved.<br>
+
+
+##### CheckpointListener 
+```java
+public CheckpointListener build()
+```
+
+
+List all available checkpoints. A checkpoint is 'available' if the file can be loaded. Any checkpoint files that
+have been automatically deleted (given the configuration) will not be returned here.
+
+- return List of checkpoint files that can be loaded
 
 
 
@@ -306,9 +232,44 @@ A simple listener that collects scores to a list every N iterations. Can also op
 
 ---
 
-### Checkpoint
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//Checkpoint.java) </span>
+### SharedGradient
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SharedGradient.java) </span>
 
+
+
+
+
+
+---
+
+### SleepyTrainingListener
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SleepyTrainingListener.java) </span>
+
+This TrainingListener implementation provides a way to "sleep" during specific Neural Network training phases.<br>
+Suitable for debugging/testing purposes only.
+
+PLEASE NOTE: All timers treat time values as milliseconds.
+PLEASE NOTE: Do not use it in production environment.
+
+
+##### onEpochStart 
+```java
+public void onEpochStart(Model model) 
+```
+
+
+In this mode parkNanos() call will be used, to make process really idle
+
+
+
+
+
+---
+
+### CollectScoresListener
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresListener.java) </span>
+
+A simple listener that collects scores to a list every N iterations. Can also optionally log the score.
 
 
 
@@ -332,4 +293,43 @@ This method defines, if iteration number should be reported together with other 
 
 - param reportIteration
 - return
+
+
+
+
+
+---
+
+### ParamAndGradientIterationListener
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ParamAndGradientIterationListener.java) </span>
+
+An iteration listener that provides details on parameters and gradients at each iteration during traning.
+Attempts to provide much of the same information as the UI histogram iteration listener, but in a text-based
+format (for example, when learning on a system accessed via SSH etc).
+i.e., is intended to aid network tuning and debugging<br>
+This iteration listener is set up to calculate mean, min, max, and mean absolute value
+of each type of parameter and gradient in the network at each iteration.<br>
+
+
+
+
+
+---
+
+### TimeIterationListener
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//TimeIterationListener.java) </span>
+
+Time Iteration Listener.
+This listener displays into INFO logs the remaining time in minutes and the date of the end of the process.
+Remaining time is estimated from the amount of time for training so far, and the total number of iterations
+specified by the user
+
+##### TimeIterationListener 
+```java
+public TimeIterationListener(int iterationCount) 
+```
+
+
+Constructor
+- param iterationCount The global number of iteration for training (all epochs)
 

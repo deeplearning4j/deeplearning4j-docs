@@ -11,70 +11,6 @@ weight: 4
 
 ---
 
-### KerasFlatten
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasFlatten.java) </span>
-
-Imports a Keras Flatten layer as a DL4J {Cnn,Rnn}ToFeedForwardInputPreProcessor.
-
-
-##### KerasFlatten 
-```java
-public KerasFlatten(Map<String, Object> layerConfig)
-            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig dictionary containing Keras layer configuration
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-
-##### isInputPreProcessor 
-```java
-public boolean isInputPreProcessor() 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig           dictionary containing Keras layer configuration
-- param enforceTrainingConfig whether to enforce training-related configuration options
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-##### getInputPreprocessor 
-```java
-public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
-```
-
-
-Gets appropriate DL4J InputPreProcessor for given InputTypes.
-
-- param inputType Array of InputTypes
-- return DL4J InputPreProcessor
-- throws InvalidKerasConfigurationException Invalid Keras config
-- see org.deeplearning4j.nn.conf.InputPreProcessor
-
-##### getOutputType 
-```java
-public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
-```
-
-
-Get layer output type.
-
-- param inputType Array of InputTypes
-- return output type as InputType
-- throws InvalidKerasConfigurationException Invalid Keras config
-
-
-
-
-
----
-
 ### KerasPermute
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasPermute.java) </span>
 
@@ -140,15 +76,15 @@ Get layer output type.
 
 ---
 
-### KerasRepeatVector
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasRepeatVector.java) </span>
+### KerasFlatten
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasFlatten.java) </span>
 
-Imports a Keras RepeatVector layer
+Imports a Keras Flatten layer as a DL4J {Cnn,Rnn}ToFeedForwardInputPreProcessor.
 
 
-##### KerasRepeatVector 
+##### KerasFlatten 
 ```java
-public KerasRepeatVector(Map<String, Object> layerConfig)
+public KerasFlatten(Map<String, Object> layerConfig)
             throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
 ```
 
@@ -160,54 +96,31 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
-##### getOutputType 
+##### isInputPreProcessor 
 ```java
-public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+public boolean isInputPreProcessor() 
 ```
 
 
 Constructor from parsed Keras layer configuration dictionary.
 
-- param layerConfig               dictionary containing Keras layer configuration
-- param enforceTrainingConfig     whether to enforce training-related configuration options
+- param layerConfig           dictionary containing Keras layer configuration
+- param enforceTrainingConfig whether to enforce training-related configuration options
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+##### getInputPreprocessor 
+```java
+public InputPreProcessor getInputPreprocessor(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Gets appropriate DL4J InputPreProcessor for given InputTypes.
+
+- param inputType Array of InputTypes
+- return DL4J InputPreProcessor
 - throws InvalidKerasConfigurationException Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-##### getRepeatVectorLayer 
-```java
-public RepeatVector getRepeatVectorLayer() 
-```
-
-
-Get DL4J RepeatVector.
-
-- return  RepeatVector
-
-
-
-
-
----
-
-### KerasMasking
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasMasking.java) </span>
-
-Imports Keras masking layers.
-
-
-##### KerasMasking 
-```java
-public KerasMasking(Map<String, Object> layerConfig)
-            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig dictionary containing Keras layer configuration
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
+- see org.deeplearning4j.nn.conf.InputPreProcessor
 
 ##### getOutputType 
 ```java
@@ -215,166 +128,11 @@ public InputType getOutputType(InputType... inputType) throws InvalidKerasConfig
 ```
 
 
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig           dictionary containing Keras layer configuration
-- param enforceTrainingConfig whether to enforce training-related configuration options
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-##### getMaskingLayer 
-```java
-public MaskZeroLayer getMaskingLayer() 
-```
-
-
-Get DL4J MaskZeroLayer.
-
-- return MaskZeroLayer
-
-
-
-
-
----
-
-### KerasActivation
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasActivation.java) </span>
-
-Imports an Activation layer from Keras.
-
-
-##### KerasActivation 
-```java
-public KerasActivation(Map<String, Object> layerConfig)
-            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig dictionary containing Keras layer configuration
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-
-##### getOutputType 
-```java
-public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig           dictionary containing Keras layer configuration
-- param enforceTrainingConfig whether to enforce training-related configuration options
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-##### getActivationLayer 
-```java
-public ActivationLayer getActivationLayer() 
-```
-
-
-Get DL4J ActivationLayer.
-
-- return ActivationLayer
-
-
-
-
-
----
-
-### KerasSpatialDropout
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasSpatialDropout.java) </span>
-
-Keras wrapper for DL4J dropout layer with SpatialDropout, works 1D-3D.
-
-
-##### KerasSpatialDropout 
-```java
-public KerasSpatialDropout(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
-```
-
-
-Pass-through constructor from KerasLayer
-
-- param kerasVersion major keras version
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-
-##### getOutputType 
-```java
-public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig dictionary containing Keras layer configuration.
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-##### getSpatialDropoutLayer 
-```java
-public DropoutLayer getSpatialDropoutLayer() 
-```
-
-
-Get DL4J DropoutLayer with spatial dropout.
-
-- return DropoutLayer
-
-
-
-
-
----
-
-### KerasLambda
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasLambda.java) </span>
-
-Wraps a DL4J SameDiffLambda into a KerasLayer
-
-
-##### KerasLambda 
-```java
-public KerasLambda(Map<String, Object> layerConfig, SameDiffLayer sameDiffLayer)
-            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig dictionary containing Keras layer configuration
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-
-##### getOutputType 
-```java
-public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
-```
-
-
-Constructor from parsed Keras layer configuration dictionary.
-
-- param layerConfig           dictionary containing Keras layer configuration
-- param enforceTrainingConfig whether to enforce training-related configuration options
-- throws InvalidKerasConfigurationException     Invalid Keras config
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
-
-##### getSameDiffLayer 
-```java
-public SameDiffLayer getSameDiffLayer() 
-```
-
-
-Get DL4J SameDiffLayer.
-
-- return SameDiffLayer
+Get layer output type.
+
+- param inputType Array of InputTypes
+- return output type as InputType
+- throws InvalidKerasConfigurationException Invalid Keras config
 
 
 
@@ -533,6 +291,199 @@ Get DL4J DropoutLayer.
 
 ---
 
+### KerasMasking
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasMasking.java) </span>
+
+Imports Keras masking layers.
+
+
+##### KerasMasking 
+```java
+public KerasMasking(Map<String, Object> layerConfig)
+            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig dictionary containing Keras layer configuration
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+##### getOutputType 
+```java
+public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig           dictionary containing Keras layer configuration
+- param enforceTrainingConfig whether to enforce training-related configuration options
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+##### getMaskingLayer 
+```java
+public MaskZeroLayer getMaskingLayer() 
+```
+
+
+Get DL4J MaskZeroLayer.
+
+- return MaskZeroLayer
+
+
+
+
+
+---
+
+### KerasSpatialDropout
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasSpatialDropout.java) </span>
+
+Keras wrapper for DL4J dropout layer with SpatialDropout, works 1D-3D.
+
+
+##### KerasSpatialDropout 
+```java
+public KerasSpatialDropout(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
+```
+
+
+Pass-through constructor from KerasLayer
+
+- param kerasVersion major keras version
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+##### getOutputType 
+```java
+public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig dictionary containing Keras layer configuration.
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+##### getSpatialDropoutLayer 
+```java
+public DropoutLayer getSpatialDropoutLayer() 
+```
+
+
+Get DL4J DropoutLayer with spatial dropout.
+
+- return DropoutLayer
+
+
+
+
+
+---
+
+### KerasLambda
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasLambda.java) </span>
+
+Wraps a DL4J SameDiffLambda into a KerasLayer
+
+
+##### KerasLambda 
+```java
+public KerasLambda(Map<String, Object> layerConfig, SameDiffLayer sameDiffLayer)
+            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig dictionary containing Keras layer configuration
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+##### getOutputType 
+```java
+public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig           dictionary containing Keras layer configuration
+- param enforceTrainingConfig whether to enforce training-related configuration options
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+##### getSameDiffLayer 
+```java
+public SameDiffLayer getSameDiffLayer() 
+```
+
+
+Get DL4J SameDiffLayer.
+
+- return SameDiffLayer
+
+
+
+
+
+---
+
+### KerasActivation
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasActivation.java) </span>
+
+Imports an Activation layer from Keras.
+
+
+##### KerasActivation 
+```java
+public KerasActivation(Map<String, Object> layerConfig)
+            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig dictionary containing Keras layer configuration
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+##### getOutputType 
+```java
+public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig           dictionary containing Keras layer configuration
+- param enforceTrainingConfig whether to enforce training-related configuration options
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+##### getActivationLayer 
+```java
+public ActivationLayer getActivationLayer() 
+```
+
+
+Get DL4J ActivationLayer.
+
+- return ActivationLayer
+
+
+
+
+
+---
+
 ### KerasDense
 <span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasDense.java) </span>
 
@@ -594,4 +545,53 @@ public void setWeights(Map<String, INDArray> weights) throws InvalidKerasConfigu
 Set weights for layer.
 
 - param weights Dense layer weights
+
+
+
+
+
+---
+
+### KerasRepeatVector
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/core/KerasRepeatVector.java) </span>
+
+Imports a Keras RepeatVector layer
+
+
+##### KerasRepeatVector 
+```java
+public KerasRepeatVector(Map<String, Object> layerConfig)
+            throws InvalidKerasConfigurationException, UnsupportedKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig dictionary containing Keras layer configuration
+- throws InvalidKerasConfigurationException     Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+
+##### getOutputType 
+```java
+public InputType getOutputType(InputType... inputType) throws InvalidKerasConfigurationException 
+```
+
+
+Constructor from parsed Keras layer configuration dictionary.
+
+- param layerConfig               dictionary containing Keras layer configuration
+- param enforceTrainingConfig     whether to enforce training-related configuration options
+- throws InvalidKerasConfigurationException Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
+
+##### getRepeatVectorLayer 
+```java
+public RepeatVector getRepeatVectorLayer() 
+```
+
+
+Get DL4J RepeatVector.
+
+- return  RepeatVector
 

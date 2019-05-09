@@ -11,22 +11,22 @@ weight: 4
 
 ---
 
-### KerasGaussianDropout
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/noise/KerasGaussianDropout.java) </span>
+### KerasGaussianNoise
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/noise/KerasGaussianNoise.java) </span>
 
-Keras wrapper for DL4J dropout layer with GaussianDropout.
+Keras wrapper for DL4J dropout layer with GaussianNoise.
 
 
-##### KerasGaussianDropout 
+##### KerasGaussianNoise 
 ```java
-public KerasGaussianDropout(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
+public KerasGaussianNoise(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
 
 
 Pass-through constructor from KerasLayer
 
 - param kerasVersion major keras version
-- throws UnsupportedKerasConfigurationException Invalid Keras config
+- throws UnsupportedKerasConfigurationException Unsupported Keras config
 
 
 ##### getOutputType 
@@ -41,9 +41,9 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-##### getGaussianDropoutLayer 
+##### getGaussianNoiseLayer 
 ```java
-public DropoutLayer getGaussianDropoutLayer() 
+public DropoutLayer getGaussianNoiseLayer() 
 ```
 
 
@@ -103,22 +103,22 @@ Get DL4J DropoutLayer with Alpha dropout.
 
 ---
 
-### KerasGaussianNoise
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/noise/KerasGaussianNoise.java) </span>
+### KerasGaussianDropout
+<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/layers/noise/KerasGaussianDropout.java) </span>
 
-Keras wrapper for DL4J dropout layer with GaussianNoise.
+Keras wrapper for DL4J dropout layer with GaussianDropout.
 
 
-##### KerasGaussianNoise 
+##### KerasGaussianDropout 
 ```java
-public KerasGaussianNoise(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
+public KerasGaussianDropout(Integer kerasVersion) throws UnsupportedKerasConfigurationException 
 ```
 
 
 Pass-through constructor from KerasLayer
 
 - param kerasVersion major keras version
-- throws UnsupportedKerasConfigurationException Unsupported Keras config
+- throws UnsupportedKerasConfigurationException Invalid Keras config
 
 
 ##### getOutputType 
@@ -133,9 +133,9 @@ Constructor from parsed Keras layer configuration dictionary.
 - throws InvalidKerasConfigurationException     Invalid Keras config
 - throws UnsupportedKerasConfigurationException Unsupported Keras config
 
-##### getGaussianNoiseLayer 
+##### getGaussianDropoutLayer 
 ```java
-public DropoutLayer getGaussianNoiseLayer() 
+public DropoutLayer getGaussianDropoutLayer() 
 ```
 
 

@@ -209,6 +209,79 @@ See [ROCBinary JavaDoc](https://deeplearning4j.org/api/{{page.version}}/org/deep
 
 ## Available evaluations
 
+##### ROCBinary 
+```java
+public ROCBinary() 
+```
+
+
+- deprecated Use {- link org.nd4j.evaluation.classification.ROCBinary}
+
+
+
+
+##### ConfusionMatrix 
+```java
+public ConfusionMatrix(List<T> classes) 
+```
+
+
+- deprecated Use {- link org.nd4j.evaluation.classification.ConfusionMatrix}
+
+
+
+
+##### EvaluationBinary 
+```java
+public EvaluationBinary(INDArray decisionThreshold) 
+```
+
+
+Use {- link org.nd4j.evaluation.classification.EvaluationBinary}
+
+
+##### fromJson 
+```java
+public static EvaluationBinary fromJson(String json) 
+```
+
+
+Use {- link org.nd4j.evaluation.classification.EvaluationBinary}
+
+##### fromYaml 
+```java
+public static EvaluationBinary fromYaml(String yaml) 
+```
+
+
+Use {- link org.nd4j.evaluation.classification.EvaluationBinary.fromYaml(String)}
+
+
+
+
+
+
+
+##### RegressionEvaluation 
+```java
+public RegressionEvaluation() 
+```
+
+
+- deprecated Use ND4J RegressionEvaluation class, which has the same interface: {- link org.nd4j.evaluation.regression.RegressionEvaluation.Metric}
+
+
+##### scoreForMetric 
+```java
+public double scoreForMetric(Metric metric)
+```
+
+
+- deprecated Use ND4J RegressionEvaluation class, which has the same interface: {- link org.nd4j.evaluation.regression.RegressionEvaluation}
+
+
+
+
 ##### Evaluation 
 ```java
 public Evaluation() 
@@ -253,36 +326,6 @@ public static Evaluation fromYaml(String yaml)
 
 
 
-##### ROCBinary 
-```java
-public ROCBinary() 
-```
-
-
-- deprecated Use {- link org.nd4j.evaluation.classification.ROCBinary}
-
-
-
-
-##### ConfusionMatrix 
-```java
-public ConfusionMatrix(List<T> classes) 
-```
-
-
-- deprecated Use {- link org.nd4j.evaluation.classification.ConfusionMatrix}
-
-
-
-
-##### ROCMultiClass 
-```java
-public ROCMultiClass() 
-```
-
-
-- deprecated Use {- link org.nd4j.evaluation.classification.ROCMultiClass}
-
 
 
 
@@ -309,6 +352,17 @@ public CountsForThreshold clone()
 
 
 
+##### ROCMultiClass 
+```java
+public ROCMultiClass() 
+```
+
+
+- deprecated Use {- link org.nd4j.evaluation.classification.ROCMultiClass}
+
+
+
+
 ##### EvaluationCalibration 
 ```java
 public EvaluationCalibration() 
@@ -316,59 +370,5 @@ public EvaluationCalibration()
 
 
 - deprecated Use {- link org.nd4j.evaluation.classification.EvaluationCalibration}
-
-
-
-
-
-
-
-##### EvaluationBinary 
-```java
-public EvaluationBinary(INDArray decisionThreshold) 
-```
-
-
-Use {- link org.nd4j.evaluation.classification.EvaluationBinary}
-
-
-##### fromJson 
-```java
-public static EvaluationBinary fromJson(String json) 
-```
-
-
-Use {- link org.nd4j.evaluation.classification.EvaluationBinary}
-
-##### fromYaml 
-```java
-public static EvaluationBinary fromYaml(String yaml) 
-```
-
-
-Use {- link org.nd4j.evaluation.classification.EvaluationBinary.fromYaml(String)}
-
-
-
-
-##### RegressionEvaluation 
-```java
-public RegressionEvaluation() 
-```
-
-
-- deprecated Use ND4J RegressionEvaluation class, which has the same interface: {- link org.nd4j.evaluation.regression.RegressionEvaluation.Metric}
-
-
-##### scoreForMetric 
-```java
-public double scoreForMetric(Metric metric)
-```
-
-
-- deprecated Use ND4J RegressionEvaluation class, which has the same interface: {- link org.nd4j.evaluation.regression.RegressionEvaluation}
-
-
-
 
 

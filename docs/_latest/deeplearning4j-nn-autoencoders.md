@@ -216,7 +216,7 @@ org.deeplearning4j.nn.conf.layers.DenseLayer}. Typically the number and size of 
 
 ##### setEncoderLayerSizes 
 ```java
-public void setEncoderLayerSizes(int[] encoderLayerSizes) 
+public void setEncoderLayerSizes(int... encoderLayerSizes) 
 ```
 
 
@@ -240,7 +240,7 @@ to the encoder layers (set via {- link #encoderLayerSizes(int...)}.
 
 ##### setDecoderLayerSizes 
 ```java
-public void setDecoderLayerSizes(int[] decoderLayerSizes) 
+public void setDecoderLayerSizes(int... decoderLayerSizes) 
 ```
 
 

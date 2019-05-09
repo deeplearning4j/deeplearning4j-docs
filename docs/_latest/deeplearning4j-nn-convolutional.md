@@ -111,7 +111,7 @@ depth, height, width, channels]<br>
 
 ##### setKernelSize 
 ```java
-public void setKernelSize(int[] kernelSize) 
+public void setKernelSize(int... kernelSize) 
 ```
 
 
@@ -121,7 +121,7 @@ Set kernel size for 3D convolutions in (depth, height, width) order
 
 ##### setStride 
 ```java
-public void setStride(int[] stride) 
+public void setStride(int... stride) 
 ```
 
 
@@ -131,7 +131,7 @@ Set stride size for 3D convolutions in (depth, height, width) order
 
 ##### setPadding 
 ```java
-public void setPadding(int[] padding) 
+public void setPadding(int... padding) 
 ```
 
 
@@ -141,7 +141,7 @@ Set padding size for 3D convolutions in (depth, height, width) order
 
 ##### setDilation 
 ```java
-public void setDilation(int[] dilation) 
+public void setDilation(int... dilation) 
 ```
 
 
@@ -221,7 +221,7 @@ public InputType getOutputType(int layerIndex, InputType inputType)
 
 ##### setCropping 
 ```java
-public void setCropping(int[] cropping) 
+public void setCropping(int... cropping) 
 ```
 
 
@@ -259,7 +259,7 @@ public InputType getOutputType(int layerIndex, InputType inputType)
 
 ##### setCropping 
 ```java
-public void setCropping(int[] cropping) 
+public void setCropping(int... cropping) 
 ```
 
 
@@ -298,7 +298,7 @@ public InputType getOutputType(int layerIndex, InputType inputType)
 
 ##### setCropping 
 ```java
-public void setCropping(int[] cropping) 
+public void setCropping(int... cropping) 
 ```
 
 

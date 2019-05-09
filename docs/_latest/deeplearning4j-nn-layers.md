@@ -80,6 +80,15 @@ public Builder hasBias(boolean hasBias)
 If true (default): include bias parameters in the model. False: no bias.
 
 
+##### hasLayerNorm 
+```java
+public Builder hasLayerNorm(boolean hasLayerNorm)
+```
+
+
+If true (default = false): enable layer normalization on this layer
+
+
 
 
 
@@ -473,7 +482,7 @@ SameDiff version of a 2D locally connected layer.
 
 ##### setKernel 
 ```java
-public void setKernel(int[] kernel) 
+public void setKernel(int... kernel) 
 ```
 
 
@@ -481,7 +490,7 @@ Number of inputs to the layer (input size)
 
 ##### setStride 
 ```java
-public void setStride(int[] stride) 
+public void setStride(int... stride) 
 ```
 
 
@@ -489,7 +498,7 @@ public void setStride(int[] stride)
 
 ##### setPadding 
 ```java
-public void setPadding(int[] padding) 
+public void setPadding(int... padding) 
 ```
 
 
@@ -497,7 +506,7 @@ public void setPadding(int[] padding)
 
 ##### setDilation 
 ```java
-public void setDilation(int[] dilation) 
+public void setDilation(int... dilation) 
 ```
 
 
@@ -667,7 +676,7 @@ Supports the following pooling types: MAX, AVG, SUM, PNORM
 
 ##### setKernelSize 
 ```java
-public void setKernelSize(int[] kernelSize) 
+public void setKernelSize(int... kernelSize) 
 ```
 
 
@@ -677,7 +686,7 @@ Kernel size
 
 ##### setStride 
 ```java
-public void setStride(int[] stride) 
+public void setStride(int... stride) 
 ```
 
 
@@ -687,7 +696,7 @@ Stride
 
 ##### setPadding 
 ```java
-public void setPadding(int[] padding) 
+public void setPadding(int... padding) 
 ```
 
 
@@ -825,7 +834,7 @@ Zero padding 1D layer for convolutional neural networks. Allows padding to be do
 
 ##### setPadding 
 ```java
-public void setPadding(int[] padding) 
+public void setPadding(int... padding) 
 ```
 
 
@@ -854,7 +863,7 @@ in all three spatial dimensions.
 
 ##### setPadding 
 ```java
-public void setPadding(int[] padding) 
+public void setPadding(int... padding) 
 ```
 
 
@@ -883,7 +892,7 @@ top/bottom/left/right
 
 ##### setPadding 
 ```java
-public void setPadding(int[] padding) 
+public void setPadding(int... padding) 
 ```
 
 
