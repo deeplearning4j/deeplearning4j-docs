@@ -116,7 +116,7 @@ are instantiating test/train.
 
 You won't need it for this tutorial, you can
 learn more about loading data for neural networks in this [ETL user
-guide](https://deeplearning4j.org/etl-userguide). DL4J comes with many record
+guide](https://deeplearning4j.org/docs/latest/datavec-overview). DL4J comes with many record
 readers that can load and convert data into ND-Arrays from CSVs, images, videos,
 audio, and sequences.
 
