@@ -303,12 +303,3 @@ val cgConf3 : ComputationGraphConfiguration = new NeuralNetConfiguration.Builder
         .setOutputs("out1","out2")
         .build();
 ```
-
-### What's next?
----
-
-- See tutorial [here](http://someurl) to learn about
-different ways to feed training data to a network
-- See tutorial
-[here](http://someurl) to learn about how to fit a network to a specified
-configuration and training data
