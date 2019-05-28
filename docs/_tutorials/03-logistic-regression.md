@@ -121,6 +121,6 @@ thought of as an input layer of the network.
  
 
 ### What's next?
-- See this [tutorial](http://someurl) to learn about
+- See this [tutorial](https://deeplearning4j.org/tutorials/04-feed-forward) to learn about
 configuring a more complex network: a 'feedforward neural network'. We will also
 introduce the concept of hidden layers.
