@@ -7,13 +7,13 @@ layout: default
 
 # IP Requirements: Contributing to Eclipse Deeplearning4j, ND4J and Other Projects
 
-This page explains steps required to contribute code to the projects in the eclipse/deeplearning4j GitHub repository: https://github.com/eclipse/deeplearning4j
+This page explains steps required to contribute code to the projects in the eclipse/deeplearning4j GitHub repository: [https://github.com/eclipse/deeplearning4j](https://github.com/eclipse/deeplearning4j)
 
 
-Contributors (anyone who wants to commit code to the repository) need to do two things, before their code can be merged to the repository:
+Contributors (anyone who wants to commit code to the repository) need to do two things, before their code can be merged:
 
 1. Sign the Eclipse Contributor Agreement (once)
-2. Sign the commits (each time)
+2. Sign commits (each time)
 
 ## Why Is This Required?
 
@@ -33,7 +33,7 @@ Here's the process:
 
 This can be done at [https://accounts.eclipse.org/user/register](https://accounts.eclipse.org/user/register)
 
-*Note:* You must use register using the same as your GitHub account (the GitHub account you want to submit pull requests from).
+*Note:* You must use register using the same email as your GitHub account (the GitHub account you want to submit pull requests from).
 
 **Step 2: Sign the ECA**
 
@@ -118,7 +118,7 @@ Date:   Fri Jun 21 21:42:38 2019 +1000
 The top commit is unsigned, and the bottom commit is signed (note the presence of the `Signed-off-by`).
 
 
-### If You Forget to Sign a Commit - Ammending Last Commit
+### If You Forget to Sign a Commit - Amending the Last Commit
 
 If you forgot to sign the last commit, you can use the following command:
 
@@ -147,9 +147,14 @@ git commit -s -m "Squashed and signed"
 The result:
 ```
 $ git log -2 --oneline
-31658e11 (HEAD -> commit_test_branch) Squashed and signed                   ef09606c This commit already exists
+31658e11 (HEAD -> commit_test_branch) Squashed and signed
+ef09606c This commit already exists
 ```
 
 You can confirm that the commit is signed using `git log -1 --show-signature` as shown earlier.
 
 Note that your commits will be squashed once they are merged to master anyway, so the loss of the commit history does not matter.
+
+If you are updating an existing PR, you may need to force push using `-f` (as in `git push X -f`).
+
+
