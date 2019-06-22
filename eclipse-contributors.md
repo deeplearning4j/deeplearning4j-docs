@@ -3,7 +3,6 @@ title: Eclipse Contributor Requirements
 short_title: Eclipse Contributors
 description: IP/Copyright requirements for Eclipse Foundation Projects
 layout: default
-redirect_from: "/eclipse"
 ---
 
 # IP Requirements: Contributing to Eclipse Deeplearning4j, ND4J and Other Projects
