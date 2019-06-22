@@ -33,7 +33,7 @@ Here's the process:
 
 This can be done at [https://accounts.eclipse.org/user/register](https://accounts.eclipse.org/user/register)
 
-*Note:* You must use register using the same email as your GitHub account (the GitHub account you want to submit pull requests from).
+*Note:* You must register using the same email as your GitHub account (the GitHub account you want to submit pull requests from).
 
 **Step 2: Sign the ECA**
 
