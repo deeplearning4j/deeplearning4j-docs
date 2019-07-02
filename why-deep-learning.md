@@ -13,9 +13,7 @@ Deep learning is synonymous with machine learning, and simply an advanced subset
 
 So what is deep learning capable and incapable of? Deep learning can recognizing pattern and classify them. Put another way, it can tell your machine what it's looking at, hearing, or being fed as a stream of numbers. 
 
-That very basic function, which occurs in our minds before we have the chance to reflect, is a task of enormous complexity for a computer, only accomplished after much calculation. Confronted with an array of pixels, no computer inherently knows the difference between a house, a tree and a cat. Deep learning is the guy with the paint brush. 
-
-![Alt text](./images/that_should_clear.jpg)
+That very basic function, which occurs in our minds before we have the chance to reflect, is a task of enormous complexity for a computer, only accomplished after much calculation. Confronted with an array of pixels, no computer inherently knows the difference between a house, a tree and a cat. Deep learning is the guy with the paint brush.
 
 ### Prerequisites & Considerations
 
