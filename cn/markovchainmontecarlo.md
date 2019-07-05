@@ -84,8 +84,6 @@ Imagine a Mongol emperor, Kublai Khan, enthroned in a distant palace in a city n
 
 He has heard of strange lands from the Venetian adventurer, Marco Polo, and he determines to gauge the extent of his conquests by sending out a thousand explorers, each of them under orders to observe, each day, the name of the Khanate they are passing through. Unlike an alien dropping socks, these explorers are land-bound. The states they can reach on any given day depend on where they were the day before. Given that they are explorers uncertain of their destination, the direction they take each day is somewhat random. They are taking a random walk across 13th-century Asia, and recording it for their emperor, so that he may know the size of his lands as opposed to his neighbors. 
 
-![Alt text](./img/Mongol_Empire.jpg) 
-
 ## Probability as Space
 
 When they call it a state space, they're not joking. You can picture it, just like you can picture land and water, or khanates, each one of them a probability as much as they are a physical thing. Unfold a six-sided die and you have a flattened state space in six equal pieces, shapes on a plane. Line up the letters by their frequency for 11 different languages, and you get 11 different state spaces:
