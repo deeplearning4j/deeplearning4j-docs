@@ -102,7 +102,7 @@ layout: cn-default
   <li>训练完毕，主节点得到已训练网络的一份副本</li>
 </ol>
 <p>举例而言，下图显示了有五个工作器（W1、……、W5）的参数平均化流程，参数平均化频率为1。 和线下训练一样，训练数据集被切分为多个子集（在非分布式学习中一般称为微批次）；先后用各个数据分片进行训练，每个工作器分到数据分片的一个子集。在实际操作中，分片的数量会依据训练配置（取决于工作器数量、平均化频率和工作器的微批次大小－参见配置段落）自动决定。</p>
-<img class="img-responsive center-block" src="../img/parameter_averaging.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/parameter_averaging.png" alt="deeplearning4j">
 <br>
 
 <p><h2><a name="minimal">最简示例</a></h2></p>

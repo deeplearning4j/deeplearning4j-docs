@@ -88,7 +88,7 @@ He has heard of strange lands from the Venetian adventurer, Marco Polo, and he d
 
 When they call it a state space, they're not joking. You can picture it, just like you can picture land and water, or khanates, each one of them a probability as much as they are a physical thing. Unfold a six-sided die and you have a flattened state space in six equal pieces, shapes on a plane. Line up the letters by their frequency for 11 different languages, and you get 11 different state spaces:
 
-![Alt text](./img/letter_frequency_multilang.png) 
+![Alt text](https://upload.wikimedia.org/wikipedia/fr/timeline/7db23897056f9d2eb3417e71b78f5c10.png) 
 
 Five letters account for half of all characters occurring in Italian, but only a third of Swedish, if you're just dropping socks from the sky. 
 

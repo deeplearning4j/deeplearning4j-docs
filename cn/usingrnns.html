@@ -32,7 +32,7 @@ redirect_from: /zh-usingrnns
 <p><h3>RNN的数据</h3></p>
 <p>在标准的前馈网络中（多层感知器或DL4J的&rsquo;DenseLayer&rsquo;），输入和输出数据具有二维结构，或者说数据的&ldquo;形状&rdquo;可以描述为[numExamples, inputSize]，即输入前馈网络的数据的行／样例数为&rsquo;numExamples&rsquo;，而每一行中的列数为&rsquo;inputSize&rsquo;。单个样例的形状应为[1,inputSize]，但在实际应用中，为了保证运算和优化的效率，通常会使用多个样例。与此类似，标准前馈网络的输出数据同样具有二维结构，形状为[numExamples,outputSize]。</p>
 <p>而RNN的数据则是时间序列。这些数据具备三个维度，增加了一个时间维度。因此，输入数据的形状为[numExamples,inputSize,timeSeriesLength]，而输出数据的形状为[numExamples,outputSize,timeSeriesLength]。就INDArray中的数据布局而言，位于(i,j,k)的值即是一批数据中第i例的第k个时间步的第j个值。数据布局如下图所示。</p>
-<img class="img-responsive center-block" src="../img/rnn_data.png" alt="deeplearning4j"><br>
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/rnn_data.png" alt="deeplearning4j"><br>
 
 <p><h3>RnnOutputLayer</h3></p>
 <p>RnnOutputLayer是在许多循环网络系统（用于回归和分类任务）中使用的最终层。RnnOutputLayer可处理计分运算、基于给定损失函数的误差计算（预测与实际值对比）等。从功能上看，它与&ldquo;标准&rdquo;的OutputLayer类（用于前馈网络）十分相似；但RnnOutputLayer的输出（以及标签/目标）均为三维时间序列数据集。</p>
@@ -71,13 +71,13 @@ redirect_from: /zh-usingrnns
 <p><h3><a name="masking">掩模：一对多、多对一和序列分类</a></h3></p>
 <p>DL4J支持一系列基于填零和掩模操作的RNN定型功能。填零和掩模让我们能支持诸如一对多、多对一数据情景下的定型，同时也能支持长度可变的时间序列（同一批次内）。</p>
 <p>假设我们用于定型循环网络的输入和输出数据并不会在每个时间步都出现。具体示例（单个样例）见下图。DL4J支持以下所有情景的网络定型。</p>
-<img class="img-responsive center-block" src="../img/rnn_masking_1.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/rnn_masking_1.png" alt="deeplearning4j">
 <p>如果没有掩模和填零操作，就只能支持多对多的情景（上图左一），即(a)所有样例长度相同且(b)样例在每一时间步均有输入和输出。</p>
 <p>填零的概念很简单。试想同一批次中有两个长度分别为50和100个时间步的时间序列。定型数据是一矩形数组；因此我们对较短的时间序列（输入和输出）进行填零操作（即添加零），使输入和输出长度相等（在本例中为100时间步）。</p>
 <p>当然，只进行这一操作会导致定型出现问题。因此在填零之外，我们还使用掩模机制。掩模的概念也很简单：我们增加两个数组，用来记录一个时间步和样例的输入／输出是实际的输入／输出还是填零。</p>
 <p>如前文所述，RNN的批次数据有3个维度，输入和输出的形状为[miniBatchSize,inputSize,timeSeriesLength]和 [miniBatchSize,outputSize,timeSeriesLength]。而填零数组则是二维结构，输入和输出的形状均为[miniBatchSize,timeSeriesLength]，每一时间序列和样例对应的值为0（&ldquo;不存在&rdquo;）或1（&ldquo;存在&rdquo;）。输入与输出的掩模数组分开存储在不同的数组中。</p>
 <p>对单个样例而言，输入与输出的掩模数组如下：</p>
-<img class="img-responsive center-block" src="../img/rnn_masking_2.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/rnn_masking_2.png" alt="deeplearning4j">
 <p>对于&ldquo;不需要掩模&rdquo;的情况，我们可以使用全部值为1的掩模数组，所得结果与不使用掩模数组相同。此外，RNN定型中使用的掩模数组可以是零个、一个或者两个，比如多对一的情景就有可能仅设置一个用于输出的掩模数组。</p>
 <p>实际应用中，填零数组一般在数据导入阶段创建（例如由SequenceRecordReaderDatasetIterator创建，后文将具体介绍），包含在DataSet对象中。如果一个DataSet包含掩模数组，MultiLayerNetwork在定型中会自动使用。如果不存在掩模数组，则不会启用掩模功能。</p><br>
 
@@ -151,10 +151,10 @@ for( int i=0; i&lt;numExamples; i++ ){
 </ol>
 <p>例如，假设我们需要用一个RNN来预测一小时后的天气状况（假定输入是前100个小时的天气数据）。 如果采用output方法，那么我们需要送入全部100个小时的数据，才能预测出第101个小时的天气。而预测第102个小时的天气时，我们又需要送入100（或101）个小时的数据；第103个小时及之后的预测同理。</p>
 <p>或者，我们可以使用rnnTimeStep方法。当然，在进行第一次预测时，我们仍需要使用全部100个小时的历史数据，进行完整的正向传递：</p>
-<img class="img-responsive center-block" src="../img/rnn_timestep_1.png" alt="deeplearning4j"><br>
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/rnn_timestep_1.png" alt="deeplearning4j"><br>
 
 <p>首次调用rnnTimeStep时，唯一实际区别就是上一个时间步的激活情况／状态会被记录下来－图中以橙色表示。但是，第二次使用rnnTimeStep方法时，已存储的状态会被用于生成第二次预测：</p>
-<img class="img-responsive center-block" src="../img/rnn_timestep_2.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/rnn_timestep_2.png" alt="deeplearning4j">
 <p>这里有几个重要的区别：</p>
 <ol>
 	<li>在第二张图片中（第二次调用rnnTimeStep），输入数据仅为单个时间步，而非所有的历史数据。</li>
@@ -274,10 +274,10 @@ DataSetIterator variableLengthIter = new SequenceRecordReaderDataSetIterator(fea
 DataSetIterator variableLengthIter = new SequenceRecordReaderDataSetIterator(featureReader, labelReader, miniBatchSize, numPossibleLabels, regression, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 </code></pre>
 <p>对齐模式相对容易理解。它们指定是在较短时间序列的起始还是结尾处填零。下图描述了这一过程，并标出掩模数组（如本页前文所述）：</p>
-<img class="img-responsive center-block" src="../img/rnn_seq_alignment.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/rnn_seq_alignment.png" alt="deeplearning4j">
 <p>一对多情景（与前一例相仿，但输入仅有一个）可以用AlignmentMode.ALIGN_START来处理。</p>
 <p>注意，在定型数据包含非等长时间序列的情况下，各个样例的标签和输入会被分别对齐，随后会按需要对较短的时间序列进行填零。</p>
-<img class="img-responsive center-block" src="../img/rnn_seq_alignment_2.png" alt="deeplearning4j"><br>
+<img class="img-responsive center-block" src="https://jrmerwin.github.io/deeplearning4j-docs/img/rnn_seq_alignment_2.png" alt="deeplearning4j"><br>
 
 <p><h3>替代方法：运用自定义DataSetIterator</h3></p>
 <p>有些时候，我们可能需要进行不符合常规情景的数据导入。方法之一是运用自定义的<a href="https://github.com/deeplearning4j/nd4j/blob/master/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java" target="_blank">DataSetIterator</a>。DataSetIterator只是用于迭代DataSet对象的接口，这些对象封装了输入和目标INDArrays，以及输入和标签掩模数组（可选）。</p>
