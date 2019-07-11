@@ -94,7 +94,7 @@ Five letters account for half of all characters occurring in Italian, but only a
 
 If you wanted to look at the English language alone, you would get this set of histograms. Here, probabilities are defined by a line traced across the top, and the area under the line can be measured with a calculus operation called integration, the opposite of a derivative.  
 
-![Alt text](./img/english_letter_dist.png) 
+![Alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/English_letter_frequency_%28frequency%29.svg/1280px-English_letter_frequency_%28frequency%29.svg.png) 
 
 ## Neural Networks Mapping Transitions
 
