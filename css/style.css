@@ -6,8 +6,11 @@ template main style file
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i");
 @font-face {
   font-family: 'themify';
-  src: url("/fonts/themify.eot");
-  src: url("/fonts/themify.eot?#iefix") format("embedded-opentype"), url("/fonts/themify.woff") format("woff"), url("/fonts/themify.ttf") format("truetype"), url("/fonts/themify.svg") format("svg");
+  src: url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.eot");
+  src: url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.eot?#iefix") format("embedded-opentype"), 
+    url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.woff") format("woff"), 
+    url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.ttf") format("truetype"), 
+    url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
