@@ -207,13 +207,13 @@ DL4J支持下列更新器
 
 #### 更新器在复杂的误差曲面上移动
 
-![Alt text](../img/updater_animation.gif)
+![Alt text](https://camo.githubusercontent.com/7d050e8ec93b07fc804eeb021b43e4479c75dcec/687474703a2f2f72756465722e696f2f636f6e74656e742f696d616765732f323031362f30392f636f6e746f7572735f6576616c756174696f6e5f6f7074696d697a6572732e676966)
 <br />
 <br />
 
 #### 更新器在复杂度较低的误差曲面上移动
 
-![Alt text](../img/updater_animation2.gif)
+![Alt text](https://cdn-images-1.medium.com/max/1600/0*wWp-AHgQr-agFkwX.gif)
 
 
 

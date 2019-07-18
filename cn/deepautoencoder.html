@@ -5,7 +5,7 @@ layout: cn-default
 <p><h1>深度自动编码器</h1></p>
 <p>深度自动编码器由两个对称的<a href="deepbeliefnetwork.html">深度置信网络</a>组成，其中一个深度置信网络通常有四到五个浅层，构成负责编码的部分，另一个四到五层的网络则是解码部分。</p>
 <p>这些层都是<a href="restrictedboltzmannmachine.html">受限玻尔兹曼机</a>（RBM），即构成深度置信网络的基本单元，它们有一些特殊之处，我们将在下文中介绍。以下是简化的深度自动编码器架构示意图，下文会作具体说明。</p>
-<img class="img-responsive center-block" src="../img/deep_autoencoder.png" alt="deeplearning4j"><br>
+<img class="img-responsive center-block" src="https://www.researchgate.net/profile/Chiman_Kwan/publication/328432798/figure/fig6/AS:684624359456768@1540238575014/Architecture-of-a-deep-auto-encoder.ppm" alt="deeplearning4j"><br>
 <p>处理基准数据集<a href="http://yann.lecun.com/exdb/mnist/" target="_blank">MNIST</a>时，深度自动编码器会在每个RBM之后使用二进制变换。深度自动编码器还可以用于包含实数数据的其他类型的数据集，此时编码器中的RBM可以改用高斯修正变换。</p>
 <br>
 

@@ -35,7 +35,7 @@ redirect_from: /zh-word2vec
 <p>Word2vec神经网络的输出是一个词汇表，其中每个词都有一个对应的向量，可以将这些向量输入深度学习网络，也可以只是通过查询这些向量来识别词之间的关系。</p>
 <p>Word2vec衡量词的<a href="glossary.html#cosine">余弦相似性</a>，无相似性表示为90度角，而相似度为1的完全相似则表示为0度角，即完全重合；例如，瑞典与瑞典完全相同，而挪威与瑞典的余弦距离为0.760124，高于其他任何国家。</p>
 <p>以下是用Word2vec生成的&ldquo;瑞典&rdquo;的相关词列表：</p>
-<img class="img-responsive center-block" src="../img/sweden_cosine_distance.png" alt="deeplearning4j"><br>
+<img class="img-responsive center-block" src="https://i.stack.imgur.com/WbcCp.png" alt="deeplearning4j"><br>
 <p>前九位中包括斯堪的纳维亚半岛国家和几个富裕的北欧及日耳曼语系国家。</p><br>
 
 <p><h2><a name="embed">神经词向量</a></h2></p>
@@ -43,15 +43,14 @@ redirect_from: /zh-word2vec
 <p>所以神经词向量用数字来表示词。这是一种简单而又不可思议的&ldquo;翻译&rdquo;。</p>
 <p>Word2vec与自动编码器相似，它将每个词编码为向量，但Word2vec不会像<a href="restrictedboltzmannmachine.html">受限玻尔兹曼机</a>那样通过<a href="restrictedboltzmannmachine.html#reconstruct">重构</a>输入的词语来定型，而是根据输入语料中相邻的其他词来进行每个词的定型。</p>
 <p>具体的方式有两种，一种是用上下文预测目标词（连续词袋法，简称CBOW），另一种则是用一个词来预测一段目标上下文，称为skip-gram方法。我们使用后一种方法，因为它处理大规模数据集的结果更为准确。</p>
-<img class="img-responsive center-block" src="../img/word2vec_diagrams.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://pic1.xuehuaimg.com/proxy/csdn/https://img-blog.csdnimg.cn/20181201152905657.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NDI2NjUw,size_16,color_FFFFFF,t_70" alt="deeplearning4j">
 <p>若指定给一个词的特征向量无法准确预测出这个词的上下文，则向量的要素会被调整。语料中每个词的上下文就是传回误差信号以调整特征向量的<em>老师</em>。若不同词的向量按上下文判定为相似，则会调整向量中的数字，使这些向量靠得更近。</p>
 <p>正如梵高的画作《向日葵》是用油画颜料在画布上混合组成的二维图形来<em>表示</em>十九世纪八十年代末巴黎的三维植物实物一样，一个包含500个数字的向量也可以用来表示一个词或一组词。</p>
 <p>这些数字指出了每个词在500维向量空间中的位置。人们很难想象超过三维的空间。（Geoff Hinton在教学生想象13维空间时，要他们先想象三维空间，然后对自己说：&ldquo;十三、十三、十三。&rdquo;：）</p>
 <p>一组定型良好的词向量会让相似的词语在向量空间内彼此靠近。<em>橡树</em>、<em>榆树</em>、<em>桦树</em>这些词可能聚集在空间的一个角落，而<em>战争</em>、<em>冲突</em>、<em>斗争</em>则挤在另一个角落。</p>
 <p>类似的事物与概念也会比较&ldquo;靠近&rdquo;。他们的相对意义被转译为可衡量的距离。质量变为数量，让算法得以运行。但相似性只是Word2vec可以学习的许多种关联的基础。举例而言，Word2vec还可以衡量一种语言的词语之间的关系，并且将这些词相互映射。</p>
 <img class="img-responsive center-block" src="../img/word2vec_translation.png" alt="deeplearning4j">
-<p>以这些向量为基础，可以得到更全面的词的几何分布。罗马、巴黎、柏林、北京这些首都的名称不仅会聚集在一处，彼此靠近，同时每个词在向量空间内到其对应国家名称的距离也是相似的；例如：罗马－意大利 = 北京－中国。如果你只知道意大利的首都是罗马，而不知道中国的首都在哪里，那么可以由计算式罗马－意大利 + 中国得出是北京。不骗你。</p>
-<img class="img-responsive center-block" src="../img/countries_capitals.png" alt="deeplearning4j"><br>
+<p>以这些向量为基础，可以得到更全面的词的几何分布。罗马、巴黎、柏林、北京这些首都的名称不仅会聚集在一处，彼此靠近，同时每个词在向量空间内到其对应国家名称的距离也是相似的；例如：罗马－意大利 = 北京－中国。如果你只知道意大利的首都是罗马，而不知道中国的首都在哪里，那么可以由计算式罗马－意大利 + 中国得出是北京。不骗你。</p><br>
 
 <p><h2><a name="crazy">有趣的Word2Vec结果</a></h2></p>
 <p>让我们来看看Word2vec可以得出哪些其他的关联。</p>

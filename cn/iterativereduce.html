@@ -25,7 +25,6 @@ layout: cn-default
 <p>在Hadoop中，迭代式归纳的工作器负责各自的数据分片，亦即HDFS块，以同步方式并行处理数据，再把变换后的参数发回主节点，主节点将参数平均化，然后用其更新每个工作器的处理器核上的模型。MapReduce的映射路径不会持续保留，而迭代式归纳的工作器则是&ldquo;常驻&rdquo;的。Spark的架构与此大致相似。</p>
 <p>稍微介绍一下这方面技术的最新进展。谷歌和雅虎都运营着存储了海量参数的参数服务器，这些数以亿计的参数会被分发到集群中进行处理。谷歌的系统称为Google Brain，由Andrew Ng创建，现在由他的学生Quoc Le负责领导。以下是2015年前后谷歌生产栈的总体示意图，其中可见MapReduce的定位。</p><br>
 
-<img class="img-responsive center-block" src="../img/google_production_stack.png" alt="deeplearning4j"><br>
 <p>Deeplearning4j认为分布式运行时是可互换的（但不一定完全等同）；它们都只是整个模块化架构中的一个目录，可以任意替换。这让整体项目能以不同速度演进，而来自其他模块的独立的运行时可以分别被专用于神经网络算法或硬件。Deeplearning4j也能用Akka构建一个独立的分布式架构，在AWS上组织节点。</p>
 <p>包括Hadoop和Spark在内的所有向外扩展形式都收录在我们的<a href="https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j-scaleout" target="_blank">向外扩展库</a>中。</p>
 <p>比方说，Deeplearning4j的代码可以与Spark相混合，让DL4J也能像其他应用一样实现分布式运行。</p>

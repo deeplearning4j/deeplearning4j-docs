@@ -31,16 +31,16 @@ redirect_from: /zh-restrictedboltzmannmachine
 <pre><code>
 激活函数f((权重w * 输入x) + 偏差b ) = 输出a
 </code></pre>
-<img class="img-responsive center-block" src="../img/input_path_RBM.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="http://deeplearning4j.org/img/input_path_RBM.png" alt="deeplearning4j">
 <p>下面来看一个隐藏节点如何整合多项输入。每个x分别与各自的权重相乘，乘积之和再与偏差相加，其结果同样经过激活函数运算得到节点的输出值。</p>
-<img class="img-responsive center-block" src="../img/weighted_input_RBM.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="http://www.52nlp.cn/wp-content/uploads/2018/10/6.jpg" alt="deeplearning4j">
 <p>由于每个可见节点的输入都被传递至所有的隐藏节点，所以也可将RBM定义为一种<em>对称二分图</em>。</p>
 <p><em>对称</em>指每个可见节点都与所有的隐藏节点相连接（见下图）。<em>二分</em>指有两个部分或层，而这里的<em>图</em>是指代节点网络的数学名词。</p>
 <p>在每个隐藏节点中，每一个输入x都会与其相对应的权重w相乘。也就是说，每个输入x会对应三个权重，因此总共有12个权重（4个输入节点 x 3个隐藏节点）。两层之间的权重始终都是一个行数等于输入节点数、列数等于输出节点数的矩阵。</p>
 <p>每个隐藏节点会接收四个与对应权重相乘后的输入值。这些乘积之和与一个偏差值相加（至少能强制让一部分节点激活），其结果再经过激活运算得到每个隐藏节点的输出a。</p>
-<img class="img-responsive center-block" src="../img/multiple_inputs_RBM.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="http://www.52nlp.cn/wp-content/uploads/2018/10/7.jpg" alt="deeplearning4j">
 <p>如果这两个层属于一个深度神经网络，那么第一隐藏层的输出会成为第二隐藏层的输入，随后再通过任意数量的隐藏层，直至到达最终的分类层。（简单的前馈动作仅能让RBM节点实现自动编码器的功能。）</p>
-<img class="img-responsive center-block" src="../img/multiple_hidden_layers_RBM.png" alt="deeplearning4j"><br>
+<img class="img-responsive center-block" src="http://www.52nlp.cn/wp-content/uploads/2018/10/8.jpg" alt="deeplearning4j"><br>
 
 
 <p><h2><a name="reconstruct">重构</a></h2></p>
@@ -57,9 +57,9 @@ redirect_from: /zh-restrictedboltzmannmachine
 <p>试想输入数据和重构数据是形状不同的常态曲线，两者仅有部分重叠。</p>
 <p>RBM用<a href="https://www.quora.com/What-is-a-good-laymans-explanation-for-the-Kullback-Leibler-Divergence" target="_blank">Kullback Leibler散度</a>来衡量预测的概率分布与输入值的基准分布之间的距离。相关数学运算的详细说明可参见<a href="https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence" target="_blank">维基百科</a>。</p>
 <p>KL散度衡量两条曲线下方不重叠（即离散）的面积，而RBM的优化算法会尝试将这些离散部分的面积最小化，使共用权重在与第一隐藏层的激活值相乘后，可以得到与原始输入高度近似的结果。下图左半边是一组原始输入的概率分布曲线<em>p</em>，与之并列的是重构值的概率分布曲线<em>q</em>；右半边的图则显示了两条曲线之间的差异。</p>
-<img class="img-responsive center-block" src="../img/KL_divergence_RBM.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/8ff7f47ef653603b6f65c128627c280ca1026dba/14-Figure2-1.png" alt="deeplearning4j">
 <p>RBM根据权重产生的误差反复调整权重，以此学习估计原始数据的近似值。可以说权重会慢慢开始反映出输入的结构，而这种结构被编码为第一个隐藏层的激活值。整个学习过程看上去像是两条概率分布曲线在逐步重合。</p>
-<img class="img-responsive center-block" src="../img/KLD_update_RBM.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://mgubaidullin.github.io/deeplearning4j-docs/img/KLD_update_RBM.png" alt="deeplearning4j">
 
 
 <p><h2><a name="probability">概率分布</a></h2></p>
@@ -68,7 +68,7 @@ redirect_from: /zh-restrictedboltzmannmachine
 <p>也就是说，7是最有可能出现的结果，因为掷出7的组合方式（3+4、1+6、2+5）要多于掷出2到12之间其他数字的方式。任何预测掷骰子结果的公式都需要考虑到数字7的出现频率较高。</p>
 <p>或另一个例子：语言中的字母也有特定的概率分布，因为一种语言使用某些字母的频率会高于其他语言。在英语中，字母<em>e</em>、<em>t</em>和<em>a</em>是最常见的，而冰岛语中最常见的字母则是<em>a</em>、<em>r</em>和<em>n</em>。若用处理英语文本的权重来重构冰岛语，结果就会出现较大的误差。</p>
 <p>与此类似，图像数据集的像素值也有独特的概率分布，具体取决于数据集所包含图像的类别。数据集可能包括MNIST的手写数字图像：</p>
-<img class="img-responsive center-block" src="../img/mnist_render.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/houbb/resource/master/img/DL/MINST/2017-04-16-MINST.png" alt="deeplearning4j">
 <p>或是自然脸部检测数据集（Labeled Faces in the Wild）中的头像：</p>
 <img class="img-responsive center-block" src="../img/LFW_reconstruction.jpg" alt="deeplearning4j">
 <p>试想有这样一个RBM，其输入数据都是大象和狗的图片，RBM仅有两个输出节点，分别对应一种动物。RBM在正向传递中要回答的问题是：在输入这些像素时，权重应当向哪个节点发送更强的信号？大象的节点还是狗的节点？而RBM在反向传递中要回答的问题是：如果输出是大象，则应当预期出现怎样的像素分布？</p>
@@ -84,7 +84,7 @@ redirect_from: /zh-restrictedboltzmannmachine
 <p>权重能够近似模拟出数据的特征后，也就为下一步的学习奠定了良好基础，比如可以在随后的有监督学习阶段使用深度置信网络来对图像进行分类。</p>
 <p>RBM有许多用途，其中最强的功能之一就是对权重进行合理的初始化，为之后的学习和分类做好准备。从某种意义上来说，RBM的作用与反向传播相似：让权重能够有效地模拟数据。可以认为预训练和反向传播是实现同一个目的的不同方法，二者可以相互替代。</p>
 <p>下面这幅对称二分二向图综合显示了玻尔兹曼机的运作方式。</p>
-<img class="img-responsive center-block" src="../img/sym_bipartite_graph_RBM.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="http://editerupload.eepw.com.cn/201806/d8effc2aab75c79e3311178c862afbe5.png" alt="deeplearning4j">
 <p>深度RBM是一种<a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank">有向无环图（DAG）</a>，如有兴趣可点击链接了解其结构。</p><br>
 
 <p>

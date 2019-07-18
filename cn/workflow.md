@@ -5,4 +5,4 @@ layout: cn-default
 
 # Deep Learning Workflows Explained ... With Cats
 
-![Alt text](./img/dl-workflow-cats.png) 
+![Alt text](https://skymind.ai/images/wiki/dl-workflow-cats.png) 

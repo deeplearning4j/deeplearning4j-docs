@@ -64,9 +64,9 @@ redirect_from: /zh-neuralnet-overview
 <p><h2><a name="element">神经网络的要素</a></h2></p>
 <p>深度学习系统指一系列由多个层堆叠组成的特定神经网络。每一层则由节点构成。运算在节点中进行，节点的运作模式与人类的神经元大致相似，遇到足够的刺激信息时就会激活并释放信号。节点将输入数据与一组系数（或称权重）结合，通过放大或抑制输入来指定其在算法学习任务中的重要性。输入数据与权重的乘积之和将进入节点的激活函数，判定信号是否继续在网络中传递，以及传递的距离，从而决定信号如何影响网络的最终结果，例如分类动作。</p>
 <p>以下是单个节点的示意图。</p>
-<img class="img-responsive center-block" src="../img/perceptron_node.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://miro.medium.com/max/1000/1*IKKayCl6WiWdeYuVVAQhTw@2x.jpeg" alt="deeplearning4j">
 <p>节点层是一行类似神经元的开关，在输入数据通过网络时开启或关闭。从最初接收数据的第一个输入层开始，每一层的输出同时也是下一层的输入。</p>
-<img class="img-responsive center-block" src="../img/mlp.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="https://cdn-ak.f.st-hatena.com/images/fotolife/k/kento1109/20171114/20171114151205.png" alt="deeplearning4j">
 <p>我们将输入特征与可调整的权重匹配，由此指定这些特征的重要性，即它们对网络的输入分类和聚类方式有多大程度的影响。</p><br>
 
 
@@ -74,7 +74,7 @@ redirect_from: /zh-neuralnet-overview
 <p>顾名思义，深度学习网络与更常见的单一隐藏层神经网络的区别在于<strong>深度</strong>，即数据在模式识别的多步流程中所经过的节点层数。</p>
 <p>传统机器学习系统主要使用由一个输入层和一个输出层组成的浅层网络，至多在两层之间添加一个隐藏层。三层以上（包括输入和输出层在内）的系统就可以称为&ldquo;深度&rdquo;学习。所以，深度是一个有严格定义的术语，表示一个以上的隐藏层。</p>
 <p>在深度学习网络中，每一个节点层在前一层输出的基础上学习识别一组特定的特征。随着神经网络深度增加，节点所能识别的特征也就越来越复杂，因为每一层会整合并重组前一层的特征。</p>
-<img class="img-responsive center-block" src="../img/feature_hierarchy.png" alt="deeplearning4j">
+<img class="img-responsive center-block" src="http://www.fonow.com/Images/2018-08-30/66372-20180830224704811-101550809.png" alt="deeplearning4j">
 <P>这被称为<strong>特征层次结构</strong>，复杂度与抽象度逐层递增。这种结构让深度学习网络能处理大规模高维度数据集，进行数十亿个参数的<a href="glossary.html#nonlineartransformfunction">非线性函数</a>运算。</P>
 <p>最重要的是，深度学习网络可以发现<strong>未标记、非结构化数据</strong>中的潜在结构，而现实世界中的数据绝大多数都属于这一类型。非结构化数据的另一名称是<em>原始媒体</em>，即图片、文本、音视频文件等。因此，深度神经网络最擅长解决的一类问题就是对现实中各类未标记的原始媒体进行处理和聚类，在未经人工整理成关系数据库的数据中，甚至是尚未命名的数据中识别出相似点和异常情况。</p>
 <p>例如，深度学习网络可以处理一百万张图片，根据其相似之处进行聚类：一个角落是猫的图片，一个角落是破冰船的图片，还有一个角落都是你祖母的照片。这就是所谓智能相册的基础。</p>
