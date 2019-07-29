@@ -1,0 +1,25 @@
+.hero-home-bg {
+	position: absolute;
+	top: 40px;
+	width: 100%;
+	height: 500px;
+}
+
+.hero-home {
+	background: none;
+}
+
+.hero-home .subtitle {
+	font-family: "Droid Serif", serif;
+	font-style: italic;
+	line-height: 25px;
+	font-size:20px;
+}
+
+.hero-home .title {
+	font-family: "Montserrat", sans-serif;
+	font-size: 55px;
+	font-weight: 700;
+	line-height: 65px;
+	margin-bottom: 20px;
+}

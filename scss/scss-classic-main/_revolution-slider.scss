@@ -1,0 +1,85 @@
+/*
+Revolution slider customization
+*/
+.tp-caption{
+    font-family: $title-font;
+}
+.particale-title{
+    font-family: $title-font;
+}
+.tp-caption.BigBold-Title{
+    font-family: $base-font;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.revo-slider-desc-text{
+    color: #fff;
+    width: 100%;
+}
+.tp-caption.NotGeneric-SubTitle, .NotGeneric-SubTitle{
+    font-family: $base-font;
+    font-weight: 300; 
+}
+.tp-caption.NotGeneric-Title, .NotGeneric-Title{
+    font-family: $title-font;
+    font-weight: 700;
+    letter-spacing: -3px;
+}
+.tp-caption.NotGeneric-CallToAction, .NotGeneric-CallToAction{
+    font-family: $title-font;
+    font-weight: 700;
+    letter-spacing: 0px;
+}
+.tp-caption.Agency-Social, .Agency-Social{
+    border-color:rgba(255,255,255,.8);
+    color:rgba(255,255,255,.8);
+}
+.tp-caption.Agency-Title, .Agency-Title{
+   font-family: $title-font;
+    font-weight: 600;
+    letter-spacing: -3px;  
+}
+
+/**main slider**/
+.mainSlide-Title-Centered{
+    color:#fff;
+    font-weight:700;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    font-family:$title-font;
+}
+.mainSlide-Subtitle{
+    font-family: $styled-font;
+    font-weight: 400;
+    color:#eee;
+    font-style:italic;
+}
+.mainSlide-caption{
+    color:#fff;
+    font-weight: 400;
+    font-family:$base-font;
+}
+.sliderImg-title{
+    font-family: $title-font;
+    color:#fff;
+    font-weight:700;
+}
+.slider-CallToAction.btn-white-outline{
+     z-index:1;
+        position: relative;
+    &:hover,&:focus{
+        background-color: #fff;
+        color: #333!important;
+       
+    }
+    i{
+        margin-right:0px;
+    }
+}
+.slider-SmallCaption{
+    color:#fff;
+    font-family: $base-font;
+    font-weight:300;
+}
+
+/****text slider**/

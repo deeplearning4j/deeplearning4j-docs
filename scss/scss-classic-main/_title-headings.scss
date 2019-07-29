@@ -1,0 +1,90 @@
+/*
+Title headings
+*/
+.fancy-title{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 15px;
+    overflow: hidden;
+    h3,h2,h1,h4,h5,h6{
+        letter-spacing: 0px;
+        padding-right: 15px;
+        text-align: left;
+        font-family: $title-font;
+        text-transform: capitalize;
+
+    }
+    h4{
+        font-size: 1rem;
+        font-weight:600;
+    }
+    .fancy-title-sep {
+        position: relative;
+        height: 6px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        -ms-flex-grow: 1;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        &.gray-sep{
+            border-top-color: #f7f7f7;
+            border-bottom-color: #f7f7f7;
+        }
+    }
+    &.dark-fancy-title{
+        h3,h2,h1,h4,h5,h6{
+            color: #fff;
+        }
+        .fancy-title-sep.gray-sep{
+            border-top:1px solid rgba(255,255,255,0.2);
+            border-bottom:1px solid rgba(255,255,255,0.2);
+        }
+    }
+}
+
+.title-heading1{
+    text-align:center;
+    overflow: hidden;
+    padding-bottom:10px;
+    margin-bottom:60px!important;
+    h3{
+        text-transform:uppercase;
+        font-weight:800;
+        font-size:1.5rem;
+        position:relative;
+        display:inline-block;
+        padding:0px 50px;
+        font-family:$title-font;
+        &:after{
+            content:"";
+            position: absolute;
+            top:50%;
+            right:-5px;
+            width:45px;
+            height:2px;
+            background-color:#eee;
+        }
+         &:before{
+            content:"";
+            position: absolute;
+            top:50%;
+            left:-5px;
+            width:45px;
+            height:2px;
+            background-color:#eee;
+        }
+    }
+
+}

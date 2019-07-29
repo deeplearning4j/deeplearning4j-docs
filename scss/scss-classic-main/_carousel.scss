@@ -1,0 +1,101 @@
+/***owl carousel**/
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+}
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+.owl-theme .owl-dots .owl-dot span{
+    width: 8px;
+    height: 8px;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    display:inline-block;
+}
+.owl-theme .owl-dots .owl-dot.active span{
+    background-color: $primary-color;
+    box-shadow: 0px 1px 5px rgba(#000,.4);
+}
+.owl-theme .owl-nav {
+    margin-top: 10px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    .owl-next{
+        right: 0;
+        top:-40px;
+        position: absolute;
+    }
+    .owl-prev{
+        left: 0;
+        top:-40px;
+        position: absolute;
+    }
+}
+.owl-theme .owl-nav [class*=owl-]{
+
+    border-radius: 50%;
+    -webkit-border-radius:50%;
+    width: 32px;
+    height: 32px;
+    background-color:transparent;
+    opacity:1;
+    line-height: 32px;
+    font-size: 18px;
+    padding:0px;
+    transition:all .3s;
+    -webkit-transition:all .3s;
+    i{
+        display: inline-block;
+    }
+    &:hover{
+        background-color: $primary-color;
+        opacity:1;
+    }
+}
+.carousel-feature .icon-box{
+    margin-top: 10px;
+}
+.carousel-dark{
+    &.owl-theme .owl-nav [class*=owl-]{
+        border-color: rgba(#fff,.5);
+        color: rgba(#fff,.5);
+        &:hover{
+          background-color:   rgba(#fff,.8);
+          color:#333;
+        }
+    }
+}
+
+/**full screen slider**/
+.carousel-main-slide{
+    
+}
+.owl-carousel.fullscreen{
+    position:relative;
+    overflow:hidden;
+    .owl-height,.owl-stage,.owl-item{
+        height:100%!important;
+        position: relative;
+    }
+    .item{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+    }
+}
+.owl-theme .owl-dots .owl-dot span{
+    
+}

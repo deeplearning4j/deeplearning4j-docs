@@ -1,0 +1,67 @@
+/*
+Hero templates
+*/
+.fullscreen{
+    width:100%;
+    height: 100%;
+    .d-flex{
+        height:100%;
+        position:relative;
+    }
+}
+    @media(min-width:992px){
+        .hero-text-style1{
+            h1{
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+        }
+    }
+    
+    /**particle hero**/
+    .particle-bg{
+        position:relative;
+        overflow:hidden;
+        .particle-content{
+        position: absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        text-align:center;
+    }
+    }
+    .error-404-content{
+        h1{
+            color:#fff;
+            font-size:9rem;
+            line-height:9rem;
+        }
+        .lead{
+            color:#fff;
+            margin-bottom: 25px;
+            font-weight:700;
+        }
+    }
+    
+    
+    /**coming soon full screen**/
+    .comingSoon{
+        h3{
+            font-size: 4rem;
+            color: #fff;
+        }
+        form{
+            max-width:400px;
+            margin:0 auto;
+        }
+        .form-control{
+            border-radius: 0px;
+            height:50px;
+            font-size:20px;
+            border: 1px solid #fff;
+        }
+        p{
+            color: #fff;
+        }
+    }

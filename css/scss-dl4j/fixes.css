@@ -1,0 +1,6 @@
+.dropdown-none::after {
+  vertical-align: .275em;
+  content: ""; }
+
+.page-content {
+  max-width: 60%; }

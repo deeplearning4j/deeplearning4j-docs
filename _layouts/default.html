@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head.html %}
+        
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
+
+        {% if page.topbar != "hide" %}
+        {% include topbar.html %}
+        {% endif %}
+
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+
+        {% include nav.html %}
+
+        <div class="page-titles title-dark pt30 pb20 mb70">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-6">
+                        <h4><span>{{ page.title }}</span></h4>
+                    </div>
+                    <div class=" col-md-6 mb0">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mb70">
+
+            {{ content }}
+
+        </div>
+               
+        {% include footer.html %}
+    </body>
+</html>

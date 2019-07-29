@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        {% include head.html %}
+
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
+
+        {% include topbar.html %}
+
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+
+        {% include nav.html %}
+
+        <div class="hero-home-bg" id="hero-home-bg"></div>
+
+        <div class="jumbotron hero-home">
+            <div class="container">
+                <p class="subtitle">Open-source, distributed, deep learning library for the JVM</p>
+                <h1 class="title">Deep Learning <br>for Java</h1>
+                <a class="btn btn-warning btn-lg btn-rounded" href="/docs/{{ site.versionString }}/deeplearning4j-quickstart" role="button">Quickstart</a> &nbsp;
+                <a class="btn btn-outline-grey btn-lg btn-rounded" href="/about" role="button">Learn More</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="section-grey">
+            <div class="container pt40 pb40">
+                <div class="row">
+                    <div class="col-lg-9 pt10">
+                        <h3 class="text-white">
+                            Join the Eclipse Deeplearning4j community on Gitter.
+                        </h3>
+                    </div>
+                    <div class="col-lg-3 pt0">
+                        <a href="https://gitter.im/deeplearning4j/deeplearning4j" target="_blank" class="btn btn-lg btn-outline-white btn-rounded" role="button">
+                            Chat Now <i class="fab fa-gitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-white">
+            <div class="container pt50">
+                <div class="row pb60">
+                    <div class="col-lg-4 mb30 wow zoomInUp" data-wow-delay="100ms" data-wow-duration=".4s" style="visibility: visible; animation-duration: 0.4s; animation-delay: 100ms; animation-name: zoomInUp;">
+                        <div class="icon-box icon-box-center">
+                            <i class="icon-hover-1 bg-warning ti-layout-grid3 icon-hover-default"></i>
+                            <h4>Distributed</h4>
+                            <p>
+                                DL4J takes advantage of the latest distributed computing frameworks including Apache Spark and Hadoop to accelerate training. On multi-GPUs, it is equal to Caffe in performance.
+                            </p>
+                        </div>
+                    </div><!--/col-->
+                    <div class="col-lg-4 mb30 wow zoomInDown" data-wow-delay="200ms" data-wow-duration=".6s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 200ms; animation-name: zoomInDown;">
+                        <div class="icon-box icon-box-center">
+                            <i class="icon-hover-1 bg-warning ti-face-smile icon-hover-default"></i>
+                            <h4>Open Source</h4>
+                            <p>
+                                The libraries are completely open-source, Apache 2.0, and maintained by the developer community and Skymind team.
+                            </p>
+                        </div>
+                    </div><!--/col-->
+                    <div class="col-lg-4 mb30 wow zoomInRight" data-wow-delay="300ms" data-wow-duration=".8s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 300ms; animation-name: zoomInRight;">
+                        <div class="icon-box icon-box-center">
+                            <i class="icon-hover-1 bg-warning ti-ruler-alt-2 icon-hover-default"></i>
+                            <h4>JVM/Python/C++  </h4>
+                            <p>
+                                Deeplearning4j is written in Java and is compatible with any JVM language, such as Scala, Clojure or Kotlin. The underlying computations are written in C, C++ and Cuda. Keras will serve as the Python API.
+                            </p>
+                        </div>
+                    </div><!--/col-->
+                </div>
+            </div>
+        </div>
+
+        <div class="pt100 pb70 bg-faded">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 wow fadeInUp mb30" data-wow-delay=".300ms" style="visibility: visible; animation-delay: 0.3ms; animation-name: fadeInUp;">
+                        <div class="mb40">
+                            <h2 class="mb20">What is Eclipse Deeplearning4j?</h2>
+                            <p class="lead mb10">
+                                Eclipse Deeplearning4j is the first commercial-grade, open-source, distributed deep-learning library written for Java and Scala. Integrated with Hadoop and Apache Spark, DL4J brings AI to business environments for use on distributed GPUs and CPUs.
+                            </p>
+                            <a href="/docs/{{ site.versionString }}/deeplearning4j-quickstart" class="btn btn-outline-warning">
+                                Quickstart
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb30">
+                        <div class="video-icon-image">
+                            <img src="images/element-coffecup.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include docbtns.html %}
+
+        <div class="bg-faded pt60 pb60">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                        <h2 class="mb10">What's included?</h2>
+                        <p class="mb10 lead">
+                             Deep neural nets are capable of record-breaking accuracy. For a quick neural net introduction, please visit our overview page. In a nutshell, Deeplearning4j lets you compose deep neural nets from various shallow nets, each of which form a so-called `layer`. This flexibility lets you combine variational autoencoders, sequence-to-sequence autoencoders, convolutional nets or recurrent nets as needed in a distributed, production-grade framework that works with Spark and Hadoop on top of distributed CPUs or GPUs.
+                        </p>
+                        <p class="mb20 lead">
+                            There are a lot of parameters to adjust when you're training a deep-learning network. We've done our best to explain them, so that Deeplearning4j can serve as a DIY tool for Java, Scala, Clojure and Kotlin programmers.
+                        </p>
+                        <a href="/docs/{{ site.versionString }}/deeplearning4j-quickstart" class="btn btn-lg btn-rounded btn-outline-warning">Quickstart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include footer.html %}
+
+        <script type="text/javascript">
+            $( document ).ready(function() {
+                particlesJS("hero-home-bg",
+                    {"particles":{"number":{"value":82,"density":{"enable":true,"value_area":962.0472365193136}},"color":{"value":"#474747"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":180,"color":"#474747","opacity":0.24051180912982842,"width":1},"move":{"enable":true,"speed":1,"direction":"right","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":true,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":24.362316369040354,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}
+                    );
+            });
+        </script>
+    </body>
+</html>

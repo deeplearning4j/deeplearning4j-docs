@@ -1,0 +1,17 @@
+/*
+Accounts style
+*/
+.accounts-page{
+    padding-top:180px;
+    padding-bottom:100px;
+    hr{
+        border-top-color:rgba(255,255,255,.1);
+    }
+    .form-control{
+        min-height:45px;
+    }
+}
+.white-card{
+    padding:30px 20px;
+    background-color:rgba(0,0,0,.6);
+}

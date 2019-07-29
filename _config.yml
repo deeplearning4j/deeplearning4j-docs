@@ -1,0 +1,93 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Deeplearning4j
+email: help@skymind.io
+description: >- # this means to ignore newlines until "baseurl:"
+  Open source, distributed deep learning for the JVM
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: deeplearning4j
+github_username:  deeplearning4j
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# sitemap
+url: "http://deeplearning4j.org" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# dl4j variables
+versionString: latest
+latestVersion: 1.0.0-beta4
+versionUri: 100-beta4
+
+# collections
+collections_dir: docs
+
+defaults:
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: tutorial
+      github_raw_base: https://raw.githubusercontent.com/deeplearning4j/dl4j-examples/master/tutorials/
+  - scope:
+      path: ""
+      type: 100-beta4
+    values:
+      layout: guide
+      version: 1.0.0-beta4
+      presetsversion: 1.5
+      cudaVersion: 10.1
+  - scope:
+      path: ""
+      type: latest
+    values:
+      layout: guide
+      version: 1.0.0-beta4
+      presetsversion: 1.5
+      cudaVersion: 10.1
+
+collections:
+  # tutorials
+  tutorials:
+    output: true
+    permalink: /tutorials/:name
+  # versioned user guides
+  latest:
+    output: true
+    permalink: /docs/latest/:name
+  v100-beta2:
+    output: true
+    permalink: /docs/1.0.0-beta4/:name
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .rvmrc
+  - .rbenv-version
+  - README.md
+  - Rakefile
+  - changelog.md
+  - utils/

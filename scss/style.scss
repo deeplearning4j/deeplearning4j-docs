@@ -1,0 +1,68 @@
+/*
+template main style file
+*/
+
+/*themify icons*/
+@font-face {
+  font-family: 'themify';
+  src: url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.eot");
+  src: url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.eot?#iefix") format('embedded-opentype'),
+		url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.woff") format('woff'),
+		url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.ttf") format('truetype'),
+		url("https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/fonts/themify.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Open+Sans:300,300i,400,400i,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400i');
+
+/**template styles**/
+@import"scss-classic-main/_variables.scss";
+@import"scss-classic-main/_base.scss";
+@import"scss-classic-main/_preloader.scss";
+@import"scss-classic-main/_buttons.scss";
+@import"scss-classic-main/_header.scss";
+@import"scss-classic-main/_dropdown.scss";
+@import"scss-classic-main/_alerts-notifications.scss";
+@import"scss-classic-main/_accordions.scss";
+@import"scss-classic-main/_accounts.scss";
+@import"scss-classic-main/_blockquotes.scss";
+@import"scss-classic-main/_breadcrumb.scss";
+@import"scss-classic-main/_blog.scss";
+@import"scss-classic-main/_carousel.scss";
+@import"scss-classic-main/_clients.scss";
+@import"scss-classic-main/_counter-countdown.scss";
+@import"scss-classic-main/_hero-templates.scss";
+@import"scss-classic-main/_icon-boxes.scss";
+@import"scss-classic-main/_img-boxes.scss";
+@import"scss-classic-main/_modals.scss";
+@import"scss-classic-main/_page-titles.scss";
+@import"scss-classic-main/_paginations.scss";
+@import"scss-classic-main/_portfolio.scss";
+@import"scss-classic-main/_pricing-boxes.scss";
+@import"scss-classic-main/_progress-bar.scss";
+@import"scss-classic-main/_promo-boxes.scss";
+@import"scss-classic-main/_revolution-slider.scss";
+@import"scss-classic-main/_sidebar.scss";
+@import"scss-classic-main/_tabs.scss";
+@import"scss-classic-main/_team.scss";
+@import"scss-classic-main/_testimonials.scss";
+@import"scss-classic-main/_title-headings.scss";
+@import"scss-classic-main/_cards.scss";
+@import"scss-classic-main/_top-bars.scss";
+@import"scss-classic-main/_career.scss";
+@import"scss-classic-main/_timeline.scss";
+@import"scss-classic-main/_smart-forms.scss";
+@import"scss-classic-main/_typed.js.scss";
+@import"scss-classic-main/_image-text-card.scss";
+@import"scss-classic-main/_footer.scss";
+@import"scss-classic-main/_responsive-utilities.scss";
+@import"scss-classic-main/_responsive.scss";
+
+@import"scss-dl4j/fixes.scss";
+@import"scss-dl4j/elements.scss";
+@import"scss-dl4j/nav.scss";
+@import"scss-dl4j/sections.scss";
+@import"scss-dl4j/hero.scss";
+@import"scss-dl4j/content.scss";
+@import"scss-dl4j/syntax.scss";

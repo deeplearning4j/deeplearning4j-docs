@@ -1,0 +1,60 @@
+/*
+Accordoins card style
+*/
+.accordion-header{
+    position: relative;
+    background-color:#fff;
+    border-bottom:0px;
+    a{
+        position: relative;
+        display:block; 
+        color: $primary-color; 
+        font-weight:600; 
+        font-size:1rem;
+        &:before{
+            content: "\e64b";         
+            position: absolute;
+            right: 0;
+            top:0;
+            font-family: 'themify';
+        }
+        &.collapsed{
+            color: $dark-color;       
+            &:before{
+                content: "\e649";
+                position: absolute;
+                right: 0;
+                top:0;
+                font-family: 'themify';
+            }
+        }
+    }
+}
+
+.card-accordion-simple{
+    .card{
+        border: 0px;
+
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+    }
+    .card-header{
+        background-color: transparent;
+        border:0px;
+        padding:0px;
+        margin-bottom:10px;
+        a{
+            display: block;
+            padding: 10px 15px;
+            background: #f5f5f5;
+            &:before{
+                top:11px;
+                right:15px;
+            }
+        }
+    }   
+    .card-body{
+        padding: 20px 15px;
+        padding-top:10px;
+    }
+}
