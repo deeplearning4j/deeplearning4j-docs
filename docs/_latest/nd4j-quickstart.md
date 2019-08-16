@@ -80,6 +80,7 @@ To create INDArrays you use the static factory methods of the [Nd4j](https://dee
 <!--- https://deeplearning4j.org/docs/latest/nd4j-overview#creating -->
 The `Nd4j.createFromArray` function is overloaded to make it easy to create INDArrays from regular Java arrays. The example below uses Java `double` arrays. Similar create methods are overloaded for `float`, `int` and `long`. The `Nd4j.createFromArray` function has overloads up to 4d for all types.
 
+{% raw %}
 ```java
 double arr_2d[][]={{1.0,2.0,3.0},{4.0,5.0,6.0},{7.0,8.0,9.0}};
 INDArray x_2d = Nd4j.createFromArray(arr_2d);
@@ -87,6 +88,7 @@ INDArray x_2d = Nd4j.createFromArray(arr_2d);
 double arr_1d[]={1.0,2.0,3.0};
 INDArray  x_1d = Nd4j.createFromArray(arr_1d);
 ```
+{% endraw %}
 
 Nd4j can create arrays initialized with zeros and ones using the functions `zeros` and `ones`. The `rand` function allows you to create an array initialized with random values.
 The default datatype of the INDArray created is `float`. Some overloads allow you to set the datatype.
