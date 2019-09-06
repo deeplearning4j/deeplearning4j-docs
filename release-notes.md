@@ -11,7 +11,9 @@ redirect_from: "/releasenotes"
     - <a href="#onezerozerobeta5-dl4j">Deeplearning4j and DL4J Keras Import</a>
     - <a href="#onezerozerobeta5-nd4j">ND4J and SameDiff</a>
     - <a href="#onezerozerobeta5-datavec">DataVec</a>
+    - <a href="#onezerozerobeta5-rl4j">RL4J</a>
     - <a href="#onezerozerobeta5-arbiter">Arbiter</a>
+    - <a href="#onezerozerobeta5-nd4s">ND4S</a>
 * <a href="#onezerozerobeta4">Version 1.0.0-beta4</a>
     - <a href="#onezerozerobeta4-dl4j">Deeplearning4j and DL4J Keras Import</a>
     - <a href="#onezerozerobeta4-nd4j">ND4J and SameDiff</a>
@@ -278,6 +280,11 @@ redirect_from: "/releasenotes"
 
 * Added full data type support to ND4S as per ND4J ([Link](https://github.com/SkymindIO/deeplearning4j/pull/51))
 * Added syntactic sugar for SameDiff (implicits, operator overloads) ([Link](https://github.com/SkymindIO/deeplearning4j/pull/113))
+
+
+---
+---
+---
 
 
 # <a name="onezerozerobeta4">Release Notes for Version 1.0.0-beta4</a>
@@ -585,6 +592,7 @@ Note to maintain old behaviour for getRow and getColumn (i.e., return rank 2 arr
 * Fixed an issue where early stopping used in Arbiter would result in a serialization exception ([Link](https://github.com/deeplearning4j/deeplearning4j/issues/7029))
 
 
+---
 ---
 ---
 
