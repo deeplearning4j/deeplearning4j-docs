@@ -71,16 +71,17 @@ redirect_from: "/releasenotes"
     - Server: See [JsonModelServer](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/main/java/org/deeplearning4j/remote/JsonModelServer.java)
     - Client: See [JsonRemoteInference](https://github.com/eclipse/deeplearning4j/blob/master/nd4j/nd4j-remote/nd4j-json-client/src/main/java/org/nd4j/remote/clients/JsonRemoteInference.java)
     - Tests/examples: See [Link](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/test/java/org/deeplearning4j/remote/JsonModelServerTest.java) and [Link](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/test/java/org/deeplearning4j/remote/BinaryModelServerTest.java)
-* Added FastText support to deeplearning4j-nlp
 * Added Scala 2.12 support, dropped Scala 2.10 support. Modules with Scala dependencies are now released with Scala 2.11 and 2.12 versions
+* Apache Spark 1.x support dropped (now only Spark 2.x is supported). Note: Spark version suffix dropped: For upgrading: `1.0.0-beta4_spark2 -> 1.0.0-beta5`
+* Added FastText support to deeplearning4j-nlp
 * CUDA support for all ND4J/SameDiff Operations
     - In 1.0.0-beta4, some operations were CPU only. Now, all operations have full CUDA support
 * Added support for new data types in ND4J (and DL4J/SameDiff): BFLOAT16, UINT16, UINT32, UINT64
 * ND4J: Implicit broadcasting support added to INDArray (already present in SameDiff - for example shape `[3,1]+[3,2]=[3,2]`)
 * CUDA 9.2, 10.0 and 10.1-Update2 still supported
     - NOTE: For CUDA 10.1, CUDA 10.1 update 2 is recommended. CUDA 10.1 and 10.1 Update 1 will still run, but rare internal cuBLAS issues may be encountered in heavily multi-threaded code on some systems
-* Apache Spark 1.x support dropped (now only Spark 2.x is supported). Note: Spark version suffix dropped: For upgrading: `1.0.0-beta4_spark2 -> 1.0.0-beta5`
 * Dependency upgrades: Jackson (2.5.1 to 2.9.9/2.9.9.3), Commons Compress (1.16.1 to 1.18), Play Framework (2.4.8 to 2.7.3), Guava: (20.0 to 28.0-jre, and shaded to avoid dependency clashes)
+* CUDA: now host (RAM) buffers are only allocated when required (previously: host buffers were always allocated), in addition to device (GPU) buffer
 
 
 
@@ -142,6 +143,7 @@ redirect_from: "/releasenotes"
 * DL4J AsyncDataSetIterator and AsyncMultiDataSetIterator moved to ND4J, use `org.nd4j.linalg.dataset.Async(Multi)DataSetIterator` instead
 * Saved models with custom layers from 1.0.0-alpha and before can no longer be loaded. Workaround: load in 1.0.0-beta4, and re-save the model ([Link](https://github.com/SkymindIO/deeplearning4j/pull/199)). Models without custom layers can still be loaded back to 0.5.0
 * Apache Spark 1.x support dropped (now only Spark 2.x is supported). Note: Spark version suffix dropped: For upgrading, change versions as follows: `1.0.0-beta4_spark2 -> 1.0.0-beta5`
+* Scala 2.10 dropped, Scala 2.12 added (for modules with Scala dependencies)
 
 
 ### Deeplearning4j: 1.0.0-beta5 Known Issues
@@ -157,6 +159,7 @@ redirect_from: "/releasenotes"
 * CUDA support for all operations without CUDA implementations ([Link](https://github.com/SkymindIO/deeplearning4j/pull/26), [Link](https://github.com/SkymindIO/deeplearning4j/pull/57), [Link](https://github.com/SkymindIO/deeplearning4j/pull/63), [Link](https://github.com/SkymindIO/deeplearning4j/pull/69), [Link](https://github.com/SkymindIO/deeplearning4j/pull/95))
 * Added model server (DL4J and SameDiff models, JSON and binary communication) - [JsonModelServer](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/main/java/org/deeplearning4j/remote/JsonModelServer.java), [JsonRemoteInference](https://github.com/eclipse/deeplearning4j/blob/master/nd4j/nd4j-remote/nd4j-json-client/src/main/java/org/nd4j/remote/clients/JsonRemoteInference.java), [Link](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/test/java/org/deeplearning4j/remote/JsonModelServerTest.java), [Link](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/test/java/org/deeplearning4j/remote/BinaryModelServerTest.java)
 * Added support for empty arrays with zeros in shape, for compatibility with TensorFlow import ([Link](https://github.com/SkymindIO/deeplearning4j/pull/10))
+* CUDA: now host (RAM) buffers are only allocated when required (previously: host buffers were always allocated), in addition to device (GPU) buffer
 * Improved SameDiff training API - added "in line" test set evaluation, returning History object with loss curve, etc ([Link](https://github.com/SkymindIO/deeplearning4j/pull/99))
 * Added saved model format validation utilities - Nd4jValidator, Nd4jCommonValidator ([Link](https://github.com/eclipse/deeplearning4j/pull/7701))
 * Added SameDiff ScoreListener (equivalent to DL4J ScoreIterationListener/PerformanceListener) ([Link](https://github.com/eclipse/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/listeners/impl/ScoreListener.java), [Link](https://github.com/eclipse/deeplearning4j/pull/7774))
