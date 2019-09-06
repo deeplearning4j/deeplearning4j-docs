@@ -63,7 +63,7 @@ redirect_from: "/releasenotes"
 * <a href="#five">Version 0.5.0</a>
 * <a href="#four">Version 0.4.0</a>
 
-# <a name="onezerozerobeta4">Release Notes for Version 1.0.0-beta5</a>
+# <a name="onezerozerobeta5">Release Notes for Version 1.0.0-beta5</a>
 
 ## Highlights - 1.0.0-beta5 Release
 
