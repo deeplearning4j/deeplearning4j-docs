@@ -76,9 +76,11 @@ redirect_from: "/releasenotes"
 * Added support for new data types in ND4J (and DL4J/SameDiff): BFLOAT16, UINT16, UINT32, UINT64
 * ND4J: Implicit broadcasting support added to INDArray (already present in SameDiff - for example shape `[3,1]+[3,2]=[3,2]`)
 * CUDA 9.2, 10.0 and 10.1-Update2 still supported
-    - NOTE: CUDA 10.1 update 2 is strongly recommended. CUDA 10.1 and 10.1 Update 1 will still run, but rare internal cuBLAS issues may be encountered in heavily multi-threaded code
-* Dependency upgrades:
-    - 
+    - NOTE: For CUDA 10.1, CUDA 10.1 update 2 is recommended. CUDA 10.1 and 10.1 Update 1 will still run, but rare internal cuBLAS issues may be encountered in heavily multi-threaded code on some systems
+* Apache Spark 1.x support dropped (now only Spark 2.x is supported). Note: Spark version suffix dropped: For upgrading: `1.0.0-beta4_spark2 -> 1.0.0-beta5`
+* Dependency upgrades: Jackson (2.5.1 to 2.9.9/2.9.9.3), Commons Compress (1.16.1 to 1.18), Play Framework (2.4.8 to 2.7.3), Guava: (20.0 to 28.0-jre, and shaded to avoid dependency clashes)
+
+
 
 ## <a name="onezerozerobeta5-dl4j">Deeplearning4J</a>
 
@@ -86,6 +88,7 @@ redirect_from: "/releasenotes"
 
 
 * Added FastText - inference and training, including OOV (out of vocabulary) support ([Link](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nlp-parent/deeplearning4j-nlp/src/main/java/org/deeplearning4j/models/fasttext/FastText.java))
+* Scala 2.12 support added, Scala 2.10 support dropped ([Link](https://github.com/SkymindIO/deeplearning4j/pull/199))
 * Added model server (DL4J and SameDiff models, JSON and binary communication) - [JsonModelServer](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/main/java/org/deeplearning4j/remote/JsonModelServer.java), [JsonRemoteInference](https://github.com/eclipse/deeplearning4j/blob/master/nd4j/nd4j-remote/nd4j-json-client/src/main/java/org/nd4j/remote/clients/JsonRemoteInference.java), [Link](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/test/java/org/deeplearning4j/remote/JsonModelServerTest.java), [Link](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-remote/deeplearning4j-json-server/src/test/java/org/deeplearning4j/remote/BinaryModelServerTest.java)
 * Added saved model format validation utilities - DL4JModelValidator, DL4JKerasModelValidator ([Link](https://github.com/eclipse/deeplearning4j/pull/7701))
 * Added LabelLastTimeStepPreProcessor ([Link](https://github.com/eclipse/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor/LabelLastTimeStepPreProcessor.java))
@@ -93,6 +96,8 @@ redirect_from: "/releasenotes"
 * Added trace level logging to MultiLayerNetwork and ComputationGraph assist with debugging certain issues ([Link](https://github.com/SkymindIO/deeplearning4j/pull/79))
 * Upsampling3D: Added NDHWC support ([Link](https://github.com/eclipse/deeplearning4j/issues/8016))
 * MergeVertex now supports broadcasting ([Link](https://github.com/eclipse/deeplearning4j/issues/6488))
+* LSTM and Dropout will now fall back on built-in implementations if an exception is encountered from cuDNN (same as Subsampling/ConvolutionLayer) ([Link](https://github.com/SkymindIO/deeplearning4j/pull/152))
+* Improved JavaDoc and cleanup up API for WordVectorSerializer ([Link](https://github.com/SkymindIO/deeplearning4j/pull/221), [Link](https://github.com/eclipse/deeplearning4j/issues/8137))
 
 ### Deeplearning4J: Bug Fixes and Optimizations
 
@@ -117,16 +122,30 @@ redirect_from: "/releasenotes"
 * Added validation for RnnOutputLayer - feature/label array lengths ([Link](https://github.com/eclipse/deeplearning4j/issues/7925))
 * Fixed an issue where SameDiffOutputLayer would not support variable minibatch size ([Link](https://github.com/eclipse/deeplearning4j/issues/7844))
 * Fixed DL4J SameDiff layer mask support ([Link](https://github.com/SkymindIO/deeplearning4j/pull/67))
-* DL4J UI: Fixed an issue where tab switching did not work when visualizing saved/stored data ([Link](https://github.com/eclipse/deeplearning4j/issues/7954))
+* DL4J UI: Fixed an issue where tab switching did not work when visualizing saved/stored data ([Link](https://github.com/eclipse/deeplearning4j/issues/7954), [Link](https://github.com/SkymindIO/deeplearning4j/pull/243))
 * DL4J UI: Fixed a rare UI threading issue ([Link](https://github.com/eclipse/deeplearning4j/issues/8017))
 * Fixed a Keras import issue with JSON format change ([Link](https://github.com/eclipse/deeplearning4j/issues/7992))
 * Fixed a Keras import issue where updater learning rate schedule could be imported incorrectly ([Link](https://github.com/SkymindIO/deeplearning4j/pull/84))
 * Fixed an issue with CnnSentenceDataSetIterator when using `UnknownWordHandling.UseUnknownVector` ([Link](https://github.com/eclipse/deeplearning4j/issues/8121), [Link](https://github.com/eclipse/deeplearning4j/issues/8120))
+* Fixes and optimizations to DL4J SameDiff layers ([Link](https://github.com/SkymindIO/deeplearning4j/pull/156))
+* MultiLayerNetwork/ComputationGraph will now log the original exception if a second exception occurs during workspace closing, instead of swallowing it (inference/fit operation try/finally blocks) ([Link](https://github.com/SkymindIO/deeplearning4j/pull/161))
+* Upgraded dependencies: Jackson (2.5.1 to 2.9.9/2.9.9.3), Commons Compress (1.16.1 to 1.18), Play Framework (2.4.8 to 2.7.3), Guava: (20.0 to 28.0-jre, shaded to avoid dependency clashes) ([Link](https://github.com/SkymindIO/deeplearning4j/pull/199))
+* Logging framework can now be configured for DL4J UI (due to Play framework dependency upgrade) ([Link](https://github.com/eclipse/deeplearning4j/issues/3808))
+* Reduced amount of garbage produced by MnistDataFetcher (impacts MNIST and EMNIST DataSetIterators) ([Link](https://github.com/SkymindIO/deeplearning4j/pull/200))
+* Activation function backpropagation has been optimized for many activation functions ([Link](https://github.com/SkymindIO/deeplearning4j/pull/211), [Link](https://github.com/SkymindIO/deeplearning4j/pull/207))
 
 
 ### Deeplearning4j: Transition Guide, 1.0.0-beta4 to 1.0.0-beta5
 
 * DL4J AsyncDataSetIterator and AsyncMultiDataSetIterator moved to ND4J, use `org.nd4j.linalg.dataset.Async(Multi)DataSetIterator` instead
+* Saved models with custom layers from 1.0.0-alpha and before can no longer be loaded. Workaround: load in 1.0.0-beta4, and re-save the model ([Link](https://github.com/SkymindIO/deeplearning4j/pull/199)). Models without custom layers can still be loaded back to 0.5.0
+* Apache Spark 1.x support dropped (now only Spark 2.x is supported). Note: Spark version suffix dropped: For upgrading, change versions as follows: `1.0.0-beta4_spark2 -> 1.0.0-beta5`
+
+
+### Deeplearning4j: 1.0.0-beta5 Known Issues
+
+* Some layers (such as LSTM) may run slower on 1.0.0-beta5 than 1.0.0-beta4 on CUDA when not using cuDNN, due to added synchronization. This synchronization will be removed in the next release after 1.0.0-beta5
+* CUDA 10.1: Rare internal cuBLAS issues may be encountered in heavily multi-threaded code on some systems, when running CUDA 10.1 Update 1 (and maybe 10.1). CUDA 10.1 update 2 is recommended.
 
 ## <a name="onezerozerobeta5-nd4j">ND4J and SameDiff</a>
 
@@ -158,9 +177,13 @@ redirect_from: "/releasenotes"
 * Added INDArray.toString(NDArrayStrings options), toStringFull() and toString overloads for easier control of array printing ([Link](https://github.com/SkymindIO/deeplearning4j/pull/36))
 * Added HashCode op, INDArray.hashCode() ([Link](https://github.com/SkymindIO/deeplearning4j/pull/50))
 * SameDiff: added whileLoop, ifCond methods for loops/conditional ops ([Link](https://github.com/SkymindIO/deeplearning4j/pull/52))
-* Cleaned up some infrequently used Nd4j methods ([Link](https://github.com/SkymindIO/deeplearning4j/pull/89), [Link](https://github.com/SkymindIO/deeplearning4j/pull/101), [Link](https://github.com/SkymindIO/deeplearning4j/pull/102))
-* Added bitwise integer operations: left/right bit shift, left/right cyclical bit shift, bitwise Hamming distance ([Link](https://github.com/SkymindIO/deeplearning4j/pull/115), [Link](https://github.com/SkymindIO/deeplearning4j/pull/118), [Link](https://github.com/SkymindIO/deeplearning4j/pull/126))
+* Cleaned up some infrequently used Nd4j methods ([Link](https://github.com/SkymindIO/deeplearning4j/pull/89), [Link](https://github.com/SkymindIO/deeplearning4j/pull/101), [Link](https://github.com/SkymindIO/deeplearning4j/pull/102), [Link](https://github.com/SkymindIO/deeplearning4j/pull/231))
+* Added bitwise integer operations: left/right bit shift, left/right cyclical bit shift, bitwise Hamming distance ([Link](https://github.com/SkymindIO/deeplearning4j/pull/115), [Link](https://github.com/SkymindIO/deeplearning4j/pull/118), [Link](https://github.com/SkymindIO/deeplearning4j/pull/126), [Link](https://github.com/SkymindIO/deeplearning4j/pull/192), [Link](https://github.com/SkymindIO/deeplearning4j/pull/195))
 * deeplearning4j-nlp: renamed AggregatingSentencePreProcessor to sentencePreProcessor method ([Link](https://github.com/eclipse/deeplearning4j/issues/8122))
+* Upgraded (and shaded) Protobuf version - 3.5.1 to 3.8.0 ([Link](https://github.com/SkymindIO/deeplearning4j/pull/162))
+* Switched to c=style error handling for libnd4j native operations ([Link](https://github.com/SkymindIO/deeplearning4j/pull/169))
+* Renamed FlatBuffers enum `org.nd4j.graph.DataType` to `org.nd4j.graph.DType` to avoid users importing incorrect type when using Nd4j methods ([Link](https://github.com/SkymindIO/deeplearning4j/pull/228), [Link](https://github.com/eclipse/deeplearning4j/issues/8159))
+* Added SameDiff.bitwise namespace for bitwise ops ([Link](https://github.com/SkymindIO/deeplearning4j/pull/232), [Link](https://github.com/eclipse/deeplearning4j/blob/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff/samediff/ops/SDBitwise.java))
 
 ### ND4J/SameDiff: Bug Fixes and Optimizations
 
@@ -194,11 +217,24 @@ redirect_from: "/releasenotes"
 * Fixed a CUDA issue for CUDA GPUs with CC 3.0 ([Link](https://github.com/SkymindIO/deeplearning4j/pull/105))
 * Fixed some possible integer overflows in c++ code ([Link](https://github.com/SkymindIO/deeplearning4j/pull/108))
 * Removed deprecated methods: Nd4j.trueScalar and Nd4j.trueVector ([Link](https://github.com/SkymindIO/deeplearning4j/pull/129), [Link](https://github.com/SkymindIO/deeplearning4j/pull/145))
+* Fixed an issue where some JVMs could warn about "Illegal reflective access" due to a (now removed) SameDiff dependency ([Link](https://github.com/eclipse/deeplearning4j/issues/8123))
+* SDVariable now no longer extends DifferentialFunction ([Link](https://github.com/SkymindIO/deeplearning4j/pull/150))
+* Moved numerous operation calculateOutputShape instances from Java to C++ ([Link](https://github.com/SkymindIO/deeplearning4j/pull/151))
+* Fixed an issue where maxpool2d_bp could throw an exception when NaN values are present ([Link](https://github.com/SkymindIO/deeplearning4j/pull/160))
+* Fixed an issue with concatenation of empty shapes (with zeros) ([Link](https://github.com/SkymindIO/deeplearning4j/pull/167))
+* Removed INDArray.javaTensorAlongDimension ([Link](https://github.com/SkymindIO/deeplearning4j/pull/170))
+* LayerNorm operation now properly supports axis arg, NCHW format data ([Link](https://github.com/eclipse/deeplearning4j/issues/8008))
+* libnd4j: cuBLAS hgemm (FP16 gemm) wil only be called for devices with compute capability >= 5.3 due to cuBLAS limitations ([Link](https://github.com/SkymindIO/deeplearning4j/pull/181))
+* Nd4j.readNumpy optimized ([Link](https://github.com/SkymindIO/deeplearning4j/pull/183))
+* Added configurable alpha parameter to ELU and lrelu_bp operations in c++ ([Link](https://github.com/SkymindIO/deeplearning4j/pull/213))
+* Cleaned up SameDiff SDCNN/SDRNN (SameDiff.cnn, .rnn) API/methods ([Link](https://github.com/SkymindIO/deeplearning4j/pull/230), [Link](https://github.com/SkymindIO/deeplearning4j/pull/238))
 
 ### ND4J: Transition Guide, 1.0.0-beta4 to 1.0.0-beta5
 
 * OldAddOp, OldSubOp, etc removed: Replace with AddOp, SubOp, etc
 * Nd4j.trueScalar and trueVector removed; use Nd4j.scalar and Nd4j.createFromArray methods
+* INDArray.javaTensorAlongDimension removed; use INDArray.tensorAlongDimension instead
+* INDArray.lengthLong() removed; use INDArray.length() instead
 
 ## <a name="onezerozerobeta5-datavec">DataVec</a>
 
@@ -232,6 +268,9 @@ redirect_from: "/releasenotes"
 * Updated EvaluationScoreFunction to use ND4J Evaluation class metrics ([Link](https://github.com/eclipse/deeplearning4j/issues/7804))
 * Fixed incorrect search size in GridSearchCandidateGenerator ([Link](https://github.com/eclipse/deeplearning4j/issues/8082))
 
+### Arbiter: Known Issues
+
+* The Jackson version upgrade necessitated a change to how generic object serialization was performed; Arbiter JSON data stored in 1.0.0-beta4 or earlier format may not be readable in 1.0.0-beta5 ([Link](https://github.com/SkymindIO/deeplearning4j/pull/237))
 
 ## <a name="onezerozerobeta5-nd4s">ND4S</a>
 
