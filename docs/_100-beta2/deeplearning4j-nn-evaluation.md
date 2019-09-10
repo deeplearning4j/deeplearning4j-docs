@@ -22,7 +22,7 @@ DataSetIterator myTestData = ...
 Evaluation eval = model.evaluate(myTestData);
 ```
 
-However, evaluation can be performed on individual minibatches also. Here is an example taken from our dataexamples/CSVExample in the [Examples](https://github.com/deeplearning4j/dl4j-examples) project.
+However, evaluation can be performed on individual minibatches also. Here is an example taken from our dataexamples/CSVExample in the [Examples](https://github.com/eclipse/deeplearning4j-examples) project.
 
 The CSV example has CSV data for 3 classes of flowers and builds a simple feed forward neural network to classify the flowers based on 4 measurements. 
 
@@ -213,7 +213,7 @@ See [ROCBinary JavaDoc](https://deeplearning4j.org/api/{{page.version}}/org/deep
 ---
 
 ### ROCBinary
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCBinary.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCBinary.java) </span>
 
 ROC (Receiver Operating Characteristic) for multi-task binary classifiers.
 
@@ -344,7 +344,7 @@ Set the label names, for printing via {- link #stats()}
 ---
 
 ### ConfusionMatrix
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ConfusionMatrix.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ConfusionMatrix.java) </span>
 
 Creates an empty confusion Matrix
 
@@ -392,7 +392,7 @@ count-element classes. For example
 ---
 
 ### ROCMultiClass
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCMultiClass.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROCMultiClass.java) </span>
 
 ROC (Receiver Operating Characteristic) for multi-class classifiers.
 
@@ -526,7 +526,7 @@ This ROCMultiClass instance is modified, by adding the stats from the other inst
 ---
 
 ### EvaluationAveraging
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationAveraging.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationAveraging.java) </span>
 
 The averaging approach for binary valuation measures when applied to multiclass classification problems.
 Macro averaging: weight each class equally<br>
@@ -540,7 +540,7 @@ Generally, macro averaging is preferred for imbalanced datasets
 ---
 
 ### RegressionEvaluation
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//RegressionEvaluation.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//RegressionEvaluation.java) </span>
 
 Evaluation method for the evaluation of regression algorithms.<br>
 Provides the following metrics, for each column:<br>
@@ -677,7 +677,7 @@ Average R2 across all columns
 ---
 
 ### ROC
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROC.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//ROC.java) </span>
 
 ROC (Receiver Operating Characteristic) for binary classifiers.<br>
 ROC has 2 modes of operation:
@@ -789,7 +789,7 @@ This ROC instance is modified, by adding the stats from the other instance.
 ---
 
 ### Evaluation
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//Evaluation.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//Evaluation.java) </span>
 
 Evaluation metrics:<br>
 - precision, recall, f1, fBeta, accuracy, Matthews correlation coefficient, gMeasure<br>
@@ -1474,7 +1474,7 @@ via {- link #getConfusionMatrix()}
 ---
 
 ### EvaluationBinary
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationBinary.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationBinary.java) </span>
 
 EvaluationBinary: used for evaluating networks with binary classification outputs. The typical classification metrics,
 such as accuracy, precision, recall, F1 score, etc. are calculated for each output.<br>
@@ -1710,7 +1710,7 @@ Get a String representation of the EvaluationBinary class, using the specified p
 ---
 
 ### EvaluationCalibration
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationCalibration.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationCalibration.java) </span>
 
 EvaluationCalibration is an evaluation class designed to analyze the calibration of a classifier.<br>
 It provides a number of tools for this purpose:
@@ -1809,7 +1809,7 @@ a histogram of P(class_i | input) is returned, only for those examples that are 
 ---
 
 ### EvaluationUtils
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationUtils.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//EvaluationUtils.java) </span>
 
 Utility methods for performing evaluation
 
@@ -1926,7 +1926,7 @@ Calculate the binary Matthews correlation coefficient from counts
 ---
 
 ### IEvaluation
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//IEvaluation.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/eval//IEvaluation.java) </span>
 
 A general purpose interface for evaluating neural networks - methods are shared by implemetations such as
 

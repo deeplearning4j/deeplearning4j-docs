@@ -16,7 +16,7 @@ layout: default
          	Find a bug or requesting a new feature? Report all Eclipse Deeplearning4j issues on Github.
         </p>
         <p>
-        	<a href="https://github.com/deeplearning4j/deeplearning4j/issues" target="_blank" role="button" class="btn btn-rounded btn-lg btn-warning">View on Github <i class="fab fa-github"></i></a>
+        	<a href="https://github.com/eclipse/deeplearning4j/issues" target="_blank" role="button" class="btn btn-rounded btn-lg btn-warning">View on Github <i class="fab fa-github"></i></a>
         </p>
     </div>
     <div class="col-md-4 mb30">

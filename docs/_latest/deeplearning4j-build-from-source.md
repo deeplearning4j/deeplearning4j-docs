@@ -19,7 +19,7 @@ Building locally requires that you build the entire Deeplearning4j stack which i
 - [libnd4j](https://github.com/deeplearning4j/libnd4j)
 - [nd4j](https://github.com/deeplearning4j/nd4j)
 - [datavec](https://github.com/deeplearning4j/datavec)
-- [deeplearning4j](https://github.com/deeplearning4j/deeplearning4j)
+- [deeplearning4j](https://github.com/eclipse/deeplearning4j)
 
 Note that Deeplearning4j is designed to work on most platforms (Windows, OS X, and Linux) and is also includes multiple "flavors" depending on the computing architecture you choose to utilize. This includes CPU (OpenBLAS, MKL, ATLAS) and GPU (CUDA). The DL4J stack also supports x86 and PowerPC architectures.
 
@@ -288,7 +288,7 @@ copy mkl_rt.dll libblas3.dll
 
 ### Build Script
 
-You can use the [build-dl4j-stack.sh](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/build-dl4j-stack.sh) script from the deeplearning4j repository to build the whole deeplearning4j stack from source: libndj4, ndj4, datavec, deeplearning4j. It clones the DL4J stack, builds each repository, and installs them locally to Maven. This script will work on both Linux and OS X platforms.
+You can use the [build-dl4j-stack.sh](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/build-dl4j-stack.sh) script from the deeplearning4j repository to build the whole deeplearning4j stack from source: libndj4, ndj4, datavec, deeplearning4j. It clones the DL4J stack, builds each repository, and installs them locally to Maven. This script will work on both Linux and OS X platforms.
 
 OK, now read the following section carefully. 
 
@@ -298,7 +298,7 @@ Use the build script below for CPU architectures:
 ./build-dl4j-stack.sh
 ```
 Make sure to read this if you are on OS X (ensure gcc 5.x is setup and you aren't using clang):
-https://github.com/deeplearning4j/deeplearning4j/issues/2668
+https://github.com/eclipse/deeplearning4j/issues/2668
 
 
 If you are using a GPU backend, use this instead:
@@ -366,7 +366,7 @@ fi
 cd ..
 
 # build and install deeplearning4j
-git clone https://github.com/deeplearning4j/deeplearning4j.git
+git clone https://github.com/eclipse/deeplearning4j.git
 cd deeplearning4j
 # cross-build across Scala versions (recommended)
 ./buildmultiplescalaversions.sh clean install -DskipTests -Dmaven.javadoc.skip=true
@@ -380,7 +380,7 @@ cd ..
 
 ## Using Local Dependencies
 
-Once you've installed the DL4J stack to your local maven repository, you can now include it in your build tool's dependencies. Follow the typical [Getting Started](http://deeplearning4j.org/gettingstarted) instructions for Deeplearning4j, and appropriately replace versions with the SNAPSHOT version currently on the [master POM](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/pom.xml).
+Once you've installed the DL4J stack to your local maven repository, you can now include it in your build tool's dependencies. Follow the typical [Getting Started](http://deeplearning4j.org/gettingstarted) instructions for Deeplearning4j, and appropriately replace versions with the SNAPSHOT version currently on the [master POM](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/pom.xml).
 
 Note that some build tools such as Gradle and SBT don't properly pull in platform-specific binaries. You can follow instructions [here](http://nd4j.org/dependencies.html) for setting up your favorite build tool.
 

@@ -12,7 +12,7 @@ weight: 1
 ---
 
 ### GeographicMidpointReduction
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/reduce/impl/GeographicMidpointReduction.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/reduce/impl/GeographicMidpointReduction.java) </span>
 
 delimiter is configurable), determine the geographic midpoint.
 See "geographic midpoint" at: <a href="http://www.geomidpoint.com/methods.html">http://www.geomidpoint.com/methods.html</a>
@@ -34,7 +34,7 @@ public Schema transform(Schema inputSchema)
 ---
 
 ### StringReducer
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/stringreduce/StringReducer.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/stringreduce/StringReducer.java) </span>
 
 A StringReducer is used to take a set of examples and reduce them.
 The idea: suppose you have a large number of columns, and you want to combine/reduce the values in each column.<br>

@@ -16,7 +16,7 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 ---
 
 ### Convolution1D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution1D.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution1D.java) </span>
 
 1D convolution layer. Expects input activations of shape [minibatch,channels,sequenceLength]
 
@@ -27,7 +27,7 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 ---
 
 ### Convolution2D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution2D.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution2D.java) </span>
 
 2D convolution layer
 
@@ -38,7 +38,7 @@ Each layer in a neural network configuration represents a unit of hidden units. 
 ---
 
 ### Convolution3D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution3D.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Convolution3D.java) </span>
 
 3D convolution layer configuration
 
@@ -156,7 +156,7 @@ Set dilation size for 3D convolutions in (depth, height, width) order
 ---
 
 ### Deconvolution2D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Deconvolution2D.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/Deconvolution2D.java) </span>
 
 2D deconvolution layer configuration<br>
 
@@ -206,7 +206,7 @@ Size of the convolution rows/columns
 ---
 
 ### Cropping1D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping1D.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping1D.java) </span>
 
 Cropping layer for convolutional (1d) neural networks. Allows cropping to be done separately for top/bottom
 
@@ -242,7 +242,7 @@ public Cropping1D build()
 ---
 
 ### Cropping2D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping2D.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping2D.java) </span>
 
 Cropping layer for convolutional (2d) neural networks. Allows cropping to be done separately for
 top/bottom/left/right
@@ -280,7 +280,7 @@ public Cropping2D build()
 ---
 
 ### Cropping3D
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping3D.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/convolutional/Cropping3D.java) </span>
 
 Cropping layer for convolutional (3d) neural networks. Allows cropping to be done separately for upper and lower
 bounds of depth, height and width dimensions.

@@ -11,7 +11,7 @@ json_link: 00.%20Quickstart%20for%20Deeplearning4j.json
 Deeplearning4j - also known as "DL4J" - is a
 high performance domain-specific language to configure deep neural networks,
 which are made of multiple layers. Deeplearning4j is [open
-source](https://github.com/deeplearning4j/deeplearning4j/), written in C++,
+source](https://github.com/eclipse/deeplearning4j/), written in C++,
 Java, Scala, and Python, and maintained by the Eclipse Foundation & community
 contributors.
 

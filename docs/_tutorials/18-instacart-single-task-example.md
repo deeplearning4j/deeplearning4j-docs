@@ -9,7 +9,7 @@ json_link: 18.%20Instacart%20Single%20Task%20Example.json
 ### Note
 
 Please view the
-[README](https://github.com/deeplearning4j/deeplearning4j/tree/master/dl4j-
+[README](https://github.com/eclipse/deeplearning4j/tree/master/dl4j-
 examples/tutorials/README.md) to learn about installing, setting up
 dependencies, and importing notebooks in Zeppelin
 

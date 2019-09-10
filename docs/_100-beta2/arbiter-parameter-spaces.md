@@ -12,7 +12,7 @@ weight: 1
 ---
 
 ### BooleanSpace
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/BooleanSpace.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/BooleanSpace.java) </span>
 
 If argument to setValue is less than or equal to 0.5 it will return True else False
 
@@ -23,7 +23,7 @@ If argument to setValue is less than or equal to 0.5 it will return True else Fa
 ---
 
 ### FixedValue
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/FixedValue.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/FixedValue.java) </span>
 
 FixedValue is a ParameterSpace that defines only a single fixed value
 
@@ -34,7 +34,7 @@ FixedValue is a ParameterSpace that defines only a single fixed value
 ---
 
 ### ContinuousParameterSpace
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/continuous/ContinuousParameterSpace.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/continuous/ContinuousParameterSpace.java) </span>
 
 
 
@@ -56,7 +56,7 @@ ContinuousParameterSpace with uniform distribution between the minimum and maxim
 ---
 
 ### DiscreteParameterSpace
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/discrete/DiscreteParameterSpace.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/discrete/DiscreteParameterSpace.java) </span>
 
 A DiscreteParameterSpace is used for a set of un-ordered values
 
@@ -67,7 +67,7 @@ A DiscreteParameterSpace is used for a set of un-ordered values
 ---
 
 ### IntegerParameterSpace
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/integer/IntegerParameterSpace.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/integer/IntegerParameterSpace.java) </span>
 
 some minimum and maximum value
 
@@ -90,7 +90,7 @@ Create an IntegerParameterSpace with a uniform distribution between the specifie
 ---
 
 ### MathOp
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/math/MathOp.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/math/MathOp.java) </span>
 
 A simple parameter space that implements scalar mathematical operations on another parameter space. This allows you
 to do things like Y = X  2, where X is a parameter space. For example, a layer size hyperparameter could be set
@@ -103,7 +103,7 @@ using this to 2x the size of the previous layer
 ---
 
 ### PairMathOp
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/math/PairMathOp.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/arbiter/arbiter-core/src/main/java/org/deeplearning4j/arbiter/optimize/parameter/math/PairMathOp.java) </span>
 
 A simple parameter space that implements pairwise mathematical operations on another parameter space. This allows you
 to do things like Z = X + Y, where X and Y are parameter spaces.

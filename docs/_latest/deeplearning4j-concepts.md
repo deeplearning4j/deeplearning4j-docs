@@ -95,7 +95,7 @@ Also note that DL4J does not only support training just `MultiLayerNetworks`, bu
 As you train your model, you will want to test how well it performs. For that test, you will need a dedicated data set that will not be used for training but instead will only be used for evaluating your model. This data should have the same distribution as the real-world data you want to make predictions about with your model. The reason you can't simply use your training data for evaluation is because machine learning methods are prone to overfitting (getting good at making predictions about the training set, but not performing well on larger datasets).
 
 The [Evaluation](/api/{{page.version}}/org/deeplearning4j/eval/Evaluation.html)
-class is used for evaluation. Slightly different methods apply to evaluating a normal feed forward networks or recurrent networks. For more details on using it, take a look at the corresponding [examples](https://github.com/deeplearning4j/dl4j-examples).
+class is used for evaluation. Slightly different methods apply to evaluating a normal feed forward networks or recurrent networks. For more details on using it, take a look at the corresponding [examples](https://github.com/eclipse/deeplearning4j-examples).
 
 ## Troubleshooting a Neural Net Model
 

@@ -26,10 +26,10 @@ layout: cn-default
 
 我们还提供在[GPU](https://deeplearning4j.org/cn/gpu)和[Android系统](https://deeplearning4j.org/cn/android)上运行DL4J的操作指南。
 
-我们的所有[示例](https://github.com/deeplearning4j/dl4j-examples)应当都能“开箱即用”，可以直接运行。这是因为`nd4j-native-platform`捆绑了所有原生依赖项（包括POWER）。如需进一步了解有关运行示例的信息，请参见我们的[快速入门指南](http://deeplearning4j.org/cn/quickstart)。
+我们的所有[示例](https://github.com/eclipse/deeplearning4j-examples)应当都能“开箱即用”，可以直接运行。这是因为`nd4j-native-platform`捆绑了所有原生依赖项（包括POWER）。如需进一步了解有关运行示例的信息，请参见我们的[快速入门指南](http://deeplearning4j.org/cn/quickstart)。
 
 如需在服务器上运行DL4J，您可以用Maven创建一个[uber JAR](http://stackoverflow.com/questions/11947037/what-is-an-uber-jar)，这一步骤很容易完成。
 
-在示例中，我们用[Maven Shade插件](https://maven.apache.org/plugins/maven-shade-plugin/)来将所有必需的依赖项打包成一个JAR文件。具体操作方式可参见[此处](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/pom.xml#L140)的示例。
+在示例中，我们用[Maven Shade插件](https://maven.apache.org/plugins/maven-shade-plugin/)来将所有必需的依赖项打包成一个JAR文件。具体操作方式可参见[此处](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-examples/pom.xml#L140)的示例。
 
 如果您在用POWER处理器运行Deeplearning4j时遇到任何问题，请随时在[线上交流群](https://gitter.im/deeplearning4j/deeplearning4j)中向我们提出。

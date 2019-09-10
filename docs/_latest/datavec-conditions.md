@@ -12,7 +12,7 @@ weight: 3
 ---
 
 ### BooleanCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/BooleanCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/BooleanCondition.java) </span>
 
 BooleanCondition: used for creating compound conditions,
 such as AND(ConditionA, ConditionB, ...)<br>
@@ -126,7 +126,7 @@ And of all the given conditions
 ---
 
 ### SequenceConditionMode
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/SequenceConditionMode.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/SequenceConditionMode.java) </span>
 
 For certain single-column conditions: how should we apply these to sequences?<br>
 <b>And</b>: Condition applies to sequence only if it applies to ALL time steps<br>
@@ -140,7 +140,7 @@ For certain single-column conditions: how should we apply these to sequences?<br
 ---
 
 ### BooleanColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/BooleanColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/BooleanColumnCondition.java) </span>
 
 Created by agibsonccc on 11/26/16.
 
@@ -177,7 +177,7 @@ false otherwise
 ---
 
 ### CategoricalColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/CategoricalColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/CategoricalColumnCondition.java) </span>
 
 
 
@@ -214,7 +214,7 @@ false otherwise
 ---
 
 ### DoubleColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/DoubleColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/DoubleColumnCondition.java) </span>
 
 
 
@@ -251,7 +251,7 @@ false otherwise
 ---
 
 ### InfiniteColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/InfiniteColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/InfiniteColumnCondition.java) </span>
 
 A column condition that simply checks whether a floating point value is infinite
 
@@ -271,7 +271,7 @@ public boolean columnCondition(Writable writable)
 ---
 
 ### IntegerColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/IntegerColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/IntegerColumnCondition.java) </span>
 
 
 
@@ -308,7 +308,7 @@ false otherwise
 ---
 
 ### InvalidValueColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/InvalidValueColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/InvalidValueColumnCondition.java) </span>
 
 A Condition that applies to a single column.
 Whenever the specified value is invalid according to the schema, the condition applies.
@@ -337,7 +337,7 @@ false otherwise
 ---
 
 ### LongColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/LongColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/LongColumnCondition.java) </span>
 
 
 
@@ -374,7 +374,7 @@ false otherwise
 ---
 
 ### NaNColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/NaNColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/NaNColumnCondition.java) </span>
 
 A column condition that simply checks whether a floating point value is NaN
 
@@ -394,7 +394,7 @@ public boolean columnCondition(Writable writable)
 ---
 
 ### NullWritableColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/NullWritableColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/NullWritableColumnCondition.java) </span>
 
 Condition that applies to the values in any column. Specifically, condition is true
 if the Writable value is a NullWritable, and false for any other value
@@ -420,7 +420,7 @@ false otherwise
 ---
 
 ### StringColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/StringColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/StringColumnCondition.java) </span>
 
 
 
@@ -457,7 +457,7 @@ false otherwise
 ---
 
 ### TimeColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/TimeColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/TimeColumnCondition.java) </span>
 
 Condition that applies to the values
 
@@ -495,7 +495,7 @@ false otherwise
 ---
 
 ### TrivialColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/TrivialColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/column/TrivialColumnCondition.java) </span>
 
 Created by huitseeker on 5/17/17.
 
@@ -505,7 +505,7 @@ Created by huitseeker on 5/17/17.
 ---
 
 ### SequenceLengthCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/sequence/SequenceLengthCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/sequence/SequenceLengthCondition.java) </span>
 
 A condition on sequence lengths
 
@@ -516,7 +516,7 @@ A condition on sequence lengths
 ---
 
 ### StringRegexColumnCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/string/StringRegexColumnCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/condition/string/StringRegexColumnCondition.java) </span>
 
 Condition that applies to the values in a String column, using a provided regex.
 Condition return true if the String matches the regex, or false otherwise<br>

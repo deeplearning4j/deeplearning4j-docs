@@ -200,5 +200,5 @@ println("Recall: "+evaluation.recall())
 ### What's next?
 
 - Check out all of our tutorials available [on
-Github](https://github.com/deeplearning4j/deeplearning4j/tree/master/dl4j-
+Github](https://github.com/eclipse/deeplearning4j/tree/master/dl4j-
 examples/tutorials). Notebooks are numbered for easy following.

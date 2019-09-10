@@ -14,7 +14,7 @@ This page provides the API reference for key classes required to do distributed 
 ---
 
 ### SharedTrainingMaster
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark-parameterserver/src/main/java/org/deeplearning4j/spark/parameterserver/training/SharedTrainingMaster.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark-parameterserver/src/main/java/org/deeplearning4j/spark/parameterserver/training/SharedTrainingMaster.java) </span>
 
 SharedTrainingMaster implements distributed training of neural networks using a compressed quantized gradient (update)
 sharing implementation based on the Strom 2015 paper "Scalable Distributed DNN Training Using Commodity GPU Cloud Computing":
@@ -310,7 +310,7 @@ encodingDebugMode is disabled by default.<br>
 ---
 
 ### SparkComputationGraph
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/impl/graph/SparkComputationGraph.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/impl/graph/SparkComputationGraph.java) </span>
 
 Main class for training ComputationGraph networks using Spark.
 Also used for performing distributed evaluation and inference on these networks
@@ -610,7 +610,7 @@ public ROC evaluateROCMDS(JavaRDD<MultiDataSet> data)
 ---
 
 ### SparkDl4jMultiLayer
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/impl/multilayer/SparkDl4jMultiLayer.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/impl/multilayer/SparkDl4jMultiLayer.java) </span>
 
 Main class for training MultiLayerNetwork networks using Spark.
 Also used for performing distributed evaluation and inference on these networks
@@ -910,7 +910,7 @@ a key for each example.
 ---
 
 ### ParameterAveragingTrainingMaster
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/impl/paramavg/ParameterAveragingTrainingMaster.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-scaleout/spark/dl4j-spark/src/main/java/org/deeplearning4j/spark/impl/paramavg/ParameterAveragingTrainingMaster.java) </span>
 
 implementation for training networks on Spark.
 This is standard parameter averaging with a

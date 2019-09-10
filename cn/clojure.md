@@ -65,4 +65,4 @@ Clojure初学者可以先参考下列资源：
 
 ## 其他Deeplearning4j语言
 
-Deeplearning4j还提供[Java](https://github.com/deeplearning4j/deeplearning4j)、[Scala](https://github.com/deeplearning4j/ScalNet)和[Python](./keras)的API，其中Python的API为Keras。
+Deeplearning4j还提供[Java](https://github.com/eclipse/deeplearning4j)、[Scala](https://github.com/deeplearning4j/ScalNet)和[Python](./keras)的API，其中Python的API为Keras。

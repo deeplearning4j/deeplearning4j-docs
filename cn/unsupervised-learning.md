@@ -63,7 +63,7 @@ K－最近邻算法用于分类和回归，其核心是一个K-d树。[K-d树](h
 
 ### <a name="vp">VP树</a>
 
-K－最近邻算法的基本实现是VP树，我们的实现方法见[此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/clustering/vptree/VPTree.java#L59-59)。
+K－最近邻算法的基本实现是VP树，我们的实现方法见[此处](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-core/src/main/java/org/deeplearning4j/clustering/vptree/VPTree.java#L59-59)。
 
 ### 其他资源
 

@@ -22,7 +22,7 @@ In Eclipse Deeplearning4j a vertex is a type of layer that acts as a node in a `
 ---
 
 ### L2NormalizeVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/L2NormalizeVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/L2NormalizeVertex.java) </span>
 
 L2NormalizeVertex performs L2 normalization on a single input.
 
@@ -33,7 +33,7 @@ L2NormalizeVertex performs L2 normalization on a single input.
 ---
 
 ### L2Vertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/L2Vertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/L2Vertex.java) </span>
 
 L2Vertex calculates the L2 least squares error of two inputs.
 
@@ -50,7 +50,7 @@ L2 vertices to calculate two real numbers which can be fed into a LossLayer to c
 ---
 
 ### PoolHelperVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/PoolHelperVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/PoolHelperVertex.java) </span>
 
 A custom layer for removing the first column and row from an input. This is meant to allow
 importation of Caffe's GoogLeNet from <a href="https://gist.github.com/joelouismarino/a2ede9ab3928f999575423b9887abd14">
@@ -63,7 +63,7 @@ https://gist.github.com/joelouismarino/a2ede9ab3928f999575423b9887abd14</a>.
 ---
 
 ### ReshapeVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ReshapeVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ReshapeVertex.java) </span>
 
 Adds the ability to reshape and flatten the tensor in the computation graph. This is the equivalent
 to the next layer. ReshapeVertex also ensures the shape is valid for the backward pass.
@@ -75,7 +75,7 @@ to the next layer. ReshapeVertex also ensures the shape is valid for the backwar
 ---
 
 ### ScaleVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ScaleVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ScaleVertex.java) </span>
 
 A ScaleVertex is used to scale the size of activations of a single layer<br>
 For example, ResNet activations can be scaled in repeating blocks to keep variance
@@ -88,7 +88,7 @@ under control.
 ---
 
 ### ShiftVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ShiftVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/ShiftVertex.java) </span>
 
 A ShiftVertex is used to shift the activations of a single layer<br>
 One could use it to add a bias or as part of some other calculation.
@@ -110,7 +110,7 @@ to accomplish that.
 ---
 
 ### StackVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/StackVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/StackVertex.java) </span>
 
 StackVertex allows for stacking of inputs so that they may be forwarded through
 a network. This is useful for cases such as Triplet Embedding, where shared parameters
@@ -128,7 +128,7 @@ This vertex will automatically stack all available inputs.
 ---
 
 ### UnstackVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/UnstackVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/UnstackVertex.java) </span>
 
 UnstackVertex allows for unstacking of inputs so that they may be forwarded through
 a network. This is useful for cases such as Triplet Embedding, where embeddings can
@@ -150,7 +150,7 @@ explicitly defined by the user to properly calculate an step.
 ---
 
 ### ReverseTimeSeriesVertex
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/rnn/ReverseTimeSeriesVertex.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/graph/vertex/impl/rnn/ReverseTimeSeriesVertex.java) </span>
 
 ReverseTimeSeriesVertex is used in recurrent neural networks to revert the order of time series.
 As a result, the last time step is moved to the beginning of the time series and the first time step

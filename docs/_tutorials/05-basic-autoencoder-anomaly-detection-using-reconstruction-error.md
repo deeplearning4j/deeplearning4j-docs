@@ -316,4 +316,4 @@ renderBufferedImages(best.map(encodeArrayToImage))
 ### What's next?
 
 - Check out other DL4J tutorials available [on
-Github](https://github.com/deeplearning4j/dl4j-examples/tree/master/tutorials).
+Github](https://github.com/eclipse/deeplearning4j-examples/tree/master/tutorials).

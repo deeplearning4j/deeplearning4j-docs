@@ -161,7 +161,7 @@ For eg, if a learning rate is specified this learning rate will apply to all unf
 ---
 
 ### FineTuneConfiguration
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//FineTuneConfiguration.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//FineTuneConfiguration.java) </span>
 
 Configuration for fine tuning. Note that values set here will override values for all non-frozen layers
 
@@ -181,7 +181,7 @@ Activation function / neuron non-linearity
 ---
 
 ### TransferLearning
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//TransferLearning.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//TransferLearning.java) </span>
 
 The transfer learning API can be used to modify the architecture or the learning parameters of an existing multilayernetwork or computation graph.
 It allows one to
@@ -545,7 +545,7 @@ Init has been internally called. Can be fit directly.
 ---
 
 ### TransferLearningHelper
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//TransferLearningHelper.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/transferlearning//TransferLearningHelper.java) </span>
 
 This class is intended for use with the transfer learning API.
 Often times transfer learning models have "frozen" layers where parameters are held constant during training

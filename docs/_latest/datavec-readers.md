@@ -48,7 +48,7 @@ return one record
 ---
 
 ### ConcatenatingRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/ConcatenatingRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/ConcatenatingRecordReader.java) </span>
 
 Combine multiple readers into a single reader. Records are read sequentially - thus if the first reader has
 100 records, and the second reader has 200 records, ConcatenatingRecordReader will have 300 records.
@@ -61,7 +61,7 @@ Combine multiple readers into a single reader. Records are read sequentially - t
 ---
 
 ### FileRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/FileRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/FileRecordReader.java) </span>
 
 File reader/writer
 
@@ -84,7 +84,7 @@ in the label list
 ---
 
 ### LineRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/LineRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/LineRecordReader.java) </span>
 
 Reads files line by line
 
@@ -95,7 +95,7 @@ Reads files line by line
 ---
 
 ### CollectionRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/collection/CollectionRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/collection/CollectionRecordReader.java) </span>
 
 Collection record reader.
 Mainly used for testing.
@@ -107,7 +107,7 @@ Mainly used for testing.
 ---
 
 ### CollectionSequenceRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/collection/CollectionSequenceRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/collection/CollectionSequenceRecordReader.java) </span>
 
 Collection record reader for sequences.
 Mainly used for testing.
@@ -130,7 +130,7 @@ are a sequence, and the outer list/collection is a list of sequences
 ---
 
 ### ListStringRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/collection/ListStringRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/collection/ListStringRecordReader.java) </span>
 
 Iterates through a list of strings return a record.
 
@@ -237,7 +237,7 @@ Return the configuration used by this object.
 ---
 
 ### CSVRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVRecordReader.java) </span>
 
 Simple csv record reader.
 
@@ -258,7 +258,7 @@ Skip first n lines
 ---
 
 ### CSVRegexRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVRegexRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVRegexRecordReader.java) </span>
 
 A CSVRecordReader that can split
 each column into additional columns using regexs.
@@ -270,7 +270,7 @@ each column into additional columns using regexs.
 ---
 
 ### CSVSequenceRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVSequenceRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVSequenceRecordReader.java) </span>
 
 CSV Sequence Record Reader
 This reader is intended to read sequences of data in CSV format, where
@@ -283,7 +283,7 @@ Each line in the file represents one time step
 ---
 
 ### CSVVariableSlidingWindowRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVVariableSlidingWindowRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/csv/CSVVariableSlidingWindowRecordReader.java) </span>
 
 A sliding window of variable size across an entire CSV.
 
@@ -306,7 +306,7 @@ No-arg constructor with the default number of lines per sequence (10)
 ---
 
 ### LibSvmRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/misc/LibSvmRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/misc/LibSvmRecordReader.java) </span>
 
 Record reader for libsvm format, which is closely
 related to SVMLight format. Similar to scikit-learn
@@ -326,7 +326,7 @@ Further details on the format can be found at<br>
 ---
 
 ### MatlabRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/misc/MatlabRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/misc/MatlabRecordReader.java) </span>
 
 Matlab record reader
 
@@ -337,7 +337,7 @@ Matlab record reader
 ---
 
 ### SVMLightRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/misc/SVMLightRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/misc/SVMLightRecordReader.java) </span>
 
 Record reader for SVMLight format, which can generally
 be described as
@@ -418,7 +418,7 @@ Return next record as list of Writables.
 ---
 
 ### RegexLineRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/regex/RegexLineRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/regex/RegexLineRecordReader.java) </span>
 
 RegexLineRecordReader: Read a file, one line at a time, and split it into fields using a regex.
 To load an entire file using a
@@ -434,7 +434,7 @@ would be split into 4 Text writables: ["2016-01-01 23:59:59.001", "1", "DEBUG", 
 ---
 
 ### RegexSequenceRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/regex/RegexSequenceRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/regex/RegexSequenceRecordReader.java) </span>
 
 RegexSequenceRecordReader: Read an entire file (as a sequence), one line at a time and
 split each line into fields using a regex.
@@ -453,7 +453,7 @@ or skip invalid but log a warning (SkipInvalidWithWarning)
 ---
 
 ### TransformProcessRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/transform/TransformProcessRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/transform/TransformProcessRecordReader.java) </span>
 
 to have a transform process applied before being returned.
 
@@ -596,7 +596,7 @@ Return the configuration used by this object.
 ---
 
 ### TransformProcessSequenceRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/transform/TransformProcessSequenceRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/reader/impl/transform/TransformProcessSequenceRecordReader.java) </span>
 
 to be transformed before being returned.
 
@@ -777,7 +777,7 @@ the {- code IOException}.
 ---
 
 ### NativeAudioRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-audio/src/main/java/org/datavec/audio/recordreader/NativeAudioRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-audio/src/main/java/org/datavec/audio/recordreader/NativeAudioRecordReader.java) </span>
 
 Native audio file loader using FFmpeg.
 
@@ -788,7 +788,7 @@ Native audio file loader using FFmpeg.
 ---
 
 ### WavFileRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-audio/src/main/java/org/datavec/audio/recordreader/WavFileRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-audio/src/main/java/org/datavec/audio/recordreader/WavFileRecordReader.java) </span>
 
 Wav file loader
 
@@ -798,7 +798,7 @@ Wav file loader
 ---
 
 ### ImageRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-image/src/main/java/org/datavec/image/recordreader/ImageRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-image/src/main/java/org/datavec/image/recordreader/ImageRecordReader.java) </span>
 
 Image record reader.
 Reads a local file system and parses images of a given
@@ -814,7 +814,7 @@ Also appends the label if specified
 ---
 
 ### TfidfRecordReader
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-nlp/src/main/java/org/datavec/nlp/reader/TfidfRecordReader.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-data/datavec-data-nlp/src/main/java/org/datavec/nlp/reader/TfidfRecordReader.java) </span>
 
 TFIDF record reader (wraps a tfidf vectorizer
 for delivering labels and conforming to the record reader interface)

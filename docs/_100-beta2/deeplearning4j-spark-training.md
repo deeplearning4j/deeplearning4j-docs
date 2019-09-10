@@ -43,7 +43,7 @@ Note that if you want a parameter server based approach (requires more setup!), 
 This page assumes a working knowledge of Spark. If you are not familiar with setting up Spark clusters and running
 Spark jobs, this page will not teach you. Please consider studying Spark basics first, and then returning to this page. The [Spark quick start](https://spark.apache.org/docs/latest/quick-start.html) is a great place to start with running Spark jobs.
 
-If you want to run multiple models on the same server, consider using [parallelwrapper instead](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-cuda-specific-examples/src/main/java/org/deeplearning4j/examples/multigpu/MultiGpuLenetMnistExample.java).
+If you want to run multiple models on the same server, consider using [parallelwrapper instead](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-cuda-specific-examples/src/main/java/org/deeplearning4j/examples/multigpu/MultiGpuLenetMnistExample.java).
 
 <p align="center">
 <a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
@@ -58,7 +58,7 @@ You should use `parallelwrapper` when you have a big box (64 cores or more) or m
 
 Note that you can use multiple GPUs *and* cuDNN with Spark. The most difficult part of this will be cluster setup. It is *not* DL4J's responsibility, beyond being a Spark job.
 
-If you have not run JVM-based Spark jobs before, we recommend [building an uber JAR using the Maven Shade plugin](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/pom.xml#L140) . 
+If you have not run JVM-based Spark jobs before, we recommend [building an uber JAR using the Maven Shade plugin](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-examples/pom.xml#L140) . 
 
 If you would like a managed Spark cluster set up for you, [please contact us](https://skymind.ai/contact). Various cloud services such as Elastic map reduce are another way of running and managing a Spark cluster.
 
@@ -92,7 +92,7 @@ The typical workflow for training a network on a Spark cluster (using spark-subm
 **Note**: For single machine training, Spark local *can* be used with DL4J, though this is not recommended (due to the synchronization and serialization overheads of Spark). Instead, consider the following:
 
 * For single CPU/GPU systems, use standard MultiLayerNetwork or ComputationGraph training
-* For multi-CPU/GPU systems, use [ParallelWrapper](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java). This is functionally equivalent to running Spark in local mode, though has lower overhead (and hence provides better training performance).
+* For multi-CPU/GPU systems, use [ParallelWrapper](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java). This is functionally equivalent to running Spark in local mode, though has lower overhead (and hence provides better training performance).
 
 ## <a name="how">How Distributed Network Training Occurs with DL4J on Spark</a>
 
@@ -234,7 +234,7 @@ Note that ```${scala.binary.version}``` is a Maven property with the value ```2.
 
 ## <a name="examples">Spark Examples Repository</a>
 
-The [Deeplearning4j examples repo](https://github.com/deeplearning4j/dl4j-examples) contains a number of Spark examples.
+The [Deeplearning4j examples repo](https://github.com/eclipse/deeplearning4j-examples) contains a number of Spark examples.
 
 ## <a name="gpusspark">Training with GPUs on Spark</a>
 
@@ -511,7 +511,7 @@ Under the Create Cluster -> Advanced Options -> Edit Software Settings, add the 
 
 ## Resources
 
-* [Deeplearning4j Examples Repo](https://github.com/deeplearning4j/dl4j-examples)
+* [Deeplearning4j Examples Repo](https://github.com/eclipse/deeplearning4j-examples)
 * ND4S: [N-Dimensional Arrays for Scala](https://github.com/deeplearning4j/nd4s)
 * [ND4J, Scala & Scientific Computing](http://nd4j.org/scala.html)
 * [Intro to Iterative Reduce](./iterativereduce)

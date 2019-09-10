@@ -124,5 +124,5 @@ val conf = new NeuralNetConfiguration.Builder()
 ### What's next?
 
 - Check out all of our tutorials available [on
-Github](https://github.com/deeplearning4j/dl4j-examples/tree/master/tutorials).
+Github](https://github.com/eclipse/deeplearning4j-examples/tree/master/tutorials).
 Notebooks are numbered for easy following.

@@ -24,7 +24,7 @@ You can also write your own filters by implementing the `Filter` interface, thou
 ---
 
 ### ConditionFilter
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/ConditionFilter.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/ConditionFilter.java) </span>
 
 If condition is satisfied (returns true): remove the example or sequence<br>
 If condition is not satisfied (returns false): keep the example or sequence
@@ -87,7 +87,7 @@ This will often be the same as the input
 ---
 
 ### Filter
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/Filter.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/Filter.java) </span>
 
 Filter: a method of removing examples
 (or sequences) according to some condition
@@ -99,7 +99,7 @@ Filter: a method of removing examples
 ---
 
 ### FilterInvalidValues
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/FilterInvalidValues.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/FilterInvalidValues.java) </span>
 
 FilterInvalidValues: a filter operation that removes any examples (or sequences)
 if the examples/sequences contains
@@ -161,7 +161,7 @@ This will often be the same as the input
 ---
 
 ### InvalidNumColumns
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/InvalidNumColumns.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/filter/InvalidNumColumns.java) </span>
 
 Remove invalid records of a certain size.
 

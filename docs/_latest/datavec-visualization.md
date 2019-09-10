@@ -12,7 +12,7 @@ weight: 10
 ---
 
 ### HtmlAnalysis
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/ui/HtmlAnalysis.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/ui/HtmlAnalysis.java) </span>
 
 
 
@@ -48,7 +48,7 @@ numerical columns
 ---
 
 ### HtmlSequencePlotting
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/ui/HtmlSequencePlotting.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/ui/HtmlSequencePlotting.java) </span>
 
 A simple utility for plotting DataVec sequence data to HTML files.
 Each file contains only one sequence. Each column is plotted separately; only numerical and categorical columns are

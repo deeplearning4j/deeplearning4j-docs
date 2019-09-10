@@ -83,7 +83,7 @@ Deeplearning4j的`DatasetIterator`类掩盖了在硬盘上加载数据的复杂�
 
 您可以利用在后台异步运行的加载器来进行优化。Java可以实现真正意义上的多线程。它可以在后台加载数据，同时让其他线程负责计算。所以您可以在运行计算指令的同时向GPU中加载数据。从内存中抓取新数据时，神经网络仍在继续训练。
 
-相关代码参见[此处](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java#L136)，尤其注意第三行：
+相关代码参见[此处](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-scaleout/deeplearning4j-scaleout-parallelwrapper/src/main/java/org/deeplearning4j/parallelism/ParallelWrapper.java#L136)，尤其注意第三行：
 
         MultiDataSetIterator iterator;
         if (prefetchSize > 0 && source.asyncSupported()) {
@@ -110,11 +110,11 @@ Deeplearning4j的ETL和向量化库是DataVec。DataVec对数据集采用哪种�
 
 办法之一是用和Python框架类似的方式预存数据集。（泡菜就是预先格式化的数据。）预存数据集时需要建立一个独立的类。
 
-预存数据集的方法见[此处](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/misc/presave/PreSave.java)。
+预存数据集的方法见[此处](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/misc/presave/PreSave.java)。
 
 `Recordreaderdatasetiterator`类会与DataVec互动，为DL4J输出数据集。 
 
-加载预存数据集的方法见[此处](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/misc/presave/LoadPreSavedLenetMnistExample.java)。
+加载预存数据集的方法见[此处](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-examples/src/main/java/org/deeplearning4j/examples/misc/presave/LoadPreSavedLenetMnistExample.java)。
 
 在第90行可以看到异步ETL。这个例子对预存的迭代器进行了包装，同时利用了上文的两种方法，在训练网络的同时在后台异步加载预存数据。 
 

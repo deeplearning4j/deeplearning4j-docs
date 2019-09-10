@@ -44,7 +44,7 @@ JavaRDD<List<Writable>> joined = SparkTransformExecutor.executeJoin(join, leftRd
 ---
 
 ### LocalTransformExecutor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-local/src/main/java/org/datavec/local/transforms/LocalTransformExecutor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-local/src/main/java/org/datavec/local/transforms/LocalTransformExecutor.java) </span>
 
 Local transform executor
 
@@ -69,7 +69,7 @@ that return a sequence, use {- link #executeToSequence(List, TransformProcess)}
 ---
 
 ### SparkTransformExecutor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-spark/src/main/java/org/datavec/spark/transform/SparkTransformExecutor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-spark/src/main/java/org/datavec/spark/transform/SparkTransformExecutor.java) </span>
 
 Execute a datavec
 transform process

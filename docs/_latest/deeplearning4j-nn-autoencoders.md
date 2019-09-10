@@ -20,7 +20,7 @@ RBMs are no longer supported as of version 0.9.x. They are no longer best-in-cla
 ---
 
 ### AutoEncoder
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/AutoEncoder.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/AutoEncoder.java) </span>
 
 Autoencoder layer. Adds noise to input and learn a reconstruction function.
 
@@ -50,7 +50,7 @@ Autoencoder sparity parameter
 ---
 
 ### BernoulliReconstructionDistribution
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/BernoulliReconstructionDistribution.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/BernoulliReconstructionDistribution.java) </span>
 
 Bernoulli reconstruction distribution for variational autoencoder.<br>
 Outputs are modelled by a Bernoulli distribution - i.e., the Bernoulli distribution should be used for binary data (all
@@ -74,7 +74,7 @@ Create a BernoulliReconstructionDistribution with the default Sigmoid activation
 ---
 
 ### CompositeReconstructionDistribution
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/CompositeReconstructionDistribution.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/CompositeReconstructionDistribution.java) </span>
 
 CompositeReconstructionDistribution is a reconstruction distribution built from multiple other ReconstructionDistribution
 instances.<br>
@@ -104,7 +104,7 @@ being modelled by distribution Y.
 ---
 
 ### ExponentialReconstructionDistribution
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/ExponentialReconstructionDistribution.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/ExponentialReconstructionDistribution.java) </span>
 
 Exponential reconstruction distribution.<br>
 Supports data in range [0,infinity)<br>
@@ -133,7 +133,7 @@ public boolean hasLossFunction()
 ---
 
 ### GaussianReconstructionDistribution
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/GaussianReconstructionDistribution.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/GaussianReconstructionDistribution.java) </span>
 
 Gaussian reconstruction distribution for variational autoencoder.<br>
 Outputs are modelled by a Gaussian distribution, with the mean and variances (diagonal covariance matrix) for each
@@ -161,7 +161,7 @@ Create a GaussianReconstructionDistribution with the default identity activation
 ---
 
 ### LossFunctionWrapper
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/LossFunctionWrapper.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/LossFunctionWrapper.java) </span>
 
 LossFunctionWrapper allows training of a VAE model with a standard (possibly deterministic) neural network loss function
 
@@ -176,7 +176,7 @@ means of calculating the negative log probability.
 ---
 
 ### ReconstructionDistribution
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/ReconstructionDistribution.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/ReconstructionDistribution.java) </span>
 
 to specify the form of the distribution p(data|x). For example, real-valued data could be modelled
 
@@ -188,7 +188,7 @@ to specify the form of the distribution p(data|x). For example, real-valued data
 ---
 
 ### VariationalAutoencoder
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/VariationalAutoencoder.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/conf/layers/variational/VariationalAutoencoder.java) </span>
 
 Variational Autoencoder layer
 

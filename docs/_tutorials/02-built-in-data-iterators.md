@@ -167,7 +167,7 @@ Deeplearning4j comes
 with built-in tools for model evaluation. The simplest is to pass a testing
 iterator to `eval()` and retrieve an `Evaluation` object. Many more, including
 ROC plotting and regression evaluation, are available in the
-[org.deeplearning4j.eval](https://github.com/deeplearning4j/deeplearning4j/tree/master
+[org.deeplearning4j.eval](https://github.com/eclipse/deeplearning4j/tree/master
 /deeplearning4j-core/src/test/java/org/deeplearning4j/eval) package.
 
 ```java
@@ -185,4 +185,4 @@ println(evaluation.confusionToString())
 ### What's next?
 
 - Check out all of our tutorials available [on
-Github](https://github.com/deeplearning4j/dl4j-examples/tree/master/tutorials).
+Github](https://github.com/eclipse/deeplearning4j-examples/tree/master/tutorials).
