@@ -9,7 +9,7 @@ json_link: 16.%20Sea%20Temperature%20Convolutional%20LSTM%20Example%202.json
 ### Note
 
 Please view the
-[README](https://github.com/deeplearning4j/deeplearning4j/tree/master/dl4j-
+[README](https://github.com/eclipse/deeplearning4j/tree/master/dl4j-
 examples/tutorials/README.md) to learn about installing, setting up
 dependencies, and importing notebooks in Zeppelin
 

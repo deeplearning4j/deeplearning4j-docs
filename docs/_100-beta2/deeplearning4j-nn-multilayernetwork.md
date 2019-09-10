@@ -84,7 +84,7 @@ MultiLayerConfiguration.Builder builder = new NeuralNetConfiguration.Builder()
 ---
 
 ### MultiLayerNetwork
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java) </span>
 
 MultiLayerNetwork is a neural network with multiple layers in a stack, and usually an output layer.
 which allows for an arbitrary directed acyclic graph connection structure between layers.

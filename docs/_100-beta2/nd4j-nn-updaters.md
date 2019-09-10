@@ -27,7 +27,7 @@ ComputationGraphConfiguration conf = new NeuralNetConfiguration.Builder()
 ---
 
 ### AMSGradUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AMSGradUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AMSGradUpdater.java) </span>
 
 The AMSGrad updater<br>
 Reference: On the Convergence of Adam and Beyond - https://openreview.net/forum?id=ryQu7f-RZ
@@ -39,7 +39,7 @@ Reference: On the Convergence of Adam and Beyond - https://openreview.net/forum?
 ---
 
 ### GradientUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//GradientUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//GradientUpdater.java) </span>
 
 Gradient modifications: Calculates an update and tracks related information for gradient changes over time
 for handling updates.
@@ -51,7 +51,7 @@ for handling updates.
 ---
 
 ### NesterovsUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NesterovsUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NesterovsUpdater.java) </span>
 
 Nesterov's momentum.
 Keep track of the previous layer's gradient
@@ -77,7 +77,7 @@ Get the nesterov update
 ---
 
 ### AdaMaxUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaMaxUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaMaxUpdater.java) </span>
 
 The AdaMax updater, a variant of Adam.
 http://arxiv.org/abs/1412.6980
@@ -102,7 +102,7 @@ Calculate the update based on the given gradient
 ---
 
 ### NadamUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NadamUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NadamUpdater.java) </span>
 
 The Nadam updater.
 https://arxiv.org/pdf/1609.04747.pdf
@@ -127,7 +127,7 @@ Calculate the update based on the given gradient
 ---
 
 ### RmsPropUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//RmsPropUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//RmsPropUpdater.java) </span>
 
 RMS Prop updates:
 
@@ -141,7 +141,7 @@ http://cs231n.github.io/neural-networks-3/#ada
 ---
 
 ### AdaDeltaUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaDeltaUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaDeltaUpdater.java) </span>
 
 http://www.matthewzeiler.com/pubs/googleTR2012/googleTR2012.pdf
 https://arxiv.org/pdf/1212.5701v1.pdf
@@ -171,7 +171,7 @@ updated gradient for
 ---
 
 ### SgdUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//SgdUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//SgdUpdater.java) </span>
 
 SGD updater applies a learning rate only
 
@@ -181,7 +181,7 @@ SGD updater applies a learning rate only
 ---
 
 ### AdaGradUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaGradUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdaGradUpdater.java) </span>
 
 Vectorized Learning Rate used per Connection Weight
 <p/>
@@ -209,7 +209,7 @@ Note that each gradient passed in becomes adapted over time, hence the opName ad
 ---
 
 ### AdamUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdamUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//AdamUpdater.java) </span>
 
 The Adam updater.
 http://arxiv.org/abs/1412.6980
@@ -234,7 +234,7 @@ Calculate the update based on the given gradient
 ---
 
 ### NoOpUpdater
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NoOpUpdater.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/learning//NoOpUpdater.java) </span>
 
 NoOp updater: gradient updater that makes no changes to the gradient
 

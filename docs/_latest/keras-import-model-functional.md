@@ -80,7 +80,7 @@ In the latter two cases no training configuration will be read.
 ---
 
 ### KerasModel
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras//KerasModel.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras//KerasModel.java) </span>
 
 Build ComputationGraph from Keras (Functional API) Model or
 Sequential model configuration.

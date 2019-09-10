@@ -7,7 +7,7 @@ layout: cn-default
 
 自0.9.0版（或0.8.1-SNAPSHOT版）开始，[ND4J](http://nd4j.org/)提供一种额外的内存管理模式：工作区。该模式让您可以将内存重复用于循环工作负荷，而无需依赖JVM垃圾回收器来跟踪堆外内存。换言之，在工作区循环结束时，所有`INDArray`的内存内容都会被废弃。
 
-在ND4J中使用该模式的具体方法参见这些[示例](https://github.com/deeplearning4j/dl4j-examples/blob/58cc1b56515458003fdd7b606f6451aee851b8c3/nd4j-examples/src/main/java/org/nd4j/examples/Nd4jEx15_Workspaces.java)。
+在ND4J中使用该模式的具体方法参见这些[示例](https://github.com/eclipse/deeplearning4j-examples/blob/58cc1b56515458003fdd7b606f6451aee851b8c3/nd4j-examples/src/main/java/org/nd4j/examples/Nd4jEx15_Workspaces.java)。
 
 基本的思路很简单：您可以在一个或多个工作区内部进行任何所需的操作，如果想要将一个INDArray提取出来（亦即从工作区中取出结果），只需调用`INDArray.detach()`即可获得独立的`INDArray`副本。
 

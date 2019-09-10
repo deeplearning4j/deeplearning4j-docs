@@ -3,7 +3,7 @@ deeplearning4j-docs
 
 The documentation for Deeplearning4j and all of its libraries (DL4J, ND4J, Arbiter, DataVec, etc.) live in this repository.
 
-**Warning: DO NOT edit the user guide directly in this repository. Commits will be reverted. Please make changes to the main repository [here](https://github.com/deeplearning4j/deeplearning4j/tree/master/docs), run the autogeneration process, and open a pull request.**
+**Warning: DO NOT edit the user guide directly in this repository. Commits will be reverted. Please make changes to the main repository [here](https://github.com/eclipse/deeplearning4j/tree/master/docs), run the autogeneration process, and open a pull request.**
 
 ## Developing
 
@@ -38,7 +38,7 @@ layout: default
 ---
 ```
 
-Note that the user guide also uses Jekyll headers with some specific changes. Please see the README for autogen docs for more information: https://github.com/deeplearning4j/deeplearning4j/blob/master/docs/README.md.
+Note that the user guide also uses Jekyll headers with some specific changes. Please see the README for autogen docs for more information: https://github.com/eclipse/deeplearning4j/blob/master/docs/README.md.
 
 ### Running Locally
 

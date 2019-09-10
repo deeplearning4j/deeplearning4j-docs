@@ -20,7 +20,7 @@ Most of the time you do not need to interact with the record classes directly, u
 ---
 
 ### Record
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/Record.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/Record.java) </span>
 
 
 
@@ -30,6 +30,6 @@ Most of the time you do not need to interact with the record classes directly, u
 ---
 
 ### SequenceRecord
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/SequenceRecord.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/SequenceRecord.java) </span>
 
 

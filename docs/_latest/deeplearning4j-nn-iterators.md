@@ -45,7 +45,7 @@ while(mnistTest.hasNext()){
 ---
 
 ### MnistDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//MnistDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//MnistDataSetIterator.java) </span>
 
 MNIST data set iterator - 60000 training digits, 10000 test digits, 10 classes.
 Digits have 28x28 pixels and 1 channel (grayscale).<br>
@@ -58,7 +58,7 @@ For futher details, see <a href="http://yann.lecun.com/exdb/mnist/">http://yann.
 ---
 
 ### UciSequenceDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//UciSequenceDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//UciSequenceDataSetIterator.java) </span>
 
 UCI synthetic control chart time series dataset. This dataset is useful for classification of univariate
 time series with six categories:<br>
@@ -86,7 +86,7 @@ Create an iterator for the training set, with the specified minibatch size. Rand
 ---
 
 ### Cifar10DataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//Cifar10DataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//Cifar10DataSetIterator.java) </span>
 
 CifarDataSetIterator is an iterator for CIFAR-10 dataset - 10 classes, with 32x32 images with 3 channels (RGB)
 
@@ -111,7 +111,7 @@ Create an iterator for the training set, with random iteration order (RNG seed f
 ---
 
 ### IrisDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//IrisDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//IrisDataSetIterator.java) </span>
 
 IrisDataSetIterator: An iterator for the well-known Iris dataset. 4 features, 3 label classes<br>
 <a href="https://archive.ics.uci.edu/ml/datasets/Iris">https://archive.ics.uci.edu/ml/datasets/Iris</a>
@@ -144,7 +144,7 @@ IrisDataSetIterator handles traversing through the Iris Data Set.
 ---
 
 ### LFWDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//LFWDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//LFWDataSetIterator.java) </span>
 
 LFW iterator - Labeled Faces from the Wild dataset<br>
 See <a href="http://vis-www.cs.umass.edu/lfw/">http://vis-www.cs.umass.edu/lfw/</a><br>
@@ -178,7 +178,7 @@ Create LFW data specific iterator
 ---
 
 ### TinyImageNetDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//TinyImageNetDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//TinyImageNetDataSetIterator.java) </span>
 
 Tiny ImageNet is a subset of the ImageNet database. TinyImageNet is the default course challenge for CS321n
 at Stanford University.
@@ -207,7 +207,7 @@ Create an iterator for the training set, with random iteration order (RNG seed f
 ---
 
 ### EmnistDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//EmnistDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datasets/src/main/java/org/deeplearning4j/datasets/iterator/impl//EmnistDataSetIterator.java) </span>
 
 EMNIST DataSetIterator<br>
 <ul>
@@ -287,7 +287,7 @@ Get the labels as a character array
 ---
 
 ### RecordReaderDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec//RecordReaderDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec//RecordReaderDataSetIterator.java) </span>
 
 DataSet objects as well as producing minibatches from individual records.<br>
 <br>
@@ -455,7 +455,7 @@ Disabled by default.
 ---
 
 ### RecordReaderMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec//RecordReaderMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec//RecordReaderMultiDataSetIterator.java) </span>
 
 The idea: generate multiple inputs and multiple outputs from one or more Sequence/RecordReaders. Inputs and outputs
 may be obtained from subsets of the RecordReader and SequenceRecordReaders columns (for examples, some inputs and outputs
@@ -508,7 +508,7 @@ to the SequenceRecordReaderDataSetIterator constructor
 ---
 
 ### SequenceRecordReaderDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec//SequenceRecordReaderDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-datavec-iterators/src/main/java/org/deeplearning4j/datasets/datavec//SequenceRecordReaderDataSetIterator.java) </span>
 
 Sequence record reader data set iterator.<br>
 Given a record reader (and optionally another record reader for the labels) generate time series (sequence) data sets.<br>
@@ -572,7 +572,7 @@ to the SequenceRecordReaderDataSetIterator constructor
 ---
 
 ### AsyncMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncMultiDataSetIterator.java) </span>
 
 Async prefetching iterator wrapper for MultiDataSetIterator implementations
 This will asynchronously prefetch the specified number of minibatches from the underlying iterator.<br>
@@ -697,7 +697,7 @@ method
 ---
 
 ### IteratorDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//IteratorDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//IteratorDataSetIterator.java) </span>
 
 required to get the specified batch size.<br>
 
@@ -711,7 +711,7 @@ NOTE: reset method is not supported here.
 ---
 
 ### AsyncDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncDataSetIterator.java) </span>
 
 Async prefetching iterator wrapper for DataSetIterator implementations.
 This will asynchronously prefetch the specified number of minibatches from the underlying iterator.<br>
@@ -884,7 +884,7 @@ method
 ---
 
 ### DoublesDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DoublesDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DoublesDataSetIterator.java) </span>
 
 First value in pair is the features vector, second value in pair is the labels.
 Supports generating 2d features/labels only
@@ -906,7 +906,7 @@ public DoublesDataSetIterator(@NonNull Iterable<Pair<double[], double[]>> iterab
 ---
 
 ### IteratorMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//IteratorMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//IteratorMultiDataSetIterator.java) </span>
 
 required to get a specified batch size.<br>
 
@@ -920,7 +920,7 @@ NOTE: reset method is not supported here.
 ---
 
 ### SamplingDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//SamplingDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//SamplingDataSetIterator.java) </span>
 
 A wrapper for a dataset to sample from.
 This will randomly sample from the given dataset.
@@ -940,7 +940,7 @@ public SamplingDataSetIterator(DataSet sampleFrom, int batchSize, int totalNumbe
 ---
 
 ### INDArrayDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//INDArrayDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//INDArrayDataSetIterator.java) </span>
 
 First value in pair is the features vector, second value in pair is the labels.
 
@@ -960,7 +960,7 @@ public INDArrayDataSetIterator(@NonNull Iterable<Pair<INDArray, INDArray>> itera
 ---
 
 ### WorkspacesShieldDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//WorkspacesShieldDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//WorkspacesShieldDataSetIterator.java) </span>
 
 This iterator detaches/migrates DataSets coming out from backed DataSetIterator, thus providing "safe" DataSets.<br>
 This is typically used for debugging and testing purposes, and should not be used in general by users
@@ -981,7 +981,7 @@ public WorkspacesShieldDataSetIterator(@NonNull DataSetIterator iterator)
 ---
 
 ### MultiDataSetIteratorSplitter
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//MultiDataSetIteratorSplitter.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//MultiDataSetIteratorSplitter.java) </span>
 
 This iterator virtually splits given MultiDataSetIterator into Train and Test parts.
 I.e. you have 100000 examples. Your batch size is 32. That means you have 3125 total batches. With split ratio of 0.7 that will give you 2187 training batches, and 938 test batches.<br>
@@ -1029,7 +1029,7 @@ This method returns test iterator instance
 ---
 
 ### AsyncShieldDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncShieldDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncShieldDataSetIterator.java) </span>
 
 This wrapper takes your existing DataSetIterator implementation and prevents asynchronous prefetch
 This is mainly used for debugging purposes; generally an iterator that isn't safe to asynchronously prefetch from
@@ -1185,7 +1185,7 @@ method
 ---
 
 ### DummyBlockDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyBlockDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyBlockDataSetIterator.java) </span>
 
 This class provides baseline implementation of BlockDataSetIterator interface
 
@@ -1196,7 +1196,7 @@ This class provides baseline implementation of BlockDataSetIterator interface
 ---
 
 ### CombinedPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//CombinedPreProcessor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//CombinedPreProcessor.java) </span>
 
 This is special preProcessor, that allows to combine multiple prerpocessors, and apply them to data sequentially.
 
@@ -1218,7 +1218,7 @@ Pre process a dataset sequentially
 ---
 
 ### BaseDatasetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//BaseDatasetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//BaseDatasetIterator.java) </span>
 
 Baseline implementation includes
 control over the data fetcher and some basic
@@ -1231,7 +1231,7 @@ getters for metadata
 ---
 
 ### AsyncShieldMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncShieldMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//AsyncShieldMultiDataSetIterator.java) </span>
 
 This wrapper takes your existing MultiDataSetIterator implementation and prevents asynchronous prefetch
 
@@ -1340,7 +1340,7 @@ method
 ---
 
 ### RandomMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//RandomMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//RandomMultiDataSetIterator.java) </span>
 
 RandomMultiDataSetIterator: Generates random values (or zeros, ones, integers, etc) according to some distribution.<br>
 Note: This is typically used for testing, debugging and benchmarking purposes.
@@ -1427,7 +1427,7 @@ Generate a random array with the specified shape and order
 ---
 
 ### EarlyTerminationMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//EarlyTerminationMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//EarlyTerminationMultiDataSetIterator.java) </span>
 
 Builds an iterator that terminates once the number of minibatches returned with .next() is equal to a specified number.<br>
 Note that a call to .next(num) is counted as a call to return a minibatch regardless of the value of num
@@ -1451,7 +1451,7 @@ will return false
 ---
 
 ### CombinedMultiDataSetPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//CombinedMultiDataSetPreProcessor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//CombinedMultiDataSetPreProcessor.java) </span>
 
 Combines various multidataset preprocessors
 Applied in the order they are specified to in the builder
@@ -1471,7 +1471,7 @@ public CombinedMultiDataSetPreProcessor build()
 ---
 
 ### ExistingDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//ExistingDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//ExistingDataSetIterator.java) </span>
 
 
 
@@ -1502,7 +1502,7 @@ Note that when using this constructor, resetting is not supported
 ---
 
 ### DummyBlockMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyBlockMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyBlockMultiDataSetIterator.java) </span>
 
 This class provides baseline implementation of BlockMultiDataSetIterator interface
 
@@ -1513,7 +1513,7 @@ This class provides baseline implementation of BlockMultiDataSetIterator interfa
 ---
 
 ### EarlyTerminationDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//EarlyTerminationDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//EarlyTerminationDataSetIterator.java) </span>
 
 Builds an iterator that terminates once the number of minibatches returned with .next() is equal to a specified number.
 Note that a call to .next(num) is counted as a call to return a minibatch regardless of the value of num
@@ -1537,7 +1537,7 @@ will return false
 ---
 
 ### ReconstructionDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//ReconstructionDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//ReconstructionDataSetIterator.java) </span>
 
 Wraps a data set iterator setting the first (feature matrix) as the labels.
 
@@ -1641,7 +1641,7 @@ method
 ---
 
 ### DataSetIteratorSplitter
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DataSetIteratorSplitter.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DataSetIteratorSplitter.java) </span>
 
 This iterator virtually splits given MultiDataSetIterator into Train and Test parts.
 I.e. you have 100000 examples. Your batch size is 32. That means you have 3125 total batches. With split ratio of 0.7 that will give you 2187 training batches, and 938 test batches.
@@ -1690,7 +1690,7 @@ This method returns test iterator instance
 ---
 
 ### JointMultiDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//JointMultiDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//JointMultiDataSetIterator.java) </span>
 
 This dataset iterator combines multiple DataSetIterators into 1 MultiDataSetIterator.
 Values from each iterator are joined on a per-example basis - i.e., the values from each DataSet are combined
@@ -1823,7 +1823,7 @@ method
 ---
 
 ### DummyPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyPreProcessor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DummyPreProcessor.java) </span>
 
 This is special dummy preProcessor, that does nothing.
 
@@ -1845,7 +1845,7 @@ Pre process a dataset
 ---
 
 ### FloatsDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//FloatsDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//FloatsDataSetIterator.java) </span>
 
 
 First value in pair is the features vector, second value in pair is the labels.
@@ -1868,7 +1868,7 @@ public FloatsDataSetIterator(@NonNull Iterable<Pair<float[], float[]>> iterable,
 ---
 
 ### FileSplitDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//FileSplitDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//FileSplitDataSetIterator.java) </span>
 
 Simple iterator working with list of files.
 File to DataSet conversion will be handled via provided FileCallback implementation
@@ -1890,7 +1890,7 @@ public FileSplitDataSetIterator(@NonNull List<File> files, @NonNull FileCallback
 ---
 
 ### DataSetFetcher
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DataSetFetcher.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//DataSetFetcher.java) </span>
 
 A low level interface for loading datasets in to memory.
 
@@ -1903,7 +1903,7 @@ This is used by an DataSetIterator to handle the specifics of loading data in to
 ---
 
 ### MultipleEpochsIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//MultipleEpochsIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//MultipleEpochsIterator.java) </span>
 
 A dataset iterator for doing multiple passes over a dataset
 
@@ -1998,7 +1998,7 @@ method
 ---
 
 ### MultiDataSetWrapperIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//MultiDataSetWrapperIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//MultiDataSetWrapperIterator.java) </span>
 
 This class is simple wrapper that takes single-input MultiDataSets and converts them to DataSets on the fly
 
@@ -2019,7 +2019,7 @@ public MultiDataSetWrapperIterator(MultiDataSetIterator iterator)
 ---
 
 ### RandomDataSetIterator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//RandomDataSetIterator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-data/deeplearning4j-utility-iterators/src/main/java/org/deeplearning4j/datasets/iterator//RandomDataSetIterator.java) </span>
 
 RandomDataSetIterator: Generates random values (or zeros, ones, integers, etc) according to some distribution.<br>
 Note: This is typically used for testing, debugging and benchmarking purposes.
@@ -2044,7 +2044,7 @@ public RandomDataSetIterator(int numMiniBatches, long[] featuresShape, long[] la
 ---
 
 ### MultiDataSetIteratorAdapter
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/datasets/iterator/impl/MultiDataSetIteratorAdapter.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/datasets/iterator/impl/MultiDataSetIteratorAdapter.java) </span>
 
 Iterator that adapts a DataSetIterator to a MultiDataSetIterator
 

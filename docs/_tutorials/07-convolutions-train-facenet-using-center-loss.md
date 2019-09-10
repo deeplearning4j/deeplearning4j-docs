@@ -62,7 +62,7 @@ learn how to train embeddings for facial recognition and transfer parameters to
 a new network that uses the embeddings for feed forward. The network will be
 built using `ComputationGraph` (Inception-type networks require multiple nodes)
 via the [OpenFace
-NN4.Small2](https://github.com/deeplearning4j/deeplearning4j/blob/e2d5a854d743a4783367dff969d3c0bff8097a54
+NN4.Small2](https://github.com/eclipse/deeplearning4j/blob/e2d5a854d743a4783367dff969d3c0bff8097a54
 /deeplearning4j-
 zoo/src/main/java/org/deeplearning4j/zoo/model/FaceNetNN4Small2.java) variant,
 which is a hand-tuned, parameter-minimized model of FaceNet.
@@ -304,4 +304,4 @@ val embedding = snipped.feedForward(ds.getFeatures(), false)
 ### What's next?
 
 - Check out all of our tutorials available [on
-Github](https://github.com/deeplearning4j/dl4j-examples/tree/master/tutorials).
+Github](https://github.com/eclipse/deeplearning4j-examples/tree/master/tutorials).

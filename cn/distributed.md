@@ -17,7 +17,7 @@ layout: cn-default
  
 ![集群内部的两个阶段](./img/distributed.png)
 
-请注意，使用Spark确实会产生系统开销。为了确定Spark对您是否有利，请考虑用[性能侦听器](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners/PerformanceListener.java)检查以毫秒为单位的迭代时间。
+请注意，使用Spark确实会产生系统开销。为了确定Spark对您是否有利，请考虑用[性能侦听器](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners/PerformanceListener.java)检查以毫秒为单位的迭代时间。
 如果迭代时间不长于150ms，那么可能不值得使用Spark。
 
 
@@ -58,7 +58,7 @@ IP地址选择的最后手段是`DL4J_VOID_IP`环境变量。在您运行的每�
 
 ### 配置示例：
 
-以下是从[此处](https://github.com/deeplearning4j/dl4j-examples/blob/master/dl4j-spark-examples/dl4j-spark/src/main/java/org/deeplearning4j/mlp/MnistMLPDistributedExample.java)的一个示例项目中摘取的代码片段：  
+以下是从[此处](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-spark-examples/dl4j-spark/src/main/java/org/deeplearning4j/mlp/MnistMLPDistributedExample.java)的一个示例项目中摘取的代码片段：  
 
 ```
 SparkConf sparkConf = new SparkConf();

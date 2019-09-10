@@ -16,7 +16,7 @@ Neural networks work best when the data they’re fed is normalized, constrained
 ---
 
 ### NormalizerMinMaxScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerMinMaxScaler.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerMinMaxScaler.java) </span>
 
 Pre processor for DataSets that normalizes feature values (and optionally label values) to lie between a minimum
 and maximum value (by default between 0 and 1)
@@ -64,7 +64,7 @@ Save the current min and max
 ---
 
 ### Normalizer
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//Normalizer.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//Normalizer.java) </span>
 
 Base interface for all normalizers
 
@@ -75,7 +75,7 @@ Base interface for all normalizers
 ---
 
 ### ImageFlatteningDataSetPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageFlatteningDataSetPreProcessor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageFlatteningDataSetPreProcessor.java) </span>
 
 A DataSetPreProcessor used to flatten a 4d CNN features array to a flattened 2d format (for use in networks such
 as a DenseLayer/multi-layer perceptron)
@@ -87,7 +87,7 @@ as a DenseLayer/multi-layer perceptron)
 ---
 
 ### MinMaxStrategy
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MinMaxStrategy.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MinMaxStrategy.java) </span>
 
 statistics of the upper and lower bounds of the population
 
@@ -131,7 +131,7 @@ Denormalize a data array
 ---
 
 ### ImagePreProcessingScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImagePreProcessingScaler.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImagePreProcessingScaler.java) </span>
 
 Created by susaneraly on 6/23/16.
 A preprocessor specifically for images that applies min max scaling
@@ -192,7 +192,7 @@ Transform the data
 ---
 
 ### CompositeMultiDataSetPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeMultiDataSetPreProcessor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeMultiDataSetPreProcessor.java) </span>
 
 A simple Composite MultiDataSetPreProcessor - allows you to apply multiple MultiDataSetPreProcessors sequentially
 on the one MultiDataSet, in the order they are passed to the constructor
@@ -213,7 +213,7 @@ public CompositeMultiDataSetPreProcessor(MultiDataSetPreProcessor... preProcesso
 ---
 
 ### MultiNormalizerMinMaxScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerMinMaxScaler.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerMinMaxScaler.java) </span>
 
 Pre processor for MultiDataSet that normalizes feature values (and optionally label values) to lie between a minimum
 and maximum value (by default between 0 and 1)
@@ -237,7 +237,7 @@ Preprocessor can take a range as minRange and maxRange
 ---
 
 ### MultiDataNormalization
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiDataNormalization.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiDataNormalization.java) </span>
 
 An interface for multi dataset normalizers.
 Data normalizers compute some sort of statistics
@@ -250,7 +250,7 @@ over a MultiDataSet and scale the data in some way.
 ---
 
 ### ImageMultiPreProcessingScaler
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageMultiPreProcessingScaler.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//ImageMultiPreProcessingScaler.java) </span>
 
 A preprocessor specifically for images that applies min max scaling to one or more of the feature arrays
 in a MultiDataSet.<br>
@@ -280,7 +280,7 @@ this should always be 0
 ---
 
 ### NormalizerStandardize
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStandardize.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStandardize.java) </span>
 
 Created by susaneraly, Ede Meijer
 variance and mean
@@ -315,7 +315,7 @@ Save the current means and standard deviations to the file system
 ---
 
 ### StandardizeStrategy
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//StandardizeStrategy.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//StandardizeStrategy.java) </span>
 
 of the means and standard deviations of the population
 
@@ -349,7 +349,7 @@ Denormalize a data array
 ---
 
 ### NormalizerStrategy
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStrategy.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//NormalizerStrategy.java) </span>
 
 Interface for strategies that can normalize and denormalize data arrays based on statistics of the population
 
@@ -360,7 +360,7 @@ Interface for strategies that can normalize and denormalize data arrays based on
 ---
 
 ### MultiNormalizerHybrid
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerHybrid.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerHybrid.java) </span>
 
 Pre processor for MultiDataSet that can be configured to use different normalization strategies for different inputs
 and outputs, or none at all. Can be used for example when one input should be normalized, but a different one should
@@ -643,7 +643,7 @@ Undo (revert) the normalization applied by this DataNormalization instance to th
 ---
 
 ### CompositeDataSetPreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeDataSetPreProcessor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//CompositeDataSetPreProcessor.java) </span>
 
 A simple Composite DataSetPreProcessor - allows you to apply multiple DataSetPreProcessors sequentially
 on the one DataSet, in the order they are passed to the constructor
@@ -664,7 +664,7 @@ public CompositeDataSetPreProcessor(DataSetPreProcessor... preProcessors)
 ---
 
 ### MultiNormalizerStandardize
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerStandardize.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//MultiNormalizerStandardize.java) </span>
 
 Pre processor for MultiDataSet that normalizes feature values (and optionally label values) to have 0 mean and
 a standard deviation of 1
@@ -700,7 +700,7 @@ Save the current means and standard deviations to the file system
 ---
 
 ### VGG16ImagePreProcessor
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//VGG16ImagePreProcessor.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//VGG16ImagePreProcessor.java) </span>
 
 This is a preprocessor specifically for VGG16.
 It subtracts the mean RGB value, computed on the training set, from each pixel as reported in:
@@ -745,7 +745,7 @@ Transform the data
 ---
 
 ### DataNormalization
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//DataNormalization.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/../nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/linalg/dataset/api/preprocessor//DataNormalization.java) </span>
 
 An interface for data normalizers.
 Data normalizers compute some sort of statistics

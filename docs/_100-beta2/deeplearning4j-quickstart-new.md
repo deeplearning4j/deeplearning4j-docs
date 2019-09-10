@@ -37,7 +37,7 @@ docker pull skymindops/skil-ce:1.1.0
 ```
 
 <div class="alert alert-info" role="alert">
-  Alternatively, if you already have Apache Zeppelin you can import our notebooks directly from [our tutorials repository](https://github.com/deeplearning4j/deeplearning4j/blob/master/dl4j-examples/tutorials/).
+  Alternatively, if you already have Apache Zeppelin you can import our notebooks directly from [our tutorials repository](https://github.com/eclipse/deeplearning4j/blob/master/dl4j-examples/tutorials/).
 </div>
 
 #### Run the SKIL image</h5>

@@ -27,7 +27,7 @@ model.setListeners(new ScoreIterationListener(1));
 ---
 
 ### EvaluativeListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//EvaluativeListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//EvaluativeListener.java) </span>
 
 This TrainingListener implementation provides simple way for model evaluation during training.
 It can be launched every Xth Iteration/Epoch, depending on frequency and InvocationType constructor arguments
@@ -60,7 +60,7 @@ public void iterationDone(Model model, int iteration, int epoch)
 ---
 
 ### Checkpoint
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//Checkpoint.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//Checkpoint.java) </span>
 
 
 
@@ -70,7 +70,7 @@ public void iterationDone(Model model, int iteration, int epoch)
 ---
 
 ### ScoreIterationListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ScoreIterationListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ScoreIterationListener.java) </span>
 
 Score iteration listener. Reports the score (value of the loss function )of the network during training every
 N iterations
@@ -91,7 +91,7 @@ public ScoreIterationListener(int printIterations)
 ---
 
 ### ComposableIterationListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ComposableIterationListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ComposableIterationListener.java) </span>
 
 A group of listeners
 
@@ -101,7 +101,7 @@ A group of listeners
 ---
 
 ### CollectScoresIterationListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresIterationListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresIterationListener.java) </span>
 
 CollectScoresIterationListener simply stores the model scores internally (along with the iteration) every 1 or N
 iterations (this is configurable). These scores can then be obtained or exported.
@@ -172,7 +172,7 @@ Export the scores to the specified file in delimited (one per line) UTF-8 format
 ---
 
 ### CheckpointListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CheckpointListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CheckpointListener.java) </span>
 
 
 CheckpointListener: The goal of this listener is to periodically save a copy of the model during training..<br>
@@ -233,7 +233,7 @@ have been automatically deleted (given the configuration) will not be returned h
 ---
 
 ### SharedGradient
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SharedGradient.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SharedGradient.java) </span>
 
 
 
@@ -243,7 +243,7 @@ have been automatically deleted (given the configuration) will not be returned h
 ---
 
 ### SleepyTrainingListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SleepyTrainingListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//SleepyTrainingListener.java) </span>
 
 This TrainingListener implementation provides a way to "sleep" during specific Neural Network training phases.<br>
 Suitable for debugging/testing purposes only.
@@ -267,7 +267,7 @@ In this mode parkNanos() call will be used, to make process really idle
 ---
 
 ### CollectScoresListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//CollectScoresListener.java) </span>
 
 A simple listener that collects scores to a list every N iterations. Can also optionally log the score.
 
@@ -278,7 +278,7 @@ A simple listener that collects scores to a list every N iterations. Can also op
 ---
 
 ### PerformanceListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//PerformanceListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//PerformanceListener.java) </span>
 
 Simple IterationListener that tracks time spend on training per iteration.
 
@@ -301,7 +301,7 @@ This method defines, if iteration number should be reported together with other 
 ---
 
 ### ParamAndGradientIterationListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ParamAndGradientIterationListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//ParamAndGradientIterationListener.java) </span>
 
 An iteration listener that provides details on parameters and gradients at each iteration during traning.
 Attempts to provide much of the same information as the UI histogram iteration listener, but in a text-based
@@ -317,7 +317,7 @@ of each type of parameter and gradient in the network at each iteration.<br>
 ---
 
 ### TimeIterationListener
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//TimeIterationListener.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/optimize/listeners//TimeIterationListener.java) </span>
 
 Time Iteration Listener.
 This listener displays into INFO logs the remaining time in minutes and the date of the end of the process.

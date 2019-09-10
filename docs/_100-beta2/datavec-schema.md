@@ -61,7 +61,7 @@ DataVec comes with a few `Schema` classes and helper utilities for 2D and sequen
 ---
 
 ### Join
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/join/Join.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/join/Join.java) </span>
 
 Join class: used to specify a join (like an SQL join)
 
@@ -132,7 +132,7 @@ The idea: join examples where firstDataValues(joinColumNamesLeft[i]) == secondDa
 ---
 
 ### InferredSchema
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/InferredSchema.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/InferredSchema.java) </span>
 
 If passed a CSV file that contains a header and a single row of sample data, it will return
 a Schema.
@@ -149,7 +149,7 @@ field is blank/null, it will also become the default type.
 ---
 
 ### Schema
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/Schema.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/Schema.java) </span>
 
 A Schema defines the layout of tabular data. Specifically, it contains names f
 or each column, as well as details of types
@@ -787,7 +787,7 @@ The column names are based on indexing.
 ---
 
 ### SequenceSchema
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/SequenceSchema.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/transform/schema/SequenceSchema.java) </span>
 
 
 

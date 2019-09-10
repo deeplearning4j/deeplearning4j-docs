@@ -30,7 +30,7 @@ The best model is the one saved at the time of the vertical dotted line - i.e., 
 
 Using DL4J's early stopping functionality requires you to provide a number of configuration options:
 
-* A score calculator, such as the *DataSetLossCalculator*([JavaDoc](https://deeplearning4j.org/api/{{page.version}}/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculator.html), [Source Code](https://github.com/deeplearning4j/deeplearning4j/blob/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculator.java)) for a Multi Layer Network, or *DataSetLossCalculatorCG* ([JavaDoc](https://deeplearning4j.org/api/{{page.version}}/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculatorCG.html), [Source Code](https://github.com/deeplearning4j/deeplearning4j/blob/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculatorCG.java)) for a Computation Graph. Is used to calculate at every epoch (for example: the loss function value on a test set, or the accuracy on the test set)
+* A score calculator, such as the *DataSetLossCalculator*([JavaDoc](https://deeplearning4j.org/api/{{page.version}}/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculator.html), [Source Code](https://github.com/eclipse/deeplearning4j/blob/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculator.java)) for a Multi Layer Network, or *DataSetLossCalculatorCG* ([JavaDoc](https://deeplearning4j.org/api/{{page.version}}/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculatorCG.html), [Source Code](https://github.com/eclipse/deeplearning4j/blob/c152293ef8d1094c281f5375ded61ff5f8eb6587/deeplearning4j-core/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculatorCG.java)) for a Computation Graph. Is used to calculate at every epoch (for example: the loss function value on a test set, or the accuracy on the test set)
 * How frequently we want to calculate the score function (default: every epoch)
 * One or more termination conditions, which tell the training process when to stop. There are two classes of termination conditions:
   * Epoch termination conditions: evaluated every N epochs
@@ -93,7 +93,7 @@ Note that `EarlyStoppingParallelTrainer` doesn't support all of the functionalit
 ---
 
 ### AutoencoderScoreCalculator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/AutoencoderScoreCalculator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/AutoencoderScoreCalculator.java) </span>
 
 Score function for a MultiLayerNetwork or ComputationGraph with a single
 
@@ -104,7 +104,7 @@ Score function for a MultiLayerNetwork or ComputationGraph with a single
 ---
 
 ### ClassificationScoreCalculator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/ClassificationScoreCalculator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/ClassificationScoreCalculator.java) </span>
 
 as accuracy, F1 score, etc.
 Used for both MultiLayerNetwork and ComputationGraph
@@ -116,7 +116,7 @@ Used for both MultiLayerNetwork and ComputationGraph
 ---
 
 ### DataSetLossCalculator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculator.java) </span>
 
 Calculate the score (loss function value) on a given data set (usually a test set)
 
@@ -127,7 +127,7 @@ Calculate the score (loss function value) on a given data set (usually a test se
 ---
 
 ### DataSetLossCalculatorCG
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculatorCG.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/DataSetLossCalculatorCG.java) </span>
 
 Given a DataSetIterator: calculate
 the total loss for the model on that data set.
@@ -140,7 +140,7 @@ Typically used to calculate the loss on a test set.
 ---
 
 ### ROCScoreCalculator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/ROCScoreCalculator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/ROCScoreCalculator.java) </span>
 
 Calculate ROC AUC (area under ROC curve) or AUCPR (area under precision recall curve) for a MultiLayerNetwork or
 ComputationGraph
@@ -152,7 +152,7 @@ ComputationGraph
 ---
 
 ### RegressionScoreCalculator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/RegressionScoreCalculator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/RegressionScoreCalculator.java) </span>
 
 Calculate the regression score of the network (MultiLayerNetwork or ComputationGraph) on a test set, using the
 
@@ -163,7 +163,7 @@ Calculate the regression score of the network (MultiLayerNetwork or ComputationG
 ---
 
 ### VAEReconErrorScoreCalculator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/VAEReconErrorScoreCalculator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/VAEReconErrorScoreCalculator.java) </span>
 
 Score function for variational autoencoder reconstruction error for a MultiLayerNetwork or ComputationGraph.<br>
 VariationalAutoencoder layer must be first layer in the network
@@ -187,7 +187,7 @@ Constructor for reconstruction ERROR
 ---
 
 ### VAEReconProbScoreCalculator
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/VAEReconProbScoreCalculator.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/scorecalc/VAEReconProbScoreCalculator.java) </span>
 
 Score calculator for variational autoencoder reconstruction probability or reconstruction log probability for a
 MultiLayerNetwork or ComputationGraph. VariationalAutoencoder layer must be first layer in the network<br>
@@ -213,7 +213,7 @@ for details
 ---
 
 ### BestScoreEpochTerminationCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/termination/BestScoreEpochTerminationCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/termination/BestScoreEpochTerminationCondition.java) </span>
 
 Created by Sadat Anwar on 3/26/16.
 
@@ -245,6 +245,6 @@ lesserBetter flag to false (feel free to give the flag a better name)
 ---
 
 ### ScoreImprovementEpochTerminationCondition
-<span style="float:right;"> [[source]](https://github.com/deeplearning4j/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/termination/ScoreImprovementEpochTerminationCondition.java) </span>
+<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/deeplearning4j/deeplearning4j-nn/src/main/java/org/deeplearning4j/earlystopping/termination/ScoreImprovementEpochTerminationCondition.java) </span>
 
 Terminate training if best model score does not improve for N epochs
