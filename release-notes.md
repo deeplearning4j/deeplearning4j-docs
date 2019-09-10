@@ -241,6 +241,11 @@ redirect_from: "/releasenotes"
 * INDArray.javaTensorAlongDimension removed; use INDArray.tensorAlongDimension instead
 * INDArray.lengthLong() removed; use INDArray.length() instead
 
+### ND4J: 1.0.0-beta5 Known Issues
+
+* nd4j-native on some OSX systems can fail with `Symbol not found: ___emutls_get_address` - See [this link](https://github.com/eclipse/deeplearning4j/issues/8217)
+* SBT 1.3.0 can fail with an `Illegal character in path` error; SBT 1.2.8 is OK. This is an SBT issue, not an ND4J issue. See [this link](https://github.com/sbt/sbt/issues/5046) for details
+
 ## <a name="onezerozerobeta5-datavec">DataVec</a>
 
 ### DataVec: Features and Enhancements
