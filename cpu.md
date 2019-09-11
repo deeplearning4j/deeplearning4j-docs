@@ -3,7 +3,6 @@ title: CPU and AVX
 short_title: CPU
 description: CPU and AVX support in ND4J/Deeplearning4j
 layout: default
-redirect_from: "/cpu"
 ---
 
 # ND4J - CPU (nd4j-native) AVX Configuration
