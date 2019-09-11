@@ -6,22 +6,24 @@ layout: default
 redirect_from: "/cpu"
 ---
 
+# ND4J - CPU (nd4j-native) AVX Configuration
 
 ### What is AVX, and why does it matter?
 
-AVX (Advanced Vector Extensions) is a set of CPU instructions for accelerating numerical computations.
-AVX only applies to nd4j-native (CPU) backend for x86 devices, not GPUs and not ARM/PPC devices.
+AVX (Advanced Vector Extensions) is a set of CPU instructions for accelerating numerical computations. See [Wikipedia](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) for more details.
 
-Why AVX matters: performance.
+Note that AVX only applies to nd4j-native (CPU) backend for x86 devices, not GPUs and not ARM/PPC devices.
 
-You want to use the highest level of AVX supported by your system.
+Why AVX matters: performance. You want to use the version of ND4J compiled with the highest level of AVX supported by your system.
 
-AVX support - summary:
+
+AVX support for different CPUs - summary:
 * Most modern x86 CPUs: AVX2 is supported
 * Some high-end server CPUs: AVX512 may be supported 
 * Old CPUs (pre 2012) and low power x86 (Atom, Celeron): No AVX support (usually) 
 
-AVX is backward compatible, so it's possible run a generic x86 or AVX2 binary on a system supporting AVX512.
+AVX is backward compatible, so for example it's possible run a generic x86 or AVX2 binary on a system supporting AVX512.
+However it is not possible to run 
 
 Note on current snapshots (and in future releases, after 1.0.0-beta5) you may get a warning as follows, if AVX is not configured optimally:
 ```
@@ -35,20 +37,22 @@ o.n.l.c.n.CpuNDArrayFactory - **************************************************
 
 ### Configuring AVX in ND4J/DL4J
 
-Defaults:
+As noted earlier, for best performance you should use the version of ND4J that matches your CPU's supported AVX level. 
+
+ND4J defaults configuration (when just including the nd4j-native or nd4j-native-platform dependencies without maven classifier configuration):
 * 1.0.0-beta5 and earlier: "generic x86" (no AVX) is the default for nd4j/nd4j-platform dependencies
 * Current snapshots and later versions of ND4J: AVX2 is the default
 
 
 To configure AVX2 and AVX512, you need to specify a classifier for the appropriate architecture.
 
-The following binaries are provided for x86 architectures:
+The following binaries (nd4j-native classifiers) are provided for x86 architectures:
 * Generic x86 (no AVX): `linux-x86_64`, `windows-x86_64`, `macosx-x86_64` 
 * AVX2: `linux-x86_64-avx2`, `windows-x86_64-avx2`, `macosx-x86_64-avx2`
 * AVX512: `linux-x86_64-avx512`
 
 
-Example: AVX2 on Windows (Maven pom.xml)
+**Example: Configuring AVX2 on Windows (Maven pom.xml)**
 ```
 <dependency>
     <groupId>org.nd4j</groupId>
@@ -65,7 +69,7 @@ Example: AVX2 on Windows (Maven pom.xml)
 ```
 
 
-Example: AVX512 on Linux (Maven pom.xml)
+**Example: Configuring AVX512 on Linux (Maven pom.xml)**
 ```
 <dependency>
     <groupId>org.nd4j</groupId>
@@ -81,4 +85,4 @@ Example: AVX512 on Linux (Maven pom.xml)
 </dependency>
 ```
 
-Note that you need *both* dependencies - with and without the classifier.
+Note that you need *both* nd4j-native dependencies - with and without the classifier.
