@@ -21,8 +21,8 @@ AVX support for different CPUs - summary:
 * Some high-end server CPUs: AVX512 may be supported 
 * Old CPUs (pre 2012) and low power x86 (Atom, Celeron): No AVX support (usually) 
 
-AVX is backward compatible, so for example it's possible run a generic x86 or AVX2 binary on a system supporting AVX512.
-However it is not possible to run 
+Note that CPUs supporting later versions of AVX include all earlier versions also. This means it's possible run a generic x86 or AVX2 binary on a system supporting AVX512.
+However it is not possible to run binaries built for later versions (such as avx512) on a CPU that doesn't have support for those instructions.
 
 Note on current snapshots (and in future releases, after 1.0.0-beta5) you may get a warning as follows, if AVX is not configured optimally:
 ```
