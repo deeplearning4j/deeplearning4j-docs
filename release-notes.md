@@ -148,6 +148,7 @@ redirect_from: "/releasenotes"
 
 ### Deeplearning4j: 1.0.0-beta5 Known Issues
 
+* dl4j-spark_2.11 and _2.12 dependencies incorrectly pull in datavec-spark_2.11/2.12 version `1.0.0-SNAPSHOT`. Workaround: control version using dependency management as per [here](https://github.com/eclipse/deeplearning4j-examples/pull/901/files) or [here](https://gist.github.com/AlexDBlack/5721cb6fbd6cd98b6702cd49e733dacf)
 * Some layers (such as LSTM) may run slower on 1.0.0-beta5 than 1.0.0-beta4 on CUDA when not using cuDNN, due to added synchronization. This synchronization will be removed in the next release after 1.0.0-beta5
 * CUDA 10.1: Rare internal cuBLAS issues may be encountered in heavily multi-threaded code on some systems, when running CUDA 10.1 Update 1 (and maybe 10.1). CUDA 10.1 update 2 is recommended.
 
