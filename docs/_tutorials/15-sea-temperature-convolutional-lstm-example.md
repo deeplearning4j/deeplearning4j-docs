@@ -91,7 +91,7 @@ data files, extract the tar.gz file from the url, and place it in the specified
 directory.
 
 ```java
-val DATA_URL = "https://bpstore1.blob.core.windows.net/seatemp/sea_temp.tar.gz"
+val DATA_URL = "https://dl4jdata.blob.core.windows.net/training/seatemp/sea_temp.tar.gz"
 val DATA_PATH = FilenameUtils.concat(System.getProperty("java.io.tmpdir"), "dl4j_seas/")
 ```
 

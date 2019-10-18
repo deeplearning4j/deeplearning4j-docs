@@ -75,7 +75,7 @@ data files, extract the tar.gz file from the url, and place it in the specified
 directory.
 
 ```java
-val DATA_URL = "https://bpstore1.blob.core.windows.net/tutorials/instacart.tar.gz"
+val DATA_URL = "https://dl4jdata.blob.core.windows.net/training/tutorials/instacart.tar.gz"
 val DATA_PATH = FilenameUtils.concat(System.getProperty("java.io.tmpdir"), "dl4j_instacart/")
 ```
 
