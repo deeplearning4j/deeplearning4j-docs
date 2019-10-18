@@ -102,7 +102,7 @@ which contains a value of 0 indicating death and a value of 1 indicating
 survival.
 
 ```java
-val DATA_URL = "https://skymindacademy.blob.core.windows.net/physionet2012/physionet2012.tar.gz"
+val DATA_URL = "https://dl4jdata.blob.core.windows.net/training/physionet2012/physionet2012.tar.gz"
 val DATA_PATH = FilenameUtils.concat(System.getProperty("java.io.tmpdir"), "dl4j_physionet/")
 ```
 
