@@ -48,13 +48,13 @@ layout: default
     </div>
     <div class="col-md-6 mb30 text-center">
     	<p>
-    		<img src="/images/skymind-logo.png" alt="skymind">
+    		<img src="/images/konduit-logo.png" alt="Konduit">
     	</p>
         <p>
-            Skymind is a top contributor and original author of Eclipse Deeplearning4j, and provides professional support and software for data science and model serving.
+            Konduit is the developer of Eclipse Deeplearning4j, and provides professional support and software for data science and model serving.
         </p>
         <p>
-        	<a href="https://skymind.ai/" target="_blank" role="button" class="btn btn-rounded btn-lg btn-warning">Visit Skymind</a>
+        	<a href="https://konduit.ai/" target="_blank" role="button" class="btn btn-rounded btn-lg btn-warning">Visit Konduit</a>
         </p>
     </div>
     <div class="col-md-3 mb30">

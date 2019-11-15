@@ -45,14 +45,6 @@ Spark jobs, this page will not teach you. Please consider studying Spark basics 
 
 If you want to run multiple models on the same server, consider using [parallelwrapper instead](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-cuda-specific-examples/src/main/java/org/deeplearning4j/examples/multigpu/MultiGpuLenetMnistExample.java).
 
-<p align="center">
-<a href="https://docs.skymind.ai/docs/welcome" type="button" class="btn btn-lg btn-success"
-        data-ga-event="click"
-        data-ga-category="Click/Button"
-        data-ga-action="GoTo/SKILDocs"
-        data-ga-label="SparkPage">GET STARTED WITH DEEP LEARNING</a>
-</p>
-
 `Parallelwrapper` implements the same concepts (parameter averaging and gradient sharing) optimized for a single server.
 You should use `parallelwrapper` when you have a big box (64 cores or more) or multiple GPUs.
 

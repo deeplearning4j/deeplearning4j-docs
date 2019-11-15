@@ -57,7 +57,7 @@ IntelliJ会自动指定相关的[Java主类](https://docs.oracle.com/javase/tuto
 
 DL4J与垃圾回收器紧密相联。JVM与C++之间的桥梁[JavaCPP](https://github.com/bytedeco/javacpp)会严格遵守您用`Xmx`设置的堆空间限制，大量利用堆外空间进行工作。堆外空间的使用量不会超过您所指定的堆空间容量。 
 
-JavaCPP是由Skymind的一位工程师编写的，它依靠垃圾回收器来了解哪些对象已不再使用。我们依靠Java GC来确定回收什么；Java GC指出目标，我们知道如何用JavaCPP来对其解除分配。使用GPU时的情况也与此相同。 
+JavaCPP是由Konduit的一位工程师编写的，它依靠垃圾回收器来了解哪些对象已不再使用。我们依靠Java GC来确定回收什么；Java GC指出目标，我们知道如何用JavaCPP来对其解除分配。使用GPU时的情况也与此相同。 
 
 您设定的批次越大，占用的RAM内存就越多。 
 
