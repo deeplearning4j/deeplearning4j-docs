@@ -248,7 +248,7 @@ Better garbage collection increases throughput. For a more detailed exploration 
 
 DL4J is tightly linked to the garbage collector. [JavaCPP](https://github.com/bytedeco/javacpp), the bridge between the JVM and C++, adheres to the heap space you set with `Xmx` and works extensively with off-heap memory. The off-heap memory will not surpass the amount of heap space you specify. 
 
-JavaCPP, created by a Skymind engineer, relies on the garbage collector to tell it what has been done. We rely on the Java GC to tell us what to collect; the Java GC points at things, and we know how to de-allocate them with JavaCPP. This applies equally to how we work with GPUs. 
+JavaCPP, created by a Konduit engineer, relies on the garbage collector to tell it what has been done. We rely on the Java GC to tell us what to collect; the Java GC points at things, and we know how to de-allocate them with JavaCPP. This applies equally to how we work with GPUs. 
 
 The larger the batch size you use, the more RAM you’re taking in memory. 
 

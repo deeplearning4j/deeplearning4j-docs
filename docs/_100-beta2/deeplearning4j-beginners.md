@@ -12,7 +12,7 @@ Where you start depends on what you already know.
 
 The prerequisites for really understanding deep learning are linear algebra, calculus and statistics, as well as programming and some machine learning. The prerequisites for applying it are just learning how to deploy a model. 
 
-In the case of Deeplearning4j, you should know Java well and be comfortable with tools like the IntelliJ IDE and the automated build tool Maven. [Skymind's SKIL](https://docs.skymind.ai/) also includes a managed Conda environment for machine learning tools using Python. 
+In the case of Deeplearning4j, you should know Java well and be comfortable with tools like the IntelliJ IDE and the automated build tool Maven. 
 
 Below you'll find a list of resources. The sections are roughly organized in the order they will be useful. 
 
@@ -78,9 +78,7 @@ Once you have programming basics down, tackle Java, the world's most widely used
 
 With that under your belt, we recommend you approach Deeplearning4j through its [examples](https://github.com/eclipse/deeplearning4j-examples). 
 
-* [Quickstart](./quickstart.html)
-
-You can also download a [free version of the Skymind Intelligence Layer](https://docs.skymind.ai/), which supports Python, Java and Scala machine-learning and data science tools. SKIL is a machine-learning backend that works on prem and in the cloud, and can ship with your software to provide a machine learning model server. 
+* [Quickstart](./quickstart.html) 
 
 ## Other Resources
 

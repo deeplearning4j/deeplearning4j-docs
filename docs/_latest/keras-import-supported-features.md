@@ -8,7 +8,7 @@ weight: 2
 
 ## Keras Model Import: Supported Features
 
-Little-known fact: Deeplearning4j's creator, Skymind, has two of the top
+Little-known fact: Deeplearning4j's creator, Konduit, has two of the top
 five [Keras contributors](https://github.com/keras-team/keras/graphs/contributors)
 on our team, making it the largest contributor to Keras after Keras creator Francois
 Chollet, who's at Google.

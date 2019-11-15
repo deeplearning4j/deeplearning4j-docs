@@ -24,7 +24,7 @@ If you're having difficulty, we recommend that you join our [Gitter Live Chat](h
 
 For this quickstart tutorial, you will learn how to set up an environment that will allow you create and execute code in an interactive environment. There are a couple of open source tools that can help you do this, and these instructions will help you set them up step-by-step.
 
-Notebooks are interactive coding environments that can be easily installed on a computer and exported and shared with others. This quickstart will use an open-source notebook tool known as [Apache Zeppelin](https://zeppelin.apache.org/). This tutorial and others like it are already prepackaged on a community edition of [SKIL](https://skymind.ai/platform) from Skymind (the creators of Deeplearning4j), and we will be using a tool known as [Docker](https://docs.docker.com/install/) to download and run the tutorial.
+Notebooks are interactive coding environments that can be easily installed on a computer and exported and shared with others. This quickstart will use an open-source notebook tool known as [Apache Zeppelin](https://zeppelin.apache.org/). We will be using a tool known as [Docker](https://docs.docker.com/install/) to download and run the tutorial.
 
 #### Download Docker CE
 If you don't already have Docker on your system, visit the [Docker install page](ttps://docs.docker.com/install/) and install the version of Docker that works best for you. You can test if you have Docker installed by opening a terminal and running `docker --version`.
