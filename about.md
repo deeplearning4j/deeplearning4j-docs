@@ -7,13 +7,10 @@ layout: default
 
 ## About Eclipse Deeplearning4j
 
-Eclipse Deeplearning4j is an open-source, distributed deep-learning project in Java and Scala spearheaded by the people at [Konduit](https://konduit.ai/), a San Francisco-based business intelligence and enterprise software firm. We're a team of data scientists, deep-learning specialists, Java systems engineers and semi-sentient robots.
+Eclipse Deeplearning4j is an open-source, is a suite of open source tools for training and deploying deep learning models supported by the team at  [Konduit](https://konduit.ai/), a remote team distributed all over the world. For up to date statistics about who is involved with the project, please see the [eclipse page](https://projects.eclipse.org/projects/technology.deeplearning4j/who).
 
-There are a lot of knobs to turn when you're training a distributed deep-learning network. We've done our best to explain them, so that Eclipse Deeplearning4j can serve as a DIY tool for Java, Scala and Clojure programmers working on Hadoop and other file systems.
+With first commits in 2013 and donated to eclipse in 2017, dl4j has grown to a widely used tool for various use cases ranging from distributed training on spark to deployment in JVM micro service environments.
 
-## Media
-
-Deeplearning4j has been featured in [Wired](http://www.wired.com/2014/06/skymind-deep-learning/), [GigaOM](http://gigaom.com/2014/06/02/a-startup-called-skymind-launches-pushing-open-source-deep-learning/), [Businessweek](http://www.businessweek.com/articles/2014-06-03/teaching-smaller-companies-how-to-probe-deep-learning-on-their-own), [Venturebeat](http://venturebeat.com/2014/06/02/skymind-launches-with-open-source-plug-and-play-deep-learning-features-for-your-app/), [The Wall Street Journal](http://blogs.wsj.com/cio/2014/06/03/the-morning-download-apple-relies-on-ecosystem-for-innovation/), [Fusion](http://fusion.net/story/177825/privacy-conscious-siris-that-dont-give-up-your-secrets-are-coming/) and [Java Magazine](http://oraclejavamagazine-digital.com/javamagazine/may_june_2015?sub_id=DJ9kzXBnuXELe#pg58).
 
 ## Cite Eclipse Deeplearning4j
 
