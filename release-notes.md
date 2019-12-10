@@ -7,6 +7,13 @@ redirect_from: "/releasenotes"
 ---
 
 **Contents**
+* <a href="#onezerozerobeta6">Version 1.0.0-beta5</a>
+    - <a href="#onezerozerobeta6-dl4j">Deeplearning4j and DL4J Keras Import</a>
+    - <a href="#onezerozerobeta6-nd4j">ND4J and SameDiff</a>
+    - <a href="#onezerozerobeta6-datavec">DataVec</a>
+    - <a href="#onezerozerobeta6-rl4j">RL4J</a>
+    - <a href="#onezerozerobeta6-arbiter">Arbiter</a>
+    - <a href="#onezerozerobeta6-nd4s">ND4S</a>
 * <a href="#onezerozerobeta5">Version 1.0.0-beta5</a>
     - <a href="#onezerozerobeta5-dl4j">Deeplearning4j and DL4J Keras Import</a>
     - <a href="#onezerozerobeta5-nd4j">ND4J and SameDiff</a>
@@ -62,6 +69,144 @@ redirect_from: "/releasenotes"
 * <a href="#six">Version 0.6.0</a>
 * <a href="#five">Version 0.5.0</a>
 * <a href="#four">Version 0.4.0</a>
+
+
+# <a name="onezerozerobeta6">Release Notes for Version 1.0.0-beta6</a>
+
+## Highlights - 1.0.0-beta6 Release
+
+* SameDiff optimizations
+* Deeplearning4j UI - Play framework replaced with Vertx; deeplearning4j-ui dependency now no longer has Scala dependency or Scala version suffix
+* OpenMP replaced with thread pool c++ parallelism framework; enabled c++ parallelism for platforms without threading
+* ND4J namespaces
+
+
+
+## <a name="onezerozerobeta5-dl4j">Deeplearning4J</a>
+
+### Deeplearning4J: Features and Enhancements
+
+* DNNL (MKL-DNN) upgraded to version 1.1
+
+### Deeplearning4J: Bug Fixes and Optimizations
+
+* KDTree implementation optimized [Link](https://github.com/KonduitAI/deeplearning4j/pull/7)
+* Deeplearning4j zoo models and datasets hosting location updated [Link](https://github.com/eclipse/deeplearning4j/pull/8292)
+* Fixed nIn validation for Deconv2D layer [Link](https://github.com/eclipse/deeplearning4j/issues/8225)
+* Fixed an issue with incorrect Deconvolution2d results for Keras import models [Link](https://github.com/eclipse/deeplearning4j/issues/8298)
+* Added DNNL/MKLDNN support for batch normalization layer [Link](https://github.com/KonduitAI/deeplearning4j/pull/14)
+* Fixed various integer casts to avoid overflows for very large arrays (with dimensions or length > Integer.MAX_VALUE) [Link](https://github.com/KonduitAI/deeplearning4j/pull/15)
+* Fixed an issue with UNet non-pretrained model architecture (last layer kernel size) [Link](https://github.com/eclipse/deeplearning4j/issues/8214)
+* Deeplearning4j SameDiff layers now use DL4J workspaces for better performance and reduced memory consumption [Link](https://github.com/KonduitAI/deeplearning4j/pull/23)
+
+
+### Deeplearning4j: Transition Guide, 1.0.0-beta5 to 1.0.0-beta6
+
+
+
+### Deeplearning4j: 1.0.0-beta6 Known Issues
+
+
+## <a name="onezerozerobeta6-nd4j">ND4J and SameDiff</a>
+
+### ND4J/SameDiff: Features and Enhancements
+
+* DNNL (MKL-DNN) upgraded to version 1.1
+* Added SameDiff.calculateGradientsAndOutputs method [Link](https://github.com/eclipse/deeplearning4j/issues/8318) [Link](https://github.com/KonduitAI/deeplearning4j/pull/21/)
+* Additional SameDiff single batch .output method overloads for DataSet/MultiDataSet added [Link](https://github.com/SkymindIO/deeplearning4j/pull/253)
+* TensorFlow import ops coverage enhanced (significant number of additional ops supported) [Link](https://github.com/SkymindIO/deeplearning4j/pull/254), [Link](https://github.com/eclipse/deeplearning4j/pull/8341), [Link](https://github.com/KonduitAI/deeplearning4j/pull/25)
+* PRelu op added [Link](https://github.com/eclipse/deeplearning4j/pull/8247)
+* adjust_contrast, igamma and igammac ops added [Link](https://github.com/KonduitAI/deeplearning4j/pull/1)
+* ND4J/SameDiff: BitCast, CompareAndBitpack, DivideNoNan, DrawBoundingBoxes, FakeQuantWithMinMaxVarsPerChannel ops added [Link](https://github.com/KonduitAI/deeplearning4j/pull/2)
+* non_max_suppression_overlaps op added [Link](https://github.com/KonduitAI/deeplearning4j/pull/9)
+* ImagePreProcessingScaler now supports segmentation use cases [Link](https://github.com/eclipse/deeplearning4j/issues/8135)
+* concat operation now supports the concatenation axis being specified via the last input array [Link](https://github.com/eclipse/deeplearning4j/issues/8285)
+* Added Gamma and Poisson RNG distributions [Link](https://github.com/KonduitAI/deeplearning4j/pull/27)
+* SameDiff's use of DeviceLocal for variables/constants etc is now configurable [Link](https://github.com/KonduitAI/deeplearning4j/pull/32)
+* Uniform distribution op now supports random integer generation, not just random floating point generation [Link](https://github.com/KonduitAI/deeplearning4j/pull/30)
+
+### ND4J/SameDiff: Bug Fixes and Optimizations
+
+* OpenMP replaced with ThreadPool abstraction, enables parallelism for platforms without OpenMP support [Link](https://github.com/KonduitAI/deeplearning4j/pull/8)
+* SameDiff memory management overheauled for (in some cases significantlny) reduced memory consumption and improved performance [Link](https://github.com/KonduitAI/deeplearning4j/pull/10)
+* Switched to Clang instead of gcc for OSX compilation to avoid compiler-related issues [Link](https://github.com/KonduitAI/deeplearning4j/pull/8)
+* Removed `SameDiff.outputs()` "best guess" output inference due to being unreliable, in favor of explicit `SameDiff.setOutputs(String...)` call [Link](https://github.com/eclipse/deeplearning4j/issues/8265)
+* Fixed an issue with Nd4j.hstack on 1D arrays [Link](https://github.com/eclipse/deeplearning4j/issues/8218)
+* SameDiff no longer allows empty arrays for variables [Link](https://github.com/eclipse/deeplearning4j/issues/8209)
+* Fixed an issue with Nadam updater LR schedules not being cloned [Link](https://github.com/eclipse/deeplearning4j/pull/8243)
+* Cleaned up IActivation interface [Link](https://github.com/eclipse/deeplearning4j/pull/8261)
+* Added new LSTM op implementation with DNNL/MKLDNN support (forward pass only so far) [Link](https://github.com/KonduitAI/deeplearning4j/pull/4)
+* SameDiff API cleaned up; deprecated methods removed [Link](https://github.com/KonduitAI/deeplearning4j/pull/12)
+* Switched SameDiff variable initialization to non-lazy, to avoid unexpected behaviour when mixing execution and ND4J RNG seed setting [Link](https://github.com/eclipse/deeplearning4j/issues/8248)
+* SameDiff.zero and .one methods now create constants, not vairables [Link](https://github.com/eclipse/deeplearning4j/issues/8224)
+* Moved CUDA build version and device logging to Java logging, from c++ stdout to enable disabling logging (via ND4J config or slf4j config) [Link](https://github.com/eclipse/deeplearning4j/issues/8270)
+* Added DNNL/MKLDNN support for batch normalization [Link](https://github.com/KonduitAI/deeplearning4j/pull/14)
+* SameDiff: Fixed an issue where listeners weren't being called for gradient calculation [Link](https://github.com/eclipse/deeplearning4j/issues/8319)
+* Added DNNL/MKLDNN support for deconv2d/3d operations [Link](https://github.com/KonduitAI/deeplearning4j/pull/24)
+* Fixed an issue with biasadd_bp operation and NHWC data format [Link](https://github.com/eclipse/deeplearning4j/issues/8280)
+* Fixed an issue with certain strided slice backprop configurations [Link](https://github.com/eclipse/deeplearning4j/issues/8342), [Link](https://github.com/KonduitAI/deeplearning4j/pull/29)
+* Fixed an issue with LogSumExp reduction operation backprop for along dimension case [Link](https://github.com/KonduitAI/deeplearning4j/pull/35), [Link](https://github.com/eclipse/deeplearning4j/issues/8360)
+
+
+
+### ND4J: Transition Guide, 1.0.0-beta5 to 1.0.0-beta6
+
+* `SameDiff.outputs()` now requires user to call `SameDiff.setOutputs(String...)` first; previous "best guess" output inference was unreliable [Link](https://github.com/eclipse/deeplearning4j/issues/8265)
+* SameDiff.zero and .one methods now create constants, not vairables [Link](https://github.com/eclipse/deeplearning4j/issues/8224)
+
+
+### ND4J: 1.0.0-beta6 Known Issues
+
+## <a name="onezerozerobeta6-datavec">DataVec</a>
+
+### DataVec: Features and Enhancements
+
+
+### DataVec: Bug Fixes and Optimizations
+
+* NDArrayScalarOpTransform now supports modulus operator [Link](https://github.com/eclipse/deeplearning4j/pull/8330)
+
+
+## <a name="onezerozerobeta6-rl4j">RL4J</a>
+
+### RL4J: Features and Enhancements
+
+* Added AsyncTrainingListener [Link](https://github.com/eclipse/deeplearning4j/pull/8072)
+* Replaced multiple uses of java.util.Random with ND4J Random [Link](https://github.com/eclipse/deeplearning4j/pull/8282)
+
+### RL4J: Bug Fixes and Optimizations
+
+* Refactored RL4J video recording to separate VideoRecorder class [Link](https://github.com/eclipse/deeplearning4j/pull/8106)
+* Fixed an issue with target for DQN [Link](https://github.com/eclipse/deeplearning4j/pull/8250), [Link](https://github.com/eclipse/deeplearning4j/issues/8107)
+* Refactoring for DQN and double DQN for improved maintainability [Link](https://github.com/eclipse/deeplearning4j/pull/8267)
+* Internal refactoring and various bug fixes [Link](https://github.com/eclipse/deeplearning4j/pull/8303)
+
+
+## <a name="onezerozerobeta6-arbiter">Arbiter</a>
+
+### Bug Fixes and Optimizations
+
+### Arbiter: Known Issues
+
+
+## <a name="onezerozerobeta6-nd4s">ND4S</a>
+
+### ND4S Features and Enhancements
+
+
+
+## PyDataVec
+
+### PyDataVec Features and Enhancements
+
+* PyDataVec TransformProcess now supports non-inplace operations [Link](https://github.com/eclipse/deeplearning4j/pull/8326)
+
+
+---
+---
+---
+
+
 
 # <a name="onezerozerobeta5">Release Notes for Version 1.0.0-beta5</a>
 
