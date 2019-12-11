@@ -75,16 +75,18 @@ redirect_from: "/releasenotes"
 
 ## Highlights - 1.0.0-beta6 Release
 
-* SameDiff optimizations
+* Added support for CUDA 10.2. 1.0.0-beta6 released with CUDA 9.2, 10.0, 10.1 and 10.2 support
+* SameDiff optimizations - memory use for inference and training significantly reduced, with some performance improvements also
 * Deeplearning4j UI - Play framework replaced with Vertx; deeplearning4j-ui dependency now no longer has Scala dependency or Scala version suffix [Link](https://github.com/KonduitAI/deeplearning4j/pull/68)
     * Note: No API changes, only artifact ID change: replace `deeplearning4j-ui_2.1x` with `deeplearning4j-ui`
-* OpenMP replaced with thread pool c++ parallelism framework; enabled c++ parallelism for platforms without threading
-* ND4j namespace operation methods: Nd4j.math, Nd4j.random, Nd4j.bitwise, Nd4j.nn (neural network) [Link](https://github.com/KonduitAI/deeplearning4j/pull/83)
-* Added support for CUDA 10.2. 1.0.0-beta6 released with CUDA 9.2, 10.0, 10.1 and 10.2 support
+* ND4j namespace operation methods: operations are available through the Nd4j.math, Nd4j.random, Nd4j.bitwise, Nd4j.nn (neural network), for example `Nd4j.math.abs(INDArray)`, `Nd4j.random.logNormal` etc [Link](https://github.com/KonduitAI/deeplearning4j/pull/83).
+    * Note that additional ND4J namespaces API will have additions (new namespaces and methods), and may have some API changes, in the next release
+* OpenMP replaced with thread pool c++ parallelism framework; enabled c++ parallelism for platforms without C++-level threading for operations
 
 
 
-## <a name="onezerozerobeta5-dl4j">Deeplearning4J</a>
+
+## <a name="onezerozerobeta6-dl4j">Deeplearning4J</a>
 
 ### Deeplearning4J: Features and Enhancements
 
@@ -94,7 +96,7 @@ redirect_from: "/releasenotes"
 * Added Mish activation function [Link](https://github.com/eclipse/deeplearning4j/issues/8417), [Link](https://github.com/KonduitAI/deeplearning4j/pull/55)
 * BertIterator now has a `BertIterator.featurizeSentences(List<String>)` method for inference [Link](https://github.com/KonduitAI/deeplearning4j/pull/71), [Link](https://github.com/eclipse/deeplearning4j/issues/8415)
 * BertIterator now supports sentence pairs for supervised training [Link](https://github.com/KonduitAI/deeplearning4j/pull/108)
-* Added Spark multi-class cross entropy for both Deeplearning4j and Keras import [Link](https://github.com/KonduitAI/deeplearning4j/pull/72), [Link](https://github.com/KonduitAI/deeplearning4j/pull/73)
+* Added Sparse multi-class cross entropy for both Deeplearning4j and Keras import [Link](https://github.com/KonduitAI/deeplearning4j/pull/72), [Link](https://github.com/KonduitAI/deeplearning4j/pull/73)
 * Deeplearning4j UI: migrated from Play to Vertx for web serving backend, also removing dependency on Scala libraries; no API changes, only artifact ID change - replace `deeplearning4j-ui_2.1x` with `deeplearning4j-ui` [Link](https://github.com/KonduitAI/deeplearning4j/pull/68), [Link](https://github.com/KonduitAI/deeplearning4j/pull/79)
 * Added TimeDistributed wrapper layer [Link](https://github.com/KonduitAI/deeplearning4j/pull/78)
 
@@ -122,10 +124,6 @@ redirect_from: "/releasenotes"
 ### Deeplearning4j: Transition Guide, 1.0.0-beta5 to 1.0.0-beta6
 
 * Deeplearning4j UI artifact ID has changed: `deeplearning4j-ui_2.1x` (beta5 and earlier) with `deeplearning4j-ui`
-
-
-### Deeplearning4j: 1.0.0-beta6 Known Issues
-
 
 ## <a name="onezerozerobeta6-nd4j">ND4J and SameDiff</a>
 
@@ -198,12 +196,7 @@ redirect_from: "/releasenotes"
 * SameDiff.zero and .one methods now create constants, not vairables [Link](https://github.com/eclipse/deeplearning4j/issues/8224)
 
 
-### ND4J: 1.0.0-beta6 Known Issues
-
 ## <a name="onezerozerobeta6-datavec">DataVec</a>
-
-### DataVec: Features and Enhancements
-
 
 ### DataVec: Bug Fixes and Optimizations
 
@@ -225,19 +218,6 @@ redirect_from: "/releasenotes"
 * Fixed an issue with target for DQN [Link](https://github.com/eclipse/deeplearning4j/pull/8250), [Link](https://github.com/eclipse/deeplearning4j/issues/8107)
 * Refactoring for DQN and double DQN for improved maintainability [Link](https://github.com/eclipse/deeplearning4j/pull/8267)
 * Internal refactoring and various bug fixes [Link](https://github.com/eclipse/deeplearning4j/pull/8303)
-
-
-## <a name="onezerozerobeta6-arbiter">Arbiter</a>
-
-### Bug Fixes and Optimizations
-
-### Arbiter: Known Issues
-
-
-## <a name="onezerozerobeta6-nd4s">ND4S</a>
-
-### ND4S Features and Enhancements
-
 
 
 ## PyDataVec
