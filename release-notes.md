@@ -7,7 +7,7 @@ redirect_from: "/releasenotes"
 ---
 
 **Contents**
-* <a href="#onezerozerobeta6">Version 1.0.0-beta5</a>
+* <a href="#onezerozerobeta6">Version 1.0.0-beta6</a>
     - <a href="#onezerozerobeta6-dl4j">Deeplearning4j and DL4J Keras Import</a>
     - <a href="#onezerozerobeta6-nd4j">ND4J and SameDiff</a>
     - <a href="#onezerozerobeta6-datavec">DataVec</a>
