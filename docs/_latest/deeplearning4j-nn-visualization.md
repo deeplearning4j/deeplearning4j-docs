@@ -18,7 +18,7 @@ weight: 2
 
 ## <a name="ui">Visualizing Network Training with the Deeplearning4j Training UI</a>
 
-**Note**: This information here pertains to DL4J versions 0.7.0 and later.
+**Note**: This information here pertains to DL4J versions 1.0.0-beta6 and later.
 
 DL4J Provides a user interface to visualize in your browser (in real time) the current network status and progress of training. The UI is typically used to help with tuning neural networks - i.e., the selection of hyperparameters (such as learning rate) to obtain good performance for a network.
 
