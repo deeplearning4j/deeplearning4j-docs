@@ -37,7 +37,7 @@ There are a number of different ways to find things to work on. These include:
 https://github.com/eclipse/deeplearning4j/issues
 https://github.com/eclipse/deeplearning4j-examples/issues
 - Reviewing our Roadmap
-- Talking to the developers on Gitter, especially our early adopters channel
+- Talking to the developers on the [community forums](https://community.konduit.ai/)
 - Reviewing recent papers and blog posts on training features, network architectures and applications
 - Reviewing the website and examples - what seems missing, incomplete, or would simply be useful (or cool) to have?
 
@@ -60,4 +60,4 @@ Things to keep in mind:
 - Any new functionality should include unit tests (using JUnit) to test your code. This should include edge cases.
 - If you add a new layer type, you must include numerical gradient checks, as per these unit tests. These are necessary to confirm that the calculated gradients are correct
 - If you are adding significant new functionality, consider also updating the relevant section(s) of the website, and providing an example. After all, functionality that nobody knows about (or nobody knows how to use) isn’t that helpful. Adding documentation is definitely encouraged when appropriate, but strictly not required.
-- If you are unsure about something - ask us on Gitter!
+- If you are unsure about something - ask us on the [community forums](https://community.konduit.ai/)!

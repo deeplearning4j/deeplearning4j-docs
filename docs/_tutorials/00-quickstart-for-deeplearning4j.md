@@ -18,9 +18,7 @@ contributors.
 ### Before you get started
 
 If you are having difficulty, we
-recommend you join our [Gitter
-chat](https://gitter.im/deeplearning4j/deeplearning4j). Gitter is a community
-where you can request help and give feedback, but please do use this guide
+recommend you join our [community forums](https://community.konduit.ai/). There you can request help and give feedback, but please do use this guide
 before asking questions we’ve answered below. If you are new to deep learning,
 we’ve included a [road map for
 beginners](https://deeplearning4j.org/deeplearningforbeginners.html) with links

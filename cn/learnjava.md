@@ -55,7 +55,7 @@ Maven被Java开发者广泛使用，可以说是DL4J的必备条件。如果您�
 
 集成开发环境（[IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)）让您能使用我们的API，只需要几个步骤就能配置神经网络。我们强烈推荐使用[IntelliJ](https://www.jetbrains.com/idea/download/)，它能与Maven相结合，有效管理依赖项。[IntelliJ社区版](https://www.jetbrains.com/idea/download/)是免费的。 
 
-其他较为流行的IDE包括[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)和[Netbeans](http://wiki.netbeans.org/MavenBestPractices)。我们推荐使用IntelliJ，遇到问题时在[Gitter线上交流群](https://gitter.im/deeplearning4j/deeplearning4j)中也更容易得到帮助。
+其他较为流行的IDE包括[Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html)和[Netbeans](http://wiki.netbeans.org/MavenBestPractices)。我们推荐使用IntelliJ，遇到问题时在[Community Forum](https://community.konduit.ai/)中也更容易得到帮助。
 
 #### <a name="Git">Git</a>
 

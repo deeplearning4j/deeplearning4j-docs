@@ -17,7 +17,7 @@ Are you a regular user who isn't familiar with the Java Virtual Environment? Hel
   <button type="button" class="btn btn-default">No, I'm JVM expert</button>
 </div>
 
-If you're having difficulty, we recommend that you join our [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j). Gitter is where you can request help and give feedback, but please do use this guide before asking questions we've answered below. If you are new to deep learning, we've included [a road map for beginners](./deeplearningforbeginners.html) with links to courses, readings and other resources. If you need an end to end tutorial to get started (including setup), then please go to our [getting started](http://deeplearning4j.org/gettingstarted).
+If you're having difficulty, we recommend that you join our [community forums](https://community.konduit.ai/). This is where you can request help and give feedback, but please do use this guide before asking questions we've answered below. If you are new to deep learning, we've included [a road map for beginners](./deeplearningforbeginners.html) with links to courses, readings and other resources. If you need an end to end tutorial to get started (including setup), then please go to our [getting started](http://deeplearning4j.org/gettingstarted).
 
 
 ### Prepare your environment

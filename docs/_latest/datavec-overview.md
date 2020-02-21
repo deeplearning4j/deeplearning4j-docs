@@ -8,7 +8,7 @@ weight: 0
 
 ## DataVec: A Vectorization and ETL Library
 
-DataVec solves one of the most important obstacles to effective machine or deep learning: getting data into a format that neural nets can understand. Nets understand vectors. Vectorization is the first problem many data scientists will have to solve to start training their algorithms on data. Datavec should be used for 99% of your data transformations, if you are not sure if this applies to you, please consult the [gitter](https://gitter.im/deeplearning4j/deeplearning4j). Datavec supports most data formats you could want out of the box, but you may also implement your own custom record reader as well.
+DataVec solves one of the most important obstacles to effective machine or deep learning: getting data into a format that neural nets can understand. Nets understand vectors. Vectorization is the first problem many data scientists will have to solve to start training their algorithms on data. Datavec should be used for 99% of your data transformations, if you are not sure if this applies to you, please consult the [community forums](https://community.konduit.ai/). Datavec supports most data formats you could want out of the box, but you may also implement your own custom record reader as well.
 
 If your data is in CSV (Comma Seperated Values) format stored in flat files that must be converted to numeric and ingested, or your data is a directory structure of labelled images then DataVec is the tool to help you organize that data for use in DeepLearning4J. 
 
