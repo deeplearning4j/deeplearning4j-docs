@@ -20,12 +20,12 @@ layout: default
         </p>
     </div>
     <div class="col-md-4 mb30">
-        <h4>Gitter</h4>
+        <h4>Community Forums</h4>
         <p>
-            For help using DL4J, ND4J, DataVec, Arbiter, or any of our libraries join our community chat on Gitter.
+             For help using DL4J, ND4J, DataVec, Arbiter, or any of our libraries join our community forums.
         </p>
         <p>
-        	<a href="https://gitter.im/deeplearning4j/deeplearning4j/" target="_blank" role="button" class="btn btn-rounded btn-lg btn-warning">Open Gitter <i class="fab fa-gitter"></i></a>
+        	<a href="https://community.konduit.ai/" target="_blank" role="button" class="btn btn-rounded btn-lg btn-warning">Open Forum <i class="fab fa-discourse"></i></a>
         </p>
     </div>
     <div class="col-md-4 mb30">

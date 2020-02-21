@@ -115,7 +115,7 @@ Linear algebra libraries contain hundreds of distinct operations. Neural network
 
 **Guideline 8: If You Aren't Sure - Ask**
 
-The DL4J/ND4J developers are available on Gitter. You can ask questions about benchmarking and performance there: [https://gitter.im/deeplearning4j/deeplearning4j](https://gitter.im/deeplearning4j/deeplearning4j)
+The DL4J/ND4J developers are available on the community forums. You can ask questions about benchmarking and performance there: [https://community.konduit.ai/](https://community.konduit.ai/)
 
 And if you do happen to find a performance issue - let us know!
 
@@ -187,7 +187,7 @@ Finally, here's a summary list of common benchmark mistakes:
 8. Not measuring exactly - and only - what you claim to be measuring (for example, not accounting for array allocation, initialization or garbage collection time)
 9. Not making your benchmarks reprodicable (does the benchmark conclusion generalize? are there problems with the benchmark? what can we do to fix it?)
 10. Comparing results across different hardware, not accounting for differences (for example, testing on one machine with AVX2 support, and on another without)
-11. Not asking the devs (via the [DL4J/ND4J Gitter Channel](https://gitter.im/deeplearning4j/deeplearning4j) - we are happy to provide suggestions and investigate if performance isn't where it should be!
+11. Not asking the devs (via the [community forum](https://community.konduit.ai/) - we are happy to provide suggestions and investigate if performance isn't where it should be!
 
 
 

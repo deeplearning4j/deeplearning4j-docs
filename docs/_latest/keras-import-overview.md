@@ -104,7 +104,7 @@ or feature).
 Once you have imported your model, we recommend our own `ModelSerializer` class for further 
 saving and reloading of your model.
 
-You can inquire further by visiting the [DL4J gitter channel](https://gitter.im/deeplearning4j/deeplearning4j). You might consider filing 
+You can inquire further by visiting the [community forums](https://community.konduit.ai/). You might consider filing 
 a [feature request via Github](https://github.com/eclipse/deeplearning4j/issues) 
 so that this missing functionality can be placed on the DL4J development roadmap or even 
 sending us a pull request with the necessary changes!
