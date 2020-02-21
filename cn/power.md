@@ -32,4 +32,4 @@ layout: cn-default
 
 在示例中，我们用[Maven Shade插件](https://maven.apache.org/plugins/maven-shade-plugin/)来将所有必需的依赖项打包成一个JAR文件。具体操作方式可参见[此处](https://github.com/eclipse/deeplearning4j-examples/blob/master/dl4j-examples/pom.xml#L140)的示例。
 
-如果您在用POWER处理器运行Deeplearning4j时遇到任何问题，请随时在[线上交流群](https://gitter.im/deeplearning4j/deeplearning4j)中向我们提出。
+

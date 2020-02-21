@@ -39,7 +39,7 @@ Deeplearning4j和ND4J采用Apache 2.0许可协议发行。
   * [https://github.com/deeplearning4j/DataVec/issues](https://github.com/deeplearning4j/Canova/issues)
   * [https://github.com/eclipse/deeplearning4j-examples/issues](https://github.com/eclipse/deeplearning4j-examples/issues)
 * 查阅我们的[开发路线图](http://deeplearning4j.org/roadmap.html)
-* 在[Gitter](https://gitter.im/deeplearning4j/deeplearning4j)上与开发者交流，尤其可以利用我们的[早期用户交流群](https://gitter.im/deeplearning4j/deeplearning4j/earlyadopters)
+* 在[community forum](https://community.konduit.ai/)上与开发者交流
 * 查阅关于训练功能、网络架构和应用的最新论文与博客文章
 * 浏览[网站](http://deeplearning4j.org/documentation.html)和[示例](https://github.com/eclipse/deeplearning4j-examples/)－还缺少哪些内容？有哪些内容还不够完整？还可以添加什么有用的（或者酷炫的）内容？
 

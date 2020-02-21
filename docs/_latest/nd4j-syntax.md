@@ -130,4 +130,4 @@ To avoid in-place behaviour, random.get(...).dup() to make a copy.
 |ScalarSubtraction(INDArray x, Number num)|Returns the result of subtracting `num` from each entry of `INDArray x`.|
 
 
-If you do not understand the explanation of ND4J's syntax, cannot find a definition for a method, or would like to request that a function be added, please let us know on [Gitter live chat](https://gitter.im/deeplearning4j/deeplearning4j).
+If you do not understand the explanation of ND4J's syntax, cannot find a definition for a method, or would like to request that a function be added, please let us know on the [community forums](https://community.konduit.ai/).

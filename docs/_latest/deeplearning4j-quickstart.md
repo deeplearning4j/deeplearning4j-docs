@@ -10,7 +10,7 @@ weight: 1
 
 This is everything you need to run DL4J examples and begin your own projects.
 
-We recommend that you join our [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j). Gitter is where you can request help and give feedback, but please do use this guide before asking questions we've answered below. If you are new to deep learning, we've included [a road map for beginners](./deeplearning4j-beginners) with links to courses, readings and other resources.
+We recommend that you join our [community forums](https://community.konduit.ai/). This is where you can request help and give feedback, but please do use this guide before asking questions we've answered below. If you are new to deep learning, we've included [a road map for beginners](./deeplearning4j-beginners) with links to courses, readings and other resources.
 
 ### A Taste of Code
 
@@ -84,7 +84,7 @@ Maven is widely used among Java developers and it's pretty much mandatory for wo
 
 An Integrated Development Environment ([IDE](http://encyclopedia.thefreedictionary.com/integrated+development+environment)) allows you to work with our API and configure neural networks in a few steps. We strongly recommend using [IntelliJ](https://www.jetbrains.com/idea/download/), which communicates with Maven to handle dependencies. The [community edition of IntelliJ](https://www.jetbrains.com/idea/download/) is free.
 
-There are other popular IDEs such as [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices). However, IntelliJ is preferred, and using it will make finding help on [Gitter Live Chat](https://gitter.im/deeplearning4j/deeplearning4j) easier if you need it.
+There are other popular IDEs such as [Eclipse](http://books.sonatype.com/m2eclipse-book/reference/creating-sect-importing-projects.html) and [Netbeans](http://wiki.netbeans.org/MavenBestPractices). However, IntelliJ is preferred, and using it will make finding help on the [community forums](https://community.konduit.ai/) easier if you need it.
 
 #### <a name="Git">Git</a>
 
@@ -151,10 +151,7 @@ Congratulations! You just trained your first neural network with Deeplearning4j.
 
 ## Next Steps
 
-1. Join us on Gitter. We have three big community channels.
-  * [DL4J Live Chat](https://gitter.im/deeplearning4j/deeplearning4j) is the main channel for all things DL4J. Most people hang out here.
-  * [Tuning Help](https://gitter.im/deeplearning4j/deeplearning4j/tuninghelp) is for people just getting started with neural networks. Beginners please visit us here!
-  * [Early Adopters](https://gitter.im/deeplearning4j/deeplearning4j/earlyadopters) is for those who are helping us vet and improve the next release. WARNING: This is for more experienced folks.
+1. Join us on community forums at [https://community.konduit.ai/](https://community.konduit.ai/).
 2. Read the [introduction to deep neural networks](https://skymind.ai/wiki/neural-network).
 3. Check out the more detailed [Comprehensive Setup Guide](./deeplearning4j-quickstart).
 4. Browse the [DL4J documentation](./).
@@ -245,6 +242,6 @@ Deeplearning4j has two other notable components:
 * [Arbiter: hyperparameter optimization and model evaluation](./arbiter-overview)
 * [DataVec: built-in ETL for machine-learning data pipelines](./datavec-overview)
 
-Deeplearning4j is meant to be an end-to-end platform for building real applications, not just a tensor library with automatic differentiation. If you want a tensor library with autodiff, please see ND4J and [samediff](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff). Samediff is still in alpha, but if you want to contribute, please join our [live chat on Gitter](https://gitter.im/deeplearning4j/deeplearning4j).
+Deeplearning4j is meant to be an end-to-end platform for building real applications, not just a tensor library with automatic differentiation. If you want a tensor library with autodiff, please see ND4J and [samediff](https://github.com/eclipse/deeplearning4j/tree/master/nd4j/nd4j-backends/nd4j-api-parent/nd4j-api/src/main/java/org/nd4j/autodiff). Samediff is still in alpha, but if you want to contribute, please join our [community forums](https://community.konduit.ai/).
 
 Lastly, if you are benchmarking Deeplearnin4j, please consider coming in to our live chat and asking for tips. Deeplearning4j has [all the knobs](./deeplearning4j-config-gpu-cpu), but some may not work exactly like the Python frameworks to do. You have to build Deeplearning4j from source for some applications.

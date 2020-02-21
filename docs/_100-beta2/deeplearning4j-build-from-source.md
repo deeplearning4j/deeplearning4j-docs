@@ -386,4 +386,4 @@ Note that some build tools such as Gradle and SBT don't properly pull in platfor
 
 ## Support and Assistance
 
-If you encounter issues while building locally, the Deeplearning4j [Early Adopters Channel](https://gitter.im/deeplearning4j/deeplearning4j/earlyadopters) is a channel dedicated to assisting with build issues and other source problems. Please reach out on Gitter for help.
+If you encounter issues while building locally, the Deeplearning4j [community forums](https://community.konduit.ai/) are a great place to ask questions and get help.
