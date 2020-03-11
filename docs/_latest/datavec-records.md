@@ -4,32 +4,12 @@ short_title: Records
 description: How to use data records in DataVec.
 category: DataVec
 weight: 1
+redirectTo: https://deeplearning4j.konduit.ai/datavec/records
+layout: redirect
 ---
 
-## What is a record?
+The documentation has moved to a new location. You will be automatically redirected.
+            
+[Go to DataVec Records without waiting for the redirect](https://deeplearning4j.konduit.ai/datavec/records)
 
-In the DataVec world a Record represents a single entry in a dataset. DataVec differentiates types of records to make data manipulation easier with built-in APIs. Sequences and 2D records are distinguishable.
-
-## Using records
-
-Most of the time you do not need to interact with the record classes directly, unless you are manually iterating records for the purpose of forwarding through a neural network.
-
-## Types of records
-
-
----
-
-### Record
-<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/Record.java) </span>
-
-
-
-
-
-
----
-
-### SequenceRecord
-<span style="float:right;"> [[source]](https://github.com/eclipse/deeplearning4j/tree/master/datavec/datavec-api/src/main/java/org/datavec/api/records/impl/SequenceRecord.java) </span>
-
-
+        

@@ -4,21 +4,12 @@ short_title: Activations
 description: Supported Keras activations.
 category: Keras Import
 weight: 4
+redirectTo: https://deeplearning4j.konduit.ai/keras-import/supported-features/activations
+layout: redirect
 ---
 
-## Available activations
+The documentation has moved to a new location. You will be automatically redirected.
+            
+[Go to Keras Activations without waiting for the redirect](https://deeplearning4j.konduit.ai/keras-import/supported-features/activations)
 
-We support all [Keras activation functions](https://keras.io/activations), namely:
-
-* <i class="fa fa-check-square-o"></i> softmax
-* <i class="fa fa-check-square-o"></i> elu
-* <i class="fa fa-check-square-o"></i> selu
-* <i class="fa fa-check-square-o"></i> softplus
-* <i class="fa fa-check-square-o"></i> softsign
-* <i class="fa fa-check-square-o"></i> relu
-* <i class="fa fa-check-square-o"></i> tanh
-* <i class="fa fa-check-square-o"></i> sigmoid
-* <i class="fa fa-check-square-o"></i> hard_sigmoid
-* <i class="fa fa-check-square-o"></i> linear
-
-The mapping of Keras to DL4J activation functions is defined in [KerasActivationUtils](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/utils/KerasActivationUtils.java)
+        

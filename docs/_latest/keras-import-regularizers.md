@@ -4,14 +4,12 @@ short_title: Regularizers
 description: Supported Keras regularizers.
 category: Keras Import
 weight: 4
+redirectTo: https://deeplearning4j.konduit.ai/keras-import/supported-features/regularizers
+layout: redirect
 ---
 
-## Supported regularizers
+The documentation has moved to a new location. You will be automatically redirected.
+            
+[Go to Keras Import Regularizers without waiting for the redirect](https://deeplearning4j.konduit.ai/keras-import/supported-features/regularizers)
 
-All [Keras regularizers] are supported by DL4J model import:
-
-* <i class="fa fa-check-square-o"></i> l1
-* <i class="fa fa-check-square-o"></i> l2
-* <i class="fa fa-check-square-o"></i> l1_l2
-
-Mapping of regularizers can be found in [KerasRegularizerUtils](https://github.com/eclipse/deeplearning4j/blob/master/deeplearning4j/deeplearning4j-modelimport/src/main/java/org/deeplearning4j/nn/modelimport/keras/utils/KerasRegularizerUtils.java).
+        
