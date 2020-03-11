@@ -4,17 +4,12 @@ short_title: Optimizers
 description: Supported Keras optimizers
 category: Keras Import
 weight: 2
+redirectTo: https://deeplearning4j.konduit.ai/keras-import/supported-features/optimizers
+layout: redirect
 ---
 
-## Supported optimizers
+The documentation has moved to a new location. You will be automatically redirected.
+            
+[Go to Keras Import Optimizers without waiting for the redirect](https://deeplearning4j.konduit.ai/keras-import/supported-features/optimizers)
 
-All standard Keras optimizers are supported, but importing custom TensorFlow optimizers won't work:
-
-* <i class="fa fa-check-square-o"></i> SGD
-* <i class="fa fa-check-square-o"></i> RMSprop
-* <i class="fa fa-check-square-o"></i> Adagrad
-* <i class="fa fa-check-square-o"></i> Adadelta
-* <i class="fa fa-check-square-o"></i> Adam
-* <i class="fa fa-check-square-o"></i> Adamax
-* <i class="fa fa-check-square-o"></i> Nadam
-* <i class="fa fa-square-o"></i> TFOptimizer
+        

@@ -4,9 +4,12 @@ short_title: Backends
 description: Supported Keras backends.
 category: Keras Import
 weight: 4
+redirectTo: https://deeplearning4j.konduit.ai/keras-import/overview#backend
+layout: redirect
 ---
 
-## Supported Keras backends
+The documentation has moved to a new location. You will be automatically redirected.
+            
+[Go to Keras Backends without waiting for the redirect](https://deeplearning4j.konduit.ai/keras-import/overview#backend)
 
-DL4J Keras model import is backend agnostic. No matter which backend you choose (TensorFlow, Theano, CNTK), your models
-can be imported into DL4J. 
+        
