@@ -35,8 +35,8 @@ theme: minima
 
 # dl4j variables
 versionString: latest
-latestVersion: 1.0.0-beta6
-versionUri: 100-beta6
+latestVersion: 1.0.0-beta7
+versionUri: 100-beta7
 
 # collections
 collections_dir: docs
@@ -50,20 +50,20 @@ defaults:
       github_raw_base: https://raw.githubusercontent.com/deeplearning4j/dl4j-examples/master/tutorials/
   - scope:
       path: ""
-      type: 100-beta6
+      type: 100-beta7
     values:
       layout: guide
-      version: 1.0.0-beta6
+      version: 1.0.0-beta7
       presetsversion: 1.5
-      cudaVersion: 10.1
+      cudaVersion: 10.2
   - scope:
       path: ""
       type: latest
     values:
       layout: guide
-      version: 1.0.0-beta6
+      version: 1.0.0-beta7
       presetsversion: 1.5
-      cudaVersion: 10.1
+      cudaVersion: 10.2
 
 collections:
   # tutorials
