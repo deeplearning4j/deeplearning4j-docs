@@ -56,7 +56,7 @@ redirect_from: /zh-word2vec
 <p>让我们来看看Word2vec可以得出哪些其他的关联。</p>
 <p>我们不用加号、减号和等号，而是用逻辑类比符号表示结果，其中 <code>:</code> 代 表&ldquo;…与…的关系&rdquo;，而 <code>:: </code>代表&ldquo;相当于&rdquo;；比如&ldquo;罗马与意大利的关系相当于北京与中国的关系&rdquo; = <code>Rome:Italy::Beijing:China</code>。接下来我们不会直接提供&ldquo;答案&rdquo;，而是给出一个Word2vec模型在给定最初三个词后生成的词表：</p>
 <pre class="line-numbers"><code class="language-java">
-king:queen::man:[woman, Attempted abduction, teenager, girl] 
+king:queen::man:[woman, Attempted abduction, teenager, girl]
 //有点奇怪，但能看出有些关联
 
 China:Taiwan::Russia:[Ukraine, Moscow, Moldova, Armenia]
@@ -68,9 +68,9 @@ knee:leg::elbow:[forearm, arm, ulna_bone]
 
 New York Times:Sulzberger::Fox:[Murdoch, Chernin, Bancroft, Ailes]
 //Sulzberger-Ochs家族是《纽约时报》所有人和管理者。
-//Murdoch家族持有新闻集团，而福克斯新闻频道为新闻集团所有。 
+//Murdoch家族持有新闻集团，而福克斯新闻频道为新闻集团所有。
 //Peter Chernin曾连续13年担任新闻集团的首席运营官。
-//Roger Ailes是福克斯新闻频道的总裁。 
+//Roger Ailes是福克斯新闻频道的总裁。
 //Bancroft家族将华尔街日报出售给新闻集团。
 
 love:indifference::fear:[apathy, callousness, timidity, helplessness, inaction]
@@ -81,7 +81,7 @@ Donald Trump:Republican::Barack Obama:[Democratic, GOP, Democrats, McCain]
 //Word2vec认为特朗普也与共和党人这个概念对立。
 
 monkey:human::dinosaur:[fossil, fossilized, Ice_Age_mammals, fossilization]
-//人类是变成化石的猴子？人类是 
+//人类是变成化石的猴子？人类是
 //猴子遗留下来的东西？人类是打败了猴子的物种，
 //就像冰川世纪的哺乳动物打败了恐龙那样？好像有点道理。
 
@@ -192,7 +192,7 @@ log.info("Building model....");
         System.out.println(lst);
         UiServer server = UiServer.getInstance();
         System.out.println("Started on port " + server.getPort());
-        
+
         //输出：[night, week, year, game, season, during, office, until, -]
 </code></pre>
 
@@ -249,7 +249,7 @@ WeightLookupTable weightLookupTable = word2Vec.lookupTable();
 <p>如果词不属于已知的词汇，Word2vec会返回一串零。</p><br>
 
 <p><h3>导入Word2vec模型</h3></p>
-<p>我们用来测试已定型网络准确度的<a href="https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz" target="_blank">谷歌新闻语料模型</a>由S3托管。如果用户当前的硬件定型大规模语料需要很长时间，可以下载这个模型，跳过前期准备直接探索Word2vec。</p>
+<p>我们用来测试已定型网络准确度的<a href="https://github.com/mmihaltz/word2vec-GoogleNews-vectors" target="_blank">谷歌新闻语料模型</a>由S3托管。如果用户当前的硬件定型大规模语料需要很长时间，可以下载这个模型，跳过前期准备直接探索Word2vec。</p>
 <p>如果你是使用<a href="https://docs.google.com/file/d/0B7XkCwpI5KDYaDBDQm1tZGNDRHc/edit">C向量</a>或Gensimm定型的，那么可以用下面这行代码导入模型。</p>
 <pre class="line-numbers"><code class="language-java">
 File gModel = new File("/Developer/Vector Models/GoogleNews-vectors-negative300.bin.gz");
@@ -259,7 +259,7 @@ File gModel = new File("/Developer/Vector Models/GoogleNews-vectors-negative300.
 <p>较大的模型可能会遇到堆空间的问题。谷歌模型可能会占据多达10G的RAM，而JVM只能以256MB的RAM启动，所以必须调整你的堆空间。方法可以是使用一个<code>bash_profile</code>文件（参见<a href="hgettingstarted.html#trouble">疑难解答</a>），或通过IntelliJ本身来解决：</p>
 <pre class="line-numbers"><code class="language-java">
 //点击：
-    IntelliJ Preferences > Compiler > Command Line Options 
+    IntelliJ Preferences > Compiler > Command Line Options
     //然后粘贴：
     -Xms1024m
     -Xmx10g
@@ -291,9 +291,9 @@ java.lang.StackOverflowError: null
 </code></pre>
 <p><strong>答：</strong>检查Word2vec应用的启动目录内部。这可能是一个IntelliJ项目的主目录，或者你在命令行中键入了Java的那个目录。其中应当有这样一些目录：</p>
 <pre class="line-numbers"><code class="language-java">
-ehcache_auto_created2810726831714447871diskstore  
+ehcache_auto_created2810726831714447871diskstore
        ehcache_auto_created4727787669919058795diskstore
-       ehcache_auto_created3883187579728988119diskstore  
+       ehcache_auto_created3883187579728988119diskstore
        ehcache_auto_created9101229611634051478diskstore
 </code></pre>
 <p>你可以关闭Word2vec应用并尝试删除这些目录。</p><br>
